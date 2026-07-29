@@ -1,6 +1,8 @@
 /.kiro
 /.vscode
-/exam_assets
+/exam_assets/*.pdf
+/exam_assets/*.txt
+/exam_assets/*.oxps
 /EXTRACTION_COMPLETE.txt
 /lesson_files_inventory.json
 /review_lessons_module_quiz

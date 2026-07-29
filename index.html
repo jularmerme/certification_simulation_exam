@@ -930,91 +930,51 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 // Check and restore exam state from localStorage
 function checkAndRestoreExamState() {
-  // First check if there are saved results (results page)
-  const savedResults = localStorage.getItem('aplus_exam_results');
-  if (savedResults) {
-    try {
-      const results = JSON.parse(savedResults);
-      if (results.examCode && window.questionBank.exams[results.examCode]) {
-        // Restore exam results and show results page
-        window.examResults = results;
-        
-        // Restore exam data for review
-        const exam = window.questionBank.exams[results.examCode];
-        const savedState = localStorage.getItem('aplus_exam_state');
-        if (savedState) {
-          try {
-            const state = JSON.parse(savedState);
-            if (state.examCode === results.examCode) {
-              appState.questions = exam.questionBank.slice(0, state.questions ? state.questions.length : 25);
-              appState.answers = state.answers || {};
-              appState.examCode = results.examCode;
-              
-              // Show results page directly
-              document.getElementById('screenIntro').classList.add('hidden');
-              document.getElementById('screenExam').classList.add('hidden');
-              document.getElementById('screenResults').classList.remove('hidden');
-              
-              // Display results
-              displayExamResults(results);
-              return;
-            }
-          } catch (e) {
-            console.error('Error restoring exam state with results:', e);
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Error restoring exam results:', error);
-    }
-  }
-  
-  // Otherwise check for exam in progress
+  // Check if there's a saved exam in progress
   const savedState = localStorage.getItem('aplus_exam_state');
   if (savedState) {
     try {
       const state = JSON.parse(savedState);
-      // Only restore if the state is valid and has an exam code
-      if (state.examCode && window.questionBank.exams[state.examCode]) {
-        // Restore the exam state
-        appState.examCode = state.examCode;
-        appState.currentQuestionIndex = state.currentQuestionIndex || 0;
-        appState.answers = state.answers || {};
-        appState.flagged = new Set(state.flagged || []);
-        appState.autoFlagged = new Set(state.autoFlagged || []);
-        appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
-        appState.timeRemaining = state.timeRemaining || 0;
-        appState.examStartTime = state.examStartTime || Date.now();
-        
-        // Load the exam
-        const exam = window.questionBank.exams[state.examCode];
-        appState.questions = exam.questionBank;
+      
+      // Restore the exam state
+      appState.examCode = state.examCode;
+      appState.currentQuestionIndex = state.currentQuestionIndex || 0;
+      appState.answers = state.answers || {};
+      appState.flagged = new Set(state.flagged || []);
+      appState.autoFlagged = new Set(state.autoFlagged || []);
+      appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
+      appState.timeRemaining = state.timeRemaining || 0;
+      appState.examStartTime = state.examStartTime || Date.now();
+      
+      // CRITICAL: Restore the SAVED questions, not generate new ones
+      if (state.questions && state.questions.length > 0) {
+        appState.questions = state.questions;
         
         // Show exam screen
-        document.getElementById('screenIntro').classList.add('hidden');
-        document.getElementById('screenExam').classList.remove('hidden');
-        document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
-        
-        // Build navigator
-        buildNavigator();
-        
-        // Load the current question
-        loadQuestion(appState.currentQuestionIndex);
-        
-        // Start timer
-        startTimer();
-        
-        // Make body visible now that we're ready
-        document.body.classList.remove('resuming-exam');
-        document.body.style.visibility = 'visible';
+        const exam = window.questionBank.exams[state.examCode];
+        if (exam) {
+          document.getElementById('screenIntro').classList.add('hidden');
+          document.getElementById('screenExam').classList.remove('hidden');
+          document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
+          
+          // Build navigator
+          buildNavigator();
+          
+          // Load the current question
+          loadQuestion(appState.currentQuestionIndex);
+          
+          // Start timer
+          startTimer();
+          
+          return true; // Successfully restored
+        }
       }
     } catch (error) {
       console.error('Error restoring exam state:', error);
-      // If restore fails, just show the intro screen
-      document.body.classList.remove('resuming-exam');
-      document.body.style.visibility = 'visible';
     }
   }
+  
+  return false; // No saved state to restore
 }
 
 // Save exam state to localStorage
@@ -1022,6 +982,7 @@ function saveExamState() {
   const state = {
     examCode: appState.examCode,
     currentQuestionIndex: appState.currentQuestionIndex,
+    questions: appState.questions, // SAVE the actual questions
     answers: appState.answers,
     flagged: Array.from(appState.flagged),
     autoFlagged: Array.from(appState.autoFlagged),

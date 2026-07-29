@@ -1,0 +1,3248 @@
+{
+  "exams": {
+    "220-1201": {
+      "name": "CompTIA A+ Core 1",
+      "code": "220-1201",
+      "description": "Entry-level certification covering mobile devices, networking, hardware, virtualization, and troubleshooting.",
+      "questions": 170,
+      "timeLimit": 90,
+      "passingScore": 675,
+      "maxScore": 900,
+      "minScore": 100,
+      "domainWeights": {
+        "1.0 Mobile Devices": 13,
+        "2.0 Networking": 23,
+        "3.0 Hardware": 25,
+        "4.0 Virtualization and Cloud Computing": 11,
+        "5.0 Hardware and Network Troubleshooting": 28
+      },
+      "questionBank": [
+        {
+          "id": "1201-001",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A technician is replacing a laptop keyboard. Which tool is MOST appropriate for prying up keycaps or bezels without damaging plastic clips?",
+          "explanation": "A plastic spudger is a non-conductive prying tool designed to avoid scratching or cracking plastic housings and clips during disassembly.",
+          "options": [
+            "Phillips screwdriver",
+            "Plastic spudger",
+            "Needle-nose pliers",
+            "Anti-static wrist strap"
+          ],
+          "correctAnswer": [
+            "Plastic spudger"
+          ]
+        },
+        {
+          "id": "1201-002",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following are valid mobile device management (MDM) policies? (Select all that apply)",
+          "explanation": "BYOD, COPE, and COBO are recognized MDM policy models. MYOD is not standard, and VDI is a different technology.",
+          "options": [
+            "BYOD (Bring Your Own Device)",
+            "COPE (Corporate-Owned, Personally Enabled)",
+            "COBO (Corporate-Owned, Business Only)",
+            "MYOD (Mobile Year of Device)",
+            "VDI (Virtual Desktop Infrastructure)"
+          ],
+          "correctAnswer": [
+            "BYOD (Bring Your Own Device)",
+            "COPE (Corporate-Owned, Personally Enabled)",
+            "COBO (Corporate-Owned, Business Only)"
+          ]
+        },
+        {
+          "id": "1201-003",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A smartphone requires charging every 2 hours under normal use. The battery is 3 years old. Which is the BEST first action?",
+          "explanation": "Batteries degrade over time and typically need replacement after 2-3 years of regular use.",
+          "options": [
+            "Replace the motherboard",
+            "Perform a factory reset of the device",
+            "Replace the battery",
+            "Update the operating system"
+          ],
+          "correctAnswer": [
+            "Replace the battery"
+          ]
+        },
+        {
+          "id": "1201-004",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which network device operates at Layer 2 and forwards frames based on MAC addresses?",
+          "explanation": "A switch learns MAC addresses and forwards frames only to the appropriate port, isolating collision domains per port.",
+          "options": [
+            "Hub",
+            "Switch",
+            "Repeater",
+            "Router"
+          ],
+          "correctAnswer": [
+            "Switch"
+          ]
+        },
+        {
+          "id": "1201-005",
+          "domain": "2.0 Networking",
+          "type": "drag_drop",
+          "difficulty": "medium",
+          "stem": "Match each network protocol to its OSI layer.",
+          "explanation": "Each protocol operates at a specific OSI layer.",
+          "items": [
+            {
+              "id": "ip",
+              "label": "IP (Internet Protocol)"
+            },
+            {
+              "id": "ethernet",
+              "label": "Ethernet"
+            },
+            {
+              "id": "tcp",
+              "label": "TCP"
+            },
+            {
+              "id": "dns",
+              "label": "DNS"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "layer2",
+              "label": "Layer 2",
+              "correctItems": [
+                "ethernet"
+              ]
+            },
+            {
+              "id": "layer3",
+              "label": "Layer 3",
+              "correctItems": [
+                "ip"
+              ]
+            },
+            {
+              "id": "layer4",
+              "label": "Layer 4",
+              "correctItems": [
+                "tcp"
+              ]
+            },
+            {
+              "id": "layer7",
+              "label": "Layer 7",
+              "correctItems": [
+                "dns"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "layer2",
+              "label": "Layer 2",
+              "correctItems": [
+                "ethernet"
+              ]
+            },
+            {
+              "id": "layer3",
+              "label": "Layer 3",
+              "correctItems": [
+                "ip"
+              ]
+            },
+            {
+              "id": "layer4",
+              "label": "Layer 4",
+              "correctItems": [
+                "tcp"
+              ]
+            },
+            {
+              "id": "layer7",
+              "label": "Layer 7",
+              "correctItems": [
+                "dns"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1201-006",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which tools are MOST helpful for diagnosing network problems? (Select all that apply)",
+          "explanation": "ping, ipconfig, tracert, and nslookup are networking tools. tasklist is for processes, not networking.",
+          "options": [
+            "ping",
+            "ipconfig",
+            "tracert",
+            "tasklist",
+            "nslookup"
+          ],
+          "correctAnswer": [
+            "ping",
+            "ipconfig",
+            "tracert",
+            "nslookup"
+          ]
+        },
+        {
+          "id": "1201-007",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which wireless frequency band offers greater range but is prone to interference from cordless phones and microwaves?",
+          "explanation": "2.4 GHz has better range but shares spectrum with many consumer devices, causing more interference.",
+          "options": [
+            "5 GHz",
+            "2.4 GHz",
+            "6 GHz",
+            "60 GHz"
+          ],
+          "correctAnswer": [
+            "2.4 GHz"
+          ]
+        },
+        {
+          "id": "1201-008",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A device has been assigned the IP address 169.254.34.12. What does this indicate?",
+          "explanation": "The 169.254.0.0/16 range is reserved for APIPA, assigned when DHCP fails.",
+          "options": [
+            "Statically configured address",
+            "Valid DHCP-assigned address",
+            "APIPA address (DHCP failed)",
+            "Public IP address"
+          ],
+          "correctAnswer": [
+            "APIPA address (DHCP failed)"
+          ]
+        },
+        {
+          "id": "1201-009",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which motherboard form factor is the smallest, commonly used in compact builds?",
+          "explanation": "Mini-ITX is the smallest standard form factor for compact builds.",
+          "options": [
+            "ATX",
+            "Micro-ATX",
+            "Mini-ITX",
+            "E-ATX"
+          ],
+          "correctAnswer": [
+            "Mini-ITX"
+          ]
+        },
+        {
+          "id": "1201-010",
+          "domain": "3.0 Hardware",
+          "type": "drag_drop",
+          "difficulty": "medium",
+          "stem": "Match each CPU socket type to its characteristic.",
+          "explanation": "LGA has pins on the socket; PGA has pins on the CPU.",
+          "items": [
+            {
+              "id": "lga",
+              "label": "LGA (Land Grid Array)"
+            },
+            {
+              "id": "pga",
+              "label": "PGA (Pin Grid Array)"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "socket_pins",
+              "label": "Pins on motherboard socket",
+              "correctItems": [
+                "lga"
+              ]
+            },
+            {
+              "id": "cpu_pins",
+              "label": "Pins on CPU",
+              "correctItems": [
+                "pga"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "socket_pins",
+              "label": "Pins on motherboard socket",
+              "correctItems": [
+                "lga"
+              ]
+            },
+            {
+              "id": "cpu_pins",
+              "label": "Pins on CPU",
+              "correctItems": [
+                "pga"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1201-011",
+          "domain": "3.0 Hardware",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Which are valid RAM configurations for a modern desktop PC? (Select all that apply)",
+          "explanation": "DDR4 and DDR5 are valid. SODIMM is for laptops, ECC needs special boards, mixing types not possible.",
+          "options": [
+            "DDR4-3200MHz dual-channel",
+            "DDR5-5600MHz single-channel",
+            "SODIMM on desktop",
+            "ECC in consumer board",
+            "Mixed DDR4 and DDR5"
+          ],
+          "correctAnswer": [
+            "DDR4-3200MHz dual-channel",
+            "DDR5-5600MHz single-channel"
+          ]
+        },
+        {
+          "id": "1201-012",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which cooling method is more effective than air cooling for high-performance CPUs?",
+          "explanation": "Liquid cooling transfers heat more efficiently than air cooling for high-TDP CPUs.",
+          "options": [
+            "Passive heatsink",
+            "Liquid/AIO cooling",
+            "Case fan only",
+            "Thermal paste alone"
+          ],
+          "correctAnswer": [
+            "Liquid/AIO cooling"
+          ]
+        },
+        {
+          "id": "1201-013",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which RAID level mirrors data, providing redundancy but using only 50% capacity?",
+          "explanation": "RAID 1 mirrors data across two drives for full redundancy at 50% capacity cost.",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 6"
+          ],
+          "correctAnswer": [
+            "RAID 1"
+          ]
+        },
+        {
+          "id": "1201-014",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which connector provides supplemental power directly to the CPU on modern motherboards?",
+          "explanation": "The EPS12V connector supplies dedicated power to the processor.",
+          "options": [
+            "24-pin ATX",
+            "4/8-pin EPS12V",
+            "SATA power",
+            "Molex"
+          ],
+          "correctAnswer": [
+            "4/8-pin EPS12V"
+          ]
+        },
+        {
+          "id": "1201-015",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which expansion slot is used for modern discrete graphics cards?",
+          "explanation": "PCIe x16 is the standard modern expansion slot for graphics cards.",
+          "options": [
+            "PCIe x16",
+            "PCI",
+            "AGP",
+            "ISA"
+          ],
+          "correctAnswer": [
+            "PCIe x16"
+          ]
+        },
+        {
+          "id": "1201-016",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which storage interface used a wide ribbon cable and master/slave jumper configuration?",
+          "explanation": "PATA (IDE) used ribbon cables and jumper settings, now superseded by SATA and NVMe.",
+          "options": [
+            "SATA",
+            "PATA (IDE)",
+            "NVMe",
+            "SCSI"
+          ],
+          "correctAnswer": [
+            "PATA (IDE)"
+          ]
+        },
+        {
+          "id": "1201-017",
+          "domain": "3.0 Hardware",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "A thermal printer produces faded output. Which could cause this? (Select all that apply)",
+          "explanation": "Thermal printers rely on heat. Faded output from worn head, old paper, or weak heating element.",
+          "options": [
+            "Worn print head",
+            "Degraded thermal paper",
+            "Low toner",
+            "Incorrect paper size",
+            "Weak heating element"
+          ],
+          "correctAnswer": [
+            "Worn print head",
+            "Degraded thermal paper",
+            "Weak heating element"
+          ]
+        },
+        {
+          "id": "1201-018",
+          "domain": "4.0 Virtualization and Cloud Computing",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which cloud model delivers fully managed applications like Microsoft 365?",
+          "explanation": "SaaS delivers fully managed applications to end users.",
+          "options": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "On-premises"
+          ],
+          "correctAnswer": [
+            "SaaS"
+          ]
+        },
+        {
+          "id": "1201-019",
+          "domain": "4.0 Virtualization and Cloud Computing",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which hypervisor runs directly on physical hardware?",
+          "explanation": "Type 1 hypervisors run directly on hardware for better performance.",
+          "options": [
+            "Type 1 (bare-metal)",
+            "Type 2 (hosted)",
+            "Container runtime",
+            "Emulator"
+          ],
+          "correctAnswer": [
+            "Type 1 (bare-metal)"
+          ]
+        },
+        {
+          "id": "1201-020",
+          "domain": "4.0 Virtualization and Cloud Computing",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "VirtualBox running on Windows is which type of hypervisor?",
+          "explanation": "Type 2 hypervisors run as applications on top of an existing host OS.",
+          "options": [
+            "Type 1",
+            "Type 2 (hosted)",
+            "Container engine",
+            "Firmware"
+          ],
+          "correctAnswer": [
+            "Type 2 (hosted)"
+          ]
+        },
+        {
+          "id": "1201-021",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A hard drive makes repetitive clicking and system fails to boot. Most likely cause?",
+          "explanation": "Clicking indicates mechanical failure of the actuator arm/read-write head.",
+          "options": [
+            "Corrupted boot sector",
+            "Mechanical failure of read/write head",
+            "Outdated BIOS",
+            "Loose monitor cable"
+          ],
+          "correctAnswer": [
+            "Mechanical failure of read/write head"
+          ]
+        },
+        {
+          "id": "1201-022",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "After installing new RAM, PC fails to POST. Try FIRST?",
+          "explanation": "POST failure after RAM install is usually improper seating or incompatibility.",
+          "options": [
+            "Replace motherboard",
+            "Reseat RAM and verify compatibility",
+            "Replace CPU",
+            "Reinstall Windows"
+          ],
+          "correctAnswer": [
+            "Reseat RAM and verify compatibility"
+          ]
+        },
+        {
+          "id": "1201-023",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Wi-Fi adapter enabled but no connections. Check what? (Select all that apply)",
+          "explanation": "Check physical/software toggles, drivers, router power. SSID and battery don't prevent connection.",
+          "options": [
+            "Physical Wi-Fi switch or Airplane Mode",
+            "Network drivers updated",
+            "SSID broadcast enabled",
+            "Router powered on",
+            "Battery above 20%"
+          ],
+          "correctAnswer": [
+            "Physical Wi-Fi switch or Airplane Mode",
+            "Network drivers updated",
+            "Router powered on"
+          ]
+        },
+        {
+          "id": "1202-001",
+          "domain": "1.0 Operating Systems",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
+          "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
+          "options": [
+            "Windows 11 Home",
+            "Windows 11 Pro",
+            "Windows 11 Enterprise",
+            "Windows 11 Standard",
+            "Windows 11 Professional Plus"
+          ],
+          "correctAnswer": [
+            "Windows 11 Pro",
+            "Windows 11 Enterprise"
+          ]
+        },
+        {
+          "id": "1202-002",
+          "domain": "1.0 Operating Systems",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Where to configure network drive mapping in Windows?",
+          "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
+          "options": [
+            "Device Manager",
+            "File Explorer - Map Network Drive",
+            "Services Manager",
+            "Group Policy Editor"
+          ],
+          "correctAnswer": [
+            "File Explorer - Map Network Drive"
+          ]
+        },
+        {
+          "id": "1202-003",
+          "domain": "1.0 Operating Systems",
+          "type": "drag_drop",
+          "difficulty": "hard",
+          "stem": "Match Windows command-line tools to their function.",
+          "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
+          "items": [
+            {
+              "id": "ipconfig",
+              "label": "ipconfig"
+            },
+            {
+              "id": "tasklist",
+              "label": "tasklist"
+            },
+            {
+              "id": "diskpart",
+              "label": "diskpart"
+            },
+            {
+              "id": "sfc",
+              "label": "sfc /scannow"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "net",
+              "label": "Network Config",
+              "correctItems": [
+                "ipconfig"
+              ]
+            },
+            {
+              "id": "proc",
+              "label": "Process Mgmt",
+              "correctItems": [
+                "tasklist"
+              ]
+            },
+            {
+              "id": "disk",
+              "label": "Disk Mgmt",
+              "correctItems": [
+                "diskpart"
+              ]
+            },
+            {
+              "id": "sys",
+              "label": "System Files",
+              "correctItems": [
+                "sfc"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "net",
+              "label": "Network Config",
+              "correctItems": [
+                "ipconfig"
+              ]
+            },
+            {
+              "id": "proc",
+              "label": "Process Mgmt",
+              "correctItems": [
+                "tasklist"
+              ]
+            },
+            {
+              "id": "disk",
+              "label": "Disk Mgmt",
+              "correctItems": [
+                "diskpart"
+              ]
+            },
+            {
+              "id": "sys",
+              "label": "System Files",
+              "correctItems": [
+                "sfc"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1202-004",
+          "domain": "1.0 Operating Systems",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
+          "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
+          "options": [
+            "Event Viewer",
+            "Resource Monitor/Task Manager Performance",
+            "Device Manager",
+            "Group Policy"
+          ],
+          "correctAnswer": [
+            "Resource Monitor/Task Manager Performance"
+          ]
+        },
+        {
+          "id": "1202-005",
+          "domain": "2.0 Security and Compliance",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which are strong password practices? (Select all that apply)",
+          "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
+          "options": [
+            "Min 8 chars with mixed types",
+            "Reuse across accounts",
+            "Password expiration 90 days",
+            "Write down passwords",
+            "MFA where available"
+          ],
+          "correctAnswer": [
+            "Min 8 chars with mixed types",
+            "Password expiration 90 days",
+            "MFA where available"
+          ]
+        },
+        {
+          "id": "1202-006",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "Workstation with malware - FIRST action in recovery?",
+          "explanation": "Isolate system first and document to prevent spread and enable analysis.",
+          "options": [
+            "Format hard drive",
+            "Disconnect from network and document",
+            "Update patches",
+            "Reset password only"
+          ],
+          "correctAnswer": [
+            "Disconnect from network and document"
+          ]
+        },
+        {
+          "id": "1202-007",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which restricts user permissions to prevent system changes?",
+          "explanation": "UAC prompts for elevation on system-level changes.",
+          "options": [
+            "User Account Control (UAC)",
+            "Windows Defender",
+            "Group Policy",
+            "Windows Firewall"
+          ],
+          "correctAnswer": [
+            "User Account Control (UAC)"
+          ]
+        },
+        {
+          "id": "1202-008",
+          "domain": "2.0 Security and Compliance",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Legitimate wireless security methods? (Select all that apply)",
+          "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
+          "options": [
+            "Enable WPA3",
+            "Disable SSID broadcast",
+            "Complex network password",
+            "MAC filtering",
+            "2.4 GHz only"
+          ],
+          "correctAnswer": [
+            "Enable WPA3",
+            "Complex network password",
+            "MAC filtering"
+          ]
+        },
+        {
+          "id": "1202-009",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Application crashes frequently. Try FIRST?",
+          "explanation": "Updates often fix bugs. Try this before drastic measures.",
+          "options": [
+            "Uninstall/reinstall",
+            "Format hard drive",
+            "Check for updates",
+            "Replace motherboard"
+          ],
+          "correctAnswer": [
+            "Check for updates"
+          ]
+        },
+        {
+          "id": "1202-010",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "drag_drop",
+          "difficulty": "hard",
+          "stem": "Order the troubleshooting steps correctly.",
+          "explanation": "Proper order: gather, theory, test, implement, verify.",
+          "items": [
+            {
+              "id": "g",
+              "label": "Gather info from user"
+            },
+            {
+              "id": "t",
+              "label": "Theory of probable cause"
+            },
+            {
+              "id": "e",
+              "label": "Test the theory"
+            },
+            {
+              "id": "i",
+              "label": "Implement solution"
+            },
+            {
+              "id": "v",
+              "label": "Verify functionality"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "s1",
+              "label": "Step 1",
+              "correctItems": [
+                "g"
+              ]
+            },
+            {
+              "id": "s2",
+              "label": "Step 2",
+              "correctItems": [
+                "t"
+              ]
+            },
+            {
+              "id": "s3",
+              "label": "Step 3",
+              "correctItems": [
+                "e"
+              ]
+            },
+            {
+              "id": "s4",
+              "label": "Step 4",
+              "correctItems": [
+                "i"
+              ]
+            },
+            {
+              "id": "s5",
+              "label": "Step 5",
+              "correctItems": [
+                "v"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "s1",
+              "label": "Step 1",
+              "correctItems": [
+                "g"
+              ]
+            },
+            {
+              "id": "s2",
+              "label": "Step 2",
+              "correctItems": [
+                "t"
+              ]
+            },
+            {
+              "id": "s3",
+              "label": "Step 3",
+              "correctItems": [
+                "e"
+              ]
+            },
+            {
+              "id": "s4",
+              "label": "Step 4",
+              "correctItems": [
+                "i"
+              ]
+            },
+            {
+              "id": "s5",
+              "label": "Step 5",
+              "correctItems": [
+                "v"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1202-011",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
+          "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
+          "options": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar",
+            "Windows Update",
+            "Outdated graphics driver"
+          ],
+          "correctAnswer": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar"
+          ]
+        },
+        {
+          "id": "1202-012",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Documentation after resolving ticket should include?",
+          "explanation": "Complete documentation helps others resolve similar issues.",
+          "options": [
+            "Only if difficult",
+            "Changes, actions, outcome",
+            "Only final resolution",
+            "Nothing - wastes time"
+          ],
+          "correctAnswer": [
+            "Changes, actions, outcome"
+          ]
+        },
+        {
+          "id": "1202-013",
+          "domain": "4.0 Operational Procedures",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Proper change management procedures? (Select all that apply)",
+          "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
+          "options": [
+            "Test in non-production",
+            "Document before implementation",
+            "Changes during business hours",
+            "Notify stakeholders",
+            "Rollback plan"
+          ],
+          "correctAnswer": [
+            "Test in non-production",
+            "Document before implementation",
+            "Notify stakeholders",
+            "Rollback plan"
+          ]
+        },
+        {
+          "id": "1202-014",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Backup system never tested - PRIMARY concern?",
+          "explanation": "Untested backups create false security. Regular restoration testing is critical.",
+          "options": [
+            "Using too much storage",
+            "Might not work when needed",
+            "Too slow",
+            "Software outdated"
+          ],
+          "correctAnswer": [
+            "Might not work when needed"
+          ]
+        },
+        {
+          "id": "1202-015",
+          "domain": "4.0 Operational Procedures",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Environmental safety and compliance measures? (Select all that apply)",
+          "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
+          "options": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Reuse indefinitely",
+            "Chain-of-custody for data"
+          ],
+          "correctAnswer": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Chain-of-custody for data"
+          ]
+        },
+        {
+          "id": "1201-016",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "While you are answering help desk calls, a field customer calls and complains that he cannot print to a workgroup laser printer. Which of the following should be the first question you ask?",
+          "options": [
+            "Have you checked the cables?",
+            "Have you ever successfully printed to that printer?",
+            "Have you rebooted the printer?",
+            "Have you rebooted and chosen safe mode?"
+          ],
+          "correctAnswer": [
+            "Have you ever successfully printed to that printer?"
+          ],
+          "explanation": "According to the troubleshooting methodology, the first step is to identify the problem by gathering information from the user. Asking whether the user has ever successfully printed to the printer helps determine if this is a new or recurring issue."
+        },
+        {
+          "id": "1201-017",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user reports that she can't send print jobs to a specific printer. You are able to reproduce the problem on the user's computer. Which of the following actions should you perform next?",
+          "options": [
+            "Establish a plan of action.",
+            "Establish the most probable cause.",
+            "Determine if escalation is necessary.",
+            "Determine whether anything has changed."
+          ],
+          "correctAnswer": [
+            "Determine whether anything has changed."
+          ],
+          "explanation": "According to the troubleshooting methodology, identifying the problem involves gathering information about recent changes to the system or environment. Changes such as updates, configuration modifications, or hardware adjustments are often the root cause of technical issues."
+        },
+        {
+          "id": "1201-018",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user reports that their desktop computer will not power on. You begin troubleshooting by 'Questioning the Obvious.' Which of the following actions would be the MOST appropriate first step?",
+          "options": [
+            "Open the computer case and inspect the motherboard for physical damage.",
+            "Check if the power cable is securely connected to both the computer and the power outlet.",
+            "Escalate the issue to senior technical staff for further investigation.",
+            "Replace the computer's power supply unit with a new one."
+          ],
+          "correctAnswer": [
+            "Check if the power cable is securely connected to both the computer and the power outlet."
+          ],
+          "explanation": "'Questioning the Obvious' involves starting with simple and obvious checks. Ensuring that the power cable is properly connected is a basic step that could resolve the issue without requiring more complex diagnostics."
+        },
+        {
+          "id": "1201-019",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "You are troubleshooting a workstation that is experiencing frequent crashes. After identifying the problem and testing your theory, you determine that the issue is caused by outdated graphics card drivers. What should you do next to implement a plan of action to resolve the problem?",
+          "options": [
+            "Replace the graphics card with a new one without consulting any documentation.",
+            "Escalate the issue to senior technical staff for further investigation.",
+            "Perform a full system backup before making any changes to the workstation.",
+            "Download and install the latest graphics card drivers from the manufacturer's website."
+          ],
+          "correctAnswer": [
+            "Download and install the latest graphics card drivers from the manufacturer's website."
+          ],
+          "explanation": "Implementing a plan of action involves resolving the identified issue. In this case, updating the graphics card drivers is the appropriate action to address the problem. Referring to the manufacturer's website ensures that the correct and most up-to-date drivers are used, aligning with the troubleshooting methodology."
+        },
+        {
+          "id": "1201-020",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "A user reports that the projector in the conference room has display issues when it is connected to his laptop. After identifying the cause and completely resolving the issue, the projector displays the images perfectly both on his laptop and on the projector. Which of the following troubleshooting strategies should you perform next?",
+          "options": [
+            "Identify the problem.",
+            "Test the solution.",
+            "Document the solution.",
+            "Establish what has changed."
+          ],
+          "correctAnswer": [
+            "Document the solution."
+          ],
+          "explanation": "According to the troubleshooting methodology, after verifying that the solution has resolved the issue and the system is functioning properly, the next step is to document the findings, actions taken, and the outcome. Documenting the solution ensures there is a record of the issue and its resolution for future reference, training, or preventing similar problems."
+        },
+        {
+          "id": "1201-1070",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is a primary reason for using a patch panel in conjunction with a switch?",
+          "explanation": "A patch panel simplifies cable organization and facilitates network management by acting as a central hub for terminating and labeling Ethernet cables. It supports scalability, troubleshooting, and reconfiguration without disturbing permanent cabling. Providing power to devices is the role of Power over Ethernet (PoE) switches or injectors, not patch panels. Enhancing wireless coverage requires wireless access points while protecting network traffic involves security protocols like TLS, WPA3, or VPN, not patch panels.",
+          "options": [
+            "To enhance wireless network coverage",
+            "To simplify cable organization and facilitate network management",
+            "To provide power to devices connected through Ethernet cables",
+            "To protect network traffic"
+          ],
+          "correctAnswer": [
+            "To simplify cable organization and facilitate network management"
+          ]
+        },
+        {
+          "id": "1201-1071",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does a dBm measurement represent?",
+          "explanation": "dBm measures signal strength relative to 1 milliwatt (mW), with values closer to zero indicating stronger signals. It is not related to battery level, bandwidth capacity, or the power output of the analyzer itself but is a standard way to express the strength of wireless signals.",
+          "options": [
+            "A signal strength ratio compared to 1 milliwatt (mW)",
+            "The amount of power output by the Wi-Fi analyzer",
+            "A measurement of the device's battery level",
+            "The bandwidth capacity of the network"
+          ],
+          "correctAnswer": [
+            "A signal strength ratio compared to 1 milliwatt (mW)"
+          ]
+        },
+        {
+          "id": "1201-1072",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A technician is assisting the CISO in wirelessly transferring data between their smartwatch and their corporate PC. As the CISO's request uses two devices in close proximity, what network method has a limited range?",
+          "explanation": "A Personal Area Network (PAN) is designed for very short-range communication, typically within a few meters, and is commonly used for connecting personal devices like a smartwatch and a computer. Technologies like Bluetooth are often used in PANs to facilitate data transfer between devices in close proximity. While Wi-Fi can be used for wireless communication, it is generally intended for longer ranges than a PAN and often supports multiple devices over a broader area, not just close proximity connections. A Local Area Network (LAN) can include both wired and wireless connections within a building or office space. However, it covers a much larger area than a PAN and typically connects multiple devices over a more extended range. A Wireless Local Area Network (WLAN) is a subset of LAN and generally uses Wi-Fi to connect devices within a broader area, such as an office or building, rather than specifically enabling close-range communication between two personal devices.",
+          "options": [
+            "PAN",
+            "LAN",
+            "Wi-Fi",
+            "WLAN"
+          ],
+          "correctAnswer": [
+            "PAN"
+          ]
+        },
+        {
+          "id": "1201-1073",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following best describes the primary purpose of Bluetooth?",
+          "explanation": "Bluetooth is mainly used to connect peripheral devices (like headphones or speakers) to PCs and mobile devices and to share data over short distances. Bluetooth is not designed for long-distance data transmission; that would require different wireless technology. It also doesn't provide Internet access, which Wi-Fi typically handles. Object tracking with encoded tags is performed by RFID, not Bluetooth.",
+          "options": [
+            "To connect peripheral devices and share data over short distances",
+            "To enable high-speed, long-distance data transmission between buildings",
+            "To track objects using encoded tags for inventory management",
+            "To serve as the main technology for wireless Internet access"
+          ],
+          "correctAnswer": [
+            "To connect peripheral devices and share data over short distances"
+          ]
+        },
+        {
+          "id": "1201-1074",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why might an active network tap be used instead of a passive tap?",
+          "explanation": "An active network tap regenerates signals, which is essential for high-speed links, such as gigabit Ethernet over copper, where signal complexity exceeds passive tap capabilities. Passive taps are unpowered and simpler but may not support advanced signaling needs. Active taps do not filter corrupt frames, as they forward all data like passive taps. While active taps can be used with fiber, they are not exclusive to fiber connections.",
+          "options": [
+            "Because active taps work without power, making them reliable in power outages",
+            "Because active taps are exclusively used for fiber optic connections",
+            "Because active taps filter out corrupt or malformed frames before sending data to the monitor",
+            "Because active taps regenerate signals, which is necessary for complex or high-speed links"
+          ],
+          "correctAnswer": [
+            "Because active taps regenerate signals, which is necessary for complex or high-speed links"
+          ]
+        },
+        {
+          "id": "1201-1075",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
+          "explanation": "The 802.11ac wireless network standard increases bandwidth and communication speeds using the following technologies: MU-MIMO is an enhancement to MIMO that allows multiple users to use the same channel. In addition to adding MU-MIMO, 802.11ac doubled the number of MIMO radio streams from four to eight. Channel bonding combines two non-overlapping 20 MHz channels into a single 40 MHz channel, resulting in slightly more than double the bandwidth. All the other technologies are not used to increase the bandwidth and communication speeds for 801.11ac.",
+          "options": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "OFDM modulation to allow several parallel data channels to stream data",
+            "Dual-band transmission to allow data to be transmitted at two frequencies at the same time",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth",
+            "Peer-to-peer mode to allow each host to communicate directly with other hosts"
+          ],
+          "correctAnswer": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth"
+          ]
+        },
+        {
+          "id": "1201-1076",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "You are using a crimper to attach an RJ-45 connector to a Cat 6 UTP cable. You need to use the T568A standard to connect the individual wires to the connector. Which wire should you connect to pin 1?",
+          "explanation": "According to the T568A standard, the green with white wire should be connected to pin 1 on an RJ-45 connector.",
+          "options": [
+            "Orange with white",
+            "Blue",
+            "Green",
+            "Green with white"
+          ],
+          "correctAnswer": [
+            "Green with white"
+          ]
+        },
+        {
+          "id": "1201-1077",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the purpose of a patch panel?",
+          "explanation": "The patch panel serves as a centralized point where wall port cables are connected to Ethernet switch ports, allowing easy changes to network connections. Directly connecting computers to switches without a patch panel would limit flexibility in network management. Wireless devices do not require this cabling setup, as they connect via Wi-Fi. Patch panels do not supply power to devices (a PoE switch does); they organize and link network connections.",
+          "options": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports",
+            "To serve as a power supply for connected devices",
+            "To allow wireless devices to access the network through cabling",
+            "To directly connect computers to the Ethernet switch without additional components"
+          ],
+          "correctAnswer": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports"
+          ]
+        },
+        {
+          "id": "1201-1078",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
+          "explanation": "A coaxial cable is composed of a central copper conductor that is surrounded by an insulator, which is then surrounded by a second metallic mesh conductor. The name coaxial is derived from the fact that both of these conductors share a common axis. Twisted-pair cables are twisted around each other to reduce the effects of electromagnetic interference (EMI) and crosstalk. Fiber optic cables have a plastic or glass center (known as the core). Only fiber optic cables are totally immune to electromagnetic interference (EMI) because light pulses, instead of electrical signals, represent the data.",
+          "options": [
+            "It uses two concentric metallic conductors.",
+            "It has conductors that are twisted around each other to eliminate crosstalk.",
+            "It has a conductor made from copper in the center.",
+            "It is totally immune to electromagnetic interference (EMI).",
+            "It is made of plastic or glass in the center."
+          ],
+          "correctAnswer": [
+            "It uses two concentric metallic conductors.",
+            "It has a conductor made from copper in the center."
+          ]
+        },
+        {
+          "id": "1201-1079",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A printer is behaving erratically; you suspect a faulty parallel port. Which tool can you use to test the parallel port?",
+          "explanation": "A loopback plug allows an output signal to be returned as input. Loopback plugs are used to test serial and parallel ports. A cable tester verifies that a network can carry a signal from one end to the other and that all wires within the connector are in their correct positions. A multimeter measures electrical properties, such as voltage, amps, and resistance. An ammeter is an instrument that measures the flow of electric current in a circuit.",
+          "options": [
+            "Multimeter",
+            "Ammeter",
+            "Cable tester",
+            "Loopback plug"
+          ],
+          "correctAnswer": [
+            "Loopback plug"
+          ]
+        },
+        {
+          "id": "1201-1080",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following BEST describes the purpose for which loopback plugs are used?",
+          "explanation": "Loopback plugs are used to test ports by returning output signals as input. Use a loopback plug to test the functionality of serial ports or networking ports. A 3-prong holder is a tweezer-like tool with three prongs for grabbing and lifting small objects. An IC extractor is a tweezer-like tool (usually spring-loaded in the open position) that's used to remove integrated circuit chips. Null modem cables are used to connect computers using their serial ports without the need for a modem and phone line connection.",
+          "options": [
+            "Removing broken pins within sockets",
+            "Grabbing and lifting small objects",
+            "Testing ports by returning output signals as input",
+            "Connecting computers together without using network cards or modems"
+          ],
+          "correctAnswer": [
+            "Testing ports by returning output signals as input"
+          ]
+        },
+        {
+          "id": "1201-1081",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Currently, your company is in the process of upgrading security in the company headquarters building by installing biometric sensors to limit access to specific rooms. Your network switches are PoE-enabled, which allows biometric sensors to connect to switches without an external power source. Which of the following PoE standards is designed for use with biometric sensors that require 25 watts?",
+          "explanation": "802.3at PoE+ provides a maximum of 30 watts of power, which is designed for use with devices like biometric sensors and tablets. 802.3af POE allows powered devices to draw up to about 13 W. This is not enough watts for the device. 802.1X is a network access control/authentication standard, not a power-delivery standard. It governs how devices authenticate to the network; it does not define how power is delivered over Ethernet. 802.11n is a wireless networking standard (Wi-Fi) and is unrelated to PoE.",
+          "options": [
+            "802.3at (PoE+)",
+            "802.11n",
+            "802.1X",
+            "802.3af (PoE)"
+          ],
+          "correctAnswer": [
+            "802.3at (PoE+)"
+          ]
+        },
+        {
+          "id": "1201-1082",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "All the employees in a lawyer's office communicate with the internet and each other through the same appliance. What kind of network is the office using?",
+          "explanation": "A Small Office/Home Office (SOHO) network is designed for small office environments where a single appliance, such as a router, provides internet access and facilitates communication between devices within the office. This setup is common in small offices like a lawyer's office, where a simple, centralized network structure is sufficient. Zigbee is a wireless protocol used for low-power, low-data-rate communication in applications like home automation and IoT devices. It is not typically used for standard office networking and internet communication. A Personal Area Network (PAN) connects personal devices over a short range, usually for a single person (e.g., connecting a smartphone to a smartwatch). It does not describe a network that allows all office employees to communicate with each other and the internet. A Metropolitan Area Network (MAN) covers a large geographic area, such as a city, and is used to connect multiple locations or buildings rather than the internal network of a single office.",
+          "options": [
+            "MAN",
+            "SOHO",
+            "PAN",
+            "Zigbee"
+          ],
+          "correctAnswer": [
+            "SOHO"
+          ]
+        },
+        {
+          "id": "1201-1083",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "You are designing a wireless network for a client. Your client needs the network to support a data rate of at least 150 Mbps. In addition, the client already has a wireless telephone system installed that operates at 2.4 GHz. Which 802.11 standard works BEST in this situation?",
+          "explanation": "802.11n is the best choice for this client, as 802.11n supports both 5 GHz and 2.4 GHz with a maximum transmission rate of 600 Mbps. 802.11b and 802.11g both operate in the 2.4 GHz to 2.4835 GHz range, which causes interference with the client's wireless phone system. 802.11a operates in the 5.725 GHz to 5.850 GHz frequency range, which doesn't interfere with the phone system. However, the maximum speed is limited to 54 Mbps.",
+          "options": [
+            "802.11g",
+            "802.11b",
+            "802.11a",
+            "802.11n"
+          ],
+          "correctAnswer": [
+            "802.11n"
+          ]
+        },
+        {
+          "id": "1201-1084",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is one of the main advantages of Wi-Fi 7's Multi-Link Operation (MLO)?",
+          "explanation": "Multi-Link Operation (MLO) in Wi-Fi 7 enables devices to send data over multiple bands (2.4 GHz, 5 GHz, and 6 GHz) or channels, which helps reduce latency and improves throughput. MLO does not restrict data transfer to a single band but rather enhances flexibility and speed by using multiple bands. MLO does not limit connection speeds; instead, it optimizes performance. Wi-Fi 7 operates across various bands, not just 2.4 GHz, allowing better compatibility and speed.",
+          "options": [
+            "It restricts data transfer to a single band for stability.",
+            "It allows devices to send data over multiple bands or channels.",
+            "It only operates in the 2.4 GHz band to support legacy devices.",
+            "It limits connection speeds to prevent network congestion."
+          ],
+          "correctAnswer": [
+            "It allows devices to send data over multiple bands or channels."
+          ]
+        },
+        {
+          "id": "1201-1085",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the purpose of bonding multiple Ethernet NIC ports?",
+          "explanation": "Bonding multiple Ethernet NIC ports enables a higher-speed link by combining the individual speeds of each port, effectively increasing the data transfer rate. Improved signal quality for long distances is achieved through cabling standards or signal boosters, not by bonding ports. Using one port as a backup would be achieved through redundancy settings, not bonding, and simultaneous copper and fiber connections requiring specific NICs with different port types rather than bonded ports.",
+          "options": [
+            "To create a higher-speed link by combining the speeds of multiple ports",
+            "To improve signal quality for distant connections",
+            "To connect both copper and fiber connections simultaneously",
+            "To allow one port to function as a backup in case of a failure"
+          ],
+          "correctAnswer": [
+            "To create a higher-speed link by combining the speeds of multiple ports"
+          ]
+        },
+        {
+          "id": "1201-1086",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following network types uses special hardware to provide high-speed access to storage across the network?",
+          "explanation": "A storage area network (SAN) is a special type of network that provides high-speed access to storage across the network. Specialized hardware is used to store and provide access to needed data. In a peer-to-peer network, each host can provide network resources to other hosts or access resources located on other hosts. It does not use special hardware to provide high-speed access to storage across the network. A local area network is a network in a small geographic area, like an office. A LAN typically uses wires to connect systems together. It does not use special hardware to provide high-speed access to storage across the network. In a client-server network, hosts have specific roles. For example, some hosts are assigned server roles, which allow them to provide network resources to other hosts. Other hosts are assigned client roles, which allow them to consume network resources. It does not use special hardware to provide high-speed access to storage across the network.",
+          "options": [
+            "Peer-to-peer network",
+            "Storage area network",
+            "Client-server network",
+            "Local area network"
+          ],
+          "correctAnswer": [
+            "Storage area network"
+          ]
+        },
+        {
+          "id": "1201-1087",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which type of network is best suited for a company that operates across multiple locations in a city?",
+          "explanation": "A MAN (Metropolitan Area Network) is ideal for a company with networks spread across multiple locations in a single city, as it bridges the gap between local LANs and broader WANs. LANs are restricted to a single site, PANs cover very small areas, and WLANs are limited to local, often indoor, wireless communication.",
+          "options": [
+            "PAN",
+            "LAN",
+            "WLAN",
+            "MAN"
+          ],
+          "correctAnswer": [
+            "MAN"
+          ]
+        },
+        {
+          "id": "1201-1088",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What best describes a Local Area Network (LAN)?",
+          "explanation": "A LAN is defined as a group of computers connected within a limited geographic location, like a building or campus. This distinguishes it from larger networks, like WANs, which span larger geographic areas. The other options refer to networks with broader coverage or specific functionalities, such as storage or city-wide coverage.",
+          "options": [
+            "A specialized network dedicated to data storage",
+            "A group of computers connected within a close geographic location",
+            "A network that covers a city or municipality",
+            "A network that spans multiple geographic locations worldwide"
+          ],
+          "correctAnswer": [
+            "A group of computers connected within a close geographic location"
+          ]
+        },
+        {
+          "id": "1201-1089",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does an Ethernet switch use to forward frames to the correct destination?",
+          "explanation": "An Ethernet switch forwards frames based on the MAC address, which uniquely identifies devices on a local network. It uses a MAC address table to map addresses to specific ports. IP addresses operate at the network layer, but switches operate at the data link layer (Layer 2) and do not use IP addresses for forwarding frames. Port numbers and VLAN IDs are used for higher-level functions, such as routing and segmentation, but they are not involved in the basic operation of frame forwarding in switches.",
+          "options": [
+            "VLAN ID",
+            "Port number",
+            "MAC address",
+            "IP address"
+          ],
+          "correctAnswer": [
+            "MAC address"
+          ]
+        },
+        {
+          "id": "1201-1090",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A technician is running a network above a dropped ceiling that is also used for ventilation. The cable must be a twisted pair and must be capable of Gigabit Ethernet speeds. Which of the following cables should the technician use?",
+          "explanation": "Plenum-rated Cat 6a cables can transfer data at 10 Gbps and can be placed in plenum spaces used for ventilation. Riser-rated RG-58 cables are coaxial and can transfer data at 10 Mbps. Plenum-rated cables can be used in riser applications, but riser-rated cables cannot be used in plenum applications. Riser-rated Cat 5e cables can transfer data at 1 Gbps, but they cannot be used in plenum applications. Plenum-rated multimode fiber can transfer data at 10 Gbps, but it is not a twisted pair.",
+          "options": [
+            "Riser-rated RG-58",
+            "Riser-rated Cat 5e",
+            "Plenum-rated Cat 6a",
+            "Plenum-rated multimode fiber"
+          ],
+          "correctAnswer": [
+            "Plenum-rated Cat 6a"
+          ]
+        },
+        {
+          "id": "1201-1091",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "As a network engineer, you have been creating patch (straight-through) cables for a network switch. You have plugged in all the cables and are testing data transmission through the cables. You notice that the data transmission is not functioning properly in some of the cables, and you are sure that one of the cables is interfering with the transmission at the near end. What is this type of interference called?",
+          "explanation": "Cross-talk is an interference between two pairs in a cable. The cable transmitting the interfering signal interferes the greatest at the end where the interfering signal is transmitted from (called the near end) with other cables next to it. In this scenario, you probably did not keep the wire pairs twisted as much as possible up to the end of the cable connector, and you will need to fix the issue. Cat 5 Ethernet is a type of network connector, not a type of network interference. You are using a network switch, not a router, so there should be no interference from any router. Wi-Fi interference can come from many sources, but you are using a wired (not a wireless) connection.",
+          "options": [
+            "Cat 5 Ethernet interference",
+            "Cross-talk interference",
+            "Wi-Fi interference",
+            "Router interference"
+          ],
+          "correctAnswer": [
+            "Cross-talk interference"
+          ]
+        },
+        {
+          "id": "1201-1092",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why can fiber optic cables support higher bandwidth and longer distances compared to copper cables?",
+          "explanation": "Fiber optic cables use light pulses that are not affected by electrical interference and suffer less attenuation, allowing for higher bandwidth and longer distances. Fiber optic cables are not necessarily thicker, as core size varies with the type of fiber. Copper signals are more susceptible to interference, limiting the distance they can travel. Fiber optics are durable but fragile in certain conditions and do not require longer runs based on durability.",
+          "options": [
+            "Fiber optic cables are thicker, which reduces interference.",
+            "The light pulses in fiber optics are not susceptible to interference and experience less attenuation.",
+            "Fiber optic cables are less durable and, therefore, require longer cable runs.",
+            "Copper signals are stronger than light pulses, leading to shorter cable runs."
+          ],
+          "correctAnswer": [
+            "The light pulses in fiber optics are not susceptible to interference and experience less attenuation."
+          ]
+        },
+        {
+          "id": "1201-1093",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What distinguishes single-mode fiber (SMF) from multi-mode fiber (MMF) in terms of usage?",
+          "explanation": "Single-mode fiber is designed for high-speed, long-distance transmission and is well-suited for WANs, while multi-mode fiber, with a larger core and LED-based technology, is cost-effective and ideal for shorter distances in LANs. Multi-mode does not use high-power lasers like SMF and is generally less capable of high-speed, long-distance transmission. SMF has a smaller core, focusing light more precisely, which improves distance and speed.",
+          "options": [
+            "SMF has a larger core than MMF, allowing for more light to pass through.",
+            "SMF and MMF perform identically, with only minor cost differences.",
+            "SMF uses lower-cost LEDs, while MMF uses high-power lasers.",
+            "SMF is better suited for long distances and high speeds, whereas MMF is ideal for shorter distances in LANs."
+          ],
+          "correctAnswer": [
+            "SMF is better suited for long distances and high speeds, whereas MMF is ideal for shorter distances in LANs."
+          ]
+        },
+        {
+          "id": "1201-1094",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician needs to deploy a computer on an Ethernet network and notices that the computer will sit on a shelf directly under a fluorescent light. What type of cable will the technician use?",
+          "explanation": "Shielded Twisted Pair (STP) cable is the best choice for this situation because it includes shielding that protects against electromagnetic interference (EMI), which can be caused by fluorescent lighting. The shielding around the wires helps to prevent data transmission issues that could arise from the nearby light source. UTP lacks shielding, making it more susceptible to interference from nearby sources like fluorescent lights. This interference could lead to data loss or signal degradation, making UTP unsuitable in this environment. While coaxial cables are shielded and can resist some interference, they are not commonly used for standard Ethernet networks and are generally more suitable for television and broadband internet connections. Fiber optic cables are immune to electromagnetic interference; however, they are typically more expensive and may be unnecessary in this scenario where STP can provide sufficient protection. Fiber optic is generally reserved for long-distance or high-bandwidth applications.",
+          "options": [
+            "Fiber optic",
+            "Coax",
+            "UTP",
+            "STP"
+          ],
+          "correctAnswer": [
+            "STP"
+          ]
+        },
+        {
+          "id": "1201-1095",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is a major benefit STP provides that UTP does not?",
+          "explanation": "Shielded twisted pair (STP) has a grounded outer copper shield around the bundle of twisted pairs or around each pair. This provides added protection against EMI. Unshielded twisted pair (UTP) does not have a grounded outer copper shield. STP costs considerably more than UTP. Neither is safer for installations in overhead ceiling spaces unless they are made with plenum plastic shielding. STP and UTP are equally effective at transmitting signals over the same distance.",
+          "options": [
+            "Safer for installations in overhead ceiling spaces",
+            "Ability to install longer cable lengths",
+            "Greater resistance to interference",
+            "Lower cost"
+          ],
+          "correctAnswer": [
+            "Greater resistance to interference"
+          ]
+        },
+        {
+          "id": "1201-1096",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician needs to replace a broken Ethernet cable. What connector will the technician use to terminate the new cable, also known as 8P8C?",
+          "explanation": "RJ-45 is the connector used to terminate Ethernet cables and is also known as an 8P8C (8-position, 8-contact) connector. This connector type is standard for Ethernet networking cables, enabling proper data transmission across devices on a network. F-type connectors are used for coaxial cables, primarily in television and cable internet connections, not for Ethernet cables. SC (Subscriber Connector or Standard Connector) is a type of fiber optic connector, not suitable for Ethernet cables, which use copper wiring. LC (Lucent Connector) is another type of fiber optic connector used for smaller form factor fiber optic cables, but it is also not appropriate for Ethernet cabling.",
+          "options": [
+            "F-type",
+            "RJ-45",
+            "LC",
+            "SC"
+          ],
+          "correctAnswer": [
+            "RJ-45"
+          ]
+        },
+        {
+          "id": "1201-1097",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the primary function of a network tap?",
+          "explanation": "The main function of a network tap is to intercept and copy signals passing over a cable, enabling the captured data to be sent to a packet or protocol analyzer for monitoring or analysis. Amplifying signals for longer distances is not the purpose of a tap; this would involve repeaters or amplifiers. Network taps do not add additional connection ports for devices like a switch would, nor are they intended to replace switches in small networks.",
+          "options": [
+            "To amplify signals passing over a cable for longer transmission distances",
+            "To provide additional ports for connecting multiple network devices",
+            "To replace network switches in small networks",
+            "To intercept and copy signals passing over a cable for monitoring or analysis"
+          ],
+          "correctAnswer": [
+            "To intercept and copy signals passing over a cable for monitoring or analysis"
+          ]
+        },
+        {
+          "id": "1201-1098",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician used a tool that energizes each wire in a cable. When the technician sent energy to some of the wires, the LED on the tool did not light up. What tool was the technician using?",
+          "explanation": "A cable tester is a tool used to check the integrity and functionality of cables by sending a signal through each wire. If the LED on the tester does not light up for certain wires, it indicates a break or fault in those wires, meaning the cable is not transmitting signals properly. A toner probe is used in conjunction with a tone generator to trace cables through walls or ceilings. It does not test the functionality of each wire within a cable. A tone generator, used with a probe, helps locate cables by emitting a tone. It is not designed to test the individual wires in a cable for continuity or signal integrity. A loopback plug is used to test network ports and troubleshoot connectivity issues by reflecting signals back to the source. It is not used to check the integrity of each individual wire in a cable.",
+          "options": [
+            "Loopback plug",
+            "Tone generator",
+            "Toner probe",
+            "Cable tester"
+          ],
+          "correctAnswer": [
+            "Cable tester"
+          ]
+        },
+        {
+          "id": "1201-1099",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is connecting a computer to the network using Ethernet. How is the physical connection to the cable made?",
+          "explanation": "The physical connection to an Ethernet cable is made via an RJ45 port, which is the standard port for Ethernet networking. An RJ45 connector on the Ethernet cable plugs directly into the RJ45 port on a computer or network device, allowing it to connect to the network. The MAC address is a unique identifier assigned to a network device, not a physical means of connection. It operates at the data link layer (Layer 2) and does not involve physically connecting the cable. A patch panel is a central point where network cables are organized and connected. However, it does not directly connect a computer to an Ethernet cable; instead, it helps manage multiple connections within a network setup. Power over Ethernet (PoE) allows Ethernet cables to transmit electrical power along with data, enabling devices like IP cameras or wireless access points to operate without separate power sources. It is not a method for physically connecting a computer to an Ethernet network.",
+          "options": [
+            "Using a patch panel",
+            "Using the MAC address",
+            "Using PoE",
+            "Using the RJ45 port"
+          ],
+          "correctAnswer": [
+            "Using the RJ45 port"
+          ]
+        },
+        {
+          "id": "1201-1100",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A maintenance worker accidentally nicks a bundle of network cables routed to multiple wall jacks in a conference room. Only one of the cable's wires is severed. A technician is tasked with replacing the cable. Which of the following tools would the technician MOST likely use to identify which wall jack connects to the severed cable?",
+          "explanation": "A tone generator and probe can be used to identify the wall jack connected to the severed wire. The tone generator can be attached to the severed wire, and the probe will sound when it is brought close to the connected wall jack. A multimeter measures voltage, current, and resistance on a wire. A loopback plug can be plugged into a network adapter to test whether the NIC can send and receive properly. A cable stripper is used to cut away the plastic jacket or coating from a network cable.",
+          "options": [
+            "Cable stripper",
+            "Loopback plug",
+            "Multimeter",
+            "Tone generator and probe"
+          ],
+          "correctAnswer": [
+            "Tone generator and probe"
+          ]
+        },
+        {
+          "id": "1201-1101",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A technician determines that an older network hub that connects 24 workstations is performing poorly due to excessive network collisions. Which of the following network devices would be the BEST replacement?",
+          "explanation": "A switch maintains a table of MAC addresses by port and forwards network data packets to only the port that matches the MAC address. This significantly reduces collisions. A router manages IP traffic between networks. A bridge separates two network segments and forwards data packets from one segment to another. A patch panel organizes network cables and connects inbound and outbound cables.",
+          "options": [
+            "Bridge",
+            "Switch",
+            "Router",
+            "Patch panel"
+          ],
+          "correctAnswer": [
+            "Switch"
+          ]
+        },
+        {
+          "id": "1201-1102",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are using a patch panel to connect the computers in your building to the appropriate switches, and you need to connect the Ethernet wires from the building network port cables to the patch panel. Where do you connect the wires on a patch panel?",
+          "explanation": "All network ports in a building terminate at a patch panel. The Ethernet cables are punched down and terminate on the backside of the patch panel. The front of the patch panel consists of RJ-45 ports. An Ethernet cable runs from the patch panel to the network switch to provide the connection between a device that is connected to the network port and the switch. There are no specified incoming or outgoing wires on an Ethernet cable.",
+          "options": [
+            "You connect the incoming wires to the front and the outgoing wires to the back.",
+            "You connect the outgoing wires to the front and the incoming wires to the back.",
+            "You connect the wires to the backside of the panel.",
+            "You connect the wires to the front side of the panel."
+          ],
+          "correctAnswer": [
+            "You connect the wires to the backside of the panel."
+          ]
+        },
+        {
+          "id": "1201-1103",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What component allows PoE functionality when a switch does not support PoE?",
+          "explanation": "A PoE injector (also known as a midspan device) enables PoE functionality when a switch does not natively support it. It connects between the switch and the powered device, injecting power into the Ethernet cable while preserving data connectivity. An endspan switch is a PoE-enabled switch that directly provides power without requiring additional hardware, which is different from using an injector. A power adapter provides local power to a device but does not integrate with Ethernet cabling. An Ethernet splitter splits network signals but does not provide power delivery, making it unsuitable for PoE functionality.",
+          "options": [
+            "Endspan switch",
+            "Power adapter",
+            "Ethernet splitter",
+            "PoE injector"
+          ],
+          "correctAnswer": [
+            "PoE injector"
+          ]
+        },
+        {
+          "id": "1201-1104",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What differentiates a managed switch from an unmanaged switch?",
+          "explanation": "A managed switch can be configured with security settings and advanced features, offering greater control and functionality for larger networks. Unlike unmanaged switches, it provides options for network management and monitoring. Managed switches are not limited to specific ISPs and are specifically designed to connect devices within a network. They also come with physical ports for network connections, often in large quantities.",
+          "options": [
+            "A managed switch operates only with a specific ISP's network.",
+            "A managed switch does not connect devices within a network.",
+            "A managed switch can be configured with security settings and advanced features.",
+            "A managed switch has no physical ports for network connections."
+          ],
+          "correctAnswer": [
+            "A managed switch can be configured with security settings and advanced features."
+          ]
+        },
+        {
+          "id": "1201-1105",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following describes a benefit of using a patch panel?",
+          "explanation": "A patch panel prevents wear and tear on switch ports by serving as a static termination point for structured cabling. Short patch cables are used to connect the panel to the switch, making replacements easy without disturbing permanent cabling. Signal amplification is not a feature associated with patch panels. Switches are still required for network connectivity between connected devices. Patch panels do not reduce the number of cables needed; they simply organize them more effectively.",
+          "options": [
+            "It eliminates the need for switches.",
+            "It amplifies signals over long distances.",
+            "It prevents wear and tear on switch ports.",
+            "It reduces the need for network cables."
+          ],
+          "correctAnswer": [
+            "It prevents wear and tear on switch ports."
+          ]
+        },
+        {
+          "id": "1201-1106",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why is it important to label ports on a patch panel?",
+          "explanation": "Labeling ports reduces errors during troubleshooting by making it easy to identify and match connections between the patch panel and switch. Proper labeling also speeds up network changes and repairs. Increasing network speed depends on hardware specifications, not labeling. Providing redundancy involves backup devices or paths, not labeling. Data collisions are eliminated by switches, which provide separate collision domains, not by labeling.",
+          "options": [
+            "To reduce errors during troubleshooting",
+            "To provide redundancy in case of failure",
+            "To increase network speed",
+            "To prevent data collisions"
+          ],
+          "correctAnswer": [
+            "To reduce errors during troubleshooting"
+          ]
+        },
+        {
+          "id": "1201-1107",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "How do switches and bridges learn where devices are located on a network?",
+          "explanation": "Bridges and switches learn addresses by copying the MAC address of the source device from the data packet header and placing it in the MAC address table. The port number the data packet entered is also recorded in the table and associated with the source MAC address. A switch and/or bridge cannot record the destination MAC address because they do not know the port that is used to reach the destination device. Bridges and switches operate at Layer 2 and do not use IP addresses (which exist at Layer 3).",
+          "options": [
+            "When a data packet enters a port, the source IP address is copied from the data packet header.",
+            "When a data packet enters a port, the source MAC address is copied from the data packet header.",
+            "When a data packet enters a port, the destination IP address is copied from the data packet header.",
+            "When a data packet enters a port, the destination MAC address is copied from the data packet header."
+          ],
+          "correctAnswer": [
+            "When a data packet enters a port, the source MAC address is copied from the data packet header."
+          ]
+        },
+        {
+          "id": "1201-1108",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What function does an Ethernet switch perform when it receives a data frame?",
+          "explanation": "An Ethernet switch decodes the frame to identify both the source and destination MAC addresses and then forwards the frame to the port that corresponds to the destination MAC address in its table. This process makes data delivery more efficient by only sending data to the intended recipient, unlike broadcasting, which sends data to all connected devices. Broadcasting frames to all ports is inefficient and is characteristic of network hubs, not switches. Ethernet switches forward frames in real-time as long as the destination MAC address is known. Discarding frames without an entry in the MAC address table is incorrect because switches will flood the frame to all ports except the source, learning new addresses as responses are received.",
+          "options": [
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address.",
+            "It broadcasts the frame to all ports.",
+            "It discards the frame if the destination is not in its MAC address table.",
+            "It stores the frame until the destination device requests it."
+          ],
+          "correctAnswer": [
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address."
+          ]
+        },
+        {
+          "id": "1201-1109",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which IEEE PoE standard is most suitable for devices requiring around 25 W of power, such as advanced wireless access points and pan-tilt-zoom security cameras?",
+          "explanation": "802.3at (PoE+ or Type 2) provides up to 25 W of power, making it ideal for devices with higher energy demands like advanced wireless access points, pan-tilt-zoom security cameras, and video IP phones. 802.3af only supports up to 13 W, which is insufficient for these higher-power devices. 802.3bt Type 3 and Type 4 standards deliver even more power, up to 51 W and 73 W, respectively, and are intended for significantly larger power requirements, such as digital signage and LED lighting, which exceed the needs of devices covered under 802.3at.",
+          "options": [
+            "802.3bt Type 3",
+            "802.3at",
+            "802.3af",
+            "802.3bt Type 4"
+          ],
+          "correctAnswer": [
+            "802.3at"
+          ]
+        },
+        {
+          "id": "1201-1110",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the purpose of a patch cord?",
+          "explanation": "A patch cord connects a port on the patch panel to a port on the Ethernet switch, completing the link from the wall port to the network. The computer connects to the wall port, not directly via the patch cord, to the ethernet switch. Terminating cables into IDCs is done at the back of the patch panel, not by the patch cord. While patch cords connect devices, they are not specifically used for routing network traffic between floors.",
+          "options": [
+            "It routes network traffic between different floors in a building.",
+            "It links a port on the patch panel to a port on the Ethernet switch.",
+            "It terminates cables into insulation displacement connectors (IDCs).",
+            "It connects the computer directly to the Ethernet switch."
+          ],
+          "correctAnswer": [
+            "It links a port on the patch panel to a port on the Ethernet switch."
+          ]
+        },
+        {
+          "id": "1201-1111",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why might a company choose to use modular switches in its network?",
+          "explanation": "Modular switches allow companies to interconnect multiple switch units via a fast communications backplane, enabling the management of many access ports in a compact design. Modular switches are typically mounted in racks for efficient space use. They do not limit device connections but rather facilitate large networks. Additionally, they do not provide wireless connectivity; they are specifically for wired networks.",
+          "options": [
+            "To provide wireless connectivity to employees",
+            "To avoid using racks for network equipment",
+            "To limit the number of devices connected to the network",
+            "To interconnect multiple switch units through a fast backplane"
+          ],
+          "correctAnswer": [
+            "To interconnect multiple switch units through a fast backplane"
+          ]
+        },
+        {
+          "id": "1201-1112",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why does an Ethernet switch eliminate the negative effects of collisions in a network?",
+          "explanation": "An Ethernet switch eliminates collisions by assigning a separate collision domain to each port, allowing devices to communicate independently. This configuration ensures that each device connected to the switch operates in full-duplex mode, enabling simultaneous sending and receiving of data at the network's full speed. Reducing the number of devices does not address collisions, as collisions occur based on how traffic is handled, not the number of connections. Preventing devices from sending data simultaneously is unnecessary because full-duplex communication inherently supports simultaneous transmissions. Limiting data to avoid congestion relates to traffic management, not collision prevention, which is handled by creating isolated collision domains per port.",
+          "options": [
+            "It limits the amount of data transmitted to avoid congestion.",
+            "It assigns a separate collision domain to each port.",
+            "It reduces the number of devices connected to the network.",
+            "It prevents devices from sending data at the same time."
+          ],
+          "correctAnswer": [
+            "It assigns a separate collision domain to each port."
+          ]
+        },
+        {
+          "id": "1201-1113",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "How do adapters supporting Bluetooth versions 3 and 4 achieve faster data transfer rates?",
+          "explanation": "Adapters supporting Bluetooth versions 3 and 4 can achieve faster data transfer rates by negotiating an 802.11 radio link, which allows for higher speeds when transferring large files. Increasing signal range does not directly impact speed, and Bluetooth does not use infrared technology. Doubling the frequency is not a method used to increase speed in Bluetooth connections.",
+          "options": [
+            "By doubling the Bluetooth frequency to enhance speed",
+            "By negotiating an 802.11 radio link for large file transfers",
+            "By increasing the Bluetooth signal range",
+            "By using infrared technology for improved connectivity"
+          ],
+          "correctAnswer": [
+            "By negotiating an 802.11 radio link for large file transfers"
+          ]
+        },
+        {
+          "id": "1201-1114",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What distinguishes NFC from RFID technology?",
+          "explanation": "NFC operates at short ranges (typically up to two inches) and can act as both a tag and a reader, enabling peer-to-peer communication, which is suitable for contactless payments and quick data exchanges. RFID is primarily used for tracking and inventory over longer distances. RFID is less common for contactless payments, and neither technology is intended for high-speed or long-range data transfer.",
+          "options": [
+            "RFID is primarily used for contactless payments, while NFC is used for high-speed data transfer.",
+            "NFC is used for tracking parcels over long distances.",
+            "NFC operates at very short ranges and can function as both tag and reader.",
+            "NFC and RFID are both designed for long-range communication."
+          ],
+          "correctAnswer": [
+            "NFC operates at very short ranges and can function as both tag and reader."
+          ]
+        },
+        {
+          "id": "1201-1115",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is upgrading the wireless network so that it can take advantage of \"multiple input multiple output\" (MIMO) to increase reliability and bandwidth. What standard is the technician upgrading the wireless network to?",
+          "explanation": "802.11n was the first Wi-Fi standard to introduce MIMO (Multiple Input Multiple Output) technology, which allows multiple antennas to transmit and receive data simultaneously. This increases the network's reliability, range, and bandwidth, making it suitable for environments that require enhanced performance. 802.11g is an older standard that does not support MIMO. It operates at 2.4 GHz and offers lower speeds and ranges compared to 802.11n. 802.11b is one of the earliest Wi-Fi standards and does not support MIMO. It has a limited range and operates at slower speeds. 802.11a operates at 5 GHz and offers higher speeds than 802.11b and 802.11g, but it does not support MIMO. It is primarily used for specific business applications requiring the 5 GHz band without MIMO capability.",
+          "options": [
+            "802.11n",
+            "802.11b",
+            "802.11g",
+            "802.11a"
+          ],
+          "correctAnswer": [
+            "802.11n"
+          ]
+        },
+        {
+          "id": "1201-1116",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is upgrading a grocery store's checkout lines with contactless payment devices. What type of wireless technology are the payment devices based on?",
+          "explanation": "NFC (Near Field Communication) is a wireless technology used in contactless payment systems. It enables secure, short-range communication between devices, such as payment terminals and contactless cards or smartphones, typically within a range of a few centimeters. 802.11a is a Wi-Fi standard used for wireless networking, not typically for secure, short-range communication required in contactless payments. Bluetooth is a wireless technology for short-range communication, but it is generally used for pairing devices over a slightly longer range than NFC and is not specifically optimized for secure contactless payments. While RFID (Radio Frequency Identification) is used for short-range identification and can sometimes be used in payment systems, NFC is specifically designed for secure, close proximity communication and is the primary technology in contactless payment systems.",
+          "options": [
+            "802.11a",
+            "Bluetooth",
+            "RFID",
+            "NFC"
+          ],
+          "correctAnswer": [
+            "NFC"
+          ]
+        },
+        {
+          "id": "1201-1117",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is Bluetooth Low Energy (BLE) primarily designed for?",
+          "explanation": "Bluetooth Low Energy (BLE) is designed specifically for small battery-powered devices, transmitting small amounts of data occasionally to conserve power. BLE is not intended for continuous high-bandwidth applications like video streaming or large file transfers. BLE is not backward compatible with classic Bluetooth, although some devices can support both BLE and classic Bluetooth simultaneously.",
+          "options": [
+            "Small battery-powered devices that transmit small amounts of data infrequently",
+            "Continuous streaming of high-definition video content",
+            "Enabling backward compatibility with all previous Bluetooth versions",
+            "Large file transfers between computers and mobile devices"
+          ],
+          "correctAnswer": [
+            "Small battery-powered devices that transmit small amounts of data infrequently"
+          ]
+        },
+        {
+          "id": "1201-1118",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What feature of Bluetooth allows two devices to securely exchange data?",
+          "explanation": "Bluetooth devices use a pairing procedure to authenticate each other, ensuring a secure connection before data exchange. Bluetooth connections are wireless, not requiring physical cables, and the pairing process rather than memory encryption is what ensures secure data exchange. Bluetooth can connect different types of devices, not just identical ones.",
+          "options": [
+            "Pairing procedure that authenticates devices before communication",
+            "Encrypted data stored in the device's internal memory",
+            "Use of physical cables between devices",
+            "Only allowing communication between identical device types"
+          ],
+          "correctAnswer": [
+            "Pairing procedure that authenticates devices before communication"
+          ]
+        },
+        {
+          "id": "1201-1119",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the advantage of using the same SSID for both frequency bands on a dual-band access point?",
+          "explanation": "Using the same SSID for both bands allows devices to automatically connect to the band with the strongest signal, improving connectivity and simplifying network selection for the user. Forcing devices to a specific band or requiring manual selection would limit flexibility. Using the same SSID does not inherently reduce interference from nearby networks, which is managed through channel configuration.",
+          "options": [
+            "It forces devices to use only the 2.4 GHz band.",
+            "It restricts users to manual selection of the frequency band.",
+            "It prevents interference from nearby networks.",
+            "It allows devices to automatically connect to the band with the strongest signal."
+          ],
+          "correctAnswer": [
+            "It allows devices to automatically connect to the band with the strongest signal."
+          ]
+        },
+        {
+          "id": "1201-1120",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which of the following are characteristics of the 802.11g wireless standard? (Select three.)",
+          "explanation": "802.11g wireless networks operate in the 2.4 GHz range, have a maximum bandwidth of 54 Mbps, and are backward compatible with 802.11b networks. 802.11b provides 11 Mbps of bandwidth. 802.11a operates in the 5.75 GHz range. For this reason, 802.11a is not compatible with 802.11b or 802.11g.",
+          "options": [
+            "Backward compatible with 802.11a devices",
+            "Operates in the 2.4 GHz range",
+            "Operates in the 5.75 GHz range",
+            "Backward compatible with 802.11b devices",
+            "Maximum bandwidth of 11 Mbps",
+            "Maximum bandwidth of 54 Mbps"
+          ],
+          "correctAnswer": [
+            "Operates in the 2.4 GHz range",
+            "Backward compatible with 802.11b devices",
+            "Maximum bandwidth of 54 Mbps"
+          ]
+        },
+        {
+          "id": "1201-1121",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does a high Signal-to-Noise Ratio (SNR) indicate in a wireless network?",
+          "explanation": "A high Signal-to-Noise Ratio (SNR) means the signal is significantly stronger than the background noise, leading to better network performance. Higher noise levels would result in a lower SNR, not a higher one. SNR does not reflect power output or directly relate to data speed but impacts the quality and reliability of the connection.",
+          "options": [
+            "Increased power output from the Wi-Fi device",
+            "Low data transmission speed across the network",
+            "Higher noise levels that interfere with the signal",
+            "Stronger signal compared to background noise"
+          ],
+          "correctAnswer": [
+            "Stronger signal compared to background noise"
+          ]
+        },
+        {
+          "id": "1201-1122",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "An organization located on a large piece of rural property needs to connect its office building on the north side of the property with its warehouse and shipping operation on the south side of the property. The organization decides to connect the locations using long-range fixed wireless. What frequency spectrum must the organization use to ensure that nobody else can use the same frequency band?",
+          "explanation": "A licensed frequency spectrum provides exclusive access to a specific frequency band, ensuring that no other entities can use the same frequency in the area. This is especially useful for long-range, fixed wireless connections in rural areas where dedicated, interference-free communication is essential for reliable operation between distant locations. Unlicensed frequencies, such as the 2.4 GHz and 5 GHz bands, are open for public use, meaning that other organizations or individuals could potentially operate on the same frequencies, leading to interference and unreliable communication. 802.11ax (Wi-Fi 6) is a Wi-Fi standard, not a frequency spectrum type. It typically operates in unlicensed bands and is designed for high-density, short- to medium-range wireless networks, not long-range fixed wireless connections. DFS is a mechanism that allows Wi-Fi devices to avoid interference with radar systems by automatically selecting channels within the 5 GHz band. However, it does not provide exclusive access to frequencies, so other users could still be present on the same frequencies.",
+          "options": [
+            "802.11ax",
+            "Unlicensed",
+            "Licensed",
+            "DFS"
+          ],
+          "correctAnswer": [
+            "Licensed"
+          ]
+        },
+        {
+          "id": "1201-1123",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which IEEE wireless standards specify transmission speeds up to 54 Mbps? (Select two.)",
+          "explanation": "Both the 802.11a and the 802.11g wireless standards specify maximum transmission speeds up to 54 Mbps. Bluetooth is a wireless standard that is commonly used to connect peripheral devices and operates at 720 Kbps. The 802.11b wireless standard provides transmission speeds of 11 Mbps. The 802.11ac wireless standard provides transmission speeds of up to 2.6 Gbps.",
+          "options": [
+            "802.11b",
+            "802.11a",
+            "802.11ac",
+            "802.11g",
+            "Bluetooth"
+          ],
+          "correctAnswer": [
+            "802.11a",
+            "802.11g"
+          ]
+        },
+        {
+          "id": "1201-1124",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which dBm value is the most realistic and indicates a strong wireless signal in a typical environment?",
+          "explanation": "-65 dBm is generally considered a strong wireless signal, suitable for reliable connectivity. A value of -90 dBm or -80 dBm is weaker and likely to result in packet loss or disconnections. A value of -30 dBm is extremely strong, but -65 dBm is typically the threshold for good performance in common wireless environments.",
+          "options": [
+            "-90 dBm",
+            "-65 dBm",
+            "-80 dBm",
+            "-30 dBm"
+          ],
+          "correctAnswer": [
+            "-65 dBm"
+          ]
+        },
+        {
+          "id": "1201-1125",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following wireless networking standards uses a frequency of 5 GHz and supports data transmission speeds up to 2.6 Gbps?",
+          "explanation": "The 802.11ac standard uses the 5 GHz frequency and supports data transmission speeds up to 2.6 Gbps. 802.11g and 802.11a both support data transmission speeds up to 54 Mbps. 802.11b supports data transmission speeds up to 11 Mbps. 802.11n supports data transmission speeds up to 600 Mbps.",
+          "options": [
+            "802.11g",
+            "802.11ac",
+            "802.11n",
+            "802.11b",
+            "802.11a"
+          ],
+          "correctAnswer": [
+            "802.11ac"
+          ]
+        },
+        {
+          "id": "1201-1126",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of a Wi-Fi analyzer?",
+          "explanation": "A Wi-Fi analyzer is used to measure the signal strength of various networks and troubleshoot performance issues, helping to identify optimal channel configurations. It does not boost signals, create new access points, or directly reduce noise; rather, it analyzes existing conditions to assist in optimizing network performance.",
+          "options": [
+            "To create new wireless access points automatically",
+            "To measure signal strength and troubleshoot performance issues",
+            "To boost the signal strength of wireless networks",
+            "To reduce noise levels in wireless networks"
+          ],
+          "correctAnswer": [
+            "To measure signal strength and troubleshoot performance issues"
+          ]
+        },
+        {
+          "id": "2201201-101",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "While you are answering help desk calls, a field customer calls and complains that he cannot print to a workgroup laser printer. Which of the following should be the first question you ask?",
+          "explanation": "According to the troubleshooting methodology, the first step is to identify the problem by gathering information from the user. Asking whether the user has ever successfully printed to the printer helps determine whether the issue is new or recurring. This question provides critical context about whether the problem is related to the user's setup, permissions, or a recent change, and it helps narrow down the scope of the investigation. While checking the cables is an important step in diagnosing printer issues, it is not the first question to ask. According to the troubleshooting methodology, the process begins with gathering information from the user to understand the context of the problem. Asking about the cables assumes a specific cause without first identifying the history or scope of the issue. This step would come later, after gathering initial information. Rebooting the printer is a potential troubleshooting step, but it is not the first question to ask. Before taking action, the methodology emphasizes understanding the problem by asking questions to gather relevant details. Rebooting the printer may not be necessary if the issue is related to user access, configuration, or network connectivity, which can only be determined after asking initial diagnostic questions. This question is not relevant to the specific issue of printing to a workgroup laser printer. Safe mode is typically used for troubleshooting operating system issues, not printer connectivity or functionality. Asking this question would not align with the methodology's focus on gathering relevant and targeted information about the specific problem at hand.",
+          "options": [
+            "Have you checked the cables?",
+            "Have you ever successfully printed to that printer?",
+            "Have you rebooted the printer?",
+            "Have you rebooted and chosen safe mode?"
+          ],
+          "correctAnswer": [
+            "Have you ever successfully printed to that printer?"
+          ]
+        },
+        {
+          "id": "2201201-102",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user reports that she can't send print jobs to a specific printer. You are able to reproduce the problem on the user's computer. Which of the following actions should you perform next?",
+          "explanation": "According to the troubleshooting methodology, identifying the problem involves gathering information about recent changes to the system or environment. Changes, such as updates, configuration modifications, or hardware adjustments, are often the root cause of technical issues. By asking whether anything has changed, you can narrow down potential causes and proceed with testing a theory to resolve the issue. Establishing a plan of action is a step that occurs later in the troubleshooting process, after identifying the problem and determining the probable cause. At this point in the scenario, the problem has been reproduced, but the root cause has not yet been identified. Before creating a plan of action, it is necessary to gather more information, such as determining if any changes have occurred that might explain the issue. Establishing the most probable cause is an important step in the troubleshooting process, but it comes after gathering sufficient information about the problem. In this scenario, determining whether anything has changed is a prerequisite to identifying the probable cause. Without understanding the context of the issue, it would be premature to establish a probable cause. Determining if escalation is necessary is a step taken when the problem cannot be resolved or requires additional expertise or resources. In this scenario, escalation is not yet relevant because the problem is still being investigated. The next step is to gather more information (e.g., whether anything has changed) to better understand the issue before considering escalation.",
+          "options": [
+            "Establish a plan of action.",
+            "Establish the most probable cause.",
+            "Determine if escalation is necessary.",
+            "Determine whether anything has changed."
+          ],
+          "correctAnswer": [
+            "Determine whether anything has changed."
+          ]
+        },
+        {
+          "id": "2201201-103",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user reports that their desktop computer will not power on. You begin troubleshooting by \"Questioning the Obvious.\" Which of the following actions would be the MOST appropriate first step?",
+          "explanation": "\"Questioning the Obvious\" involves starting with simple and obvious checks. Ensuring that the power cable is properly connected is a basic step that could resolve the issue without requiring more complex diagnostics. Replacing the power supply unit is a more advanced troubleshooting step. Before taking such action, you should perform basic checks, such as verifying the power cable connection, to rule out simpler causes. Inspecting the motherboard is a more detailed diagnostic step that should only be performed after ruling out simpler, more obvious causes like power cable issues or a faulty outlet. Escalation is only necessary if the problem cannot be resolved after performing basic troubleshooting steps. \"Questioning the Obvious\" focuses on addressing simple potential causes before involving senior staff.",
+          "options": [
+            "Open the computer case and inspect the motherboard for physical damage.",
+            "Check if the power cable is securely connected to both the computer and the power outlet.",
+            "Escalate the issue to senior technical staff for further investigation.",
+            "Replace the computer's power supply unit with a new one."
+          ],
+          "correctAnswer": [
+            "Check if the power cable is securely connected to both the computer and the power outlet."
+          ]
+        },
+        {
+          "id": "2201201-104",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are troubleshooting a workstation that is experiencing frequent crashes. After identifying the problem and testing your theory, you determine that the issue is caused by outdated graphics card drivers. What should you do next to implement a plan of action to resolve the problem?",
+          "explanation": "Implementing a plan of action involves resolving the identified issue. In this case, updating the graphics card drivers is the appropriate action to address the problem. Referring to the manufacturer's website ensures that the correct and most up-to-date drivers are used, aligning with the troubleshooting methodology. Escalation is only necessary if the problem cannot be resolved after following the troubleshooting steps. Since the issue has already been identified and a solution is clear, escalation is not required in this scenario. Replacing the hardware without first attempting to resolve the issue through software updates (such as updating drivers) is premature and may result in unnecessary costs. Additionally, skipping vendor documentation goes against best practices. While performing a backup is a good practice during the initial stages of troubleshooting, it is not the next step in implementing a plan of action in this scenario. The problem has already been identified, and the focus should now be on resolving it by updating the drivers.",
+          "options": [
+            "Replace the graphics card with a new one without consulting any documentation.",
+            "Escalate the issue to senior technical staff for further investigation.",
+            "Perform a full system backup before making any changes to the workstation.",
+            "Download and install the latest graphics card drivers from the manufacturer's website."
+          ],
+          "correctAnswer": [
+            "Download and install the latest graphics card drivers from the manufacturer's website."
+          ]
+        },
+        {
+          "id": "2201201-105",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user reports that the projector in the conference room has display issues when it is connected to his laptop. After identifying the cause and completely resolving the issue, the projector displays the images perfectly both on his laptop and on the projector. Which of the following troubleshooting strategies should you perform next?",
+          "explanation": "According to the troubleshooting methodology, after verifying that the solution has resolved the issue and the system is functioning properly, the next step is to document the findings, actions taken, and the outcome. Documenting the solution ensures that there is a record of the issue and its resolution, which can be used for future reference, training, or preventing similar problems. This step is critical for maintaining an organized and efficient troubleshooting process. Identifying the problem is the first step in the troubleshooting process, where you gather information about the issue and its symptoms. In this scenario, the problem has already been identified, and the issue has been completely resolved. Therefore, this step is no longer relevant. The next step should focus on finalizing the troubleshooting process, such as documenting the solution. Establishing what has changed is part of the initial stages of troubleshooting, where you investigate whether any recent changes in the environment, system, or configuration might have caused the issue. Since the problem has already been resolved and the projector is functioning perfectly, this step has already been completed earlier in the process and does not need to be revisited. Testing the solution is a step that occurs immediately after implementing a fix to verify that the issue has been resolved. In this scenario, the solution has already been tested, as the projector is confirmed to be displaying images perfectly. Since the testing step is complete, the next step is to document the solution.",
+          "options": [
+            "Identify the problem.",
+            "Test the solution.",
+            "Document the solution.",
+            "Establish what has changed."
+          ],
+          "correctAnswer": [
+            "Document the solution."
+          ]
+        },
+        {
+          "id": "2201201-106",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Currently, your company is in the process of upgrading security in the company headquarters building by installing biometric sensors to limit access to specific rooms. Your network switches are PoE-enabled, which allows biometric sensors to connect to switches without an external power source. Which of the following PoE standards is designed for use with biometric sensors that require 25 watts?",
+          "explanation": "802.3at PoE+ provides a maximum of 30 watts of power, which is designed for use with devices like biometric sensors and tablets. 802.3af POE allows powered devices to draw up to about 13 W. This is not enough watts for the device. 802.1X is a network access control/authentication standard, not a power-delivery standard. It governs how devices authenticate to the network; it does not define how power is delivered over Ethernet. 802.11n is a wireless networking standard (Wi-Fi) and is unrelated to PoE.",
+          "options": [
+            "802.3at (PoE+)",
+            "802.11n",
+            "802.1X",
+            "802.3af (PoE)"
+          ],
+          "correctAnswer": [
+            "802.3at (PoE+)"
+          ]
+        },
+        {
+          "id": "2201201-107",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A technician determines that an older network hub that connects 24 workstations is performing poorly due to excessive network collisions. Which of the following network devices would be the BEST replacement?",
+          "explanation": "A switch maintains a table of MAC addresses by port and forwards network data packets to only the port that matches the MAC address. This significantly reduces collisions. A router manages IP traffic between networks. A bridge separates two network segments and forwards data packets from one segment to another. A patch panel organizes network cables and connects inbound and outbound cables.",
+          "options": [
+            "Bridge",
+            "Switch",
+            "Router",
+            "Patch panel"
+          ],
+          "correctAnswer": [
+            "Switch"
+          ]
+        },
+        {
+          "id": "2201201-108",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are using a patch panel to connect the computers in your building to the appropriate switches, and you need to connect the Ethernet wires from the building network port cables to the patch panel. Where do you connect the wires on a patch panel?",
+          "explanation": "All network ports in a building terminate at a patch panel. The Ethernet cables are punched down and terminate on the backside of the patch panel. The front of the patch panel consists of RJ-45 ports. An Ethernet cable runs from the patch panel to the network switch to provide the connection between a device that is connected to the network port and the switch. There are no specified incoming or outgoing wires on an Ethernet cable.",
+          "options": [
+            "You connect the incoming wires to the front and the outgoing wires to the back.",
+            "You connect the outgoing wires to the front and the incoming wires to the back.",
+            "You connect the wires to the backside of the panel.",
+            "You connect the wires to the front side of the panel."
+          ],
+          "correctAnswer": [
+            "You connect the wires to the backside of the panel."
+          ]
+        },
+        {
+          "id": "2201201-109",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What component allows PoE functionality when a switch does not support PoE?",
+          "explanation": "A PoE injector (also known as a midspan device) enables PoE functionality when a switch does not natively support it. It connects between the switch and the powered device, injecting power into the Ethernet cable while preserving data connectivity. An endspan switch is a PoE-enabled switch that directly provides power without requiring additional hardware, which is different from using an injector. A power adapter provides local power to a device but does not integrate with Ethernet cabling. An Ethernet splitter splits network signals but does not provide power delivery, making it unsuitable for PoE functionality.",
+          "options": [
+            "Endspan switch",
+            "Power adapter",
+            "Ethernet splitter",
+            "PoE injector"
+          ],
+          "correctAnswer": [
+            "PoE injector"
+          ]
+        },
+        {
+          "id": "2201201-110",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What differentiates a managed switch from an unmanaged switch?",
+          "explanation": "A managed switch can be configured with security settings and advanced features, offering greater control and functionality for larger networks. Unlike unmanaged switches, it provides options for network management and monitoring. Managed switches are not limited to specific ISPs and are specifically designed to connect devices within a network. They also come with physical ports for network connections, often in large quantities.",
+          "options": [
+            "A managed switch operates only with a specific ISP's network.",
+            "A managed switch does not connect devices within a network.",
+            "A managed switch can be configured with security settings and advanced features.",
+            "A managed switch has no physical ports for network connections."
+          ],
+          "correctAnswer": [
+            "A managed switch can be configured with security settings and advanced features."
+          ]
+        },
+        {
+          "id": "2201201-111",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following describes a benefit of using a patch panel?",
+          "explanation": "A patch panel prevents wear and tear on switch ports by serving as a static termination point for structured cabling. Short patch cables are used to connect the panel to the switch, making replacements easy without disturbing permanent cabling. Signal amplification is not a feature associated with patch panels. Switches are still required for network connectivity between connected devices. Patch panels do not reduce the number of cables needed; they simply organize them more effectively.",
+          "options": [
+            "It eliminates the need for switches.",
+            "It amplifies signals over long distances.",
+            "It prevents wear and tear on switch ports.",
+            "It reduces the need for network cables."
+          ],
+          "correctAnswer": [
+            "It prevents wear and tear on switch ports."
+          ]
+        },
+        {
+          "id": "2201201-112",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the purpose of bonding multiple Ethernet NIC ports?",
+          "explanation": "Bonding multiple Ethernet NIC ports enables a higher-speed link by combining the individual speeds of each port, effectively increasing the data transfer rate. Improved signal quality for long distances is achieved through cabling standards or signal boosters, not by bonding ports. Using one port as a backup would be achieved through redundancy settings, not bonding, and simultaneous copper and fiber connections requiring specific NICs with different port types rather than bonded ports.",
+          "options": [
+            "To create a higher-speed link by combining the speeds of multiple ports",
+            "To improve signal quality for distant connections",
+            "To connect both copper and fiber connections simultaneously",
+            "To allow one port to function as a backup in case of a failure"
+          ],
+          "correctAnswer": [
+            "To create a higher-speed link by combining the speeds of multiple ports"
+          ]
+        },
+        {
+          "id": "2201201-113",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why is it important to label ports on a patch panel?",
+          "explanation": "Labeling ports reduces errors during troubleshooting by making it easy to identify and match connections between the patch panel and switch. Proper labeling also speeds up network changes and repairs. Increasing network speed depends on hardware specifications, not labeling. Providing redundancy involves backup devices or paths, not labeling. Data collisions are eliminated by switches, which provide separate collision domains, not by labeling.",
+          "options": [
+            "To reduce errors during troubleshooting",
+            "To provide redundancy in case of failure",
+            "To increase network speed",
+            "To prevent data collisions"
+          ],
+          "correctAnswer": [
+            "To reduce errors during troubleshooting"
+          ]
+        },
+        {
+          "id": "2201201-114",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "How do switches and bridges learn where devices are located on a network?",
+          "explanation": "Bridges and switches learn addresses by copying the MAC address of the source device from the data packet header and placing it in the MAC address table. The port number the data packet entered is also recorded in the table and associated with the source MAC address. A switch and/or bridge cannot record the destination MAC address because they do not know the port that is used to reach the destination device. Bridges and switches operate at Layer 2 and do not use IP addresses (which exist at Layer 3).",
+          "options": [
+            "When a data packet enters a port, the source IP address is copied from the data packet header.",
+            "When a data packet enters a port, the source MAC address is copied from the data packet header.",
+            "When a data packet enters a port, the destination IP address is copied from the data packet header.",
+            "When a data packet enters a port, the destination MAC address is copied from the data packet header."
+          ],
+          "correctAnswer": [
+            "When a data packet enters a port, the source MAC address is copied from the data packet header."
+          ]
+        },
+        {
+          "id": "2201201-115",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What function does an Ethernet switch perform when it receives a data frame?",
+          "explanation": "An Ethernet switch decodes the frame to identify both the source and destination MAC addresses and then forwards the frame to the port that corresponds to the destination MAC address in its table. This process makes data delivery more efficient by only sending data to the intended recipient, unlike broadcasting, which sends data to all connected devices. Broadcasting frames to all ports is inefficient and is characteristic of network hubs, not switches. Ethernet switches forward frames in real-time as long as the destination MAC address is known. Discarding frames without an entry in the MAC address table is incorrect because switches will flood the frame to all ports except the source, learning new addresses as responses are received.",
+          "options": [
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address.",
+            "It broadcasts the frame to all ports.",
+            "It discards the frame if the destination is not in its MAC address table.",
+            "It stores the frame until the destination device requests it."
+          ],
+          "correctAnswer": [
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address."
+          ]
+        },
+        {
+          "id": "2201201-116",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which IEEE PoE standard is most suitable for devices requiring around 25 W of power, such as advanced wireless access points and pan-tilt-zoom security cameras?",
+          "explanation": "802.3at (PoE+ or Type 2) provides up to 25 W of power, making it ideal for devices with higher energy demands like advanced wireless access points, pan-tilt-zoom security cameras, and video IP phones. 802.3af only supports up to 13 W, which is insufficient for these higher-power devices. 802.3bt Type 3 and Type 4 standards deliver even more power, up to 51 W and 73 W, respectively, and are intended for significantly larger power requirements, such as digital signage and LED lighting, which exceed the needs of devices covered under 802.3at.",
+          "options": [
+            "802.3bt Type 3",
+            "802.3at",
+            "802.3af",
+            "802.3bt Type 4"
+          ],
+          "correctAnswer": [
+            "802.3at"
+          ]
+        },
+        {
+          "id": "2201201-117",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the purpose of a patch cord?",
+          "explanation": "A patch cord connects a port on the patch panel to a port on the Ethernet switch, completing the link from the wall port to the network. The computer connects to the wall port, not directly via the patch cord, to the ethernet switch. Terminating cables into IDCs is done at the back of the patch panel, not by the patch cord. While patch cords connect devices, they are not specifically used for routing network traffic between floors.",
+          "options": [
+            "It routes network traffic between different floors in a building.",
+            "It links a port on the patch panel to a port on the Ethernet switch.",
+            "It terminates cables into insulation displacement connectors (IDCs).",
+            "It connects the computer directly to the Ethernet switch."
+          ],
+          "correctAnswer": [
+            "It links a port on the patch panel to a port on the Ethernet switch."
+          ]
+        },
+        {
+          "id": "2201201-118",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why might a company choose to use modular switches in its network?",
+          "explanation": "Modular switches allow companies to interconnect multiple switch units via a fast communications backplane, enabling the management of many access ports in a compact design. Modular switches are typically mounted in racks for efficient space use. They do not limit device connections but rather facilitate large networks. Additionally, they do not provide wireless connectivity; they are specifically for wired networks.",
+          "options": [
+            "To provide wireless connectivity to employees",
+            "To avoid using racks for network equipment",
+            "To limit the number of devices connected to the network",
+            "To interconnect multiple switch units through a fast backplane"
+          ],
+          "correctAnswer": [
+            "To interconnect multiple switch units through a fast backplane"
+          ]
+        },
+        {
+          "id": "2201201-119",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the purpose of a patch panel?",
+          "explanation": "The patch panel serves as a centralized point where wall port cables are connected to Ethernet switch ports, allowing easy changes to network connections. Directly connecting computers to switches without a patch panel would limit flexibility in network management. Wireless devices do not require this cabling setup, as they connect via Wi-Fi. Patch panels do not supply power to devices (a PoE switch does); they organize and link network connections.",
+          "options": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports",
+            "To serve as a power supply for connected devices",
+            "To allow wireless devices to access the network through cabling",
+            "To directly connect computers to the Ethernet switch without additional components"
+          ],
+          "correctAnswer": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports"
+          ]
+        },
+        {
+          "id": "2201201-120",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why does an Ethernet switch eliminate the negative effects of collisions in a network?",
+          "explanation": "An Ethernet switch eliminates collisions by assigning a separate collision domain to each port, allowing devices to communicate independently. This configuration ensures that each device connected to the switch operates in full-duplex mode, enabling simultaneous sending and receiving of data at the network's full speed. Reducing the number of devices does not address collisions, as collisions occur based on how traffic is handled, not the number of connections. Preventing devices from sending data simultaneously is unnecessary because full-duplex communication inherently supports simultaneous transmissions. Limiting data to avoid congestion relates to traffic management, not collision prevention, which is handled by creating isolated collision domains per port.",
+          "options": [
+            "It limits the amount of data transmitted to avoid congestion.",
+            "It assigns a separate collision domain to each port.",
+            "It reduces the number of devices connected to the network.",
+            "It prevents devices from sending data at the same time."
+          ],
+          "correctAnswer": [
+            "It assigns a separate collision domain to each port."
+          ]
+        },
+        {
+          "id": "2201201-121",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A technician is running a network above a dropped ceiling that is also used for ventilation. The cable must be a twisted pair and must be capable of Gigabit Ethernet speeds. Which of the following cables should the technician use?",
+          "explanation": "Plenum-rated Cat 6a cables can transfer data at 10 Gbps and can be placed in plenum spaces used for ventilation. Riser-rated RG-58 cables are coaxial and can transfer data at 10 Mbps. Plenum-rated cables can be used in riser applications, but riser-rated cables cannot be used in plenum applications. Riser-rated Cat 5e cables can transfer data at 1 Gbps, but they cannot be used in plenum applications. Plenum-rated multimode fiber can transfer data at 10 Gbps, but it is not a twisted pair.",
+          "options": [
+            "Riser-rated RG-58",
+            "Riser-rated Cat 5e",
+            "Plenum-rated Cat 6a",
+            "Plenum-rated multimode fiber"
+          ],
+          "correctAnswer": [
+            "Plenum-rated Cat 6a"
+          ]
+        },
+        {
+          "id": "2201201-122",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are using a crimper to attach an RJ-45 connector to a Cat 6 UTP cable. You need to use the T568A standard to connect the individual wires to the connector. Which wire should you connect to pin 1?",
+          "explanation": "According to the T568A standard, the green with white wire should be connected to pin 1 on an RJ-45 connector.",
+          "options": [
+            "Orange with white",
+            "Blue",
+            "Green",
+            "Green with white"
+          ],
+          "correctAnswer": [
+            "Green with white"
+          ]
+        },
+        {
+          "id": "2201201-123",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "As a network engineer, you have been creating patch (straight-through) cables for a network switch. You have plugged in all the cables and are testing data transmission through the cables. You notice that the data transmission is not functioning properly in some of the cables, and you are sure that one of the cables is interfering with the transmission at the near end. What is this type of interference called?",
+          "explanation": "Cross-talk is an interference between two pairs in a cable. The cable transmitting the interfering signal interferes the greatest at the end where the interfering signal is transmitted from (called the near end) with other cables next to it. In this scenario, you probably did not keep the wire pairs twisted as much as possible up to the end of the cable connector, and you will need to fix the issue. Cat 5 Ethernet is a type of network connector, not a type of network interference. You are using a network switch, not a router, so there should be no interference from any router. Wi-Fi interference can come from many sources, but you are using a wired (not a wireless) connection.",
+          "options": [
+            "Cat 5 Ethernet interference",
+            "Cross-talk interference",
+            "Wi-Fi interference",
+            "Router interference"
+          ],
+          "correctAnswer": [
+            "Cross-talk interference"
+          ]
+        },
+        {
+          "id": "2201201-124",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why can fiber optic cables support higher bandwidth and longer distances compared to copper cables?",
+          "explanation": "Fiber optic cables use light pulses that are not affected by electrical interference and suffer less attenuation, allowing for higher bandwidth and longer distances. Fiber optic cables are not necessarily thicker, as core size varies with the type of fiber. Copper signals are more susceptible to interference, limiting the distance they can travel. Fiber optics are durable but fragile in certain conditions and do not require longer runs based on durability.",
+          "options": [
+            "Fiber optic cables are thicker, which reduces interference.",
+            "The light pulses in fiber optics are not susceptible to interference and experience less attenuation.",
+            "Fiber optic cables are less durable and, therefore, require longer cable runs.",
+            "Copper signals are stronger than light pulses, leading to shorter cable runs."
+          ],
+          "correctAnswer": [
+            "The light pulses in fiber optics are not susceptible to interference and experience less attenuation."
+          ]
+        },
+        {
+          "id": "2201201-125",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What distinguishes single-mode fiber (SMF) from multi-mode fiber (MMF) in terms of usage?",
+          "explanation": "Single-mode fiber is designed for high-speed, long-distance transmission and is well-suited for WANs, while multi-mode fiber, with a larger core and LED-based technology, is cost-effective and ideal for shorter distances in LANs. Multi-mode does not use high-power lasers like SMF and is generally less capable of high-speed, long-distance transmission. SMF has a smaller core, focusing light more precisely, which improves distance and speed.",
+          "options": [
+            "SMF has a larger core than MMF, allowing for more light to pass through.",
+            "SMF and MMF perform identically, with only minor cost differences.",
+            "SMF uses lower-cost LEDs, while MMF uses high-power lasers.",
+            "SMF is better suited for long distances and high speeds, whereas MMF is ideal for shorter distances in LANs."
+          ],
+          "correctAnswer": [
+            "SMF is better suited for long distances and high speeds, whereas MMF is ideal for shorter distances in LANs."
+          ]
+        },
+        {
+          "id": "2201201-126",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following BEST describes the purpose for which loopback plugs are used?",
+          "explanation": "Loopback plugs are used to test ports by returning output signals as input. Use a loopback plug to test the functionality of serial ports or networking ports. A 3-prong holder is a tweezer-like tool with three prongs for grabbing and lifting small objects. An IC extractor is a tweezer-like tool (usually spring-loaded in the open position) that's used to remove integrated circuit chips. Null modem cables are used to connect computers using their serial ports without the need for a modem and phone line connection.",
+          "options": [
+            "Removing broken pins within sockets",
+            "Grabbing and lifting small objects",
+            "Testing ports by returning output signals as input",
+            "Connecting computers together without using network cards or modems"
+          ],
+          "correctAnswer": [
+            "Testing ports by returning output signals as input"
+          ]
+        },
+        {
+          "id": "2201201-127",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician needs to deploy a computer on an Ethernet network and notices that the computer will sit on a shelf directly under a fluorescent light. What type of cable will the technician use?",
+          "explanation": "Shielded Twisted Pair (STP) cable is the best choice for this situation because it includes shielding that protects against electromagnetic interference (EMI), which can be caused by fluorescent lighting. The shielding around the wires helps to prevent data transmission issues that could arise from the nearby light source. UTP lacks shielding, making it more susceptible to interference from nearby sources like fluorescent lights. This interference could lead to data loss or signal degradation, making UTP unsuitable in this environment. While coaxial cables are shielded and can resist some interference, they are not commonly used for standard Ethernet networks and are generally more suitable for television and broadband internet connections. Fiber optic cables are immune to electromagnetic interference; however, they are typically more expensive and may be unnecessary in this scenario where STP can provide sufficient protection. Fiber optic is generally reserved for long-distance or high-bandwidth applications.",
+          "options": [
+            "Fiber optic",
+            "Coax",
+            "UTP",
+            "STP"
+          ],
+          "correctAnswer": [
+            "STP"
+          ]
+        },
+        {
+          "id": "2201201-128",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is a major benefit STP provides that UTP does not?",
+          "explanation": "Shielded twisted pair (STP) has a grounded outer copper shield around the bundle of twisted pairs or around each pair. This provides added protection against EMI. Unshielded twisted pair (UTP) does not have a grounded outer copper shield. STP costs considerably more than UTP. Neither is safer for installations in overhead ceiling spaces unless they are made with plenum plastic shielding. STP and UTP are equally effective at transmitting signals over the same distance.",
+          "options": [
+            "Safer for installations in overhead ceiling spaces",
+            "Ability to install longer cable lengths",
+            "Greater resistance to interference",
+            "Lower cost"
+          ],
+          "correctAnswer": [
+            "Greater resistance to interference"
+          ]
+        },
+        {
+          "id": "2201201-129",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician needs to replace a broken Ethernet cable. What connector will the technician use to terminate the new cable, also known as 8P8C?",
+          "explanation": "RJ-45 is the connector used to terminate Ethernet cables and is also known as an 8P8C (8-position, 8-contact) connector. This connector type is standard for Ethernet networking cables, enabling proper data transmission across devices on a network. F-type connectors are used for coaxial cables, primarily in television and cable internet connections, not for Ethernet cables. SC (Subscriber Connector or Standard Connector) is a type of fiber optic connector, not suitable for Ethernet cables, which use copper wiring. LC (Lucent Connector) is another type of fiber optic connector used for smaller form factor fiber optic cables, but it is also not appropriate for Ethernet cabling.",
+          "options": [
+            "F-type",
+            "RJ-45",
+            "LC",
+            "SC"
+          ],
+          "correctAnswer": [
+            "RJ-45"
+          ]
+        },
+        {
+          "id": "2201201-130",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary function of a network tap?",
+          "explanation": "The main function of a network tap is to intercept and copy signals passing over a cable, enabling the captured data to be sent to a packet or protocol analyzer for monitoring or analysis. Amplifying signals for longer distances is not the purpose of a tap; this would involve repeaters or amplifiers. Network taps do not add additional connection ports for devices like a switch would, nor are they intended to replace switches in small networks.",
+          "options": [
+            "To amplify signals passing over a cable for longer transmission distances",
+            "To provide additional ports for connecting multiple network devices",
+            "To replace network switches in small networks",
+            "To intercept and copy signals passing over a cable for monitoring or analysis"
+          ],
+          "correctAnswer": [
+            "To intercept and copy signals passing over a cable for monitoring or analysis"
+          ]
+        },
+        {
+          "id": "2201201-131",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician used a tool that energizes each wire in a cable. When the technician sent energy to some of the wires, the LED on the tool did not light up. What tool was the technician using?",
+          "explanation": "A cable tester is a tool used to check the integrity and functionality of cables by sending a signal through each wire. If the LED on the tester does not light up for certain wires, it indicates a break or fault in those wires, meaning the cable is not transmitting signals properly. A toner probe is used in conjunction with a tone generator to trace cables through walls or ceilings. It does not test the functionality of each wire within a cable. A tone generator, used with a probe, helps locate cables by emitting a tone. It is not designed to test the individual wires in a cable for continuity or signal integrity. A loopback plug is used to test network ports and troubleshoot connectivity issues by reflecting signals back to the source. It is not used to check the integrity of each individual wire in a cable.",
+          "options": [
+            "Loopback plug",
+            "Tone generator",
+            "Toner probe",
+            "Cable tester"
+          ],
+          "correctAnswer": [
+            "Cable tester"
+          ]
+        },
+        {
+          "id": "2201201-132",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A printer is behaving erratically; you suspect a faulty parallel port. Which tool can you use to test the parallel port?",
+          "explanation": "A loopback plug allows an output signal to be returned as input. Loopback plugs are used to test serial and parallel ports. A cable tester verifies that a network can carry a signal from one end to the other and that all wires within the connector are in their correct positions. A multimeter measures electrical properties, such as voltage, amps, and resistance. An ammeter is an instrument that measures the flow of electric current in a circuit.",
+          "options": [
+            "Multimeter",
+            "Ammeter",
+            "Cable tester",
+            "Loopback plug"
+          ],
+          "correctAnswer": [
+            "Loopback plug"
+          ]
+        },
+        {
+          "id": "2201201-133",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
+          "explanation": "A coaxial cable is composed of a central copper conductor that is surrounded by an insulator, which is then surrounded by a second metallic mesh conductor. The name coaxial is derived from the fact that both of these conductors share a common axis. Twisted-pair cables are twisted around each other to reduce the effects of electromagnetic interference (EMI) and crosstalk. Fiber optic cables have a plastic or glass center (known as the core). Only fiber optic cables are totally immune to electromagnetic interference (EMI) because light pulses, instead of electrical signals, represent the data.",
+          "options": [
+            "It uses two concentric metallic conductors.",
+            "It has conductors that are twisted around each other to eliminate crosstalk.",
+            "It has a conductor made from copper in the center.",
+            "It is totally immune to electromagnetic interference (EMI).",
+            "It is made of plastic or glass in the center."
+          ],
+          "correctAnswer": [
+            "It uses two concentric metallic conductors.",
+            "It has a conductor made from copper in the center."
+          ]
+        },
+        {
+          "id": "2201201-134",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is connecting a computer to the network using Ethernet. How is the physical connection to the cable made?",
+          "explanation": "The physical connection to an Ethernet cable is made via an RJ45 port, which is the standard port for Ethernet networking. An RJ45 connector on the Ethernet cable plugs directly into the RJ45 port on a computer or network device, allowing it to connect to the network. The MAC address is a unique identifier assigned to a network device, not a physical means of connection. It operates at the data link layer (Layer 2) and does not involve physically connecting the cable. A patch panel is a central point where network cables are organized and connected. However, it does not directly connect a computer to an Ethernet cable; instead, it helps manage multiple connections within a network setup. Power over Ethernet (PoE) allows Ethernet cables to transmit electrical power along with data, enabling devices like IP cameras or wireless access points to operate without separate power sources. It is not a method for physically connecting a computer to an Ethernet network.",
+          "options": [
+            "Using a patch panel",
+            "Using the MAC address",
+            "Using PoE",
+            "Using the RJ45 port"
+          ],
+          "correctAnswer": [
+            "Using the RJ45 port"
+          ]
+        },
+        {
+          "id": "2201201-135",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A maintenance worker accidentally nicks a bundle of network cables routed to multiple wall jacks in a conference room. Only one of the cable's wires is severed. A technician is tasked with replacing the cable. Which of the following tools would the technician MOST likely use to identify which wall jack connects to the severed cable?",
+          "explanation": "A tone generator and probe can be used to identify the wall jack connected to the severed wire. The tone generator can be attached to the severed wire, and the probe will sound when it is brought close to the connected wall jack. A multimeter measures voltage, current, and resistance on a wire. A loopback plug can be plugged into a network adapter to test whether the NIC can send and receive properly. A cable stripper is used to cut away the plastic jacket or coating from a network cable.",
+          "options": [
+            "Cable stripper",
+            "Loopback plug",
+            "Multimeter",
+            "Tone generator and probe"
+          ],
+          "correctAnswer": [
+            "Tone generator and probe"
+          ]
+        },
+        {
+          "id": "2201201-136",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "How do adapters supporting Bluetooth versions 3 and 4 achieve faster data transfer rates?",
+          "explanation": "Adapters supporting Bluetooth versions 3 and 4 can achieve faster data transfer rates by negotiating an 802.11 radio link, which allows for higher speeds when transferring large files. Increasing signal range does not directly impact speed, and Bluetooth does not use infrared technology. Doubling the frequency is not a method used to increase speed in Bluetooth connections.",
+          "options": [
+            "By doubling the Bluetooth frequency to enhance speed",
+            "By negotiating an 802.11 radio link for large file transfers",
+            "By increasing the Bluetooth signal range",
+            "By using infrared technology for improved connectivity"
+          ],
+          "correctAnswer": [
+            "By negotiating an 802.11 radio link for large file transfers"
+          ]
+        },
+        {
+          "id": "2201201-137",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What distinguishes NFC from RFID technology?",
+          "explanation": "NFC operates at short ranges (typically up to two inches) and can act as both a tag and a reader, enabling peer-to-peer communication, which is suitable for contactless payments and quick data exchanges. RFID is primarily used for tracking and inventory over longer distances. RFID is less common for contactless payments, and neither technology is intended for high-speed or long-range data transfer.",
+          "options": [
+            "RFID is primarily used for contactless payments, while NFC is used for high-speed data transfer.",
+            "NFC is used for tracking parcels over long distances.",
+            "NFC operates at very short ranges and can function as both tag and reader.",
+            "NFC and RFID are both designed for long-range communication."
+          ],
+          "correctAnswer": [
+            "NFC operates at very short ranges and can function as both tag and reader."
+          ]
+        },
+        {
+          "id": "2201201-138",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is upgrading the wireless network so that it can take advantage of \"multiple input multiple output\" (MIMO) to increase reliability and bandwidth. What standard is the technician upgrading the wireless network to?",
+          "explanation": "802.11n was the first Wi-Fi standard to introduce MIMO (Multiple Input Multiple Output) technology, which allows multiple antennas to transmit and receive data simultaneously. This increases the network's reliability, range, and bandwidth, making it suitable for environments that require enhanced performance. 802.11g is an older standard that does not support MIMO. It operates at 2.4 GHz and offers lower speeds and ranges compared to 802.11n. 802.11b is one of the earliest Wi-Fi standards and does not support MIMO. It has a limited range and operates at slower speeds. 802.11a operates at 5 GHz and offers higher speeds than 802.11b and 802.11g, but it does not support MIMO. It is primarily used for specific business applications requiring the 5 GHz band without MIMO capability.",
+          "options": [
+            "802.11n",
+            "802.11b",
+            "802.11g",
+            "802.11a"
+          ],
+          "correctAnswer": [
+            "802.11n"
+          ]
+        },
+        {
+          "id": "2201201-139",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network technician is upgrading a grocery store's checkout lines with contactless payment devices. What type of wireless technology are the payment devices based on?",
+          "explanation": "NFC (Near Field Communication) is a wireless technology used in contactless payment systems. It enables secure, short-range communication between devices, such as payment terminals and contactless cards or smartphones, typically within a range of a few centimeters. 802.11a is a Wi-Fi standard used for wireless networking, not typically for secure, short-range communication required in contactless payments. Bluetooth is a wireless technology for short-range communication, but it is generally used for pairing devices over a slightly longer range than NFC and is not specifically optimized for secure contactless payments. While RFID (Radio Frequency Identification) is used for short-range identification and can sometimes be used in payment systems, NFC is specifically designed for secure, close proximity communication and is the primary technology in contactless payment systems.",
+          "options": [
+            "802.11a",
+            "Bluetooth",
+            "RFID",
+            "NFC"
+          ],
+          "correctAnswer": [
+            "NFC"
+          ]
+        },
+        {
+          "id": "2201201-140",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is Bluetooth Low Energy (BLE) primarily designed for?",
+          "explanation": "Bluetooth Low Energy (BLE) is designed specifically for small battery-powered devices, transmitting small amounts of data occasionally to conserve power. BLE is not intended for continuous high-bandwidth applications like video streaming or large file transfers. BLE is not backward compatible with classic Bluetooth, although some devices can support both BLE and classic Bluetooth simultaneously.",
+          "options": [
+            "Small battery-powered devices that transmit small amounts of data infrequently",
+            "Continuous streaming of high-definition video content",
+            "Enabling backward compatibility with all previous Bluetooth versions",
+            "Large file transfers between computers and mobile devices"
+          ],
+          "correctAnswer": [
+            "Small battery-powered devices that transmit small amounts of data infrequently"
+          ]
+        },
+        {
+          "id": "2201201-141",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What feature of Bluetooth allows two devices to securely exchange data?",
+          "explanation": "Bluetooth devices use a pairing procedure to authenticate each other, ensuring a secure connection before data exchange. Bluetooth connections are wireless, not requiring physical cables, and the pairing process rather than memory encryption is what ensures secure data exchange. Bluetooth can connect different types of devices, not just identical ones.",
+          "options": [
+            "Pairing procedure that authenticates devices before communication",
+            "Encrypted data stored in the device's internal memory",
+            "Use of physical cables between devices",
+            "Only allowing communication between identical device types"
+          ],
+          "correctAnswer": [
+            "Pairing procedure that authenticates devices before communication"
+          ]
+        },
+        {
+          "id": "2201201-142",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the advantage of using the same SSID for both frequency bands on a dual-band access point?",
+          "explanation": "Using the same SSID for both bands allows devices to automatically connect to the band with the strongest signal, improving connectivity and simplifying network selection for the user. Forcing devices to a specific band or requiring manual selection would limit flexibility. Using the same SSID does not inherently reduce interference from nearby networks, which is managed through channel configuration.",
+          "options": [
+            "It forces devices to use only the 2.4 GHz band.",
+            "It restricts users to manual selection of the frequency band.",
+            "It prevents interference from nearby networks.",
+            "It allows devices to automatically connect to the band with the strongest signal."
+          ],
+          "correctAnswer": [
+            "It allows devices to automatically connect to the band with the strongest signal."
+          ]
+        },
+        {
+          "id": "2201201-143",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following are characteristics of the 802.11g wireless standard? (Select three.)",
+          "explanation": "802.11g wireless networks operate in the 2.4 GHz range, have a maximum bandwidth of 54 Mbps, and are backward compatible with 802.11b networks. 802.11b provides 11 Mbps of bandwidth. 802.11a operates in the 5.75 GHz range. For this reason, 802.11a is not compatible with 802.11b or 802.11g.",
+          "options": [
+            "Backward compatible with 802.11a devices",
+            "Operates in the 2.4 GHz range",
+            "Operates in the 5.75 GHz range",
+            "Backward compatible with 802.11b devices",
+            "Maximum bandwidth of 11 Mbps",
+            "Maximum bandwidth of 54 Mbps"
+          ],
+          "correctAnswer": [
+            "Operates in the 2.4 GHz range",
+            "Backward compatible with 802.11b devices",
+            "Maximum bandwidth of 54 Mbps"
+          ]
+        },
+        {
+          "id": "2201201-144",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does a high Signal-to-Noise Ratio (SNR) indicate in a wireless network?",
+          "explanation": "A high Signal-to-Noise Ratio (SNR) means the signal is significantly stronger than the background noise, leading to better network performance. Higher noise levels would result in a lower SNR, not a higher one. SNR does not reflect power output or directly relate to data speed but impacts the quality and reliability of the connection.",
+          "options": [
+            "Increased power output from the Wi-Fi device",
+            "Low data transmission speed across the network",
+            "Higher noise levels that interfere with the signal",
+            "Stronger signal compared to background noise"
+          ],
+          "correctAnswer": [
+            "Stronger signal compared to background noise"
+          ]
+        },
+        {
+          "id": "2201201-145",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "An organization located on a large piece of rural property needs to connect its office building on the north side of the property with its warehouse and shipping operation on the south side of the property. The organization decides to connect the locations using long-range fixed wireless. What frequency spectrum must the organization use to ensure that nobody else can use the same frequency band?",
+          "explanation": "A licensed frequency spectrum provides exclusive access to a specific frequency band, ensuring that no other entities can use the same frequency in the area. This is especially useful for long-range, fixed wireless connections in rural areas where dedicated, interference-free communication is essential for reliable operation between distant locations. Unlicensed frequencies, such as the 2.4 GHz and 5 GHz bands, are open for public use, meaning that other organizations or individuals could potentially operate on the same frequencies, leading to interference and unreliable communication. 802.11ax (Wi-Fi 6) is a Wi-Fi standard, not a frequency spectrum type. It typically operates in unlicensed bands and is designed for high-density, short- to medium-range wireless networks, not long-range fixed wireless connections. DFS is a mechanism that allows Wi-Fi devices to avoid interference with radar systems by automatically selecting channels within the 5 GHz band. However, it does not provide exclusive access to frequencies, so other users could still be present on the same frequencies.",
+          "options": [
+            "802.11ax",
+            "Unlicensed",
+            "Licensed",
+            "DFS"
+          ],
+          "correctAnswer": [
+            "Licensed"
+          ]
+        },
+        {
+          "id": "2201201-146",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
+          "explanation": "The 802.11ac wireless network standard increases bandwidth and communication speeds using the following technologies: MU-MIMO is an enhancement to MIMO that allows multiple users to use the same channel. In addition to adding MU-MIMO, 802.11ac doubled the number of MIMO radio streams from four to eight. Channel bonding combines two non-overlapping 20 MHz channels into a single 40 MHz channel, resulting in slightly more than double the bandwidth. All the other technologies are not used to increase the bandwidth and communication speeds for 801.11ac.",
+          "options": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "OFDM modulation to allow several parallel data channels to stream data",
+            "Dual-band transmission to allow data to be transmitted at two frequencies at the same time",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth",
+            "Peer-to-peer mode to allow each host to communicate directly with other hosts"
+          ],
+          "correctAnswer": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth"
+          ]
+        },
+        {
+          "id": "2201201-147",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which IEEE wireless standards specify transmission speeds up to 54 Mbps? (Select two.)",
+          "explanation": "Both the 802.11a and the 802.11g wireless standards specify maximum transmission speeds up to 54 Mbps. Bluetooth is a wireless standard that is commonly used to connect peripheral devices and operates at 720 Kbps. The 802.11b wireless standard provides transmission speeds of 11 Mbps. The 802.11ac wireless standard provides transmission speeds of up to 2.6 Gbps.",
+          "options": [
+            "802.11b",
+            "802.11a",
+            "802.11ac",
+            "802.11g",
+            "Bluetooth"
+          ],
+          "correctAnswer": [
+            "802.11a",
+            "802.11g"
+          ]
+        },
+        {
+          "id": "2201201-148",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which dBm value is the most realistic and indicates a strong wireless signal in a typical environment?",
+          "explanation": "-65 dBm is generally considered a strong wireless signal, suitable for reliable connectivity. A value of -90 dBm or -80 dBm is weaker and likely to result in packet loss or disconnections. A value of -30 dBm is extremely strong, but -65 dBm is typically the threshold for good performance in common wireless environments.",
+          "options": [
+            "-90 dBm",
+            "-65 dBm",
+            "-80 dBm",
+            "-30 dBm"
+          ],
+          "correctAnswer": [
+            "-65 dBm"
+          ]
+        },
+        {
+          "id": "2201201-149",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following wireless networking standards uses a frequency of 5 GHz and supports data transmission speeds up to 2.6 Gbps?",
+          "explanation": "The 802.11ac standard uses the 5 GHz frequency and supports data transmission speeds up to 2.6 Gbps. 802.11g and 802.11a both support data transmission speeds up to 54 Mbps. 802.11b supports data transmission speeds up to 11 Mbps. 802.11n supports data transmission speeds up to 600 Mbps.",
+          "options": [
+            "802.11g",
+            "802.11ac",
+            "802.11n",
+            "802.11b",
+            "802.11a"
+          ],
+          "correctAnswer": [
+            "802.11ac"
+          ]
+        },
+        {
+          "id": "2201201-150",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of a Wi-Fi analyzer?",
+          "explanation": "A Wi-Fi analyzer is used to measure the signal strength of various networks and troubleshoot performance issues, helping to identify optimal channel configurations. It does not boost signals, create new access points, or directly reduce noise; rather, it analyzes existing conditions to assist in optimizing network performance.",
+          "options": [
+            "To create new wireless access points automatically",
+            "To measure signal strength and troubleshoot performance issues",
+            "To boost the signal strength of wireless networks",
+            "To reduce noise levels in wireless networks"
+          ],
+          "correctAnswer": [
+            "To measure signal strength and troubleshoot performance issues"
+          ]
+        },
+        {
+          "id": "2201201-151",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is a primary reason for using a patch panel in conjunction with a switch?",
+          "explanation": "A patch panel simplifies cable organization and facilitates network management by acting as a central hub for terminating and labeling Ethernet cables. It supports scalability, troubleshooting, and reconfiguration without disturbing permanent cabling. Providing power to devices is the role of Power over Ethernet (PoE) switches or injectors, not patch panels. Enhancing wireless coverage requires wireless access points while protecting network traffic involves security protocols like TLS, WPA3, or VPN, not patch panels.",
+          "options": [
+            "To enhance wireless network coverage",
+            "To simplify cable organization and facilitate network management",
+            "To provide power to devices connected through Ethernet cables",
+            "To protect network traffic"
+          ],
+          "correctAnswer": [
+            "To simplify cable organization and facilitate network management"
+          ]
+        },
+        {
+          "id": "2201201-152",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does a dBm measurement represent?",
+          "explanation": "dBm measures signal strength relative to 1 milliwatt (mW), with values closer to zero indicating stronger signals. It is not related to battery level, bandwidth capacity, or the power output of the analyzer itself but is a standard way to express the strength of wireless signals.",
+          "options": [
+            "A signal strength ratio compared to 1 milliwatt (mW)",
+            "The amount of power output by the Wi-Fi analyzer",
+            "A measurement of the device's battery level",
+            "The bandwidth capacity of the network"
+          ],
+          "correctAnswer": [
+            "A signal strength ratio compared to 1 milliwatt (mW)"
+          ]
+        },
+        {
+          "id": "2201201-153",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A technician is assisting the CISO in wirelessly transferring data between their smartwatch and their corporate PC. As the CISO's request uses two devices in close proximity, what network method has a limited range?",
+          "explanation": "A Personal Area Network (PAN) is designed for very short-range communication, typically within a few meters, and is commonly used for connecting personal devices like a smartwatch and a computer. Technologies like Bluetooth are often used in PANs to facilitate data transfer between devices in close proximity. While Wi-Fi can be used for wireless communication, it is generally intended for longer ranges than a PAN and often supports multiple devices over a broader area, not just close proximity connections. A Local Area Network (LAN) can include both wired and wireless connections within a building or office space. However, it covers a much larger area than a PAN and typically connects multiple devices over a more extended range. A Wireless Local Area Network (WLAN) is a subset of LAN and generally uses Wi-Fi to connect devices within a broader area, such as an office or building, rather than specifically enabling close-range communication between two personal devices.",
+          "options": [
+            "PAN",
+            "LAN",
+            "Wi-Fi",
+            "WLAN"
+          ],
+          "correctAnswer": [
+            "PAN"
+          ]
+        },
+        {
+          "id": "2201201-154",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following best describes the primary purpose of Bluetooth?",
+          "explanation": "Bluetooth is mainly used to connect peripheral devices (like headphones or speakers) to PCs and mobile devices and to share data over short distances. Bluetooth is not designed for long-distance data transmission; that would require different wireless technology. It also doesn't provide Internet access, which Wi-Fi typically handles. Object tracking with encoded tags is performed by RFID, not Bluetooth.",
+          "options": [
+            "To connect peripheral devices and share data over short distances",
+            "To enable high-speed, long-distance data transmission between buildings",
+            "To track objects using encoded tags for inventory management",
+            "To serve as the main technology for wireless Internet access"
+          ],
+          "correctAnswer": [
+            "To connect peripheral devices and share data over short distances"
+          ]
+        },
+        {
+          "id": "2201201-155",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Why might an active network tap be used instead of a passive tap?",
+          "explanation": "An active network tap regenerates signals, which is essential for high-speed links, such as gigabit Ethernet over copper, where signal complexity exceeds passive tap capabilities. Passive taps are unpowered and simpler but may not support advanced signaling needs. Active taps do not filter corrupt frames, as they forward all data like passive taps. While active taps can be used with fiber, they are not exclusive to fiber connections.",
+          "options": [
+            "Because active taps work without power, making them reliable in power outages",
+            "Because active taps are exclusively used for fiber optic connections",
+            "Because active taps filter out corrupt or malformed frames before sending data to the monitor",
+            "Because active taps regenerate signals, which is necessary for complex or high-speed links"
+          ],
+          "correctAnswer": [
+            "Because active taps regenerate signals, which is necessary for complex or high-speed links"
+          ]
+        },
+        {
+          "id": "2201201-156",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
+          "explanation": "The 802.11ac wireless network standard increases bandwidth and communication speeds using the following technologies: MU-MIMO is an enhancement to MIMO that allows multiple users to use the same channel. In addition to adding MU-MIMO, 802.11ac doubled the number of MIMO radio streams from four to eight. Channel bonding combines two non-overlapping 20 MHz channels into a single 40 MHz channel, resulting in slightly more than double the bandwidth. All the other technologies are not used to increase the bandwidth and communication speeds for 801.11ac.",
+          "options": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "OFDM modulation to allow several parallel data channels to stream data",
+            "Dual-band transmission to allow data to be transmitted at two frequencies at the same time",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth",
+            "Peer-to-peer mode to allow each host to communicate directly with other hosts"
+          ],
+          "correctAnswer": [
+            "MU-MIMO to allow multiple users to access the same channel",
+            "Channel bonding to combine more channels in the 5 GHz band to allow more than double the bandwidth"
+          ]
+        },
+        {
+          "id": "2201201-157",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are using a crimper to attach an RJ-45 connector to a Cat 6 UTP cable. You need to use the T568A standard to connect the individual wires to the connector. Which wire should you connect to pin 1?",
+          "explanation": "According to the T568A standard, the green with white wire should be connected to pin 1 on an RJ-45 connector.",
+          "options": [
+            "Orange with white",
+            "Blue",
+            "Green",
+            "Green with white"
+          ],
+          "correctAnswer": [
+            "Green with white"
+          ]
+        },
+        {
+          "id": "2201201-158",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the purpose of a patch panel?",
+          "explanation": "The patch panel serves as a centralized point where wall port cables are connected to Ethernet switch ports, allowing easy changes to network connections. Directly connecting computers to switches without a patch panel would limit flexibility in network management. Wireless devices do not require this cabling setup, as they connect via Wi-Fi. Patch panels do not supply power to devices (a PoE switch does); they organize and link network connections.",
+          "options": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports",
+            "To serve as a power supply for connected devices",
+            "To allow wireless devices to access the network through cabling",
+            "To directly connect computers to the Ethernet switch without additional components"
+          ],
+          "correctAnswer": [
+            "To provide a centralized point where wall port cables are connected to Ethernet switch ports"
+          ]
+        },
+        {
+          "id": "2201201-159",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
+          "explanation": "A coaxial cable is composed of a central copper conductor that is surrounded by an insulator, which is then surrounded by a second metallic mesh conductor. The name coaxial is derived from the fact that both of these conductors share a common axis. Twisted-pair cables are twisted around each other to reduce the effects of electromagnetic interference (EMI) and crosstalk. Fiber optic cables have a plastic or glass center (known as the core). Only fiber optic cables are totally immune to electromagnetic interference (EMI) because light pulses, instead of electrical signals, represent the data.",
+          "options": [
+            "It uses two concentric metallic conductors.",
+            "It has conductors that are twisted around each other to eliminate crosstalk.",
+            "It has a conductor made from copper in the center.",
+            "It is totally immune to electromagnetic interference (EMI).",
+            "It is made of plastic or glass in the center."
+          ],
+          "correctAnswer": [
+            "It uses two concentric metallic conductors.",
+            "It has a conductor made from copper in the center."
+          ]
+        },
+        {
+          "id": "2201201-160",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A printer is behaving erratically; you suspect a faulty parallel port. Which tool can you use to test the parallel port?",
+          "explanation": "A loopback plug allows an output signal to be returned as input. Loopback plugs are used to test serial and parallel ports. A cable tester verifies that a network can carry a signal from one end to the other and that all wires within the connector are in their correct positions. A multimeter measures electrical properties, such as voltage, amps, and resistance. An ammeter is an instrument that measures the flow of electric current in a circuit.",
+          "options": [
+            "Multimeter",
+            "Ammeter",
+            "Cable tester",
+            "Loopback plug"
+          ],
+          "correctAnswer": [
+            "Loopback plug"
+          ]
+        },
+        {
+          "id": "2201201-161",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following BEST describes the purpose for which loopback plugs are used?",
+          "explanation": "Loopback plugs are used to test ports by returning output signals as input. Use a loopback plug to test the functionality of serial ports or networking ports. A 3-prong holder is a tweezer-like tool with three prongs for grabbing and lifting small objects. An IC extractor is a tweezer-like tool (usually spring-loaded in the open position) that's used to remove integrated circuit chips. Null modem cables are used to connect computers using their serial ports without the need for a modem and phone line connection.",
+          "options": [
+            "Removing broken pins within sockets",
+            "Grabbing and lifting small objects",
+            "Testing ports by returning output signals as input",
+            "Connecting computers together without using network cards or modems"
+          ],
+          "correctAnswer": [
+            "Testing ports by returning output signals as input"
+          ]
+        },
+        {
+          "id": "2201201-162",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Currently, your company is in the process of upgrading security in the company headquarters building by installing biometric sensors to limit access to specific rooms. Your network switches are PoE-enabled, which allows biometric sensors to connect to switches without an external power source. Which of the following PoE standards is designed for use with biometric sensors that require 25 watts?",
+          "explanation": "802.3at PoE+ provides a maximum of 30 watts of power, which is designed for use with devices like biometric sensors and tablets. 802.3af POE allows powered devices to draw up to about 13 W. This is not enough watts for the device. 802.1X is a network access control/authentication standard, not a power-delivery standard. It governs how devices authenticate to the network; it does not define how power is delivered over Ethernet. 802.11n is a wireless networking standard (Wi-Fi) and is unrelated to PoE.",
+          "options": [
+            "802.3at (PoE+)",
+            "802.11n",
+            "802.1X",
+            "802.3af (PoE)"
+          ],
+          "correctAnswer": [
+            "802.3at (PoE+)"
+          ]
+        },
+        {
+          "id": "2201201-163",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "All the employees in a lawyer's office communicate with the internet and each other through the same appliance. What kind of network is the office using?",
+          "explanation": "A Small Office/Home Office (SOHO) network is designed for small office environments where a single appliance, such as a router, provides internet access and facilitates communication between devices within the office. This setup is common in small offices like a lawyer's office, where a simple, centralized network structure is sufficient. Zigbee is a wireless protocol used for low-power, low-data-rate communication in applications like home automation and IoT devices. It is not typically used for standard office networking and internet communication. A Personal Area Network (PAN) connects personal devices over a short range, usually for a single person (e.g., connecting a smartphone to a smartwatch). It does not describe a network that allows all office employees to communicate with each other and the internet. A Metropolitan Area Network (MAN) covers a large geographic area, such as a city, and is used to connect multiple locations or buildings rather than the internal network of a single office.",
+          "options": [
+            "MAN",
+            "SOHO",
+            "PAN",
+            "Zigbee"
+          ],
+          "correctAnswer": [
+            "SOHO"
+          ]
+        },
+        {
+          "id": "2201201-164",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "You are designing a wireless network for a client. Your client needs the network to support a data rate of at least 150 Mbps. In addition, the client already has a wireless telephone system installed that operates at 2.4 GHz. Which 802.11 standard works BEST in this situation?",
+          "explanation": "802.11n is the best choice for this client, as 802.11n supports both 5 GHz and 2.4 GHz with a maximum transmission rate of 600 Mbps. 802.11b and 802.11g both operate in the 2.4 GHz to 2.4835 GHz range, which causes interference with the client's wireless phone system. 802.11a operates in the 5.725 GHz to 5.850 GHz frequency range, which doesn't interfere with the phone system. However, the maximum speed is limited to 54 Mbps.",
+          "options": [
+            "802.11g",
+            "802.11b",
+            "802.11a",
+            "802.11n"
+          ],
+          "correctAnswer": [
+            "802.11n"
+          ]
+        },
+        {
+          "id": "2201201-165",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is one of the main advantages of Wi-Fi 7's Multi-Link Operation (MLO)?",
+          "explanation": "Multi-Link Operation (MLO) in Wi-Fi 7 enables devices to send data over multiple bands (2.4 GHz, 5 GHz, and 6 GHz) or channels, which helps reduce latency and improves throughput. MLO does not restrict data transfer to a single band but rather enhances flexibility and speed by using multiple bands. MLO does not limit connection speeds; instead, it optimizes performance. Wi-Fi 7 operates across various bands, not just 2.4 GHz, allowing better compatibility and speed.",
+          "options": [
+            "It restricts data transfer to a single band for stability.",
+            "It allows devices to send data over multiple bands or channels.",
+            "It only operates in the 2.4 GHz band to support legacy devices.",
+            "It limits connection speeds to prevent network congestion."
+          ],
+          "correctAnswer": [
+            "It allows devices to send data over multiple bands or channels."
+          ]
+        },
+        {
+          "id": "2201201-166",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the purpose of bonding multiple Ethernet NIC ports?",
+          "explanation": "Bonding multiple Ethernet NIC ports enables a higher-speed link by combining the individual speeds of each port, effectively increasing the data transfer rate. Improved signal quality for long distances is achieved through cabling standards or signal boosters, not by bonding ports. Using one port as a backup would be achieved through redundancy settings, not bonding, and simultaneous copper and fiber connections requiring specific NICs with different port types rather than bonded ports.",
+          "options": [
+            "To create a higher-speed link by combining the speeds of multiple ports",
+            "To improve signal quality for distant connections",
+            "To connect both copper and fiber connections simultaneously",
+            "To allow one port to function as a backup in case of a failure"
+          ],
+          "correctAnswer": [
+            "To create a higher-speed link by combining the speeds of multiple ports"
+          ]
+        },
+        {
+          "id": "2201201-167",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following network types uses special hardware to provide high-speed access to storage across the network?",
+          "explanation": "A storage area network (SAN) is a special type of network that provides high-speed access to storage across the network. Specialized hardware is used to store and provide access to needed data. In a peer-to-peer network, each host can provide network resources to other hosts or access resources located on other hosts. It does not use special hardware to provide high-speed access to storage across the network. A local area network is a network in a small geographic area, like an office. A LAN typically uses wires to connect systems together. It does not use special hardware to provide high-speed access to storage across the network. In a client-server network, hosts have specific roles. For example, some hosts are assigned server roles, which allow them to provide network resources to other hosts. Other hosts are assigned client roles, which allow them to consume network resources. It does not use special hardware to provide high-speed access to storage across the network.",
+          "options": [
+            "Peer-to-peer network",
+            "Storage area network",
+            "Client-server network",
+            "Local area network"
+          ],
+          "correctAnswer": [
+            "Storage area network"
+          ]
+        },
+        {
+          "id": "2201201-168",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which type of network is best suited for a company that operates across multiple locations in a city?",
+          "explanation": "A MAN (Metropolitan Area Network) is ideal for a company with networks spread across multiple locations in a single city, as it bridges the gap between local LANs and broader WANs. LANs are restricted to a single site, PANs cover very small areas, and WLANs are limited to local, often indoor, wireless communication.",
+          "options": [
+            "PAN",
+            "LAN",
+            "WLAN",
+            "MAN"
+          ],
+          "correctAnswer": [
+            "MAN"
+          ]
+        },
+        {
+          "id": "2201201-169",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What best describes a Local Area Network (LAN)?",
+          "explanation": "A LAN is defined as a group of computers connected within a limited geographic location, like a building or campus. This distinguishes it from larger networks, like WANs, which span larger geographic areas. The other options refer to networks with broader coverage or specific functionalities, such as storage or city-wide coverage.",
+          "options": [
+            "A specialized network dedicated to data storage",
+            "A group of computers connected within a close geographic location",
+            "A network that covers a city or municipality",
+            "A network that spans multiple geographic locations worldwide"
+          ],
+          "correctAnswer": [
+            "A group of computers connected within a close geographic location"
+          ]
+        },
+        {
+          "id": "2201201-170",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What does an Ethernet switch use to forward frames to the correct destination?",
+          "explanation": "An Ethernet switch forwards frames based on the MAC address, which uniquely identifies devices on a local network. It uses a MAC address table to map addresses to specific ports. IP addresses operate at the network layer, but switches operate at the data link layer (Layer 2) and do not use IP addresses for forwarding frames. Port numbers and VLAN IDs are used for higher-level functions, such as routing and segmentation, but they are not involved in the basic operation of frame forwarding in switches.",
+          "options": [
+            "VLAN ID",
+            "Port number",
+            "MAC address",
+            "IP address"
+          ],
+          "correctAnswer": [
+            "MAC address"
+          ]
+        }
+      ]
+    },
+    "220-1202": {
+      "name": "CompTIA A+ Core 2",
+      "code": "220-1202",
+      "description": "Entry-level certification covering operating systems, security, software troubleshooting, and operational procedures.",
+      "questions": 0,
+      "timeLimit": 90,
+      "passingScore": 700,
+      "maxScore": 900,
+      "minScore": 100,
+      "domainWeights": {
+        "1.0 Operating Systems": 0,
+        "2.0 Security and Compliance": 0,
+        "3.0 Software Troubleshooting": 0,
+        "4.0 Operational Procedures": 0
+      },
+      "questionBank": []
+    }
+  }
+}
