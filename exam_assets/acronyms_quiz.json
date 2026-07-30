@@ -3,11 +3,15 @@
     "name": "CompTIA A+ Acronyms Quiz",
     "description": "Comprehensive acronyms quiz covering all CompTIA A+ exam domains",
     "type": "acronyms",
-    "totalQuestions": 205,
+    "totalQuestions": 173,
     "questions": [
       {
         "id": "ACR-QUIZ-001",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which main hardware component of a computer is responsible for executing instructions and processing data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "GPU",
           "ALU",
@@ -16,15 +20,15 @@
         ],
         "correctAnswer": [
           "CPU"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-002",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A cyberattack focused on making a website, service, or network unavailable to users by overloading it with traffic or malicious requests is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SQLi",
           "XSS",
@@ -33,15 +37,15 @@
         ],
         "correctAnswer": [
           "DoS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-003",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a network protocol that secures web traffic via SSL/TLS encryption?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IPSec",
           "SSH",
@@ -50,15 +54,15 @@
         ],
         "correctAnswer": [
           "HTTPS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-004",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A legal contract between the holder of confidential information and another person to whom that information is disclosed restricting that other person from disclosing the confidential information to any other party is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ISA",
           "NDA",
@@ -67,15 +71,15 @@
         ],
         "correctAnswer": [
           "NDA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-005",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which wireless technology enables identification and tracking of tags attached to objects?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WTLS",
           "GPS",
@@ -84,15 +88,15 @@
         ],
         "correctAnswer": [
           "RFID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-006",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between two networked computers is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "RSH",
           "RDP",
@@ -101,15 +105,15 @@
         ],
         "correctAnswer": [
           "SSH"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-007",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which acronym refers to the network name visible to users when they look for available Wi-Fi networks?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ESS",
           "SSID",
@@ -118,15 +122,15 @@
         ],
         "correctAnswer": [
           "SSID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-008",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the common term for a group of protocols used to carry voice data over a packet-switched network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ISDN",
           "PBX",
@@ -135,15 +139,15 @@
         ],
         "correctAnswer": [
           "VoIP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-009",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A computer network connecting multiple LANs over an area of a city is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "SAN",
@@ -152,32 +156,15 @@
         ],
         "correctAnswer": [
           "MAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-010",
-        "stem": "LDAP is an example of:",
-        "options": [
-          "Data encryption protocol",
-          "Address resolution protocol",
-          "Directory access protocol",
-          "File exchange protocol"
-        ],
-        "correctAnswer": [
-          "Directory access protocol"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-011",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a network layer protocol that specifies the format of packets and addressing scheme in network communications?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "UDP",
           "IP",
@@ -186,15 +173,15 @@
         ],
         "correctAnswer": [
           "IP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-012",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which digital media interface provides the capability for transmission of both video and audio data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "S/PDIF",
           "DVI",
@@ -203,15 +190,15 @@
         ],
         "correctAnswer": [
           "HDMI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-013",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a set of rules that specify which users or system processes are granted access to objects as well as what operations are allowed on a given object?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ACL",
           "MFA",
@@ -220,30 +207,30 @@
         ],
         "correctAnswer": [
           "ACL"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-014",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "TCP is a connection-oriented network protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-015",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of smart card used in mobile phones to identify the client is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IMSI",
           "SIM",
@@ -252,15 +239,15 @@
         ],
         "correctAnswer": [
           "SIM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-016",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which part of the AAA security architecture ensures that users are who they claim to be, typically through credentials like passwords or biometrics?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Auditing",
           "Authentication",
@@ -269,15 +256,15 @@
         ],
         "correctAnswer": [
           "Authentication"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-017",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a system containing mappings of domain names to various types of data, such as numerical IP addresses?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "TCP/IP",
           "DNS",
@@ -286,15 +273,15 @@
         ],
         "correctAnswer": [
           "DNS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-018",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following devices combines printing, scanning, copying, and often faxing into a single unit? (Select the best answer)",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "AIO",
@@ -303,15 +290,15 @@
         ],
         "correctAnswer": [
           "MFP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-019",
-        "stem": "An internal hardware component that converts electrical power from an outlet into usable power for a computer’s internal parts is called:",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
+        "stem": "An internal hardware component that converts electrical power from an outlet into usable power for a computer\u00e2\u20ac\u2122s internal parts is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SVC",
           "UPS",
@@ -320,15 +307,15 @@
         ],
         "correctAnswer": [
           "PSU"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-020",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of software acts as an intermediary between users and computer hardware, enabling both system operations and application execution?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "API",
           "BIOS",
@@ -337,15 +324,15 @@
         ],
         "correctAnswer": [
           "OS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-021",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the acronyms listed below refers to a network protocol for secure file transfer over SSH?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "FTPS",
           "SFTP",
@@ -354,32 +341,15 @@
         ],
         "correctAnswer": [
           "SFTP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-022",
-        "stem": "What is the primary purpose of S.M.A.R.T. in a storage media drive?",
-        "options": [
-          "Automatic correction of detected drive errors",
-          "Real-time monitoring and regulation of power consumption",
-          "Prediction and reporting of impending drive failures",
-          "Optimization of drive read/write speeds"
-        ],
-        "correctAnswer": [
-          "Prediction and reporting of impending drive failures"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-023",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A solution that allows to supply electricity over standard Ethernet cables is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PLC",
           "ECP",
@@ -388,32 +358,15 @@
         ],
         "correctAnswer": [
           "PoE"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-024",
-        "stem": "IMAP is used for:",
-        "options": [
-          "Serving web pages",
-          "Translating domain names into IP addresses",
-          "Retrieving email messages from a mail server",
-          "Sending email messages"
-        ],
-        "correctAnswer": [
-          "Retrieving email messages from a mail server"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-025",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A dedicated data storage solution that combines multiple disk drive components into a single logical unit to increase volume size, performance, or reliability is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SAN",
           "RAID",
@@ -422,15 +375,15 @@
         ],
         "correctAnswer": [
           "RAID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-026",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A computer's primary storage media used for quick access to working data and code is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "GPR",
           "RAM",
@@ -439,15 +392,15 @@
         ],
         "correctAnswer": [
           "RAM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-027",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a unique 48-bit address assigned to every network adapter?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "EUI",
           "SSID",
@@ -456,49 +409,15 @@
         ],
         "correctAnswer": [
           "MAC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-028",
-        "stem": "What is the function of FTP?",
-        "options": [
-          "Email service",
-          "Directory access",
-          "Serving of web pages",
-          "File exchange"
-        ],
-        "correctAnswer": [
-          "File exchange"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-029",
-        "stem": "Which of the terms listed below is used to describe a mechanical data storage medium type that relies on magnetic plates and moving parts for data storage and retrieval?",
-        "options": [
-          "HDD",
-          "SD",
-          "ROM",
-          "SSD"
-        ],
-        "correctAnswer": [
-          "HDD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-030",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a hardware device that allows for administering multiple hosts with the use of a single mouse, keyboard, and computer screen?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "KVM",
@@ -507,15 +426,15 @@
         ],
         "correctAnswer": [
           "KVM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-031",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which technology uses infrared light waves to enable short-range wireless communication, often found in remote controls?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NFC",
           "IR",
@@ -524,30 +443,30 @@
         ],
         "correctAnswer": [
           "IR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-032",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "PCIe is a high-speed, serial expansion bus designed as a replacement for PCI, PCI-X, and AGP standards.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-033",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of firmware interface designed as a replacement for traditional BIOS is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "UEFI",
           "GUI",
@@ -556,15 +475,15 @@
         ],
         "correctAnswer": [
           "UEFI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-034",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a general-purpose computing device designed for individual use?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "PDA",
@@ -573,15 +492,15 @@
         ],
         "correctAnswer": [
           "PC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-035",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the most common motherboard form factor used in desktop PCs?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ATX",
           "mATX",
@@ -590,15 +509,15 @@
         ],
         "correctAnswer": [
           "ATX"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-036",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the cryptographic algorithms listed below is the least vulnerable to attacks?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "AES",
           "DES",
@@ -607,15 +526,15 @@
         ],
         "correctAnswer": [
           "AES"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-037",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of limited-range computer network used for data transmission among various types of personal devices is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "LAN",
@@ -624,15 +543,15 @@
         ],
         "correctAnswer": [
           "PAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-038",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of firmware performs initial hardware checks after the computer is powered on?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CMOS",
           "ROM",
@@ -641,15 +560,15 @@
         ],
         "correctAnswer": [
           "BIOS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-039",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A mobile device deployment model that allows employees to use private mobile devices for accessing the company's restricted data and applications is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "COPE",
           "BYOD",
@@ -658,15 +577,15 @@
         ],
         "correctAnswer": [
           "BYOD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-040",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following terms refers to a common PnP interface that allows a PC to communicate with peripherals and other devices?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PCIe",
           "IDE",
@@ -675,15 +594,15 @@
         ],
         "correctAnswer": [
           "USB"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-041",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Antistatic bags, antistatic wrist straps, and ground mats are all countermeasures used to protect computer and communications equipment components against:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "RFI",
           "ESD",
@@ -692,30 +611,30 @@
         ],
         "correctAnswer": [
           "ESD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-042",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "APIPA allows a Windows host to self-configure an IPv4 address and subnet mask when a DHCP server is unavailable. APIPA uses the address block range from 169.254.0.0 to 169.254.255.255. APIPA-assigned addresses are valid only for communication within the network segment to which the host is connected. A host with an APIPA-assigned address cannot connect to the Internet.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-043",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "In the AAA security architecture, the process of tracking user activity and resource usage for reporting or billing is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Authentication",
           "Auditing",
@@ -724,15 +643,15 @@
         ],
         "correctAnswer": [
           "Accounting"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-044",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to one of the major CPU manufacturers for PCs?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ASUS",
           "nVidia",
@@ -741,15 +660,15 @@
         ],
         "correctAnswer": [
           "AMD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-045",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which hardware component in a PC stores BIOS/UEFI configuration settings and retains them using battery power?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CMOS",
           "SRAM",
@@ -758,15 +677,15 @@
         ],
         "correctAnswer": [
           "CMOS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-046",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to an agreement that specifies performance requirements for a vendor?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MSA",
           "SLA",
@@ -775,15 +694,15 @@
         ],
         "correctAnswer": [
           "SLA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-047",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of network connecting computers within a small geographical area such as a building or group of buildings is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "LAN",
@@ -792,15 +711,15 @@
         ],
         "correctAnswer": [
           "LAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-048",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a display technology most commonly used in modern laptops?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CRT",
           "OLED",
@@ -809,15 +728,15 @@
         ],
         "correctAnswer": [
           "LCD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-049",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which cloud service model would provide the best solution for a web developer intending to create a web app?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "XaaS",
           "SaaS",
@@ -826,15 +745,15 @@
         ],
         "correctAnswer": [
           "PaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-050",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which network protocol is used to retrieve content from a web server?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CIFS",
           "FTP",
@@ -843,15 +762,15 @@
         ],
         "correctAnswer": [
           "HTTP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-051",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A legal contract between the holder of confidential information and another person to whom that information is disclosed restricting that other person from disclosing the confidential information to any other party is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MOU",
           "SLA",
@@ -860,15 +779,15 @@
         ],
         "correctAnswer": [
           "NDA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-052",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following file systems is known for its 4 GB maximum file size and 2 TB maximum volume size limitations?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NTFS",
           "FAT32",
@@ -877,15 +796,15 @@
         ],
         "correctAnswer": [
           "FAT32"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-053",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a firmware interface designed as a replacement for traditional BIOS?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "UEFI",
           "PXE",
@@ -894,15 +813,15 @@
         ],
         "correctAnswer": [
           "UEFI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-054",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which AAA solution uses UDP as its transport protocol and is commonly deployed for network access control such as VPN and Wi-Fi authentication?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "RADIUS",
           "LDAP",
@@ -911,15 +830,15 @@
         ],
         "correctAnswer": [
           "RADIUS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-055",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the AAA solutions listed below relies on TCP, separates authentication, authorization, and accounting, and is commonly used for device administration in enterprise networks?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "OAuth",
           "TACACS+",
@@ -928,15 +847,15 @@
         ],
         "correctAnswer": [
           "TACACS+"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-056",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which main computer hardware component is responsible for executing instructions and processing data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "GPU",
           "ALU",
@@ -945,15 +864,15 @@
         ],
         "correctAnswer": [
           "CPU"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-057",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a cybersecurity approach that combines data from multiple security tools to provide comprehensive threat detection and response across endpoints, networks, and cloud environments?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "EDR",
           "SIEM",
@@ -962,15 +881,15 @@
         ],
         "correctAnswer": [
           "XDR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-058",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A system that uses a public network (such as the internet) as a means for creating private encrypted connections between remote locations is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VLAN",
           "TLS",
@@ -979,15 +898,15 @@
         ],
         "correctAnswer": [
           "VPN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-059",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a software or hardware-based system specifically designed to control access to and usage of copyrighted digital content?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DLP",
           "PGP",
@@ -996,15 +915,15 @@
         ],
         "correctAnswer": [
           "DRM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-060",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of an MS Windows component that enables encryption of individual files?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DFS",
           "AES",
@@ -1013,15 +932,15 @@
         ],
         "correctAnswer": [
           "EFS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-061",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which Microsoft file system was specifically designed for maximum resilience, data integrity, and large-scale storage deployments in enterprise environments?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "XFS",
           "Btrfs",
@@ -1030,15 +949,15 @@
         ],
         "correctAnswer": [
           "ReFS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-062",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CSRF",
           "XSS",
@@ -1047,15 +966,15 @@
         ],
         "correctAnswer": [
           "XSS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-063",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a high-performance file system commonly used in UNIX-like operating systems such as Linux to handle very large files and storage volumes?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ReFS",
           "DFS",
@@ -1064,15 +983,15 @@
         ],
         "correctAnswer": [
           "XFS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-064",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of cybersecurity service provides continuous monitoring, threat detection, and incident response delivered as a fully managed service by an external security provider?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "EDR",
           "MDR",
@@ -1081,15 +1000,15 @@
         ],
         "correctAnswer": [
           "MDR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-065",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of document stipulating rules of behavior to be followed by users of computers, networks, and associated resources is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SLA",
           "EULA",
@@ -1098,15 +1017,15 @@
         ],
         "correctAnswer": [
           "AUP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-066",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a hierarchical and decentralized naming system containing mappings of domain names to various types of data, such as numerical IP addresses?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WINS",
           "DNS",
@@ -1115,15 +1034,15 @@
         ],
         "correctAnswer": [
           "DNS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-067",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A mobile device deployment model in which employees use their personally owned devices to access company data and applications is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "COPE",
           "CYOD",
@@ -1132,15 +1051,15 @@
         ],
         "correctAnswer": [
           "BYOD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-068",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which part of the AAA security architecture ensures that users are who they claim to be, typically through credentials like passwords or biometrics?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Auditing",
           "Authentication",
@@ -1149,30 +1068,30 @@
         ],
         "correctAnswer": [
           "Authentication"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-069",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "An eSIM is a modern alternative to the traditional SIM card. Unlike traditional SIMs, an eSIM is an embedded chip built into the device (not a physical card).",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-070",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to an open-source remote desktop protocol designed for virtual machine access?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WinRM",
           "VNC",
@@ -1181,15 +1100,15 @@
         ],
         "correctAnswer": [
           "SPICE"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-071",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A Microsoft-developed file system designed for flash storage and large removable drives is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "FAT32",
           "NFS",
@@ -1198,15 +1117,15 @@
         ],
         "correctAnswer": [
           "exFAT"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-072",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following computer security solutions is used for defining and enforcing network access policies?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NAT",
           "NIDS",
@@ -1215,15 +1134,15 @@
         ],
         "correctAnswer": [
           "NAC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-073",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A cyberattack focused on making a website, service, or network unavailable to users by overloading it with traffic or malicious requests is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SQLi",
           "XSS",
@@ -1232,15 +1151,15 @@
         ],
         "correctAnswer": [
           "DoS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-074",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which file system is the default choice for many modern Linux distributions?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "APFS",
           "ext4",
@@ -1249,15 +1168,15 @@
         ],
         "correctAnswer": [
           "ext4"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-075",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to an interim wireless security standard introduced to address the vulnerabilities found in WEP?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WPS",
           "EAP",
@@ -1266,49 +1185,15 @@
         ],
         "correctAnswer": [
           "WPA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-076",
-        "stem": "Which of the following terms is used to describe a company that manufactures components, parts, or systems that are then integrated into another company's finished product or sold under that company's brand name?",
-        "options": [
-          "IDM",
-          "VAR",
-          "OEM",
-          "MSP"
-        ],
-        "correctAnswer": [
-          "OEM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-077",
-        "stem": "What is the function of FTP?",
-        "options": [
-          "Email service",
-          "Directory access",
-          "Serving of web pages",
-          "File exchange"
-        ],
-        "correctAnswer": [
-          "File exchange"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-078",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which protocol is used to synchronize the real-time clocks of devices across a network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NTP",
           "VTP",
@@ -1317,32 +1202,15 @@
         ],
         "correctAnswer": [
           "NTP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-079",
-        "stem": "What is the primary purpose of S.M.A.R.T. in a storage media drive?",
-        "options": [
-          "Automatic correction of detected drive errors",
-          "Real-time monitoring and regulation of power consumption",
-          "Prediction and reporting of impending drive failures",
-          "Optimization of drive read/write speeds"
-        ],
-        "correctAnswer": [
-          "Prediction and reporting of impending drive failures"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-080",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of network is used for connecting computers within a small geographical area such as a building or group of buildings?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "LAN",
@@ -1351,30 +1219,30 @@
         ],
         "correctAnswer": [
           "LAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-081",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "APIPA allows a Windows host to self-configure an IPv4 address and subnet mask when a DHCP server is unavailable. APIPA uses the address block range from 169.254.0.0 to 169.254.255.255. APIPA-assigned addresses are valid only for communication within the network segment to which the host is connected. A host with an APIPA-assigned address cannot connect to the Internet.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-082",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a unique string of characters used to identify hardware, software, and data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "OID",
           "GUID",
@@ -1383,15 +1251,15 @@
         ],
         "correctAnswer": [
           "GUID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-083",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of small-scale business network environment is commonly referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VLAN",
           "SME",
@@ -1400,51 +1268,15 @@
         ],
         "correctAnswer": [
           "SOHO"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-084",
-        "stem": "What is a PUP? (Select 3 answers)",
-        "options": [
-          "Computer program installed with user's consent, but often lacking fully informed agreement",
-          "Software downloaded and installed entirely without user knowledge or consent",
-          "Free utility software that is legitimately bundled as a feature of a paid application",
-          "Computer program not explicitly classified as malware by AV software",
-          "Application that may degrade system performance, compromise privacy, or inject unsolicited ads",
-          "Malicious code that is explicitly classified and blocked as malware by AV software"
-        ],
-        "correctAnswer": [
-          "Application that may degrade system performance, compromise privacy, or inject unsolicited ads"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-085",
-        "stem": "Which MFD/MFP feature optimizes the processing of multi-page documents?",
-        "options": [
-          "PCL",
-          "IPP",
-          "ASIC",
-          "ADF"
-        ],
-        "correctAnswer": [
-          "ADF"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-086",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following enables OS installation over a network interface?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NFS",
           "MMC",
@@ -1453,15 +1285,15 @@
         ],
         "correctAnswer": [
           "PXE"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-087",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A dedicated network consisting of storage devices that provide data access is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SDN",
           "NAS",
@@ -1470,15 +1302,15 @@
         ],
         "correctAnswer": [
           "SAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-088",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a network protocol for secure file transfer over SSH?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "FTPS",
           "SFTP",
@@ -1487,15 +1319,15 @@
         ],
         "correctAnswer": [
           "SFTP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-089",
+        "domain": "4.0 Virtualization",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which cloud computing service model allows developers to run individual pieces of code in response to events without managing servers or underlying infrastructure?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SaaS",
           "PaaS",
@@ -1504,15 +1336,15 @@
         ],
         "correctAnswer": [
           "FaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "4.0 Virtualization"
+        ]
       },
       {
         "id": "ACR-QUIZ-090",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a networking hardware device that provides wireless clients with access to a wired network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NAS",
           "ONT",
@@ -1521,15 +1353,15 @@
         ],
         "correctAnswer": [
           "WAP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-091",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A computer network connecting multiple LANs over an area of a city is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "SAN",
@@ -1538,15 +1370,15 @@
         ],
         "correctAnswer": [
           "MAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-092",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the acronyms listed below refers to a logical security rule set that controls access to objects and specifies the operations allowed on a given object?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "AUP",
           "SSO",
@@ -1555,15 +1387,15 @@
         ],
         "correctAnswer": [
           "ACL"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-093",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of software acts as an intermediary between users and computer hardware, enabling both system operations and application execution?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "API",
           "BIOS",
@@ -1572,47 +1404,30 @@
         ],
         "correctAnswer": [
           "OS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-094",
-        "stem": "Which of the following combinations uses two different authentication factors and therefore qualifies as MFA?",
-        "options": [
-          "Smart card and mobile digital key",
-          "Password and biometric scan",
-          "Username and pattern lock",
-          "Retina scan and fingerprint"
-        ],
-        "correctAnswer": [
-          "Password and biometric scan"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-095",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "TCP is a connection-oriented protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-096",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A mobile device's built-in functionality enabling the usage of locator applications is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IMSI",
           "GSM",
@@ -1621,15 +1436,15 @@
         ],
         "correctAnswer": [
           "GPS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-097",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which wireless security protocol has been officially deprecated in favor of newer standards due to its known cryptographic design flaws?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WPA2",
           "EAP",
@@ -1638,15 +1453,15 @@
         ],
         "correctAnswer": [
           "WEP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-098",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "When comparing two otherwise identical RAM modules, which specification indicates how many clock cycles the memory takes to begin returning data, with lower values generally providing faster response times?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SPD",
           "ECC",
@@ -1655,15 +1470,15 @@
         ],
         "correctAnswer": [
           "CAS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-099",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "In the AAA security architecture, the process of tracking user activity and resource usage for reporting or billing is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Authentication",
           "Auditing",
@@ -1672,15 +1487,15 @@
         ],
         "correctAnswer": [
           "Accounting"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-100",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a network protocol that secures web traffic via SSL/TLS encryption?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IPSec",
           "SSH",
@@ -1689,15 +1504,15 @@
         ],
         "correctAnswer": [
           "HTTPS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-101",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the common term for a group of protocols used to carry voice data over a packet-switched network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ISDN",
           "PBX",
@@ -1706,15 +1521,15 @@
         ],
         "correctAnswer": [
           "VoIP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-102",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a network security solution that integrates multiple security services such as firewall, antivirus, intrusion prevention, and web filtering into a single appliance?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SWG",
           "IDS",
@@ -1723,15 +1538,15 @@
         ],
         "correctAnswer": [
           "UTM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-103",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which network protocol is used to retrieve content from a web server?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CIFS",
           "FTP",
@@ -1740,15 +1555,15 @@
         ],
         "correctAnswer": [
           "HTTP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-104",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to one of the major CPU manufacturers for PCs?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ASUS",
           "NVIDIA",
@@ -1757,15 +1572,15 @@
         ],
         "correctAnswer": [
           "AMD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-105",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which device authenticates and manages remote user connection requests before granting access to a network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NAS",
           "ONT",
@@ -1774,15 +1589,15 @@
         ],
         "correctAnswer": [
           "NAS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-106",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of limited-range computer network used for data transmission among various types of personal devices is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PAN",
           "LAN",
@@ -1791,15 +1606,15 @@
         ],
         "correctAnswer": [
           "PAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-107",
+        "domain": "1.0 Acronyms",
+        "type": "multi",
+        "difficulty": "medium",
         "stem": "Which of the following solutions provide the AAA functionality? (Select 2 answers)",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PEAP",
           "TACACS+",
@@ -1808,34 +1623,17 @@
           "MS-CHAP"
         ],
         "correctAnswer": [
+          "PEAP",
           "RADIUS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-108",
-        "stem": "What are the characteristic features of SMB/CIFS? (Select 2 answers)",
-        "options": [
-          "Optimized for secure file sharing over the Internet",
-          "Used to provide shared access to files, directories, and devices",
-          "Designed for Linux-based environments",
-          "Intended for voice and multimedia communication over IP networks",
-          "Primarily used in Microsoft Windows environments"
-        ],
-        "correctAnswer": [
-          "Primarily used in Microsoft Windows environments"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-109",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a cloud computing service model in which clients, instead of buying all the hardware and software, purchase computing resources as an outsourced service from suppliers who own and maintain all the necessary equipment and software?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SaaS",
           "DaaS",
@@ -1844,15 +1642,15 @@
         ],
         "correctAnswer": [
           "IaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-110",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of system RAM transfers data on both the rising and falling edges of the clock signal?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SDR",
           "DDR",
@@ -1861,33 +1659,15 @@
         ],
         "correctAnswer": [
           "DDR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-111",
-        "stem": "The SMTP protocol is used for: (Select 2 answers)",
-        "options": [
-          "Synchronizing email folders across multiple devices",
-          "Forwarding email between mail servers",
-          "Downloading email to a local client from a remote server",
-          "Routing inbound mail to the correct mailbox",
-          "Sending email from a client to a mail server"
-        ],
-        "correctAnswer": [
-          "Sending email from a client to a mail server"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-112",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which technology allows a physical network to be divided into multiple logical broadcast domains for better segmentation and management?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VPN",
           "DMZ",
@@ -1896,15 +1676,15 @@
         ],
         "correctAnswer": [
           "VLAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-113",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A technology that combines multiple physical disk drives into a single logical unit to improve capacity, performance, or fault tolerance is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SAN",
           "RAID",
@@ -1913,15 +1693,15 @@
         ],
         "correctAnswer": [
           "RAID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-114",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a solution that allows network administrators to prioritize certain types of network traffic?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NAC",
           "QoS",
@@ -1930,32 +1710,15 @@
         ],
         "correctAnswer": [
           "QoS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-115",
-        "stem": "LDAP is an example of:",
-        "options": [
-          "Data encryption protocol",
-          "Address resolution protocol",
-          "Directory access protocol",
-          "File exchange protocol"
-        ],
-        "correctAnswer": [
-          "Directory access protocol"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-116",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which DNS record type specifies the mail servers responsible for accepting email on behalf of a domain?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SPF",
           "NS",
@@ -1964,15 +1727,15 @@
         ],
         "correctAnswer": [
           "MX"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-117",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which technology uses infrared light waves to enable short-range wireless communication, often found in remote controls?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NFC",
           "IR",
@@ -1981,15 +1744,15 @@
         ],
         "correctAnswer": [
           "IR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-118",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A network protocol providing an alternative solution to the manual allocation of IP addresses is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DNS",
           "SNMP",
@@ -1998,15 +1761,15 @@
         ],
         "correctAnswer": [
           "DHCP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-119",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to Apple's mechanism for deploying time-sensitive security patches for iOS, iPadOS, and macOS independently of major OS updates?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "OTA",
           "APT",
@@ -2015,15 +1778,15 @@
         ],
         "correctAnswer": [
           "RSR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-120",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which fiber-optic device is typically installed at the customer premises to terminate a fiber connection from the ISP?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MDI",
           "IDF",
@@ -2032,30 +1795,30 @@
         ],
         "correctAnswer": [
           "ONT"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-121",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "UDP is an example of a connectionless protocol. Because UDP does not support three-way handshake while establishing a network connection, it is referred to as unreliable or best-effort protocol. Example applications of UDP include transmission of video and audio streaming data.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-122",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which DNS record type creates an alias that maps one domain name to another domain name?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MX",
           "CNAME",
@@ -2064,32 +1827,15 @@
         ],
         "correctAnswer": [
           "CNAME"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-123",
-        "stem": "Which of the following terms describes a visual interface that allows users to interact with an operating system through graphical elements such as windows, icons, and menus rather than text-based commands?",
-        "options": [
-          "HMI",
-          "CLI",
-          "VDI",
-          "GUI"
-        ],
-        "correctAnswer": [
-          "GUI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-124",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which motherboard form factor has historically been the standard full-size design used in desktop PCs?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ATX",
           "mATX",
@@ -2098,15 +1844,15 @@
         ],
         "correctAnswer": [
           "ATX"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-125",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to the global industry standard for 4G mobile broadband?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WiMAX",
           "LTE",
@@ -2115,15 +1861,15 @@
         ],
         "correctAnswer": [
           "LTE"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-126",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a unique 48-bit address assigned to a NIC?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "OUI",
           "UAA",
@@ -2132,15 +1878,15 @@
         ],
         "correctAnswer": [
           "MAC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-127",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a hardware device that enables the administration of multiple hosts with the use of a single mouse, keyboard, and computer screen?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "KVM",
@@ -2149,30 +1895,30 @@
         ],
         "correctAnswer": [
           "KVM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-128",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "An eSATA device can be added to a PC by attaching the device directly into an internal slot on the motherboard.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "False"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-129",
+        "domain": "1.0 Acronyms",
+        "type": "multi",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refer to physical form factors for SSDs? (Select 2 answers)",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SCSI",
           "M.2",
@@ -2181,16 +1927,17 @@
           "NVMe"
         ],
         "correctAnswer": [
-          "mSATA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+          "2.5 inch",
+          "M.2"
+        ]
       },
       {
         "id": "ACR-QUIZ-130",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A specialized hardware component that accelerates visual rendering is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "TPU",
           "GPU",
@@ -2199,15 +1946,15 @@
         ],
         "correctAnswer": [
           "GPU"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-131",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a global standard development organization composed of different national standards bodies?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NIST",
           "ISO",
@@ -2216,32 +1963,15 @@
         ],
         "correctAnswer": [
           "ISO"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-132",
-        "stem": "ECC type RAM:",
-        "options": [
-          "Can only detect errors, but does not have the capability to correct them",
-          "Refers to parity RAM",
-          "Offers better performance in terms of speed when compared to a non-ECC type of RAM",
-          "Can detect and correct errors"
-        ],
-        "correctAnswer": [
-          "Can detect and correct errors"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-133",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which performance metric is used to measure the number of read and write operations a storage drive can perform per second?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "LBA",
           "S.M.A.R.T.",
@@ -2250,15 +1980,15 @@
         ],
         "correctAnswer": [
           "IOPS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-134",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a primary color model used in electronic displays, digital imaging, and screen-based color reproduction?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "HSV",
           "RGB",
@@ -2267,15 +1997,15 @@
         ],
         "correctAnswer": [
           "RGB"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-135",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which wireless technology enables identification and tracking of tags attached to objects?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WTLS",
           "GPS",
@@ -2284,15 +2014,15 @@
         ],
         "correctAnswer": [
           "RFID"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-136",
+        "domain": "2.0 Security",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "In the AAA security architecture, the process of granting or denying access to resources is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Authorization",
           "Accounting",
@@ -2301,15 +2031,15 @@
         ],
         "correctAnswer": [
           "Authorization"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Security"
+        ]
       },
       {
         "id": "ACR-QUIZ-137",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following terms refers to the measurement of the rotational speed of a mechanical component, such as platters in magnetic storage drives or optical discs?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PPM",
           "RPS",
@@ -2318,33 +2048,15 @@
         ],
         "correctAnswer": [
           "RPM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-138",
-        "stem": "The DNS TXT record is used for: (Select 2 answers)",
-        "options": [
-          "Resolving an IP address to a hostname for reverse lookups",
-          "Mapping a domain name to a list of mail servers for that domain",
-          "Specifying the authoritative name servers for a domain",
-          "Providing verification and email security policy information",
-          "Storing arbitrary text-based data associated with a domain"
-        ],
-        "correctAnswer": [
-          "Storing arbitrary text-based data associated with a domain"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-139",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A system administrator needs to execute a PowerShell script on multiple remote Windows workstations without opening a GUI session on each machine. Which protocol should be used?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PCoIP",
           "SSH",
@@ -2353,15 +2065,15 @@
         ],
         "correctAnswer": [
           "WinRM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-140",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which cloud service model would provide the best solution for a web developer intending to create a web app?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "XaaS",
           "SaaS",
@@ -2370,15 +2082,15 @@
         ],
         "correctAnswer": [
           "PaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-141",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a legacy network API that allows applications on different computers to communicate over a LAN?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IPX/SPX",
           "NWLink",
@@ -2387,15 +2099,15 @@
         ],
         "correctAnswer": [
           "NetBIOS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-142",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of ISP offering internet access to subscribers via fixed wireless radio link is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NSP",
           "WISP",
@@ -2404,15 +2116,15 @@
         ],
         "correctAnswer": [
           "WISP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-143",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which motherboard component uses battery-backed volatile memory to store the real-time clock and legacy BIOS configuration data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SRAM",
           "ROM",
@@ -2421,15 +2133,15 @@
         ],
         "correctAnswer": [
           "CMOS RAM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-144",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a policy framework that allows domain owners to specify how email receivers should handle emails that fail authentication checks?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DKIM",
           "SPF",
@@ -2438,15 +2150,15 @@
         ],
         "correctAnswer": [
           "DMARC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-145",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "In older, non-UEFI-based PCs, the first sector of a storage drive containing information about partitions and a piece of executable code used to load the installed OS is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MBR",
           "GPT",
@@ -2455,30 +2167,30 @@
         ],
         "correctAnswer": [
           "MBR"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-146",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "PCIe is a high-speed, serial expansion bus designed as a replacement for PCI, PCI-X, and AGP standards.",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "True",
           "False"
         ],
         "correctAnswer": [
           "True"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-147",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to an authentication method that enables the signing of an outbound email message with a digital signature?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SPF",
           "DKIM",
@@ -2487,15 +2199,15 @@
         ],
         "correctAnswer": [
           "DKIM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-148",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A logical device interface used for accessing non-volatile memory storage devices attached via PCIe is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SCSI",
           "NVMe",
@@ -2504,15 +2216,15 @@
         ],
         "correctAnswer": [
           "NVMe"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-149",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following protocols is used to synchronize email messages across multiple client devices by maintaining the master copy of the data on the mail server?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SMTP",
           "MIME",
@@ -2521,15 +2233,15 @@
         ],
         "correctAnswer": [
           "IMAP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-150",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the most common memory module form factor used in laptops?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ECC RAM",
           "DIMM",
@@ -2538,15 +2250,15 @@
         ],
         "correctAnswer": [
           "SODIMM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-151",
+        "domain": "4.0 Virtualization",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms is used as a catch-all term for virtually any type of IT cloud-based service?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "AaaS",
           "FaaS",
@@ -2555,15 +2267,15 @@
         ],
         "correctAnswer": [
           "XaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "4.0 Virtualization"
+        ]
       },
       {
         "id": "ACR-QUIZ-152",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A networking hardware device connecting wireless devices to a wired network is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "WAF",
           "AP",
@@ -2572,32 +2284,15 @@
         ],
         "correctAnswer": [
           "AP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-153",
-        "stem": "Which acronym is used to describe a company that provides internet access?",
-        "options": [
-          "MSP",
-          "IdP",
-          "CSP",
-          "ISP"
-        ],
-        "correctAnswer": [
-          "ISP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-154",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a network of interconnected devices equipped with sensors (such as wearable tech or home automation devices) that can interact with each other to perform various tasks and functions?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ICS",
           "PAN",
@@ -2606,32 +2301,15 @@
         ],
         "correctAnswer": [
           "IoT"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-155",
-        "stem": "POP3 is used for:",
-        "options": [
-          "Name resolution",
-          "Sending email messages",
-          "File exchange",
-          "Email retrieval"
-        ],
-        "correctAnswer": [
-          "Email retrieval"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-156",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a desktop or laptop computer intended for use by a single individual?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "PDA",
@@ -2640,15 +2318,15 @@
         ],
         "correctAnswer": [
           "PC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-157",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A cloud computing service model offering remote access to applications based on recurring subscription fee is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PaaS",
           "SaaS",
@@ -2657,15 +2335,15 @@
         ],
         "correctAnswer": [
           "SaaS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-158",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which digital media interface provides the capability for transmission of both video and audio data?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "S/PDIF",
           "DVI",
@@ -2674,15 +2352,15 @@
         ],
         "correctAnswer": [
           "HDMI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-159",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a standardized method employed by the U.S. federal government to authenticate the identities of employees and contractors via smart card-based credentials?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PIV",
           "MFA",
@@ -2691,32 +2369,15 @@
         ],
         "correctAnswer": [
           "PIV"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-160",
-        "stem": "Which type of RAM module features independent electrical contacts on each side of the module?",
-        "options": [
-          "SRAM",
-          "SIMM",
-          "DRAM",
-          "DIMM"
-        ],
-        "correctAnswer": [
-          "DIMM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-161",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following solutions alleviates the problem of the depleting IPv4 address space by allowing multiple hosts on the same private LAN to share a single public IP address?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DNS",
           "APIPA",
@@ -2725,15 +2386,15 @@
         ],
         "correctAnswer": [
           "NAT"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-162",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A computer network connecting multiple smaller networks over very large geographical areas is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MAN",
           "WLAN",
@@ -2742,15 +2403,15 @@
         ],
         "correctAnswer": [
           "WAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-163",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the acronyms listed below refers to a technology that enables hosting and delivering virtual desktops to multiple users over a network?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VDE",
           "VNC",
@@ -2759,15 +2420,15 @@
         ],
         "correctAnswer": [
           "VDI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-164",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following protocols is used by network management systems to collect performance data and monitor the status of managed devices?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "Syslog",
           "ICMP",
@@ -2776,15 +2437,15 @@
         ],
         "correctAnswer": [
           "SNMP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-165",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A Microsoft-proprietary protocol providing a user with graphical interface for connecting to another networked host is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VDI",
           "RDP",
@@ -2793,15 +2454,15 @@
         ],
         "correctAnswer": [
           "RDP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-166",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the acronyms listed below refers to a page description language used by printers to control document formatting and print job instructions?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "LPD",
           "IPP",
@@ -2810,15 +2471,15 @@
         ],
         "correctAnswer": [
           "PCL"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-167",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a backlight technology most commonly used in modern flat-panel LCD displays?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IPS",
           "CCFL",
@@ -2827,15 +2488,15 @@
         ],
         "correctAnswer": [
           "LED"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-168",
-        "stem": "Which of the following refers to a dedicated, high-performance physical computing device — often in the form of an external plug-in card or network-attached appliance — specifically designed to securely generate, store, and manage cryptographic keys?",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
+        "stem": "Which of the following refers to a dedicated, high-performance physical computing device \u00e2\u20ac\u201d often in the form of an external plug-in card or network-attached appliance \u00e2\u20ac\u201d specifically designed to securely generate, store, and manage cryptographic keys?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "EFS",
           "HSM",
@@ -2844,15 +2505,15 @@
         ],
         "correctAnswer": [
           "HSM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-169",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which type of DSL provides higher download speeds than upload speeds, making it suitable for standard residential internet access?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "VDSL",
           "ADSL",
@@ -2861,15 +2522,15 @@
         ],
         "correctAnswer": [
           "ADSL"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-170",
-        "stem": "An internal hardware component that converts electrical power from an outlet into usable power for a computer’s internal parts is called:",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
+        "stem": "An internal hardware component that converts electrical power from an outlet into usable power for a computer\u00e2\u20ac\u2122s internal parts is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SVC",
           "UPS",
@@ -2878,15 +2539,15 @@
         ],
         "correctAnswer": [
           "PSU"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-171",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the acronyms listed below refers to a software-based emulation of a physical computer that runs its own operating system and applications?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SDN",
           "IaaS",
@@ -2895,15 +2556,15 @@
         ],
         "correctAnswer": [
           "VM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
+        ]
       },
       {
         "id": "ACR-QUIZ-172",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A solution that allows a network device to receive electricity over standard Ethernet cables is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PDU",
           "EoP",
@@ -2912,15 +2573,15 @@
         ],
         "correctAnswer": [
           "PoE"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-173",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following answers refers to a DNS TXT record that allows the owner of a domain to specify all the servers authorized to send mail from their domain?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DKIM",
           "SRV",
@@ -2929,15 +2590,15 @@
         ],
         "correctAnswer": [
           "SPF"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-174",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which DVI connector type does not provide support for analog signal transmission?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DVI-D",
           "DVI-A",
@@ -2946,15 +2607,15 @@
         ],
         "correctAnswer": [
           "DVI-D"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-175",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a non-volatile mass storage media type that uses flash memory and has no moving parts, offering faster access than spinning disk drives?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SATA",
           "SD",
@@ -2963,15 +2624,15 @@
         ],
         "correctAnswer": [
           "SSD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-176",
+        "domain": "5.0 Troubleshooting",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a smart card issued by the U.S. Department of Defense for secure authentication and access to facilities and DoD systems?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "ICC",
           "U2F",
@@ -2980,15 +2641,15 @@
         ],
         "correctAnswer": [
           "CAC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "5.0 Troubleshooting"
+        ]
       },
       {
         "id": "ACR-QUIZ-177",
+        "domain": "1.0 Mobile Devices",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of removable smart card used in mobile phones to identify the client is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "IMSI",
           "SIM",
@@ -2997,70 +2658,15 @@
         ],
         "correctAnswer": [
           "SIM"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Mobile Devices"
-      },
-      {
-        "id": "ACR-QUIZ-178",
-        "stem": "What are the common characteristics and use cases of the BNC connector? (Select 3 answers)",
-        "options": [
-          "Bayonet-style (twist-and-lock) mechanism",
-          "Twisted-pair copper cabling",
-          "Used in professional A/V, CCTV, and lab/test equipment",
-          "Coaxial cabling",
-          "Used for satellite/cable TV and broadband internet connections",
-          "Threaded (screw-on) locking mechanism"
-        ],
-        "correctAnswer": [
-          "Coaxial cabling"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-179",
-        "stem": "Which of the terms listed below is used to describe a mechanical data storage medium type that relies on magnetic plates and moving parts for data storage and retrieval?",
-        "options": [
-          "HDD",
-          "SD",
-          "ROM",
-          "SSD"
-        ],
-        "correctAnswer": [
-          "HDD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-180",
-        "stem": "What are the characteristic features of IPS display technology? (Select 3 answers)",
-        "options": [
-          "High color accuracy",
-          "Fast response times",
-          "Wide viewing angles",
-          "Low color accuracy",
-          "Consistent color reproduction",
-          "Narrow viewing angles"
-        ],
-        "correctAnswer": [
-          "Consistent color reproduction"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-181",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A computer's hardware component that enables network access is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PHY",
           "AIC",
@@ -3069,15 +2675,15 @@
         ],
         "correctAnswer": [
           "NIC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-182",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a common interface for connecting consumer-level internal mass storage devices?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "eSATA",
           "SCSI",
@@ -3086,53 +2692,15 @@
         ],
         "correctAnswer": [
           "SATA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-183",
-        "stem": "What are the characteristic features of ST fiber-optic connectors? (Select 3 answers)",
-        "options": [
-          "Small form factor connector type",
-          "Latch-style locking mechanism similar to RJ-45 connectors",
-          "Cylindrical metal connector body",
-          "Bayonet-style twist-and-lock mechanism",
-          "Commonly used in older networks and multimode fiber installations",
-          "Used in high-density modern networks"
-        ],
-        "correctAnswer": [
-          "Commonly used in older networks and multimode fiber installations"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-184",
-        "stem": "Which of the answers listed below refer(s) to an ARM-type CPU architecture? (Select all that apply)",
-        "options": [
-          "Characterized by lowered power consumption",
-          "Typically used in personal computers, laptops, and servers",
-          "Focuses on simplifying the instruction set to enhance processing efficiency",
-          "Employs complex instructions for efficient memory management and backward compatibility",
-          "Commonly used in mobile devices and embedded systems",
-          "Suitable for battery-powered devices"
-        ],
-        "correctAnswer": [
-          "Suitable for battery-powered devices"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-185",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of network consisting of computers and peripheral devices that use high-frequency radio waves to communicate with each other is called:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "EPN",
           "WLAN",
@@ -3141,15 +2709,15 @@
         ],
         "correctAnswer": [
           "WLAN"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
+        ]
       },
       {
         "id": "ACR-QUIZ-186",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following systems is specifically designed for remote, wide-area monitoring and supervisory control of industrial processes across multiple geographically dispersed sites?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "DCS",
           "SCADA",
@@ -3158,34 +2726,15 @@
         ],
         "correctAnswer": [
           "SCADA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-187",
-        "stem": "The VA display technology can be characterized by: (Select 3 answers)",
-        "options": [
-          "High contrast ratios",
-          "Low color accuracy",
-          "Deep black levels",
-          "Low contrast ratios",
-          "Slow response times",
-          "Narrow viewing angles"
-        ],
-        "correctAnswer": [
-          "Slow response times"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-188",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a serial communication copper connector often found on older PCs, networking equipment, and industrial hardware?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "RG-6",
           "PS/2",
@@ -3194,15 +2743,15 @@
         ],
         "correctAnswer": [
           "DB-9"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-189",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of CPU architecture focused on a simplified set of instructions to enhance speed and efficiency is referred to as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "CISC",
           "RISC",
@@ -3211,15 +2760,15 @@
         ],
         "correctAnswer": [
           "RISC"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-190",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to the industry-standard family of removable flash memory cards used extensively in portable devices to provide removable storage?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "USB",
           "SD",
@@ -3228,15 +2777,15 @@
         ],
         "correctAnswer": [
           "SD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-191",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "What is the name of a family of low-power, small-form-factor motherboards commonly used in embedded and industrial systems?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "NLX",
           "ITX",
@@ -3245,34 +2794,15 @@
         ],
         "correctAnswer": [
           "ITX"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-192",
-        "stem": "Which of the answers listed below refer to the RJ11 connector? (Select 3 answers)",
-        "options": [
-          "Ethernet network cabling",
-          "Telephone equipment",
-          "Fiber-optic cabling",
-          "Coaxial cabling",
-          "Dial-up networking",
-          "Twisted-pair copper cabling"
-        ],
-        "correctAnswer": [
-          "Twisted-pair copper cabling"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-193",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "USB Type-B",
           "MiniUSB",
@@ -3282,15 +2812,15 @@
         ],
         "correctAnswer": [
           "USB-C"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
+        ]
       },
       {
         "id": "ACR-QUIZ-194",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to the diagnostic test a computer performs to check hardware functionality immediately after powering on?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "BIT",
           "POST",
@@ -3299,33 +2829,15 @@
         ],
         "correctAnswer": [
           "POST"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-195",
-        "stem": "Which of the answers listed below describe the SC fiber-optic connector? (Select 2 answers)",
-        "options": [
-          "Latch-style locking mechanism similar to RJ-45 connectors",
-          "Widely used in datacom and telecom applications",
-          "Bayonet-style twist-and-lock mechanism",
-          "Commonly used in older networks and multimode fiber installations",
-          "Push-pull locking mechanism for easy insertion and removal"
-        ],
-        "correctAnswer": [
-          "Push-pull locking mechanism for easy insertion and removal"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-196",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "A type of device that integrates printing, scanning, copying, and often faxing into a single unit is called: (Select the best answer)",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "MFD",
           "AIO",
@@ -3334,34 +2846,15 @@
         ],
         "correctAnswer": [
           "MFP"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-197",
-        "stem": "What are the characteristic features of the RJ45 connector? (Select 2 answers)",
-        "options": [
-          "Fiber-optic cabling",
-          "Coaxial cabling",
-          "Dial-up networking",
-          "Twisted-pair copper cabling",
-          "Telephone equipment",
-          "Ethernet network cabling"
-        ],
-        "correctAnswer": [
-          "Ethernet network cabling"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-198",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following terms refers to an older, parallel internal expansion bus standard that has been largely replaced by PCIe?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "PCI",
           "S/PDIF",
@@ -3370,15 +2863,15 @@
         ],
         "correctAnswer": [
           "PCI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-199",
+        "domain": "2.0 Networking",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the answers listed below refers to a set of parallel interface standards designed for connecting peripheral devices?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SCSI",
           "NVMe",
@@ -3387,34 +2880,15 @@
         ],
         "correctAnswer": [
           "SCSI"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "2.0 Networking"
-      },
-      {
-        "id": "ACR-QUIZ-200",
-        "stem": "Which of the following characteristics describe the LC fiber-optic connector? (Select 3 answers)",
-        "options": [
-          "Bayonet-style twist-and-lock mechanism",
-          "Commonly used in older networks and multimode fiber installations",
-          "Small form factor connector type",
-          "Commonly used in high-density network environments like data centers",
-          "Latch-style locking mechanism similar to RJ-45 connectors",
-          "Cylindrical metal connector body"
-        ],
-        "correctAnswer": [
-          "Latch-style locking mechanism similar to RJ-45 connectors"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-201",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the terms listed below refers to a video or display resolution standard that defines high-quality image resolutions, primarily in formats such as 720p and 1080p?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "HD",
           "QHD",
@@ -3423,15 +2897,15 @@
         ],
         "correctAnswer": [
           "HD"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-202",
+        "domain": "3.0 Hardware",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to a high-speed serial interface designed specifically for connecting enterprise storage?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "SAS",
           "PCIe",
@@ -3440,34 +2914,15 @@
         ],
         "correctAnswer": [
           "SAS"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "3.0 Hardware"
-      },
-      {
-        "id": "ACR-QUIZ-203",
-        "stem": "Which of the answers listed below can be used to describe the TN display technology? (Select 3 answers)",
-        "options": [
-          "Low viewing angles",
-          "Fast response times",
-          "Low color quality",
-          "High color quality",
-          "Slow response times",
-          "Wide viewing angles"
-        ],
-        "correctAnswer": [
-          "Low color quality"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       },
       {
         "id": "ACR-QUIZ-204",
+        "domain": "1.0 Acronyms",
+        "type": "mc",
+        "difficulty": "medium",
         "stem": "Which of the following acronyms refers to an analog video interface standard commonly used for connecting computer monitors before digital connections?",
+        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
         "options": [
           "XGA",
           "HDMI",
@@ -3476,29 +2931,7 @@
         ],
         "correctAnswer": [
           "VGA"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
-      },
-      {
-        "id": "ACR-QUIZ-205",
-        "stem": "What are the characteristic features of an OLED display? (Select 3 answers)",
-        "options": [
-          "Requires a dedicated backlight assembly to illuminate the screen",
-          "Susceptible to image retention and burn-in over time",
-          "Inferior contrast ratio and color representation in comparison to LCDs",
-          "Each pixel serves as its own light source",
-          "Superior contrast ratios and true black levels"
-        ],
-        "correctAnswer": [
-          "Superior contrast ratios and true black levels"
-        ],
-        "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-        "type": "mc",
-        "difficulty": "medium",
-        "domain": "1.0 Acronyms"
+        ]
       }
     ]
   }

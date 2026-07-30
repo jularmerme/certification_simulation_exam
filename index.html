@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CompTIA A+ Practice Exam Simulator</title>
+  <link rel="icon" type="image/png" href="exam.png">
   <style>
     :root {
       --navy: #0f2540;
@@ -915,8 +916,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         stem: q.stem,
         options: q.options || [],
         correctAnswer: q.correctAnswer || [],
-        type: 'mc', // Explicitly set to 'mc' for all acronyms
-        domain: 'Acronyms'
+        type: q.type, // Use the actual type from JSON (mc or multi)
+        domain: q.domain || 'Acronyms',
+        difficulty: q.difficulty || 'medium',
+        explanation: q.explanation || ''
       }))
     };
     
