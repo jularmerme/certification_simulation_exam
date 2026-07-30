@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompTIA A+ Practice Exam Simulator</title>
+  <style>
+    :root {
+      --navy: #0f2540;
+      --navy2: #163a63;
+      --accent: #c8102e;
+      --accent-dark: #9c0c22;
+      --green: #1b7a3d;
+      --amber: #b8790a;
+      --red: #c8102e;
+      --bg: #f2f4f7;
+      --card: #ffffff;
+      --border: #dde2e8;
+      --text: #1c2530;
+      --muted: #667085;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html, body { 
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    
+    .topbar {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    .topbar .brand {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
+    
+    .topbar .brand span {
+      color: #7fb3ff;
+    }
+    
+    .topbar .right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .timer {
+      font-variant-numeric: tabular-nums;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    
+    .timer.warn {
+      background: var(--accent);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* INTRO SCREEN */
+    .intro-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+    }
+    
+    .intro-card h1 {
+      margin-bottom: 16px;
+      font-size: 24px;
+      color: var(--navy);
+    }
+    
+    .intro-card .exam-code {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+    
+    .intro-stat {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    
+    .intro-stat .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    
+    .intro-stat .value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    
+    .exam-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 24px 0;
+    }
+    
+    @media (max-width: 1024px) {
+      .exam-selector {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .exam-selector {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .exam-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .exam-card:hover {
+      border-color: var(--navy2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .exam-card.selected {
+      border-color: var(--navy2);
+      background: #eef4fc;
+    }
+    
+    .exam-card h3 {
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .exam-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    
+    .exam-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      font-size: 12px;
+    }
+    
+    .exam-stat-item {
+      background: var(--bg);
+      padding: 8px;
+      border-radius: 4px;
+    }
+    
+    .exam-stat-label {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    
+    .exam-stat-value {
+      color: var(--text);
+      font-weight: 700;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    
+    .btn {
+      padding: 12px 24px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      background: var(--bg);
+    }
+    
+    .btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    
+    .btn.primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+      flex: 1;
+    }
+    
+    .btn.primary:hover {
+      background: var(--navy2);
+    }
+    
+    .btn.danger {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    
+    .btn.danger:hover {
+      background: var(--accent-dark);
+    }
+    
+    .btn.flag {
+      background: #fff8e8;
+      border-color: #f0d9a6;
+      color: var(--amber);
+    }
+    
+    .btn.flag.active {
+      background: var(--amber);
+      color: #fff;
+    }
+    
+    .btn-save {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+    
+    .btn-save:hover {
+      background: var(--navy2);
+    }
+    
+    .btn-exit {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    
+    .btn-exit:hover {
+      background: var(--accent-dark);
+    }
+    
+    /* EXAM SCREEN */
+    .exam-layout {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 20px;
+    }
+    
+    .q-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+    }
+    
+    .q-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    
+    .q-number {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 15px;
+    }
+    
+    .q-domain-tag {
+      font-size: 11px;
+      background: #eaf1fb;
+      color: var(--navy2);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    
+    .q-stem {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    .q-hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    
+    .options-container {
+      margin-bottom: 20px;
+    }
+    
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    
+    .option:hover {
+      background: #f7f9fc;
+    }
+    
+    .option.selected {
+      border-color: var(--navy2);
+      background: #eef4fc;
+    }
+    
+    .option input {
+      margin-top: 3px;
+      cursor: pointer;
+    }
+    
+    .option .opt-text {
+      font-size: 14.5px;
+      line-height: 1.4;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    
+    .nav-buttons .btn {
+      flex: 1;
+    }
+    
+    /* SIDEBAR NAVIGATOR */
+    .sidebar {
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 16px;
+      height: fit-content;
+      position: sticky;
+      top: 74px;
+    }
+    
+    .sidebar h3 {
+      font-size: 12.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px 0;
+    }
+    
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    
+    .nav-cell {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: #f4f6f8;
+      font-size: 10.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.15s;
+    }
+    
+    .nav-cell:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-cell.answered {
+      background: #d9ecdf;
+      border-color: #a9d3b6;
+      color: var(--green);
+    }
+    
+    .nav-cell.incorrect {
+      background: #fbe6e9;
+      border-color: #f0d9a6;
+      color: var(--red);
+    }
+    
+    .nav-cell.flagged {
+      background: #fdeecb;
+      border-color: #f0d9a6;
+      color: var(--amber);
+    }
+    
+    .nav-cell.locked {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    
+    .nav-cell.current {
+      outline: 2px solid var(--navy2);
+      outline-offset: 2px;
+    }
+    
+    .legend {
+      font-size: 11px;
+      color: var(--muted);
+      margin: 12px 0;
+      line-height: 1.8;
+    }
+    
+    .legend span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    
+    .submit-box {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .submit-box .btn {
+      width: 100%;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
+    
+    /* RESULTS SCREEN */
+    .score-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      color: #fff;
+      border-radius: 10px;
+      padding: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .score-hero .big-score {
+      font-size: 52px;
+      font-weight: 800;
+      margin: 8px 0;
+    }
+    
+    .score-hero .pass-fail {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    
+    .pass-fail.pass {
+      background: var(--green);
+    }
+    
+    .pass-fail.fail {
+      background: var(--accent);
+    }
+    
+    .score-hero .scale-note {
+      font-size: 12.5px;
+      color: #b9c9e0;
+      margin-top: 10px;
+    }
+    
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .result-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .result-stat:hover {
+      border-color: var(--navy);
+      box-shadow: 0 2px 8px rgba(15, 37, 64, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .result-stat.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff;
+    }
+    
+    .result-stat.active .num {
+      color: #fff;
+    }
+    
+    .result-stat.active .lbl {
+      color: #b9c9e0;
+    }
+    
+    .result-stat .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    
+    .result-stat .lbl {
+      font-size: 11.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    
+    .section-h {
+      color: var(--navy);
+      font-size: 18px;
+      margin: 30px 0 12px 0;
+    }
+    
+    @media (max-width: 900px) {
+      .exam-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .intro-grid { grid-template-columns: 1fr 1fr; }
+      .result-grid { grid-template-columns: 1fr; }
+      .exam-selector { grid-template-columns: 1fr; }
+    }
+    
+    /* PAGINATION */
+    #paginationControls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+    }
+    
+    .pagination-btn {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    
+    .pagination-btn:hover:not(:disabled) {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+    
+    .pagination-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .pagination-btn.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+    
+    .pagination-info {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .review-item-answer {
+      background: #f9fafb;
+      border-left: 3px solid var(--border);
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    
+    .review-item-answer strong {
+      color: var(--navy);
+      display: block;
+      margin-bottom: 6px;
+    }
+    
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: #b9c9e0;
+      text-align: center;
+      padding: 24px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    footer a {
+      color: #7fb3ff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    
+    /* Initially hide body to prevent flash of intro screen if resuming exam */
+    body.resuming-exam {
+      visibility: hidden;
+    }
+  </style>
+  
+  <script>
+    // Check for saved exam state immediately to prevent flash of intro screen
+    (function() {
+      const savedState = localStorage.getItem('aplus_exam_state');
+      if (savedState) {
+        try {
+          const state = JSON.parse(savedState);
+          if (state.examCode) {
+            // Mark that we're resuming an exam
+            document.body.classList.add('resuming-exam');
+          }
+        } catch (e) {
+          // Ignore parse errors
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">A+ Exam Simulator &middot; <span id="topbarExamName">Select an exam</span></div>
+  <div class="right">
+    <div class="timer hidden" id="timerDisplay">90:00</div>
+  </div>
+</div>
+
+<div class="container">
+  
+  <!-- INTRO SCREEN -->
+  <div id="screenIntro">
+    <div class="intro-card">
+      <h1>CompTIA A+ Practice Exam Simulator</h1>
+      <p>Prepare for your A+ certification with our comprehensive practice exam. Choose your exam version below to begin.</p>
+      
+      <div class="intro-grid">
+        <div class="intro-stat"><div class="label">Questions</div><div class="value" id="introQuestions">90 max</div></div>
+        <div class="intro-stat"><div class="label">Time Limit</div><div class="value" id="introTime">90 min</div></div>
+        <div class="intro-stat"><div class="label">Passing Score</div><div class="value" id="introPassScore">675-700/900</div></div>
+      </div>
+      
+      <h2 style="color: var(--navy); font-size: 18px; margin: 24px 0 12px 0;">Select Your Exam Version</h2>
+      <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">Choose which CompTIA A+ exam you want to practice. Progress is saved automatically for each exam.</p>
+      
+      <div class="exam-selector">
+        <div class="exam-card" id="card1201" onclick="selectExam('220-1201')">
+          <h3>Core 1</h3>
+          <p><span class="exam-code">220-1201</span></p>
+          <p>Mobile devices, networking, hardware, virtualization, and troubleshooting.</p>
+          <div class="exam-stats">
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Questions</div>
+              <div class="exam-stat-value">90</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Pass Score</div>
+              <div class="exam-stat-value">675/900</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="exam-card" id="card1202" onclick="selectExam('220-1202')">
+          <h3>Core 2</h3>
+          <p><span class="exam-code">220-1202</span></p>
+          <p>Operating systems, security, software, and operational procedures.</p>
+          <div class="exam-stats">
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Questions</div>
+              <div class="exam-stat-value">90</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Pass Score</div>
+              <div class="exam-stat-value">700/900</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exam-card" id="cardAcronyms" onclick="selectExam('acronyms')">
+          <h3>Acronyms Quiz</h3>
+          <p><span class="exam-code">Practice</span></p>
+          <p>Test your knowledge of essential CompTIA A+ terminology and acronyms.</p>
+          <div class="exam-stats">
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Questions</div>
+              <div class="exam-stat-value">25</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Pass Score</div>
+              <div class="exam-stat-value">80%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="button-group">
+        <button class="btn primary" id="beginBtn" onclick="startExam()" disabled>Select exam above to begin</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- EXAM SCREEN -->
+  <div id="screenExam" class="hidden">
+    <div class="exam-layout">
+      <div class="q-card">
+        <div class="q-meta">
+          <div class="q-number" id="qNumber">Q1 of 23</div>
+          <div class="q-domain-tag" id="qDomainTag"></div>
+        </div>
+        <div class="q-stem" id="qStem"></div>
+        <div class="q-hint hidden" id="qHint">Select all that apply</div>
+        <div id="qOptions" class="options-container"></div>
+        
+        <div class="nav-buttons">
+          <button class="btn" id="btnPrev" onclick="prevQuestion()" disabled>&larr; Previous</button>
+          <button class="btn flag" id="btnFlag" onclick="toggleFlag()">Flag</button>
+          <button class="btn primary" id="btnNext" onclick="nextQuestion()">Next &rarr;</button>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        <h3>Navigator</h3>
+        <div class="nav-grid" id="navGrid"></div>
+        <div class="legend">
+          <div><span style="background: #d9ecdf; border: 1px solid #a9d3b6;"></span>Answered</div>
+          <div><span style="background: #fdeecb; border: 1px solid #f0d9a6;"></span>Flagged</div>
+          <div><span style="background: #fbe6e9; border: 1px solid #f0d9a6;"></span>Incorrect</div>
+          <div><span style="background: #f4f6f8; border: 1px solid #dde2e8;"></span>Unanswered</div>
+        </div>
+        <div class="submit-box">
+          <button class="btn btn-save" onclick="saveAndExit()">Save & Exit</button>
+          <button class="btn btn-exit" onclick="exitWithoutSave()">Exit Without Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exam Completion Modal -->
+  <div id="completionModal" class="hidden" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;">
+    <div style="background: white; border-radius: 16px; padding: 60px 40px; text-align: center; max-width: 500px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); animation: slideUp 0.3s ease-out;">
+      <div style="font-size: 80px; margin-bottom: 24px; animation: bounce 0.6s ease-out;">✓</div>
+      <h2 style="color: var(--green); font-size: 32px; margin-bottom: 12px; font-weight: 700;">Exam Completed!</h2>
+      <p style="color: #667085; font-size: 16px; margin-bottom: 32px; line-height: 1.6;">Your exam has been successfully submitted. Review your answers below to see where you excelled and where you can improve.</p>
+      <button onclick="closeCompletionModal()" style="background: var(--navy); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s;">View Results</button>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes bounce {
+      0% { transform: scale(0.5); opacity: 0; }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  
+  <!-- RESULTS SCREEN -->
+  <div id="screenResults" class="hidden">
+    <button class="btn" onclick="backToMenu()" style="margin-bottom: 16px;">&larr; Back to Start Page</button>
+    
+    <div class="score-hero">
+      <div style="font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: #b9c9e0;">Your Score</div>
+      <div class="big-score" id="scaledScore">--</div>
+      <div class="scale-note">Scale: 100–900 &middot; Passing: <span id="passingScore">675</span></div>
+      <div class="pass-fail" id="passFail"></div>
+    </div>
+    
+    <div class="result-grid">
+      <div class="result-stat active" id="statCorrect" onclick="filterReview('correct')">
+        <div class="num" id="rCorrect">-</div>
+        <div class="lbl">Correct</div>
+      </div>
+      <div class="result-stat" id="statIncorrect" onclick="filterReview('incorrect')">
+        <div class="num" id="rIncorrect">-</div>
+        <div class="lbl">Incorrect</div>
+      </div>
+      <div class="result-stat" id="statUnanswered" onclick="filterReview('unanswered')">
+        <div class="num" id="rUnanswered">-</div>
+        <div class="lbl">Unanswered</div>
+      </div>
+    </div>
+    
+    <div id="allAnsweredMessage" class="hidden" style="display: none !important;"></div>
+    
+    <h2 class="section-h">Review Your Answers</h2>
+    <div id="reviewList"></div>
+    <div id="paginationControls" style="display: none; margin-top: 24px; text-align: center;"></div>
+  </div>
+  
+</div>
+
+<script>
+
+// Global State
+let appState = {
+  examCode: null,
+  questions: [],
+  currentQuestionIndex: 0,
+  answers: {},
+  flagged: new Set(),
+  autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
+  validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
+  timerInterval: null,
+  timeRemaining: 0,
+  examStartTime: null
+};
+
+// Initialize
+window.addEventListener('DOMContentLoaded', async () => {
+  console.log('App loaded');
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+  
+  // Load questions from JSON
+  try {
+    const response = await fetch('exam_assets/questions.json');
+    const data = await response.json();
+    window.questionBank = data;
+    console.log('Questions loaded:', Object.keys(data.exams).length, 'exams');
+    
+    // Load acronyms quiz
+    const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json');
+    const acronymsData = await acronymsResponse.json();
+    
+    // Convert acronyms to exam format compatible with existing code
+    window.questionBank.exams['acronyms'] = {
+      name: 'Acronyms Quiz',
+      code: 'Practice',
+      minScore: 0,
+      maxScore: 100,
+      passingScore: 80,
+      questionBank: acronymsData.acronymsQuiz.questions.map(q => ({
+        id: q.id,
+        stem: q.stem,
+        options: q.options || [],
+        correctAnswer: q.correctAnswer || [],
+        type: 'mc', // Explicitly set to 'mc' for all acronyms
+        domain: 'Acronyms'
+      }))
+    };
+    
+    // Check if there's a saved exam in progress
+    checkAndRestoreExamState();
+  } catch (error) {
+    console.error('Error loading questions:', error);
+    alert('Failed to load question bank. Make sure questions.json and acronyms_quiz.json are in exam_assets folder.');
+  }
+});
+
+// Check and restore exam state from localStorage
+function checkAndRestoreExamState() {
+  // Check if there's a saved exam in progress
+  const savedState = localStorage.getItem('aplus_exam_state');
+  if (savedState) {
+    try {
+      const state = JSON.parse(savedState);
+      
+      // Restore the exam state
+      appState.examCode = state.examCode;
+      appState.currentQuestionIndex = state.currentQuestionIndex || 0;
+      appState.answers = state.answers || {};
+      appState.flagged = new Set(state.flagged || []);
+      appState.autoFlagged = new Set(state.autoFlagged || []);
+      appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
+      appState.timeRemaining = state.timeRemaining || 0;
+      appState.examStartTime = state.examStartTime || Date.now();
+      
+      // CRITICAL: Restore the SAVED questions, not generate new ones
+      if (state.questions && state.questions.length > 0) {
+        appState.questions = state.questions;
+        
+        // Show exam screen
+        const exam = window.questionBank.exams[state.examCode];
+        if (exam) {
+          document.getElementById('screenIntro').classList.add('hidden');
+          document.getElementById('screenExam').classList.remove('hidden');
+          document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
+          
+          // Build navigator
+          buildNavigator();
+          
+          // Load the current question
+          loadQuestion(appState.currentQuestionIndex);
+          
+          // Start timer
+          startTimer();
+          
+          return true; // Successfully restored
+        }
+      }
+    } catch (error) {
+      console.error('Error restoring exam state:', error);
+    }
+  }
+  
+  return false; // No saved state to restore
+}
+
+// Save exam state to localStorage
+function saveExamState() {
+  const state = {
+    examCode: appState.examCode,
+    currentQuestionIndex: appState.currentQuestionIndex,
+    questions: appState.questions, // SAVE the actual questions
+    answers: appState.answers,
+    flagged: Array.from(appState.flagged),
+    autoFlagged: Array.from(appState.autoFlagged),
+    validatedDragDrops: Array.from(appState.validatedDragDrops),
+    timeRemaining: appState.timeRemaining,
+    examStartTime: appState.examStartTime
+  };
+  localStorage.setItem('aplus_exam_state', JSON.stringify(state));
+}
+
+// Select exam
+function selectExam(examCode) {
+  appState.examCode = examCode;
+  document.getElementById('card1201').classList.toggle('selected', examCode === '220-1201');
+  document.getElementById('card1202').classList.toggle('selected', examCode === '220-1202');
+  document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
+  
+  let buttonText = 'Begin Exam';
+  let questionCount = '90 max';
+  let timeLimit = '90 min';
+  let passScore = '675-700/900';
+  
+  if (examCode === '220-1201') {
+    buttonText = 'Begin Core 1 Exam';
+    // Get actual question count from question bank
+    const core1 = window.questionBank.exams['220-1201'];
+    questionCount = core1 ? core1.questions.toString() : '100';
+    timeLimit = core1 ? core1.timeLimit.toString() + ' min' : '90 min';
+    passScore = '675/900';
+  } else if (examCode === '220-1202') {
+    buttonText = 'Begin Core 2 Exam';
+    // Get actual question count from question bank
+    const core2 = window.questionBank.exams['220-1202'];
+    questionCount = core2 ? core2.questions.toString() : '20';
+    timeLimit = core2 ? core2.timeLimit.toString() + ' min' : '90 min';
+    passScore = '700/900';
+  } else if (examCode === 'acronyms') {
+    buttonText = 'Begin Acronyms Quiz';
+    questionCount = '205';
+    timeLimit = '205 min';
+    passScore = '80%';
+  }
+  
+  document.getElementById('beginBtn').disabled = false;
+  document.getElementById('beginBtn').textContent = buttonText;
+  document.getElementById('introQuestions').textContent = questionCount;
+  document.getElementById('introTime').textContent = timeLimit;
+  document.getElementById('introPassScore').textContent = passScore;
+}
+
+// Start exam
+function startExam() {
+  if (!appState.examCode) {
+    alert('Please select an exam');
+    return;
+  }
+  
+  const exam = window.questionBank.exams[appState.examCode];
+  if (!exam) {
+    alert('Exam not found');
+    return;
+  }
+  
+  // Number of questions to select for this exam - ALWAYS 25 for development
+  let questionsToSelect = 25;
+  
+  // Randomly select a subset of questions from the question bank
+  // First shuffle all questions, then take the first N
+  const shuffledQuestions = shuffleArray([...exam.questionBank]);
+  const selectedQuestions = shuffledQuestions.slice(0, Math.min(questionsToSelect, shuffledQuestions.length));
+  
+  // Randomize options within each selected question
+  appState.questions = selectedQuestions.map((q, idx) => {
+    const randomized = randomizeQuestionOptions(q);
+    if (idx === 0) {
+      console.log('First question after randomization:', {
+        id: randomized.id,
+        optionsCount: randomized.options.length,
+        options: randomized.options,
+        correctAnswer: randomized.correctAnswer,
+        type: randomized.type
+      });
+    }
+    return randomized;
+  });
+  appState.currentQuestionIndex = 0;
+  appState.answers = {};
+  appState.flagged.clear();
+  appState.validatedDragDrops.clear();
+  appState.examStartTime = Date.now();
+  
+  // Calculate time: 1 minute per question
+  const timeInMinutes = appState.questions.length;
+  appState.timeRemaining = timeInMinutes * 60; // Convert to seconds
+  
+  // Update UI
+  document.getElementById('screenIntro').classList.add('hidden');
+  document.getElementById('screenExam').classList.remove('hidden');
+  document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
+  
+  // Build navigator
+  buildNavigator();
+  
+  // Load first question
+  loadQuestion(0);
+  
+  // Start timer
+  startTimer();
+}
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Randomize options within a question
+function randomizeQuestionOptions(question) {
+  const q = JSON.parse(JSON.stringify(question)); // Deep copy to avoid modifying original
+  
+  if (q.type === 'mc') {
+    // For multiple choice: shuffle options and track new correct answer index
+    const correctAnswerText = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
+    
+    // Ensure we have options to shuffle
+    if (!q.options || q.options.length === 0) {
+      console.warn('Question has no options:', q.id);
+      return q;
+    }
+    
+    // Create array with both option text and a marker for the correct answer
+    const optionsWithCorrectMarker = q.options.map((opt, idx) => ({
+      text: opt,
+      isCorrect: opt === correctAnswerText
+    }));
+    
+    // Shuffle
+    const shuffled = shuffleArray(optionsWithCorrectMarker);
+    
+    // Update options and find new correct answer index
+    q.options = shuffled.map(item => item.text);
+    const newCorrectIndex = shuffled.findIndex(item => item.isCorrect);
+    q.correctAnswer = [q.options[newCorrectIndex]]; // Keep as array of text
+  } 
+  else if (q.type === 'multi') {
+    // For multi-select: shuffle options while preserving which ones are correct
+    const correctAnswerTexts = q.correctAnswer; // Already array of strings
+    
+    const optionsWithCorrectMarker = q.options.map((opt, idx) => ({
+      text: opt,
+      isCorrect: correctAnswerTexts.includes(opt)
+    }));
+    
+    // Shuffle
+    const shuffled = shuffleArray(optionsWithCorrectMarker);
+    
+    // Update options and correct answers
+    q.options = shuffled.map(item => item.text);
+    q.correctAnswer = shuffled.filter(item => item.isCorrect).map(item => item.text);
+  } 
+  else if (q.type === 'drag_drop') {
+    // For drag-and-drop: shuffle the items in the available options
+    const itemsWithIds = q.items.map(item => ({ ...item }));
+    const shuffled = shuffleArray(itemsWithIds);
+    q.items = shuffled;
+  }
+  
+  return q;
+}
+
+// Build navigator grid
+function buildNavigator() {
+  const navGrid = document.getElementById('navGrid');
+  navGrid.innerHTML = '';
+  
+  appState.questions.forEach((q, idx) => {
+    const cell = document.createElement('div');
+    cell.className = 'nav-cell';
+    cell.textContent = idx + 1;
+    cell.onclick = () => jumpToQuestion(idx);
+    cell.id = 'nav-' + idx;
+    navGrid.appendChild(cell);
+  });
+  
+  updateNavigator();
+}
+
+// Update navigator cell status
+function updateNavigator() {
+  appState.questions.forEach((q, idx) => {
+    const cell = document.getElementById('nav-' + idx);
+    if (!cell) return;
+    
+    cell.classList.remove('answered', 'incorrect', 'flagged', 'locked', 'current');
+    
+    if (idx === appState.currentQuestionIndex) {
+      cell.classList.add('current');
+    }
+    
+    // Check if question is answered or flagged
+    const isAnswered = appState.answers[idx] !== undefined;
+    const isFlagged = appState.flagged.has(idx);
+    const userAnswer = appState.answers[idx];
+    
+    // FLAGGED takes precedence over answered/unanswered
+    if (isFlagged) {
+      // Flagged questions are always yellow, regardless of answer state
+      cell.classList.add('flagged');
+      console.log(`[updateNavigator] Q${idx}: FLAGGED (yellow)`);
+    } else if (isAnswered) {
+      // Question is answered but not flagged
+      // For drag-drop questions, only show correct/incorrect after validation
+      if (q.type === 'drag_drop' && !appState.validatedDragDrops.has(idx)) {
+        console.log(`[updateNavigator] Q${idx}: Answered drag-drop (not validated, stays gray)`);
+        // Don't show anything - remains gray (unanswered appearance)
+      } else {
+        // For MC, multi-select, or validated drag-drop
+        const isCorrect = checkAnswerCorrect(q, userAnswer);
+        if (isCorrect) {
+          cell.classList.add('answered');  // Green
+          console.log(`[updateNavigator] Q${idx}: CORRECT (green, locked)`);
+        } else {
+          cell.classList.add('incorrect');  // Red
+          console.log(`[updateNavigator] Q${idx}: INCORRECT (red, locked)`);
+        }
+        // Add locked class since it's answered and not flagged
+        cell.classList.add('locked');  // Disable cursor and reduce opacity
+      }
+    } else {
+      console.log(`[updateNavigator] Q${idx}: Unanswered (gray)`);
+    }
+    // If not answered and not flagged, stays gray (default state)
+  });
+}
+
+// Load question
+function loadQuestion(index) {
+  if (index < 0 || index >= appState.questions.length) return;
+  
+  appState.currentQuestionIndex = index;
+  const question = appState.questions[index];
+  
+  // Check if question is locked
+  const isAnswered = appState.answers[index] !== undefined;
+  const isFlagged = appState.flagged.has(index);
+  const isLocked = isAnswered && !isFlagged;
+  
+  // Update header
+  document.getElementById('qNumber').textContent = 'Q' + (index + 1) + ' of ' + appState.questions.length;
+  document.getElementById('qDomainTag').textContent = question.domain;
+  
+  // Update question text
+  const qStem = document.getElementById('qStem');
+  
+  // Remove any existing lock indicators from previous questions
+  const existingLockIndicator = qStem.parentElement.querySelector('[data-lock-indicator]');
+  if (existingLockIndicator) {
+    existingLockIndicator.remove();
+  }
+  
+  qStem.textContent = question.stem;
+  
+  // Add lock indicator if question is locked
+  if (isLocked) {
+    const lockIndicator = document.createElement('div');
+    lockIndicator.setAttribute('data-lock-indicator', 'true');
+    lockIndicator.style.cssText = 'background: #fbe6e9; border-left: 4px solid var(--red); padding: 10px 14px; margin-bottom: 14px; border-radius: 4px; font-size: 13px; color: var(--red); font-weight: 600;';
+    lockIndicator.textContent = '🔒 This question is locked. Only flagged questions can be revisited.';
+    qStem.parentElement.insertBefore(lockIndicator, qStem);
+  }
+  
+  // Show hint for multi-select
+  document.getElementById('qHint').classList.toggle('hidden', question.type !== 'multi');
+  
+  // Render options based on type
+  const optionsContainer = document.getElementById('qOptions');
+  optionsContainer.innerHTML = '';
+  
+  if (question.type === 'mc' || question.type === 'multi') {
+    renderMultipleChoice(question, optionsContainer, index);
+  } else if (question.type === 'drag_drop') {
+    renderDragDrop(question, optionsContainer, index);
+  }
+  
+  // Update buttons
+  document.getElementById('btnPrev').disabled = index === 0;
+  const isLastQuestion = index === appState.questions.length - 1;
+  const btnNext = document.getElementById('btnNext');
+  
+  if (isLastQuestion) {
+    btnNext.disabled = false;
+    btnNext.textContent = 'Submit Exam';
+    btnNext.className = 'btn danger';
+    btnNext.onclick = submitExam;
+  } else {
+    btnNext.disabled = false;
+    btnNext.textContent = 'Next →';
+    btnNext.className = 'btn primary';
+    btnNext.onclick = nextQuestion;
+  }
+  
+  // Update flag button
+  document.getElementById('btnFlag').classList.toggle('active', isFlagged);
+  
+  // Update navigator
+  updateNavigator();
+  
+  // Save current exam state to localStorage
+  saveExamState();
+}
+
+// Render multiple choice
+function renderMultipleChoice(question, container, questionIndex) {
+  const isMulti = question.type === 'multi';
+  const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
+  
+  // Check if this question is locked (answered but not flagged)
+  const isAnswered = appState.answers[questionIndex] !== undefined;
+  const isFlagged = appState.flagged.has(questionIndex);
+  const isLocked = isAnswered && !isFlagged;
+  
+  question.options.forEach((option, idx) => {
+    const label = document.createElement('label');
+    label.className = 'option';
+    
+    const inputType = isMulti ? 'checkbox' : 'radio';
+    const input = document.createElement('input');
+    input.type = inputType;
+    input.name = 'answer-' + questionIndex;
+    input.value = idx; // This is just for HTML, we won't use it
+    
+    // Disable input if question is locked
+    if (isLocked) {
+      input.disabled = true;
+      label.style.opacity = '0.6';
+      label.style.cursor = 'not-allowed';
+    }
+    
+    if (isMulti) {
+      // For multi: check if option text is in the saved answers (which are now text-based)
+      const savedAnswers = currentAnswers || [];
+      input.checked = savedAnswers.includes(option);
+      
+      input.onchange = function(e) {
+        if (isLocked) return;
+        
+        const answers = appState.answers[questionIndex] || [];
+        if (this.checked) {
+          // Store as text, not index
+          if (!answers.includes(option)) {
+            answers.push(option);
+          }
+        } else {
+          // Remove by text
+          const findIdx = answers.indexOf(option);
+          if (findIdx > -1) {
+            answers.splice(findIdx, 1);
+          }
+        }
+        appState.answers[questionIndex] = answers;
+        label.classList.toggle('selected', this.checked);
+        
+        // If this question was auto-flagged and now has an answer, remove auto-flag
+        // But don't validate yet - wait until user clicks Next
+        if (appState.autoFlagged.has(questionIndex) && answers.length > 0) {
+          appState.flagged.delete(questionIndex);
+          appState.autoFlagged.delete(questionIndex);
+          saveExamState();
+          // Don't call updateNavigator() - validation happens on Next button click
+        }
+      };
+    } else {
+      // For single choice: check if option text matches saved answer
+      const savedAnswer = currentAnswers; // Will be a string (option text) or null
+      input.checked = option === savedAnswer;
+      
+      input.onchange = function(e) {
+        if (isLocked) return;
+        // Store as text, not index
+        appState.answers[questionIndex] = option;
+        // Update all labels
+        document.querySelectorAll('label[name="answer-' + questionIndex + '"]').forEach(l => l.classList.remove('selected'));
+        label.classList.add('selected');
+        
+        // If this question was auto-flagged and now has an answer, remove auto-flag
+        // But don't validate yet - wait until user clicks Next
+        if (appState.autoFlagged.has(questionIndex)) {
+          appState.flagged.delete(questionIndex);
+          appState.autoFlagged.delete(questionIndex);
+          saveExamState();
+          // Don't call updateNavigator() - validation happens on Next button click
+        }
+      };
+    }
+    
+    const text = document.createElement('span');
+    text.className = 'opt-text';
+    text.textContent = option;
+    
+    label.appendChild(input);
+    label.appendChild(text);
+    label.setAttribute('name', 'answer-' + questionIndex);
+    
+    // Check if this option should be marked as selected
+    if (isMulti) {
+      const savedAnswers = currentAnswers || [];
+      if (savedAnswers.includes(option)) {
+        label.classList.add('selected');
+      }
+    } else {
+      if (option === currentAnswers) {
+        label.classList.add('selected');
+      }
+    }
+    
+    container.appendChild(label);
+  });
+}
+
+function renderDragDrop(question, container, questionIndex) {
+  const currentState = appState.answers[questionIndex] || {};
+  
+  // Calculate which items are currently placed (in any zone)
+  const placedItemIds = new Set();
+  Object.keys(currentState).forEach(zoneId => {
+    if (Array.isArray(currentState[zoneId])) {
+      currentState[zoneId].forEach(itemId => placedItemIds.add(itemId));
+    }
+  });
+  
+  // Main wrapper with 2 columns with larger gap
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 16px; align-items: stretch;';
+  
+  // LEFT COLUMN: Draggable items
+  const leftColumn = document.createElement('div');
+  leftColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
+  
+  const leftTitle = document.createElement('div');
+  leftTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
+  leftTitle.textContent = 'Available Options';
+  leftColumn.appendChild(leftTitle);
+  
+  const itemsDiv = document.createElement('div');
+  itemsDiv.style.cssText = 'display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #f7f9fc; border: 2px solid var(--border); border-radius: 8px; flex: 1; justify-content: flex-start;';
+  itemsDiv.id = 'items-' + questionIndex;
+  
+  // Add ondrop to available options container so items can be dragged back
+  itemsDiv.ondrop = (e) => {
+    e.preventDefault();
+    const itemId = e.dataTransfer.getData('itemId');
+    const fromZone = e.dataTransfer.getData('fromZone');
+    
+    // Remove from zone if being dragged back from a zone
+    if (fromZone && fromZone !== 'items') {
+      if (!appState.answers[questionIndex]) {
+        appState.answers[questionIndex] = {};
+      }
+      
+      if (appState.answers[questionIndex][fromZone]) {
+        appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
+      }
+      
+      loadQuestion(questionIndex);
+    }
+  };
+  
+  itemsDiv.ondragover = (e) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    itemsDiv.style.backgroundColor = '#e3f2fd';
+    itemsDiv.style.borderColor = '#0f2540';
+  };
+  
+  itemsDiv.ondragleave = () => {
+    itemsDiv.style.backgroundColor = '#f7f9fc';
+    itemsDiv.style.borderColor = '#dde2e8';
+  };
+  
+  question.items.forEach(item => {
+    // Only show items that haven't been placed yet
+    if (!placedItemIds.has(item.id)) {
+      const chip = document.createElement('div');
+      chip.draggable = true;
+      chip.id = 'item-' + item.id;
+      chip.className = 'drag-item';
+      chip.style.cssText = 'padding: 14px 16px; background: var(--navy); color: #fff; border-radius: 6px; cursor: grab; text-align: center; font-size: 13px; font-weight: 600; transition: all 0.2s; user-select: none; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;';
+      chip.textContent = item.label;
+      chip.ondragstart = (e) => {
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('itemId', item.id);
+        e.dataTransfer.setData('fromZone', 'items');
+        chip.style.opacity = '0.6';
+      };
+      chip.ondragend = () => {
+        chip.style.opacity = '1';
+      };
+      chip.onmouseenter = () => {
+        chip.style.cursor = 'grab';
+        chip.style.transform = 'scale(1.03)';
+        chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+      };
+      chip.onmouseleave = () => {
+        chip.style.transform = 'scale(1)';
+        chip.style.boxShadow = 'none';
+      };
+      itemsDiv.appendChild(chip);
+    }
+  });
+  
+  leftColumn.appendChild(itemsDiv);
+  wrapper.appendChild(leftColumn);
+  
+  // RIGHT COLUMN: Drop zones
+  const rightColumn = document.createElement('div');
+  rightColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
+  
+  const rightTitle = document.createElement('div');
+  rightTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
+  rightTitle.textContent = 'Match To';
+  rightColumn.appendChild(rightTitle);
+  
+  // Drop zones - calculate equal height
+  const zonesContainer = document.createElement('div');
+  zonesContainer.style.cssText = 'display: flex; flex-direction: column; gap: 12px; flex: 1;';
+  
+  question.dropZones.forEach((zone, zoneIdx) => {
+    const zoneDiv = document.createElement('div');
+    zoneDiv.style.cssText = 'padding: 14px; background: #f7f9fc; border: 2px dashed var(--border); border-radius: 8px; flex: 1; min-height: 80px; transition: all 0.2s; display: flex; flex-direction: column;';
+    zoneDiv.id = 'zone-' + zone.id;
+    
+    const label = document.createElement('div');
+    label.style.cssText = 'font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.5px;';
+    label.textContent = zone.label;
+    zoneDiv.appendChild(label);
+    
+    const itemsInZone = document.createElement('div');
+    itemsInZone.id = 'zone-items-' + zone.id;
+    itemsInZone.style.cssText = 'display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;';
+    
+    // Track which items are in this zone (with order)
+    if (currentState[zone.id]) {
+      currentState[zone.id].forEach((itemId, index) => {
+        const item = question.items.find(i => i.id === itemId);
+        if (item) {
+          addPlacedItemChip(item, itemId, zone, questionIndex, index, currentState[zone.id].length, itemsInZone);
+        }
+      });
+    }
+    
+    zoneDiv.appendChild(itemsInZone);
+    
+    zoneDiv.ondrop = (e) => {
+      e.preventDefault();
+      const itemId = e.dataTransfer.getData('itemId');
+      const fromZone = e.dataTransfer.getData('fromZone');
+      
+      if (!appState.answers[questionIndex]) {
+        appState.answers[questionIndex] = {};
+      }
+      
+      // Remove from previous zone if moving between zones
+      if (fromZone && fromZone !== 'items') {
+        if (appState.answers[questionIndex][fromZone]) {
+          appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
+        }
+      }
+      
+      // Initialize zone if needed
+      if (!appState.answers[questionIndex][zone.id]) {
+        appState.answers[questionIndex][zone.id] = [];
+      }
+      
+      // Add to zone - check if at capacity (typically 1 item per zone in matching)
+      // Get max items allowed for this zone (check question structure)
+      const maxItems = zone.correctItems ? zone.correctItems.length : 1;
+      
+      // If zone is at capacity, remove the first (oldest) item
+      if (appState.answers[questionIndex][zone.id].length >= maxItems) {
+        appState.answers[questionIndex][zone.id].shift();
+      }
+      
+      // Add new item if not already there
+      if (!appState.answers[questionIndex][zone.id].includes(itemId)) {
+        appState.answers[questionIndex][zone.id].push(itemId);
+      }
+      
+      loadQuestion(questionIndex);
+    };
+    
+    zoneDiv.ondragover = (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      zoneDiv.style.backgroundColor = '#e8f5e9';
+      zoneDiv.style.borderColor = '#1b7a3d';
+    };
+    
+    zoneDiv.ondragleave = () => {
+      zoneDiv.style.backgroundColor = '#f7f9fc';
+      zoneDiv.style.borderColor = '#dde2e8';
+    };
+    
+    zonesContainer.appendChild(zoneDiv);
+  });
+  
+  rightColumn.appendChild(zonesContainer);
+  wrapper.appendChild(rightColumn);
+  container.appendChild(wrapper);
+}
+
+// Helper function to create placed item chip with click-to-remove
+function addPlacedItemChip(item, itemId, zone, questionIndex, itemIndex, totalInZone, container) {
+  const chip = document.createElement('div');
+  chip.draggable = true;
+  chip.id = 'item-placed-' + itemId + '-' + zone.id;
+  chip.style.cssText = 'padding: 12px 16px; background: var(--green); color: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.2s; user-select: none; position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between;';
+  chip.textContent = item.label + ' ✕';
+  chip.title = 'Click to remove or drag back to Available Options';
+  
+  // Drag support - can drag back to left column
+  chip.ondragstart = (e) => {
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('itemId', itemId);
+    e.dataTransfer.setData('fromZone', zone.id);
+    chip.style.opacity = '0.6';
+  };
+  
+  chip.ondragend = () => {
+    chip.style.opacity = '1';
+  };
+  
+  // Hover effects
+  chip.onmouseenter = () => {
+    chip.style.transform = 'scale(1.02)';
+    chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
+    chip.style.background = '#157a3a';
+  };
+  
+  chip.onmouseleave = () => {
+    chip.style.transform = 'scale(1)';
+    chip.style.boxShadow = 'none';
+    chip.style.background = 'var(--green)';
+  };
+  
+  // Click to remove
+  chip.onclick = (e) => {
+    e.preventDefault();
+    if (!appState.answers[questionIndex][zone.id]) return;
+    
+    // Find and remove this item from zone
+    const index = appState.answers[questionIndex][zone.id].indexOf(itemId);
+    if (index > -1) {
+      appState.answers[questionIndex][zone.id].splice(index, 1);
+      loadQuestion(questionIndex);
+    }
+  };
+  
+  container.appendChild(chip);
+}
+
+// Navigation
+function prevQuestion() {
+  const currentQuestion = appState.questions[appState.currentQuestionIndex];
+  const isAnswered = appState.answers[appState.currentQuestionIndex] !== undefined;
+  
+  if (!isAnswered) {
+    // Auto-flag unanswered questions
+    appState.flagged.add(appState.currentQuestionIndex);
+    appState.autoFlagged.add(appState.currentQuestionIndex);
+  } else if (currentQuestion.type === 'drag_drop') {
+    // For drag-drop: only validate (lock) if answer is 100% correct
+    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
+    if (isCorrect) {
+      // Mark as validated so navigator shows green and question locks
+      appState.validatedDragDrops.add(appState.currentQuestionIndex);
+    } else {
+      // Incomplete/incorrect drag-drop - auto-flag for review
+      appState.flagged.add(appState.currentQuestionIndex);
+      appState.autoFlagged.add(appState.currentQuestionIndex);
+    }
+  }
+  
+  saveExamState();
+  
+  if (appState.currentQuestionIndex > 0) {
+    loadQuestion(appState.currentQuestionIndex - 1);
+  }
+}
+
+function nextQuestion() {
+  const currentQuestion = appState.questions[appState.currentQuestionIndex];
+  const isAnswered = appState.answers[appState.currentQuestionIndex] !== undefined;
+  
+  console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: answered=${isAnswered}, type=${currentQuestion.type}`);
+  
+  if (!isAnswered) {
+    // Auto-flag unanswered questions
+    appState.flagged.add(appState.currentQuestionIndex);
+    appState.autoFlagged.add(appState.currentQuestionIndex);
+    console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: AUTO-FLAGGED (unanswered)`);
+  } else if (currentQuestion.type === 'drag_drop') {
+    // For drag-drop: only validate (lock) if answer is 100% correct
+    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
+    if (isCorrect) {
+      // Mark as validated so navigator shows green and question locks
+      appState.validatedDragDrops.add(appState.currentQuestionIndex);
+      console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: VALIDATED (drag-drop correct)`);
+    } else {
+      // Incomplete/incorrect drag-drop - auto-flag for review
+      appState.flagged.add(appState.currentQuestionIndex);
+      appState.autoFlagged.add(appState.currentQuestionIndex);
+      console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: AUTO-FLAGGED (drag-drop incorrect)`);
+    }
+  } else {
+    console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: ANSWERED (will validate on updateNavigator)`);
+  }
+  
+  saveExamState();
+  
+  if (appState.currentQuestionIndex < appState.questions.length - 1) {
+    loadQuestion(appState.currentQuestionIndex + 1);
+  }
+}
+
+function jumpToQuestion(index) {
+  // Check if question is answered but not flagged - if so, prevent navigation
+  const isAnswered = appState.answers[index] !== undefined;
+  const isFlagged = appState.flagged.has(index);
+  
+  if (isAnswered && !isFlagged) {
+    // Question is answered and not flagged - locked, cannot navigate
+    // Silently prevent navigation, the disabled cursor feedback is enough
+    return;
+  }
+  
+  loadQuestion(index);
+  updateNavigator(); // Update navigator when jumping to a question
+}
+
+// Flag question
+function toggleFlag() {
+  const idx = appState.currentQuestionIndex;
+  if (appState.flagged.has(idx)) {
+    appState.flagged.delete(idx);
+  } else {
+    appState.flagged.add(idx);
+  }
+  updateNavigator();
+  saveExamState();
+  document.getElementById('btnFlag').classList.toggle('active');
+}
+
+// Timer
+function startTimer() {
+  clearInterval(appState.timerInterval);
+  document.getElementById('timerDisplay').classList.remove('hidden');
+  
+  appState.timerInterval = setInterval(() => {
+    appState.timeRemaining--;
+    updateTimerDisplay();
+    
+    if (appState.timeRemaining <= 0) {
+      clearInterval(appState.timerInterval);
+      submitExam();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const mins = Math.floor(appState.timeRemaining / 60);
+  const secs = appState.timeRemaining % 60;
+  const display = String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+  document.getElementById('timerDisplay').textContent = display;
+  
+  if (appState.timeRemaining <= 300) { // 5 min warning
+    document.getElementById('timerDisplay').classList.add('warn');
+  }
+}
+
+// Check answer correctness
+function checkAnswerCorrect(question, userAnswer) {
+  if (userAnswer === null || userAnswer === undefined) {
+    return false;
+  }
+  
+  if (question.type === 'mc') {
+    // userAnswer is now the option text (string), not index
+    const correctOptions = question.correctAnswer; // Array of text
+    const isCorrect = correctOptions.includes(userAnswer);
+    console.log(`[checkAnswerCorrect] MC: user="${userAnswer}", correct="${correctOptions[0]}" -> ${isCorrect}`);
+    return isCorrect;
+  } else if (question.type === 'multi') {
+    // userAnswer is now array of option texts (strings), not indices
+    if (!Array.isArray(userAnswer)) {
+      console.log(`[checkAnswerCorrect] MULTI: userAnswer not array, returning false`);
+      return false;
+    }
+    const correctOptions = question.correctAnswer.slice().sort();
+    const userSelected = userAnswer.slice().sort();
+    const isCorrect = JSON.stringify(correctOptions) === JSON.stringify(userSelected);
+    console.log(`[checkAnswerCorrect] MULTI: user=[${userSelected}], correct=[${correctOptions}] -> ${isCorrect}`);
+    return isCorrect;
+  } else if (question.type === 'drag_drop') {
+    for (let zone of question.dropZones) {
+      const placed = userAnswer[zone.id] || [];
+      const correct = zone.correctItems;
+      // Sort both arrays to compare regardless of order
+      if (JSON.stringify(placed.sort()) !== JSON.stringify(correct.sort())) {
+        console.log(`[checkAnswerCorrect] DRAG_DROP: zone ${zone.id} mismatch`);
+        return false;
+      }
+    }
+    console.log(`[checkAnswerCorrect] DRAG_DROP: correct`);
+    return true;
+  }
+  
+  console.log(`[checkAnswerCorrect] Unknown type: ${question.type}`);
+  return false;
+}
+
+// Submit exam
+function submitExam() {
+  clearInterval(appState.timerInterval);
+  
+  // Calculate results
+  let correct = 0;
+  let incorrect = 0;
+  let unanswered = 0;
+  
+  appState.questions.forEach((q, idx) => {
+    if (appState.answers[idx] === undefined) {
+      unanswered++;
+    } else if (checkAnswerCorrect(q, appState.answers[idx])) {
+      correct++;
+    } else {
+      incorrect++;
+    }
+  });
+  
+  // Calculate score
+  const rawScore = (correct / appState.questions.length) * 100;
+  const exam = window.questionBank.exams[appState.examCode];
+  const scaledScore = Math.round((rawScore / 100) * (exam.maxScore - exam.minScore) + exam.minScore);
+  const passed = scaledScore >= exam.passingScore;
+  
+  // Store results data
+  const examResults = {
+    correct: correct,
+    incorrect: incorrect,
+    unanswered: unanswered,
+    scaledScore: scaledScore,
+    passingScore: exam.passingScore,
+    passed: passed,
+    examCode: appState.examCode,
+    questions: appState.questions,
+    answers: appState.answers
+  };
+  
+  window.examResults = examResults;
+  
+  // Save to localStorage
+  localStorage.setItem('aplus_exam_results', JSON.stringify({
+    correct: correct,
+    incorrect: incorrect,
+    unanswered: unanswered,
+    scaledScore: scaledScore,
+    passingScore: exam.passingScore,
+    passed: passed,
+    examCode: appState.examCode
+  }));
+  
+  // Show completion modal first
+  showCompletionModal();
+}
+
+// Show completion modal
+function showCompletionModal() {
+  const modal = document.getElementById('completionModal');
+  modal.classList.remove('hidden');
+  modal.style.display = 'flex';
+}
+
+// Display exam results on the results page
+function displayExamResults(results) {
+  document.getElementById('scaledScore').textContent = results.scaledScore;
+  document.getElementById('passingScore').textContent = results.passingScore;
+  document.getElementById('rCorrect').textContent = results.correct;
+  document.getElementById('rIncorrect').textContent = results.incorrect;
+  document.getElementById('rUnanswered').textContent = results.unanswered;
+  
+  const passFail = document.getElementById('passFail');
+  passFail.textContent = results.passed ? 'PASS' : 'FAIL';
+  passFail.className = 'pass-fail ' + (results.passed ? 'pass' : 'fail');
+  
+  // Build review list
+  buildReviewList();
+}
+
+// Close completion modal and show results
+function closeCompletionModal() {
+  const modal = document.getElementById('completionModal');
+  modal.classList.add('hidden');
+  modal.style.display = 'none';
+  
+  // Now show results screen with calculated data
+  document.getElementById('screenExam').classList.add('hidden');
+  document.getElementById('screenResults').classList.remove('hidden');
+  
+  // Use stored results data
+  const results = window.examResults;
+  displayExamResults(results);
+}
+
+// Build review list with pagination
+let reviewPaginationState = {
+  currentPage: 0,
+  itemsPerPage: 10,
+  totalItems: 0,
+  currentFilter: 'correct'  // Track current filter
+};
+
+function buildReviewList() {
+  const reviewList = document.getElementById('reviewList');
+  reviewList.innerHTML = '';
+  
+  reviewPaginationState.totalItems = appState.questions.length;
+  reviewPaginationState.currentPage = 0;
+  reviewPaginationState.currentFilter = 'correct';
+  
+  // Update visual state to show 'correct' as active
+  document.getElementById('statCorrect').classList.add('active');
+  document.getElementById('statIncorrect').classList.remove('active');
+  document.getElementById('statUnanswered').classList.remove('active');
+  
+  // Count questions by type
+  let correctCount = 0, incorrectCount = 0, unansweredCount = 0;
+  appState.questions.forEach((q, idx) => {
+    const isAnswered = appState.answers[idx] !== undefined;
+    if (!isAnswered) {
+      unansweredCount++;
+    } else if (checkAnswerCorrect(q, appState.answers[idx])) {
+      correctCount++;
+    } else {
+      incorrectCount++;
+    }
+  });
+  
+  // All answered message is now shown in completion modal
+  
+  const totalPages = Math.ceil(reviewPaginationState.totalItems / reviewPaginationState.itemsPerPage);
+  
+  if (totalPages > 1) {
+    showPaginationControls(totalPages);
+  } else {
+    document.getElementById('paginationControls').style.display = 'none';
+  }
+  
+  renderReviewPage();
+}
+
+// Filter review by type and render
+function filterReview(type) {
+  reviewPaginationState.currentFilter = type;
+  reviewPaginationState.currentPage = 0;
+  
+  // Update active states
+  document.getElementById('statCorrect').classList.toggle('active', type === 'correct');
+  document.getElementById('statIncorrect').classList.toggle('active', type === 'incorrect');
+  document.getElementById('statUnanswered').classList.toggle('active', type === 'unanswered');
+  
+  renderReviewPage();
+}
+
+function renderReviewPage() {
+  const reviewList = document.getElementById('reviewList');
+  reviewList.innerHTML = '';
+  
+  // Filter questions by type
+  const filteredIndices = [];
+  appState.questions.forEach((q, idx) => {
+    const answer = appState.answers[idx];
+    const isCorrect = checkAnswerCorrect(q, answer);
+    const isUnanswered = answer === undefined;
+    
+    if (reviewPaginationState.currentFilter === 'correct' && isCorrect && !isUnanswered) {
+      filteredIndices.push(idx);
+    } else if (reviewPaginationState.currentFilter === 'incorrect' && !isCorrect && !isUnanswered) {
+      filteredIndices.push(idx);
+    } else if (reviewPaginationState.currentFilter === 'unanswered' && isUnanswered) {
+      filteredIndices.push(idx);
+    }
+  });
+  
+  // Check if filter has no results
+  if (filteredIndices.length === 0) {
+    const emptyMsg = document.createElement('div');
+    emptyMsg.style.cssText = 'text-align: center; padding: 40px 20px; color: var(--muted);';
+    emptyMsg.innerHTML = '<div style="font-size: 14px;">No ' + reviewPaginationState.currentFilter + ' questions to display</div>';
+    reviewList.appendChild(emptyMsg);
+    return;
+  }
+  
+  const start = reviewPaginationState.currentPage * reviewPaginationState.itemsPerPage;
+  const end = Math.min(start + reviewPaginationState.itemsPerPage, filteredIndices.length);
+  
+  for (let i = start; i < end; i++) {
+    const idx = filteredIndices[i];
+    const q = appState.questions[idx];
+    const answer = appState.answers[idx];
+    const isCorrect = checkAnswerCorrect(q, answer);
+    const isUnanswered = answer === undefined;
+    
+    const item = document.createElement('div');
+    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + (isUnanswered ? 'var(--muted)' : isCorrect ? 'var(--green)' : 'var(--red)') + '; border-radius: 8px; padding: 16px; margin-bottom: 12px;';
+    
+    const header = document.createElement('div');
+    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 8px;';
+    header.textContent = 'Q' + (idx + 1) + ' • ' + q.domain;
+    
+    const stem = document.createElement('div');
+    stem.style.cssText = 'font-weight: 600; margin-bottom: 10px; font-size: 14px;';
+    stem.textContent = q.stem;
+    
+    // User answer display
+    const answerDiv = document.createElement('div');
+    answerDiv.className = 'review-item-answer';
+    answerDiv.innerHTML = '<strong>Your Answer:</strong> ' + formatUserAnswer(q, answer);
+    
+    // Correct answer display
+    const correctDiv = document.createElement('div');
+    correctDiv.className = 'review-item-answer';
+    correctDiv.innerHTML = '<strong>Correct Answer:</strong> ' + formatCorrectAnswer(q);
+    
+    // Explanation
+    const explanation = document.createElement('div');
+    explanation.style.cssText = 'font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px;';
+    explanation.innerHTML = '<strong>Explanation:</strong> ' + q.explanation;
+    
+    item.appendChild(header);
+    item.appendChild(stem);
+    item.appendChild(answerDiv);
+    item.appendChild(correctDiv);
+    item.appendChild(explanation);
+    reviewList.appendChild(item);
+  }
+  
+  // Update pagination for filtered results
+  const totalFilteredPages = Math.ceil(filteredIndices.length / reviewPaginationState.itemsPerPage);
+  if (totalFilteredPages > 1) {
+    showPaginationControls(totalFilteredPages);
+  } else {
+    document.getElementById('paginationControls').style.display = 'none';
+  }
+}
+
+function formatUserAnswer(question, answer) {
+  if (answer === undefined) {
+    return '<em style="color: var(--red);">Not answered</em>';
+  }
+  
+  if (question.type === 'mc') {
+    // answer is now stored as TEXT (string), not index
+    return answer || '<em>No answer selected</em>';
+  } else if (question.type === 'multi') {
+    // answer is now stored as array of TEXT strings
+    if (Array.isArray(answer)) {
+      return answer.join(', ') || '<em>No answer selected</em>';
+    }
+    return '<em>No answer selected</em>';
+  } else if (question.type === 'drag_drop') {
+    let answerText = '';
+    question.dropZones.forEach(zone => {
+      const placed = answer[zone.id] || [];
+      if (placed.length > 0) {
+        const items = placed.map(itemId => {
+          const item = question.items.find(i => i.id === itemId);
+          return item ? item.label : itemId;
+        }).join(', ');
+        answerText += '<div>' + zone.label + ': ' + items + '</div>';
+      } else {
+        answerText += '<div>' + zone.label + ': <em style="color: #999;">empty</em></div>';
+      }
+    });
+    return answerText || '<em>No items placed</em>';
+  }
+  return 'N/A';
+}
+
+function formatCorrectAnswer(question) {
+  if (question.type === 'mc') {
+    // Check if correctAnswer is array (new format) or index (old format)
+    if (Array.isArray(question.correctAnswer)) {
+      return question.correctAnswer[0]; // text-based
+    } else if (typeof question.correctAnswer === 'number') {
+      return question.options[question.correctAnswer]; // index-based (legacy)
+    } else if (typeof question.correctAnswer === 'string') {
+      return question.correctAnswer; // direct string
+    }
+  } else if (question.type === 'multi') {
+    // Check if correctAnswers or correctAnswer
+    const correctAnswers = question.correctAnswers || question.correctAnswer;
+    if (Array.isArray(correctAnswers) && correctAnswers.length > 0) {
+      if (typeof correctAnswers[0] === 'number') {
+        return correctAnswers.map(idx => question.options[idx]).join(', ');
+      } else {
+        return correctAnswers.join(', ');
+      }
+    }
+  } else if (question.type === 'drag_drop') {
+    let answerText = '';
+    question.dropZones.forEach(zone => {
+      const items = zone.correctItems.map(itemId => {
+        const item = question.items.find(i => i.id === itemId);
+        return item ? item.label : itemId;
+      }).join(', ');
+      answerText += '<div>' + zone.label + ': ' + items + '</div>';
+    });
+    return answerText;
+  }
+  return 'N/A';
+}
+
+function showPaginationControls(totalPages) {
+  const controls = document.getElementById('paginationControls');
+  controls.style.display = 'flex';
+  controls.innerHTML = '';
+  
+  // Previous button
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'pagination-btn';
+  prevBtn.textContent = '← Previous';
+  prevBtn.disabled = reviewPaginationState.currentPage === 0;
+  prevBtn.onclick = () => {
+    if (reviewPaginationState.currentPage > 0) {
+      reviewPaginationState.currentPage--;
+      renderReviewPage();
+      updatePaginationButtons(totalPages);
+      document.getElementById('reviewList').scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  controls.appendChild(prevBtn);
+  
+  // Page buttons
+  for (let i = 0; i < totalPages; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'pagination-btn' + (i === reviewPaginationState.currentPage ? ' active' : '');
+    btn.textContent = i + 1;
+    btn.onclick = () => {
+      reviewPaginationState.currentPage = i;
+      renderReviewPage();
+      updatePaginationButtons(totalPages);
+      document.getElementById('reviewList').scrollIntoView({ behavior: 'smooth' });
+    };
+    controls.appendChild(btn);
+  }
+  
+  // Next button
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'pagination-btn';
+  nextBtn.textContent = 'Next →';
+  nextBtn.disabled = reviewPaginationState.currentPage === totalPages - 1;
+  nextBtn.onclick = () => {
+    if (reviewPaginationState.currentPage < totalPages - 1) {
+      reviewPaginationState.currentPage++;
+      renderReviewPage();
+      updatePaginationButtons(totalPages);
+      document.getElementById('reviewList').scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  controls.appendChild(nextBtn);
+}
+
+function updatePaginationButtons(totalPages) {
+  const controls = document.getElementById('paginationControls');
+  const buttons = controls.querySelectorAll('.pagination-btn');
+  
+  buttons[0].disabled = reviewPaginationState.currentPage === 0;
+  buttons[buttons.length - 1].disabled = reviewPaginationState.currentPage === totalPages - 1;
+  
+  for (let i = 1; i < buttons.length - 1; i++) {
+    buttons[i].classList.toggle('active', i - 1 === reviewPaginationState.currentPage);
+  }
+}
+
+// Navigation
+function saveAndExit() {
+  if (confirm('Save progress and exit exam?')) {
+    backToMenu();
+  }
+}
+
+function exitWithoutSave() {
+  if (confirm('Exit without saving? Your progress will be lost.')) {
+    // Clear saved exam state before going back
+    localStorage.removeItem('aplus_exam_state');
+    backToMenu();
+  }
+}
+
+function backToMenu() {
+  clearInterval(appState.timerInterval);
+  document.getElementById('screenExam').classList.add('hidden');
+  document.getElementById('screenResults').classList.add('hidden');
+  document.getElementById('screenIntro').classList.remove('hidden');
+  document.getElementById('timerDisplay').classList.add('hidden');
+  document.getElementById('topbarExamName').textContent = 'Select an exam';
+  
+  // Clear saved exam state and results
+  localStorage.removeItem('aplus_exam_state');
+  localStorage.removeItem('aplus_exam_results');
+}
+
+</script>
+
+<footer>
+  © <span id="year"></span> CompTIA A+ Practice Exam Simulator | Designed and created by Julian Mercado
+</footer>
+
+</body>
+</html>
