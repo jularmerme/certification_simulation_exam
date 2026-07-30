@@ -4,7 +4,7 @@
       "name": "CompTIA A+ Core 1",
       "code": "220-1201",
       "description": "Entry-level certification covering mobile devices, networking, hardware, virtualization, and troubleshooting.",
-      "questions": 170,
+      "questions": 217,
       "timeLimit": 90,
       "passingScore": 675,
       "maxScore": 900,
@@ -3223,6 +3223,839 @@
           ],
           "correctAnswer": [
             "MAC address"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-010",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "LDAP is an example of:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Data encryption protocol",
+            "Address resolution protocol",
+            "Directory access protocol",
+            "File exchange protocol"
+          ],
+          "correctAnswer": [
+            "Directory access protocol"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-014",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "TCP is a connection-oriented network protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-016",
+          "domain": "2.0 Security",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which part of the AAA security architecture ensures that users are who they claim to be, typically through credentials like passwords or biometrics?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Auditing",
+            "Authentication",
+            "Authorization",
+            "Accounting"
+          ],
+          "correctAnswer": [
+            "Authentication"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-022",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of S.M.A.R.T. in a storage media drive?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Automatic correction of detected drive errors",
+            "Real-time monitoring and regulation of power consumption",
+            "Prediction and reporting of impending drive failures",
+            "Optimization of drive read/write speeds"
+          ],
+          "correctAnswer": [
+            "Prediction and reporting of impending drive failures"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-024",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "IMAP is used for:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Serving web pages",
+            "Translating domain names into IP addresses",
+            "Retrieving email messages from a mail server",
+            "Sending email messages"
+          ],
+          "correctAnswer": [
+            "Retrieving email messages from a mail server"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-028",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the function of FTP?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Email service",
+            "Directory access",
+            "Serving of web pages",
+            "File exchange"
+          ],
+          "correctAnswer": [
+            "File exchange"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-032",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "PCIe is a high-speed, serial expansion bus designed as a replacement for PCI, PCI-X, and AGP standards.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-042",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "APIPA allows a Windows host to self-configure an IPv4 address and subnet mask when a DHCP server is unavailable. APIPA uses the address block range from 169.254.0.0 to 169.254.255.255. APIPA-assigned addresses are valid only for communication within the network segment to which the host is connected. A host with an APIPA-assigned address cannot connect to the Internet.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-043",
+          "domain": "2.0 Security",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "In the AAA security architecture, the process of tracking user activity and resource usage for reporting or billing is called:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Authentication",
+            "Auditing",
+            "Accounting",
+            "Authorization"
+          ],
+          "correctAnswer": [
+            "Accounting"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-049",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which cloud service model would provide the best solution for a web developer intending to create a web app?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "XaaS",
+            "SaaS",
+            "PaaS",
+            "IaaS"
+          ],
+          "correctAnswer": [
+            "PaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-068",
+          "domain": "2.0 Security",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which part of the AAA security architecture ensures that users are who they claim to be, typically through credentials like passwords or biometrics?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Auditing",
+            "Authentication",
+            "Authorization",
+            "Accounting"
+          ],
+          "correctAnswer": [
+            "Authentication"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-069",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "An eSIM is a modern alternative to the traditional SIM card. Unlike traditional SIMs, an eSIM is an embedded chip built into the device (not a physical card).",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-077",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the function of FTP?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Email service",
+            "Directory access",
+            "Serving of web pages",
+            "File exchange"
+          ],
+          "correctAnswer": [
+            "File exchange"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-079",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of S.M.A.R.T. in a storage media drive?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Automatic correction of detected drive errors",
+            "Real-time monitoring and regulation of power consumption",
+            "Prediction and reporting of impending drive failures",
+            "Optimization of drive read/write speeds"
+          ],
+          "correctAnswer": [
+            "Prediction and reporting of impending drive failures"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-081",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "APIPA allows a Windows host to self-configure an IPv4 address and subnet mask when a DHCP server is unavailable. APIPA uses the address block range from 169.254.0.0 to 169.254.255.255. APIPA-assigned addresses are valid only for communication within the network segment to which the host is connected. A host with an APIPA-assigned address cannot connect to the Internet.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-084",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What is a PUP? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Computer program installed with user's consent, but often lacking fully informed agreement",
+            "Software downloaded and installed entirely without user knowledge or consent",
+            "Free utility software that is legitimately bundled as a feature of a paid application",
+            "Computer program not explicitly classified as malware by AV software",
+            "Application that may degrade system performance, compromise privacy, or inject unsolicited ads",
+            "Malicious code that is explicitly classified and blocked as malware by AV software"
+          ],
+          "correctAnswer": [
+            "Computer program installed with user's consent, but often lacking fully informed agreement",
+            "Application that may degrade system performance, compromise privacy, or inject unsolicited ads",
+            "Computer program not explicitly classified as malware by AV software"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-089",
+          "domain": "4.0 Virtualization",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which cloud computing service model allows developers to run individual pieces of code in response to events without managing servers or underlying infrastructure?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "SaaS",
+            "PaaS",
+            "IaaS",
+            "FaaS"
+          ],
+          "correctAnswer": [
+            "FaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-094",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following combinations uses two different authentication factors and therefore qualifies as MFA?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Smart card and mobile digital key",
+            "Password and biometric scan",
+            "Username and pattern lock",
+            "Retina scan and fingerprint"
+          ],
+          "correctAnswer": [
+            "Password and biometric scan"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-095",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "TCP is a connection-oriented protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-099",
+          "domain": "2.0 Security",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "In the AAA security architecture, the process of tracking user activity and resource usage for reporting or billing is called:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Authentication",
+            "Auditing",
+            "Accounting",
+            "Authorization"
+          ],
+          "correctAnswer": [
+            "Accounting"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-108",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the characteristic features of SMB/CIFS? (Select 2 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Optimized for secure file sharing over the Internet",
+            "Used to provide shared access to files, directories, and devices",
+            "Designed for Linux-based environments",
+            "Intended for voice and multimedia communication over IP networks",
+            "Primarily used in Microsoft Windows environments"
+          ],
+          "correctAnswer": [
+            "Used to provide shared access to files, directories, and devices",
+            "Primarily used in Microsoft Windows environments"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-109",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below refers to a cloud computing service model in which clients, instead of buying all the hardware and software, purchase computing resources as an outsourced service from suppliers who own and maintain all the necessary equipment and software?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "SaaS",
+            "DaaS",
+            "IaaS",
+            "PaaS"
+          ],
+          "correctAnswer": [
+            "IaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-111",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "The SMTP protocol is used for: (Select 2 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Synchronizing email folders across multiple devices",
+            "Forwarding email between mail servers",
+            "Downloading email to a local client from a remote server",
+            "Routing inbound mail to the correct mailbox",
+            "Sending email from a client to a mail server"
+          ],
+          "correctAnswer": [
+            "Sending email messages",
+            "Transmitting email between mail servers"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-115",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "LDAP is an example of:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Data encryption protocol",
+            "Address resolution protocol",
+            "Directory access protocol",
+            "File exchange protocol"
+          ],
+          "correctAnswer": [
+            "Directory access protocol"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-121",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "UDP is an example of a connectionless protocol. Because UDP does not support three-way handshake while establishing a network connection, it is referred to as unreliable or best-effort protocol. Example applications of UDP include transmission of video and audio streaming data.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-128",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "An eSATA device can be added to a PC by attaching the device directly into an internal slot on the motherboard.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "False"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-132",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "ECC type RAM:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Can only detect errors, but does not have the capability to correct them",
+            "Refers to parity RAM",
+            "Offers better performance in terms of speed when compared to a non-ECC type of RAM",
+            "Can detect and correct errors"
+          ],
+          "correctAnswer": [
+            "Can detect and correct errors"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-136",
+          "domain": "2.0 Security",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "In the AAA security architecture, the process of granting or denying access to resources is known as:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Authorization",
+            "Accounting",
+            "Auditing",
+            "Authentication"
+          ],
+          "correctAnswer": [
+            "Authorization"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-138",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "The DNS TXT record is used for: (Select 2 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Resolving an IP address to a hostname for reverse lookups",
+            "Mapping a domain name to a list of mail servers for that domain",
+            "Specifying the authoritative name servers for a domain",
+            "Providing verification and email security policy information",
+            "Storing arbitrary text-based data associated with a domain"
+          ],
+          "correctAnswer": [
+            "Storing text information associated with a domain",
+            "Email configuration (SPF, DKIM, DMARC)"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-139",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A system administrator needs to execute a PowerShell script on multiple remote Windows workstations without opening a GUI session on each machine. Which protocol should be used?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "PCoIP",
+            "SSH",
+            "WinRM",
+            "Telnet"
+          ],
+          "correctAnswer": [
+            "WinRM"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-140",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which cloud service model would provide the best solution for a web developer intending to create a web app?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "XaaS",
+            "SaaS",
+            "PaaS",
+            "IaaS"
+          ],
+          "correctAnswer": [
+            "PaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-146",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "PCIe is a high-speed, serial expansion bus designed as a replacement for PCI, PCI-X, and AGP standards.",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-151",
+          "domain": "4.0 Virtualization",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following acronyms is used as a catch-all term for virtually any type of IT cloud-based service?",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "AaaS",
+            "FaaS",
+            "XaaS",
+            "WaaS"
+          ],
+          "correctAnswer": [
+            "XaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-155",
+          "domain": "1.0 Acronyms",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "POP3 is used for:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Name resolution",
+            "Sending email messages",
+            "File exchange",
+            "Email retrieval"
+          ],
+          "correctAnswer": [
+            "Email retrieval"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-157",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A cloud computing service model offering remote access to applications based on recurring subscription fee is called:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "PaaS",
+            "SaaS",
+            "IaaS",
+            "DaaS"
+          ],
+          "correctAnswer": [
+            "SaaS"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-178",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the common characteristics and use cases of the BNC connector? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Bayonet-style (twist-and-lock) mechanism",
+            "Twisted-pair copper cabling",
+            "Used in professional A/V, CCTV, and lab/test equipment",
+            "Coaxial cabling",
+            "Used for satellite/cable TV and broadband internet connections",
+            "Threaded (screw-on) locking mechanism"
+          ],
+          "correctAnswer": [
+            "Bayonet-style (twist-and-lock) mechanism",
+            "Used in older coaxial cable installations",
+            "Push-pull connection mechanism"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-180",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the characteristic features of IPS display technology? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "High color accuracy",
+            "Fast response times",
+            "Wide viewing angles",
+            "Low color accuracy",
+            "Consistent color reproduction",
+            "Narrow viewing angles"
+          ],
+          "correctAnswer": [
+            "High color accuracy",
+            "Wide viewing angles",
+            "High contrast ratios"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-183",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the characteristic features of ST fiber-optic connectors? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Small form factor connector type",
+            "Latch-style locking mechanism similar to RJ-45 connectors",
+            "Cylindrical metal connector body",
+            "Bayonet-style twist-and-lock mechanism",
+            "Commonly used in older networks and multimode fiber installations",
+            "Used in high-density modern networks"
+          ],
+          "correctAnswer": [
+            "Bayonet-style twist-and-lock mechanism",
+            "Cylindrical metal connector body",
+            "Commonly used in older networks and multimode fiber installations"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-184",
+          "domain": "3.0 Hardware",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below refer(s) to an ARM-type CPU architecture? (Select all that apply)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Characterized by lowered power consumption",
+            "Typically used in personal computers, laptops, and servers",
+            "Focuses on simplifying the instruction set to enhance processing efficiency",
+            "Employs complex instructions for efficient memory management and backward compatibility",
+            "Commonly used in mobile devices and embedded systems",
+            "Suitable for battery-powered devices"
+          ],
+          "correctAnswer": [
+            "Characterized by lowered power consumption",
+            "Focuses on simplifying the instruction set to enhance processing efficiency",
+            "Commonly used in mobile devices and embedded systems",
+            "Suitable for battery-powered devices"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-187",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "The VA display technology can be characterized by: (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "High contrast ratios",
+            "Low color accuracy",
+            "Deep black levels",
+            "Low contrast ratios",
+            "Slow response times",
+            "Narrow viewing angles"
+          ],
+          "correctAnswer": [
+            "High contrast ratios",
+            "Better viewing angles than TN technology",
+            "Fast response times"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-192",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below refer to the RJ11 connector? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Ethernet network cabling",
+            "Telephone equipment",
+            "Fiber-optic cabling",
+            "Coaxial cabling",
+            "Dial-up networking",
+            "Twisted-pair copper cabling"
+          ],
+          "correctAnswer": [
+            "Modular jack-style connector",
+            "Commonly used for telephone connections",
+            "Has 4 or 6 pins"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-193",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "USB Type-B",
+            "MiniUSB",
+            "USB-C",
+            "MicroUSB",
+            "USB Type-A"
+          ],
+          "correctAnswer": [
+            "USB-C"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-195",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below describe the SC fiber-optic connector? (Select 2 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Latch-style locking mechanism similar to RJ-45 connectors",
+            "Widely used in datacom and telecom applications",
+            "Bayonet-style twist-and-lock mechanism",
+            "Commonly used in older networks and multimode fiber installations",
+            "Push-pull locking mechanism for easy insertion and removal"
+          ],
+          "correctAnswer": [
+            "Push-pull coupling mechanism",
+            "Commonly used in telecommunications"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-197",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the characteristic features of the RJ45 connector? (Select 2 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Fiber-optic cabling",
+            "Coaxial cabling",
+            "Dial-up networking",
+            "Twisted-pair copper cabling",
+            "Telephone equipment",
+            "Ethernet network cabling"
+          ],
+          "correctAnswer": [
+            "Used for Ethernet network cabling",
+            "Standard connector for twisted-pair cabling"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-200",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following characteristics describe the LC fiber-optic connector? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Bayonet-style twist-and-lock mechanism",
+            "Commonly used in older networks and multimode fiber installations",
+            "Small form factor connector type",
+            "Commonly used in high-density network environments like data centers",
+            "Latch-style locking mechanism similar to RJ-45 connectors",
+            "Cylindrical metal connector body"
+          ],
+          "correctAnswer": [
+            "Small form factor connector",
+            "Push-pull locking mechanism",
+            "Commonly used in data centers"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-203",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below can be used to describe the TN display technology? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Low viewing angles",
+            "Fast response times",
+            "Low color quality",
+            "High color quality",
+            "Slow response times",
+            "Wide viewing angles"
+          ],
+          "correctAnswer": [
+            "Low viewing angles",
+            "Fast response times",
+            "Low cost"
+          ]
+        },
+        {
+          "id": "ACR-QUIZ-205",
+          "domain": "1.0 Acronyms",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What are the characteristic features of an OLED display? (Select 3 answers)",
+          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
+          "options": [
+            "Requires a dedicated backlight assembly to illuminate the screen",
+            "Susceptible to image retention and burn-in over time",
+            "Inferior contrast ratio and color representation in comparison to LCDs",
+            "Each pixel serves as its own light source",
+            "Superior contrast ratios and true black levels"
+          ],
+          "correctAnswer": [
+            "Each pixel emits its own light",
+            "No separate backlight needed",
+            "Can display true black by turning off pixels"
           ]
         }
       ]
