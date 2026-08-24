@@ -3608,8 +3608,8 @@
             "Sending email from a client to a mail server"
           ],
           "correctAnswer": [
-            "Sending email messages",
-            "Transmitting email between mail servers"
+            "Forwarding email between mail servers",
+            "Sending email from a client to a mail server"
           ]
         },
         {
@@ -3708,8 +3708,8 @@
             "Storing arbitrary text-based data associated with a domain"
           ],
           "correctAnswer": [
-            "Storing text information associated with a domain",
-            "Email configuration (SPF, DKIM, DMARC)"
+            "Storing arbitrary text-based data associated with a domain",
+            "Providing verification and email security policy information"
           ]
         },
         {
@@ -3829,8 +3829,8 @@
           ],
           "correctAnswer": [
             "Bayonet-style (twist-and-lock) mechanism",
-            "Used in older coaxial cable installations",
-            "Push-pull connection mechanism"
+            "Used in professional A/V, CCTV, and lab/test equipment",
+            "Coaxial cabling"
           ]
         },
         {
@@ -3851,7 +3851,7 @@
           "correctAnswer": [
             "High color accuracy",
             "Wide viewing angles",
-            "High contrast ratios"
+            "Consistent color reproduction"
           ]
         },
         {
@@ -3914,8 +3914,8 @@
           ],
           "correctAnswer": [
             "High contrast ratios",
-            "Better viewing angles than TN technology",
-            "Fast response times"
+            "Deep black levels",
+            "Slow response times"
           ]
         },
         {
@@ -3934,9 +3934,9 @@
             "Twisted-pair copper cabling"
           ],
           "correctAnswer": [
-            "Modular jack-style connector",
-            "Commonly used for telephone connections",
-            "Has 4 or 6 pins"
+            "Telephone equipment",
+            "Dial-up networking",
+            "Twisted-pair copper cabling"
           ]
         },
         {
@@ -3972,8 +3972,8 @@
             "Push-pull locking mechanism for easy insertion and removal"
           ],
           "correctAnswer": [
-            "Push-pull coupling mechanism",
-            "Commonly used in telecommunications"
+            "Push-pull locking mechanism for easy insertion and removal",
+            "Widely used in datacom and telecom applications"
           ]
         },
         {
@@ -3992,8 +3992,8 @@
             "Ethernet network cabling"
           ],
           "correctAnswer": [
-            "Used for Ethernet network cabling",
-            "Standard connector for twisted-pair cabling"
+            "Ethernet network cabling",
+            "Twisted-pair copper cabling"
           ]
         },
         {
@@ -4012,9 +4012,9 @@
             "Cylindrical metal connector body"
           ],
           "correctAnswer": [
-            "Small form factor connector",
-            "Push-pull locking mechanism",
-            "Commonly used in data centers"
+            "Small form factor connector type",
+            "Latch-style locking mechanism similar to RJ-45 connectors",
+            "Commonly used in high-density network environments like data centers"
           ]
         },
         {
@@ -4035,7 +4035,7 @@
           "correctAnswer": [
             "Low viewing angles",
             "Fast response times",
-            "Low cost"
+            "Low color quality"
           ]
         },
         {
@@ -4053,9 +4053,9 @@
             "Superior contrast ratios and true black levels"
           ],
           "correctAnswer": [
-            "Each pixel emits its own light",
-            "No separate backlight needed",
-            "Can display true black by turning off pixels"
+            "Susceptible to image retention and burn-in over time",
+            "Each pixel serves as its own light source",
+            "Superior contrast ratios and true black levels"
           ]
         }
       ]
