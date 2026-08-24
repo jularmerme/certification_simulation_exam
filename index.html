@@ -1261,14 +1261,16 @@ function loadQuestion(index) {
     qStem.parentElement.insertBefore(lockIndicator, qStem);
   }
   
-  // Show hint for multi-select
-  document.getElementById('qHint').classList.toggle('hidden', question.type !== 'multi');
+  // Show hint for multi-select — mirrors the isMulti derivation in renderMultipleChoice
+  const isMultiQuestion = question.type === 'multi' ||
+    (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
+  document.getElementById('qHint').classList.toggle('hidden', !isMultiQuestion);
   
   // Render options based on type
   const optionsContainer = document.getElementById('qOptions');
   optionsContainer.innerHTML = '';
   
-  if (question.type === 'mc' || question.type === 'multi') {
+  if (question.type === 'mc' || question.type === 'multi' || isMultiQuestion) {
     renderMultipleChoice(question, optionsContainer, index);
   } else if (question.type === 'drag_drop') {
     renderDragDrop(question, optionsContainer, index);
@@ -1303,7 +1305,10 @@ function loadQuestion(index) {
 
 // Render multiple choice
 function renderMultipleChoice(question, container, questionIndex) {
-  const isMulti = question.type === 'multi';
+  // Derive isMulti from the type field, with a fallback to check correctAnswer length.
+  // This guards against stale localStorage data where the type field may be missing.
+  const isMulti = question.type === 'multi' ||
+    (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
   const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
   
   // Check if this question is locked (answered but not flagged)
@@ -1775,14 +1780,18 @@ function checkAnswerCorrect(question, userAnswer) {
     return false;
   }
   
-  if (question.type === 'mc') {
-    // userAnswer is now the option text (string), not index
+  // Derive question type defensively (same logic as renderMultipleChoice / loadQuestion)
+  const isMultiType = question.type === 'multi' ||
+    (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
+
+  if (!isMultiType && question.type !== 'drag_drop') {
+    // Single-choice (mc or unknown single-answer type)
     const correctOptions = question.correctAnswer; // Array of text
-    const isCorrect = correctOptions.includes(userAnswer);
-    console.log(`[checkAnswerCorrect] MC: user="${userAnswer}", correct="${correctOptions[0]}" -> ${isCorrect}`);
+    const isCorrect = Array.isArray(correctOptions) ? correctOptions.includes(userAnswer) : correctOptions === userAnswer;
+    console.log(`[checkAnswerCorrect] MC: user="${userAnswer}", correct="${Array.isArray(correctOptions) ? correctOptions[0] : correctOptions}" -> ${isCorrect}`);
     return isCorrect;
-  } else if (question.type === 'multi') {
-    // userAnswer is now array of option texts (strings), not indices
+  } else if (isMultiType) {
+    // Multi-select: userAnswer is array of option texts (strings)
     if (!Array.isArray(userAnswer)) {
       console.log(`[checkAnswerCorrect] MULTI: userAnswer not array, returning false`);
       return false;
