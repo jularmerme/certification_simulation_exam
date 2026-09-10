@@ -2567,7 +2567,7 @@
         {
           "id": "2201201-133",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
           "explanation": "A coaxial cable is composed of a central copper conductor that is surrounded by an insulator, which is then surrounded by a second metallic mesh conductor. The name coaxial is derived from the fact that both of these conductors share a common axis. Twisted-pair cables are twisted around each other to reduce the effects of electromagnetic interference (EMI) and crosstalk. Fiber optic cables have a plastic or glass center (known as the core). Only fiber optic cables are totally immune to electromagnetic interference (EMI) because light pulses, instead of electrical signals, represent the data.",
@@ -2739,7 +2739,7 @@
         {
           "id": "2201201-143",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are characteristics of the 802.11g wireless standard? (Select three.)",
           "explanation": "802.11g wireless networks operate in the 2.4 GHz range, have a maximum bandwidth of 54 Mbps, and are backward compatible with 802.11b networks. 802.11b provides 11 Mbps of bandwidth. 802.11a operates in the 5.75 GHz range. For this reason, 802.11a is not compatible with 802.11b or 802.11g.",
@@ -2794,7 +2794,7 @@
         {
           "id": "2201201-146",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
           "explanation": "The 802.11ac wireless network standard increases bandwidth and communication speeds using the following technologies: MU-MIMO is an enhancement to MIMO that allows multiple users to use the same channel. In addition to adding MU-MIMO, 802.11ac doubled the number of MIMO radio streams from four to eight. Channel bonding combines two non-overlapping 20 MHz channels into a single 40 MHz channel, resulting in slightly more than double the bandwidth. All the other technologies are not used to increase the bandwidth and communication speeds for 801.11ac.",
@@ -2813,7 +2813,7 @@
         {
           "id": "2201201-147",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which IEEE wireless standards specify transmission speeds up to 54 Mbps? (Select two.)",
           "explanation": "Both the 802.11a and the 802.11g wireless standards specify maximum transmission speeds up to 54 Mbps. Bluetooth is a wireless standard that is commonly used to connect peripheral devices and operates at 720 Kbps. The 802.11b wireless standard provides transmission speeds of 11 Mbps. The 802.11ac wireless standard provides transmission speeds of up to 2.6 Gbps.",
@@ -2969,7 +2969,7 @@
         {
           "id": "2201201-156",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
           "explanation": "The 802.11ac wireless network standard increases bandwidth and communication speeds using the following technologies: MU-MIMO is an enhancement to MIMO that allows multiple users to use the same channel. In addition to adding MU-MIMO, 802.11ac doubled the number of MIMO radio streams from four to eight. Channel bonding combines two non-overlapping 20 MHz channels into a single 40 MHz channel, resulting in slightly more than double the bandwidth. All the other technologies are not used to increase the bandwidth and communication speeds for 801.11ac.",
@@ -3022,7 +3022,7 @@
         {
           "id": "2201201-159",
           "domain": "2.0 Networking",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
           "explanation": "A coaxial cable is composed of a central copper conductor that is surrounded by an insulator, which is then surrounded by a second metallic mesh conductor. The name coaxial is derived from the fact that both of these conductors share a common axis. Twisted-pair cables are twisted around each other to reduce the effects of electromagnetic interference (EMI) and crosstalk. Fiber optic cables have a plastic or glass center (known as the core). Only fiber optic cables are totally immune to electromagnetic interference (EMI) because light pulses, instead of electrical signals, represent the data.",
@@ -4079,3 +4079,6 @@
     }
   }
 }
+
+
+
