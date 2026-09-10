@@ -4,7 +4,7 @@
       "name": "CompTIA A+ Core 1",
       "code": "220-1201",
       "description": "Entry-level certification covering mobile devices, networking, hardware, virtualization, and troubleshooting.",
-      "questions": 140,
+      "questions": 200,
       "timeLimit": 90,
       "passingScore": 675,
       "maxScore": 900,
@@ -2736,6 +2736,1086 @@
             "Susceptible to image retention and burn-in over time",
             "Each pixel serves as its own light source",
             "Superior contrast ratios and true black levels"
+          ]
+        },
+        {
+          "id": "1201-PT22-001",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)",
+          "explanation": "Port flapping is caused by physical link instability or configuration mismatch.",
+          "options": [
+            "Mismatched speed and duplex settings",
+            "Outdated device firmware",
+            "Excessive traffic on a network device",
+            "Loose, faulty, or unsupported network cabling",
+            "Incorrect network topology design"
+          ],
+          "correctAnswer": [
+            "Mismatched speed and duplex settings",
+            "Loose, faulty, or unsupported network cabling"
+          ]
+        },
+        {
+          "id": "1201-PT22-002",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which network issues are directly linked to port flapping? (Select 2 answers)",
+          "explanation": "Port flapping causes connectivity interruptions and speed degradation.",
+          "options": [
+            "Intermittent connectivity",
+            "Degraded data transfer speeds",
+            "High network latency",
+            "Permanent loss of connectivity",
+            "Excessive bandwidth usage"
+          ],
+          "correctAnswer": [
+            "Degraded data transfer speeds",
+            "Intermittent connectivity"
+          ]
+        },
+        {
+          "id": "1201-PT22-003",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the recommended first step when troubleshooting port flapping?",
+          "explanation": "Start with physical connections per troubleshooting methodology.",
+          "options": [
+            "Check physical connections",
+            "Restart the device",
+            "Disable all unused physical ports",
+            "Update the device firmware"
+          ],
+          "correctAnswer": [
+            "Check physical connections"
+          ]
+        },
+        {
+          "id": "1201-PT22-004",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What condition may lead to increased latency on a network?",
+          "explanation": "All factors contribute to network latency.",
+          "options": [
+            "Network congestion due to excessive traffic",
+            "Physical distance between sender and receiver",
+            "Wireless interference and signal degradation",
+            "Outdated or inefficient network hardware",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-005",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which solution has no direct impact on decreasing network latency?",
+          "explanation": "VLANs segment traffic but don't reduce latency within segments.",
+          "options": [
+            "Using wired connections instead of wireless",
+            "Reducing network congestion",
+            "Implementing VLANs to segment network traffic",
+            "Reducing physical distance between network devices",
+            "Upgrading hardware and infrastructure"
+          ],
+          "correctAnswer": [
+            "Implementing VLANs to segment network traffic"
+          ]
+        },
+        {
+          "id": "1201-PT22-006",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which type of network cabling is most susceptible to external interference?",
+          "explanation": "UTP lacks shielding and is vulnerable to EMI.",
+          "options": [
+            "UTP",
+            "STP",
+            "Fiber optic",
+            "Coaxial"
+          ],
+          "correctAnswer": [
+            "UTP"
+          ]
+        },
+        {
+          "id": "1201-PT22-007",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which network cabling provides immunity against external interference?",
+          "explanation": "Fiber optic uses light pulses immune to EMI.",
+          "options": [
+            "UTP",
+            "STP",
+            "Fiber optic",
+            "Coaxial"
+          ],
+          "correctAnswer": [
+            "Fiber optic"
+          ]
+        },
+        {
+          "id": "1201-PT22-008",
+          "domain": "4.0 Virtualization and Cloud Computing",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "For wireless client connection, security and encryption settings must match the WAP.",
+          "explanation": "Client and WAP require identical security settings.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-009",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which can result in authentication failure with correct credentials?",
+          "explanation": "All factors prevent successful authentication.",
+          "options": [
+            "Expired user password",
+            "User account locked out",
+            "Disabled or deleted user account",
+            "Time synchronization issues",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-010",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "WAN signal loss logged during internet drops with good local connectivity. Next step?",
+          "explanation": "ISP must investigate WAN connection.",
+          "options": [
+            "Restart the router",
+            "Modify firewall rules on the router",
+            "Run Internet speed test",
+            "Contact the ISP"
+          ],
+          "correctAnswer": [
+            "Contact the ISP"
+          ]
+        },
+        {
+          "id": "1201-PT22-011",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Vertical lines in laser printer output indicate problem with:",
+          "explanation": "Defect on imaging drum creates repeating vertical lines.",
+          "options": [
+            "Imaging drum",
+            "Printer driver",
+            "Fuser unit",
+            "Printhead nozzles"
+          ],
+          "correctAnswer": [
+            "Imaging drum"
+          ]
+        },
+        {
+          "id": "1201-PT22-012",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Vertical lines on inkjet printer output resolved by:",
+          "explanation": "Clogged printheads cause vertical line patterns.",
+          "options": [
+            "Replacing the imaging drum",
+            "Updating printer drivers",
+            "Cleaning printheads",
+            "Replacing the toner cartridge"
+          ],
+          "correctAnswer": [
+            "Cleaning printheads"
+          ]
+        },
+        {
+          "id": "1201-PT22-013",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Garbled characters on printed pages indicate printer data interpretation problems.",
+          "explanation": "Multiple factors cause garbled output.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-014",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely cause of paper jams:",
+          "explanation": "Page orientation doesn't cause jams.",
+          "options": [
+            "Paper path obstructed by foreign objects",
+            "Curled or deformed paper sheets",
+            "Incorrect paper size or type",
+            "High humidity levels affecting paper",
+            "Overloaded paper tray",
+            "Dirty or worn paper pickup rollers",
+            "Incorrect page orientation settings"
+          ],
+          "correctAnswer": [
+            "Incorrect page orientation settings"
+          ]
+        },
+        {
+          "id": "1201-PT22-015",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Not best practices when clearing printer paper jams? (Select 2)",
+          "explanation": "Best practice: Power off and pull gently forward only.",
+          "options": [
+            "Open all access doors and trays for visibility",
+            "Inspect path for torn fragments or debris",
+            "Check for worn or dirty paper pickup rollers",
+            "Apply mild force to pull jammed paper in opposite feed direction",
+            "Keep printer powered on and try another print job",
+            "Power cycle the printer after clearing jam"
+          ],
+          "correctAnswer": [
+            "Apply mild force to pull jammed paper in opposite feed direction",
+            "Keep printer powered on and try another print job"
+          ]
+        },
+        {
+          "id": "1201-PT22-016",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Common cause of faded laser printer output:",
+          "explanation": "Low toner produces faded output.",
+          "options": [
+            "Near-empty ink cartridges",
+            "Dried ink buildup in printhead nozzles",
+            "Low or uneven toner levels",
+            "Misaligned printheads"
+          ],
+          "correctAnswer": [
+            "Low or uneven toner levels"
+          ]
+        },
+        {
+          "id": "1201-PT22-017",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Causes of faded inkjet output? (Select 2)",
+          "explanation": "Low ink and clogged printheads cause fading.",
+          "options": [
+            "Incorrect toner density",
+            "Worn-out drum unit",
+            "Low ink levels",
+            "Insufficient fuser heat",
+            "Clogged printhead nozzles"
+          ],
+          "correctAnswer": [
+            "Low ink levels",
+            "Clogged printhead nozzles"
+          ]
+        },
+        {
+          "id": "1201-PT22-018",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Causes of paper not feeding? (Select all)",
+          "explanation": "Multiple hardware and software factors affect feeding.",
+          "options": [
+            "Overloaded paper tray",
+            "Foreign objects or paper debris in the paper path",
+            "Worn or dirty paper feed rollers",
+            "Corrupted print spooler",
+            "Paper quality or type issues"
+          ],
+          "correctAnswer": [
+            "Overloaded paper tray",
+            "Foreign objects or paper debris in the paper path",
+            "Worn or dirty paper feed rollers",
+            "Paper quality or type issues"
+          ]
+        },
+        {
+          "id": "1201-PT22-019",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Printer pulling multiple sheets - check for:",
+          "explanation": "All factors contribute to multi-sheet feed problems.",
+          "options": [
+            "Paper quality issues",
+            "Worn or faulty separation pad",
+            "Overfilled paper tray",
+            "Worn or dirty pickup rollers",
+            "Humidity affecting paper",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-020",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Documents stuck in print queue - first step:",
+          "explanation": "Restart Print Spooler service to clear queue.",
+          "options": [
+            "Clear all print jobs from the queue",
+            "Verify the network connection status",
+            "Check for paper jams in the printer",
+            "Restart the print spooler service"
+          ],
+          "correctAnswer": [
+            "Restart the print spooler service"
+          ]
+        },
+        {
+          "id": "1201-PT22-021",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Most common causes of speckling on laser printed pages? (Select 3)",
+          "explanation": "Loose particles on drum or paper path cause specks.",
+          "options": [
+            "Leaking toner cartridge",
+            "Paper dust, debris, or excess toner buildup",
+            "Contaminated or faulty imaging drum",
+            "Partially clogged or dirty printhead nozzles",
+            "Defective ink cartridge"
+          ],
+          "correctAnswer": [
+            "Leaking toner cartridge",
+            "Paper dust, debris, or excess toner buildup",
+            "Contaminated or faulty imaging drum"
+          ]
+        },
+        {
+          "id": "1201-PT22-022",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Dark spots on inkjet pages - probable causes? (Select 3)",
+          "explanation": "Debris, clogged heads, and leaking ink cause spots.",
+          "options": [
+            "Defective toner cartridge",
+            "Excess paper dust, debris, or ink residue on the paper path",
+            "Partial blockages or dirt in printhead nozzles",
+            "Leaking ink cartridge",
+            "Dirty or damaged drum unit"
+          ],
+          "correctAnswer": [
+            "Excess paper dust, debris, or ink residue on the paper path",
+            "Partial blockages or dirt in printhead nozzles",
+            "Leaking ink cartridge"
+          ]
+        },
+        {
+          "id": "1201-PT22-023",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Double images in laser printer caused by residual latent image on drum.",
+          "explanation": "Drum not cleaned between cycles creates echo images.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-024",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Grinding noise in inkjet - issues? (Select 3)",
+          "explanation": "Worn rollers, foreign objects, and carriage issues cause noise.",
+          "options": [
+            "Worn, damaged or misaligned paper feed rollers",
+            "Small paper pieces or foreign objects stuck in the paper path",
+            "Printhead carriage mechanism malfunctions",
+            "Worn or damaged gears and bearings affecting the drum unit",
+            "Faulty or worn fuser rollers and bearings"
+          ],
+          "correctAnswer": [
+            "Worn, damaged or misaligned paper feed rollers",
+            "Small paper pieces or foreign objects stuck in the paper path",
+            "Printhead carriage mechanism malfunctions"
+          ]
+        },
+        {
+          "id": "1201-PT22-025",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Grinding in laser printer - investigate? (Select all)",
+          "explanation": "Mechanical wear causes grinding in laser printers.",
+          "options": [
+            "Malfunctioning or obstructed printhead carriage",
+            "Faulty or worn fuser rollers and bearings",
+            "Worn or damaged gears and bearings affecting the imaging drum assembly",
+            "Small foreign objects or paper pieces stuck in the paper path",
+            "Improperly aligned, worn, or faulty paper feed rollers"
+          ],
+          "correctAnswer": [
+            "Faulty or worn fuser rollers and bearings",
+            "Worn or damaged gears and bearings affecting the imaging drum assembly",
+            "Small foreign objects or paper pieces stuck in the paper path",
+            "Improperly aligned, worn, or faulty paper feed rollers"
+          ]
+        },
+        {
+          "id": "1201-PT22-026",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Finishing issues refers to post-printing problems like stapling and hole punching.",
+          "explanation": "Finishing includes staple jams and hole-punch waste management.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-027",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Best place to verify default page orientation settings:",
+          "explanation": "Printer driver controls default page orientation.",
+          "options": [
+            "Printer driver settings",
+            "Application settings",
+            "Print dialog options",
+            "Printer utility settings"
+          ],
+          "correctAnswer": [
+            "Printer driver settings"
+          ]
+        },
+        {
+          "id": "1201-PT22-028",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely cause of printer not recognizing paper tray:",
+          "explanation": "Paper grade doesn't affect tray recognition.",
+          "options": [
+            "A dirty or malfunctioning paper tray sensor",
+            "Use of lower-grade, inexpensive, or recycled paper",
+            "Printer settings that do not match the paper type or size",
+            "Unseated or improperly inserted paper tray"
+          ],
+          "correctAnswer": [
+            "Use of lower-grade, inexpensive, or recycled paper"
+          ]
+        },
+        {
+          "id": "1201-PT22-029",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "Troubleshooting network printer connectivity - which helps:",
+          "explanation": "All troubleshooting steps are valuable for network printers.",
+          "options": [
+            "Verify physical connections (cables, power)",
+            "Restart devices (printer, router/modem, computer)",
+            "Check firewall settings on the computer and network",
+            "Update printer drivers to the latest version",
+            "Check the printer IP configuration settings",
+            "Uninstall/reinstall printer software on the computer",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-030",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely to solve frozen print queue:",
+          "explanation": "Tray change doesn't affect queue status.",
+          "options": [
+            "Restart the Print Spooler service",
+            "Manually cancel all pending jobs in the printer settings",
+            "Power cycle the computer and/or printer",
+            "Update or reinstall the printer driver/software",
+            "Change the printer default output tray"
+          ],
+          "correctAnswer": [
+            "Change the printer default output tray"
+          ]
+        },
+        {
+          "id": "1201-PT22-001",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)",
+          "explanation": "Port flapping is caused by physical link instability or configuration mismatch.",
+          "options": [
+            "Mismatched speed and duplex settings",
+            "Outdated device firmware",
+            "Excessive traffic on a network device",
+            "Loose, faulty, or unsupported network cabling",
+            "Incorrect network topology design"
+          ],
+          "correctAnswer": [
+            "Mismatched speed and duplex settings",
+            "Loose, faulty, or unsupported network cabling"
+          ]
+        },
+        {
+          "id": "1201-PT22-002",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which network issues are directly linked to port flapping? (Select 2 answers)",
+          "explanation": "Port flapping causes connectivity interruptions and speed degradation.",
+          "options": [
+            "Intermittent connectivity",
+            "Degraded data transfer speeds",
+            "High network latency",
+            "Permanent loss of connectivity",
+            "Excessive bandwidth usage"
+          ],
+          "correctAnswer": [
+            "Degraded data transfer speeds",
+            "Intermittent connectivity"
+          ]
+        },
+        {
+          "id": "1201-PT22-003",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the recommended first step when troubleshooting port flapping?",
+          "explanation": "Start with physical connections per troubleshooting methodology.",
+          "options": [
+            "Check physical connections",
+            "Restart the device",
+            "Disable all unused physical ports",
+            "Update the device firmware"
+          ],
+          "correctAnswer": [
+            "Check physical connections"
+          ]
+        },
+        {
+          "id": "1201-PT22-004",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What condition may lead to increased latency on a network?",
+          "explanation": "All factors contribute to network latency.",
+          "options": [
+            "Network congestion due to excessive traffic",
+            "Physical distance between sender and receiver",
+            "Wireless interference and signal degradation",
+            "Outdated or inefficient network hardware",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-005",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which solution has no direct impact on decreasing network latency?",
+          "explanation": "VLANs segment traffic but don't reduce latency within segments.",
+          "options": [
+            "Using wired connections instead of wireless",
+            "Reducing network congestion",
+            "Implementing VLANs to segment network traffic",
+            "Reducing physical distance between network devices",
+            "Upgrading hardware and infrastructure"
+          ],
+          "correctAnswer": [
+            "Implementing VLANs to segment network traffic"
+          ]
+        },
+        {
+          "id": "1201-PT22-006",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which type of network cabling is most susceptible to external interference?",
+          "explanation": "UTP lacks shielding and is vulnerable to EMI.",
+          "options": [
+            "UTP",
+            "STP",
+            "Fiber optic",
+            "Coaxial"
+          ],
+          "correctAnswer": [
+            "UTP"
+          ]
+        },
+        {
+          "id": "1201-PT22-007",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which network cabling provides immunity against external interference?",
+          "explanation": "Fiber optic uses light pulses immune to EMI.",
+          "options": [
+            "UTP",
+            "STP",
+            "Fiber optic",
+            "Coaxial"
+          ],
+          "correctAnswer": [
+            "Fiber optic"
+          ]
+        },
+        {
+          "id": "1201-PT22-008",
+          "domain": "4.0 Virtualization and Cloud Computing",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "For wireless client connection, security and encryption settings must match the WAP.",
+          "explanation": "Client and WAP require identical security settings.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-009",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which can result in authentication failure with correct credentials?",
+          "explanation": "All factors prevent successful authentication.",
+          "options": [
+            "Expired user password",
+            "User account locked out",
+            "Disabled or deleted user account",
+            "Time synchronization issues",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-010",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "WAN signal loss logged during internet drops with good local connectivity. Next step?",
+          "explanation": "ISP must investigate WAN connection.",
+          "options": [
+            "Restart the router",
+            "Modify firewall rules on the router",
+            "Run Internet speed test",
+            "Contact the ISP"
+          ],
+          "correctAnswer": [
+            "Contact the ISP"
+          ]
+        },
+        {
+          "id": "1201-PT22-011",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Vertical lines in laser printer output indicate problem with:",
+          "explanation": "Defect on imaging drum creates repeating vertical lines.",
+          "options": [
+            "Imaging drum",
+            "Printer driver",
+            "Fuser unit",
+            "Printhead nozzles"
+          ],
+          "correctAnswer": [
+            "Imaging drum"
+          ]
+        },
+        {
+          "id": "1201-PT22-012",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Vertical lines on inkjet printer output resolved by:",
+          "explanation": "Clogged printheads cause vertical line patterns.",
+          "options": [
+            "Replacing the imaging drum",
+            "Updating printer drivers",
+            "Cleaning printheads",
+            "Replacing the toner cartridge"
+          ],
+          "correctAnswer": [
+            "Cleaning printheads"
+          ]
+        },
+        {
+          "id": "1201-PT22-013",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Garbled characters on printed pages indicate printer data interpretation problems.",
+          "explanation": "Multiple factors cause garbled output.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-014",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely cause of paper jams:",
+          "explanation": "Page orientation doesn't cause jams.",
+          "options": [
+            "Paper path obstructed by foreign objects",
+            "Curled or deformed paper sheets",
+            "Incorrect paper size or type",
+            "High humidity levels affecting paper",
+            "Overloaded paper tray",
+            "Dirty or worn paper pickup rollers",
+            "Incorrect page orientation settings"
+          ],
+          "correctAnswer": [
+            "Incorrect page orientation settings"
+          ]
+        },
+        {
+          "id": "1201-PT22-015",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Not best practices when clearing printer paper jams? (Select 2)",
+          "explanation": "Best practice: Power off and pull gently forward only.",
+          "options": [
+            "Open all access doors and trays for visibility",
+            "Inspect path for torn fragments or debris",
+            "Check for worn or dirty paper pickup rollers",
+            "Apply mild force to pull jammed paper in opposite feed direction",
+            "Keep printer powered on and try another print job",
+            "Power cycle the printer after clearing jam"
+          ],
+          "correctAnswer": [
+            "Apply mild force to pull jammed paper in opposite feed direction",
+            "Keep printer powered on and try another print job"
+          ]
+        },
+        {
+          "id": "1201-PT22-016",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Common cause of faded laser printer output:",
+          "explanation": "Low toner produces faded output.",
+          "options": [
+            "Near-empty ink cartridges",
+            "Dried ink buildup in printhead nozzles",
+            "Low or uneven toner levels",
+            "Misaligned printheads"
+          ],
+          "correctAnswer": [
+            "Low or uneven toner levels"
+          ]
+        },
+        {
+          "id": "1201-PT22-017",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Causes of faded inkjet output? (Select 2)",
+          "explanation": "Low ink and clogged printheads cause fading.",
+          "options": [
+            "Incorrect toner density",
+            "Worn-out drum unit",
+            "Low ink levels",
+            "Insufficient fuser heat",
+            "Clogged printhead nozzles"
+          ],
+          "correctAnswer": [
+            "Low ink levels",
+            "Clogged printhead nozzles"
+          ]
+        },
+        {
+          "id": "1201-PT22-018",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Causes of paper not feeding? (Select all)",
+          "explanation": "Multiple hardware and software factors affect feeding.",
+          "options": [
+            "Overloaded paper tray",
+            "Foreign objects or paper debris in the paper path",
+            "Worn or dirty paper feed rollers",
+            "Corrupted print spooler",
+            "Paper quality or type issues"
+          ],
+          "correctAnswer": [
+            "Overloaded paper tray",
+            "Foreign objects or paper debris in the paper path",
+            "Worn or dirty paper feed rollers",
+            "Paper quality or type issues"
+          ]
+        },
+        {
+          "id": "1201-PT22-019",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Printer pulling multiple sheets - check for:",
+          "explanation": "All factors contribute to multi-sheet feed problems.",
+          "options": [
+            "Paper quality issues",
+            "Worn or faulty separation pad",
+            "Overfilled paper tray",
+            "Worn or dirty pickup rollers",
+            "Humidity affecting paper",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-020",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Documents stuck in print queue - first step:",
+          "explanation": "Restart Print Spooler service to clear queue.",
+          "options": [
+            "Clear all print jobs from the queue",
+            "Verify the network connection status",
+            "Check for paper jams in the printer",
+            "Restart the print spooler service"
+          ],
+          "correctAnswer": [
+            "Restart the print spooler service"
+          ]
+        },
+        {
+          "id": "1201-PT22-021",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Most common causes of speckling on laser printed pages? (Select 3)",
+          "explanation": "Loose particles on drum or paper path cause specks.",
+          "options": [
+            "Leaking toner cartridge",
+            "Paper dust, debris, or excess toner buildup",
+            "Contaminated or faulty imaging drum",
+            "Partially clogged or dirty printhead nozzles",
+            "Defective ink cartridge"
+          ],
+          "correctAnswer": [
+            "Leaking toner cartridge",
+            "Paper dust, debris, or excess toner buildup",
+            "Contaminated or faulty imaging drum"
+          ]
+        },
+        {
+          "id": "1201-PT22-022",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Dark spots on inkjet pages - probable causes? (Select 3)",
+          "explanation": "Debris, clogged heads, and leaking ink cause spots.",
+          "options": [
+            "Defective toner cartridge",
+            "Excess paper dust, debris, or ink residue on the paper path",
+            "Partial blockages or dirt in printhead nozzles",
+            "Leaking ink cartridge",
+            "Dirty or damaged drum unit"
+          ],
+          "correctAnswer": [
+            "Excess paper dust, debris, or ink residue on the paper path",
+            "Partial blockages or dirt in printhead nozzles",
+            "Leaking ink cartridge"
+          ]
+        },
+        {
+          "id": "1201-PT22-023",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Double images in laser printer caused by residual latent image on drum.",
+          "explanation": "Drum not cleaned between cycles creates echo images.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-024",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Grinding noise in inkjet - issues? (Select 3)",
+          "explanation": "Worn rollers, foreign objects, and carriage issues cause noise.",
+          "options": [
+            "Worn, damaged or misaligned paper feed rollers",
+            "Small paper pieces or foreign objects stuck in the paper path",
+            "Printhead carriage mechanism malfunctions",
+            "Worn or damaged gears and bearings affecting the drum unit",
+            "Faulty or worn fuser rollers and bearings"
+          ],
+          "correctAnswer": [
+            "Worn, damaged or misaligned paper feed rollers",
+            "Small paper pieces or foreign objects stuck in the paper path",
+            "Printhead carriage mechanism malfunctions"
+          ]
+        },
+        {
+          "id": "1201-PT22-025",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Grinding in laser printer - investigate? (Select all)",
+          "explanation": "Mechanical wear causes grinding in laser printers.",
+          "options": [
+            "Malfunctioning or obstructed printhead carriage",
+            "Faulty or worn fuser rollers and bearings",
+            "Worn or damaged gears and bearings affecting the imaging drum assembly",
+            "Small foreign objects or paper pieces stuck in the paper path",
+            "Improperly aligned, worn, or faulty paper feed rollers"
+          ],
+          "correctAnswer": [
+            "Faulty or worn fuser rollers and bearings",
+            "Worn or damaged gears and bearings affecting the imaging drum assembly",
+            "Small foreign objects or paper pieces stuck in the paper path",
+            "Improperly aligned, worn, or faulty paper feed rollers"
+          ]
+        },
+        {
+          "id": "1201-PT22-026",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Finishing issues refers to post-printing problems like stapling and hole punching.",
+          "explanation": "Finishing includes staple jams and hole-punch waste management.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT22-027",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Best place to verify default page orientation settings:",
+          "explanation": "Printer driver controls default page orientation.",
+          "options": [
+            "Printer driver settings",
+            "Application settings",
+            "Print dialog options",
+            "Printer utility settings"
+          ],
+          "correctAnswer": [
+            "Printer driver settings"
+          ]
+        },
+        {
+          "id": "1201-PT22-028",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely cause of printer not recognizing paper tray:",
+          "explanation": "Paper grade doesn't affect tray recognition.",
+          "options": [
+            "A dirty or malfunctioning paper tray sensor",
+            "Use of lower-grade, inexpensive, or recycled paper",
+            "Printer settings that do not match the paper type or size",
+            "Unseated or improperly inserted paper tray"
+          ],
+          "correctAnswer": [
+            "Use of lower-grade, inexpensive, or recycled paper"
+          ]
+        },
+        {
+          "id": "1201-PT22-029",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "Troubleshooting network printer connectivity - which helps:",
+          "explanation": "All troubleshooting steps are valuable for network printers.",
+          "options": [
+            "Verify physical connections (cables, power)",
+            "Restart devices (printer, router/modem, computer)",
+            "Check firewall settings on the computer and network",
+            "Update printer drivers to the latest version",
+            "Check the printer IP configuration settings",
+            "Uninstall/reinstall printer software on the computer",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT22-030",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Least likely to solve frozen print queue:",
+          "explanation": "Tray change doesn't affect queue status.",
+          "options": [
+            "Restart the Print Spooler service",
+            "Manually cancel all pending jobs in the printer settings",
+            "Power cycle the computer and/or printer",
+            "Update or reinstall the printer driver/software",
+            "Change the printer default output tray"
+          ],
+          "correctAnswer": [
+            "Change the printer default output tray"
           ]
         }
       ]
