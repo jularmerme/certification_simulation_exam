@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="exam.png">
   <style>
     :root {
+      /* Light theme colors */
       --navy: #0f2540;
       --navy2: #163a63;
       --accent: #c8102e;
@@ -19,6 +20,22 @@
       --border: #dde2e8;
       --text: #1c2530;
       --muted: #667085;
+    }
+
+    /* Dark theme colors */
+    body.dark-theme {
+      --navy: #1a1f2e;
+      --navy2: #252d3d;
+      --accent: #ff4d5c;
+      --accent-dark: #ff3d4a;
+      --green: #2ecc71;
+      --amber: #f39c12;
+      --red: #ff4d5c;
+      --bg: #0f1217;
+      --card: #1a1f2e;
+      --border: #2d3748;
+      --text: #e2e8f0;
+      --muted: #a0aec0;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,6 +51,7 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.5;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     .topbar {
@@ -47,6 +65,7 @@
       top: 0;
       z-index: 50;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease;
     }
     
     .topbar .brand {
@@ -57,12 +76,36 @@
     
     .topbar .brand span {
       color: #7fb3ff;
+      transition: color 0.3s ease;
     }
     
     .topbar .right {
       display: flex;
       align-items: center;
       gap: 12px;
+    }
+    
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      font-weight: 600;
+    }
+    
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
     }
     
     .timer {
@@ -72,10 +115,12 @@
       border-radius: 6px;
       font-weight: 700;
       font-size: 15px;
+      transition: background-color 0.3s ease;
     }
     
     .timer.warn {
       background: var(--accent);
+      transition: background-color 0.3s ease;
     }
     
     .container {
@@ -86,6 +131,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      transition: background-color 0.3s ease;
     }
     
     /* INTRO SCREEN */
@@ -95,17 +141,20 @@
       padding: 40px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       border: 1px solid var(--border);
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
     
     .intro-card h1 {
       margin-bottom: 16px;
       font-size: 24px;
       color: var(--navy);
+      transition: color 0.3s ease;
     }
     
     .intro-card .exam-code {
       color: var(--accent);
       font-weight: 700;
+      transition: color 0.3s ease;
     }
     
     .intro-grid {
@@ -120,6 +169,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 14px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     
     .intro-stat .label {
@@ -128,12 +178,14 @@
       letter-spacing: 0.5px;
       color: var(--muted);
       margin-bottom: 4px;
+      transition: color 0.3s ease;
     }
     
     .intro-stat .value {
       font-size: 16px;
       font-weight: 700;
       color: var(--navy);
+      transition: color 0.3s ease;
     }
     
     .exam-selector {
@@ -172,6 +224,11 @@
     .exam-card.selected {
       border-color: var(--navy2);
       background: #eef4fc;
+      transition: all 0.2s;
+    }
+    
+    body.dark-theme .exam-card.selected {
+      background: #2a3f5f;
     }
     
     .exam-card.disabled {
@@ -179,6 +236,11 @@
       cursor: not-allowed;
       background: #f5f5f5;
       position: relative;
+      transition: all 0.2s;
+    }
+    
+    body.dark-theme .exam-card.disabled {
+      background: #1a1f2e;
     }
     
     .exam-card.disabled:hover {
@@ -198,18 +260,21 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      transition: background-color 0.3s ease;
     }
     
     .exam-card h3 {
       font-size: 18px;
       color: var(--navy);
       margin-bottom: 8px;
+      transition: color 0.3s ease;
     }
     
     .exam-card p {
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 16px;
+      transition: color 0.3s ease;
     }
     
     .exam-stats {
@@ -223,16 +288,19 @@
       background: var(--bg);
       padding: 8px;
       border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
     
     .exam-stat-label {
       color: var(--muted);
       font-weight: 600;
+      transition: color 0.3s ease;
     }
     
     .exam-stat-value {
       color: var(--text);
       font-weight: 700;
+      transition: color 0.3s ease;
     }
     
     .button-group {
@@ -250,10 +318,22 @@
       font-size: 14px;
       font-weight: 600;
       transition: all 0.2s;
+      color: var(--text);
+    }
+    
+    body.dark-theme .btn {
+      background: var(--card);
+      border-color: var(--border);
+      color: var(--text);
     }
     
     .btn:hover {
       background: var(--bg);
+      transition: background-color 0.2s ease;
+    }
+    
+    body.dark-theme .btn:hover {
+      background: #2d3748;
     }
     
     .btn:disabled {
@@ -266,6 +346,7 @@
       color: #fff;
       border-color: var(--navy);
       flex: 1;
+      transition: all 0.2s;
     }
     
     .btn.primary:hover {
@@ -276,6 +357,7 @@
       background: var(--accent);
       color: #fff;
       border-color: var(--accent);
+      transition: all 0.2s;
     }
     
     .btn.danger:hover {
@@ -286,17 +368,31 @@
       background: #fff8e8;
       border-color: #f0d9a6;
       color: var(--amber);
+      transition: all 0.2s;
+    }
+    
+    body.dark-theme .btn.flag {
+      background: rgba(243, 156, 18, 0.2);
+      border-color: var(--amber);
+      color: var(--amber);
     }
     
     .btn.flag.active {
       background: var(--amber);
       color: #fff;
+      transition: all 0.2s;
+    }
+    
+    body.dark-theme .btn.flag.active {
+      background: var(--amber);
+      color: #000;
     }
     
     .btn-save {
       background: var(--navy);
       color: #fff;
       border-color: var(--navy);
+      transition: all 0.2s;
     }
     
     .btn-save:hover {
@@ -307,6 +403,7 @@
       background: var(--accent);
       color: #fff;
       border-color: var(--accent);
+      transition: all 0.2s;
     }
     
     .btn-exit:hover {
@@ -325,6 +422,7 @@
       border-radius: 10px;
       padding: 28px 30px;
       border: 1px solid var(--border);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     
     .q-meta {
@@ -338,6 +436,7 @@
       font-weight: 700;
       color: var(--navy);
       font-size: 15px;
+      transition: color 0.3s ease;
     }
     
     .q-domain-tag {
@@ -347,12 +446,19 @@
       padding: 3px 10px;
       border-radius: 20px;
       font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    body.dark-theme .q-domain-tag {
+      background: rgba(42, 63, 95, 0.4);
+      color: #7fb3ff;
     }
     
     .q-stem {
       font-size: 16px;
       line-height: 1.5;
       margin-bottom: 20px;
+      transition: color 0.3s ease;
     }
     
     .q-hint {
@@ -360,6 +466,7 @@
       color: var(--muted);
       margin-bottom: 14px;
       font-style: italic;
+      transition: color 0.3s ease;
     }
     
     .options-container {
@@ -380,11 +487,22 @@
     
     .option:hover {
       background: #f7f9fc;
+      transition: background-color 0.1s ease;
+    }
+    
+    body.dark-theme .option:hover {
+      background: rgba(127, 179, 255, 0.1);
     }
     
     .option.selected {
       border-color: var(--navy2);
       background: #eef4fc;
+      transition: all 0.1s;
+    }
+    
+    body.dark-theme .option.selected {
+      background: rgba(42, 63, 95, 0.5);
+      border-color: #7fb3ff;
     }
     
     .option input {
@@ -417,6 +535,7 @@
       height: fit-content;
       position: sticky;
       top: 74px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     
     .sidebar h3 {
@@ -424,6 +543,7 @@
       text-transform: uppercase;
       color: var(--muted);
       margin: 0 0 10px 0;
+      transition: color 0.3s ease;
     }
     
     .nav-grid {
@@ -449,6 +569,12 @@
       transition: all 0.15s;
     }
     
+    body.dark-theme .nav-cell {
+      background: #252d3d;
+      border-color: var(--border);
+      color: var(--muted);
+    }
+    
     .nav-cell:hover {
       opacity: 0.8;
     }
@@ -457,11 +583,25 @@
       background: #d9ecdf;
       border-color: #a9d3b6;
       color: var(--green);
+      transition: all 0.15s;
+    }
+    
+    body.dark-theme .nav-cell.answered {
+      background: rgba(46, 204, 113, 0.2);
+      border-color: var(--green);
+      color: var(--green);
     }
     
     .nav-cell.partial {
       background: #fdeecb;
       border-color: #f0d9a6;
+      color: var(--amber);
+      transition: all 0.15s;
+    }
+    
+    body.dark-theme .nav-cell.partial {
+      background: rgba(243, 156, 18, 0.2);
+      border-color: var(--amber);
       color: var(--amber);
     }
     
@@ -469,11 +609,25 @@
       background: #fbe6e9;
       border-color: #f0d9a6;
       color: var(--red);
+      transition: all 0.15s;
+    }
+    
+    body.dark-theme .nav-cell.incorrect {
+      background: rgba(255, 77, 92, 0.2);
+      border-color: var(--red);
+      color: var(--red);
     }
     
     .nav-cell.flagged {
       background: #fdeecb;
       border-color: #f0d9a6;
+      color: var(--amber);
+      transition: all 0.15s;
+    }
+    
+    body.dark-theme .nav-cell.flagged {
+      background: rgba(243, 156, 18, 0.2);
+      border-color: var(--amber);
       color: var(--amber);
     }
     
@@ -485,6 +639,11 @@
     .nav-cell.current {
       outline: 2px solid var(--navy2);
       outline-offset: 2px;
+      transition: outline 0.15s;
+    }
+    
+    body.dark-theme .nav-cell.current {
+      outline-color: #7fb3ff;
     }
     
     .legend {
@@ -492,6 +651,7 @@
       color: var(--muted);
       margin: 12px 0;
       line-height: 1.8;
+      transition: color 0.3s ease;
     }
     
     .legend span {
@@ -526,6 +686,7 @@
       padding: 36px;
       text-align: center;
       margin-bottom: 20px;
+      transition: background 0.3s ease;
     }
     
     .score-hero .big-score {
@@ -541,6 +702,7 @@
       font-weight: 700;
       font-size: 14px;
       margin-top: 8px;
+      transition: background-color 0.3s ease;
     }
     
     .pass-fail.pass {
@@ -584,6 +746,7 @@
       background: var(--navy);
       border-color: var(--navy);
       color: #fff;
+      transition: all 0.2s;
     }
     
     .result-stat.active .num {
@@ -598,6 +761,7 @@
       font-size: 22px;
       font-weight: 800;
       color: var(--navy);
+      transition: color 0.2s;
     }
     
     .result-stat .lbl {
@@ -605,12 +769,14 @@
       color: var(--muted);
       text-transform: uppercase;
       margin-top: 4px;
+      transition: color 0.2s;
     }
     
     .section-h {
       color: var(--navy);
       font-size: 18px;
       margin: 30px 0 12px 0;
+      transition: color 0.3s ease;
     }
     
     @media (max-width: 900px) {
@@ -630,6 +796,7 @@
       padding: 20px;
       border-top: 1px solid var(--border);
       margin-top: 24px;
+      transition: border-color 0.3s ease;
     }
     
     .pagination-btn {
@@ -665,6 +832,7 @@
       color: var(--muted);
       font-size: 13px;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
     
     .review-item-answer {
@@ -674,12 +842,19 @@
       margin-top: 10px;
       border-radius: 4px;
       font-size: 13px;
+      transition: all 0.3s ease;
+    }
+    
+    body.dark-theme .review-item-answer {
+      background: rgba(127, 179, 255, 0.05);
+      border-left-color: var(--border);
     }
     
     .review-item-answer strong {
       color: var(--navy);
       display: block;
       margin-bottom: 6px;
+      transition: color 0.3s ease;
     }
     
     /* FOOTER */
@@ -691,6 +866,7 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 13px;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     
     footer a {
@@ -733,6 +909,7 @@
 <div class="topbar">
   <div class="brand">A+ Exam Simulator &middot; <span id="topbarExamName">Select an exam</span></div>
   <div class="right">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light theme">☀️</button>
     <div class="timer hidden" id="timerDisplay">90:00</div>
   </div>
 </div>
@@ -849,10 +1026,10 @@
   
   <!-- Exam Completion Modal -->
   <div id="completionModal" class="hidden" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;">
-    <div style="background: white; border-radius: 16px; padding: 60px 40px; text-align: center; max-width: 500px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); animation: slideUp 0.3s ease-out;">
+    <div style="background: var(--card); border-radius: 16px; padding: 60px 40px; text-align: center; max-width: 500px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); animation: slideUp 0.3s ease-out; transition: background-color 0.3s ease;">
       <div style="font-size: 80px; margin-bottom: 24px; animation: bounce 0.6s ease-out;">✓</div>
-      <h2 style="color: var(--green); font-size: 32px; margin-bottom: 12px; font-weight: 700;">Exam Completed!</h2>
-      <p style="color: #667085; font-size: 16px; margin-bottom: 32px; line-height: 1.6;">Your exam has been successfully submitted. Review your answers below to see where you excelled and where you can improve.</p>
+      <h2 style="color: var(--green); font-size: 32px; margin-bottom: 12px; font-weight: 700; transition: color 0.3s ease;">Exam Completed!</h2>
+      <p style="color: var(--muted); font-size: 16px; margin-bottom: 32px; line-height: 1.6; transition: color 0.3s ease;">Your exam has been successfully submitted. Review your answers below to see where you excelled and where you can improve.</p>
       <button onclick="closeCompletionModal()" style="background: var(--navy); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s;">View Results</button>
     </div>
   </div>
@@ -926,11 +1103,48 @@ let appState = {
   examStartTime: null
 };
 
+// Theme Management
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme-preference');
+  const isDarkTheme = savedTheme === 'dark' || savedTheme === null; // Default to dark
+  
+  if (isDarkTheme) {
+    document.body.classList.add('dark-theme');
+    updateThemeToggleButton(true);
+  } else {
+    document.body.classList.remove('dark-theme');
+    updateThemeToggleButton(false);
+  }
+}
+
+function toggleTheme() {
+  const isDarkTheme = document.body.classList.toggle('dark-theme');
+  
+  // Save preference to localStorage
+  localStorage.setItem('theme-preference', isDarkTheme ? 'dark' : 'light');
+  
+  // Update toggle button icon
+  updateThemeToggleButton(isDarkTheme);
+}
+
+function updateThemeToggleButton(isDarkTheme) {
+  const btn = document.getElementById('themeToggle');
+  if (btn) {
+    // Show sun icon (☀️) when dark theme is active (to switch to light)
+    // Show moon icon (🌙) when light theme is active (to switch to dark)
+    btn.textContent = isDarkTheme ? '☀️' : '🌙';
+    btn.title = isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme';
+  }
+}
+
 // Initialize
 window.addEventListener('DOMContentLoaded', async () => {
   console.log('App loaded');
   // Set current year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
+  
+  // Initialize theme from localStorage (default to dark theme)
+  initializeTheme();
   
   // Load questions from JSON
   try {
