@@ -174,6 +174,32 @@
       background: #eef4fc;
     }
     
+    .exam-card.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f5f5f5;
+      position: relative;
+    }
+    
+    .exam-card.disabled:hover {
+      border-color: var(--border);
+      box-shadow: none;
+    }
+    
+    .coming-soon-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--amber);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
     .exam-card h3 {
       font-size: 18px;
       color: var(--navy);
@@ -745,7 +771,8 @@
           </div>
         </div>
         
-        <div class="exam-card" id="card1202" onclick="selectExam('220-1202')">
+        <div class="exam-card disabled" id="card1202" onclick="return false">
+          <div class="coming-soon-badge">Coming Soon</div>
           <h3>Core 2</h3>
           <p><span class="exam-code">220-1202</span></p>
           <p>Operating systems, security, software, and operational procedures.</p>
@@ -1104,7 +1131,7 @@ function selectUniqueQuestions(questionBank, count) {
   
   // If we don't have enough unique questions, log warning
   if (selected.length < count) {
-    console.warn(\Requested \ unique questions but only \ available\);
+    console.warn(`Requested ${count} unique questions but only ${selected.length} available`);
   }
   
   return selected;
