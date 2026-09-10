@@ -433,6 +433,12 @@
       color: var(--green);
     }
     
+    .nav-cell.partial {
+      background: #fdeecb;
+      border-color: #f0d9a6;
+      color: var(--amber);
+    }
+    
     .nav-cell.incorrect {
       background: #fbe6e9;
       border-color: #f0d9a6;
@@ -527,7 +533,7 @@
     
     .result-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
       margin-bottom: 20px;
     }
@@ -585,7 +591,7 @@
       .exam-layout { grid-template-columns: 1fr; }
       .sidebar { position: static; }
       .intro-grid { grid-template-columns: 1fr 1fr; }
-      .result-grid { grid-template-columns: 1fr; }
+      .result-grid { grid-template-columns: repeat(2, 1fr); }
       .exam-selector { grid-template-columns: 1fr; }
     }
     
@@ -801,8 +807,8 @@
         <h3>Navigator</h3>
         <div class="nav-grid" id="navGrid"></div>
         <div class="legend">
-          <div><span style="background: #d9ecdf; border: 1px solid #a9d3b6;"></span>Answered</div>
-          <div><span style="background: #fdeecb; border: 1px solid #f0d9a6;"></span>Flagged</div>
+          <div><span style="background: #d9ecdf; border: 1px solid #a9d3b6;"></span>Correct (100%)</div>
+          <div><span style="background: #fdeecb; border: 1px solid #f0d9a6;"></span>Partial/Flagged</div>
           <div><span style="background: #fbe6e9; border: 1px solid #f0d9a6;"></span>Incorrect</div>
           <div><span style="background: #f4f6f8; border: 1px solid #dde2e8;"></span>Unanswered</div>
         </div>
@@ -848,13 +854,17 @@
     </div>
     
     <div class="result-grid">
-      <div class="result-stat active" id="statCorrect" onclick="filterReview('correct')">
-        <div class="num" id="rCorrect">-</div>
-        <div class="lbl">Correct</div>
+      <div class="result-stat active" id="statCorrect" onclick="filterReview('perfect')">
+        <div class="num" id="rPerfect">-</div>
+        <div class="lbl">100% Correct</div>
+      </div>
+      <div class="result-stat" id="statPartial" onclick="filterReview('partial')">
+        <div class="num" id="rPartial">-</div>
+        <div class="lbl">50% Partial</div>
       </div>
       <div class="result-stat" id="statIncorrect" onclick="filterReview('incorrect')">
         <div class="num" id="rIncorrect">-</div>
-        <div class="lbl">Incorrect</div>
+        <div class="lbl">0% Incorrect</div>
       </div>
       <div class="result-stat" id="statUnanswered" onclick="filterReview('unanswered')">
         <div class="num" id="rUnanswered">-</div>
@@ -939,6 +949,20 @@ function checkAndRestoreExamState() {
     try {
       const state = JSON.parse(savedState);
       
+      // DIAGNOSTIC: Log restored questions including type field
+      if (state.questions && state.questions.length > 0) {
+        const q1078 = state.questions.find(q => q.id === '1201-1078');
+        if (q1078) {
+          console.log('[DIAGNOSTIC] checkAndRestoreExamState AFTER JSON.parse:', {
+            id: q1078.id,
+            type: q1078.type,
+            correctAnswerLength: Array.isArray(q1078.correctAnswer) ? q1078.correctAnswer.length : 'N/A',
+            correctAnswer: q1078.correctAnswer
+          });
+        }
+        console.log('[DIAGNOSTIC] Restored questions count:', state.questions.length);
+      }
+      
       // Restore the exam state
       appState.examCode = state.examCode;
       appState.currentQuestionIndex = state.currentQuestionIndex || 0;
@@ -982,6 +1006,17 @@ function checkAndRestoreExamState() {
 
 // Save exam state to localStorage
 function saveExamState() {
+  // DIAGNOSTIC: Log type field for 1201-1078 before saving
+  const q1078 = appState.questions.find(q => q.id === '1201-1078');
+  if (q1078) {
+    console.log('[DIAGNOSTIC] saveExamState BEFORE JSON.stringify for 1201-1078:', {
+      id: q1078.id,
+      type: q1078.type,
+      correctAnswerLength: Array.isArray(q1078.correctAnswer) ? q1078.correctAnswer.length : 'N/A',
+      correctAnswer: q1078.correctAnswer
+    });
+  }
+  
   const state = {
     examCode: appState.examCode,
     currentQuestionIndex: appState.currentQuestionIndex,
@@ -993,6 +1028,20 @@ function saveExamState() {
     timeRemaining: appState.timeRemaining,
     examStartTime: appState.examStartTime
   };
+  
+  // DIAGNOSTIC: Log after stringify (verify serialization)
+  if (q1078) {
+    const stateStr = JSON.stringify(state);
+    const parsedBack = JSON.parse(stateStr);
+    const q1078After = parsedBack.questions.find(q => q.id === '1201-1078');
+    console.log('[DIAGNOSTIC] saveExamState AFTER JSON.stringify for 1201-1078:', {
+      id: q1078After.id,
+      type: q1078After.type,
+      correctAnswerLength: Array.isArray(q1078After.correctAnswer) ? q1078After.correctAnswer.length : 'N/A',
+      correctAnswer: q1078After.correctAnswer
+    });
+  }
+  
   localStorage.setItem('aplus_exam_state', JSON.stringify(state));
 }
 
@@ -1108,7 +1157,27 @@ function shuffleArray(array) {
 
 // Randomize options within a question
 function randomizeQuestionOptions(question) {
+  // DIAGNOSTIC: Log type field BEFORE randomization
+  if (question.id === '1201-1078') {
+    console.log('[DIAGNOSTIC] randomizeQuestionOptions BEFORE:', {
+      id: question.id,
+      type: question.type,
+      correctAnswerLength: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
+      correctAnswer: question.correctAnswer
+    });
+  }
+  
   const q = JSON.parse(JSON.stringify(question)); // Deep copy to avoid modifying original
+  
+  // DIAGNOSTIC: Log type field AFTER deep copy
+  if (q.id === '1201-1078') {
+    console.log('[DIAGNOSTIC] randomizeQuestionOptions AFTER deep copy:', {
+      id: q.id,
+      type: q.type,
+      correctAnswerLength: Array.isArray(q.correctAnswer) ? q.correctAnswer.length : 'N/A',
+      correctAnswer: q.correctAnswer
+    });
+  }
   
   if (q.type === 'mc') {
     // For multiple choice: shuffle options and track new correct answer index
@@ -1150,11 +1219,15 @@ function randomizeQuestionOptions(question) {
     q.options = shuffled.map(item => item.text);
     q.correctAnswer = shuffled.filter(item => item.isCorrect).map(item => item.text);
   } 
-  else if (q.type === 'drag_drop') {
-    // For drag-and-drop: shuffle the items in the available options
-    const itemsWithIds = q.items.map(item => ({ ...item }));
-    const shuffled = shuffleArray(itemsWithIds);
-    q.items = shuffled;
+  
+  // DIAGNOSTIC: Log type field AFTER randomization
+  if (q.id === '1201-1078') {
+    console.log('[DIAGNOSTIC] randomizeQuestionOptions AFTER randomization:', {
+      id: q.id,
+      type: q.type,
+      correctAnswerLength: Array.isArray(q.correctAnswer) ? q.correctAnswer.length : 'N/A',
+      correctAnswer: q.correctAnswer
+    });
   }
   
   return q;
@@ -1183,7 +1256,7 @@ function updateNavigator() {
     const cell = document.getElementById('nav-' + idx);
     if (!cell) return;
     
-    cell.classList.remove('answered', 'incorrect', 'flagged', 'locked', 'current');
+    cell.classList.remove('answered', 'incorrect', 'flagged', 'locked', 'current', 'partial');
     
     if (idx === appState.currentQuestionIndex) {
       cell.classList.add('current');
@@ -1208,7 +1281,20 @@ function updateNavigator() {
       } else {
         // For MC, multi-select, or validated drag-drop
         const isCorrect = checkAnswerCorrect(q, userAnswer);
-        if (isCorrect) {
+        
+        if (typeof isCorrect === 'number') {
+          // Multi-select scoring: 100 = green, 50 = yellow, 0 = red
+          if (isCorrect === 100) {
+            cell.classList.add('answered');  // Green
+            console.log(`[updateNavigator] Q${idx}: CORRECT 100% (green, locked)`);
+          } else if (isCorrect === 50) {
+            cell.classList.add('partial');  // Yellow (partial credit)
+            console.log(`[updateNavigator] Q${idx}: PARTIAL 50% (yellow, locked)`);
+          } else if (isCorrect === 0) {
+            cell.classList.add('incorrect');  // Red
+            console.log(`[updateNavigator] Q${idx}: INCORRECT 0% (red, locked)`);
+          }
+        } else if (isCorrect === true) {
           cell.classList.add('answered');  // Green
           console.log(`[updateNavigator] Q${idx}: CORRECT (green, locked)`);
         } else {
@@ -1305,10 +1391,34 @@ function loadQuestion(index) {
 
 // Render multiple choice
 function renderMultipleChoice(question, container, questionIndex) {
+  // DIAGNOSTIC: Log at entry point
+  if (question.id === '1201-1078') {
+    console.log('[DIAGNOSTIC] renderMultipleChoice ENTRY for 1201-1078:', {
+      id: question.id,
+      type: question.type,
+      correctAnswerLength: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
+      correctAnswer: question.correctAnswer
+    });
+  }
+  
   // Derive isMulti from the type field, with a fallback to check correctAnswer length.
   // This guards against stale localStorage data where the type field may be missing.
   const isMulti = question.type === 'multi' ||
     (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
+  
+  // DIAGNOSTIC: Log when fallback detection is used
+  if (question.id === '1201-1078') {
+    const usingFallback = !question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1;
+    console.log('[DIAGNOSTIC] renderMultipleChoice isMulti derivation for 1201-1078:', {
+      question_type_exists: !!question.type,
+      question_type_value: question.type,
+      correctAnswer_is_array: Array.isArray(question.correctAnswer),
+      correctAnswer_length: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
+      using_fallback_detection: usingFallback,
+      final_isMulti: isMulti
+    });
+  }
+  
   const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
   
   // Check if this question is locked (answered but not flagged)
@@ -1774,7 +1884,39 @@ function updateTimerDisplay() {
   }
 }
 
-// Check answer correctness
+// Compute multi-select partial credit score (100/50/0)
+// Returns: 100 if perfect match, 50 if partial/mixed, 0 if no matches
+function computeMultiSelectScore(userAnswers, correctAnswers) {
+  if (!Array.isArray(userAnswers) || userAnswers.length === 0) {
+    return 0; // No answers selected
+  }
+  
+  if (!Array.isArray(correctAnswers) || correctAnswers.length === 0) {
+    return 0; // No correct answers defined
+  }
+  
+  // Count matches (user selections that are in correctAnswers)
+  const matches = userAnswers.filter(answer => correctAnswers.includes(answer)).length;
+  
+  // Count wrong selections (user selections that are NOT in correctAnswers)
+  const wrong = userAnswers.filter(answer => !correctAnswers.includes(answer)).length;
+  
+  // Perfect match: all user selections are correct AND all correct answers were selected
+  if (matches === correctAnswers.length && wrong === 0) {
+    return 100;
+  }
+  
+  // No matches: either no correct answers selected OR only wrong answers selected
+  if (matches === 0) {
+    return 0;
+  }
+  
+  // Partial match: some correct answers selected, or some wrong answers mixed in
+  // This covers: some right + missing some right, or some right + some wrong
+  return 50;
+}
+
+// Check answer correctness (returns boolean for MC, number 0/50/100 for multi-select)
 function checkAnswerCorrect(question, userAnswer) {
   if (userAnswer === null || userAnswer === undefined) {
     return false;
@@ -1792,15 +1934,14 @@ function checkAnswerCorrect(question, userAnswer) {
     return isCorrect;
   } else if (isMultiType) {
     // Multi-select: userAnswer is array of option texts (strings)
+    // Now returns score (0, 50, or 100) instead of boolean
     if (!Array.isArray(userAnswer)) {
-      console.log(`[checkAnswerCorrect] MULTI: userAnswer not array, returning false`);
-      return false;
+      console.log(`[checkAnswerCorrect] MULTI: userAnswer not array, returning 0`);
+      return 0;
     }
-    const correctOptions = question.correctAnswer.slice().sort();
-    const userSelected = userAnswer.slice().sort();
-    const isCorrect = JSON.stringify(correctOptions) === JSON.stringify(userSelected);
-    console.log(`[checkAnswerCorrect] MULTI: user=[${userSelected}], correct=[${correctOptions}] -> ${isCorrect}`);
-    return isCorrect;
+    const score = computeMultiSelectScore(userAnswer, question.correctAnswer);
+    console.log(`[checkAnswerCorrect] MULTI: user=[${userAnswer}], correct=[${question.correctAnswer}] -> score=${score}`);
+    return score;
   } else if (question.type === 'drag_drop') {
     for (let zone of question.dropZones) {
       const placed = userAnswer[zone.id] || [];
@@ -1824,29 +1965,47 @@ function submitExam() {
   clearInterval(appState.timerInterval);
   
   // Calculate results
-  let correct = 0;
-  let incorrect = 0;
+  let perfect = 0;    // 100% correct
+  let partial = 0;    // 50% partial credit
+  let incorrect = 0;  // 0% wrong (includes 0 score from multi-select)
   let unanswered = 0;
   
   appState.questions.forEach((q, idx) => {
     if (appState.answers[idx] === undefined) {
       unanswered++;
-    } else if (checkAnswerCorrect(q, appState.answers[idx])) {
-      correct++;
     } else {
-      incorrect++;
+      const result = checkAnswerCorrect(q, appState.answers[idx]);
+      
+      if (typeof result === 'number') {
+        // Multi-select scoring
+        if (result === 100) {
+          perfect++;
+        } else if (result === 50) {
+          partial++;
+        } else if (result === 0) {
+          incorrect++;
+        }
+      } else if (result === true) {
+        // MC or drag-drop correct
+        perfect++;
+      } else {
+        // MC or drag-drop incorrect
+        incorrect++;
+      }
     }
   });
   
-  // Calculate score
-  const rawScore = (correct / appState.questions.length) * 100;
+  // For binary pass/fail: treat 50% as wrong (don't count toward passing score)
+  const binaryCorrect = perfect;  // Only perfect scores count toward pass
+  const rawScore = (binaryCorrect / appState.questions.length) * 100;
   const exam = window.questionBank.exams[appState.examCode];
   const scaledScore = Math.round((rawScore / 100) * (exam.maxScore - exam.minScore) + exam.minScore);
   const passed = scaledScore >= exam.passingScore;
   
   // Store results data
   const examResults = {
-    correct: correct,
+    perfect: perfect,
+    partial: partial,
     incorrect: incorrect,
     unanswered: unanswered,
     scaledScore: scaledScore,
@@ -1861,7 +2020,8 @@ function submitExam() {
   
   // Save to localStorage
   localStorage.setItem('aplus_exam_results', JSON.stringify({
-    correct: correct,
+    perfect: perfect,
+    partial: partial,
     incorrect: incorrect,
     unanswered: unanswered,
     scaledScore: scaledScore,
@@ -1885,7 +2045,8 @@ function showCompletionModal() {
 function displayExamResults(results) {
   document.getElementById('scaledScore').textContent = results.scaledScore;
   document.getElementById('passingScore').textContent = results.passingScore;
-  document.getElementById('rCorrect').textContent = results.correct;
+  document.getElementById('rPerfect').textContent = results.perfect;
+  document.getElementById('rPartial').textContent = results.partial;
   document.getElementById('rIncorrect').textContent = results.incorrect;
   document.getElementById('rUnanswered').textContent = results.unanswered;
   
@@ -1926,23 +2087,38 @@ function buildReviewList() {
   
   reviewPaginationState.totalItems = appState.questions.length;
   reviewPaginationState.currentPage = 0;
-  reviewPaginationState.currentFilter = 'correct';
+  reviewPaginationState.currentFilter = 'perfect';
   
-  // Update visual state to show 'correct' as active
+  // Update visual state to show 'perfect' as active
   document.getElementById('statCorrect').classList.add('active');
+  document.getElementById('statPartial').classList.remove('active');
   document.getElementById('statIncorrect').classList.remove('active');
   document.getElementById('statUnanswered').classList.remove('active');
   
-  // Count questions by type
-  let correctCount = 0, incorrectCount = 0, unansweredCount = 0;
+  // Count questions by score category
+  let perfectCount = 0, partialCount = 0, incorrectCount = 0, unansweredCount = 0;
   appState.questions.forEach((q, idx) => {
-    const isAnswered = appState.answers[idx] !== undefined;
-    if (!isAnswered) {
+    const answer = appState.answers[idx];
+    const isUnanswered = answer === undefined;
+    
+    if (isUnanswered) {
       unansweredCount++;
-    } else if (checkAnswerCorrect(q, appState.answers[idx])) {
-      correctCount++;
     } else {
-      incorrectCount++;
+      const result = checkAnswerCorrect(q, answer);
+      if (typeof result === 'number') {
+        // Multi-select score
+        if (result === 100) {
+          perfectCount++;
+        } else if (result === 50) {
+          partialCount++;
+        } else {
+          incorrectCount++;
+        }
+      } else if (result === true) {
+        perfectCount++;
+      } else {
+        incorrectCount++;
+      }
     }
   });
   
@@ -1965,7 +2141,8 @@ function filterReview(type) {
   reviewPaginationState.currentPage = 0;
   
   // Update active states
-  document.getElementById('statCorrect').classList.toggle('active', type === 'correct');
+  document.getElementById('statCorrect').classList.toggle('active', type === 'perfect');
+  document.getElementById('statPartial').classList.toggle('active', type === 'partial');
   document.getElementById('statIncorrect').classList.toggle('active', type === 'incorrect');
   document.getElementById('statUnanswered').classList.toggle('active', type === 'unanswered');
   
@@ -1980,14 +2157,29 @@ function renderReviewPage() {
   const filteredIndices = [];
   appState.questions.forEach((q, idx) => {
     const answer = appState.answers[idx];
-    const isCorrect = checkAnswerCorrect(q, answer);
+    const result = checkAnswerCorrect(q, answer);
     const isUnanswered = answer === undefined;
     
-    if (reviewPaginationState.currentFilter === 'correct' && isCorrect && !isUnanswered) {
-      filteredIndices.push(idx);
-    } else if (reviewPaginationState.currentFilter === 'incorrect' && !isCorrect && !isUnanswered) {
-      filteredIndices.push(idx);
-    } else if (reviewPaginationState.currentFilter === 'unanswered' && isUnanswered) {
+    // Determine score category
+    let scoreCategory = 'unanswered';
+    if (!isUnanswered) {
+      if (typeof result === 'number') {
+        // Multi-select score
+        if (result === 100) {
+          scoreCategory = 'perfect';
+        } else if (result === 50) {
+          scoreCategory = 'partial';
+        } else {
+          scoreCategory = 'incorrect';
+        }
+      } else if (result === true) {
+        scoreCategory = 'perfect';
+      } else {
+        scoreCategory = 'incorrect';
+      }
+    }
+    
+    if (reviewPaginationState.currentFilter === scoreCategory) {
       filteredIndices.push(idx);
     }
   });
@@ -2008,15 +2200,40 @@ function renderReviewPage() {
     const idx = filteredIndices[i];
     const q = appState.questions[idx];
     const answer = appState.answers[idx];
-    const isCorrect = checkAnswerCorrect(q, answer);
+    const result = checkAnswerCorrect(q, answer);
     const isUnanswered = answer === undefined;
     
+    // Determine score category for border color
+    let borderColor = 'var(--muted)';  // Gray for unanswered
+    let scoreLabel = 'Unanswered';
+    
+    if (!isUnanswered) {
+      if (typeof result === 'number') {
+        if (result === 100) {
+          borderColor = 'var(--green)';
+          scoreLabel = '100% Correct';
+        } else if (result === 50) {
+          borderColor = 'var(--amber)';
+          scoreLabel = '50% Partial';
+        } else {
+          borderColor = 'var(--red)';
+          scoreLabel = '0% Incorrect';
+        }
+      } else if (result === true) {
+        borderColor = 'var(--green)';
+        scoreLabel = '100% Correct';
+      } else {
+        borderColor = 'var(--red)';
+        scoreLabel = '0% Incorrect';
+      }
+    }
+    
     const item = document.createElement('div');
-    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + (isUnanswered ? 'var(--muted)' : isCorrect ? 'var(--green)' : 'var(--red)') + '; border-radius: 8px; padding: 16px; margin-bottom: 12px;';
+    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + borderColor + '; border-radius: 8px; padding: 16px; margin-bottom: 12px;';
     
     const header = document.createElement('div');
-    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 8px;';
-    header.textContent = 'Q' + (idx + 1) + ' • ' + q.domain;
+    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 8px; display: flex; justify-content: space-between;';
+    header.innerHTML = '<span>Q' + (idx + 1) + ' • ' + q.domain + '</span><span style="font-weight: 600; color: ' + borderColor + ';">' + scoreLabel + '</span>';
     
     const stem = document.createElement('div');
     stem.style.cssText = 'font-weight: 600; margin-bottom: 10px; font-size: 14px;';
@@ -2219,3 +2436,4 @@ function backToMenu() {
 
 </body>
 </html>
+
