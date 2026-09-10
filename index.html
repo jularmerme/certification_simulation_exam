@@ -361,11 +361,11 @@
     
     .btn.primary:hover {
       background: var(--navy2);
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
     }
     
     .btn.primary:active {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
     }
     
     .btn.danger {
@@ -393,7 +393,7 @@
     }
     
     .btn.flag:hover {
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
       background: rgba(212, 175, 55, 0.1);
     }
     
@@ -402,14 +402,14 @@
       color: #fff;
       border-color: var(--amber);
       transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+      box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
     }
     
     body.dark-theme .btn.flag.active {
       background: var(--amber);
       color: #000;
       border-color: var(--amber);
-      box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+      box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
     }
     
     .btn-save {
@@ -421,11 +421,11 @@
     
     .btn-save:hover {
       background: #059669;
-      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
     }
     
     .btn-save:active {
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
     }
     
     .btn-exit {
@@ -437,11 +437,11 @@
     
     .btn-exit:hover {
       background: #e53e3e;
-      box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
     }
     
     .btn-exit:active {
-      box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
     }
     
     /* EXAM SCREEN */
@@ -1851,7 +1851,7 @@ function renderDragDrop(question, container, questionIndex) {
   leftColumn.appendChild(leftTitle);
   
   const itemsDiv = document.createElement('div');
-  itemsDiv.style.cssText = 'display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #f7f9fc; border: 2px solid var(--border); border-radius: 8px; flex: 1; justify-content: flex-start;';
+  itemsDiv.style.cssText = 'display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #1a1f2e; border: 2px solid var(--border); border-radius: 8px; flex: 1; justify-content: flex-start;';
   itemsDiv.id = 'items-' + questionIndex;
   
   // Add ondrop to available options container so items can be dragged back
@@ -1877,13 +1877,13 @@ function renderDragDrop(question, container, questionIndex) {
   itemsDiv.ondragover = (e) => {
     e.preventDefault();
     e.dataTransfer.dropEffect = 'move';
-    itemsDiv.style.backgroundColor = '#e3f2fd';
-    itemsDiv.style.borderColor = '#0f2540';
+    itemsDiv.style.backgroundColor = '#252d3d';
+    itemsDiv.style.borderColor = '#3b82f6';
   };
   
   itemsDiv.ondragleave = () => {
-    itemsDiv.style.backgroundColor = '#f7f9fc';
-    itemsDiv.style.borderColor = '#dde2e8';
+    itemsDiv.style.backgroundColor = '#1a1f2e';
+    itemsDiv.style.borderColor = '#2d3748';
   };
   
   question.items.forEach(item => {
@@ -1935,7 +1935,7 @@ function renderDragDrop(question, container, questionIndex) {
   
   question.dropZones.forEach((zone, zoneIdx) => {
     const zoneDiv = document.createElement('div');
-    zoneDiv.style.cssText = 'padding: 14px; background: #f7f9fc; border: 2px dashed var(--border); border-radius: 8px; flex: 1; min-height: 80px; transition: all 0.2s; display: flex; flex-direction: column;';
+    zoneDiv.style.cssText = 'padding: 14px; background: #1a1f2e; border: 2px dashed var(--border); border-radius: 8px; flex: 1; min-height: 80px; transition: all 0.2s; display: flex; flex-direction: column;';
     zoneDiv.id = 'zone-' + zone.id;
     
     const label = document.createElement('div');
@@ -2000,13 +2000,13 @@ function renderDragDrop(question, container, questionIndex) {
     zoneDiv.ondragover = (e) => {
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
-      zoneDiv.style.backgroundColor = '#e8f5e9';
-      zoneDiv.style.borderColor = '#1b7a3d';
+      zoneDiv.style.backgroundColor = '#252d3d';
+      zoneDiv.style.borderColor = '#2ecc71';
     };
     
     zoneDiv.ondragleave = () => {
-      zoneDiv.style.backgroundColor = '#f7f9fc';
-      zoneDiv.style.borderColor = '#dde2e8';
+      zoneDiv.style.backgroundColor = '#1a1f2e';
+      zoneDiv.style.borderColor = '#2d3748';
     };
     
     zonesContainer.appendChild(zoneDiv);
