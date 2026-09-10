@@ -327,7 +327,7 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: 600;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
       color: var(--text);
     }
     
@@ -339,7 +339,7 @@
     
     .btn:hover {
       background: var(--bg);
-      transition: background-color 0.2s ease;
+      transition: all 0.3s ease;
     }
     
     body.dark-theme .btn:hover {
@@ -356,18 +356,23 @@
       color: #fff;
       border-color: var(--navy);
       flex: 1;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
     }
     
     .btn.primary:hover {
       background: var(--navy2);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+    }
+    
+    .btn.primary:active {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
     }
     
     .btn.danger {
       background: var(--accent);
       color: #fff;
       border-color: var(--accent);
-      transition: all 0.2s;
+      transition: all 0.3s ease;
     }
     
     .btn.danger:hover {
@@ -375,49 +380,68 @@
     }
     
     .btn.flag {
-      background: #fff8e8;
-      border-color: #f0d9a6;
-      color: var(--amber);
-      transition: all 0.2s;
+      background: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      transition: all 0.3s ease;
     }
     
     body.dark-theme .btn.flag {
-      background: rgba(243, 156, 18, 0.2);
-      border-color: var(--amber);
-      color: var(--amber);
+      background: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+    }
+    
+    .btn.flag:hover {
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      background: rgba(212, 175, 55, 0.1);
     }
     
     .btn.flag.active {
       background: var(--amber);
       color: #fff;
-      transition: all 0.2s;
+      border-color: var(--amber);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
     }
     
     body.dark-theme .btn.flag.active {
       background: var(--amber);
       color: #000;
+      border-color: var(--amber);
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
     }
     
     .btn-save {
-      background: var(--navy);
+      background: #10b981;
       color: #fff;
-      border-color: var(--navy);
-      transition: all 0.2s;
+      border-color: #10b981;
+      transition: all 0.3s ease;
     }
     
     .btn-save:hover {
-      background: var(--navy2);
+      background: #059669;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+    }
+    
+    .btn-save:active {
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
     }
     
     .btn-exit {
-      background: var(--accent);
+      background: #ef4444;
       color: #fff;
-      border-color: var(--accent);
-      transition: all 0.2s;
+      border-color: #ef4444;
+      transition: all 0.3s ease;
     }
     
     .btn-exit:hover {
-      background: var(--accent-dark);
+      background: #e53e3e;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+    }
+    
+    .btn-exit:active {
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
     }
     
     /* EXAM SCREEN */
