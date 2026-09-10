@@ -4,7 +4,7 @@
       "name": "CompTIA A+ Core 1",
       "code": "220-1201",
       "description": "Entry-level certification covering mobile devices, networking, hardware, virtualization, and troubleshooting.",
-      "questions": 165,
+      "questions": 215,
       "timeLimit": 90,
       "passingScore": 675,
       "maxScore": 900,
@@ -3191,6 +3191,882 @@
           ],
           "correctAnswer": [
             "Change the printer default output tray"
+          ]
+        },
+        {
+          "id": "1201-PT21-001",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "While sideloading an app onto an Android phone for testing purposes, a user receives a notification that the installation has been blocked due to security settings. What must be changed to proceed with the installation?",
+          "explanation": "Unknown sources setting allows installation of apps outside Play Store.",
+          "options": [
+            "Grant administrator privileges to the app",
+            "Disable app verification in Google Play settings",
+            "Enable the Install unknown apps or Unknown sources setting",
+            "Turn on developer options in system settings"
+          ],
+          "correctAnswer": [
+            "Enable the Install unknown apps or Unknown sources setting"
+          ]
+        },
+        {
+          "id": "1201-PT21-002",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A company MDM administrator receives multiple tickets from users stating that they cannot install updates for existing apps or download new ones. Which of the following is the most likely reason?",
+          "explanation": "MDM policies restrict app installation and updates.",
+          "options": [
+            "App store outage",
+            "Pending security updates",
+            "Compatibility issues",
+            "Policy enforcement"
+          ],
+          "correctAnswer": [
+            "Policy enforcement"
+          ]
+        },
+        {
+          "id": "1201-PT21-003",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A user reports the stylus has stopped responding on their touchscreen device. What is the first practical troubleshooting step a technician should try?",
+          "explanation": "Check stylus battery status first - most common cause.",
+          "options": [
+            "Reboot the device to reset touch inputs",
+            "Clean the screen protector with a soft cloth",
+            "Reset the device Wi-Fi connection",
+            "Verify the stylus battery status"
+          ],
+          "correctAnswer": [
+            "Verify the stylus battery status"
+          ]
+        },
+        {
+          "id": "1201-PT21-004",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A device stylus functions intermittently, while the touchscreen responds normally to finger input. Which troubleshooting action should be considered first?",
+          "explanation": "Stylus-specific issue suggests hardware wear or damage.",
+          "options": [
+            "Attempt to reconnect the stylus to the device",
+            "Recalibrate the touchscreen for proper alignment",
+            "Inspect the stylus tip for damage or wear",
+            "Test the input after removing the screen protector"
+          ],
+          "correctAnswer": [
+            "Inspect the stylus tip for damage or wear"
+          ]
+        },
+        {
+          "id": "1201-PT21-005",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A user attempts to connect a Bluetooth stylus to their tablet but it does not appear in the device Bluetooth list. What device mode should the user confirm the stylus is in?",
+          "explanation": "Stylus must be in pairing mode to appear in Bluetooth list.",
+          "options": [
+            "Input mode",
+            "Discovery mode",
+            "Sync mode",
+            "Pairing mode"
+          ],
+          "correctAnswer": [
+            "Pairing mode"
+          ]
+        },
+        {
+          "id": "1201-PT21-006",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What factor(s) can contribute to unexpected performance drops on a mobile device? (Select all that apply)",
+          "explanation": "Multiple factors degrade mobile performance.",
+          "options": [
+            "Outdated operating system software",
+            "Too many background applications",
+            "Enabled battery saver mode",
+            "Malware consuming system resources",
+            "Excessive app data and cache buildup"
+          ],
+          "correctAnswer": [
+            "Outdated operating system software",
+            "Too many background applications",
+            "Malware consuming system resources",
+            "Excessive app data and cache buildup"
+          ]
+        },
+        {
+          "id": "1201-PT21-007",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A user complains their mobile phone has become increasingly slow, with apps taking a long time to open and frequently freezing. Which steps should a technician try first? (Select 2)",
+          "explanation": "Clear cache and remove unused apps are immediate performance fixes.",
+          "options": [
+            "Review battery usage by apps",
+            "Clear cached data",
+            "Run a benchmark test on the device",
+            "Uninstall unused apps",
+            "Enable power-saving mode"
+          ],
+          "correctAnswer": [
+            "Clear cached data",
+            "Uninstall unused apps"
+          ]
+        },
+        {
+          "id": "1201-PT21-008",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A mobile device experiences a sudden, significant drop in performance, accompanied by unusual pop-ups and battery drain. What is the most likely cause of the problem?",
+          "explanation": "Symptoms indicate malware infection.",
+          "options": [
+            "Low battery health",
+            "Excessive push notifications",
+            "Disabled pop-up blocker",
+            "Malware infection"
+          ],
+          "correctAnswer": [
+            "Malware infection"
+          ]
+        },
+        {
+          "id": "1201-PT21-009",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "When applications take an unusually long time to launch on a mobile device, which factors are typically the most immediate and direct causes? (Select 2)",
+          "explanation": "CPU and memory are critical for app launch performance.",
+          "options": [
+            "Device overheating from prolonged use",
+            "Heavy load on the CPU",
+            "Real-time encryption and decryption of data",
+            "Device storage nearing full capacity",
+            "Insufficient memory"
+          ],
+          "correctAnswer": [
+            "Heavy load on the CPU",
+            "Insufficient memory"
+          ]
+        },
+        {
+          "id": "1201-PT21-010",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Wireless connectivity issues can be caused by physical obstructions and electronic interference. Dense objects like heavy household items or large appliances can weaken Wi-Fi signals, especially when using the 5 GHz frequency, which has a shorter range and weaker penetration through walls and obstacles. Positioning the router in a central, elevated, and open location helps improve coverage. Electronic interference from devices such as microwaves, cordless phones, or Bluetooth equipment can disrupt signals, particularly on the 2.4 GHz band.",
+          "explanation": "All statements about wireless interference are accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT21-011",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "When troubleshooting intermittent wireless connectivity, what tool can a technician use to measure signal strength and detect potential dead zones?",
+          "explanation": "Wi-Fi analyzer measures signal strength and coverage.",
+          "options": [
+            "Bandwidth tester",
+            "Power level controls",
+            "Wi-Fi analyzer",
+            "Network mapper"
+          ],
+          "correctAnswer": [
+            "Wi-Fi analyzer"
+          ]
+        },
+        {
+          "id": "1201-PT21-012",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user laptop connects to the wireless network, but the connection is unstable and frequently drops, even after forcing reconnection and restarting the system. Other nearby devices on the same network are functioning normally. Which action should the technician take to resolve the problem?",
+          "explanation": "Device-specific issue suggests driver problem.",
+          "options": [
+            "Scan the laptop for malware and viruses",
+            "Check the router logs for unusual activity",
+            "Update or reinstall the laptop wireless adapter driver",
+            "Connect to a different Wi-Fi network"
+          ],
+          "correctAnswer": [
+            "Update or reinstall the laptop wireless adapter driver"
+          ]
+        },
+        {
+          "id": "1201-PT21-013",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which troubleshooting steps can help resolve intermittent wireless connectivity caused by external interference? (Select 2)",
+          "explanation": "Band/channel switching reduces interference effects.",
+          "options": [
+            "Restarting the wireless access point",
+            "Disabling SSID broadcast",
+            "Reducing the number of connected devices",
+            "Switching frequency bands",
+            "Changing the wireless channel"
+          ],
+          "correctAnswer": [
+            "Switching frequency bands",
+            "Changing the wireless channel"
+          ]
+        },
+        {
+          "id": "1201-PT21-014",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "During a network performance audit, a technician observes that several wired workstations are consistently negotiating connections at 100 Mbps, despite having Gigabit Ethernet NICs and being connected to a Gigabit switch. What is the most probable physical layer cause for this speed limitation?",
+          "explanation": "Cat5 cabling cannot support Gigabit speeds.",
+          "options": [
+            "Outdated firmware on the network switch",
+            "Excessive network traffic causing congestion",
+            "Older cabling type not supporting higher transfer rates",
+            "Switch port speed manually set to 100 Mbps"
+          ],
+          "correctAnswer": [
+            "Older cabling type not supporting higher transfer rates"
+          ]
+        },
+        {
+          "id": "1201-PT21-015",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which symptoms are most likely to indicate that slow network speeds are caused by network congestion rather than a hardware or software issue? (Select 2)",
+          "explanation": "Congestion affects multiple devices during peak times.",
+          "options": [
+            "The issue occurs intermittently without a clear pattern",
+            "The slowness affects only one specific device",
+            "The issue results from throttling imposed by the ISP",
+            "The slowness is noticeable across multiple devices",
+            "The issue occurs during specific, busy periods",
+            "The slowness affects only specific types of network traffic"
+          ],
+          "correctAnswer": [
+            "The slowness is noticeable across multiple devices",
+            "The issue occurs during specific, busy periods"
+          ]
+        },
+        {
+          "id": "1201-PT21-016",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A user notices their online gaming experience suffers from high network latency and lag spikes. What common internal factors on their computer could explain these symptoms, particularly if they have many installed programs? (Select 2)",
+          "explanation": "Background processes and bandwidth competition cause latency.",
+          "options": [
+            "Internal hardware components are overheating, causing frame drops",
+            "Ongoing background processes or updates are slowing down the network connection",
+            "Remote game servers are overloaded with high traffic",
+            "Video graphics options in game are set way above recommended settings",
+            "Other, currently active applications are consuming bandwidth"
+          ],
+          "correctAnswer": [
+            "Ongoing background processes or updates are slowing down the network connection",
+            "Other, currently active applications are consuming bandwidth"
+          ]
+        },
+        {
+          "id": "1201-PT21-017",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the most likely cause of limited network connectivity if a Windows machine is assigned an IP address in the 169.254.x.x range?",
+          "explanation": "APIPA addresses indicate DHCP failure.",
+          "options": [
+            "DNS",
+            "DHCP",
+            "NAT",
+            "DDoS"
+          ],
+          "correctAnswer": [
+            "DHCP"
+          ]
+        },
+        {
+          "id": "1201-PT21-018",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "An administrator is troubleshooting a computer showing Limited Connectivity. The network icon displays an X symbol. Which actions should the administrator take first? (Select 2)",
+          "explanation": "Check adapter and physical connection first.",
+          "options": [
+            "Renew the IP address via command line",
+            "Verify the network adapter status",
+            "Run the built-in network diagnostics tool",
+            "Check the physical network connection",
+            "Update the network adapter driver"
+          ],
+          "correctAnswer": [
+            "Verify the network adapter status",
+            "Check the physical network connection"
+          ]
+        },
+        {
+          "id": "1201-PT21-019",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network admin can successfully ping a remote host by its IP address but cannot do so by its domain name. What is the most probable cause of this issue?",
+          "explanation": "Name resolution failure indicates DNS problem.",
+          "options": [
+            "NIC",
+            "ICMP",
+            "DNS",
+            "DHCP"
+          ],
+          "correctAnswer": [
+            "DNS"
+          ]
+        },
+        {
+          "id": "1201-PT21-020",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is jitter in the context of network performance?",
+          "explanation": "Jitter is inconsistent packet timing.",
+          "options": [
+            "Loss of data packets",
+            "Signal attenuation",
+            "Variation in packet delay",
+            "Packet fragmentation"
+          ],
+          "correctAnswer": [
+            "Variation in packet delay"
+          ]
+        },
+        {
+          "id": "1201-PT21-021",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which network application types are most sensitive to jitter?",
+          "explanation": "Real-time apps require consistent timing.",
+          "options": [
+            "Web browsing",
+            "Email",
+            "File transfer",
+            "Real-time"
+          ],
+          "correctAnswer": [
+            "Real-time"
+          ]
+        },
+        {
+          "id": "1201-PT21-022",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "During a VoIP call, a user hears their own voice echoing back to them with a slight delay. Which network performance issue is this symptom most indicative of?",
+          "explanation": "Echo with delay is characteristic of high latency.",
+          "options": [
+            "High latency",
+            "Jitter",
+            "Packet loss",
+            "Audio syncing"
+          ],
+          "correctAnswer": [
+            "High latency"
+          ]
+        },
+        {
+          "id": "1201-PT21-023",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the most likely cause of choppy or distorted audio during a VoIP call?",
+          "explanation": "Jitter causes audio distortion in real-time calls.",
+          "options": [
+            "Outdated VoIP software",
+            "Jitter",
+            "Faulty microphone hardware",
+            "Corrupted audio codec"
+          ],
+          "correctAnswer": [
+            "Jitter"
+          ]
+        },
+        {
+          "id": "1201-PT21-024",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of a jitter buffer in VoIP systems?",
+          "explanation": "Jitter buffers compensate for packet timing variation.",
+          "options": [
+            "To compress audio data",
+            "To improve call stability",
+            "To reduce packet loss",
+            "To even out packet delays"
+          ],
+          "correctAnswer": [
+            "To even out packet delays"
+          ]
+        },
+        {
+          "id": "1201-PT21-025",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "The term Port flapping refers to a condition where a network port light, typically on a switch or router, rapidly alternates between up and down states. In such cases, the port status LED may blink erratically as it continuously loses and regains connection.",
+          "explanation": "Port flapping definition is accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT21-001",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "While sideloading an app onto an Android phone for testing purposes, a user receives a notification that the installation has been blocked due to security settings. What must be changed to proceed with the installation?",
+          "explanation": "Unknown sources setting allows installation of apps outside Play Store.",
+          "options": [
+            "Grant administrator privileges to the app",
+            "Disable app verification in Google Play settings",
+            "Enable the Install unknown apps or Unknown sources setting",
+            "Turn on developer options in system settings"
+          ],
+          "correctAnswer": [
+            "Enable the Install unknown apps or Unknown sources setting"
+          ]
+        },
+        {
+          "id": "1201-PT21-002",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A company MDM administrator receives multiple tickets from users stating that they cannot install updates for existing apps or download new ones. Which of the following is the most likely reason?",
+          "explanation": "MDM policies restrict app installation and updates.",
+          "options": [
+            "App store outage",
+            "Pending security updates",
+            "Compatibility issues",
+            "Policy enforcement"
+          ],
+          "correctAnswer": [
+            "Policy enforcement"
+          ]
+        },
+        {
+          "id": "1201-PT21-003",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A user reports the stylus has stopped responding on their touchscreen device. What is the first practical troubleshooting step a technician should try?",
+          "explanation": "Check stylus battery status first - most common cause.",
+          "options": [
+            "Reboot the device to reset touch inputs",
+            "Clean the screen protector with a soft cloth",
+            "Reset the device Wi-Fi connection",
+            "Verify the stylus battery status"
+          ],
+          "correctAnswer": [
+            "Verify the stylus battery status"
+          ]
+        },
+        {
+          "id": "1201-PT21-004",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A device stylus functions intermittently, while the touchscreen responds normally to finger input. Which troubleshooting action should be considered first?",
+          "explanation": "Stylus-specific issue suggests hardware wear or damage.",
+          "options": [
+            "Attempt to reconnect the stylus to the device",
+            "Recalibrate the touchscreen for proper alignment",
+            "Inspect the stylus tip for damage or wear",
+            "Test the input after removing the screen protector"
+          ],
+          "correctAnswer": [
+            "Inspect the stylus tip for damage or wear"
+          ]
+        },
+        {
+          "id": "1201-PT21-005",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A user attempts to connect a Bluetooth stylus to their tablet but it does not appear in the device Bluetooth list. What device mode should the user confirm the stylus is in?",
+          "explanation": "Stylus must be in pairing mode to appear in Bluetooth list.",
+          "options": [
+            "Input mode",
+            "Discovery mode",
+            "Sync mode",
+            "Pairing mode"
+          ],
+          "correctAnswer": [
+            "Pairing mode"
+          ]
+        },
+        {
+          "id": "1201-PT21-006",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "What factor(s) can contribute to unexpected performance drops on a mobile device? (Select all that apply)",
+          "explanation": "Multiple factors degrade mobile performance.",
+          "options": [
+            "Outdated operating system software",
+            "Too many background applications",
+            "Enabled battery saver mode",
+            "Malware consuming system resources",
+            "Excessive app data and cache buildup"
+          ],
+          "correctAnswer": [
+            "Outdated operating system software",
+            "Too many background applications",
+            "Malware consuming system resources",
+            "Excessive app data and cache buildup"
+          ]
+        },
+        {
+          "id": "1201-PT21-007",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A user complains their mobile phone has become increasingly slow, with apps taking a long time to open and frequently freezing. Which steps should a technician try first? (Select 2)",
+          "explanation": "Clear cache and remove unused apps are immediate performance fixes.",
+          "options": [
+            "Review battery usage by apps",
+            "Clear cached data",
+            "Run a benchmark test on the device",
+            "Uninstall unused apps",
+            "Enable power-saving mode"
+          ],
+          "correctAnswer": [
+            "Clear cached data",
+            "Uninstall unused apps"
+          ]
+        },
+        {
+          "id": "1201-PT21-008",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A mobile device experiences a sudden, significant drop in performance, accompanied by unusual pop-ups and battery drain. What is the most likely cause of the problem?",
+          "explanation": "Symptoms indicate malware infection.",
+          "options": [
+            "Low battery health",
+            "Excessive push notifications",
+            "Disabled pop-up blocker",
+            "Malware infection"
+          ],
+          "correctAnswer": [
+            "Malware infection"
+          ]
+        },
+        {
+          "id": "1201-PT21-009",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "When applications take an unusually long time to launch on a mobile device, which factors are typically the most immediate and direct causes? (Select 2)",
+          "explanation": "CPU and memory are critical for app launch performance.",
+          "options": [
+            "Device overheating from prolonged use",
+            "Heavy load on the CPU",
+            "Real-time encryption and decryption of data",
+            "Device storage nearing full capacity",
+            "Insufficient memory"
+          ],
+          "correctAnswer": [
+            "Heavy load on the CPU",
+            "Insufficient memory"
+          ]
+        },
+        {
+          "id": "1201-PT21-010",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Wireless connectivity issues can be caused by physical obstructions and electronic interference. Dense objects like heavy household items or large appliances can weaken Wi-Fi signals, especially when using the 5 GHz frequency, which has a shorter range and weaker penetration through walls and obstacles. Positioning the router in a central, elevated, and open location helps improve coverage. Electronic interference from devices such as microwaves, cordless phones, or Bluetooth equipment can disrupt signals, particularly on the 2.4 GHz band.",
+          "explanation": "All statements about wireless interference are accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT21-011",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "When troubleshooting intermittent wireless connectivity, what tool can a technician use to measure signal strength and detect potential dead zones?",
+          "explanation": "Wi-Fi analyzer measures signal strength and coverage.",
+          "options": [
+            "Bandwidth tester",
+            "Power level controls",
+            "Wi-Fi analyzer",
+            "Network mapper"
+          ],
+          "correctAnswer": [
+            "Wi-Fi analyzer"
+          ]
+        },
+        {
+          "id": "1201-PT21-012",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A user laptop connects to the wireless network, but the connection is unstable and frequently drops, even after forcing reconnection and restarting the system. Other nearby devices on the same network are functioning normally. Which action should the technician take to resolve the problem?",
+          "explanation": "Device-specific issue suggests driver problem.",
+          "options": [
+            "Scan the laptop for malware and viruses",
+            "Check the router logs for unusual activity",
+            "Update or reinstall the laptop wireless adapter driver",
+            "Connect to a different Wi-Fi network"
+          ],
+          "correctAnswer": [
+            "Update or reinstall the laptop wireless adapter driver"
+          ]
+        },
+        {
+          "id": "1201-PT21-013",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which troubleshooting steps can help resolve intermittent wireless connectivity caused by external interference? (Select 2)",
+          "explanation": "Band/channel switching reduces interference effects.",
+          "options": [
+            "Restarting the wireless access point",
+            "Disabling SSID broadcast",
+            "Reducing the number of connected devices",
+            "Switching frequency bands",
+            "Changing the wireless channel"
+          ],
+          "correctAnswer": [
+            "Switching frequency bands",
+            "Changing the wireless channel"
+          ]
+        },
+        {
+          "id": "1201-PT21-014",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "During a network performance audit, a technician observes that several wired workstations are consistently negotiating connections at 100 Mbps, despite having Gigabit Ethernet NICs and being connected to a Gigabit switch. What is the most probable physical layer cause for this speed limitation?",
+          "explanation": "Cat5 cabling cannot support Gigabit speeds.",
+          "options": [
+            "Outdated firmware on the network switch",
+            "Excessive network traffic causing congestion",
+            "Older cabling type not supporting higher transfer rates",
+            "Switch port speed manually set to 100 Mbps"
+          ],
+          "correctAnswer": [
+            "Older cabling type not supporting higher transfer rates"
+          ]
+        },
+        {
+          "id": "1201-PT21-015",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which symptoms are most likely to indicate that slow network speeds are caused by network congestion rather than a hardware or software issue? (Select 2)",
+          "explanation": "Congestion affects multiple devices during peak times.",
+          "options": [
+            "The issue occurs intermittently without a clear pattern",
+            "The slowness affects only one specific device",
+            "The issue results from throttling imposed by the ISP",
+            "The slowness is noticeable across multiple devices",
+            "The issue occurs during specific, busy periods",
+            "The slowness affects only specific types of network traffic"
+          ],
+          "correctAnswer": [
+            "The slowness is noticeable across multiple devices",
+            "The issue occurs during specific, busy periods"
+          ]
+        },
+        {
+          "id": "1201-PT21-016",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A user notices their online gaming experience suffers from high network latency and lag spikes. What common internal factors on their computer could explain these symptoms, particularly if they have many installed programs? (Select 2)",
+          "explanation": "Background processes and bandwidth competition cause latency.",
+          "options": [
+            "Internal hardware components are overheating, causing frame drops",
+            "Ongoing background processes or updates are slowing down the network connection",
+            "Remote game servers are overloaded with high traffic",
+            "Video graphics options in game are set way above recommended settings",
+            "Other, currently active applications are consuming bandwidth"
+          ],
+          "correctAnswer": [
+            "Ongoing background processes or updates are slowing down the network connection",
+            "Other, currently active applications are consuming bandwidth"
+          ]
+        },
+        {
+          "id": "1201-PT21-017",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the most likely cause of limited network connectivity if a Windows machine is assigned an IP address in the 169.254.x.x range?",
+          "explanation": "APIPA addresses indicate DHCP failure.",
+          "options": [
+            "DNS",
+            "DHCP",
+            "NAT",
+            "DDoS"
+          ],
+          "correctAnswer": [
+            "DHCP"
+          ]
+        },
+        {
+          "id": "1201-PT21-018",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "An administrator is troubleshooting a computer showing Limited Connectivity. The network icon displays an X symbol. Which actions should the administrator take first? (Select 2)",
+          "explanation": "Check adapter and physical connection first.",
+          "options": [
+            "Renew the IP address via command line",
+            "Verify the network adapter status",
+            "Run the built-in network diagnostics tool",
+            "Check the physical network connection",
+            "Update the network adapter driver"
+          ],
+          "correctAnswer": [
+            "Verify the network adapter status",
+            "Check the physical network connection"
+          ]
+        },
+        {
+          "id": "1201-PT21-019",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "A network admin can successfully ping a remote host by its IP address but cannot do so by its domain name. What is the most probable cause of this issue?",
+          "explanation": "Name resolution failure indicates DNS problem.",
+          "options": [
+            "NIC",
+            "ICMP",
+            "DNS",
+            "DHCP"
+          ],
+          "correctAnswer": [
+            "DNS"
+          ]
+        },
+        {
+          "id": "1201-PT21-020",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is jitter in the context of network performance?",
+          "explanation": "Jitter is inconsistent packet timing.",
+          "options": [
+            "Loss of data packets",
+            "Signal attenuation",
+            "Variation in packet delay",
+            "Packet fragmentation"
+          ],
+          "correctAnswer": [
+            "Variation in packet delay"
+          ]
+        },
+        {
+          "id": "1201-PT21-021",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which network application types are most sensitive to jitter?",
+          "explanation": "Real-time apps require consistent timing.",
+          "options": [
+            "Web browsing",
+            "Email",
+            "File transfer",
+            "Real-time"
+          ],
+          "correctAnswer": [
+            "Real-time"
+          ]
+        },
+        {
+          "id": "1201-PT21-022",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "During a VoIP call, a user hears their own voice echoing back to them with a slight delay. Which network performance issue is this symptom most indicative of?",
+          "explanation": "Echo with delay is characteristic of high latency.",
+          "options": [
+            "High latency",
+            "Jitter",
+            "Packet loss",
+            "Audio syncing"
+          ],
+          "correctAnswer": [
+            "High latency"
+          ]
+        },
+        {
+          "id": "1201-PT21-023",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the most likely cause of choppy or distorted audio during a VoIP call?",
+          "explanation": "Jitter causes audio distortion in real-time calls.",
+          "options": [
+            "Outdated VoIP software",
+            "Jitter",
+            "Faulty microphone hardware",
+            "Corrupted audio codec"
+          ],
+          "correctAnswer": [
+            "Jitter"
+          ]
+        },
+        {
+          "id": "1201-PT21-024",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is the primary purpose of a jitter buffer in VoIP systems?",
+          "explanation": "Jitter buffers compensate for packet timing variation.",
+          "options": [
+            "To compress audio data",
+            "To improve call stability",
+            "To reduce packet loss",
+            "To even out packet delays"
+          ],
+          "correctAnswer": [
+            "To even out packet delays"
+          ]
+        },
+        {
+          "id": "1201-PT21-025",
+          "domain": "5.0 Hardware and Network Troubleshooting",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "The term Port flapping refers to a condition where a network port light, typically on a switch or router, rapidly alternates between up and down states. In such cases, the port status LED may blink erratically as it continuously loses and regains connection.",
+          "explanation": "Port flapping definition is accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
           ]
         }
       ]
