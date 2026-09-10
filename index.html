@@ -891,6 +891,8 @@ let appState = {
   answers: {},
   flagged: new Set(),
   autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
+  
+  displayedQuestionIds: new Set(), // Track question IDs already displayed to prevent duplicates
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
   timerInterval: null,
   timeRemaining: 0,
@@ -969,7 +971,8 @@ function checkAndRestoreExamState() {
       appState.answers = state.answers || {};
       appState.flagged = new Set(state.flagged || []);
       appState.autoFlagged = new Set(state.autoFlagged || []);
-      appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
+      
+      appState.displayedQuestionIds = new Set(state.displayedQuestionIds || []);
       appState.timeRemaining = state.timeRemaining || 0;
       appState.examStartTime = state.examStartTime || Date.now();
       
@@ -1085,6 +1088,27 @@ function selectExam(examCode) {
   document.getElementById('introPassScore').textContent = passScore;
 }
 
+// Select unique questions ensuring no duplicates
+function selectUniqueQuestions(questionBank, count) {
+  const selected = [];
+  const seenIds = new Set();
+  const shuffled = shuffleArray([...questionBank]);
+  
+  for (const q of shuffled) {
+    if (selected.length >= count) break;
+    if (!seenIds.has(q.id)) {
+      selected.push(q);
+      seenIds.add(q.id);
+    }
+  }
+  
+  // If we don't have enough unique questions, log warning
+  if (selected.length < count) {
+    console.warn(\Requested \ unique questions but only \ available\);
+  }
+  
+  return selected;
+}
 // Start exam
 function startExam() {
   if (!appState.examCode) {
@@ -1103,8 +1127,8 @@ function startExam() {
   
   // Randomly select a subset of questions from the question bank
   // First shuffle all questions, then take the first N
-  const shuffledQuestions = shuffleArray([...exam.questionBank]);
-  const selectedQuestions = shuffledQuestions.slice(0, Math.min(questionsToSelect, shuffledQuestions.length));
+  // REMOVED: Using selectUniqueQuestions instead
+  const selectedQuestions = selectUniqueQuestions(exam.questionBank, questionsToSelect);
   
   // Randomize options within each selected question
   appState.questions = selectedQuestions.map((q, idx) => {
@@ -1317,6 +1341,9 @@ function loadQuestion(index) {
   
   appState.currentQuestionIndex = index;
   const question = appState.questions[index];
+  
+  // Track this question ID to prevent duplicates
+  appState.displayedQuestionIds.add(question.id);
   
   // Check if question is locked
   const isAnswered = appState.answers[index] !== undefined;
@@ -2436,4 +2463,7 @@ function backToMenu() {
 
 </body>
 </html>
+
+
+
 
