@@ -5,7 +5,7 @@
 /exam_assets/*.oxps
 /EXTRACTION_COMPLETE.txt
 /lesson_files_inventory.json
-/review_lessons_module_quiz
+/review_lessons_modules_quiz_pdf
 # Study and planning documents
 /CHEAT_SHEET.md
 /CHEAT_SHEET.pdf
@@ -13,3 +13,5 @@
 /PLAN_ONE_PAGER.pdf
 /STUDY_PLAN.md
 /STUDY_PLAN.pdf
+add_pt01.py
+test_write.py

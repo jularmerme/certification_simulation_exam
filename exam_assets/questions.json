@@ -4,7 +4,7 @@
       "name": "CompTIA A+ Core 1",
       "code": "220-1201",
       "description": "Entry-level certification covering mobile devices, networking, hardware, virtualization, and troubleshooting.",
-      "questions": 190,
+      "questions": 240,
       "timeLimit": 90,
       "passingScore": 675,
       "maxScore": 900,
@@ -3623,6 +3623,904 @@
           "difficulty": "easy",
           "stem": "The term Port flapping refers to a condition where a network port light, typically on a switch or router, rapidly alternates between up and down states. In such cases, the port status LED may blink erratically as it continuously loses and regains connection.",
           "explanation": "Port flapping definition is accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT01-001",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
+          "explanation": "Battery health monitoring involves tracking degradation and checking for physical issues.",
+          "options": [
+            "Always fully discharge the battery before recharging",
+            "Track battery health using built-in OS tools or third-party apps",
+            "Disable battery-saving features to get a more accurate reading of capacity loss",
+            "Monitor charging cycles and battery capacity degradation",
+            "Check for swelling, overheating, or failure to hold a charge"
+          ],
+          "correctAnswer": [
+            "Track battery health using built-in OS tools or third-party apps",
+            "Monitor charging cycles and battery capacity degradation",
+            "Check for swelling, overheating, or failure to hold a charge"
+          ]
+        },
+        {
+          "id": "1201-PT01-002",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Common battery types used in modern portable devices include: (Select 2 answers)",
+          "explanation": "Li-ion and LiPo are standard in modern devices; older types like Ni-Cd are obsolete.",
+          "options": [
+            "Nickel-Iron (Ni-Fe)",
+            "Lithium-ion (Li-ion)",
+            "Nickel-Metal Hydride (Ni-MH)",
+            "Lithium-ion Polymer (LiPo)",
+            "Nickel-Cadmium (Ni-Cd)"
+          ],
+          "correctAnswer": [
+            "Lithium-ion (Li-ion)",
+            "Lithium-ion Polymer (LiPo)"
+          ]
+        },
+        {
+          "id": "1201-PT01-003",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the steps listed below should be followed when replacing a mobile device battery? (Select 3 answers)",
+          "explanation": "Safe battery replacement requires compatibility, proper procedure, and disposal.",
+          "options": [
+            "Follow manufacturer guidelines for safe removal and installation",
+            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
+            "Use any available universal battery as long as it fits physically within the device",
+            "Charge the new battery to 100% immediately after installation and then let it fully discharge to condition it",
+            "Ensure the replacement battery is compatible with the device model"
+          ],
+          "correctAnswer": [
+            "Follow manufacturer guidelines for safe removal and installation",
+            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
+            "Ensure the replacement battery is compatible with the device model"
+          ]
+        },
+        {
+          "id": "1201-PT01-004",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which laptop feature compensates for limited keyboard space by enabling additional functions on the same keys?",
+          "explanation": "Fn key provides secondary functions on standard keys.",
+          "options": [
+            "Touchpad",
+            "Numeric keypad",
+            "Fn key",
+            "Digitizer"
+          ],
+          "correctAnswer": [
+            "Fn key"
+          ]
+        },
+        {
+          "id": "1201-PT01-005",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which action does not conform with recommended practices for diagnosing and repairing a mobile device keyboard?",
+          "explanation": "Device must be powered off during repair for safety.",
+          "options": [
+            "Implement proper ESD safety measures by using an anti-static wristband and working on an ESD mat to protect sensitive components from static discharge",
+            "Perform comprehensive diagnostics using specialized key testing software to accurately identify any malfunctioning keys",
+            "Use appropriate tools (such as precision screwdrivers and plastic pry tools) and OEM-approved replacement parts to avoid causing further damage during the repair",
+            "Conduct detailed visual inspections to detect physical damage, debris accumulation, or water exposure on the keyboard",
+            "Follow manufacturer guidelines by consulting the service manual or official repair guide to ensure safe disassembly and reassembly of the device",
+            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
+          ],
+          "correctAnswer": [
+            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
+          ]
+        },
+        {
+          "id": "1201-PT01-006",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following devices generally offers the easiest and most user-accessible RAM replacement procedure?",
+          "explanation": "Laptops have user-accessible RAM; phones and tablets require disassembly.",
+          "options": [
+            "Smartphone",
+            "Tablet",
+            "Gaming console",
+            "Laptop"
+          ],
+          "correctAnswer": [
+            "Laptop"
+          ]
+        },
+        {
+          "id": "1201-PT01-007",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the tools listed below can be used to monitor the health and performance of a laptop storage drive?",
+          "explanation": "S.M.A.R.T. monitors drive health and predicts failures.",
+          "options": [
+            "S.M.A.R.T.",
+            "Storage Sense",
+            "chkdsk",
+            "Disk defragmenter"
+          ],
+          "correctAnswer": [
+            "S.M.A.R.T."
+          ]
+        },
+        {
+          "id": "1201-PT01-008",
+          "domain": "3.0 Hardware",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which drive malfunction symptoms are not present in SSDs? (Select 2 answers)",
+          "explanation": "SSDs have no moving parts; grinding and clicking are mechanical HDD issues.",
+          "options": [
+            "Grinding noises",
+            "Slow read/write speeds",
+            "Corrupted or disappearing files",
+            "Clicking sounds",
+            "Blue screen errors"
+          ],
+          "correctAnswer": [
+            "Grinding noises",
+            "Clicking sounds"
+          ]
+        },
+        {
+          "id": "1201-PT01-009",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What should be the preliminary step of an HDD/SSD replacement procedure?",
+          "explanation": "Always backup data before replacement.",
+          "options": [
+            "Power down the device and remove the battery",
+            "Format the new drive before installing it",
+            "Perform a full system reset before replacing the drive",
+            "Backup the data on the existing drive"
+          ],
+          "correctAnswer": [
+            "Backup the data on the existing drive"
+          ]
+        },
+        {
+          "id": "1201-PT01-010",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the easiest method to monitor the wireless card performance in a mobile device?",
+          "explanation": "Signal strength indicator in notification area is easiest check.",
+          "options": [
+            "Check the Wi-Fi signal strength icon in the device notification area",
+            "Observe any LED indicators for Wi-Fi status on the device",
+            "Perform an online speed test to measure the connection performance",
+            "Manually adjust the antenna position to improve signal strength"
+          ],
+          "correctAnswer": [
+            "Check the Wi-Fi signal strength icon in the device notification area"
+          ]
+        },
+        {
+          "id": "1201-PT01-011",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which actions should be performed first when replacing a faulty wireless card/module in a laptop? (Select 2 answers)",
+          "explanation": "Power down and remove peripherals before opening device.",
+          "options": [
+            "Power down the laptop and remove the battery",
+            "Label all screws and connectors during disassembly to aid reassembly",
+            "Remove all external peripherals from the device",
+            "Perform a full power cycle of the laptop by turning it off and then on again",
+            "Locate the wireless card slot on the motherboard"
+          ],
+          "correctAnswer": [
+            "Power down the laptop and remove the battery",
+            "Remove all external peripherals from the device"
+          ]
+        },
+        {
+          "id": "1201-PT01-012",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following statements regarding a mobile device Bluetooth module is true?",
+          "explanation": "Bluetooth is typically integrated into the main board.",
+          "options": [
+            "Bluetooth modules are typically located near the device display and require screen removal for replacement",
+            "Once a Bluetooth module is replaced, it will automatically adjust to the device current settings without the need for manual pairing",
+            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard",
+            "When replacing a faulty Bluetooth module, as long as the physical connectors match, the new Bluetooth module can come from a different device model"
+          ],
+          "correctAnswer": [
+            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard"
+          ]
+        },
+        {
+          "id": "1201-PT01-013",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is a recommended practice for assessing the effectiveness and reliability of biometric components on a mobile device?",
+          "explanation": "Multiple assessment methods provide comprehensive evaluation.",
+          "options": [
+            "Using software tools to track scan success rates, response times, and error logs",
+            "Ensuring proper calibration through built-in settings or specialized diagnostic software",
+            "Tracking access attempts and failures for security auditing purposes",
+            "Updating drivers and firmware to prevent malfunctions caused by outdated software",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT01-014",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "After replacing a faulty biometric scanner on a mobile device, which essential step must be performed to ensure that the scanner produces accurate readings?",
+          "explanation": "Recalibration aligns the new scanner with device software.",
+          "options": [
+            "Recalibration",
+            "Factory reset",
+            "Driver update",
+            "Firmware update"
+          ],
+          "correctAnswer": [
+            "Recalibration"
+          ]
+        },
+        {
+          "id": "1201-PT01-015",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A technician is troubleshooting a mobile device NFC functionality. Which action(s) would help verify the NFC scanner operational status? (Select all that apply)",
+          "explanation": "Multiple checks ensure NFC is working properly.",
+          "options": [
+            "Check for dirt or moisture on the sensor surface",
+            "Test the NFC functionality with a known compatible NFC tag or device",
+            "Update the device screen brightness, as the NFC sensor relies on ambient light levels",
+            "Connect to a Wi-Fi network to test device connectivity",
+            "Ensure NFC is enabled in the device settings"
+          ],
+          "correctAnswer": [
+            "Check for dirt or moisture on the sensor surface",
+            "Test the NFC functionality with a known compatible NFC tag or device",
+            "Ensure NFC is enabled in the device settings"
+          ]
+        },
+        {
+          "id": "1201-PT01-016",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below correctly describes the typical location of a laptop Wi-Fi antenna?",
+          "explanation": "Antennas are located at the top of display bezel.",
+          "options": [
+            "On the WLAN module",
+            "Near the top, inside display case",
+            "Inside laptop case",
+            "Typically attached via external expansion port"
+          ],
+          "correctAnswer": [
+            "Near the top, inside display case"
+          ]
+        },
+        {
+          "id": "1201-PT01-017",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following actions would not help in troubleshooting a malfunctioning mobile device camera?",
+          "explanation": "Screen brightness does not affect camera operation.",
+          "options": [
+            "Inspect and clean the camera lens",
+            "Verify camera settings and permissions",
+            "Test camera functionality in multiple apps",
+            "Adjust the host device screen brightness",
+            "Check for firmware and software updates"
+          ],
+          "correctAnswer": [
+            "Adjust the host device screen brightness"
+          ]
+        },
+        {
+          "id": "1201-PT01-018",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the items listed below is not recommended for clearing potential blockages from a mobile device microphone?",
+          "explanation": "Compressed air can damage microphone diaphragm.",
+          "options": [
+            "Lint-free cloth",
+            "Soft brush",
+            "Can of compressed air",
+            "Microfiber cloth"
+          ],
+          "correctAnswer": [
+            "Can of compressed air"
+          ]
+        },
+        {
+          "id": "1201-PT01-019",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Examples of USB ports that can be found on mobile devices include: (Select all that apply)",
+          "explanation": "Modern phones use USB-C and older devices used Micro/Mini USB.",
+          "options": [
+            "USB-C",
+            "MicroUSB",
+            "USB Type-A",
+            "MiniUSB",
+            "USB Type-B"
+          ],
+          "correctAnswer": [
+            "USB-C",
+            "MicroUSB",
+            "MiniUSB"
+          ]
+        },
+        {
+          "id": "1201-PT01-020",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
+          "explanation": "USB-C is the modern standard for mobile devices.",
+          "options": [
+            "USB Type-B",
+            "MiniUSB",
+            "USB-C",
+            "MicroUSB",
+            "USB Type-A"
+          ],
+          "correctAnswer": [
+            "USB-C"
+          ]
+        },
+        {
+          "id": "1201-PT01-021",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which proprietary connector was developed by Apple for its mobile devices?",
+          "explanation": "Lightning connector is proprietary to Apple devices.",
+          "options": [
+            "Thunderbolt",
+            "USB-C",
+            "FireWire",
+            "Lightning"
+          ],
+          "correctAnswer": [
+            "Lightning"
+          ]
+        },
+        {
+          "id": "1201-PT01-022",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "NFC enables: (Select all that apply)",
+          "explanation": "NFC supports multiple short-range communication uses.",
+          "options": [
+            "Contactless payment transactions",
+            "Long-range wireless communication",
+            "Device pairing and data exchange",
+            "Access control and authentication",
+            "Wireless charging of mobile devices"
+          ],
+          "correctAnswer": [
+            "Contactless payment transactions",
+            "Device pairing and data exchange",
+            "Access control and authentication"
+          ]
+        },
+        {
+          "id": "1201-PT01-023",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following is a popular, short-range wireless standard for connecting various personal devices in a WPAN?",
+          "explanation": "Bluetooth is standard for WPAN connections.",
+          "options": [
+            "Zigbee",
+            "NFC",
+            "Bluetooth",
+            "Wi-Fi Direct"
+          ],
+          "correctAnswer": [
+            "Bluetooth"
+          ]
+        },
+        {
+          "id": "1201-PT01-024",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the terms listed below best describes a mobile device ability to share its Internet connection with other devices?",
+          "explanation": "Tethering shares mobile data with other devices.",
+          "options": [
+            "Pairing",
+            "Clustering",
+            "Tethering",
+            "Bonding"
+          ],
+          "correctAnswer": [
+            "Tethering"
+          ]
+        },
+        {
+          "id": "1201-PT01-025",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A mobile hotspot is a device that creates a WLAN by acting as a portable WAP for other devices.",
+          "explanation": "Mobile hotspot definition is accurate.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": [
+            "True"
+          ]
+        },
+        {
+          "id": "1201-PT01-001",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
+          "explanation": "Battery health monitoring involves tracking degradation and checking for physical issues.",
+          "options": [
+            "Always fully discharge the battery before recharging",
+            "Track battery health using built-in OS tools or third-party apps",
+            "Disable battery-saving features to get a more accurate reading of capacity loss",
+            "Monitor charging cycles and battery capacity degradation",
+            "Check for swelling, overheating, or failure to hold a charge"
+          ],
+          "correctAnswer": [
+            "Track battery health using built-in OS tools or third-party apps",
+            "Monitor charging cycles and battery capacity degradation",
+            "Check for swelling, overheating, or failure to hold a charge"
+          ]
+        },
+        {
+          "id": "1201-PT01-002",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Common battery types used in modern portable devices include: (Select 2 answers)",
+          "explanation": "Li-ion and LiPo are standard in modern devices; older types like Ni-Cd are obsolete.",
+          "options": [
+            "Nickel-Iron (Ni-Fe)",
+            "Lithium-ion (Li-ion)",
+            "Nickel-Metal Hydride (Ni-MH)",
+            "Lithium-ion Polymer (LiPo)",
+            "Nickel-Cadmium (Ni-Cd)"
+          ],
+          "correctAnswer": [
+            "Lithium-ion (Li-ion)",
+            "Lithium-ion Polymer (LiPo)"
+          ]
+        },
+        {
+          "id": "1201-PT01-003",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which of the steps listed below should be followed when replacing a mobile device battery? (Select 3 answers)",
+          "explanation": "Safe battery replacement requires compatibility, proper procedure, and disposal.",
+          "options": [
+            "Follow manufacturer guidelines for safe removal and installation",
+            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
+            "Use any available universal battery as long as it fits physically within the device",
+            "Charge the new battery to 100% immediately after installation and then let it fully discharge to condition it",
+            "Ensure the replacement battery is compatible with the device model"
+          ],
+          "correctAnswer": [
+            "Follow manufacturer guidelines for safe removal and installation",
+            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
+            "Ensure the replacement battery is compatible with the device model"
+          ]
+        },
+        {
+          "id": "1201-PT01-004",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which laptop feature compensates for limited keyboard space by enabling additional functions on the same keys?",
+          "explanation": "Fn key provides secondary functions on standard keys.",
+          "options": [
+            "Touchpad",
+            "Numeric keypad",
+            "Fn key",
+            "Digitizer"
+          ],
+          "correctAnswer": [
+            "Fn key"
+          ]
+        },
+        {
+          "id": "1201-PT01-005",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which action does not conform with recommended practices for diagnosing and repairing a mobile device keyboard?",
+          "explanation": "Device must be powered off during repair for safety.",
+          "options": [
+            "Implement proper ESD safety measures by using an anti-static wristband and working on an ESD mat to protect sensitive components from static discharge",
+            "Perform comprehensive diagnostics using specialized key testing software to accurately identify any malfunctioning keys",
+            "Use appropriate tools (such as precision screwdrivers and plastic pry tools) and OEM-approved replacement parts to avoid causing further damage during the repair",
+            "Conduct detailed visual inspections to detect physical damage, debris accumulation, or water exposure on the keyboard",
+            "Follow manufacturer guidelines by consulting the service manual or official repair guide to ensure safe disassembly and reassembly of the device",
+            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
+          ],
+          "correctAnswer": [
+            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
+          ]
+        },
+        {
+          "id": "1201-PT01-006",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following devices generally offers the easiest and most user-accessible RAM replacement procedure?",
+          "explanation": "Laptops have user-accessible RAM; phones and tablets require disassembly.",
+          "options": [
+            "Smartphone",
+            "Tablet",
+            "Gaming console",
+            "Laptop"
+          ],
+          "correctAnswer": [
+            "Laptop"
+          ]
+        },
+        {
+          "id": "1201-PT01-007",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the tools listed below can be used to monitor the health and performance of a laptop storage drive?",
+          "explanation": "S.M.A.R.T. monitors drive health and predicts failures.",
+          "options": [
+            "S.M.A.R.T.",
+            "Storage Sense",
+            "chkdsk",
+            "Disk defragmenter"
+          ],
+          "correctAnswer": [
+            "S.M.A.R.T."
+          ]
+        },
+        {
+          "id": "1201-PT01-008",
+          "domain": "3.0 Hardware",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which drive malfunction symptoms are not present in SSDs? (Select 2 answers)",
+          "explanation": "SSDs have no moving parts; grinding and clicking are mechanical HDD issues.",
+          "options": [
+            "Grinding noises",
+            "Slow read/write speeds",
+            "Corrupted or disappearing files",
+            "Clicking sounds",
+            "Blue screen errors"
+          ],
+          "correctAnswer": [
+            "Grinding noises",
+            "Clicking sounds"
+          ]
+        },
+        {
+          "id": "1201-PT01-009",
+          "domain": "3.0 Hardware",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What should be the preliminary step of an HDD/SSD replacement procedure?",
+          "explanation": "Always backup data before replacement.",
+          "options": [
+            "Power down the device and remove the battery",
+            "Format the new drive before installing it",
+            "Perform a full system reset before replacing the drive",
+            "Backup the data on the existing drive"
+          ],
+          "correctAnswer": [
+            "Backup the data on the existing drive"
+          ]
+        },
+        {
+          "id": "1201-PT01-010",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "What is the easiest method to monitor the wireless card performance in a mobile device?",
+          "explanation": "Signal strength indicator in notification area is easiest check.",
+          "options": [
+            "Check the Wi-Fi signal strength icon in the device notification area",
+            "Observe any LED indicators for Wi-Fi status on the device",
+            "Perform an online speed test to measure the connection performance",
+            "Manually adjust the antenna position to improve signal strength"
+          ],
+          "correctAnswer": [
+            "Check the Wi-Fi signal strength icon in the device notification area"
+          ]
+        },
+        {
+          "id": "1201-PT01-011",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which actions should be performed first when replacing a faulty wireless card/module in a laptop? (Select 2 answers)",
+          "explanation": "Power down and remove peripherals before opening device.",
+          "options": [
+            "Power down the laptop and remove the battery",
+            "Label all screws and connectors during disassembly to aid reassembly",
+            "Remove all external peripherals from the device",
+            "Perform a full power cycle of the laptop by turning it off and then on again",
+            "Locate the wireless card slot on the motherboard"
+          ],
+          "correctAnswer": [
+            "Power down the laptop and remove the battery",
+            "Remove all external peripherals from the device"
+          ]
+        },
+        {
+          "id": "1201-PT01-012",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following statements regarding a mobile device Bluetooth module is true?",
+          "explanation": "Bluetooth is typically integrated into the main board.",
+          "options": [
+            "Bluetooth modules are typically located near the device display and require screen removal for replacement",
+            "Once a Bluetooth module is replaced, it will automatically adjust to the device current settings without the need for manual pairing",
+            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard",
+            "When replacing a faulty Bluetooth module, as long as the physical connectors match, the new Bluetooth module can come from a different device model"
+          ],
+          "correctAnswer": [
+            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard"
+          ]
+        },
+        {
+          "id": "1201-PT01-013",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "What is a recommended practice for assessing the effectiveness and reliability of biometric components on a mobile device?",
+          "explanation": "Multiple assessment methods provide comprehensive evaluation.",
+          "options": [
+            "Using software tools to track scan success rates, response times, and error logs",
+            "Ensuring proper calibration through built-in settings or specialized diagnostic software",
+            "Tracking access attempts and failures for security auditing purposes",
+            "Updating drivers and firmware to prevent malfunctions caused by outdated software",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ]
+        },
+        {
+          "id": "1201-PT01-014",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "After replacing a faulty biometric scanner on a mobile device, which essential step must be performed to ensure that the scanner produces accurate readings?",
+          "explanation": "Recalibration aligns the new scanner with device software.",
+          "options": [
+            "Recalibration",
+            "Factory reset",
+            "Driver update",
+            "Firmware update"
+          ],
+          "correctAnswer": [
+            "Recalibration"
+          ]
+        },
+        {
+          "id": "1201-PT01-015",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "A technician is troubleshooting a mobile device NFC functionality. Which action(s) would help verify the NFC scanner operational status? (Select all that apply)",
+          "explanation": "Multiple checks ensure NFC is working properly.",
+          "options": [
+            "Check for dirt or moisture on the sensor surface",
+            "Test the NFC functionality with a known compatible NFC tag or device",
+            "Update the device screen brightness, as the NFC sensor relies on ambient light levels",
+            "Connect to a Wi-Fi network to test device connectivity",
+            "Ensure NFC is enabled in the device settings"
+          ],
+          "correctAnswer": [
+            "Check for dirt or moisture on the sensor surface",
+            "Test the NFC functionality with a known compatible NFC tag or device",
+            "Ensure NFC is enabled in the device settings"
+          ]
+        },
+        {
+          "id": "1201-PT01-016",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the answers listed below correctly describes the typical location of a laptop Wi-Fi antenna?",
+          "explanation": "Antennas are located at the top of display bezel.",
+          "options": [
+            "On the WLAN module",
+            "Near the top, inside display case",
+            "Inside laptop case",
+            "Typically attached via external expansion port"
+          ],
+          "correctAnswer": [
+            "Near the top, inside display case"
+          ]
+        },
+        {
+          "id": "1201-PT01-017",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which of the following actions would not help in troubleshooting a malfunctioning mobile device camera?",
+          "explanation": "Screen brightness does not affect camera operation.",
+          "options": [
+            "Inspect and clean the camera lens",
+            "Verify camera settings and permissions",
+            "Test camera functionality in multiple apps",
+            "Adjust the host device screen brightness",
+            "Check for firmware and software updates"
+          ],
+          "correctAnswer": [
+            "Adjust the host device screen brightness"
+          ]
+        },
+        {
+          "id": "1201-PT01-018",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the items listed below is not recommended for clearing potential blockages from a mobile device microphone?",
+          "explanation": "Compressed air can damage microphone diaphragm.",
+          "options": [
+            "Lint-free cloth",
+            "Soft brush",
+            "Can of compressed air",
+            "Microfiber cloth"
+          ],
+          "correctAnswer": [
+            "Can of compressed air"
+          ]
+        },
+        {
+          "id": "1201-PT01-019",
+          "domain": "1.0 Mobile Devices",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Examples of USB ports that can be found on mobile devices include: (Select all that apply)",
+          "explanation": "Modern phones use USB-C and older devices used Micro/Mini USB.",
+          "options": [
+            "USB-C",
+            "MicroUSB",
+            "USB Type-A",
+            "MiniUSB",
+            "USB Type-B"
+          ],
+          "correctAnswer": [
+            "USB-C",
+            "MicroUSB",
+            "MiniUSB"
+          ]
+        },
+        {
+          "id": "1201-PT01-020",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
+          "explanation": "USB-C is the modern standard for mobile devices.",
+          "options": [
+            "USB Type-B",
+            "MiniUSB",
+            "USB-C",
+            "MicroUSB",
+            "USB Type-A"
+          ],
+          "correctAnswer": [
+            "USB-C"
+          ]
+        },
+        {
+          "id": "1201-PT01-021",
+          "domain": "1.0 Mobile Devices",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which proprietary connector was developed by Apple for its mobile devices?",
+          "explanation": "Lightning connector is proprietary to Apple devices.",
+          "options": [
+            "Thunderbolt",
+            "USB-C",
+            "FireWire",
+            "Lightning"
+          ],
+          "correctAnswer": [
+            "Lightning"
+          ]
+        },
+        {
+          "id": "1201-PT01-022",
+          "domain": "2.0 Networking",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "NFC enables: (Select all that apply)",
+          "explanation": "NFC supports multiple short-range communication uses.",
+          "options": [
+            "Contactless payment transactions",
+            "Long-range wireless communication",
+            "Device pairing and data exchange",
+            "Access control and authentication",
+            "Wireless charging of mobile devices"
+          ],
+          "correctAnswer": [
+            "Contactless payment transactions",
+            "Device pairing and data exchange",
+            "Access control and authentication"
+          ]
+        },
+        {
+          "id": "1201-PT01-023",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the following is a popular, short-range wireless standard for connecting various personal devices in a WPAN?",
+          "explanation": "Bluetooth is standard for WPAN connections.",
+          "options": [
+            "Zigbee",
+            "NFC",
+            "Bluetooth",
+            "Wi-Fi Direct"
+          ],
+          "correctAnswer": [
+            "Bluetooth"
+          ]
+        },
+        {
+          "id": "1201-PT01-024",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Which of the terms listed below best describes a mobile device ability to share its Internet connection with other devices?",
+          "explanation": "Tethering shares mobile data with other devices.",
+          "options": [
+            "Pairing",
+            "Clustering",
+            "Tethering",
+            "Bonding"
+          ],
+          "correctAnswer": [
+            "Tethering"
+          ]
+        },
+        {
+          "id": "1201-PT01-025",
+          "domain": "2.0 Networking",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "A mobile hotspot is a device that creates a WLAN by acting as a portable WAP for other devices.",
+          "explanation": "Mobile hotspot definition is accurate.",
           "options": [
             "True",
             "False"
