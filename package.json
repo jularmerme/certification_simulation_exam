@@ -1,0 +1,17 @@
+{
+  "name": "comptia-aplus-practice-exam",
+  "version": "1.0.0",
+  "description": "A zero-dependency CompTIA A+ practice exam simulator",
+  "private": true,
+  "scripts": {
+    "test": "node test_multi_select_scoring.js",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "comptia",
+    "a+",
+    "practice-exam",
+    "certification"
+  ],
+  "license": "MIT"
+}

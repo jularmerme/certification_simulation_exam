@@ -3,36 +3,9 @@
  * Validates the computeMultiSelectScore and scoring integration
  */
 
-// Implementation of computeMultiSelectScore
-function computeMultiSelectScore(userAnswers, correctAnswers) {
-  if (!Array.isArray(userAnswers) || userAnswers.length === 0) {
-    return 0; // No answers selected
-  }
-  
-  if (!Array.isArray(correctAnswers) || correctAnswers.length === 0) {
-    return 0; // No correct answers defined
-  }
-  
-  // Count matches (user selections that are in correctAnswers)
-  const matches = userAnswers.filter(answer => correctAnswers.includes(answer)).length;
-  
-  // Count wrong selections (user selections that are NOT in correctAnswers)
-  const wrong = userAnswers.filter(answer => !correctAnswers.includes(answer)).length;
-  
-  // Perfect match: all user selections are correct AND all correct answers were selected
-  if (matches === correctAnswers.length && wrong === 0) {
-    return 100;
-  }
-  
-  // No matches: either no correct answers selected OR only wrong answers selected
-  if (matches === 0) {
-    return 0;
-  }
-  
-  // Partial match: some correct answers selected, or some wrong answers mixed in
-  // This covers: some right + missing some right, or some right + some wrong
-  return 50;
-}
+// Exercises the real production implementation from js/scoring.js, which the
+// browser loads via <script src>. No local copy, so the test cannot drift.
+const { computeMultiSelectScore } = require('./js/scoring');
 
 // Test harness
 let testsPassed = 0;
