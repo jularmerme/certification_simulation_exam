@@ -16,10 +16,53 @@
         "4.0 Virtualization and Cloud Computing": 11,
         "5.0 Hardware and Network Troubleshooting": 28
       },
+      "objectives": {
+        "1.1": "Given a scenario, monitor mobile device hardware and use appropriate replacement techniques.",
+        "1.2": "Compare and contrast accessories and connectivity options for mobile devices.",
+        "1.3": "Given a scenario, configure basic mobile device network connectivity and provide application support.",
+        "2.1": "Compare and contrast Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) ports, protocols, and their purposes.",
+        "2.2": "Explain wireless networking technologies.",
+        "2.3": "Summarize services provided by networked hosts.",
+        "2.4": "Explain common network configuration concepts.",
+        "2.5": "Compare and contrast common networking hardware devices.",
+        "2.6": "Given a scenario, configure basic wired/wireless small office/home office (SOHO) networks.",
+        "2.7": "Compare and contrast internet connection types, network types, and their characteristics.",
+        "2.8": "Explain networking tools and their purposes.",
+        "3.1": "Compare and contrast display components and attributes.",
+        "3.2": "Summarize basic cable types and their connectors, features, and purposes.",
+        "3.3": "Compare and contrast RAM characteristics.",
+        "3.4": "Compare and contrast storage devices.",
+        "3.5": "Given a scenario, install and configure motherboards, central processing units (CPUs), and add-on cards.",
+        "3.6": "Given a scenario, install the appropriate power supply.",
+        "3.7": "Given a scenario, deploy and configure multifunction devices/printers and settings.",
+        "3.8": "Given a scenario, perform appropriate printer maintenance.",
+        "4.1": "Explain virtualization concepts.",
+        "4.2": "Summarize cloud computing concepts.",
+        "5.1": "Given a scenario, troubleshoot motherboards, RAM, CPUs, and power.",
+        "5.2": "Given a scenario, troubleshoot drive and RAID issues.",
+        "5.3": "Given a scenario, troubleshoot video, projector, and display issues.",
+        "5.4": "Given a scenario, troubleshoot common mobile device issues.",
+        "5.5": "Given a scenario, troubleshoot network issues.",
+        "5.6": "Given a scenario, troubleshoot printer issues."
+      },
+      "modules": {
+        "1.0": "What Does an IT Specialist Do?",
+        "2.0": "Installing Motherboards and Connectors",
+        "3.0": "Installing System Devices",
+        "4.0": "Troubleshooting PC Hardware",
+        "5.0": "Comparing Local Networking Hardware",
+        "6.0": "Configuring Network Addressing and Internet Connections",
+        "7.0": "Supporting Network Services",
+        "8.0": "Summarizing Virtualization and Cloud Concepts",
+        "9.0": "Supporting Mobile Devices",
+        "10.0": "Supporting Print Devices"
+      },
       "questionBank": [
         {
           "id": "1201-001",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A technician is replacing a laptop keyboard. Which tool is MOST appropriate for prying up keycaps or bezels without damaging plastic clips?",
@@ -37,6 +80,8 @@
         {
           "id": "1201-002",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are valid mobile device management (MDM) policies? (Select all that apply)",
@@ -57,6 +102,8 @@
         {
           "id": "1201-003",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A smartphone requires charging every 2 hours under normal use. The battery is 3 years old. Which is the BEST first action?",
@@ -74,6 +121,8 @@
         {
           "id": "1201-004",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which network device operates at Layer 2 and forwards frames based on MAC addresses?",
@@ -91,6 +140,8 @@
         {
           "id": "1201-005",
           "domain": "2.0 Networking",
+          "objective": "2.1",
+          "module": "6.0",
           "type": "drag_drop",
           "difficulty": "medium",
           "stem": "Match each network protocol to its OSI layer.",
@@ -177,6 +228,8 @@
         {
           "id": "1201-006",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which tools are MOST helpful for diagnosing network problems? (Select all that apply)",
@@ -198,6 +251,8 @@
         {
           "id": "1201-007",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which wireless frequency band offers greater range but is prone to interference from cordless phones and microwaves?",
@@ -215,6 +270,8 @@
         {
           "id": "1201-008",
           "domain": "2.0 Networking",
+          "objective": "2.6",
+          "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A device has been assigned the IP address 169.254.34.12. What does this indicate?",
@@ -232,6 +289,8 @@
         {
           "id": "1201-009",
           "domain": "3.0 Hardware",
+          "objective": "3.5",
+          "module": "2.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which motherboard form factor is the smallest, commonly used in compact builds?",
@@ -249,6 +308,8 @@
         {
           "id": "1201-010",
           "domain": "3.0 Hardware",
+          "objective": "3.5",
+          "module": "2.0",
           "type": "drag_drop",
           "difficulty": "medium",
           "stem": "Match each CPU socket type to its characteristic.",
@@ -299,6 +360,8 @@
         {
           "id": "1201-011",
           "domain": "3.0 Hardware",
+          "objective": "3.3",
+          "module": "3.0",
           "type": "multi",
           "difficulty": "hard",
           "stem": "Which are valid RAM configurations for a modern desktop PC? (Select all that apply)",
@@ -318,6 +381,8 @@
         {
           "id": "1201-012",
           "domain": "3.0 Hardware",
+          "objective": "3.5",
+          "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which cooling method is more effective than air cooling for high-performance CPUs?",
@@ -335,6 +400,8 @@
         {
           "id": "1201-013",
           "domain": "3.0 Hardware",
+          "objective": "3.4",
+          "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which RAID level mirrors data, providing redundancy but using only 50% capacity?",
@@ -352,6 +419,8 @@
         {
           "id": "1201-014",
           "domain": "3.0 Hardware",
+          "objective": "3.5",
+          "module": "2.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which connector provides supplemental power directly to the CPU on modern motherboards?",
@@ -369,6 +438,8 @@
         {
           "id": "1201-015",
           "domain": "3.0 Hardware",
+          "objective": "3.5",
+          "module": "2.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which expansion slot is used for modern discrete graphics cards?",
@@ -386,6 +457,8 @@
         {
           "id": "1201-016",
           "domain": "3.0 Hardware",
+          "objective": "3.4",
+          "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which storage interface used a wide ribbon cable and master/slave jumper configuration?",
@@ -403,6 +476,8 @@
         {
           "id": "1201-017",
           "domain": "3.0 Hardware",
+          "objective": "3.8",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "hard",
           "stem": "A thermal printer produces faded output. Which could cause this? (Select all that apply)",
@@ -423,6 +498,8 @@
         {
           "id": "1201-018",
           "domain": "4.0 Virtualization and Cloud Computing",
+          "objective": "4.2",
+          "module": "8.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which cloud model delivers fully managed applications like Microsoft 365?",
@@ -440,6 +517,8 @@
         {
           "id": "1201-019",
           "domain": "4.0 Virtualization and Cloud Computing",
+          "objective": "4.1",
+          "module": "8.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which hypervisor runs directly on physical hardware?",
@@ -457,6 +536,8 @@
         {
           "id": "1201-020",
           "domain": "4.0 Virtualization and Cloud Computing",
+          "objective": "4.1",
+          "module": "8.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "VirtualBox running on Windows is which type of hypervisor?",
@@ -474,6 +555,8 @@
         {
           "id": "1201-021",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.2",
+          "module": "4.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A hard drive makes repetitive clicking and system fails to boot. Most likely cause?",
@@ -491,6 +574,8 @@
         {
           "id": "1201-022",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.1",
+          "module": "4.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "After installing new RAM, PC fails to POST. Try FIRST?",
@@ -508,6 +593,8 @@
         {
           "id": "1201-023",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "hard",
           "stem": "Wi-Fi adapter enabled but no connections. Check what? (Select all that apply)",
@@ -528,6 +615,8 @@
         {
           "id": "1201-1070",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is a primary reason for using a patch panel in conjunction with a switch?",
@@ -545,6 +634,8 @@
         {
           "id": "1201-1071",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What does a dBm measurement represent?",
@@ -562,6 +653,8 @@
         {
           "id": "1201-1072",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A technician is assisting the CISO in wirelessly transferring data between their smartwatch and their corporate PC. As the CISO's request uses two devices in close proximity, what network method has a limited range?",
@@ -579,6 +672,8 @@
         {
           "id": "1201-1073",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following best describes the primary purpose of Bluetooth?",
@@ -596,6 +691,8 @@
         {
           "id": "1201-1074",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Why might an active network tap be used instead of a passive tap?",
@@ -613,6 +710,8 @@
         {
           "id": "1201-1075",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "easy",
           "stem": "Which of the following technologies does the 802.11ac wireless networking standard use to provide increased bandwidth and communication speeds? (Select two.)",
@@ -632,6 +731,8 @@
         {
           "id": "1201-1076",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "You are using a crimper to attach an RJ-45 connector to a Cat 6 UTP cable. You need to use the T568A standard to connect the individual wires to the connector. Which wire should you connect to pin 1?",
@@ -649,6 +750,8 @@
         {
           "id": "1201-1077",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the purpose of a patch panel?",
@@ -666,6 +769,8 @@
         {
           "id": "1201-1078",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "easy",
           "stem": "Which of the following are characteristics of a coaxial network cable? (Select two.)",
@@ -685,6 +790,8 @@
         {
           "id": "1201-1079",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A printer is behaving erratically; you suspect a faulty parallel port. Which tool can you use to test the parallel port?",
@@ -702,6 +809,8 @@
         {
           "id": "1201-1080",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following BEST describes the purpose for which loopback plugs are used?",
@@ -719,6 +828,8 @@
         {
           "id": "1201-1081",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Currently, your company is in the process of upgrading security in the company headquarters building by installing biometric sensors to limit access to specific rooms. Your network switches are PoE-enabled, which allows biometric sensors to connect to switches without an external power source. Which of the following PoE standards is designed for use with biometric sensors that require 25 watts?",
@@ -736,6 +847,8 @@
         {
           "id": "1201-1082",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "All the employees in a lawyer's office communicate with the internet and each other through the same appliance. What kind of network is the office using?",
@@ -753,6 +866,8 @@
         {
           "id": "1201-1083",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "You are designing a wireless network for a client. Your client needs the network to support a data rate of at least 150 Mbps. In addition, the client already has a wireless telephone system installed that operates at 2.4 GHz. Which 802.11 standard works BEST in this situation?",
@@ -770,6 +885,8 @@
         {
           "id": "1201-1084",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is one of the main advantages of Wi-Fi 7's Multi-Link Operation (MLO)?",
@@ -787,6 +904,8 @@
         {
           "id": "1201-1085",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the purpose of bonding multiple Ethernet NIC ports?",
@@ -804,6 +923,8 @@
         {
           "id": "1201-1086",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following network types uses special hardware to provide high-speed access to storage across the network?",
@@ -821,6 +942,8 @@
         {
           "id": "1201-1087",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which type of network is best suited for a company that operates across multiple locations in a city?",
@@ -838,6 +961,8 @@
         {
           "id": "1201-1088",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What best describes a Local Area Network (LAN)?",
@@ -855,6 +980,8 @@
         {
           "id": "1201-1089",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What does an Ethernet switch use to forward frames to the correct destination?",
@@ -872,6 +999,8 @@
         {
           "id": "1201-1090",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A technician is running a network above a dropped ceiling that is also used for ventilation. The cable must be a twisted pair and must be capable of Gigabit Ethernet speeds. Which of the following cables should the technician use?",
@@ -889,6 +1018,8 @@
         {
           "id": "1201-1091",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "As a network engineer, you have been creating patch (straight-through) cables for a network switch. You have plugged in all the cables and are testing data transmission through the cables. You notice that the data transmission is not functioning properly in some of the cables, and you are sure that one of the cables is interfering with the transmission at the near end. What is this type of interference called?",
@@ -906,6 +1037,8 @@
         {
           "id": "1201-1092",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Why can fiber optic cables support higher bandwidth and longer distances compared to copper cables?",
@@ -923,6 +1056,8 @@
         {
           "id": "1201-1093",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What distinguishes single-mode fiber (SMF) from multi-mode fiber (MMF) in terms of usage?",
@@ -940,6 +1075,8 @@
         {
           "id": "1201-1094",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician needs to deploy a computer on an Ethernet network and notices that the computer will sit on a shelf directly under a fluorescent light. What type of cable will the technician use?",
@@ -957,6 +1094,8 @@
         {
           "id": "1201-1095",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is a major benefit STP provides that UTP does not?",
@@ -974,6 +1113,8 @@
         {
           "id": "1201-1096",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician needs to replace a broken Ethernet cable. What connector will the technician use to terminate the new cable, also known as 8P8C?",
@@ -991,6 +1132,8 @@
         {
           "id": "1201-1097",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the primary function of a network tap?",
@@ -1008,6 +1151,8 @@
         {
           "id": "1201-1098",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician used a tool that energizes each wire in a cable. When the technician sent energy to some of the wires, the LED on the tool did not light up. What tool was the technician using?",
@@ -1025,6 +1170,8 @@
         {
           "id": "1201-1099",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician is connecting a computer to the network using Ethernet. How is the physical connection to the cable made?",
@@ -1042,6 +1189,8 @@
         {
           "id": "1201-1100",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A maintenance worker accidentally nicks a bundle of network cables routed to multiple wall jacks in a conference room. Only one of the cable's wires is severed. A technician is tasked with replacing the cable. Which of the following tools would the technician MOST likely use to identify which wall jack connects to the severed cable?",
@@ -1059,6 +1208,8 @@
         {
           "id": "1201-1101",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A technician determines that an older network hub that connects 24 workstations is performing poorly due to excessive network collisions. Which of the following network devices would be the BEST replacement?",
@@ -1076,6 +1227,8 @@
         {
           "id": "1201-1102",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "You are using a patch panel to connect the computers in your building to the appropriate switches, and you need to connect the Ethernet wires from the building network port cables to the patch panel. Where do you connect the wires on a patch panel?",
@@ -1093,6 +1246,8 @@
         {
           "id": "1201-1103",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What component allows PoE functionality when a switch does not support PoE?",
@@ -1110,6 +1265,8 @@
         {
           "id": "1201-1104",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What differentiates a managed switch from an unmanaged switch?",
@@ -1127,6 +1284,8 @@
         {
           "id": "1201-1105",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following describes a benefit of using a patch panel?",
@@ -1144,6 +1303,8 @@
         {
           "id": "1201-1106",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Why is it important to label ports on a patch panel?",
@@ -1161,6 +1322,8 @@
         {
           "id": "1201-1107",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "How do switches and bridges learn where devices are located on a network?",
@@ -1178,6 +1341,8 @@
         {
           "id": "1201-1108",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What function does an Ethernet switch perform when it receives a data frame?",
@@ -1195,6 +1360,8 @@
         {
           "id": "1201-1109",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which IEEE PoE standard is most suitable for devices requiring around 25 W of power, such as advanced wireless access points and pan-tilt-zoom security cameras?",
@@ -1212,6 +1379,8 @@
         {
           "id": "1201-1110",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the purpose of a patch cord?",
@@ -1229,6 +1398,8 @@
         {
           "id": "1201-1111",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Why might a company choose to use modular switches in its network?",
@@ -1246,6 +1417,8 @@
         {
           "id": "1201-1112",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Why does an Ethernet switch eliminate the negative effects of collisions in a network?",
@@ -1263,6 +1436,8 @@
         {
           "id": "1201-1113",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "How do adapters supporting Bluetooth versions 3 and 4 achieve faster data transfer rates?",
@@ -1280,6 +1455,8 @@
         {
           "id": "1201-1114",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What distinguishes NFC from RFID technology?",
@@ -1297,6 +1474,8 @@
         {
           "id": "1201-1115",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician is upgrading the wireless network so that it can take advantage of \"multiple input multiple output\" (MIMO) to increase reliability and bandwidth. What standard is the technician upgrading the wireless network to?",
@@ -1314,6 +1493,8 @@
         {
           "id": "1201-1116",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network technician is upgrading a grocery store's checkout lines with contactless payment devices. What type of wireless technology are the payment devices based on?",
@@ -1331,6 +1512,8 @@
         {
           "id": "1201-1117",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is Bluetooth Low Energy (BLE) primarily designed for?",
@@ -1348,6 +1531,8 @@
         {
           "id": "1201-1118",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What feature of Bluetooth allows two devices to securely exchange data?",
@@ -1365,6 +1550,8 @@
         {
           "id": "1201-1119",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the advantage of using the same SSID for both frequency bands on a dual-band access point?",
@@ -1382,6 +1569,8 @@
         {
           "id": "1201-1120",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "easy",
           "stem": "Which of the following are characteristics of the 802.11g wireless standard? (Select three.)",
@@ -1403,6 +1592,8 @@
         {
           "id": "1201-1121",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What does a high Signal-to-Noise Ratio (SNR) indicate in a wireless network?",
@@ -1420,6 +1611,8 @@
         {
           "id": "1201-1122",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "An organization located on a large piece of rural property needs to connect its office building on the north side of the property with its warehouse and shipping operation on the south side of the property. The organization decides to connect the locations using long-range fixed wireless. What frequency spectrum must the organization use to ensure that nobody else can use the same frequency band?",
@@ -1437,6 +1630,8 @@
         {
           "id": "1201-1123",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "easy",
           "stem": "Which IEEE wireless standards specify transmission speeds up to 54 Mbps? (Select two.)",
@@ -1456,6 +1651,8 @@
         {
           "id": "1201-1124",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which dBm value is the most realistic and indicates a strong wireless signal in a typical environment?",
@@ -1473,6 +1670,8 @@
         {
           "id": "1201-1125",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following wireless networking standards uses a frequency of 5 GHz and supports data transmission speeds up to 2.6 Gbps?",
@@ -1491,6 +1690,8 @@
         {
           "id": "1201-1126",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What is the primary purpose of a Wi-Fi analyzer?",
@@ -1508,6 +1709,8 @@
         {
           "id": "1201-103",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A user reports that their desktop computer will not power on. You begin troubleshooting by \"Questioning the Obvious.\" Which of the following actions would be the MOST appropriate first step?",
@@ -1525,6 +1728,8 @@
         {
           "id": "1201-PT22-001",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)",
@@ -1544,6 +1749,8 @@
         {
           "id": "1201-PT22-002",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which network issues are directly linked to port flapping? (Select 2 answers)",
@@ -1563,6 +1770,8 @@
         {
           "id": "1201-PT22-003",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the recommended first step when troubleshooting port flapping?",
@@ -1580,6 +1789,8 @@
         {
           "id": "1201-PT22-004",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What condition may lead to increased latency on a network?",
@@ -1598,6 +1809,8 @@
         {
           "id": "1201-PT22-005",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which solution has no direct impact on decreasing network latency?",
@@ -1616,6 +1829,8 @@
         {
           "id": "1201-PT22-006",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which type of network cabling is most susceptible to external interference?",
@@ -1633,6 +1848,8 @@
         {
           "id": "1201-PT22-007",
           "domain": "2.0 Networking",
+          "objective": "2.5",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which network cabling provides immunity against external interference?",
@@ -1650,6 +1867,8 @@
         {
           "id": "1201-PT22-008",
           "domain": "4.0 Virtualization and Cloud Computing",
+          "objective": "4.1",
+          "module": "8.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "For wireless client connection, security and encryption settings must match the WAP.",
@@ -1665,6 +1884,8 @@
         {
           "id": "1201-PT22-010",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "hard",
           "stem": "WAN signal loss logged during internet drops with good local connectivity. Next step?",
@@ -1682,6 +1903,8 @@
         {
           "id": "1201-PT22-011",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Vertical lines in laser printer output indicate problem with:",
@@ -1699,6 +1922,8 @@
         {
           "id": "1201-PT22-012",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Vertical lines on inkjet printer output resolved by:",
@@ -1716,6 +1941,8 @@
         {
           "id": "1201-PT22-013",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Garbled characters on printed pages indicate printer data interpretation problems.",
@@ -1731,6 +1958,8 @@
         {
           "id": "1201-PT22-014",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Least likely cause of paper jams:",
@@ -1751,6 +1980,8 @@
         {
           "id": "1201-PT22-015",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Not best practices when clearing printer paper jams? (Select 2)",
@@ -1771,6 +2002,8 @@
         {
           "id": "1201-PT22-016",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Common cause of faded laser printer output:",
@@ -1788,6 +2021,8 @@
         {
           "id": "1201-PT22-017",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Causes of faded inkjet output? (Select 2)",
@@ -1807,6 +2042,8 @@
         {
           "id": "1201-PT22-018",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Causes of paper not feeding? (Select all)",
@@ -1828,6 +2065,8 @@
         {
           "id": "1201-PT22-019",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Printer pulling multiple sheets - check for:",
@@ -1847,6 +2086,8 @@
         {
           "id": "1201-PT22-020",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Documents stuck in print queue - first step:",
@@ -1864,6 +2105,8 @@
         {
           "id": "1201-PT22-021",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Most common causes of speckling on laser printed pages? (Select 3)",
@@ -1884,6 +2127,8 @@
         {
           "id": "1201-PT22-022",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Dark spots on inkjet pages - probable causes? (Select 3)",
@@ -1904,6 +2149,8 @@
         {
           "id": "1201-PT22-023",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Double images in laser printer caused by residual latent image on drum.",
@@ -1919,6 +2166,8 @@
         {
           "id": "1201-PT22-024",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Grinding noise in inkjet - issues? (Select 3)",
@@ -1939,6 +2188,8 @@
         {
           "id": "1201-PT22-025",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Grinding in laser printer - investigate? (Select all)",
@@ -1960,6 +2211,8 @@
         {
           "id": "1201-PT22-026",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Finishing issues refers to post-printing problems like stapling and hole punching.",
@@ -1975,6 +2228,8 @@
         {
           "id": "1201-PT22-027",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Best place to verify default page orientation settings:",
@@ -1992,6 +2247,8 @@
         {
           "id": "1201-PT22-028",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Least likely cause of printer not recognizing paper tray:",
@@ -2009,6 +2266,8 @@
         {
           "id": "1201-PT22-029",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "hard",
           "stem": "Troubleshooting network printer connectivity - which helps:",
@@ -2029,6 +2288,8 @@
         {
           "id": "1201-PT22-030",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.6",
+          "module": "10.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Least likely to solve frozen print queue:",
@@ -2047,6 +2308,8 @@
         {
           "id": "1201-PT21-001",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "While sideloading an app onto an Android phone for testing purposes, a user receives a notification that the installation has been blocked due to security settings. What must be changed to proceed with the installation?",
@@ -2064,6 +2327,8 @@
         {
           "id": "1201-PT21-002",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A company MDM administrator receives multiple tickets from users stating that they cannot install updates for existing apps or download new ones. Which of the following is the most likely reason?",
@@ -2081,6 +2346,8 @@
         {
           "id": "1201-PT21-003",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A user reports the stylus has stopped responding on their touchscreen device. What is the first practical troubleshooting step a technician should try?",
@@ -2098,6 +2365,8 @@
         {
           "id": "1201-PT21-004",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A device stylus functions intermittently, while the touchscreen responds normally to finger input. Which troubleshooting action should be considered first?",
@@ -2115,6 +2384,8 @@
         {
           "id": "1201-PT21-005",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A user attempts to connect a Bluetooth stylus to their tablet but it does not appear in the device Bluetooth list. What device mode should the user confirm the stylus is in?",
@@ -2132,6 +2403,8 @@
         {
           "id": "1201-PT21-006",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "What factor(s) can contribute to unexpected performance drops on a mobile device? (Select all that apply)",
@@ -2153,6 +2426,8 @@
         {
           "id": "1201-PT21-007",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "A user complains their mobile phone has become increasingly slow, with apps taking a long time to open and frequently freezing. Which steps should a technician try first? (Select 2)",
@@ -2172,6 +2447,8 @@
         {
           "id": "1201-PT21-008",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A mobile device experiences a sudden, significant drop in performance, accompanied by unusual pop-ups and battery drain. What is the most likely cause of the problem?",
@@ -2189,6 +2466,8 @@
         {
           "id": "1201-PT21-009",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.3",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "When applications take an unusually long time to launch on a mobile device, which factors are typically the most immediate and direct causes? (Select 2)",
@@ -2208,6 +2487,8 @@
         {
           "id": "1201-PT21-010",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Wireless connectivity issues can be caused by physical obstructions and electronic interference. Dense objects like heavy household items or large appliances can weaken Wi-Fi signals, especially when using the 5 GHz frequency, which has a shorter range and weaker penetration through walls and obstacles. Positioning the router in a central, elevated, and open location helps improve coverage. Electronic interference from devices such as microwaves, cordless phones, or Bluetooth equipment can disrupt signals, particularly on the 2.4 GHz band.",
@@ -2223,6 +2504,8 @@
         {
           "id": "1201-PT21-011",
           "domain": "2.0 Networking",
+          "objective": "2.8",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "When troubleshooting intermittent wireless connectivity, what tool can a technician use to measure signal strength and detect potential dead zones?",
@@ -2240,6 +2523,8 @@
         {
           "id": "1201-PT21-012",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A user laptop connects to the wireless network, but the connection is unstable and frequently drops, even after forcing reconnection and restarting the system. Other nearby devices on the same network are functioning normally. Which action should the technician take to resolve the problem?",
@@ -2257,6 +2542,8 @@
         {
           "id": "1201-PT21-013",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which troubleshooting steps can help resolve intermittent wireless connectivity caused by external interference? (Select 2)",
@@ -2276,6 +2563,8 @@
         {
           "id": "1201-PT21-014",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "During a network performance audit, a technician observes that several wired workstations are consistently negotiating connections at 100 Mbps, despite having Gigabit Ethernet NICs and being connected to a Gigabit switch. What is the most probable physical layer cause for this speed limitation?",
@@ -2293,6 +2582,8 @@
         {
           "id": "1201-PT21-015",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which symptoms are most likely to indicate that slow network speeds are caused by network congestion rather than a hardware or software issue? (Select 2)",
@@ -2313,6 +2604,8 @@
         {
           "id": "1201-PT21-016",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "A user notices their online gaming experience suffers from high network latency and lag spikes. What common internal factors on their computer could explain these symptoms, particularly if they have many installed programs? (Select 2)",
@@ -2332,6 +2625,8 @@
         {
           "id": "1201-PT21-017",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the most likely cause of limited network connectivity if a Windows machine is assigned an IP address in the 169.254.x.x range?",
@@ -2349,6 +2644,8 @@
         {
           "id": "1201-PT21-018",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "An administrator is troubleshooting a computer showing Limited Connectivity. The network icon displays an X symbol. Which actions should the administrator take first? (Select 2)",
@@ -2368,6 +2665,8 @@
         {
           "id": "1201-PT21-019",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "A network admin can successfully ping a remote host by its IP address but cannot do so by its domain name. What is the most probable cause of this issue?",
@@ -2385,6 +2684,8 @@
         {
           "id": "1201-PT21-020",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is jitter in the context of network performance?",
@@ -2402,6 +2703,8 @@
         {
           "id": "1201-PT21-021",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which network application types are most sensitive to jitter?",
@@ -2419,6 +2722,8 @@
         {
           "id": "1201-PT21-022",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "During a VoIP call, a user hears their own voice echoing back to them with a slight delay. Which network performance issue is this symptom most indicative of?",
@@ -2436,6 +2741,8 @@
         {
           "id": "1201-PT21-023",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What is the most likely cause of choppy or distorted audio during a VoIP call?",
@@ -2453,6 +2760,8 @@
         {
           "id": "1201-PT21-024",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What is the primary purpose of a jitter buffer in VoIP systems?",
@@ -2470,6 +2779,8 @@
         {
           "id": "1201-PT21-025",
           "domain": "5.0 Hardware and Network Troubleshooting",
+          "objective": "5.5",
+          "module": "7.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "The term Port flapping refers to a condition where a network port light, typically on a switch or router, rapidly alternates between up and down states. In such cases, the port status LED may blink erratically as it continuously loses and regains connection.",
@@ -2485,6 +2796,8 @@
         {
           "id": "1201-PT01-001",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
@@ -2505,6 +2818,8 @@
         {
           "id": "1201-PT01-002",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Common battery types used in modern portable devices include: (Select 2 answers)",
@@ -2524,6 +2839,8 @@
         {
           "id": "1201-PT01-003",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the steps listed below should be followed when replacing a mobile device battery? (Select 3 answers)",
@@ -2544,6 +2861,8 @@
         {
           "id": "1201-PT01-004",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which laptop feature compensates for limited keyboard space by enabling additional functions on the same keys?",
@@ -2561,6 +2880,8 @@
         {
           "id": "1201-PT01-005",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which action does not conform with recommended practices for diagnosing and repairing a mobile device keyboard?",
@@ -2580,6 +2901,8 @@
         {
           "id": "1201-PT01-006",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following devices generally offers the easiest and most user-accessible RAM replacement procedure?",
@@ -2597,6 +2920,8 @@
         {
           "id": "1201-PT01-007",
           "domain": "3.0 Hardware",
+          "objective": "3.4",
+          "module": "3.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the tools listed below can be used to monitor the health and performance of a laptop storage drive?",
@@ -2614,6 +2939,8 @@
         {
           "id": "1201-PT01-008",
           "domain": "3.0 Hardware",
+          "objective": "3.4",
+          "module": "3.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which drive malfunction symptoms are not present in SSDs? (Select 2 answers)",
@@ -2633,6 +2960,8 @@
         {
           "id": "1201-PT01-009",
           "domain": "3.0 Hardware",
+          "objective": "3.4",
+          "module": "3.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What should be the preliminary step of an HDD/SSD replacement procedure?",
@@ -2650,6 +2979,8 @@
         {
           "id": "1201-PT01-010",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "What is the easiest method to monitor the wireless card performance in a mobile device?",
@@ -2667,6 +2998,8 @@
         {
           "id": "1201-PT01-011",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "Which actions should be performed first when replacing a faulty wireless card/module in a laptop? (Select 2 answers)",
@@ -2686,6 +3019,8 @@
         {
           "id": "1201-PT01-012",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which of the following statements regarding a mobile device Bluetooth module is true?",
@@ -2703,6 +3038,8 @@
         {
           "id": "1201-PT01-013",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "What is a recommended practice for assessing the effectiveness and reliability of biometric components on a mobile device?",
@@ -2721,6 +3058,8 @@
         {
           "id": "1201-PT01-014",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "After replacing a faulty biometric scanner on a mobile device, which essential step must be performed to ensure that the scanner produces accurate readings?",
@@ -2738,6 +3077,8 @@
         {
           "id": "1201-PT01-015",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "A technician is troubleshooting a mobile device NFC functionality. Which action(s) would help verify the NFC scanner operational status? (Select all that apply)",
@@ -2758,6 +3099,8 @@
         {
           "id": "1201-PT01-016",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which of the answers listed below correctly describes the typical location of a laptop Wi-Fi antenna?",
@@ -2775,6 +3118,8 @@
         {
           "id": "1201-PT01-017",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "medium",
           "stem": "Which of the following actions would not help in troubleshooting a malfunctioning mobile device camera?",
@@ -2793,6 +3138,8 @@
         {
           "id": "1201-PT01-018",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.1",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the items listed below is not recommended for clearing potential blockages from a mobile device microphone?",
@@ -2810,6 +3157,8 @@
         {
           "id": "1201-PT01-019",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "multi",
           "difficulty": "easy",
           "stem": "Examples of USB ports that can be found on mobile devices include: (Select all that apply)",
@@ -2830,6 +3179,8 @@
         {
           "id": "1201-PT01-020",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
@@ -2848,6 +3199,8 @@
         {
           "id": "1201-PT01-021",
           "domain": "1.0 Mobile Devices",
+          "objective": "1.2",
+          "module": "9.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which proprietary connector was developed by Apple for its mobile devices?",
@@ -2865,6 +3218,8 @@
         {
           "id": "1201-PT01-022",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "multi",
           "difficulty": "medium",
           "stem": "NFC enables: (Select all that apply)",
@@ -2885,6 +3240,8 @@
         {
           "id": "1201-PT01-023",
           "domain": "2.0 Networking",
+          "objective": "2.2",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the following is a popular, short-range wireless standard for connecting various personal devices in a WPAN?",
@@ -2902,6 +3259,8 @@
         {
           "id": "1201-PT01-024",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "6.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "Which of the terms listed below best describes a mobile device ability to share its Internet connection with other devices?",
@@ -2919,6 +3278,8 @@
         {
           "id": "1201-PT01-025",
           "domain": "2.0 Networking",
+          "objective": "2.7",
+          "module": "5.0",
           "type": "mc",
           "difficulty": "easy",
           "stem": "A mobile hotspot is a device that creates a WLAN by acting as a portable WAP for other devices.",
