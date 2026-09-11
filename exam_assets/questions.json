@@ -526,436 +526,6 @@
           ]
         },
         {
-          "id": "1202-001",
-          "domain": "1.0 Operating Systems",
-          "type": "multi",
-          "difficulty": "easy",
-          "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
-          "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
-          "options": [
-            "Windows 11 Home",
-            "Windows 11 Pro",
-            "Windows 11 Enterprise",
-            "Windows 11 Standard",
-            "Windows 11 Professional Plus"
-          ],
-          "correctAnswer": [
-            "Windows 11 Pro",
-            "Windows 11 Enterprise"
-          ]
-        },
-        {
-          "id": "1202-002",
-          "domain": "1.0 Operating Systems",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Where to configure network drive mapping in Windows?",
-          "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
-          "options": [
-            "Device Manager",
-            "File Explorer - Map Network Drive",
-            "Services Manager",
-            "Group Policy Editor"
-          ],
-          "correctAnswer": [
-            "File Explorer - Map Network Drive"
-          ]
-        },
-        {
-          "id": "1202-003",
-          "domain": "1.0 Operating Systems",
-          "type": "drag_drop",
-          "difficulty": "hard",
-          "stem": "Match Windows command-line tools to their function.",
-          "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
-          "items": [
-            {
-              "id": "ipconfig",
-              "label": "ipconfig"
-            },
-            {
-              "id": "tasklist",
-              "label": "tasklist"
-            },
-            {
-              "id": "diskpart",
-              "label": "diskpart"
-            },
-            {
-              "id": "sfc",
-              "label": "sfc /scannow"
-            }
-          ],
-          "dropZones": [
-            {
-              "id": "net",
-              "label": "Network Config",
-              "correctItems": [
-                "ipconfig"
-              ]
-            },
-            {
-              "id": "proc",
-              "label": "Process Mgmt",
-              "correctItems": [
-                "tasklist"
-              ]
-            },
-            {
-              "id": "disk",
-              "label": "Disk Mgmt",
-              "correctItems": [
-                "diskpart"
-              ]
-            },
-            {
-              "id": "sys",
-              "label": "System Files",
-              "correctItems": [
-                "sfc"
-              ]
-            }
-          ],
-          "correctAnswer": [
-            {
-              "id": "net",
-              "label": "Network Config",
-              "correctItems": [
-                "ipconfig"
-              ]
-            },
-            {
-              "id": "proc",
-              "label": "Process Mgmt",
-              "correctItems": [
-                "tasklist"
-              ]
-            },
-            {
-              "id": "disk",
-              "label": "Disk Mgmt",
-              "correctItems": [
-                "diskpart"
-              ]
-            },
-            {
-              "id": "sys",
-              "label": "System Files",
-              "correctItems": [
-                "sfc"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "1202-004",
-          "domain": "1.0 Operating Systems",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
-          "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
-          "options": [
-            "Event Viewer",
-            "Resource Monitor/Task Manager Performance",
-            "Device Manager",
-            "Group Policy"
-          ],
-          "correctAnswer": [
-            "Resource Monitor/Task Manager Performance"
-          ]
-        },
-        {
-          "id": "1202-005",
-          "domain": "2.0 Security and Compliance",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which are strong password practices? (Select all that apply)",
-          "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
-          "options": [
-            "Min 8 chars with mixed types",
-            "Reuse across accounts",
-            "Password expiration 90 days",
-            "Write down passwords",
-            "MFA where available"
-          ],
-          "correctAnswer": [
-            "Min 8 chars with mixed types",
-            "Password expiration 90 days",
-            "MFA where available"
-          ]
-        },
-        {
-          "id": "1202-006",
-          "domain": "2.0 Security and Compliance",
-          "type": "mc",
-          "difficulty": "hard",
-          "stem": "Workstation with malware - FIRST action in recovery?",
-          "explanation": "Isolate system first and document to prevent spread and enable analysis.",
-          "options": [
-            "Format hard drive",
-            "Disconnect from network and document",
-            "Update patches",
-            "Reset password only"
-          ],
-          "correctAnswer": [
-            "Disconnect from network and document"
-          ]
-        },
-        {
-          "id": "1202-007",
-          "domain": "2.0 Security and Compliance",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which restricts user permissions to prevent system changes?",
-          "explanation": "UAC prompts for elevation on system-level changes.",
-          "options": [
-            "User Account Control (UAC)",
-            "Windows Defender",
-            "Group Policy",
-            "Windows Firewall"
-          ],
-          "correctAnswer": [
-            "User Account Control (UAC)"
-          ]
-        },
-        {
-          "id": "1202-008",
-          "domain": "2.0 Security and Compliance",
-          "type": "multi",
-          "difficulty": "hard",
-          "stem": "Legitimate wireless security methods? (Select all that apply)",
-          "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
-          "options": [
-            "Enable WPA3",
-            "Disable SSID broadcast",
-            "Complex network password",
-            "MAC filtering",
-            "2.4 GHz only"
-          ],
-          "correctAnswer": [
-            "Enable WPA3",
-            "Complex network password",
-            "MAC filtering"
-          ]
-        },
-        {
-          "id": "1202-009",
-          "domain": "3.0 Software Troubleshooting",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Application crashes frequently. Try FIRST?",
-          "explanation": "Updates often fix bugs. Try this before drastic measures.",
-          "options": [
-            "Uninstall/reinstall",
-            "Format hard drive",
-            "Check for updates",
-            "Replace motherboard"
-          ],
-          "correctAnswer": [
-            "Check for updates"
-          ]
-        },
-        {
-          "id": "1202-010",
-          "domain": "3.0 Software Troubleshooting",
-          "type": "drag_drop",
-          "difficulty": "hard",
-          "stem": "Order the troubleshooting steps correctly.",
-          "explanation": "Proper order: gather, theory, test, implement, verify.",
-          "items": [
-            {
-              "id": "g",
-              "label": "Gather info from user"
-            },
-            {
-              "id": "t",
-              "label": "Theory of probable cause"
-            },
-            {
-              "id": "e",
-              "label": "Test the theory"
-            },
-            {
-              "id": "i",
-              "label": "Implement solution"
-            },
-            {
-              "id": "v",
-              "label": "Verify functionality"
-            }
-          ],
-          "dropZones": [
-            {
-              "id": "s1",
-              "label": "Step 1",
-              "correctItems": [
-                "g"
-              ]
-            },
-            {
-              "id": "s2",
-              "label": "Step 2",
-              "correctItems": [
-                "t"
-              ]
-            },
-            {
-              "id": "s3",
-              "label": "Step 3",
-              "correctItems": [
-                "e"
-              ]
-            },
-            {
-              "id": "s4",
-              "label": "Step 4",
-              "correctItems": [
-                "i"
-              ]
-            },
-            {
-              "id": "s5",
-              "label": "Step 5",
-              "correctItems": [
-                "v"
-              ]
-            }
-          ],
-          "correctAnswer": [
-            {
-              "id": "s1",
-              "label": "Step 1",
-              "correctItems": [
-                "g"
-              ]
-            },
-            {
-              "id": "s2",
-              "label": "Step 2",
-              "correctItems": [
-                "t"
-              ]
-            },
-            {
-              "id": "s3",
-              "label": "Step 3",
-              "correctItems": [
-                "e"
-              ]
-            },
-            {
-              "id": "s4",
-              "label": "Step 4",
-              "correctItems": [
-                "i"
-              ]
-            },
-            {
-              "id": "s5",
-              "label": "Step 5",
-              "correctItems": [
-                "v"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "1202-011",
-          "domain": "3.0 Software Troubleshooting",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
-          "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
-          "options": [
-            "Browser hijacker malware",
-            "Adware",
-            "Browser extension/toolbar",
-            "Windows Update",
-            "Outdated graphics driver"
-          ],
-          "correctAnswer": [
-            "Browser hijacker malware",
-            "Adware",
-            "Browser extension/toolbar"
-          ]
-        },
-        {
-          "id": "1202-012",
-          "domain": "4.0 Operational Procedures",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Documentation after resolving ticket should include?",
-          "explanation": "Complete documentation helps others resolve similar issues.",
-          "options": [
-            "Only if difficult",
-            "Changes, actions, outcome",
-            "Only final resolution",
-            "Nothing - wastes time"
-          ],
-          "correctAnswer": [
-            "Changes, actions, outcome"
-          ]
-        },
-        {
-          "id": "1202-013",
-          "domain": "4.0 Operational Procedures",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Proper change management procedures? (Select all that apply)",
-          "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
-          "options": [
-            "Test in non-production",
-            "Document before implementation",
-            "Changes during business hours",
-            "Notify stakeholders",
-            "Rollback plan"
-          ],
-          "correctAnswer": [
-            "Test in non-production",
-            "Document before implementation",
-            "Notify stakeholders",
-            "Rollback plan"
-          ]
-        },
-        {
-          "id": "1202-014",
-          "domain": "4.0 Operational Procedures",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Backup system never tested - PRIMARY concern?",
-          "explanation": "Untested backups create false security. Regular restoration testing is critical.",
-          "options": [
-            "Using too much storage",
-            "Might not work when needed",
-            "Too slow",
-            "Software outdated"
-          ],
-          "correctAnswer": [
-            "Might not work when needed"
-          ]
-        },
-        {
-          "id": "1202-015",
-          "domain": "4.0 Operational Procedures",
-          "type": "multi",
-          "difficulty": "hard",
-          "stem": "Environmental safety and compliance measures? (Select all that apply)",
-          "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
-          "options": [
-            "Proper e-waste disposal",
-            "ESD procedures",
-            "Cool battery storage",
-            "Reuse indefinitely",
-            "Chain-of-custody for data"
-          ],
-          "correctAnswer": [
-            "Proper e-waste disposal",
-            "ESD procedures",
-            "Cool battery storage",
-            "Chain-of-custody for data"
-          ]
-        },
-        {
           "id": "1201-1070",
           "domain": "2.0 Networking",
           "type": "mc",
@@ -1950,707 +1520,6 @@
           ],
           "correctAnswer": [
             "Check if the power cable is securely connected to both the computer and the power outlet."
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-010",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "LDAP is an example of:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Data encryption protocol",
-            "Address resolution protocol",
-            "Directory access protocol",
-            "File exchange protocol"
-          ],
-          "correctAnswer": [
-            "Directory access protocol"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-014",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "TCP is a connection-oriented network protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-016",
-          "domain": "2.0 Security",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which part of the AAA security architecture ensures that users are who they claim to be, typically through credentials like passwords or biometrics?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Auditing",
-            "Authentication",
-            "Authorization",
-            "Accounting"
-          ],
-          "correctAnswer": [
-            "Authentication"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-022",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "What is the primary purpose of S.M.A.R.T. in a storage media drive?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Automatic correction of detected drive errors",
-            "Real-time monitoring and regulation of power consumption",
-            "Prediction and reporting of impending drive failures",
-            "Optimization of drive read/write speeds"
-          ],
-          "correctAnswer": [
-            "Prediction and reporting of impending drive failures"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-024",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "IMAP is used for:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Serving web pages",
-            "Translating domain names into IP addresses",
-            "Retrieving email messages from a mail server",
-            "Sending email messages"
-          ],
-          "correctAnswer": [
-            "Retrieving email messages from a mail server"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-028",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "What is the function of FTP?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Email service",
-            "Directory access",
-            "Serving of web pages",
-            "File exchange"
-          ],
-          "correctAnswer": [
-            "File exchange"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-032",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "PCIe is a high-speed, serial expansion bus designed as a replacement for PCI, PCI-X, and AGP standards.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-042",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "APIPA allows a Windows host to self-configure an IPv4 address and subnet mask when a DHCP server is unavailable. APIPA uses the address block range from 169.254.0.0 to 169.254.255.255. APIPA-assigned addresses are valid only for communication within the network segment to which the host is connected. A host with an APIPA-assigned address cannot connect to the Internet.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-043",
-          "domain": "2.0 Security",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "In the AAA security architecture, the process of tracking user activity and resource usage for reporting or billing is called:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Authentication",
-            "Auditing",
-            "Accounting",
-            "Authorization"
-          ],
-          "correctAnswer": [
-            "Accounting"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-049",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which cloud service model would provide the best solution for a web developer intending to create a web app?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "XaaS",
-            "SaaS",
-            "PaaS",
-            "IaaS"
-          ],
-          "correctAnswer": [
-            "PaaS"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-069",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "An eSIM is a modern alternative to the traditional SIM card. Unlike traditional SIMs, an eSIM is an embedded chip built into the device (not a physical card).",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-084",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What is a PUP? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Computer program installed with user's consent, but often lacking fully informed agreement",
-            "Software downloaded and installed entirely without user knowledge or consent",
-            "Free utility software that is legitimately bundled as a feature of a paid application",
-            "Computer program not explicitly classified as malware by AV software",
-            "Application that may degrade system performance, compromise privacy, or inject unsolicited ads",
-            "Malicious code that is explicitly classified and blocked as malware by AV software"
-          ],
-          "correctAnswer": [
-            "Computer program installed with user's consent, but often lacking fully informed agreement",
-            "Application that may degrade system performance, compromise privacy, or inject unsolicited ads",
-            "Computer program not explicitly classified as malware by AV software"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-089",
-          "domain": "4.0 Virtualization",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which cloud computing service model allows developers to run individual pieces of code in response to events without managing servers or underlying infrastructure?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "SaaS",
-            "PaaS",
-            "IaaS",
-            "FaaS"
-          ],
-          "correctAnswer": [
-            "FaaS"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-094",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the following combinations uses two different authentication factors and therefore qualifies as MFA?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Smart card and mobile digital key",
-            "Password and biometric scan",
-            "Username and pattern lock",
-            "Retina scan and fingerprint"
-          ],
-          "correctAnswer": [
-            "Password and biometric scan"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-095",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "TCP is a connection-oriented protocol using a three-way handshake which is a set of initial steps required for establishing network connection. TCP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of TCP include transmission of text and image data.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-108",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the characteristic features of SMB/CIFS? (Select 2 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Optimized for secure file sharing over the Internet",
-            "Used to provide shared access to files, directories, and devices",
-            "Designed for Linux-based environments",
-            "Intended for voice and multimedia communication over IP networks",
-            "Primarily used in Microsoft Windows environments"
-          ],
-          "correctAnswer": [
-            "Used to provide shared access to files, directories, and devices",
-            "Primarily used in Microsoft Windows environments"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-109",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below refers to a cloud computing service model in which clients, instead of buying all the hardware and software, purchase computing resources as an outsourced service from suppliers who own and maintain all the necessary equipment and software?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "SaaS",
-            "DaaS",
-            "IaaS",
-            "PaaS"
-          ],
-          "correctAnswer": [
-            "IaaS"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-111",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "The SMTP protocol is used for: (Select 2 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Synchronizing email folders across multiple devices",
-            "Forwarding email between mail servers",
-            "Downloading email to a local client from a remote server",
-            "Routing inbound mail to the correct mailbox",
-            "Sending email from a client to a mail server"
-          ],
-          "correctAnswer": [
-            "Forwarding email between mail servers",
-            "Sending email from a client to a mail server"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-121",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "UDP is an example of a connectionless protocol. Because UDP does not support three-way handshake while establishing a network connection, it is referred to as unreliable or best-effort protocol. Example applications of UDP include transmission of video and audio streaming data.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-128",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "An eSATA device can be added to a PC by attaching the device directly into an internal slot on the motherboard.",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "False"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-132",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "ECC type RAM:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Can only detect errors, but does not have the capability to correct them",
-            "Refers to parity RAM",
-            "Offers better performance in terms of speed when compared to a non-ECC type of RAM",
-            "Can detect and correct errors"
-          ],
-          "correctAnswer": [
-            "Can detect and correct errors"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-136",
-          "domain": "2.0 Security",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "In the AAA security architecture, the process of granting or denying access to resources is known as:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Authorization",
-            "Accounting",
-            "Auditing",
-            "Authentication"
-          ],
-          "correctAnswer": [
-            "Authorization"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-138",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "The DNS TXT record is used for: (Select 2 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Resolving an IP address to a hostname for reverse lookups",
-            "Mapping a domain name to a list of mail servers for that domain",
-            "Specifying the authoritative name servers for a domain",
-            "Providing verification and email security policy information",
-            "Storing arbitrary text-based data associated with a domain"
-          ],
-          "correctAnswer": [
-            "Storing arbitrary text-based data associated with a domain",
-            "Providing verification and email security policy information"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-139",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "A system administrator needs to execute a PowerShell script on multiple remote Windows workstations without opening a GUI session on each machine. Which protocol should be used?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "PCoIP",
-            "SSH",
-            "WinRM",
-            "Telnet"
-          ],
-          "correctAnswer": [
-            "WinRM"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-151",
-          "domain": "4.0 Virtualization",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the following acronyms is used as a catch-all term for virtually any type of IT cloud-based service?",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "AaaS",
-            "FaaS",
-            "XaaS",
-            "WaaS"
-          ],
-          "correctAnswer": [
-            "XaaS"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-155",
-          "domain": "1.0 Acronyms",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "POP3 is used for:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Name resolution",
-            "Sending email messages",
-            "File exchange",
-            "Email retrieval"
-          ],
-          "correctAnswer": [
-            "Email retrieval"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-157",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "A cloud computing service model offering remote access to applications based on recurring subscription fee is called:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "PaaS",
-            "SaaS",
-            "IaaS",
-            "DaaS"
-          ],
-          "correctAnswer": [
-            "SaaS"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-178",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the common characteristics and use cases of the BNC connector? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Bayonet-style (twist-and-lock) mechanism",
-            "Twisted-pair copper cabling",
-            "Used in professional A/V, CCTV, and lab/test equipment",
-            "Coaxial cabling",
-            "Used for satellite/cable TV and broadband internet connections",
-            "Threaded (screw-on) locking mechanism"
-          ],
-          "correctAnswer": [
-            "Bayonet-style (twist-and-lock) mechanism",
-            "Used in professional A/V, CCTV, and lab/test equipment",
-            "Coaxial cabling"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-180",
-          "domain": "2.0 Networking",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the characteristic features of IPS display technology? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "High color accuracy",
-            "Fast response times",
-            "Wide viewing angles",
-            "Low color accuracy",
-            "Consistent color reproduction",
-            "Narrow viewing angles"
-          ],
-          "correctAnswer": [
-            "High color accuracy",
-            "Wide viewing angles",
-            "Consistent color reproduction"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-183",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the characteristic features of ST fiber-optic connectors? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Small form factor connector type",
-            "Latch-style locking mechanism similar to RJ-45 connectors",
-            "Cylindrical metal connector body",
-            "Bayonet-style twist-and-lock mechanism",
-            "Commonly used in older networks and multimode fiber installations",
-            "Used in high-density modern networks"
-          ],
-          "correctAnswer": [
-            "Bayonet-style twist-and-lock mechanism",
-            "Cylindrical metal connector body",
-            "Commonly used in older networks and multimode fiber installations"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-184",
-          "domain": "3.0 Hardware",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below refer(s) to an ARM-type CPU architecture? (Select all that apply)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Characterized by lowered power consumption",
-            "Typically used in personal computers, laptops, and servers",
-            "Focuses on simplifying the instruction set to enhance processing efficiency",
-            "Employs complex instructions for efficient memory management and backward compatibility",
-            "Commonly used in mobile devices and embedded systems",
-            "Suitable for battery-powered devices"
-          ],
-          "correctAnswer": [
-            "Characterized by lowered power consumption",
-            "Focuses on simplifying the instruction set to enhance processing efficiency",
-            "Commonly used in mobile devices and embedded systems",
-            "Suitable for battery-powered devices"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-187",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "The VA display technology can be characterized by: (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "High contrast ratios",
-            "Low color accuracy",
-            "Deep black levels",
-            "Low contrast ratios",
-            "Slow response times",
-            "Narrow viewing angles"
-          ],
-          "correctAnswer": [
-            "High contrast ratios",
-            "Deep black levels",
-            "Slow response times"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-192",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below refer to the RJ11 connector? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Ethernet network cabling",
-            "Telephone equipment",
-            "Fiber-optic cabling",
-            "Coaxial cabling",
-            "Dial-up networking",
-            "Twisted-pair copper cabling"
-          ],
-          "correctAnswer": [
-            "Telephone equipment",
-            "Dial-up networking",
-            "Twisted-pair copper cabling"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-193",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "USB Type-B",
-            "MiniUSB",
-            "USB-C",
-            "MicroUSB",
-            "USB Type-A"
-          ],
-          "correctAnswer": [
-            "USB-C"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-195",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below describe the SC fiber-optic connector? (Select 2 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Latch-style locking mechanism similar to RJ-45 connectors",
-            "Widely used in datacom and telecom applications",
-            "Bayonet-style twist-and-lock mechanism",
-            "Commonly used in older networks and multimode fiber installations",
-            "Push-pull locking mechanism for easy insertion and removal"
-          ],
-          "correctAnswer": [
-            "Push-pull locking mechanism for easy insertion and removal",
-            "Widely used in datacom and telecom applications"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-197",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the characteristic features of the RJ45 connector? (Select 2 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Fiber-optic cabling",
-            "Coaxial cabling",
-            "Dial-up networking",
-            "Twisted-pair copper cabling",
-            "Telephone equipment",
-            "Ethernet network cabling"
-          ],
-          "correctAnswer": [
-            "Ethernet network cabling",
-            "Twisted-pair copper cabling"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-200",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the following characteristics describe the LC fiber-optic connector? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Bayonet-style twist-and-lock mechanism",
-            "Commonly used in older networks and multimode fiber installations",
-            "Small form factor connector type",
-            "Commonly used in high-density network environments like data centers",
-            "Latch-style locking mechanism similar to RJ-45 connectors",
-            "Cylindrical metal connector body"
-          ],
-          "correctAnswer": [
-            "Small form factor connector type",
-            "Latch-style locking mechanism similar to RJ-45 connectors",
-            "Commonly used in high-density network environments like data centers"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-203",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below can be used to describe the TN display technology? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Low viewing angles",
-            "Fast response times",
-            "Low color quality",
-            "High color quality",
-            "Slow response times",
-            "Wide viewing angles"
-          ],
-          "correctAnswer": [
-            "Low viewing angles",
-            "Fast response times",
-            "Low color quality"
-          ]
-        },
-        {
-          "id": "ACR-QUIZ-205",
-          "domain": "1.0 Acronyms",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "What are the characteristic features of an OLED display? (Select 3 answers)",
-          "explanation": "Refer to CompTIA A+ course materials for detailed explanation.",
-          "options": [
-            "Requires a dedicated backlight assembly to illuminate the screen",
-            "Susceptible to image retention and burn-in over time",
-            "Inferior contrast ratio and color representation in comparison to LCDs",
-            "Each pixel serves as its own light source",
-            "Superior contrast ratios and true black levels"
-          ],
-          "correctAnswer": [
-            "Susceptible to image retention and burn-in over time",
-            "Each pixel serves as its own light source",
-            "Superior contrast ratios and true black levels"
           ]
         },
         {
@@ -4079,455 +2948,6 @@
           "correctAnswer": [
             "True"
           ]
-        },
-        {
-          "id": "1201-PT01-001",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
-          "explanation": "Battery health monitoring involves tracking degradation and checking for physical issues.",
-          "options": [
-            "Always fully discharge the battery before recharging",
-            "Track battery health using built-in OS tools or third-party apps",
-            "Disable battery-saving features to get a more accurate reading of capacity loss",
-            "Monitor charging cycles and battery capacity degradation",
-            "Check for swelling, overheating, or failure to hold a charge"
-          ],
-          "correctAnswer": [
-            "Track battery health using built-in OS tools or third-party apps",
-            "Monitor charging cycles and battery capacity degradation",
-            "Check for swelling, overheating, or failure to hold a charge"
-          ]
-        },
-        {
-          "id": "1201-PT01-002",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Common battery types used in modern portable devices include: (Select 2 answers)",
-          "explanation": "Li-ion and LiPo are standard in modern devices; older types like Ni-Cd are obsolete.",
-          "options": [
-            "Nickel-Iron (Ni-Fe)",
-            "Lithium-ion (Li-ion)",
-            "Nickel-Metal Hydride (Ni-MH)",
-            "Lithium-ion Polymer (LiPo)",
-            "Nickel-Cadmium (Ni-Cd)"
-          ],
-          "correctAnswer": [
-            "Lithium-ion (Li-ion)",
-            "Lithium-ion Polymer (LiPo)"
-          ]
-        },
-        {
-          "id": "1201-PT01-003",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which of the steps listed below should be followed when replacing a mobile device battery? (Select 3 answers)",
-          "explanation": "Safe battery replacement requires compatibility, proper procedure, and disposal.",
-          "options": [
-            "Follow manufacturer guidelines for safe removal and installation",
-            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
-            "Use any available universal battery as long as it fits physically within the device",
-            "Charge the new battery to 100% immediately after installation and then let it fully discharge to condition it",
-            "Ensure the replacement battery is compatible with the device model"
-          ],
-          "correctAnswer": [
-            "Follow manufacturer guidelines for safe removal and installation",
-            "Ensure proper disposal of the old battery according to local regulations for electronic waste",
-            "Ensure the replacement battery is compatible with the device model"
-          ]
-        },
-        {
-          "id": "1201-PT01-004",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which laptop feature compensates for limited keyboard space by enabling additional functions on the same keys?",
-          "explanation": "Fn key provides secondary functions on standard keys.",
-          "options": [
-            "Touchpad",
-            "Numeric keypad",
-            "Fn key",
-            "Digitizer"
-          ],
-          "correctAnswer": [
-            "Fn key"
-          ]
-        },
-        {
-          "id": "1201-PT01-005",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which action does not conform with recommended practices for diagnosing and repairing a mobile device keyboard?",
-          "explanation": "Device must be powered off during repair for safety.",
-          "options": [
-            "Implement proper ESD safety measures by using an anti-static wristband and working on an ESD mat to protect sensitive components from static discharge",
-            "Perform comprehensive diagnostics using specialized key testing software to accurately identify any malfunctioning keys",
-            "Use appropriate tools (such as precision screwdrivers and plastic pry tools) and OEM-approved replacement parts to avoid causing further damage during the repair",
-            "Conduct detailed visual inspections to detect physical damage, debris accumulation, or water exposure on the keyboard",
-            "Follow manufacturer guidelines by consulting the service manual or official repair guide to ensure safe disassembly and reassembly of the device",
-            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
-          ],
-          "correctAnswer": [
-            "Leave the device powered on during repair to provide immediate feedback on the exact malfunctioning component, such as a faulty key"
-          ]
-        },
-        {
-          "id": "1201-PT01-006",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which of the following devices generally offers the easiest and most user-accessible RAM replacement procedure?",
-          "explanation": "Laptops have user-accessible RAM; phones and tablets require disassembly.",
-          "options": [
-            "Smartphone",
-            "Tablet",
-            "Gaming console",
-            "Laptop"
-          ],
-          "correctAnswer": [
-            "Laptop"
-          ]
-        },
-        {
-          "id": "1201-PT01-007",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which of the tools listed below can be used to monitor the health and performance of a laptop storage drive?",
-          "explanation": "S.M.A.R.T. monitors drive health and predicts failures.",
-          "options": [
-            "S.M.A.R.T.",
-            "Storage Sense",
-            "chkdsk",
-            "Disk defragmenter"
-          ],
-          "correctAnswer": [
-            "S.M.A.R.T."
-          ]
-        },
-        {
-          "id": "1201-PT01-008",
-          "domain": "3.0 Hardware",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which drive malfunction symptoms are not present in SSDs? (Select 2 answers)",
-          "explanation": "SSDs have no moving parts; grinding and clicking are mechanical HDD issues.",
-          "options": [
-            "Grinding noises",
-            "Slow read/write speeds",
-            "Corrupted or disappearing files",
-            "Clicking sounds",
-            "Blue screen errors"
-          ],
-          "correctAnswer": [
-            "Grinding noises",
-            "Clicking sounds"
-          ]
-        },
-        {
-          "id": "1201-PT01-009",
-          "domain": "3.0 Hardware",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "What should be the preliminary step of an HDD/SSD replacement procedure?",
-          "explanation": "Always backup data before replacement.",
-          "options": [
-            "Power down the device and remove the battery",
-            "Format the new drive before installing it",
-            "Perform a full system reset before replacing the drive",
-            "Backup the data on the existing drive"
-          ],
-          "correctAnswer": [
-            "Backup the data on the existing drive"
-          ]
-        },
-        {
-          "id": "1201-PT01-010",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "What is the easiest method to monitor the wireless card performance in a mobile device?",
-          "explanation": "Signal strength indicator in notification area is easiest check.",
-          "options": [
-            "Check the Wi-Fi signal strength icon in the device notification area",
-            "Observe any LED indicators for Wi-Fi status on the device",
-            "Perform an online speed test to measure the connection performance",
-            "Manually adjust the antenna position to improve signal strength"
-          ],
-          "correctAnswer": [
-            "Check the Wi-Fi signal strength icon in the device notification area"
-          ]
-        },
-        {
-          "id": "1201-PT01-011",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which actions should be performed first when replacing a faulty wireless card/module in a laptop? (Select 2 answers)",
-          "explanation": "Power down and remove peripherals before opening device.",
-          "options": [
-            "Power down the laptop and remove the battery",
-            "Label all screws and connectors during disassembly to aid reassembly",
-            "Remove all external peripherals from the device",
-            "Perform a full power cycle of the laptop by turning it off and then on again",
-            "Locate the wireless card slot on the motherboard"
-          ],
-          "correctAnswer": [
-            "Power down the laptop and remove the battery",
-            "Remove all external peripherals from the device"
-          ]
-        },
-        {
-          "id": "1201-PT01-012",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the following statements regarding a mobile device Bluetooth module is true?",
-          "explanation": "Bluetooth is typically integrated into the main board.",
-          "options": [
-            "Bluetooth modules are typically located near the device display and require screen removal for replacement",
-            "Once a Bluetooth module is replaced, it will automatically adjust to the device current settings without the need for manual pairing",
-            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard",
-            "When replacing a faulty Bluetooth module, as long as the physical connectors match, the new Bluetooth module can come from a different device model"
-          ],
-          "correctAnswer": [
-            "Bluetooth is usually integrated into the Wi-Fi card or directly into the motherboard"
-          ]
-        },
-        {
-          "id": "1201-PT01-013",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "What is a recommended practice for assessing the effectiveness and reliability of biometric components on a mobile device?",
-          "explanation": "Multiple assessment methods provide comprehensive evaluation.",
-          "options": [
-            "Using software tools to track scan success rates, response times, and error logs",
-            "Ensuring proper calibration through built-in settings or specialized diagnostic software",
-            "Tracking access attempts and failures for security auditing purposes",
-            "Updating drivers and firmware to prevent malfunctions caused by outdated software",
-            "All of the above"
-          ],
-          "correctAnswer": [
-            "All of the above"
-          ]
-        },
-        {
-          "id": "1201-PT01-014",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "After replacing a faulty biometric scanner on a mobile device, which essential step must be performed to ensure that the scanner produces accurate readings?",
-          "explanation": "Recalibration aligns the new scanner with device software.",
-          "options": [
-            "Recalibration",
-            "Factory reset",
-            "Driver update",
-            "Firmware update"
-          ],
-          "correctAnswer": [
-            "Recalibration"
-          ]
-        },
-        {
-          "id": "1201-PT01-015",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "A technician is troubleshooting a mobile device NFC functionality. Which action(s) would help verify the NFC scanner operational status? (Select all that apply)",
-          "explanation": "Multiple checks ensure NFC is working properly.",
-          "options": [
-            "Check for dirt or moisture on the sensor surface",
-            "Test the NFC functionality with a known compatible NFC tag or device",
-            "Update the device screen brightness, as the NFC sensor relies on ambient light levels",
-            "Connect to a Wi-Fi network to test device connectivity",
-            "Ensure NFC is enabled in the device settings"
-          ],
-          "correctAnswer": [
-            "Check for dirt or moisture on the sensor surface",
-            "Test the NFC functionality with a known compatible NFC tag or device",
-            "Ensure NFC is enabled in the device settings"
-          ]
-        },
-        {
-          "id": "1201-PT01-016",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the answers listed below correctly describes the typical location of a laptop Wi-Fi antenna?",
-          "explanation": "Antennas are located at the top of display bezel.",
-          "options": [
-            "On the WLAN module",
-            "Near the top, inside display case",
-            "Inside laptop case",
-            "Typically attached via external expansion port"
-          ],
-          "correctAnswer": [
-            "Near the top, inside display case"
-          ]
-        },
-        {
-          "id": "1201-PT01-017",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which of the following actions would not help in troubleshooting a malfunctioning mobile device camera?",
-          "explanation": "Screen brightness does not affect camera operation.",
-          "options": [
-            "Inspect and clean the camera lens",
-            "Verify camera settings and permissions",
-            "Test camera functionality in multiple apps",
-            "Adjust the host device screen brightness",
-            "Check for firmware and software updates"
-          ],
-          "correctAnswer": [
-            "Adjust the host device screen brightness"
-          ]
-        },
-        {
-          "id": "1201-PT01-018",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which of the items listed below is not recommended for clearing potential blockages from a mobile device microphone?",
-          "explanation": "Compressed air can damage microphone diaphragm.",
-          "options": [
-            "Lint-free cloth",
-            "Soft brush",
-            "Can of compressed air",
-            "Microfiber cloth"
-          ],
-          "correctAnswer": [
-            "Can of compressed air"
-          ]
-        },
-        {
-          "id": "1201-PT01-019",
-          "domain": "1.0 Mobile Devices",
-          "type": "multi",
-          "difficulty": "easy",
-          "stem": "Examples of USB ports that can be found on mobile devices include: (Select all that apply)",
-          "explanation": "Modern phones use USB-C and older devices used Micro/Mini USB.",
-          "options": [
-            "USB-C",
-            "MicroUSB",
-            "USB Type-A",
-            "MiniUSB",
-            "USB Type-B"
-          ],
-          "correctAnswer": [
-            "USB-C",
-            "MicroUSB",
-            "MiniUSB"
-          ]
-        },
-        {
-          "id": "1201-PT01-020",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "A type of USB connection method commonly used in modern mobile devices due to its reversible design, fast data transfer, and power capabilities is known as:",
-          "explanation": "USB-C is the modern standard for mobile devices.",
-          "options": [
-            "USB Type-B",
-            "MiniUSB",
-            "USB-C",
-            "MicroUSB",
-            "USB Type-A"
-          ],
-          "correctAnswer": [
-            "USB-C"
-          ]
-        },
-        {
-          "id": "1201-PT01-021",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which proprietary connector was developed by Apple for its mobile devices?",
-          "explanation": "Lightning connector is proprietary to Apple devices.",
-          "options": [
-            "Thunderbolt",
-            "USB-C",
-            "FireWire",
-            "Lightning"
-          ],
-          "correctAnswer": [
-            "Lightning"
-          ]
-        },
-        {
-          "id": "1201-PT01-022",
-          "domain": "2.0 Networking",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "NFC enables: (Select all that apply)",
-          "explanation": "NFC supports multiple short-range communication uses.",
-          "options": [
-            "Contactless payment transactions",
-            "Long-range wireless communication",
-            "Device pairing and data exchange",
-            "Access control and authentication",
-            "Wireless charging of mobile devices"
-          ],
-          "correctAnswer": [
-            "Contactless payment transactions",
-            "Device pairing and data exchange",
-            "Access control and authentication"
-          ]
-        },
-        {
-          "id": "1201-PT01-023",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which of the following is a popular, short-range wireless standard for connecting various personal devices in a WPAN?",
-          "explanation": "Bluetooth is standard for WPAN connections.",
-          "options": [
-            "Zigbee",
-            "NFC",
-            "Bluetooth",
-            "Wi-Fi Direct"
-          ],
-          "correctAnswer": [
-            "Bluetooth"
-          ]
-        },
-        {
-          "id": "1201-PT01-024",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Which of the terms listed below best describes a mobile device ability to share its Internet connection with other devices?",
-          "explanation": "Tethering shares mobile data with other devices.",
-          "options": [
-            "Pairing",
-            "Clustering",
-            "Tethering",
-            "Bonding"
-          ],
-          "correctAnswer": [
-            "Tethering"
-          ]
-        },
-        {
-          "id": "1201-PT01-025",
-          "domain": "2.0 Networking",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "A mobile hotspot is a device that creates a WLAN by acting as a portable WAP for other devices.",
-          "explanation": "Mobile hotspot definition is accurate.",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": [
-            "True"
-          ]
         }
       ]
     },
@@ -4535,7 +2955,7 @@
       "name": "CompTIA A+ Core 2",
       "code": "220-1202",
       "description": "Entry-level certification covering operating systems, security, software troubleshooting, and operational procedures.",
-      "questions": 0,
+      "questions": 15,
       "timeLimit": 90,
       "passingScore": 700,
       "maxScore": 900,
@@ -4546,7 +2966,438 @@
         "3.0 Software Troubleshooting": 0,
         "4.0 Operational Procedures": 0
       },
-      "questionBank": []
+      "questionBank": [
+        {
+          "id": "1202-001",
+          "domain": "1.0 Operating Systems",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
+          "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
+          "options": [
+            "Windows 11 Home",
+            "Windows 11 Pro",
+            "Windows 11 Enterprise",
+            "Windows 11 Standard",
+            "Windows 11 Professional Plus"
+          ],
+          "correctAnswer": [
+            "Windows 11 Pro",
+            "Windows 11 Enterprise"
+          ]
+        },
+        {
+          "id": "1202-002",
+          "domain": "1.0 Operating Systems",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Where to configure network drive mapping in Windows?",
+          "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
+          "options": [
+            "Device Manager",
+            "File Explorer - Map Network Drive",
+            "Services Manager",
+            "Group Policy Editor"
+          ],
+          "correctAnswer": [
+            "File Explorer - Map Network Drive"
+          ]
+        },
+        {
+          "id": "1202-003",
+          "domain": "1.0 Operating Systems",
+          "type": "drag_drop",
+          "difficulty": "hard",
+          "stem": "Match Windows command-line tools to their function.",
+          "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
+          "items": [
+            {
+              "id": "ipconfig",
+              "label": "ipconfig"
+            },
+            {
+              "id": "tasklist",
+              "label": "tasklist"
+            },
+            {
+              "id": "diskpart",
+              "label": "diskpart"
+            },
+            {
+              "id": "sfc",
+              "label": "sfc /scannow"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "net",
+              "label": "Network Config",
+              "correctItems": [
+                "ipconfig"
+              ]
+            },
+            {
+              "id": "proc",
+              "label": "Process Mgmt",
+              "correctItems": [
+                "tasklist"
+              ]
+            },
+            {
+              "id": "disk",
+              "label": "Disk Mgmt",
+              "correctItems": [
+                "diskpart"
+              ]
+            },
+            {
+              "id": "sys",
+              "label": "System Files",
+              "correctItems": [
+                "sfc"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "net",
+              "label": "Network Config",
+              "correctItems": [
+                "ipconfig"
+              ]
+            },
+            {
+              "id": "proc",
+              "label": "Process Mgmt",
+              "correctItems": [
+                "tasklist"
+              ]
+            },
+            {
+              "id": "disk",
+              "label": "Disk Mgmt",
+              "correctItems": [
+                "diskpart"
+              ]
+            },
+            {
+              "id": "sys",
+              "label": "System Files",
+              "correctItems": [
+                "sfc"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1202-004",
+          "domain": "1.0 Operating Systems",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
+          "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
+          "options": [
+            "Event Viewer",
+            "Resource Monitor/Task Manager Performance",
+            "Device Manager",
+            "Group Policy"
+          ],
+          "correctAnswer": [
+            "Resource Monitor/Task Manager Performance"
+          ]
+        },
+        {
+          "id": "1202-005",
+          "domain": "2.0 Security and Compliance",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which are strong password practices? (Select all that apply)",
+          "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
+          "options": [
+            "Min 8 chars with mixed types",
+            "Reuse across accounts",
+            "Password expiration 90 days",
+            "Write down passwords",
+            "MFA where available"
+          ],
+          "correctAnswer": [
+            "Min 8 chars with mixed types",
+            "Password expiration 90 days",
+            "MFA where available"
+          ]
+        },
+        {
+          "id": "1202-006",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "Workstation with malware - FIRST action in recovery?",
+          "explanation": "Isolate system first and document to prevent spread and enable analysis.",
+          "options": [
+            "Format hard drive",
+            "Disconnect from network and document",
+            "Update patches",
+            "Reset password only"
+          ],
+          "correctAnswer": [
+            "Disconnect from network and document"
+          ]
+        },
+        {
+          "id": "1202-007",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which restricts user permissions to prevent system changes?",
+          "explanation": "UAC prompts for elevation on system-level changes.",
+          "options": [
+            "User Account Control (UAC)",
+            "Windows Defender",
+            "Group Policy",
+            "Windows Firewall"
+          ],
+          "correctAnswer": [
+            "User Account Control (UAC)"
+          ]
+        },
+        {
+          "id": "1202-008",
+          "domain": "2.0 Security and Compliance",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Legitimate wireless security methods? (Select all that apply)",
+          "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
+          "options": [
+            "Enable WPA3",
+            "Disable SSID broadcast",
+            "Complex network password",
+            "MAC filtering",
+            "2.4 GHz only"
+          ],
+          "correctAnswer": [
+            "Enable WPA3",
+            "Complex network password",
+            "MAC filtering"
+          ]
+        },
+        {
+          "id": "1202-009",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Application crashes frequently. Try FIRST?",
+          "explanation": "Updates often fix bugs. Try this before drastic measures.",
+          "options": [
+            "Uninstall/reinstall",
+            "Format hard drive",
+            "Check for updates",
+            "Replace motherboard"
+          ],
+          "correctAnswer": [
+            "Check for updates"
+          ]
+        },
+        {
+          "id": "1202-010",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "drag_drop",
+          "difficulty": "hard",
+          "stem": "Order the troubleshooting steps correctly.",
+          "explanation": "Proper order: gather, theory, test, implement, verify.",
+          "items": [
+            {
+              "id": "g",
+              "label": "Gather info from user"
+            },
+            {
+              "id": "t",
+              "label": "Theory of probable cause"
+            },
+            {
+              "id": "e",
+              "label": "Test the theory"
+            },
+            {
+              "id": "i",
+              "label": "Implement solution"
+            },
+            {
+              "id": "v",
+              "label": "Verify functionality"
+            }
+          ],
+          "dropZones": [
+            {
+              "id": "s1",
+              "label": "Step 1",
+              "correctItems": [
+                "g"
+              ]
+            },
+            {
+              "id": "s2",
+              "label": "Step 2",
+              "correctItems": [
+                "t"
+              ]
+            },
+            {
+              "id": "s3",
+              "label": "Step 3",
+              "correctItems": [
+                "e"
+              ]
+            },
+            {
+              "id": "s4",
+              "label": "Step 4",
+              "correctItems": [
+                "i"
+              ]
+            },
+            {
+              "id": "s5",
+              "label": "Step 5",
+              "correctItems": [
+                "v"
+              ]
+            }
+          ],
+          "correctAnswer": [
+            {
+              "id": "s1",
+              "label": "Step 1",
+              "correctItems": [
+                "g"
+              ]
+            },
+            {
+              "id": "s2",
+              "label": "Step 2",
+              "correctItems": [
+                "t"
+              ]
+            },
+            {
+              "id": "s3",
+              "label": "Step 3",
+              "correctItems": [
+                "e"
+              ]
+            },
+            {
+              "id": "s4",
+              "label": "Step 4",
+              "correctItems": [
+                "i"
+              ]
+            },
+            {
+              "id": "s5",
+              "label": "Step 5",
+              "correctItems": [
+                "v"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1202-011",
+          "domain": "3.0 Software Troubleshooting",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
+          "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
+          "options": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar",
+            "Windows Update",
+            "Outdated graphics driver"
+          ],
+          "correctAnswer": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar"
+          ]
+        },
+        {
+          "id": "1202-012",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Documentation after resolving ticket should include?",
+          "explanation": "Complete documentation helps others resolve similar issues.",
+          "options": [
+            "Only if difficult",
+            "Changes, actions, outcome",
+            "Only final resolution",
+            "Nothing - wastes time"
+          ],
+          "correctAnswer": [
+            "Changes, actions, outcome"
+          ]
+        },
+        {
+          "id": "1202-013",
+          "domain": "4.0 Operational Procedures",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Proper change management procedures? (Select all that apply)",
+          "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
+          "options": [
+            "Test in non-production",
+            "Document before implementation",
+            "Changes during business hours",
+            "Notify stakeholders",
+            "Rollback plan"
+          ],
+          "correctAnswer": [
+            "Test in non-production",
+            "Document before implementation",
+            "Notify stakeholders",
+            "Rollback plan"
+          ]
+        },
+        {
+          "id": "1202-014",
+          "domain": "4.0 Operational Procedures",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Backup system never tested - PRIMARY concern?",
+          "explanation": "Untested backups create false security. Regular restoration testing is critical.",
+          "options": [
+            "Using too much storage",
+            "Might not work when needed",
+            "Too slow",
+            "Software outdated"
+          ],
+          "correctAnswer": [
+            "Might not work when needed"
+          ]
+        },
+        {
+          "id": "1202-015",
+          "domain": "4.0 Operational Procedures",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Environmental safety and compliance measures? (Select all that apply)",
+          "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
+          "options": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Reuse indefinitely",
+            "Chain-of-custody for data"
+          ],
+          "correctAnswer": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Chain-of-custody for data"
+          ]
+        }
+      ]
     }
   }
 }
