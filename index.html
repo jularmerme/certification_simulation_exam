@@ -914,31 +914,31 @@
       text-decoration: underline;
     }
     
-    /* Initially hide body to prevent flash of intro screen if resuming exam */
+    /* Initially hide the page to prevent a flash of the intro screen while a
+       saved exam is being restored. Removed once the restore attempt finishes. */
     body.resuming-exam {
       visibility: hidden;
     }
   </style>
-  
-  <script>
-    // Check for saved exam state immediately to prevent flash of intro screen
-    (function() {
-      const savedState = localStorage.getItem('aplus_exam_state');
-      if (savedState) {
-        try {
-          const state = JSON.parse(savedState);
-          if (state.examCode) {
-            // Mark that we're resuming an exam
-            document.body.classList.add('resuming-exam');
-          }
-        } catch (e) {
-          // Ignore parse errors
-        }
-      }
-    })();
-  </script>
 </head>
 <body>
+
+<script>
+  // Anti-flash guard: hide intro screen while a saved exam is being restored.
+  (function () {
+    var saved = localStorage.getItem('aplus_exam_state');
+    if (saved) {
+      document.body.classList.add('resuming-exam');
+    }
+
+    // The class MUST be removed again or the page stays permanently invisible.
+    // The main reveal happens in the DOMContentLoaded finally block; this is a
+    // safety net for the case where that script fails to run at all.
+    window.addEventListener('load', function () {
+      document.body.classList.remove('resuming-exam');
+    });
+  })();
+</script>
 
 <div class="topbar">
   <div class="brand">A+ Exam Simulator &middot; <span id="topbarExamName">Select an exam</span></div>
@@ -1173,7 +1173,6 @@ function updateThemeToggleButton(isDarkTheme) {
 
 // Initialize
 window.addEventListener('DOMContentLoaded', async () => {
-  console.log('App loaded');
   // Set current year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
   
@@ -1185,7 +1184,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch('exam_assets/questions.json');
     const data = await response.json();
     window.questionBank = data;
-    console.log('Questions loaded:', Object.keys(data.exams).length, 'exams');
     
     // Load acronyms quiz
     const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json');
@@ -1215,6 +1213,10 @@ window.addEventListener('DOMContentLoaded', async () => {
   } catch (error) {
     console.error('Error loading questions:', error);
     alert('Failed to load question bank. Make sure questions.json and acronyms_quiz.json are in exam_assets folder.');
+  } finally {
+    // Reveal the page whether or not the restore succeeded, so a failed load
+    // never leaves the user staring at a hidden body.
+    document.body.classList.remove('resuming-exam');
   }
 });
 
@@ -1226,27 +1228,15 @@ function checkAndRestoreExamState() {
     try {
       const state = JSON.parse(savedState);
       
-      // DIAGNOSTIC: Log restored questions including type field
-      if (state.questions && state.questions.length > 0) {
-        const q1078 = state.questions.find(q => q.id === '1201-1078');
-        if (q1078) {
-          console.log('[DIAGNOSTIC] checkAndRestoreExamState AFTER JSON.parse:', {
-            id: q1078.id,
-            type: q1078.type,
-            correctAnswerLength: Array.isArray(q1078.correctAnswer) ? q1078.correctAnswer.length : 'N/A',
-            correctAnswer: q1078.correctAnswer
-          });
-        }
-        console.log('[DIAGNOSTIC] Restored questions count:', state.questions.length);
-      }
-      
       // Restore the exam state
       appState.examCode = state.examCode;
       appState.currentQuestionIndex = state.currentQuestionIndex || 0;
       appState.answers = state.answers || {};
       appState.flagged = new Set(state.flagged || []);
       appState.autoFlagged = new Set(state.autoFlagged || []);
-      
+      // saveExamState() persists this, so it must be rehydrated too or validated
+      // drag-drop answers unlock themselves after a resume.
+      appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
       appState.displayedQuestionIds = new Set(state.displayedQuestionIds || []);
       appState.timeRemaining = state.timeRemaining || 0;
       appState.examStartTime = state.examStartTime || Date.now();
@@ -1284,17 +1274,6 @@ function checkAndRestoreExamState() {
 
 // Save exam state to localStorage
 function saveExamState() {
-  // DIAGNOSTIC: Log type field for 1201-1078 before saving
-  const q1078 = appState.questions.find(q => q.id === '1201-1078');
-  if (q1078) {
-    console.log('[DIAGNOSTIC] saveExamState BEFORE JSON.stringify for 1201-1078:', {
-      id: q1078.id,
-      type: q1078.type,
-      correctAnswerLength: Array.isArray(q1078.correctAnswer) ? q1078.correctAnswer.length : 'N/A',
-      correctAnswer: q1078.correctAnswer
-    });
-  }
-  
   const state = {
     examCode: appState.examCode,
     currentQuestionIndex: appState.currentQuestionIndex,
@@ -1306,19 +1285,6 @@ function saveExamState() {
     timeRemaining: appState.timeRemaining,
     examStartTime: appState.examStartTime
   };
-  
-  // DIAGNOSTIC: Log after stringify (verify serialization)
-  if (q1078) {
-    const stateStr = JSON.stringify(state);
-    const parsedBack = JSON.parse(stateStr);
-    const q1078After = parsedBack.questions.find(q => q.id === '1201-1078');
-    console.log('[DIAGNOSTIC] saveExamState AFTER JSON.stringify for 1201-1078:', {
-      id: q1078After.id,
-      type: q1078After.type,
-      correctAnswerLength: Array.isArray(q1078After.correctAnswer) ? q1078After.correctAnswer.length : 'N/A',
-      correctAnswer: q1078After.correctAnswer
-    });
-  }
   
   localStorage.setItem('aplus_exam_state', JSON.stringify(state));
 }
@@ -1406,19 +1372,7 @@ function startExam() {
   const selectedQuestions = selectUniqueQuestions(exam.questionBank, questionsToSelect);
   
   // Randomize options within each selected question
-  appState.questions = selectedQuestions.map((q, idx) => {
-    const randomized = randomizeQuestionOptions(q);
-    if (idx === 0) {
-      console.log('First question after randomization:', {
-        id: randomized.id,
-        optionsCount: randomized.options.length,
-        options: randomized.options,
-        correctAnswer: randomized.correctAnswer,
-        type: randomized.type
-      });
-    }
-    return randomized;
-  });
+  appState.questions = selectedQuestions.map(q => randomizeQuestionOptions(q));
   appState.currentQuestionIndex = 0;
   appState.answers = {};
   appState.flagged.clear();
@@ -1456,27 +1410,7 @@ function shuffleArray(array) {
 
 // Randomize options within a question
 function randomizeQuestionOptions(question) {
-  // DIAGNOSTIC: Log type field BEFORE randomization
-  if (question.id === '1201-1078') {
-    console.log('[DIAGNOSTIC] randomizeQuestionOptions BEFORE:', {
-      id: question.id,
-      type: question.type,
-      correctAnswerLength: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
-      correctAnswer: question.correctAnswer
-    });
-  }
-  
   const q = JSON.parse(JSON.stringify(question)); // Deep copy to avoid modifying original
-  
-  // DIAGNOSTIC: Log type field AFTER deep copy
-  if (q.id === '1201-1078') {
-    console.log('[DIAGNOSTIC] randomizeQuestionOptions AFTER deep copy:', {
-      id: q.id,
-      type: q.type,
-      correctAnswerLength: Array.isArray(q.correctAnswer) ? q.correctAnswer.length : 'N/A',
-      correctAnswer: q.correctAnswer
-    });
-  }
   
   if (q.type === 'mc') {
     // For multiple choice: shuffle options and track new correct answer index
@@ -1519,16 +1453,6 @@ function randomizeQuestionOptions(question) {
     q.correctAnswer = shuffled.filter(item => item.isCorrect).map(item => item.text);
   } 
   
-  // DIAGNOSTIC: Log type field AFTER randomization
-  if (q.id === '1201-1078') {
-    console.log('[DIAGNOSTIC] randomizeQuestionOptions AFTER randomization:', {
-      id: q.id,
-      type: q.type,
-      correctAnswerLength: Array.isArray(q.correctAnswer) ? q.correctAnswer.length : 'N/A',
-      correctAnswer: q.correctAnswer
-    });
-  }
-  
   return q;
 }
 
@@ -1570,12 +1494,10 @@ function updateNavigator() {
     if (isFlagged) {
       // Flagged questions are always yellow, regardless of answer state
       cell.classList.add('flagged');
-      console.log(`[updateNavigator] Q${idx}: FLAGGED (yellow)`);
     } else if (isAnswered) {
       // Question is answered but not flagged
       // For drag-drop questions, only show correct/incorrect after validation
       if (q.type === 'drag_drop' && !appState.validatedDragDrops.has(idx)) {
-        console.log(`[updateNavigator] Q${idx}: Answered drag-drop (not validated, stays gray)`);
         // Don't show anything - remains gray (unanswered appearance)
       } else {
         // For MC, multi-select, or validated drag-drop
@@ -1585,26 +1507,19 @@ function updateNavigator() {
           // Multi-select scoring: 100 = green, 50 = yellow, 0 = red
           if (isCorrect === 100) {
             cell.classList.add('answered');  // Green
-            console.log(`[updateNavigator] Q${idx}: CORRECT 100% (green, locked)`);
           } else if (isCorrect === 50) {
             cell.classList.add('partial');  // Yellow (partial credit)
-            console.log(`[updateNavigator] Q${idx}: PARTIAL 50% (yellow, locked)`);
           } else if (isCorrect === 0) {
             cell.classList.add('incorrect');  // Red
-            console.log(`[updateNavigator] Q${idx}: INCORRECT 0% (red, locked)`);
           }
         } else if (isCorrect === true) {
           cell.classList.add('answered');  // Green
-          console.log(`[updateNavigator] Q${idx}: CORRECT (green, locked)`);
         } else {
           cell.classList.add('incorrect');  // Red
-          console.log(`[updateNavigator] Q${idx}: INCORRECT (red, locked)`);
         }
         // Add locked class since it's answered and not flagged
         cell.classList.add('locked');  // Disable cursor and reduce opacity
       }
-    } else {
-      console.log(`[updateNavigator] Q${idx}: Unanswered (gray)`);
     }
     // If not answered and not flagged, stays gray (default state)
   });
@@ -1693,33 +1608,10 @@ function loadQuestion(index) {
 
 // Render multiple choice
 function renderMultipleChoice(question, container, questionIndex) {
-  // DIAGNOSTIC: Log at entry point
-  if (question.id === '1201-1078') {
-    console.log('[DIAGNOSTIC] renderMultipleChoice ENTRY for 1201-1078:', {
-      id: question.id,
-      type: question.type,
-      correctAnswerLength: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
-      correctAnswer: question.correctAnswer
-    });
-  }
-  
   // Derive isMulti from the type field, with a fallback to check correctAnswer length.
   // This guards against stale localStorage data where the type field may be missing.
   const isMulti = question.type === 'multi' ||
     (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
-  
-  // DIAGNOSTIC: Log when fallback detection is used
-  if (question.id === '1201-1078') {
-    const usingFallback = !question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1;
-    console.log('[DIAGNOSTIC] renderMultipleChoice isMulti derivation for 1201-1078:', {
-      question_type_exists: !!question.type,
-      question_type_value: question.type,
-      correctAnswer_is_array: Array.isArray(question.correctAnswer),
-      correctAnswer_length: Array.isArray(question.correctAnswer) ? question.correctAnswer.length : 'N/A',
-      using_fallback_detection: usingFallback,
-      final_isMulti: isMulti
-    });
-  }
   
   const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
   
@@ -2100,28 +1992,21 @@ function nextQuestion() {
   const currentQuestion = appState.questions[appState.currentQuestionIndex];
   const isAnswered = appState.answers[appState.currentQuestionIndex] !== undefined;
   
-  console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: answered=${isAnswered}, type=${currentQuestion.type}`);
-  
   if (!isAnswered) {
     // Auto-flag unanswered questions
     appState.flagged.add(appState.currentQuestionIndex);
     appState.autoFlagged.add(appState.currentQuestionIndex);
-    console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: AUTO-FLAGGED (unanswered)`);
   } else if (currentQuestion.type === 'drag_drop') {
     // For drag-drop: only validate (lock) if answer is 100% correct
     const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
     if (isCorrect) {
       // Mark as validated so navigator shows green and question locks
       appState.validatedDragDrops.add(appState.currentQuestionIndex);
-      console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: VALIDATED (drag-drop correct)`);
     } else {
       // Incomplete/incorrect drag-drop - auto-flag for review
       appState.flagged.add(appState.currentQuestionIndex);
       appState.autoFlagged.add(appState.currentQuestionIndex);
-      console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: AUTO-FLAGGED (drag-drop incorrect)`);
     }
-  } else {
-    console.log(`[nextQuestion] Q${appState.currentQuestionIndex}: ANSWERED (will validate on updateNavigator)`);
   }
   
   saveExamState();
@@ -2231,34 +2116,31 @@ function checkAnswerCorrect(question, userAnswer) {
   if (!isMultiType && question.type !== 'drag_drop') {
     // Single-choice (mc or unknown single-answer type)
     const correctOptions = question.correctAnswer; // Array of text
-    const isCorrect = Array.isArray(correctOptions) ? correctOptions.includes(userAnswer) : correctOptions === userAnswer;
-    console.log(`[checkAnswerCorrect] MC: user="${userAnswer}", correct="${Array.isArray(correctOptions) ? correctOptions[0] : correctOptions}" -> ${isCorrect}`);
-    return isCorrect;
+    return Array.isArray(correctOptions) ? correctOptions.includes(userAnswer) : correctOptions === userAnswer;
   } else if (isMultiType) {
     // Multi-select: userAnswer is array of option texts (strings)
     // Now returns score (0, 50, or 100) instead of boolean
     if (!Array.isArray(userAnswer)) {
-      console.log(`[checkAnswerCorrect] MULTI: userAnswer not array, returning 0`);
       return 0;
     }
-    const score = computeMultiSelectScore(userAnswer, question.correctAnswer);
-    console.log(`[checkAnswerCorrect] MULTI: user=[${userAnswer}], correct=[${question.correctAnswer}] -> score=${score}`);
-    return score;
+    return computeMultiSelectScore(userAnswer, question.correctAnswer);
   } else if (question.type === 'drag_drop') {
     for (let zone of question.dropZones) {
       const placed = userAnswer[zone.id] || [];
       const correct = zone.correctItems;
-      // Sort both arrays to compare regardless of order
-      if (JSON.stringify(placed.sort()) !== JSON.stringify(correct.sort())) {
-        console.log(`[checkAnswerCorrect] DRAG_DROP: zone ${zone.id} mismatch`);
+      // Compare order-independently, but sort COPIES. This function is called
+      // repeatedly from updateNavigator and the review renderers, so sorting in
+      // place would reorder the stored answer and the question's own
+      // correctItems array as a side effect.
+      const placedSorted = [...placed].sort();
+      const correctSorted = [...correct].sort();
+      if (JSON.stringify(placedSorted) !== JSON.stringify(correctSorted)) {
         return false;
       }
     }
-    console.log(`[checkAnswerCorrect] DRAG_DROP: correct`);
     return true;
   }
   
-  console.log(`[checkAnswerCorrect] Unknown type: ${question.type}`);
   return false;
 }
 
@@ -2705,19 +2587,25 @@ function updatePaginationButtons(totalPages) {
 // Navigation
 function saveAndExit() {
   if (confirm('Save progress and exit exam?')) {
-    backToMenu();
+    // Persist the in-progress exam, then leave it in place so the next page
+    // load resumes it via checkAndRestoreExamState().
+    saveExamState();
+    backToMenu(false);
   }
 }
 
 function exitWithoutSave() {
   if (confirm('Exit without saving? Your progress will be lost.')) {
-    // Clear saved exam state before going back
-    localStorage.removeItem('aplus_exam_state');
-    backToMenu();
+    backToMenu(true);
   }
 }
 
-function backToMenu() {
+/**
+ * Return to the intro screen.
+ * @param {boolean} [clearState=true] - When true, discard any saved in-progress
+ *   exam. Pass false to keep it so the attempt can be resumed later.
+ */
+function backToMenu(clearState = true) {
   clearInterval(appState.timerInterval);
   document.getElementById('screenExam').classList.add('hidden');
   document.getElementById('screenResults').classList.add('hidden');
@@ -2725,8 +2613,9 @@ function backToMenu() {
   document.getElementById('timerDisplay').classList.add('hidden');
   document.getElementById('topbarExamName').textContent = 'Select an exam';
   
-  // Clear saved exam state and results
-  localStorage.removeItem('aplus_exam_state');
+  if (clearState) {
+    localStorage.removeItem('aplus_exam_state');
+  }
   localStorage.removeItem('aplus_exam_results');
 }
 
