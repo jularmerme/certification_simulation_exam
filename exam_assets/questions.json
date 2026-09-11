@@ -1506,7 +1506,7 @@
           ]
         },
         {
-          "id": "2201201-103",
+          "id": "1201-103",
           "domain": "1.0 Mobile Devices",
           "type": "mc",
           "difficulty": "medium",
@@ -1660,24 +1660,6 @@
           ],
           "correctAnswer": [
             "True"
-          ]
-        },
-        {
-          "id": "1201-PT22-009",
-          "domain": "2.0 Security and Compliance",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which can result in authentication failure with correct credentials?",
-          "explanation": "All factors prevent successful authentication.",
-          "options": [
-            "Expired user password",
-            "User account locked out",
-            "Disabled or deleted user account",
-            "Time synchronization issues",
-            "All of the above"
-          ],
-          "correctAnswer": [
-            "All of the above"
           ]
         },
         {
@@ -2955,8 +2937,8 @@
       "name": "CompTIA A+ Core 2",
       "code": "220-1202",
       "description": "Entry-level certification covering operating systems, security, software troubleshooting, and operational procedures.",
-      "questions": 15,
-      "timeLimit": 15,
+      "questions": 16,
+      "timeLimit": 16,
       "passingScore": 700,
       "maxScore": 900,
       "minScore": 100,
@@ -3395,6 +3377,24 @@
             "ESD procedures",
             "Cool battery storage",
             "Chain-of-custody for data"
+          ]
+        },
+        {
+          "id": "1201-PT22-009",
+          "domain": "2.0 Security and Compliance",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which can result in authentication failure with correct credentials?",
+          "explanation": "All factors prevent successful authentication.",
+          "options": [
+            "Expired user password",
+            "User account locked out",
+            "Disabled or deleted user account",
+            "Time synchronization issues",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
           ]
         }
       ]
