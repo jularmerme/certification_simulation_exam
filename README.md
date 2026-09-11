@@ -1,338 +1,168 @@
 # CompTIA A+ Practice Exam Simulator
 
-A comprehensive, single-file HTML/JavaScript application for practicing CompTIA A+ certification exams (Core 1: 220-1201 and Core 2: 220-1202).
+A zero-dependency, browser-based practice exam simulator for CompTIA A+ Core 1 (220-1201) and Core 2 (220-1202) certification exams.
+
+![App Screenshot](screenshot.png)
 
 ## Features
 
-✅ **Two Exam Versions**
-- Core 1 (220-1201): Mobile devices, networking, hardware, virtualization, troubleshooting
-- Core 2 (220-1202): Operating systems, security, software, operational procedures
+- **Two-step exam launch:** choose an exam, then choose a mode.
+- **Four exam modes:**
+  - **Practice Exam** — 25 random questions, 1 minute/question timer, instant feedback.
+  - **Simulation Exam** — full question count with the exam timer, no feedback until results (mimics the real CompTIA exam).
+  - **Practice by Domain** — filter by exam domain, up to 25 questions.
+  - **Practice by Study Module** — filter by CertMaster course module, up to 25 questions.
+- **Three exams available:**
+  - **Core 1 (220-1201):** 160 questions across 5 domains, 27 objectives, 10 modules.
+  - **Core 2 (220-1202):** 16 questions across 4 domains, 36 objectives, 12 modules.
+  - **Acronyms Quiz:** 173 acronym questions.
+- **Question types:** multiple-choice, multi-select (with partial-credit scoring), and drag-and-drop.
+- Every question is tagged with **domain, objective, and module**, verified against the official CompTIA A+ Certification Exam Objectives v4.
+- **Save & Exit** with full state restoration — question index, answers, timer, mode, and active filter.
+- **Question flagging** and re-answering (answered questions lock unless flagged).
+- **Dark/light theme** with an anti-flash guard on load.
+- **Results dashboard** with a Correct / Partial Credit / Incorrect / Unanswered breakdown.
+- **Filterable question review** with explanations for every question.
+- **Zero dependencies** — runs in any modern browser, no build step.
 
-✅ **Question Types**
-- Multiple Choice (single select)
-- Multi-Select (select all that apply)
-- Drag-and-Drop (matching, ordering)
+## Real Exam Reference
 
-✅ **Realistic Exam Experience**
-- 90-minute countdown timer with 5-minute warning
-- Question navigator with color-coded feedback:
-  - 🟢 Green: Correct answer
-  - 🔴 Red: Incorrect answer
-  - 🟡 Amber: Flagged for review
-  - ⚪ Gray: Unanswered
-- Flag questions for later review
-- Real-time score calculation
+What you're preparing for. These figures describe the actual CompTIA exams, not this practice bank (see [Question Bank Coverage](#question-bank-coverage) for what the app currently contains).
 
-✅ **Progress Tracking**
-- Automatic answer saving (client-side storage)
-- Session persistence across browser reloads
-- Detailed result review with explanations
+|                | Core 1 (220-1201)                    | Core 2 (220-1202)                    |
+|----------------|--------------------------------------|--------------------------------------|
+| Questions      | Up to 90                             | Up to 90                             |
+| Time           | 90 minutes                           | 90 minutes                           |
+| Passing Score  | 675/900                              | 700/900                              |
+| Question Types | Multiple-choice + performance-based  | Multiple-choice + performance-based  |
 
-✅ **Fully Responsive**
-- Desktop, tablet, and mobile layouts
-- Touch-friendly interface
-- Adaptive question navigator
+Source: CompTIA A+ Certification Exam Objectives v4, © 2024 CompTIA, Inc.
 
-## Quick Start
+## Core 1 Domains
 
-### Requirements
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Internet connection (for initial load only)
-- No installation needed
+The five Core 1 (220-1201) domains and their exam weights:
 
-### Usage
+1. Mobile Devices (13%)
+2. Networking (23%)
+3. Hardware (25%)
+4. Virtualization and Cloud Computing (11%)
+5. Hardware and Network Troubleshooting (28%)
 
-1. **Open the application:**
-   - Navigate to `index.html` in your browser
-   - Or use a local web server: `python -m http.server 8000`
+## Core 2 Domains
 
-2. **Select your exam:**
-   - Click on either "Core 1" or "Core 2"
-   - Button becomes enabled when selection is made
+The four Core 2 (220-1202) domains and their exam weights:
 
-3. **Begin the exam:**
-   - Click "Begin Exam" to start
-   - 90-minute timer begins immediately
+1. Operating Systems (28%)
+2. Security (28%)
+3. Software Troubleshooting (23%)
+4. Operational Procedures (21%)
 
-4. **Answer questions:**
-   - For MC/Multi: click/check options
-   - For Drag-Drop: drag items to drop zones
-   - Click "Flag" to mark for review
-   - Navigate with Previous/Next buttons
-   - Click question numbers in navigator to jump
+## Question Bank Coverage
 
-5. **Submit exam:**
-   - Click "Submit Exam" button
-   - Timer must expire or you manually submit
-   - Results display immediately
+The practice bank is a work in progress. Coverage is uneven, and it's better to know the gaps than to be surprised by them.
 
-6. **Review results:**
-   - See scaled score and pass/fail status
-   - View correct/incorrect count
-   - Read detailed explanations
-   - Return to menu to retake exam
+**Core 1:** 160 questions covering 21 of 27 objectives. Six objectives have **zero** questions:
 
-## File Structure
+- 2.3 — Networked host services
+- 2.4 — Network configuration concepts
+- 3.1 — Display components
+- 3.6 — Power supplies
+- 3.7 — Printers / multifunction devices
+- 5.3 — Video / display troubleshooting
+
+Module 1.0 (*What Does an IT Specialist Do?*) has no questions by design — no exam objective maps to it.
+
+**Core 2:** 16 questions covering 14 of 36 objectives. This is a starter bank — most objectives are not yet represented. Contributions welcome.
+
+**Acronyms:** 173 questions covering acronyms from both the Core 1 and Core 2 acronym lists.
+
+## Project Structure
 
 ```
-compTia A+/
-├── index.html                          # Main application (1108 lines)
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── app.js
+│   └── scoring.js
 ├── exam_assets/
-│   ├── questions.json                  # Question bank (23 Core1 + 15 Core2)
-│   ├── QUESTION_BANK_README.md        # Question format documentation
-│   └── QUESTION_EXAMPLES.md           # Example questions with rendering code
-├── README.md                           # This file
-└── IMPLEMENTATION_SUMMARY.md           # Technical overview
+│   ├── questions.json
+│   └── acronyms_quiz.json
+├── test_multi_select_scoring.js
+├── package.json
+└── README.md
 ```
 
-## How It Works
+- **index.html** — entry point; minimal markup, no inline styles or scripts.
+- **css/styles.css** — all styling, with CSS variables for theming.
+- **js/app.js** — exam flow, UI, state management, and persistence.
+- **js/scoring.js** — scoring engine (multi-select partial credit, drag-drop, multiple-choice); importable by both the browser and the tests.
+- **exam_assets/questions.json** — all exam data: Core 1 and Core 2 question banks, domain weights, and objective/module metadata.
+- **exam_assets/acronyms_quiz.json** — acronym quiz data (loaded at runtime into a synthetic "Acronyms" exam).
+- **test_multi_select_scoring.js** — unit tests for the scoring engine.
+- **package.json** — npm scripts (`test`, `start`).
 
-### Application Flow
+## Getting Started
 
+```bash
+git clone <repo-url>
+cd <repo-dir>
+npm start
 ```
-Start → Select Exam → Load Questions → Answer Questions → Submit → View Results → Review
+
+Opens http://localhost:8000. Requires Python 3 (uses `python -m http.server`).
+
+> **Note:** `npm start` invokes `python` (not `python3`) because `python3` resolves to the Microsoft Store alias stub on some Windows machines. If `python` doesn't resolve on your system, run `python3 -m http.server 8000` directly.
+
+## Running Tests
+
+```bash
+npm test
 ```
 
-### Data Structure
+Runs 16 unit tests for the scoring engine via Node.js. No browser required. The tests import the scoring functions directly from `js/scoring.js`, so they exercise the real production code rather than a copy.
 
-Questions are stored in `exam_assets/questions.json`:
+## Question Data Schema
+
+Each entry in an exam's `questionBank` follows this shape:
 
 ```json
 {
-  "exams": {
-    "220-1201": {
-      "name": "CompTIA A+ Core 1",
-      "code": "220-1201",
-      "passingScore": 675,
-      "questionBank": [
-        {
-          "id": "1201-001",
-          "domain": "1.0 Mobile Devices",
-          "type": "mc",
-          "stem": "Question text?",
-          "options": [...],
-          "correctAnswer": 1,
-          "explanation": "Why this is correct..."
-        }
-      ]
-    },
-    "220-1202": { ... }
-  }
+  "id": "1201-001",
+  "domain": "2.0 Networking",
+  "objective": "2.1",
+  "module": "5.0",
+  "type": "multiple-choice",
+  "stem": "Question text...",
+  "options": ["A. ...", "B. ...", "C. ...", "D. ..."],
+  "correctAnswer": "B",
+  "explanation": "Explanation text..."
 }
 ```
 
-### Scoring Algorithm
+Fields:
 
-1. **Raw Score**: (Correct Answers / Total Questions) × 100
-2. **Scaled Score**: (Raw Score / 100) × (900 - 100) + 100
-3. **Result**: 
-   - Core 1: 675+ = PASS
-   - Core 2: 700+ = PASS
+- **id** — unique identifier (exam prefix + number).
+- **domain** — must match a key in the exam's `domainWeights`.
+- **objective** — must match a key in the exam's `objectives` metadata.
+- **module** — must match a key in the exam's `modules` metadata.
+- **type** — `"multiple-choice"`, `"multi-select"`, or `"drag-drop"`.
+- **correctAnswer** — for multiple-choice, a single option; for multi-select, an array of options; for drag-drop, an object mapping zones to items.
+- **explanation** — shown in the review after exam completion.
 
-### Color Coding
+> **Implementation note:** in the shipped data, `type` values are stored as `"mc"`, `"multi"`, and `"drag_drop"`, and `correctAnswer` holds the option **text** (not letters) — an array for every type. The schema above shows the conceptual shape; match the existing entries in `questions.json` when adding questions.
 
-Navigator cells update in real-time:
-- **Green** (#1b7a3d): Question answered correctly
-- **Red** (#c8102e): Question answered incorrectly
-- **Amber** (#b8790a): Question flagged for review
-- **Gray** (#f4f6f8): Question not yet answered
+## Contributing
 
-## Features in Detail
-
-### Question Types
-
-#### Multiple Choice (MC)
-- Single correct answer from 4 options
-- Click option to select
-- Updates automatically
-
-#### Multi-Select
-- Multiple correct answers (typically 2-3 from 5 options)
-- Check all that apply
-- Must select ALL correct options
-
-#### Drag and Drop
-- Match items to categories
-- Arrange items in order
-- Drag items between zones
-- Real-time validation
-
-### Timer
-
-- Starts when exam begins
-- Displays in MM:SS format
-- Turns red at 5 minutes remaining
-- Auto-submits when time expires
-- Can manually stop via "Exit" button
-
-### Progress Preservation
-
-- Answers saved automatically (LocalStorage)
-- Can close browser without losing progress
-- Session survives page reload
-- Each exam version tracked separately
-
-## Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| `←` | Previous question |
-| `→` | Next question |
-| `Tab` | Navigate options |
-| `Space` | Select/check option |
-
-## Customization
-
-### Adding Questions
-
-1. Edit `exam_assets/questions.json`
-2. Add question objects to appropriate `questionBank` array
-3. Maintain structure as shown in `QUESTION_EXAMPLES.md`
-4. Refresh browser (no restart needed)
-
-### Modifying Styling
-
-Core colors defined as CSS variables in `index.html`:
-
-```css
-:root {
-  --navy: #0f2540;
-  --accent: #c8102e;
-  --green: #1b7a3d;
-  --amber: #b8790a;
-  /* ... */
-}
-```
-
-### Changing Timer Duration
-
-Find in `startExam()` function:
-```javascript
-appState.timeRemaining = exam.timeLimit * 60; // Modify timeLimit
-```
-
-## Browser Compatibility
-
-✅ Chrome 90+
-✅ Firefox 88+
-✅ Safari 14+
-✅ Edge 90+
-✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Technical Details
-
-### Technologies Used
-
-- **HTML5**: Semantic structure
-- **CSS3**: Grid, flexbox, variables
-- **JavaScript (ES6+)**:
-  - Fetch API for loading questions
-  - LocalStorage for persistence
-  - HTML5 Drag and Drop API
-  - DOM manipulation
-
-### No External Dependencies
-
-- Pure vanilla JavaScript
-- No frameworks or libraries
-- No build process required
-- Single HTML file deployment
-
-### Performance
-
-- Fast load time (<1s on typical connection)
-- Minimal memory footprint
-- Smooth animations (60fps)
-- Efficient DOM updates
-
-## Troubleshooting
-
-### Questions not loading
-- Verify `exam_assets/questions.json` exists
-- Check browser console for errors (F12)
-- Ensure JSON is valid
-
-### Timer not starting
-- Check browser JavaScript is enabled
-- Verify DOMContentLoaded event fires
-- Review console for errors
-
-### Answers not saving
-- Check browser allows LocalStorage
-- Verify storage quota not exceeded
-- Try different browser
-
-### Drag-drop not working
-- Ensure browser supports HTML5 Drag API
-- Check console for JavaScript errors
-- Try different browser
-
-## Future Enhancements
-
-- [ ] Performance-based questions (PBQ) with simulations
-- [ ] Image-based questions
-- [ ] Statistics dashboard with trend analysis
-- [ ] Study mode with hints
-- [ ] Spaced repetition scheduling
-- [ ] Collaborative study rooms
-- [ ] Mobile app wrapper
-
-## Development Notes
-
-### Code Organization
-
-1. **Global State** (appState object)
-   - Tracks exam, questions, answers, timer
-
-2. **UI Functions**
-   - Screen management (intro, exam, results)
-   - Question rendering
-   - Navigator updates
-
-3. **Logic Functions**
-   - Answer evaluation
-   - Score calculation
-   - Timer management
-
-4. **Event Handlers**
-   - User interactions
-   - Navigation
-   - Question submission
-
-### Adding Question Type
-
-To add a new question type:
-
-1. Create render function: `renderNewType()`
-2. Add condition in `loadQuestion()` to call render
-3. Add evaluation logic in `checkAnswerCorrect()`
-4. Add to `questions.json` with new `type` value
+- Questions must include all schema fields.
+- `objective` and `module` must reference valid keys in the exam's metadata tables.
+- Domain must match a key in the exam's `domainWeights`.
+- Run `npm test` before submitting.
 
 ## License
 
-Educational use only. CompTIA A+ is a trademark of CompTIA, Inc.
+MIT
 
-## Support
+## Disclaimer
 
-For questions or issues:
-1. Check troubleshooting section above
-2. Review browser console (F12)
-3. Verify file structure and paths
-4. Try different browser
-
-## Changelog
-
-### Version 1.0 (July 2026)
-- Initial release
-- Core 1 and Core 2 exams
-- 3 question types (MC, Multi, Drag-drop)
-- Timer and scoring
-- Progress tracking
-- Responsive design
-- 38 starter questions
-
----
-
-**Status**: Production Ready
-**Last Updated**: July 27, 2026
-**Question Bank**: 38 questions (expandable to 180+ total)
+This is an independent study tool and is not affiliated with, endorsed by, or associated with CompTIA, Inc. CompTIA A+ is a registered trademark of CompTIA, Inc. Exam objectives referenced from CompTIA A+ Certification Exam Objectives v4, © 2024 CompTIA, Inc.

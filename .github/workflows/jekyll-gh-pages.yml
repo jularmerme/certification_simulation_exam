@@ -5,7 +5,20 @@ on:
     branches: [main]
 
 jobs:
+  # Run the scoring-engine unit tests first. Deploy depends on this job, so a
+  # failing test blocks the deployment.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run tests
+        run: npm test
+
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
