@@ -966,18 +966,29 @@
       <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">Choose which CompTIA A+ exam you want to practice. Progress is saved automatically for each exam.</p>
       
       <div class="exam-selector">
+        <!-- Card stat values are populated by populateIntroCards() once the
+             question banks have loaded; the em dashes are only ever visible if
+             that load fails. -->
         <div class="exam-card" id="card1201" onclick="selectExam('220-1201')">
           <h3>Core 1</h3>
           <p><span class="exam-code">220-1201</span></p>
           <p>Mobile devices, networking, hardware, virtualization, and troubleshooting.</p>
           <div class="exam-stats">
             <div class="exam-stat-item">
-              <div class="exam-stat-label">Questions</div>
-              <div class="exam-stat-value">90</div>
+              <div class="exam-stat-label">In Bank</div>
+              <div class="exam-stat-value" id="c1Bank">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Per Exam</div>
+              <div class="exam-stat-value" id="c1Exam">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Time Limit</div>
+              <div class="exam-stat-value" id="c1Time">&mdash;</div>
             </div>
             <div class="exam-stat-item">
               <div class="exam-stat-label">Pass Score</div>
-              <div class="exam-stat-value">675/900</div>
+              <div class="exam-stat-value" id="c1Pass">&mdash;</div>
             </div>
           </div>
         </div>
@@ -989,12 +1000,20 @@
           <p>Operating systems, security, software, and operational procedures.</p>
           <div class="exam-stats">
             <div class="exam-stat-item">
-              <div class="exam-stat-label">Questions</div>
-              <div class="exam-stat-value">90</div>
+              <div class="exam-stat-label">In Bank</div>
+              <div class="exam-stat-value" id="c2Bank">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Per Exam</div>
+              <div class="exam-stat-value" id="c2Exam">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Time Limit</div>
+              <div class="exam-stat-value" id="c2Time">&mdash;</div>
             </div>
             <div class="exam-stat-item">
               <div class="exam-stat-label">Pass Score</div>
-              <div class="exam-stat-value">700/900</div>
+              <div class="exam-stat-value" id="c2Pass">&mdash;</div>
             </div>
           </div>
         </div>
@@ -1005,12 +1024,20 @@
           <p>Test your knowledge of essential CompTIA A+ terminology and acronyms.</p>
           <div class="exam-stats">
             <div class="exam-stat-item">
-              <div class="exam-stat-label">Questions</div>
-              <div class="exam-stat-value">25</div>
+              <div class="exam-stat-label">In Bank</div>
+              <div class="exam-stat-value" id="acrBank">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Per Exam</div>
+              <div class="exam-stat-value" id="acrExam">&mdash;</div>
+            </div>
+            <div class="exam-stat-item">
+              <div class="exam-stat-label">Time Limit</div>
+              <div class="exam-stat-value" id="acrTime">&mdash;</div>
             </div>
             <div class="exam-stat-item">
               <div class="exam-stat-label">Pass Score</div>
-              <div class="exam-stat-value">80%</div>
+              <div class="exam-stat-value" id="acrPass">&mdash;</div>
             </div>
           </div>
         </div>
@@ -1091,22 +1118,24 @@
       <div class="pass-fail" id="passFail"></div>
     </div>
     
+    <!-- Labels gain a "(n%)" share of the total question count in
+         displayExamResults(). The static text below is the no-JS fallback. -->
     <div class="result-grid">
       <div class="result-stat active" id="statCorrect" onclick="filterReview('perfect')">
         <div class="num" id="rPerfect">-</div>
-        <div class="lbl">100% Correct</div>
+        <div class="lbl" id="lblPerfect">Correct</div>
       </div>
       <div class="result-stat" id="statPartial" onclick="filterReview('partial')">
         <div class="num" id="rPartial">-</div>
-        <div class="lbl">50% Partial</div>
+        <div class="lbl" id="lblPartial">Partial Credit</div>
       </div>
       <div class="result-stat" id="statIncorrect" onclick="filterReview('incorrect')">
         <div class="num" id="rIncorrect">-</div>
-        <div class="lbl">0% Incorrect</div>
+        <div class="lbl" id="lblIncorrect">Incorrect</div>
       </div>
       <div class="result-stat" id="statUnanswered" onclick="filterReview('unanswered')">
         <div class="num" id="rUnanswered">-</div>
-        <div class="lbl">Unanswered</div>
+        <div class="lbl" id="lblUnanswered">Unanswered</div>
       </div>
     </div>
     
@@ -1189,10 +1218,14 @@ window.addEventListener('DOMContentLoaded', async () => {
     const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json');
     const acronymsData = await acronymsResponse.json();
     
-    // Convert acronyms to exam format compatible with existing code
+    // Convert acronyms to exam format compatible with existing code.
+    // questions/timeLimit mirror the fields the JSON-backed exams carry so that
+    // examQuestionCount() and examTimeLimit() work uniformly across all exams.
     window.questionBank.exams['acronyms'] = {
       name: 'Acronyms Quiz',
       code: 'Practice',
+      questions: 25,   // draw 25 per attempt from the full acronym bank
+      timeLimit: 10,   // minutes; acronym recall is fast
       minScore: 0,
       maxScore: 100,
       passingScore: 80,
@@ -1207,6 +1240,9 @@ window.addEventListener('DOMContentLoaded', async () => {
         explanation: q.explanation || ''
       }))
     };
+    
+    // Fill in the intro cards now that every exam's bank size is known
+    populateIntroCards();
     
     // Check if there's a saved exam in progress
     checkAndRestoreExamState();
@@ -1289,6 +1325,85 @@ function saveExamState() {
   localStorage.setItem('aplus_exam_state', JSON.stringify(state));
 }
 
+// ---------------------------------------------------------------------------
+// Exam configuration helpers
+//
+// These are the single source of truth for "how many questions" and "how long".
+// Both startExam() and the intro screen read through them, so the numbers the
+// user is shown are always the numbers the exam will actually use.
+// ---------------------------------------------------------------------------
+
+/**
+ * Number of questions an exam will serve.
+ * Uses the exam's configured `questions` count, clamped to the number actually
+ * available in its bank so a partially-filled bank degrades gracefully.
+ * @param {object} exam - An entry from window.questionBank.exams
+ * @returns {number}
+ */
+function examQuestionCount(exam) {
+  const bankSize = exam && exam.questionBank ? exam.questionBank.length : 0;
+  const configured = Number(exam && exam.questions) || bankSize;
+  return Math.min(configured, bankSize);
+}
+
+/**
+ * Time limit for an exam, in minutes.
+ * Falls back to one minute per question when the exam defines no timeLimit.
+ * @param {object} exam - An entry from window.questionBank.exams
+ * @returns {number}
+ */
+function examTimeLimit(exam) {
+  return Number(exam && exam.timeLimit) || examQuestionCount(exam);
+}
+
+/**
+ * Passing score as display text: "675/900" for scaled exams, "80%" for exams
+ * scored out of 100.
+ * @param {object} exam - An entry from window.questionBank.exams
+ * @returns {string}
+ */
+function formatPassScore(exam) {
+  if (!exam) return '\u2014';
+  return exam.maxScore === 100
+    ? exam.passingScore + '%'
+    : exam.passingScore + '/' + exam.maxScore;
+}
+
+/** Button label per exam; falls back to the exam's own name. */
+const EXAM_BUTTON_LABELS = {
+  '220-1201': 'Begin Core 1 Exam',
+  '220-1202': 'Begin Core 2 Exam',
+  'acronyms': 'Begin Acronyms Quiz'
+};
+
+/** Maps each intro card's element-id prefix to its exam code. */
+const INTRO_CARDS = [
+  { prefix: 'c1', code: '220-1201' },
+  { prefix: 'c2', code: '220-1202' },
+  { prefix: 'acr', code: 'acronyms' }
+];
+
+function setElementText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+
+/**
+ * Populate every intro card with its real bank size, per-exam question count,
+ * time limit and passing score. Called once the question banks have loaded.
+ */
+function populateIntroCards() {
+  INTRO_CARDS.forEach(({ prefix, code }) => {
+    const exam = window.questionBank && window.questionBank.exams[code];
+    if (!exam) return;
+    const bankSize = exam.questionBank ? exam.questionBank.length : 0;
+    setElementText(prefix + 'Bank', bankSize);
+    setElementText(prefix + 'Exam', examQuestionCount(exam));
+    setElementText(prefix + 'Time', examTimeLimit(exam) + ' min');
+    setElementText(prefix + 'Pass', formatPassScore(exam));
+  });
+}
+
 // Select exam
 function selectExam(examCode) {
   appState.examCode = examCode;
@@ -1296,37 +1411,16 @@ function selectExam(examCode) {
   document.getElementById('card1202').classList.toggle('selected', examCode === '220-1202');
   document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
   
-  let buttonText = 'Begin Exam';
-  let questionCount = '90 max';
-  let timeLimit = '90 min';
-  let passScore = '675-700/900';
-  
-  if (examCode === '220-1201') {
-    buttonText = 'Begin Core 1 Exam';
-    // Get actual question count from question bank
-    const core1 = window.questionBank.exams['220-1201'];
-    questionCount = core1 ? core1.questions.toString() : '100';
-    timeLimit = core1 ? core1.timeLimit.toString() + ' min' : '90 min';
-    passScore = '675/900';
-  } else if (examCode === '220-1202') {
-    buttonText = 'Begin Core 2 Exam';
-    // Get actual question count from question bank
-    const core2 = window.questionBank.exams['220-1202'];
-    questionCount = core2 ? core2.questions.toString() : '20';
-    timeLimit = core2 ? core2.timeLimit.toString() + ' min' : '90 min';
-    passScore = '700/900';
-  } else if (examCode === 'acronyms') {
-    buttonText = 'Begin Acronyms Quiz';
-    questionCount = '205';
-    timeLimit = '205 min';
-    passScore = '80%';
-  }
+  const exam = window.questionBank && window.questionBank.exams[examCode];
   
   document.getElementById('beginBtn').disabled = false;
-  document.getElementById('beginBtn').textContent = buttonText;
-  document.getElementById('introQuestions').textContent = questionCount;
-  document.getElementById('introTime').textContent = timeLimit;
-  document.getElementById('introPassScore').textContent = passScore;
+  document.getElementById('beginBtn').textContent =
+    EXAM_BUTTON_LABELS[examCode] || (exam ? 'Begin ' + exam.name : 'Begin Exam');
+  
+  // Summary tiles mirror exactly what startExam() will do with this exam.
+  setElementText('introQuestions', examQuestionCount(exam));
+  setElementText('introTime', examTimeLimit(exam) + ' min');
+  setElementText('introPassScore', formatPassScore(exam));
 }
 
 // Select unique questions ensuring no duplicates
@@ -1363,12 +1457,11 @@ function startExam() {
     return;
   }
   
-  // Number of questions to select for this exam - ALWAYS 25 for development
-  let questionsToSelect = 25;
+  // Number of questions to serve, driven by the exam's own configuration and
+  // clamped to the bank size (see examQuestionCount).
+  const questionsToSelect = examQuestionCount(exam);
   
   // Randomly select a subset of questions from the question bank
-  // First shuffle all questions, then take the first N
-  // REMOVED: Using selectUniqueQuestions instead
   const selectedQuestions = selectUniqueQuestions(exam.questionBank, questionsToSelect);
   
   // Randomize options within each selected question
@@ -1379,9 +1472,9 @@ function startExam() {
   appState.validatedDragDrops.clear();
   appState.examStartTime = Date.now();
   
-  // Calculate time: 1 minute per question
-  const timeInMinutes = appState.questions.length;
-  appState.timeRemaining = timeInMinutes * 60; // Convert to seconds
+  // Timer comes from the exam's configured timeLimit (minutes), falling back to
+  // one minute per question when the exam defines none.
+  appState.timeRemaining = examTimeLimit(exam) * 60; // Convert to seconds
   
   // Update UI
   document.getElementById('screenIntro').classList.add('hidden');
@@ -2225,14 +2318,44 @@ function showCompletionModal() {
   modal.style.display = 'flex';
 }
 
+/**
+ * Build a results tile label: the category name plus that category's share of the
+ * whole exam, e.g. "Partial Credit (28%)".
+ *
+ * The percentage here is a proportion of the total question count. It is NOT the
+ * per-question score tier (100/50/0) returned by computeMultiSelectScore, which is
+ * what the old "100% Correct" / "50% Partial" / "0% Incorrect" labels were showing.
+ * Those read as proportions of the exam and misled accordingly.
+ *
+ * @param {string} name - Category name, e.g. "Correct"
+ * @param {number} count - Number of questions in this category
+ * @param {number} total - Total questions in the exam
+ * @returns {string}
+ */
+function formatResultLabel(name, count, total) {
+  const share = total > 0 ? Math.round((count / total) * 100) : 0;
+  return name + ' (' + share + '%)';
+}
+
 // Display exam results on the results page
 function displayExamResults(results) {
   document.getElementById('scaledScore').textContent = results.scaledScore;
   document.getElementById('passingScore').textContent = results.passingScore;
-  document.getElementById('rPerfect').textContent = results.perfect;
-  document.getElementById('rPartial').textContent = results.partial;
-  document.getElementById('rIncorrect').textContent = results.incorrect;
-  document.getElementById('rUnanswered').textContent = results.unanswered;
+  
+  // Total questions served. Falls back to the category sum, which equals the
+  // question count by construction, and guards against divide-by-zero.
+  const total = (results.questions && results.questions.length) ||
+    (results.perfect + results.partial + results.incorrect + results.unanswered);
+  
+  setElementText('rPerfect', results.perfect);
+  setElementText('rPartial', results.partial);
+  setElementText('rIncorrect', results.incorrect);
+  setElementText('rUnanswered', results.unanswered);
+  
+  setElementText('lblPerfect', formatResultLabel('Correct', results.perfect, total));
+  setElementText('lblPartial', formatResultLabel('Partial Credit', results.partial, total));
+  setElementText('lblIncorrect', formatResultLabel('Incorrect', results.incorrect, total));
+  setElementText('lblUnanswered', formatResultLabel('Unanswered', results.unanswered, total));
   
   const passFail = document.getElementById('passFail');
   passFail.textContent = results.passed ? 'PASS' : 'FAIL';

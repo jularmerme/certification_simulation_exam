@@ -3,7 +3,9 @@
  * Validates the computeMultiSelectScore and scoring integration
  */
 
-// Implementation of computeMultiSelectScore
+// SYNC WARNING: This is a manual copy of computeMultiSelectScore from index.html.
+// It will be replaced with a direct import when scoring is extracted to js/scoring.js (P3.5).
+// If you change the function in index.html, update this copy too.
 function computeMultiSelectScore(userAnswers, correctAnswers) {
   if (!Array.isArray(userAnswers) || userAnswers.length === 0) {
     return 0; // No answers selected
