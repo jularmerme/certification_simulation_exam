@@ -11,7 +11,11 @@ let appState = {
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
   timerInterval: null,
   timeRemaining: 0,
-  examStartTime: null
+  examStartTime: null,
+  // P5 mode state
+  examMode: 'practice',        // 'practice' | 'simulation' | 'domain' | 'module'
+  feedbackEnabled: true,       // false in simulation mode (no mid-exam correctness colors)
+  activeFilter: null           // { type: 'domain'|'module', value: string, label: string } or null
 };
 
 // Theme Management
@@ -124,6 +128,11 @@ function checkAndRestoreExamState() {
       appState.displayedQuestionIds = new Set(state.displayedQuestionIds || []);
       appState.timeRemaining = state.timeRemaining || 0;
       appState.examStartTime = state.examStartTime || Date.now();
+      // P5 mode state. Default to practice/feedback-on for pre-P5 saved states so
+      // an older resume behaves exactly as it did before.
+      appState.examMode = state.examMode || 'practice';
+      appState.feedbackEnabled = state.feedbackEnabled !== undefined ? state.feedbackEnabled : true;
+      appState.activeFilter = state.activeFilter || null;
       
       // CRITICAL: Restore the SAVED questions, not generate new ones
       if (state.questions && state.questions.length > 0) {
@@ -132,9 +141,11 @@ function checkAndRestoreExamState() {
         // Show exam screen
         const exam = window.questionBank.exams[state.examCode];
         if (exam) {
-          document.getElementById('screenIntro').classList.add('hidden');
-          document.getElementById('screenExam').classList.remove('hidden');
+          showScreen('screenExam');
           document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
+          
+          // Restore the mode badge + filter note so the resumed exam shows its context
+          applyModeHeader();
           
           // Build navigator
           buildNavigator();
@@ -167,7 +178,11 @@ function saveExamState() {
     autoFlagged: Array.from(appState.autoFlagged),
     validatedDragDrops: Array.from(appState.validatedDragDrops),
     timeRemaining: appState.timeRemaining,
-    examStartTime: appState.examStartTime
+    examStartTime: appState.examStartTime,
+    // P5 mode state — required so resume restores the correct mode/feedback/filter
+    examMode: appState.examMode,
+    feedbackEnabled: appState.feedbackEnabled,
+    activeFilter: appState.activeFilter
   };
   
   localStorage.setItem('aplus_exam_state', JSON.stringify(state));
@@ -252,23 +267,148 @@ function populateIntroCards() {
   });
 }
 
-// Select exam
+// ---------------------------------------------------------------------------
+// Two-step launch flow (P5)
+//
+// Step 1: clicking an exam card calls selectExam(), which stores the exam and
+//         opens the mode picker (it no longer starts an exam directly).
+// Step 2: the mode picker offers Practice / Simulation / Practice by Domain /
+//         Practice by Study Module. A mode function configures appState.examMode
+//         + feedbackEnabled + activeFilter, then calls runExam() with a question
+//         set and timer.
+// ---------------------------------------------------------------------------
+
+// Screen visibility helper: show exactly one of the top-level screens.
+function showScreen(id) {
+  ['screenIntro', 'screenModePicker', 'screenExam', 'screenResults'].forEach(s => {
+    const el = document.getElementById(s);
+    if (el) el.classList.toggle('hidden', s !== id);
+  });
+}
+
+// Step 1 — an exam card was clicked. Store it and open the mode picker.
 function selectExam(examCode) {
   appState.examCode = examCode;
   document.getElementById('card1201').classList.toggle('selected', examCode === '220-1201');
   document.getElementById('card1202').classList.toggle('selected', examCode === '220-1202');
   document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
-  
-  const exam = window.questionBank && window.questionBank.exams[examCode];
-  
-  document.getElementById('beginBtn').disabled = false;
-  document.getElementById('beginBtn').textContent =
-    EXAM_BUTTON_LABELS[examCode] || (exam ? 'Begin ' + exam.name : 'Begin Exam');
-  
-  // Summary tiles mirror exactly what startExam() will do with this exam.
-  setElementText('introQuestions', examQuestionCount(exam));
-  setElementText('introTime', examTimeLimit(exam) + ' min');
-  setElementText('introPassScore', formatPassScore(exam));
+  openModePicker();
+}
+
+/** Open the mode-picker screen for the currently selected exam. */
+function openModePicker() {
+  const exam = window.questionBank && window.questionBank.exams[appState.examCode];
+  if (!exam) { alert('Please select an exam'); return; }
+
+  document.getElementById('modePickerTitle').textContent = exam.name + ' — Choose a Mode';
+  document.getElementById('modePickerSubtitle').textContent =
+    'Select how you want to practice ' + exam.name + ' (' + exam.code + ').';
+
+  // Show mode cards, hide any open sub-picker.
+  document.getElementById('modeCards').classList.remove('hidden');
+  document.getElementById('domainPicker').classList.add('hidden');
+  document.getElementById('modulePicker').classList.add('hidden');
+
+  // Fill per-mode meta lines.
+  const bank = exam.questionBank || [];
+  const practiceN = Math.min(25, bank.length);
+  setElementText('metaPractice', practiceN + ' questions \u00b7 ' + practiceN + ' min \u00b7 feedback on');
+  setElementText('metaSimulation',
+    examQuestionCount(exam) + ' questions \u00b7 ' + examTimeLimit(exam) + ' min \u00b7 no feedback');
+
+  // Domain / Module modes require metadata. The acronyms synthetic exam has none,
+  // so disable those two cards for it rather than hiding them.
+  const hasDomains = !!(exam.domainWeights && Object.keys(exam.domainWeights).length);
+  const hasModules = !!(exam.modules && Object.keys(exam.modules).length);
+  setModeCardEnabled('modeDomain', hasDomains,
+    hasDomains ? Object.keys(exam.domainWeights).length + ' domains' : 'Not available for this exam');
+  setModeCardEnabled('modeModule', hasModules,
+    hasModules ? Object.keys(exam.modules).length + ' modules' : 'Not available for this exam');
+
+  showScreen('screenModePicker');
+}
+
+/** Enable/disable a mode card and set its meta line. */
+function setModeCardEnabled(id, enabled, meta) {
+  const card = document.getElementById(id);
+  card.classList.toggle('disabled', !enabled);
+  const metaId = 'meta' + id.replace('mode', '');
+  setElementText(metaId, meta);
+}
+
+/** Back button on the mode picker: if a sub-picker is open, return to mode cards;
+ *  otherwise return to the exam cards (Step 1). */
+function modePickerBack() {
+  const domainOpen = !document.getElementById('domainPicker').classList.contains('hidden');
+  const moduleOpen = !document.getElementById('modulePicker').classList.contains('hidden');
+  if (domainOpen || moduleOpen) {
+    document.getElementById('domainPicker').classList.add('hidden');
+    document.getElementById('modulePicker').classList.add('hidden');
+    document.getElementById('modeCards').classList.remove('hidden');
+  } else {
+    showScreen('screenIntro');
+  }
+}
+
+// Count questions in a bank matching a field value (domain or module).
+function countBy(bank, field, value) {
+  return bank.filter(q => q[field] === value).length;
+}
+
+/** Practice by Domain sub-picker: one button per domainWeights key, with counts. */
+function openDomainPicker() {
+  const exam = window.questionBank.exams[appState.examCode];
+  if (!exam || !exam.domainWeights) return;
+  const bank = exam.questionBank || [];
+  const container = document.getElementById('domainButtons');
+  container.innerHTML = '';
+
+  Object.keys(exam.domainWeights).forEach(domain => {
+    const n = countBy(bank, 'domain', domain);
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.disabled = n === 0;
+    btn.innerHTML = '<span>' + escapeHtml(domain) + '</span>' +
+      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span>';
+    if (n > 0) btn.onclick = () => startFilteredExam('domain', domain, domain);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('modeCards').classList.add('hidden');
+  document.getElementById('modulePicker').classList.add('hidden');
+  document.getElementById('domainPicker').classList.remove('hidden');
+}
+
+/** Practice by Study Module sub-picker: one button per module, with counts. */
+function openModulePicker() {
+  const exam = window.questionBank.exams[appState.examCode];
+  if (!exam || !exam.modules) return;
+  const bank = exam.questionBank || [];
+  const container = document.getElementById('moduleButtons');
+  container.innerHTML = '';
+
+  Object.keys(exam.modules).forEach(moduleNum => {
+    const n = countBy(bank, 'module', moduleNum);
+    const title = exam.modules[moduleNum];
+    const label = 'Module ' + moduleNum + ': ' + title;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.disabled = n === 0;
+    btn.innerHTML = '<span>' + escapeHtml(label) + '</span>' +
+      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span>';
+    if (n > 0) btn.onclick = () => startFilteredExam('module', moduleNum, label);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('modeCards').classList.add('hidden');
+  document.getElementById('domainPicker').classList.add('hidden');
+  document.getElementById('modulePicker').classList.remove('hidden');
+}
+
+/** Minimal HTML escape for values interpolated into innerHTML. */
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 // Select unique questions ensuring no duplicates
@@ -292,51 +432,109 @@ function selectUniqueQuestions(questionBank, count) {
   
   return selected;
 }
-// Start exam
-function startExam() {
-  if (!appState.examCode) {
-    alert('Please select an exam');
-    return;
-  }
-  
+// ---------------------------------------------------------------------------
+// Mode entry points (Step 2). Each configures examMode / feedbackEnabled /
+// activeFilter, picks a question set, then hands off to runExam().
+// ---------------------------------------------------------------------------
+
+// Practice Exam: up to 25 random from the full bank, 1 min/question, feedback on.
+function startPracticeExam() {
   const exam = window.questionBank.exams[appState.examCode];
-  if (!exam) {
-    alert('Exam not found');
-    return;
+  if (!exam) { alert('Exam not found'); return; }
+  const count = Math.min(25, (exam.questionBank || []).length);
+  const questions = selectUniqueQuestions(exam.questionBank, count);
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = null;
+  runExam(questions, count * 60);
+}
+
+// Simulation Exam: exam's configured count + timeLimit, feedback OFF.
+function startSimulationExam() {
+  const exam = window.questionBank.exams[appState.examCode];
+  if (!exam) { alert('Exam not found'); return; }
+  const count = examQuestionCount(exam);
+  const questions = selectUniqueQuestions(exam.questionBank, count);
+  appState.examMode = 'simulation';
+  appState.feedbackEnabled = false;
+  appState.activeFilter = null;
+  runExam(questions, examTimeLimit(exam) * 60);
+}
+
+// Practice by Domain / Module: up to 25 random from the filtered set, feedback on.
+function startFilteredExam(type, value, label) {
+  const exam = window.questionBank.exams[appState.examCode];
+  if (!exam) { alert('Exam not found'); return; }
+  const field = type === 'domain' ? 'domain' : 'module';
+  const filtered = (exam.questionBank || []).filter(q => q[field] === value);
+  const count = Math.min(25, filtered.length);
+  if (count === 0) return; // guarded by disabled buttons, but be safe
+  const questions = selectUniqueQuestions(filtered, count);
+  appState.examMode = type;               // 'domain' | 'module'
+  appState.feedbackEnabled = true;
+  appState.activeFilter = { type, value, label };
+  // 1 minute per (filtered) question
+  runExam(questions, count * 60);
+}
+
+// Human-readable label for the current mode (badge + persistence display).
+function modeDisplayName() {
+  switch (appState.examMode) {
+    case 'simulation': return 'Simulation';
+    case 'domain': return 'Practice \u00b7 Domain';
+    case 'module': return 'Practice \u00b7 Module';
+    default: return 'Practice';
   }
-  
-  // Number of questions to serve, driven by the exam's own configuration and
-  // clamped to the bank size (see examQuestionCount).
-  const questionsToSelect = examQuestionCount(exam);
-  
-  // Randomly select a subset of questions from the question bank
-  const selectedQuestions = selectUniqueQuestions(exam.questionBank, questionsToSelect);
-  
-  // Randomize options within each selected question
+}
+
+/**
+ * Shared exam runner. Randomizes options, resets per-attempt state, wires the
+ * header/badge/filter-note, then starts the exam screen. Used by every mode and
+ * (indirectly) by resume.
+ * @param {object[]} selectedQuestions - already-filtered question set
+ * @param {number} timeSeconds - timer duration in seconds
+ */
+function runExam(selectedQuestions, timeSeconds) {
+  const exam = window.questionBank.exams[appState.examCode];
+
   appState.questions = selectedQuestions.map(q => randomizeQuestionOptions(q));
   appState.currentQuestionIndex = 0;
   appState.answers = {};
   appState.flagged.clear();
+  appState.autoFlagged.clear();
   appState.validatedDragDrops.clear();
+  appState.displayedQuestionIds.clear();
   appState.examStartTime = Date.now();
-  
-  // Timer comes from the exam's configured timeLimit (minutes), falling back to
-  // one minute per question when the exam defines none.
-  appState.timeRemaining = examTimeLimit(exam) * 60; // Convert to seconds
-  
-  // Update UI
-  document.getElementById('screenIntro').classList.add('hidden');
-  document.getElementById('screenExam').classList.remove('hidden');
+  appState.timeRemaining = timeSeconds;
+
+  showScreen('screenExam');
   document.getElementById('topbarExamName').textContent = exam.name + ' (' + exam.code + ')';
-  
-  // Build navigator
+  applyModeHeader();
+
   buildNavigator();
-  
-  // Load first question
   loadQuestion(0);
-  
-  // Start timer
   startTimer();
+}
+
+/** Set the exam-header mode badge and the optional active-filter note. */
+function applyModeHeader() {
+  const badge = document.getElementById('qModeBadge');
+  if (badge) {
+    badge.textContent = modeDisplayName();
+    badge.classList.toggle('simulation', appState.examMode === 'simulation');
+  }
+  const note = document.getElementById('qFilterNote');
+  if (note) {
+    if (appState.activeFilter) {
+      note.textContent = 'Filtered: ' + appState.activeFilter.label +
+        ' (' + appState.questions.length + ' question' +
+        (appState.questions.length === 1 ? '' : 's') + ')';
+      note.classList.remove('hidden');
+    } else {
+      note.textContent = '';
+      note.classList.add('hidden');
+    }
+  }
 }
 
 // Fisher-Yates shuffle algorithm
@@ -420,7 +618,7 @@ function updateNavigator() {
     const cell = document.getElementById('nav-' + idx);
     if (!cell) return;
     
-    cell.classList.remove('answered', 'incorrect', 'flagged', 'locked', 'current', 'partial');
+    cell.classList.remove('answered', 'answered-neutral', 'incorrect', 'flagged', 'locked', 'current', 'partial');
     
     if (idx === appState.currentQuestionIndex) {
       cell.classList.add('current');
@@ -437,11 +635,16 @@ function updateNavigator() {
       cell.classList.add('flagged');
     } else if (isAnswered) {
       // Question is answered but not flagged
-      // For drag-drop questions, only show correct/incorrect after validation
+      // For drag-drop questions, only show status after validation
       if (q.type === 'drag_drop' && !appState.validatedDragDrops.has(idx)) {
         // Don't show anything - remains gray (unanswered appearance)
+      } else if (!appState.feedbackEnabled) {
+        // Simulation mode: reveal that a question is answered, but NOT whether it
+        // is correct. Neutral blue fill, still locked. Correctness waits for results.
+        cell.classList.add('answered-neutral');
+        cell.classList.add('locked');
       } else {
-        // For MC, multi-select, or validated drag-drop
+        // Practice modes: reveal correctness via color.
         const isCorrect = checkAnswerCorrect(q, userAnswer);
         
         if (typeof isCorrect === 'number') {
@@ -1147,8 +1350,8 @@ function closeCompletionModal() {
   modal.style.display = 'none';
   
   // Now show results screen with calculated data
-  document.getElementById('screenExam').classList.add('hidden');
-  document.getElementById('screenResults').classList.remove('hidden');
+  showScreen('screenResults');
+  document.getElementById('timerDisplay').classList.add('hidden');
   
   // Use stored results data
   const results = window.examResults;
@@ -1268,9 +1471,18 @@ function renderReviewPage() {
   
   // Check if filter has no results
   if (filteredIndices.length === 0) {
+    // Friendly per-filter empty message (never expose the internal filter key).
+    const EMPTY_MESSAGES = {
+      all: 'No questions to display',
+      perfect: 'No correct answers to display',
+      partial: 'No partial credit answers to display',
+      incorrect: 'No incorrect answers to display',
+      unanswered: 'No unanswered questions to display'
+    };
+    const msg = EMPTY_MESSAGES[reviewPaginationState.currentFilter] || 'No questions to display';
     const emptyMsg = document.createElement('div');
     emptyMsg.style.cssText = 'text-align: center; padding: 40px 20px; color: var(--muted);';
-    emptyMsg.innerHTML = '<div style="font-size: 14px;">No ' + reviewPaginationState.currentFilter + ' questions to display</div>';
+    emptyMsg.innerHTML = '<div style="font-size: 14px;">' + msg + '</div>';
     reviewList.appendChild(emptyMsg);
     return;
   }
@@ -1505,9 +1717,7 @@ function exitWithoutSave() {
  */
 function backToMenu(clearState = true) {
   clearInterval(appState.timerInterval);
-  document.getElementById('screenExam').classList.add('hidden');
-  document.getElementById('screenResults').classList.add('hidden');
-  document.getElementById('screenIntro').classList.remove('hidden');
+  showScreen('screenIntro');
   document.getElementById('timerDisplay').classList.add('hidden');
   document.getElementById('topbarExamName').textContent = 'Select an exam';
   

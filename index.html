@@ -79,8 +79,7 @@
           </div>
         </div>
         
-        <div class="exam-card disabled" id="card1202" onclick="return false">
-          <div class="coming-soon-badge">Coming Soon</div>
+        <div class="exam-card" id="card1202" onclick="selectExam('220-1202')">
           <h3>Core 2</h3>
           <p><span class="exam-code">220-1202</span></p>
           <p>Operating systems, security, software, and operational procedures.</p>
@@ -130,7 +129,56 @@
       </div>
       
       <div class="button-group">
-        <button class="btn primary" id="beginBtn" onclick="startExam()" disabled>Select exam above to begin</button>
+        <button class="btn primary" id="beginBtn" onclick="openModePicker()" disabled>Select an exam above to choose a mode</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODE PICKER SCREEN (Step 2: choose how to practice the selected exam) -->
+  <div id="screenModePicker" class="hidden">
+    <div class="intro-card">
+      <button class="btn back-btn" onclick="modePickerBack()">&larr; Back</button>
+      <h1 id="modePickerTitle">Choose a Mode</h1>
+      <p id="modePickerSubtitle">Select how you want to practice this exam.</p>
+
+      <!-- Mode selection (4 mode cards) -->
+      <div id="modeCards" class="mode-grid">
+        <div class="mode-card" id="modePractice" onclick="startPracticeExam()">
+          <div class="mode-card-icon">📝</div>
+          <h3>Practice Exam</h3>
+          <p class="mode-card-desc">25 random questions with instant feedback</p>
+          <div class="mode-card-meta" id="metaPractice"></div>
+        </div>
+        <div class="mode-card" id="modeSimulation" onclick="startSimulationExam()">
+          <div class="mode-card-icon">⏱️</div>
+          <h3>Simulation Exam</h3>
+          <p class="mode-card-desc">Full timed exam — no feedback until results</p>
+          <div class="mode-card-meta" id="metaSimulation"></div>
+        </div>
+        <div class="mode-card" id="modeDomain" onclick="openDomainPicker()">
+          <div class="mode-card-icon">🗂️</div>
+          <h3>Practice by Domain</h3>
+          <p class="mode-card-desc">Focus on a specific exam domain</p>
+          <div class="mode-card-meta" id="metaDomain"></div>
+        </div>
+        <div class="mode-card" id="modeModule" onclick="openModulePicker()">
+          <div class="mode-card-icon">📚</div>
+          <h3>Practice by Study Module</h3>
+          <p class="mode-card-desc">Focus on a specific course module</p>
+          <div class="mode-card-meta" id="metaModule"></div>
+        </div>
+      </div>
+
+      <!-- Domain sub-picker (hidden until Practice by Domain is chosen) -->
+      <div id="domainPicker" class="hidden">
+        <h2 class="section-h" id="domainPickerTitle">Choose a Domain</h2>
+        <div id="domainButtons" class="filter-grid"></div>
+      </div>
+
+      <!-- Module sub-picker (hidden until Practice by Study Module is chosen) -->
+      <div id="modulePicker" class="hidden">
+        <h2 class="section-h" id="modulePickerTitle">Choose a Study Module</h2>
+        <div id="moduleButtons" class="filter-grid"></div>
       </div>
     </div>
   </div>
@@ -141,8 +189,10 @@
       <div class="q-card">
         <div class="q-meta">
           <div class="q-number" id="qNumber">Q1 of 23</div>
+          <div class="q-mode-badge" id="qModeBadge"></div>
           <div class="q-domain-tag" id="qDomainTag"></div>
         </div>
+        <div class="q-filter-note hidden" id="qFilterNote"></div>
         <div class="q-stem" id="qStem"></div>
         <div class="q-hint hidden" id="qHint">Select all that apply</div>
         <div id="qOptions" class="options-container"></div>

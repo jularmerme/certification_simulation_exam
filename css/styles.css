@@ -305,6 +305,155 @@ body.dark-theme .exam-card.disabled {
   transition: color 0.3s ease;
 }
 
+/* ---------------------------------------------------------------------------
+   Mode picker (Step 2) — reuses the exam-card design language.
+   --------------------------------------------------------------------------- */
+
+.back-btn {
+  margin-bottom: 16px;
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 24px 0;
+}
+
+@media (max-width: 768px) {
+  .mode-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mode-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-card:hover {
+  border-color: var(--navy2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mode-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg);
+}
+
+.mode-card.disabled:hover {
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.mode-card-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.mode-card h3 {
+  font-size: 17px;
+  color: var(--navy);
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .mode-card h3 {
+  color: #a8d8ff;
+}
+
+.mode-card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.mode-card-meta {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Domain / module sub-picker buttons */
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0 8px 0;
+}
+
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.filter-btn:hover:not(:disabled) {
+  border-color: var(--navy2);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.filter-btn .filter-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.filter-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mode badge shown in the exam header */
+
+.q-mode-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--navy2);
+}
+
+.q-mode-badge.simulation {
+  background: var(--accent);
+}
+
+.q-filter-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
 .button-group {
   display: flex;
   gap: 12px;
@@ -616,6 +765,21 @@ body.dark-theme .nav-cell.answered {
   background: rgba(46, 204, 113, 0.2);
   border-color: var(--green);
   color: var(--green);
+}
+
+/* Simulation mode: answered questions show a neutral blue fill and reveal NO
+   correctness until the results screen. */
+.nav-cell.answered-neutral {
+  background: #dbe7fb;
+  border-color: #9dbdec;
+  color: var(--navy2);
+  transition: all 0.15s;
+}
+
+body.dark-theme .nav-cell.answered-neutral {
+  background: rgba(59, 130, 246, 0.22);
+  border-color: #3b82f6;
+  color: #a8d8ff;
 }
 
 .nav-cell.partial {
