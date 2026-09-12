@@ -147,13 +147,77 @@ def ocr_image(im):
 # ---------------------------------------------------------------------------
 # Step 4: parse questions from raw OCR text
 # ---------------------------------------------------------------------------
-# An option line begins with a single letter A-H, optionally wrapped/punctuated
-# ("A.", "A)", "(A)", "A:") OR just "A " with no punctuation (common in OCR of
-# CertMaster pages), followed by the option text. Bullet markers also count.
-# Requiring 2+ following chars avoids matching a stray capital at line start.
-OPTION_RE = re.compile(r"^\s*(?:\(?([A-Ha-h])\)?[\.\):]?\s+|[•\-\*]\s+)(\S.{1,})$")
-QUESTION_HDR_RE = re.compile(r"^\s*Question\s+(\d+)\s*[:\.]?\s*(.*)$", re.IGNORECASE)
+# CertMaster Individual Response OCR artifacts (observed in real Tesseract output):
+#
+#   Question header:   "Question 4 © Correct" / "Question 1 @ Correct"
+#     -> the radio-icon (@ selected, © / (C) unselected) + status must be stripped.
+#
+#   Unselected option: "© A."  "oO B"  "O B"  "© 8"(B->8)  "Oc X"  "OA X"  "Ood"
+#   Selected option:   "@ ¢"(C misread)  "@C"  "@A"  "@D"  "@ C"
+#     -> a leading icon glob (© ® @ o O ( ) C copyright/at/paren noise), then the
+#        option LETTER (which itself may be misread: ¢->C, 8->B, o/O near a letter),
+#        then optional punctuation, then the option text.
+#
+#   Correct marker (end of the correct option's line): "Y Correct" / "y Correct"
+#     / "/ Correct".  Selected options also begin with "@".
+#
+# Icon glob preceding the real option letter (selected '@', unselected '©'/'®'/
+# '(C)', and the letters o/O/0 that Tesseract emits for the radio circle).
+_ICON = r"[©®()oO0\u2022\-\*]"
+# Option line. Accepted shapes, ordered to avoid matching ordinary stem lines that
+# start with a lowercase word ("a city?"):
+#   (a) selected: '@' then the option letter (any case, incl. misread ¢/8). The '@'
+#       is itself the radio icon, so an intervening icon char is optional.
+#   (b) unselected: a real icon prefix (© ® ( ) o O 0), then the option letter.
+#   (c) bare: NO icon, but an UPPERCASE letter A-H (or 8=B) — a plain "A Foo" option.
+# Group 1 = '@' if selected; the letter is whichever of the letter groups matched.
+_OPT_CORE = (r"(?:@\s*" + _ICON + r"*\s*([A-Ha-h¢8])"   # (a) selected
+             r"|" + _ICON + r"+\s*([A-Ha-h¢8])"          # (b) unselected icon
+             r"|([A-H8]))")                               # (c) bare uppercase
+OPTION_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s+(\S.*)$")
+OPTION_BARE_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s*$")
+
+# Question header, tolerant of the OCR'd status icon after the number. The status
+# word (Correct/Incorrect) is matched EXPLICITLY (not via the icon class) so its
+# leading 'C' is fully consumed and never leaks into the stem as "orrect".
+QUESTION_HDR_RE = re.compile(
+    r"^\s*Question\s+(\d+)\b[\s@©®()]*\s*(?:correct|incorrect)?\s*(.*)$",
+    re.IGNORECASE)
+
+# Trailing correct-answer marker on an option line: "Y Correct" / "y Correct"
+# / "/ Correct" / a bare checkmark.
+CORRECT_MARKER_RE = re.compile(r"\s*[Yy/✓✔]\s*correct\s*$", re.IGNORECASE)
 CORRECT_TOKEN_RE = re.compile(r"\b(correct|✓|✔)\b", re.IGNORECASE)
+
+# Metadata/boilerplate lines to drop before parsing.
+_META_RES = [
+    re.compile(r"Individual Response", re.IGNORECASE),
+    re.compile(r"^\s*(Julian Mercado|.*@gmail\.com)", re.IGNORECASE),
+    re.compile(r"^\s*Date:\s", re.IGNORECASE),
+    re.compile(r"^\s*Time Spent:", re.IGNORECASE),
+    re.compile(r"^\s*Score:\s.*Passing Score:", re.IGNORECASE),
+    re.compile(r"^\s*Score:\s", re.IGNORECASE),
+    re.compile(r"^\s*(https?|hitps)://", re.IGNORECASE),   # 'hitps' = OCR of https
+    re.compile(r"Copyright.*CompTIA", re.IGNORECASE),
+    re.compile(r"^\s*\d+\s*$"),                            # lone page number
+    re.compile(r"^\s*\d+/\d+\s*$"),                        # "3/3" page indicator
+]
+
+
+def _norm_option_letter(ch):
+    """Normalize a possibly-misread option letter to uppercase A-H."""
+    ch = ch.upper()
+    return {"¢": "C", "8": "B", "0": "O"}.get(ch, ch)
+
+
+def strip_metadata(raw):
+    """Drop CertMaster header/footer boilerplate lines."""
+    kept = []
+    for line in raw.splitlines():
+        if any(r.search(line) for r in _META_RES):
+            continue
+        kept.append(line)
+    return "\n".join(kept)
 
 
 def clean_text(s):
@@ -166,8 +230,9 @@ def clean_text(s):
 
 
 def split_question_blocks(raw):
-    """Split OCR text into blocks, one per 'Question N' header.
-    Falls back to a single block if no headers are found."""
+    """Split OCR text into blocks, one per 'Question N' header. Each block is
+    (question_number, [lines_after_header]). The header's status icon/word is
+    stripped; any residual text on the header line seeds the block."""
     lines = raw.splitlines()
     blocks, current, header = [], [], None
     for line in lines:
@@ -177,7 +242,7 @@ def split_question_blocks(raw):
                 blocks.append((header, current))
             header = m.group(1)
             current = []
-            trailing = m.group(2).strip()
+            trailing = (m.group(2) or "").strip()
             if trailing:
                 current.append(trailing)
         else:
@@ -189,102 +254,87 @@ def split_question_blocks(raw):
     return blocks
 
 
-def find_correct_answers(block_lines, options, explanation):
-    """Detect correct option(s) via a priority fallback chain.
-    Returns (list_of_option_texts, found_bool)."""
-    correct = []
+def _parse_option_line(line):
+    """If `line` is an option, return (letter, text, selected, marked); else None.
+    Group layout after the optional leading '@' (group 1):
+      group 2 = letter via selected '@...' branch (a)
+      group 3 = letter via unselected icon branch (b)
+      group 4 = letter via bare uppercase branch (c)
+    In OPTION_RE the final group is the option text.
+    selected == leading '@' (group 1) OR branch (a) matched (group 2).
+    """
+    def unpack(m, has_text):
+        g1 = m.group(1)
+        letter = m.group(2) or m.group(3) or m.group(4)
+        selected = bool(g1) or bool(m.group(2))
+        text = m.group(m.lastindex) if has_text else ""
+        marked = bool(CORRECT_MARKER_RE.search(text))
+        text = CORRECT_MARKER_RE.sub("", text)
+        text = re.sub(r"_+$", "", text.strip())      # trailing underscore artifact
+        return (_norm_option_letter(letter), clean_text(text), selected, marked)
 
-    # Priority 1: an explicit 'Correct' / checkmark marker on an option line.
-    for line in block_lines:
-        m = OPTION_RE.match(line)
-        if m and CORRECT_TOKEN_RE.search(line):
-            txt = clean_text(re.sub(CORRECT_TOKEN_RE, "", m.group(2)))
-            for opt in options:
-                if txt and (opt.lower().startswith(txt.lower()[:20]) or txt.lower().startswith(opt.lower()[:20])):
-                    if opt not in correct:
-                        correct.append(opt)
-    if correct:
-        return correct, True
-
-    expl = (explanation or "").lower()
-
-    # Priority 2: "correct answer is X" / "X is correct".
-    for opt in options:
-        ol = opt.lower()
-        if f"correct answer is {ol}" in expl or f"{ol} is correct" in expl or f"{ol} is the correct" in expl:
-            if opt not in correct:
-                correct.append(opt)
-    if correct:
-        return correct, True
-
-    # Priority 3: "X because ..." pattern where X is an option (explanation opens
-    # by naming the correct option).
-    for opt in options:
-        ol = re.escape(opt.lower())
-        if re.search(rf"^{ol}\b.*\bbecause\b", expl) or re.search(rf"\b{ol}\b[^.]*\bbecause\b", expl[:120]):
-            if opt not in correct:
-                correct.append(opt)
-    if correct:
-        return correct, True
-
-    # Priority 4: give up — caller flags for manual review.
-    return [], False
+    m = OPTION_RE.match(line)
+    if m:
+        return unpack(m, has_text=True)
+    mb = OPTION_BARE_RE.match(line)
+    if mb:
+        return unpack(mb, has_text=False)
+    return None
 
 
 def parse_questions(raw):
-    """Parse OCR text into a list of question dicts.
-    Each dict: stem, options, correctAnswer, explanation, questionType,
-    plus a private _flags list for review reasons."""
+    """Parse OCR text into question dicts. Each: stem, options, correctAnswer,
+    explanation, questionType, plus a private _flags list of review reasons."""
+    raw = strip_metadata(raw)
     results = []
-    for _hdr, block_lines in split_question_blocks(raw):
-        opt_indices = [i for i, ln in enumerate(block_lines) if OPTION_RE.match(ln)]
-        if len(opt_indices) < 2:
-            # Fallback: numbered lines (1. 2. 3.) as options
-            numbered = [(i, ln) for i, ln in enumerate(block_lines)
-                        if re.match(r"^\s*\d+[\.\)]\s+\S", ln)]
-            if len(numbered) >= 2:
-                opt_indices = [i for i, _ in numbered]
+
+    for _num, block_lines in split_question_blocks(raw):
+        # Locate the Explanation marker (everything after it is the explanation).
+        expl_idx = None
+        for i, ln in enumerate(block_lines):
+            if re.match(r"^\s*explanation\b", ln, re.IGNORECASE):
+                expl_idx = i
+                break
+        body_lines = block_lines[:expl_idx] if expl_idx is not None else block_lines
+        expl_lines = block_lines[expl_idx + 1:] if expl_idx is not None else []
+
+        # Walk body lines: stem lines come before the first option; then options,
+        # each of which may spill onto following non-option lines.
+        options = []          # list of dicts: {letter, text, selected, marked}
+        stem_parts = []
+        seen_option = False
+        for ln in body_lines:
+            parsed = _parse_option_line(ln)
+            if parsed:
+                letter, text, selected, marked = parsed
+                options.append({"letter": letter, "text": text,
+                                "selected": selected, "marked": marked})
+                seen_option = True
+            elif not seen_option:
+                stem_parts.append(ln)
             else:
-                # no parseable options; skip this block (caller logs if whole
-                # image yields nothing)
-                continue
+                # continuation of the current option's text
+                if options and ln.strip():
+                    extra = CORRECT_MARKER_RE.sub("", ln)
+                    if CORRECT_MARKER_RE.search(ln):
+                        options[-1]["marked"] = True
+                    options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
 
-        first_opt = opt_indices[0]
-        stem = clean_text(" ".join(block_lines[:first_opt]))
+        if len(options) < 2:
+            continue  # not a parseable question block
 
-        # explanation begins after an "Explanation" marker if present, else after
-        # the last option line.
-        last_opt = opt_indices[-1]
-        expl_start = None
-        for i in range(first_opt, len(block_lines)):
-            if re.match(r"^\s*explanation\b", block_lines[i], re.IGNORECASE):
-                expl_start = i
-                break
-        if expl_start is None:
-            expl_start = last_opt + 1
-
-        options = []
-        for oi in opt_indices:
-            if oi >= expl_start:
-                break
-            m = OPTION_RE.match(block_lines[oi])
-            body = m.group(2) if m else block_lines[oi]
-            # option text may continue onto following lines until the next option
-            nxt = [j for j in opt_indices if j > oi]
-            end = min(nxt[0], expl_start) if nxt else expl_start
-            cont = " ".join(block_lines[oi + 1:end])
-            opt_text = clean_text((body + " " + cont))
-            # strip a trailing 'Correct' word from the visible option
-            opt_text = clean_text(re.sub(CORRECT_TOKEN_RE, "", opt_text))
-            if opt_text:
-                options.append(opt_text)
-
-        expl_lines = block_lines[expl_start:]
-        if expl_lines and re.match(r"^\s*explanation\b", expl_lines[0], re.IGNORECASE):
-            expl_lines = [re.sub(r"^\s*explanation\b[:\s]*", "", expl_lines[0], flags=re.IGNORECASE)] + expl_lines[1:]
+        stem = clean_text(" ".join(stem_parts))
+        option_texts = [o["text"] for o in options if o["text"]]
         explanation = clean_text(" ".join(expl_lines))
 
-        correct, found = find_correct_answers(block_lines, options, explanation)
+        # correctAnswer: options that were selected (@) or end-marked (Y/… Correct).
+        correct = [o["text"] for o in options if (o["selected"] or o["marked"]) and o["text"]]
+        found = bool(correct)
+
+        # Fallback chain if no marker survived OCR: mine the explanation.
+        if not found:
+            correct, found = _correct_from_explanation(option_texts, explanation)
+
         qtype = "multi" if len(correct) > 1 else "mc"
         if re.search(r"\bdrag\b|\bdrop\b|match each", (stem + " " + raw).lower()):
             qtype = "drag_drop"
@@ -292,18 +342,18 @@ def parse_questions(raw):
         flags = []
         if not found:
             flags.append("correctAnswer not detected by OCR")
-        if len(options) < MIN_OPTIONS:
-            flags.append(f"only {len(options)} options parsed (<{MIN_OPTIONS})")
-        if len(options) > MAX_OPTIONS:
-            flags.append(f"{len(options)} options parsed (>{MAX_OPTIONS})")
+        if len(option_texts) < MIN_OPTIONS:
+            flags.append(f"only {len(option_texts)} options parsed (<{MIN_OPTIONS})")
+        if len(option_texts) > MAX_OPTIONS:
+            flags.append(f"{len(option_texts)} options parsed (>{MAX_OPTIONS})")
 
         if stem:
             results.append({
-                "stem": stem, "options": options, "correctAnswer": correct,
+                "stem": stem, "options": option_texts, "correctAnswer": correct,
                 "explanation": explanation, "questionType": qtype, "_flags": flags,
             })
 
-    # Step: drop OCR-stuttered duplicate stems within the same image.
+    # Drop OCR-stuttered duplicate stems within the same image.
     seen, deduped = set(), []
     for q in results:
         key = q["stem"].lower()
@@ -312,6 +362,27 @@ def parse_questions(raw):
         seen.add(key)
         deduped.append(q)
     return deduped
+
+
+def _correct_from_explanation(options, explanation):
+    """Fallback: infer correct option(s) from the explanation text."""
+    expl = (explanation or "").lower()
+    correct = []
+    for opt in options:
+        ol = opt.lower()
+        if (f"correct answer is {ol}" in expl or f"{ol} is correct" in expl
+                or f"{ol} is the correct" in expl):
+            if opt not in correct:
+                correct.append(opt)
+    if correct:
+        return correct, True
+    # "X because ..." near the start of the explanation names the correct option.
+    for opt in options:
+        ol = re.escape(opt.lower())
+        if re.search(rf"^{ol}\b.*\bbecause\b", expl) or re.search(rf"\b{ol}\b[^.]*\bbecause\b", expl[:120]):
+            if opt not in correct:
+                correct.append(opt)
+    return correct, bool(correct)
 
 
 # ---------------------------------------------------------------------------
