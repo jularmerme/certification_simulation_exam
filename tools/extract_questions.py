@@ -232,7 +232,7 @@ OPTION_BARE_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s*$")
 #   group 1 = '@' (or other selected glyph) -> selected
 #   group 2 = the letter label
 #   group 3 = the option text
-_ICON_D = r"(?:@[©®\u00a9\u00ae]*|[©®\u00a9\u00ae]+|[O0])"
+_ICON_D = r"(?:@[©®\u00a9\u00ae8]*|[©®\u00a9\u00ae]+|[O0])"
 # The letter label: A-H, or a glyph Tesseract emits for one (¢=C, €=E), optionally
 # with a garbled duplicate (e.g. "cC"). The whole label is stripped from the text.
 _LETTER_D = r"([A-Ha-h\u00a2\u20ac])[A-Ha-h\u00a2\u20ac]?"
@@ -353,7 +353,7 @@ def _strip_leading_icons(s):
         # separator, so real words like "Open"/"Overload" keep their leading letter.
         s = re.sub(
             r"^\s*(?:@|\(\s*[CR]\s*\)|©|®|re\)|\[\s*[_JjA-Z]?\s*\]?|\(\s*[\]Jj#]?"
-            r"|[Ll]\s*[\])JjDd]?|O[Il1]\b|[QO0](?=[._):|\s])|\u2022)[._):|\s]*",
+            r"|[Ll]\s*[\])JjDd]|O[Il1]\b|[QO0](?=[._):|\s])|\u2022)[._):|\s]*",
             "", s)
     return s.strip()
 
@@ -381,6 +381,25 @@ def _fix_ocr_words(s):
         (r"\bConfigure anaccount\b", "Configure an account"),
         (r"\bnon-tech-sawvy\b", "non-tech-savvy"),
         (r"\bcalted\b", "called"),
+        # Module 6 (networking) merges/artifacts.
+        (r"\bHostID\b", "Host ID"),
+        (r"\bThelPv6\b", "The IPv6"),
+        (r"\bnetworkID\b", "network ID"),
+        (r"\bTransportLayer\b", "Transport Layer"),
+        (r"\bPTRRecord\b", "PTR Record"),
+        (r"\bCNAMERecord\b", "CNAME Record"),
+        (r"\bARecord\b", "A Record"),
+        (r"\bAAAARecord\b", "AAAA Record"),
+        (r"\bMXRecord\b", "MX Record"),
+        (r"Protocol\(UDP\)", "Protocol (UDP)"),
+        (r"\bAnRG6\b", "An RG6"),
+        (r"\bAwireless\b", "A wireless"),
+        (r"\bAlaptop\b", "A laptop"),
+        (r"\bAUSB\b", "A USB"),
+        (r"\bAkeyboard\b", "A keyboard"),
+        (r"\b35inch\b", "3.5 inch"),
+        (r"\b95mm\b", "9.5mm"),
+        (r"\bWiFi\b", "Wi-Fi"),       # 'WiFi' -> 'Wi-Fi' ('Wi-Fi' already lacks \bWiFi\b)
         (r"\bAX\b", "ATX"),          # 3.1 Q4 'AX' / Q15 'AMX' -> ATX form factor
     ]
     for pat, repl in fixes:
@@ -415,6 +434,23 @@ def _is_garbled(text):
     if has_punct_token and not has_real_word:
         return True
     return False
+
+
+def _looks_like_icon_line_noise(text):
+    """True if `text` (the fragment sitting ON a Format-D icon line, between a wrapped
+    lead-in and a continuation) is OCR garbage: very short (< 10 chars) or made up
+    mostly of punctuation/digits — e.g. ". p 9 9", ": a", "a ; ; ;", ". ;". Such a
+    fragment must be discarded so the real option text comes from the surrounding
+    lines. Only ever applied when a lead-in exists, so it can't drop a real option."""
+    t = text.strip()
+    if not t:
+        return True
+    if len(t) < 10:
+        return True
+    letters = sum(c.isalpha() for c in t)
+    non_space = [c for c in t if not c.isspace()]
+    # Mostly non-letters (punctuation/digits) => noise.
+    return letters < 0.4 * len(non_space) if non_space else True
 
 
 def _norm_option_letter(ch):
@@ -477,6 +513,16 @@ def _finalize_option(text):
     text = _strip_leading_icons(text)
     text, _m, _i = _split_markers(text)
     text = _strip_leading_icons(text)          # icon may sit after a stripped marker
+    # B4: strip a leaked "icon + letter label" prefix such as "OA It acts as ..."
+    # (icon O/0/©/@/® directly followed by a single A-H label and a space).
+    text = re.sub(r"^\s*[O0©®@\u00a9\u00ae]\s*[A-H]\s+(?=[A-Za-z])", "", text)
+    # B5: drop a short garbled chunk sitting BETWEEN readable words when it clearly
+    # carries an OCR icon glyph, e.g. "upp @bD TCP" -> "upp TCP". Only icon-bearing
+    # tokens (and adjacent pure-symbol tokens) are removed, never plain short words
+    # or standalone numbers (which are often real content like "USB 2.0"/"IP67").
+    text = re.sub(
+        r"(?<=\w)\s+[@©®\u00a9\u00ae][\w]{0,3}(?:\s+[^\w\s]{1,3})*\s+(?=[A-Za-z]{2,})",
+        " ", text)
     text = re.sub(r"[_]+$", "", text).strip()  # trailing underscore artifact
     text = re.sub(r"[,\s]+$", "", text)        # trailing comma/space if content remains
     text = clean_text(text)
@@ -575,9 +621,10 @@ def _parse_options_letter_labeled(body_lines):
             stem_pend, lead_pend = _split_stem_leadin(pending)
             # Drop OCR noise sitting on the icon line ONLY when there is a wrapped
             # lead-in (multi-line option): "Set up ... to the" / "®A . p 9 9" /
-            # "device." — the "p 9 9" between real fragments is garble. A normal
-            # single-line option (no lead-in) keeps its short body like "M2"/"7mm".
-            if lead_pend and sum(ch.isalpha() for ch in body) < 3:
+            # "device." — the "p 9 9" / ": a" / "a ; ; ;" between real fragments is
+            # garble. A normal single-line option (no lead-in) keeps its short body
+            # like "M2"/"7mm"/"IP67".
+            if lead_pend and _looks_like_icon_line_noise(body):
                 body = ""
             stem_parts.extend(stem_pend)
             lead = " ".join(lead_pend).strip()
@@ -1098,7 +1145,9 @@ def classify_question(q, meta, obj_index, folder_module):
         conf = "high"  # keyword and folder agree -> trust it
 
     domain = next((d for d in meta["domains"] if d.split(".")[0] == top_obj.split(".")[0]), "")
-    module = OBJ_TO_MODULE.get(top_obj, folder_module)
+    # B2: module is ALWAYS the folder-derived module. Content keyword scoring is used
+    # only for the objective/domain/confidence fields, never to pick the module.
+    module = folder_module
     if top_obj != keyword_winner:
         reasoning = (f"objective {top_obj} via folder-module tiebreak "
                      f"(keyword winner {keyword_winner} disagreed with folder module {folder_module})")
@@ -1150,9 +1199,15 @@ def validate_question(q, meta):
         errs.append("objective domain-prefix does not match domain")
     if q["type"] not in ("mc", "multi", "drag_drop"):
         errs.append("type not one of mc/multi/drag_drop")
-    if q["type"] in ("mc", "multi"):
+    # B1: "mc" -> correctAnswer is a STRING; "multi" -> ARRAY of strings.
+    if q["type"] == "mc":
+        if not isinstance(q["correctAnswer"], str):
+            errs.append("correctAnswer must be a string for mc")
+        elif q["correctAnswer"] and q["correctAnswer"] not in q["options"]:
+            errs.append(f'correctAnswer "{q["correctAnswer"]}" not in options')
+    elif q["type"] == "multi":
         if not isinstance(q["correctAnswer"], list):
-            errs.append("correctAnswer must be an array for mc/multi")
+            errs.append("correctAnswer must be an array for multi")
         else:
             for a in q["correctAnswer"]:
                 if a not in q["options"]:
@@ -1244,6 +1299,17 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
         # continuous counter across all folders. No zero padding.
         qid = f"1201-{next(id_counter)}"
 
+        qtype = q.get("questionType", "mc")
+        # B1: schema expects correctAnswer as a STRING for "mc" (single-select) and
+        # an ARRAY for "multi". The parser tracks answers internally as a list.
+        answers = q.get("correctAnswer", [])
+        if not isinstance(answers, list):
+            answers = [answers] if answers else []
+        if qtype == "mc":
+            correct_answer = answers[0] if answers else ""
+        else:
+            correct_answer = answers
+
         # Field order matches the production schema:
         # id, domain, objective, module, type, difficulty, stem, options,
         # correctAnswer, explanation, source, classification.
@@ -1251,12 +1317,13 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             "id": qid,
             "domain": cls["domain"],
             "objective": cls["objective"],
-            "module": cls["module"],
-            "type": q.get("questionType", "mc"),
+            # B2: module is ALWAYS the folder-derived module, never a content guess.
+            "module": folder_module,
+            "type": qtype,
             "difficulty": "medium",
             "stem": stem,
             "options": q.get("options", []),
-            "correctAnswer": q.get("correctAnswer", []),
+            "correctAnswer": correct_answer,
             "explanation": q.get("explanation", ""),
             "source": "certmaster",
             "classification": {"confidence": cls["confidence"], "reasoning": cls["reasoning"]},
@@ -1279,10 +1346,8 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             qobj["needsReview"] = True
             qobj["reviewReasons"] = sorted(set(review_reasons))
 
-        if cls["module"] and cls["module"] != folder_module:
-            result["mismatches"].append({
-                "id": qid, "folderModule": folder_module,
-                "contentModule": cls["module"], "reason": cls["reasoning"]})
+        # B2: module is folder-derived and authoritative; a content-derived module
+        # is never used to override it, so there are no module "mismatches".
 
         result["questions"].append(qobj)
         batch_seen.append((qid, stem))
