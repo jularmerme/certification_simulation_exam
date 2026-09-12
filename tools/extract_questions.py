@@ -180,14 +180,34 @@ OPTION_BARE_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s*$")
 # Question header, tolerant of the OCR'd status icon after the number. The status
 # word (Correct/Incorrect) is matched EXPLICITLY (not via the icon class) so its
 # leading 'C' is fully consumed and never leaks into the stem as "orrect".
+# Group 1 = question number. Group 2 = the status word (Correct/Incorrect) if
+# present, so process_folder can tell whether the attempt was right. Group 3 = any
+# residual text on the header line (rare). The status icon (@ © ® ( ) X x) AND the
+# status word are both fully consumed so neither leaks into the stem.
 QUESTION_HDR_RE = re.compile(
-    r"^\s*Question\s+(\d+)\b[\s@©®()]*\s*(?:correct|incorrect)?\s*(.*)$",
+    r"^\s*Question\s+(\d+)\b[\s@©®()Xx✓✔/\\]*\s*(correct|incorrect)?\b\s*(.*)$",
     re.IGNORECASE)
 
 # Trailing correct-answer marker on an option line: "Y Correct" / "y Correct"
-# / "/ Correct" / a bare checkmark.
-CORRECT_MARKER_RE = re.compile(r"\s*[Yy/✓✔]\s*correct\s*$", re.IGNORECASE)
+# / "/ Correct" / "\/ Correct" / a bare checkmark.
+CORRECT_MARKER_RE = re.compile(r"\s*[Yy/\\✓✔]+\s*correct\s*$", re.IGNORECASE)
+# Trailing incorrect marker: "X Incorrect" / "XX Incorrect" / "x Incorrect".
+INCORRECT_MARKER_RE = re.compile(r"\s*[Xx]+\s*incorrect\s*$", re.IGNORECASE)
+# Either marker (for stripping any status suffix from option text).
+ANY_MARKER_RE = re.compile(r"\s*[Yy/\\Xx✓✔]+\s*(?:in)?correct\s*$", re.IGNORECASE)
 CORRECT_TOKEN_RE = re.compile(r"\b(correct|✓|✔)\b", re.IGNORECASE)
+
+# Letterless option prefix (Format B): a leading radio-button icon, then text.
+# Two safe shapes so real words like "Open"/"Overload" aren't mistaken for an
+# 'O' icon:
+#   (a) a distinctive icon (@ © ® ( ) • - *), optionally repeated, then text. These
+#       never begin an English word, so no space is required after them.
+#   (b) a bare circle letter (o O 0) ONLY when followed by a space/underscore and
+#       then the text — "O damage", "0 the computer". "Open" (no space) is excluded.
+# A leading '@' (selected) is captured in group 1 in both shapes.
+_ICON_STRONG = r"[@©®()\u2022]"
+OPTION_B_RE = re.compile(
+    r"^\s*(@)?\s*(?:" + _ICON_STRONG + r"[@©®()_\s\u2022]*|[oO0][_\s]+)\s*(\S.*)$")
 
 # Metadata/boilerplate lines to drop before parsing.
 _META_RES = [
@@ -199,6 +219,8 @@ _META_RES = [
     re.compile(r"^\s*Score:\s", re.IGNORECASE),
     re.compile(r"^\s*(https?|hitps)://", re.IGNORECASE),   # 'hitps' = OCR of https
     re.compile(r"Copyright.*CompTIA", re.IGNORECASE),
+    re.compile(r"resources[\\/].*question.*\.xml", re.IGNORECASE),  # source-path noise
+    re.compile(r"^\s*\.\s*$"),                             # lone dot artifact line
     re.compile(r"^\s*\d+\s*$"),                            # lone page number
     re.compile(r"^\s*\d+/\d+\s*$"),                        # "3/3" page indicator
 ]
@@ -230,27 +252,36 @@ def clean_text(s):
 
 
 def split_question_blocks(raw):
-    """Split OCR text into blocks, one per 'Question N' header. Each block is
-    (question_number, [lines_after_header]). The header's status icon/word is
-    stripped; any residual text on the header line seeds the block."""
+    """Split OCR text into blocks at each 'Question N' header.
+    Returns a list of (is_question, status, lines):
+      - is_question: True if the block was introduced by a 'Question N' header
+      - status: the attempt status word (Correct/Incorrect), defaulting to Correct
+      - lines: the lines after the header
+    Text before the first header (or a page with no header at all) is returned as a
+    single is_question=False block, which lets the caller skip non-question pages."""
     lines = raw.splitlines()
-    blocks, current, header = [], [], None
+    blocks = []
+    current, status, in_question = [], "Correct", False
+    started = False
     for line in lines:
         m = QUESTION_HDR_RE.match(line)
         if m:
-            if current or header is not None:
-                blocks.append((header, current))
-            header = m.group(1)
+            if started:
+                blocks.append((in_question, status, current))
+            started = True
+            in_question = True
+            status = (m.group(2) or "").strip() or "Correct"
             current = []
-            trailing = (m.group(2) or "").strip()
+            trailing = (m.group(3) or "").strip()
             if trailing:
                 current.append(trailing)
         else:
+            if not started:
+                started = True
+                in_question = False
             current.append(line)
-    if current or header is not None:
-        blocks.append((header, current))
-    if not blocks:
-        blocks = [(None, lines)]
+    if started:
+        blocks.append((in_question, status, current))
     return blocks
 
 
@@ -282,13 +313,113 @@ def _parse_option_line(line):
     return None
 
 
+def _fix_ocr_words(s):
+    """Fix a few known OCR word-merges/artifacts in option/stem text."""
+    s = re.sub(r"\bAuser\b", "A user", s)
+    return s
+
+
+def _parse_options_lettered(body_lines):
+    """FORMAT A: icon + letter (A-D) + text. Returns list of option dicts.
+    This is the original 5.1-style path, kept intact for regression."""
+    options = []
+    seen_option = False
+    stem_parts = []
+    for ln in body_lines:
+        parsed = _parse_option_line(ln)
+        if parsed:
+            letter, text, selected, marked = parsed
+            options.append({"text": text, "selected": selected, "marked": marked,
+                            "incorrect": bool(INCORRECT_MARKER_RE.search(ln))})
+            seen_option = True
+        elif not seen_option:
+            stem_parts.append(ln)
+        elif options and ln.strip():
+            # continuation of the current option's text
+            extra = ANY_MARKER_RE.sub("", ln)
+            if CORRECT_MARKER_RE.search(ln):
+                options[-1]["marked"] = True
+            if INCORRECT_MARKER_RE.search(ln):
+                options[-1]["incorrect"] = True
+            options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
+    return stem_parts, options
+
+
+def _parse_options_letterless(body_lines):
+    """FORMAT B: icon (no letter) + text, options often multi-line. An icon line
+    starts a new option; a non-icon, non-empty line continues the current option
+    (or, before any option, is stem text).
+
+    Handles the wrapped case where the option text begins on a NON-icon line and the
+    icon appears on the following line (e.g. 'Open the computer case ... physical' /
+    'O damage.'): such a pre-icon text line is buffered and prepended to the option
+    the icon starts.
+    """
+    options = []
+    stem_parts = []
+    seen_option = False
+    pending = []          # non-icon text seen since the last option (potential
+                          # wrapped-option lead-in OR stem before the first option)
+
+    for ln in body_lines:
+        if not ln.strip():
+            pending = []          # blank line: separator, discard buffered lead-in
+            continue
+        mb = OPTION_B_RE.match(ln)
+        if mb:
+            selected = bool(mb.group(1))
+            text = mb.group(2)
+            marked = bool(CORRECT_MARKER_RE.search(text))
+            incorrect = bool(INCORRECT_MARKER_RE.search(text))
+            text = ANY_MARKER_RE.sub("", text)
+            # Prepend any buffered pre-icon lead-in (wrapped option first line).
+            lead = " ".join(pending).strip()
+            pending = []
+            full = clean_text(((lead + " ") if lead else "") + text)
+            options.append({"text": full, "selected": selected, "marked": marked,
+                            "incorrect": incorrect})
+            seen_option = True
+        else:
+            if not seen_option:
+                # Could be stem, or the lead-in of the first (wrapped) option. Keep
+                # it as both a stem candidate and a pending lead-in; if an icon
+                # follows, pending wins and we retroactively treat it as option text.
+                pending.append(ln)
+                stem_parts.append(ln)
+            elif options:
+                # continuation of the current option
+                extra = ANY_MARKER_RE.sub("", ln)
+                if CORRECT_MARKER_RE.search(ln):
+                    options[-1]["marked"] = True
+                if INCORRECT_MARKER_RE.search(ln):
+                    options[-1]["incorrect"] = True
+                options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
+
+    # If the first option absorbed a lead-in that was ALSO added to stem_parts,
+    # remove those lead-in lines from the stem (they belong to the option).
+    if options and pending is not None:
+        pass  # pending already cleared; stem cleanup handled below
+    return stem_parts, options
+
+
 def parse_questions(raw):
-    """Parse OCR text into question dicts. Each: stem, options, correctAnswer,
-    explanation, questionType, plus a private _flags list of review reasons."""
+    """Parse OCR text into question dicts, returning (questions, had_header).
+
+    had_header is True if any 'Question N' header was present. process_folder uses
+    it to distinguish a SKIP (no question on the page) from an ERROR (a question was
+    present but could not be parsed).
+
+    Each question dict: stem, options, correctAnswer, explanation, questionType,
+    plus a private _flags list of review reasons and _truncated flag.
+    """
     raw = strip_metadata(raw)
+    blocks = split_question_blocks(raw)
+    had_header = any(is_q for is_q, _st, _ln in blocks)
     results = []
 
-    for _num, block_lines in split_question_blocks(raw):
+    for is_question, header_status, block_lines in blocks:
+        if not is_question:
+            continue  # pre-header / non-question text
         # Locate the Explanation marker (everything after it is the explanation).
         expl_idx = None
         for i, ln in enumerate(block_lines):
@@ -298,46 +429,53 @@ def parse_questions(raw):
         body_lines = block_lines[:expl_idx] if expl_idx is not None else block_lines
         expl_lines = block_lines[expl_idx + 1:] if expl_idx is not None else []
 
-        # Walk body lines: stem lines come before the first option; then options,
-        # each of which may spill onto following non-option lines.
-        options = []          # list of dicts: {letter, text, selected, marked}
-        stem_parts = []
-        seen_option = False
-        for ln in body_lines:
-            parsed = _parse_option_line(ln)
-            if parsed:
-                letter, text, selected, marked = parsed
-                options.append({"letter": letter, "text": text,
-                                "selected": selected, "marked": marked})
-                seen_option = True
-            elif not seen_option:
-                stem_parts.append(ln)
-            else:
-                # continuation of the current option's text
-                if options and ln.strip():
-                    extra = CORRECT_MARKER_RE.sub("", ln)
-                    if CORRECT_MARKER_RE.search(ln):
-                        options[-1]["marked"] = True
-                    options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
+        # FORMAT A first (lettered). Fall back to FORMAT B (letterless) if A finds
+        # fewer than 2 options.
+        stem_parts, options = _parse_options_lettered(body_lines)
+        if len(options) < 2:
+            stem_parts, options = _parse_options_letterless(body_lines)
+            # In Format B, a wrapped option's lead-in line was also captured as a
+            # stem part; drop any stem line that is a prefix of an option's text.
+            opt_texts_lower = [o["text"].lower() for o in options]
+            stem_parts = [s for s in stem_parts
+                          if not any(o.startswith(clean_text(s).lower()[:25]) and clean_text(s)
+                                     for o in opt_texts_lower)]
 
         if len(options) < 2:
-            continue  # not a parseable question block
+            continue  # header present but unparseable -> caller logs as error
 
-        stem = clean_text(" ".join(stem_parts))
-        option_texts = [o["text"] for o in options if o["text"]]
-        explanation = clean_text(" ".join(expl_lines))
+        stem = _fix_ocr_words(clean_text(" ".join(stem_parts)))
+        option_texts = [_fix_ocr_words(o["text"]) for o in options if o["text"]]
+        explanation = _fix_ocr_words(clean_text(" ".join(expl_lines)))
 
-        # correctAnswer: options that were selected (@) or end-marked (Y/… Correct).
-        correct = [o["text"] for o in options if (o["selected"] or o["marked"]) and o["text"]]
+        header_incorrect = bool(header_status and re.search(r"incorrect", header_status, re.IGNORECASE))
+
+        # Correct-answer logic:
+        #  - explicit "/ Correct" / "Y Correct" markers always win.
+        #  - else if the header says the attempt was correct, the SELECTED (@) option
+        #    is the correct answer.
+        #  - if the header says incorrect, the selected option is WRONG; rely on the
+        #    /Correct marker (handled above) or the explanation fallback.
+        marked_correct = [o["text"] for o in options if o["marked"] and o["text"]]
+        if marked_correct:
+            correct = [_fix_ocr_words(t) for t in marked_correct]
+        elif not header_incorrect:
+            correct = [_fix_ocr_words(o["text"]) for o in options if o["selected"] and o["text"]]
+        else:
+            correct = []
         found = bool(correct)
 
-        # Fallback chain if no marker survived OCR: mine the explanation.
         if not found:
             correct, found = _correct_from_explanation(option_texts, explanation)
 
         qtype = "multi" if len(correct) > 1 else "mc"
         if re.search(r"\bdrag\b|\bdrop\b|match each", (stem + " " + raw).lower()):
             qtype = "drag_drop"
+
+        # Truncated-option detection: CertMaster options normally end in sentence
+        # punctuation. A short option (<15 chars) with no ending .?! is very likely
+        # cut off at the image boundary ("Escalate the", "Pe", "O documentation,").
+        truncated = any(len(t) < 15 and not re.search(r"[.?!]$", t) for t in option_texts)
 
         flags = []
         if not found:
@@ -346,6 +484,8 @@ def parse_questions(raw):
             flags.append(f"only {len(option_texts)} options parsed (<{MIN_OPTIONS})")
         if len(option_texts) > MAX_OPTIONS:
             flags.append(f"{len(option_texts)} options parsed (>{MAX_OPTIONS})")
+        if truncated:
+            flags.append("truncated option text")
 
         if stem:
             results.append({
@@ -361,7 +501,7 @@ def parse_questions(raw):
             continue
         seen.add(key)
         deduped.append(q)
-    return deduped
+    return deduped, had_header
 
 
 def _correct_from_explanation(options, explanation):
@@ -553,8 +693,9 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
     result = {
         "source": {"folder": name, "moduleFromFolder": folder_module,
                    "totalImages": len(folder["images"]), "totalQuestionsFound": 0,
-                   "questionsKept": 0, "duplicatesSkipped": 0, "errors": 0},
-        "questions": [], "duplicates": [], "errors": [], "mismatches": [],
+                   "questionsKept": 0, "duplicatesSkipped": 0, "imagesSkipped": 0,
+                   "errors": 0},
+        "questions": [], "duplicates": [], "errors": [], "skipped": [], "mismatches": [],
     }
 
     raw_items = []  # (imageFile, parsed question dict)
@@ -571,10 +712,18 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
                 result["errors"].append({"imageFile": img.name,
                     "reason": f"OCR returned <{MIN_OCR_CHARS} chars (image likely unreadable)"})
                 continue
-            parsed = parse_questions(text)
+            parsed, had_header = parse_questions(text)
             if not parsed:
-                result["errors"].append({"imageFile": img.name,
-                    "reason": "no questions parsed", "rawOcr": text[:500]})
+                if not had_header:
+                    # No 'Question N' on the page: a score/URL/copyright/etc. page.
+                    # Not an error — just nothing to extract.
+                    result["skipped"].append({"imageFile": img.name,
+                        "reason": "no question on page (non-question content)"})
+                else:
+                    # A question header was present but parsing failed: a real error.
+                    result["errors"].append({"imageFile": img.name,
+                        "reason": "question header found but no options parsed",
+                        "rawOcr": text[:500]})
                 continue
             for q in parsed:
                 raw_items.append((img.name, q))
@@ -583,6 +732,7 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
 
     result["source"]["totalQuestionsFound"] = len(raw_items)
     result["source"]["errors"] = len(result["errors"])
+    result["source"]["imagesSkipped"] = len(result["skipped"])
     if not raw_items:
         return result
 
@@ -741,7 +891,7 @@ def main():
     summary = {
         "totalFolders": len(folders), "totalImages": total_images,
         "totalQuestionsFound": 0, "totalQuestionsKept": 0,
-        "totalDuplicatesSkipped": 0, "totalErrors": 0,
+        "totalDuplicatesSkipped": 0, "totalImagesSkipped": 0, "totalErrors": 0,
         "totalNeedsReview": 0,
         "processingTimeSeconds": 0.0, "averageSecondsPerImage": 0.0,
         "confidence": {"high": 0, "medium": 0, "low": 0},
@@ -773,13 +923,15 @@ def main():
         summary["totalQuestionsFound"] += src["totalQuestionsFound"]
         summary["totalQuestionsKept"] += src["questionsKept"]
         summary["totalDuplicatesSkipped"] += src["duplicatesSkipped"]
+        summary["totalImagesSkipped"] += src.get("imagesSkipped", 0)
         summary["totalErrors"] += src["errors"]
         bump_module(folder["module"], src["questionsKept"],
                     src["duplicatesSkipped"], src["errors"])
         summary["perFolder"].append({
             "folder": folder["name"], "images": src["totalImages"],
             "found": src["totalQuestionsFound"], "kept": src["questionsKept"],
-            "dupes": src["duplicatesSkipped"], "errors": src["errors"]})
+            "dupes": src["duplicatesSkipped"], "skipped": src.get("imagesSkipped", 0),
+            "errors": src["errors"]})
         for q in result["questions"]:
             summary["confidence"][q["classification"]["confidence"]] += 1
             if q.get("needsReview"):
@@ -803,7 +955,8 @@ def main():
     print("\n=== EXTRACTION REPORT ===")
     print(f"Folders: {len(summary['perFolder'])}  Images: {summary['totalImages']}  "
           f"Found: {summary['totalQuestionsFound']}  Kept: {summary['totalQuestionsKept']}  "
-          f"Dupes: {summary['totalDuplicatesSkipped']}  Errors: {summary['totalErrors']}")
+          f"Dupes: {summary['totalDuplicatesSkipped']}  Skipped: {summary['totalImagesSkipped']}  "
+          f"Errors: {summary['totalErrors']}")
     print("Per module (module: kept / dupes / errors):")
     for mod in sorted(summary["perModule"], key=lambda k: float(k.split(".")[0])):
         m = summary["perModule"][mod]
