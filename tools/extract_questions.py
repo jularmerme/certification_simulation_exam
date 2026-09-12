@@ -43,6 +43,10 @@ except ImportError:
 
 try:
     import pytesseract
+    # Point pytesseract at the local Tesseract engine so live runs work without
+    # requiring the engine to be on the system PATH. (--tesseract-path still
+    # overrides this at runtime if a different location is needed.)
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     _HAVE_TESS = True
 except ImportError:
     _HAVE_TESS = False
