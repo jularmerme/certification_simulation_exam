@@ -435,6 +435,41 @@ def _fix_ocr_words(s):
         (r"\bLandGrid\b", "Land Grid"),
         (r"\bBuyanew\b", "Buy a new"),
         (r"\banewone\b", "a new one"),
+        # --- Batch 2 OCR misreads (diagnostic scan, Sep 2026) ---
+        (r"\bRuna\b", "Run a"),
+        (r"\bAnoutdated\b", "An outdated"),
+        (r"\bAbulbis\b", "A bulb is"),
+        (r"\bsyne\b", "sync"),
+        (r"\burparvolag\b", "underpowered"),
+        (r"\bAtechnician\b", "A technician"),
+        (r"\btoowarm\b", "too warm"),
+        (r"\bAfan\b", "A fan"),
+        (r"\bAnaccumulation\b", "An accumulation"),
+        (r"\bemove\b", "Remove"),
+        (r"\bhandie\b", "handle"),
+        (r"\bonthe\b", "on the"),
+        (r"\bBIOS/UEFL\b", "BIOS/UEFI"),
+        (r"\bOod\b", "and"),
+        (r"\borsplitters\b", "or splitters"),
+        (r"\bF-typeconnector\b", "F-type connector"),
+        (r"\bcabies\b", "cables"),
+        (r"\bItmanages\b", "It manages"),
+        (r"\bItassigns\b", "It assigns"),
+        (r"\bFirewails\b", "Firewalls"),
+        (r"\bByconverting\b", "By converting"),
+        (r"\bByincreasing\b", "By increasing"),
+        (r"\bByfiltering\b", "By filtering"),
+        (r"\bsamme\b", "same"),
+        (r"\bseqment\b", "segment"),
+        (r"\bToperform\b", "To perform"),
+        (r"\bjocal\b", "local"),
+        (r"\bconnectioniess\b", "connectionless"),
+        (r"\bToidentify\b", "To identify"),
+        (r"\bToensure\b", "To ensure"),
+        (r"\bAremote\b", "A remote"),
+        (r"\bAvideo\b", "A video"),
+        (r"\bRI11\b", "RJ11"),
+        (r"\bfines\b(?=.*(?:telephone|cable|data))", "lines"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
@@ -465,6 +500,18 @@ _UI_GARBLE_PATTERNS = [
     (re.compile(r"\s+orrect\s*$"),              ""),
     (re.compile(r"(?<=[a-z])\s+orrect(?=\s)"),  ""),
     (re.compile(r"\s*\bQ\s(?=[A-Z])"),          " "),     # lone Q before caps
+    # --- Batch 2 garble patterns (smart quotes, degree, symbols) ---
+    (re.compile(r"\s*oY FOP givsP\s*"),         ""),
+    (re.compile(r"\s*@\u00a9sB\.?\s*"),         ""),
+    (re.compile(r"\s*/\u00a5\s*"),              " "),
+    (re.compile(r"\s*@o\.\s*\.\s*"),            ""),
+    (re.compile(r"\s*=\s*\((?=server|printer|workstation)"), " ("),
+    (re.compile(r"\s*ome\s*:\s*9\s*\u00b0?\s*"), ""),
+    (re.compile(r"\s*un\s*\u00b0\s*\"?\s*"),    ""),
+    (re.compile(r"[\u201c\u201d]+(?=\w)"),      ""),
+    (re.compile(r"[\u2018\u2019]+(?=\w)"),      ""),
+    (re.compile(r"\s*~+\s*(?=[a-z])"),          " "),
+    (re.compile(r"\s*\u2122~?\s*(?=[a-z])"),    " "),
 ]
 
 
@@ -485,7 +532,8 @@ def _has_ui_garble_marker(text):
     detect the correct option BEFORE garble stripping removes the signal."""
     if not text:
         return False
-    return bool(re.search(r"Y Correct|Y/Y|\u00a5", text))
+    return bool(re.search(
+        r"Y Correct|Y/Y|\u00a5|' Y Correct|e a\. \. '", text))
 
 
 def _is_garbled(text):
@@ -608,6 +656,11 @@ def _finalize_option(text):
     text = re.sub(r"[,\s]+$", "", text)        # trailing comma/space if content remains
     # NEW: strip mid-text CertMaster UI garble (checkmarks, radio buttons, etc.)
     text = _strip_ui_garble(text)
+    # NEW (v2): strip smart-quote artifacts (OCR'd UI borders/shadows).
+    # Curly quotes glued to the next word: "networking -> networking
+    text = re.sub(r'[\u201c\u201d\u2018\u2019]+(?=\w)', '', text)
+    # Degree symbol + surrounding garble: "un ° " urparvolag" -> "underpowered"
+    text = re.sub(r'\s*\u00b0\s*["\u201c\u201d]?\s*', ' ', text)
     # NEW: strip leaked option letter labels "B The USB..." -> "The USB..."
     # Only B/C/D — never "A" (too many false positives with the article).
     text = re.sub(r"^([BCD])\s+(?=[A-Z])", "", text)
@@ -1038,25 +1091,52 @@ def parse_questions(raw):
         for o in options:
             o["text"] = _finalize_option(o["text"])
 
-        # NEW: split merged options (>100 chars with an internal sentence boundary).
+        # NEW (v2): split merged options. CertMaster renders 4 options per
+        # question; OCR frequently fuses two adjacent options into one string.
+        # The fusion point is marked by a LEAKED OPTION LABEL: Op, Os, Oo, On,
+        # or Oop (OCR misread of radio-button glyph + letter). Split on these
+        # first; fall back to sentence boundaries for non-label merges.
         if not ((mode == "C") or select_n):
             expanded = []
             for o in options:
-                if len(o["text"]) > 100 and re.search(r"\.\s+[A-Z][a-z]", o["text"]):
-                    parts = re.split(r"(?<=\.)\s+(?=[A-Z][a-z])", o["text"])
+                # Primary: split on leaked label (". Op/Os/Oo/On/Oop ")
+                if len(o["text"]) > 80 and re.search(
+                        r"[.!?)]\s+(?:Op|Os|Oo|On|Oop)\s+[A-Z]", o["text"]):
+                    parts = re.split(
+                        r"(?<=[.!?)\"\u201d])\s+(?:Op|Os|Oo|On|Oop)\s+(?=[A-Z])",
+                        o["text"])
                     for j, part in enumerate(parts):
+                        part = part.strip()
+                        if not part:
+                            continue
                         if j == 0:
                             new_o = dict(o)
-                            new_o["text"] = part.strip()
+                            new_o["text"] = part
                             expanded.append(new_o)
                         else:
-                            expanded.append({"text": part.strip(), "selected": False,
+                            expanded.append({"text": part, "selected": False,
+                                             "marked": False, "incorrect": False})
+                # Secondary: split on plain sentence boundary (>120 chars only)
+                elif len(o["text"]) > 120 and re.search(
+                        r"\.\s+[A-Z][a-z]", o["text"]):
+                    parts = re.split(r"(?<=\.)\s+(?=[A-Z][a-z])", o["text"])
+                    for j, part in enumerate(parts):
+                        part = part.strip()
+                        if not part:
+                            continue
+                        if j == 0:
+                            new_o = dict(o)
+                            new_o["text"] = part
+                            expanded.append(new_o)
+                        else:
+                            expanded.append({"text": part, "selected": False,
                                              "marked": False, "incorrect": False})
                 else:
                     expanded.append(o)
+            # Rejoin orphan fragments (<25 chars starting lowercase) to parent.
             final = []
             for o in expanded:
-                if (len(o["text"]) < 20 and final
+                if (len(o["text"]) < 25 and final
                         and not re.match(r"^[A-Z]", o["text"])):
                     final[-1]["text"] = final[-1]["text"].rstrip() + " " + o["text"]
                     if o.get("marked"):
