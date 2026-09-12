@@ -223,6 +223,31 @@ _OPT_CORE = (r"(?:@\s*" + _ICON_A + r"*\s*([A-Ha-h\u00a28])"   # (a) selected
 OPTION_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s+(\S.*)$")
 OPTION_BARE_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s*$")
 
+# --- Format D: icon + bare letter label (A-H), NO punctuation (Modules 5-10) -
+# A REQUIRED radio icon, then a single letter label A-H, then the option text.
+# The icon requirement is what distinguishes this from a stem line that merely
+# starts with a capital ("A user ..."), which Format A's bare-letter branch wrongly
+# ate. Real icon variants: © @ ® and combinations @© @® @©® ®, plus circle O / 0.
+# After the letter, OCR often glues a garbled char (_ ¢ € .) which is discarded.
+#   group 1 = '@' (or other selected glyph) -> selected
+#   group 2 = the letter label
+#   group 3 = the option text
+_ICON_D = r"(?:@[©®\u00a9\u00ae]*|[©®\u00a9\u00ae]+|[O0])"
+# The letter label: A-H, or a glyph Tesseract emits for one (¢=C, €=E), optionally
+# with a garbled duplicate (e.g. "cC"). The whole label is stripped from the text.
+_LETTER_D = r"([A-Ha-h\u00a2\u20ac])[A-Ha-h\u00a2\u20ac]?"
+OPTION_D_RE = re.compile(
+    r"^\s*(@)?\s*" + _ICON_D + r"\s*"
+    + _LETTER_D +
+    r"(?:"
+    r"[.\)\u00a2\u20ac]?\s+(\S.*)"      # letter, optional garble, SPACE, text
+    r"|_\s*(\S.*)"                       # letter '_' glued to text ("A_uSATA")
+    r")$")
+# A bare "icon + letter" with the text on the NEXT line (multi-line Format D).
+OPTION_D_BARE_RE = re.compile(
+    r"^\s*(@)?\s*" + _ICON_D + r"\s*" + _LETTER_D +
+    r"(?:[_\u00a2\u20ac.\)]|\s*[_\u00a2\u20ac])?\s*$")
+
 # --- Format B: letterless radio (icon + text, no letter) --------------------
 # A distinctive radio glyph, optionally combined (@©, @®, ©), ©., re)), then text.
 # The bare circle letters o/O/0/Q only count as an icon when followed by a
@@ -349,6 +374,13 @@ def _fix_ocr_words(s):
         (r"\bSecureboot\b", "Secure boot"),
         (r"\bDisabie\b", "Disable"),
         (r"\b480Mbps\b", "480 Mbps"),
+        # Module 9 merges/artifacts.
+        (r"\bResourceusage\b", "Resource usage"),
+        (r"\bDustanddebris\b", "Dust and debris"),
+        (r"\bCloudSynchronization\b", "Cloud Synchronization"),
+        (r"\bConfigure anaccount\b", "Configure an account"),
+        (r"\bnon-tech-sawvy\b", "non-tech-savvy"),
+        (r"\bcalted\b", "called"),
         (r"\bAX\b", "ATX"),          # 3.1 Q4 'AX' / Q15 'AMX' -> ATX form factor
     ]
     for pat, repl in fixes:
@@ -500,6 +532,76 @@ def _split_stem_leadin(pending):
     if last_term >= 0:
         return pending[:last_term + 1], pending[last_term + 1:]
     return [], pending
+
+
+def _parse_options_letter_labeled(body_lines):
+    """FORMAT D: a REQUIRED radio icon + a bare letter label (A-H, no punctuation) +
+    option text (Modules 5-10). The icon requirement stops stem lines that merely
+    start with a capital ("A user ...") from being mistaken for options.
+
+    The letter label is stripped from the stored text. Options wrap across lines:
+      * "ICON LETTER text..."      then continuation lines join;
+      * "ICON LETTER" alone        then the text is on the following line(s);
+      * a Correct/Incorrect marker may sit at the end of any of those lines, or on
+        its own line, and folds onto the current option.
+    Continuation lines are any non-blank line that is NOT another Format-D option and
+    NOT a stop line."""
+    options, stem_parts, seen_option = [], [], False
+    pending = []      # non-icon lines since the last boundary (stem or wrapped lead-in)
+
+    def _next_starts_option_d(idx):
+        for j in range(idx + 1, len(body_lines)):
+            nxt = body_lines[j]
+            if not nxt.strip():
+                continue
+            if _STOP_RE.match(nxt):
+                return False
+            return bool(OPTION_D_RE.match(nxt) or OPTION_D_BARE_RE.match(nxt))
+        return False
+
+    for i, ln in enumerate(body_lines):
+        if _STOP_RE.match(ln):
+            break
+        m = OPTION_D_RE.match(ln)
+        mbare = None if m else OPTION_D_BARE_RE.match(ln)
+        if m or mbare:
+            hit = m or mbare
+            selected = bool(hit.group(1))
+            body = hit.group(hit.lastindex) if m else ""   # text is the last group
+            body, marked, incorrect = _split_markers(body)
+            # Prepend any wrapped lead-in that belonged to THIS option (the stem is
+            # split off at the last '?'/':' line; 9.2 Q4 / 9.7 Q20 put the option's
+            # first words on the line above the icon).
+            stem_pend, lead_pend = _split_stem_leadin(pending)
+            # Drop OCR noise sitting on the icon line ONLY when there is a wrapped
+            # lead-in (multi-line option): "Set up ... to the" / "®A . p 9 9" /
+            # "device." — the "p 9 9" between real fragments is garble. A normal
+            # single-line option (no lead-in) keeps its short body like "M2"/"7mm".
+            if lead_pend and sum(ch.isalpha() for ch in body) < 3:
+                body = ""
+            stem_parts.extend(stem_pend)
+            lead = " ".join(lead_pend).strip()
+            pending = []
+            full = ((lead + " ") if lead else "") + body
+            options.append({"text": full.strip(), "selected": selected,
+                            "marked": marked, "incorrect": incorrect})
+            seen_option = True
+        elif not seen_option:
+            pending.append(ln)                 # stem or first option's lead-in
+        elif options and ln.strip():
+            cur_complete = bool(re.search(r"[.?!]\s*$", options[-1]["text"]))
+            if _next_starts_option_d(i) and cur_complete:
+                # The current option already looks complete AND another option
+                # follows: this line is the wrapped lead-in of that NEXT option.
+                pending.append(ln)
+            else:
+                # Continuation of the current option (join, folding any marker).
+                extra = _apply_marker_to_last(options, ln)
+                options[-1]["text"] = clean_text((options[-1]["text"] + " " + extra).strip())
+    # Any trailing pending that never reached an option is stem.
+    if pending and not options:
+        stem_parts.extend(pending)
+    return stem_parts, options
 
 
 def _parse_options_lettered(body_lines):
@@ -733,19 +835,30 @@ def parse_questions(raw):
                               and not OPTION_B_RE.match(l) and not CHECKBOX_RE.match(l))
         select_n = bool(SELECT_N_RE.search(stem_probe)) or bool(SELECT_N_RE.search(" ".join(body_lines)))
 
-        # THREE-MODE DETECTION: A -> B -> C, take the first with >= 2 options.
-        # If the stem says "(Select N)", prefer the checkbox mode.
+        # MODE DETECTION: D -> A -> B -> C, take the first with >= 2 options.
+        # If the stem says "(Select N)", prefer the checkbox (multi-select) mode.
         mode = None
-        stem_parts, options = _parse_options_lettered(body_lines)
-        mode = "A"
         single_rescue = None   # best 1-option result (a truncated question)
-        # Only prefer checkbox EARLY when the stem explicitly says "(Select N)".
-        # Otherwise a radio (Format B) question whose options happen to look a little
-        # like checkbox glyphs must NOT be hijacked into multi-select mode.
+        stem_parts, options = [], []
         if select_n:
+            # Multi-select: checkbox first.
             sp_c, opt_c = _parse_options_checkbox(body_lines)
             if len(opt_c) >= 2:
                 stem_parts, options, mode = sp_c, opt_c, "C"
+        # FORMAT D (icon + bare letter label) is the most specific single-select
+        # format, so it is tried FIRST. It requires an icon before the letter, which
+        # prevents a stem line starting with a capital ("A user ...") from being
+        # swallowed as an option (the root cause of the Module 5-10 errors).
+        if len(options) < 2:
+            sp_d, opt_d = _parse_options_letter_labeled(body_lines)
+            if len(opt_d) >= 2:
+                stem_parts, options, mode = sp_d, opt_d, "D"
+            elif len(opt_d) == 1 and opt_d[0].get("marked"):
+                single_rescue = (sp_d, opt_d, "D")
+        if len(options) < 2:
+            sp_a, opt_a = _parse_options_lettered(body_lines)
+            if len(opt_a) >= 2:
+                stem_parts, options, mode = sp_a, opt_a, "A"
         if len(options) < 2:
             sp_b, opt_b = _parse_options_letterless(body_lines)
             if len(opt_b) >= 2:
@@ -767,8 +880,8 @@ def parse_questions(raw):
             elif len(opt_loose) == 1 and opt_loose[0].get("marked") and not single_rescue:
                 single_rescue = (body_lines, opt_loose, "loose")
 
-        # For B/C, a wrapped option's lead-in was also captured as a stem part.
-        if mode in ("B", "C"):
+        # For B/C/D, a wrapped option's lead-in was also captured as a stem part.
+        if mode in ("B", "C", "D"):
             opt_prefixes = [o["text"].lower()[:25] for o in options if o["text"]]
             stem_parts = [s for s in stem_parts
                           if clean_text(s).lower()[:25] not in opt_prefixes]
@@ -841,6 +954,10 @@ def parse_questions(raw):
         flags = []
         if not found:
             flags.append("correctAnswer not detected by OCR")
+        if len(option_texts) < 2:
+            # Fewer than 2 complete options: the image almost certainly cut off the
+            # rest. Keep the question but flag it for manual review.
+            flags.append("truncated options")
         if len(option_texts) < MIN_OPTIONS:
             flags.append(f"only {len(option_texts)} options parsed (<{MIN_OPTIONS})")
         if len(option_texts) > MAX_OPTIONS:
