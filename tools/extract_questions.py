@@ -537,6 +537,8 @@ def validate_question(q, meta):
         errs.append("stem is empty")
     if not isinstance(q.get("options"), list) or len(q["options"]) < 2:
         errs.append("options has fewer than 2 entries")
+    if not isinstance(q.get("source"), str) or not q["source"].strip():
+        errs.append("source is empty or not a string")
     return errs
 
 
@@ -604,14 +606,25 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             continue
 
         cls = classify_question(q, meta, obj_index, folder_module)
-        qid = f"1201-IMG-{next(id_counter):03d}"
+        # Sequential ID continuing from the bank's max (e.g. 1201-716), one
+        # continuous counter across all folders. No zero padding.
+        qid = f"1201-{next(id_counter)}"
 
+        # Field order matches the production schema:
+        # id, domain, objective, module, type, difficulty, stem, options,
+        # correctAnswer, explanation, source, classification.
         qobj = {
-            "id": qid, "domain": cls["domain"], "objective": cls["objective"],
-            "module": cls["module"], "type": q.get("questionType", "mc"),
-            "stem": stem, "options": q.get("options", []),
+            "id": qid,
+            "domain": cls["domain"],
+            "objective": cls["objective"],
+            "module": cls["module"],
+            "type": q.get("questionType", "mc"),
+            "difficulty": "medium",
+            "stem": stem,
+            "options": q.get("options", []),
             "correctAnswer": q.get("correctAnswer", []),
             "explanation": q.get("explanation", ""),
+            "source": "certmaster",
             "classification": {"confidence": cls["confidence"], "reasoning": cls["reasoning"]},
         }
 
@@ -685,6 +698,18 @@ def main():
     obj_index = build_objective_index(meta)
     existing_stems = [(q["id"], q.get("stem", "")) for q in core1["questionBank"]]
 
+    # Highest numeric ID suffix in the Core 1 bank; extracted IDs continue from it.
+    # (Robust to ids like "1201-715" and any "prefix-...-NNN" shape: take the last
+    #  hyphen segment that parses as an int.)
+    max_id = 0
+    for q in core1["questionBank"]:
+        parts = str(q.get("id", "")).split("-")
+        try:
+            max_id = max(max_id, int(parts[-1]))
+        except (ValueError, IndexError):
+            continue
+    next_id_start = max_id + 1
+
     # Discover.
     folders = discover(args.source)
     if args.folder:
@@ -710,7 +735,8 @@ def main():
               "  Then add it to PATH or pass --tesseract-path.", file=sys.stderr)
         sys.exit(2)
 
-    id_counter = iter(range(1, 100_000))
+    id_counter = iter(range(next_id_start, next_id_start + 1_000_000))
+    print(f"Continuing extracted IDs from 1201-{next_id_start} (bank max {max_id}).")
     batch_seen = []  # cross-folder dedup within this run
     summary = {
         "totalFolders": len(folders), "totalImages": total_images,
