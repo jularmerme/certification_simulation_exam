@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 extract_questions.py — extract CompTIA A+ quiz questions from CertMaster JPG
 screenshots using FREE local OCR (Tesseract + Pillow), and write structured JSON
@@ -146,70 +145,130 @@ def ocr_image(im):
 
 # ---------------------------------------------------------------------------
 # Step 4: parse questions from raw OCR text
+# ===========================================================================
+# CertMaster "Individual Response" pages use several distinct option layouts.
+# The FULL inventory of real Tesseract artifacts observed across 501 images:
+#
+#   RADIO, unselected (wrong, single-select):
+#     "(C) A text"  "(C) text"  "(C). text"  "(C)) text"  "(C)_ text"
+#     "O text"  "0 text"  "oO text"  "QO text"  "Q text"  "re) text"
+#     ((C) = the copyright char ©; (R) = the registered char ®)
+#   RADIO, selected (student's answer):
+#     "@ text"  "@(C) text"  "@(R) text"  "@ (C) text"
+#   CHECKBOX, unchecked (wrong, multi-select):
+#     "[_] text"  "(] text"  "(]_ text"  "(J text"  "L] text"  "L)_ text"
+#     "[J text"  "LD text"  "(# text"  "Ol text"  "Lj text"  "[ text"
+#   CHECKBOX, checked (correct, multi-select):
+#     "[] text"  or an icon-less line ending in a Correct marker.
+#
+#   CORRECT markers (end of the option's line):
+#     "Y Correct" "y Correct" "/ Correct" "\\/ Correct" "./ Correct"
+#     "JY Correct" "VY Correct" and the bare word "Correct".
+#   INCORRECT markers: "X Incorrect" "XX Incorrect" "X_ Incorrect".
+#   HEADER status: "Question N (C) Correct" / "Question N X Incorrect"
+#     / "Question N -- Partial" (em dash / double hyphen).
+#
+# Three detection modes are tried in order (A lettered, B letterless radio,
+# C checkbox), then a loose fallback for icon-less/number options (e.g. voltage
+# lists "12 / 24 / 15 ..."). Whichever finds >= 2 options wins.
 # ---------------------------------------------------------------------------
-# CertMaster Individual Response OCR artifacts (observed in real Tesseract output):
-#
-#   Question header:   "Question 4 © Correct" / "Question 1 @ Correct"
-#     -> the radio-icon (@ selected, © / (C) unselected) + status must be stripped.
-#
-#   Unselected option: "© A."  "oO B"  "O B"  "© 8"(B->8)  "Oc X"  "OA X"  "Ood"
-#   Selected option:   "@ ¢"(C misread)  "@C"  "@A"  "@D"  "@ C"
-#     -> a leading icon glob (© ® @ o O ( ) C copyright/at/paren noise), then the
-#        option LETTER (which itself may be misread: ¢->C, 8->B, o/O near a letter),
-#        then optional punctuation, then the option text.
-#
-#   Correct marker (end of the correct option's line): "Y Correct" / "y Correct"
-#     / "/ Correct".  Selected options also begin with "@".
-#
-# Icon glob preceding the real option letter (selected '@', unselected '©'/'®'/
-# '(C)', and the letters o/O/0 that Tesseract emits for the radio circle).
-_ICON = r"[©®()oO0\u2022\-\*]"
-# Option line. Accepted shapes, ordered to avoid matching ordinary stem lines that
-# start with a lowercase word ("a city?"):
-#   (a) selected: '@' then the option letter (any case, incl. misread ¢/8). The '@'
-#       is itself the radio icon, so an intervening icon char is optional.
-#   (b) unselected: a real icon prefix (© ® ( ) o O 0), then the option letter.
-#   (c) bare: NO icon, but an UPPERCASE letter A-H (or 8=B) — a plain "A Foo" option.
-# Group 1 = '@' if selected; the letter is whichever of the letter groups matched.
-_OPT_CORE = (r"(?:@\s*" + _ICON + r"*\s*([A-Ha-h¢8])"   # (a) selected
-             r"|" + _ICON + r"+\s*([A-Ha-h¢8])"          # (b) unselected icon
-             r"|([A-H8]))")                               # (c) bare uppercase
+
+# Icon character class shared by several patterns. Includes the copyright/
+# registered glyphs Tesseract emits for radio circles, plus the bracket/paren/
+# L glyphs it emits for checkboxes.
+_ICON_CHARS = r"@©®()\[\]{}Ll\u2022\u2013\u2014*#/\\_JD"
+
+# --- correct / incorrect markers (trailing suffix on an option line) --------
+# Correct: an optional garbled check glyph (Y y J V / \\ . followed by) + "Correct",
+# OR the bare word "Correct" at end of line. Anchored to end-of-string.
+CORRECT_MARKER_RE = re.compile(
+    r"\s*(?:[Yy]|[Jj]?[Yy]|[Vv][Yy]?|[/\\.]+|[\u2713\u2714])*\s*correct\s*$",
+    re.IGNORECASE)
+# A stricter test used to DECIDE correctness (must have a check-glyph OR the bare
+# word "correct" as a standalone trailing token — avoids matching "...is correct"
+# mid-sentence, which is handled by trimming only end-of-line).
+CORRECT_DECIDE_RE = re.compile(
+    r"(?:[Yy]|[Jj][Yy]|[Vv][Yy]?|[/\\.]+|[\u2713\u2714])\s*correct\s*$"
+    r"|(?<![A-Za-z])correct\s*$",
+    re.IGNORECASE)
+# Incorrect: "X" / "XX" / "X_" + "Incorrect".
+INCORRECT_MARKER_RE = re.compile(r"\s*[Xx]+_?\s*incorrect\s*$", re.IGNORECASE)
+# Combined stripper: remove any trailing correct/incorrect marker from text.
+ANY_MARKER_RE = re.compile(
+    r"\s*(?:[Yy]|[Jj][Yy]|[Vv][Yy]?|[Xx]+_?|[/\\.]+|[\u2713\u2714])*\s*"
+    r"(?:in)?correct\s*$",
+    re.IGNORECASE)
+
+# --- question header --------------------------------------------------------
+# "Question N" + optional icon glyphs + optional status word.
+# Group 1 = number; group 2 = status (correct/incorrect/partial); group 3 = the
+# residual text on the line (rare). The status word is matched explicitly so its
+# leading letter is fully consumed and never leaks into the stem.
+QUESTION_HDR_RE = re.compile(
+    r"^\s*Question\s+(\d+)\b"
+    r"[\s@©®()\[\]Xx/\\.\u2013\u2014\u2713\u2714-]*"
+    r"(correct|incorrect|partial)?\b\s*(.*)$",
+    re.IGNORECASE)
+
+# --- Format A: lettered options (icon + letter A-H + text) ------------------
+_ICON_A = r"[@©®()oO0Qq\u2022\-\*]"
+_OPT_CORE = (r"(?:@\s*" + _ICON_A + r"*\s*([A-Ha-h\u00a28])"   # (a) selected
+             r"|" + _ICON_A + r"+\s*([A-Ha-h\u00a28])"          # (b) unselected icon
+             r"|([A-H8]))")                                     # (c) bare uppercase
 OPTION_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s+(\S.*)$")
 OPTION_BARE_RE = re.compile(r"^\s*(@)?\s*" + _OPT_CORE + r"[\._:\)\-]*\s*$")
 
-# Question header, tolerant of the OCR'd status icon after the number. The status
-# word (Correct/Incorrect) is matched EXPLICITLY (not via the icon class) so its
-# leading 'C' is fully consumed and never leaks into the stem as "orrect".
-# Group 1 = question number. Group 2 = the status word (Correct/Incorrect) if
-# present, so process_folder can tell whether the attempt was right. Group 3 = any
-# residual text on the header line (rare). The status icon (@ © ® ( ) X x) AND the
-# status word are both fully consumed so neither leaks into the stem.
-QUESTION_HDR_RE = re.compile(
-    r"^\s*Question\s+(\d+)\b[\s@©®()Xx✓✔/\\]*\s*(correct|incorrect)?\b\s*(.*)$",
-    re.IGNORECASE)
-
-# Trailing correct-answer marker on an option line: "Y Correct" / "y Correct"
-# / "/ Correct" / "\/ Correct" / a bare checkmark.
-CORRECT_MARKER_RE = re.compile(r"\s*[Yy/\\✓✔]+\s*correct\s*$", re.IGNORECASE)
-# Trailing incorrect marker: "X Incorrect" / "XX Incorrect" / "x Incorrect".
-INCORRECT_MARKER_RE = re.compile(r"\s*[Xx]+\s*incorrect\s*$", re.IGNORECASE)
-# Either marker (for stripping any status suffix from option text).
-ANY_MARKER_RE = re.compile(r"\s*[Yy/\\Xx✓✔]+\s*(?:in)?correct\s*$", re.IGNORECASE)
-CORRECT_TOKEN_RE = re.compile(r"\b(correct|✓|✔)\b", re.IGNORECASE)
-
-# Letterless option prefix (Format B): a leading radio-button icon, then text.
-# Two safe shapes so real words like "Open"/"Overload" aren't mistaken for an
-# 'O' icon:
-#   (a) a distinctive icon (@ © ® ( ) • - *), optionally repeated, then text. These
-#       never begin an English word, so no space is required after them.
-#   (b) a bare circle letter (o O 0) ONLY when followed by a space/underscore and
-#       then the text — "O damage", "0 the computer". "Open" (no space) is excluded.
-# A leading '@' (selected) is captured in group 1 in both shapes.
-_ICON_STRONG = r"[@©®()\u2022]"
+# --- Format B: letterless radio (icon + text, no letter) --------------------
+# A distinctive radio glyph, optionally combined (@©, @®, ©), ©., re)), then text.
+# The bare circle letters o/O/0/Q only count as an icon when followed by a
+# space/underscore so real words ("Open", "Overload") are not eaten.
+_ICON_STRONG = r"[@©®\u2022]"
+# Two shapes:
+#   (1) a leading '@' (selected) followed by whitespace, then optional extra glyph
+#       + the text — covers "@ Heatsink", "@© Have you", "@® Modular", "@(R) ...".
+#   (2) no '@': a distinctive radio glyph / garbled circle / "(C)" then text.
 OPTION_B_RE = re.compile(
-    r"^\s*(@)?\s*(?:" + _ICON_STRONG + r"[@©®()_\s\u2022]*|[oO0][_\s]+)\s*(\S.*)$")
+    r"^\s*(?:"
+    r"(@)\s*[@©®()_.\s\u2022]*"                          # (1) selected '@ ...'
+    r"|" + _ICON_STRONG + r"[@©®()_.\s\u2022]*"          # (2a) strong radio glyph(s)
+    r"|re\)\s+"                                          # (2b) 're)' garbled radio
+    r"|[QO0][O0]?[_\s]+"                                 # (2c) circle letter + sep
+    r"|\(\s*[CR]\s*\)[._)\s]*"                           # (2d) '(C)' / '(R)' text
+    r")\s*(\S.*)$")
 
-# Metadata/boilerplate lines to drop before parsing.
+# --- Format C: checkbox (multi-select) --------------------------------------
+# Checkbox glyphs Tesseract emits: [] [_] (] (]_ (J L] L)_ [J LD Lj [ ( and a
+# leading Ol / (# garble. Requires either a following space, or an immediate
+# capital letter (e.g. "[An", "(J A...") since checkbox text often abuts.
+CHECKBOX_RE = re.compile(
+    r"^\s*(?:"
+    r"\[\s*\]"                     # []  (checked)
+    r"|\[\s*_\s*\]"               # [_]
+    r"|\[\s*[Jj]\s*\]?"           # [J  [J]
+    r"|\[\s*[A-Z]?"               # [   [An...
+    r"|\(\s*\]_?"                 # (]  (]_
+    r"|\(\s*[Jj]\b"               # (J
+    r"|[Ll]\s*\]"                 # L]
+    r"|[Ll]\s*\)_?"               # L)  L)_
+    r"|[Ll][Jj]\b"                # Lj
+    r"|[Ll][Dd]\b"                # LD
+    r"|\(\s*#"                    # (#
+    r"|O[Il1]\b"                  # Ol / OI / O1
+    r")[\s._|]*(\S.*)$")
+# Does the line merely LOOK like it starts with a checkbox glyph? (used for
+# continuation detection — a continuation must NOT start a new option).
+CHECKBOX_LEAD_RE = re.compile(
+    r"^\s*(?:\[|\(\s*[\]Jj#]|[Ll]\s*[\])JjDd]|O[Il1]\b)")
+
+# Lines that terminate the option region / start the explanation-or-metadata tail.
+_STOP_RE = re.compile(
+    r"^\s*(?:explanation\b|related\s+content\b|resources[\\/]|https?://|hitps://"
+    r"|copyright\b)", re.IGNORECASE)
+
+# "(Select two)" / "(Select three)" etc. in the stem => multi-select checkbox.
+SELECT_N_RE = re.compile(r"\(\s*select\s+(two|three|four|\d+)\b", re.IGNORECASE)
+
+# --- metadata / boilerplate lines dropped before parsing --------------------
 _META_RES = [
     re.compile(r"Individual Response", re.IGNORECASE),
     re.compile(r"^\s*(Julian Mercado|.*@gmail\.com)", re.IGNORECASE),
@@ -220,16 +279,17 @@ _META_RES = [
     re.compile(r"^\s*(https?|hitps)://", re.IGNORECASE),   # 'hitps' = OCR of https
     re.compile(r"Copyright.*CompTIA", re.IGNORECASE),
     re.compile(r"resources[\\/].*question.*\.xml", re.IGNORECASE),  # source-path noise
+    re.compile(r"resources[\\/]questions[\\/]", re.IGNORECASE),
     re.compile(r"^\s*\.\s*$"),                             # lone dot artifact line
     re.compile(r"^\s*\d+\s*$"),                            # lone page number
     re.compile(r"^\s*\d+/\d+\s*$"),                        # "3/3" page indicator
+    # Lesson cross-references at end of a Related Content block:
+    #   "(B) 3.1.4 ..."  "B) 3.1.4 ..."  "5) 3.1.4 ..."  "BS) ..."  "(3 3.1.4 ..."
+    #   "85) 3.1.5 ..."  "(GB 3.1.4 ..."  — a short garbled bullet then "N.N.N text".
+    re.compile(r"^\s*(?:\(?[A-Z0-9]{1,3}\)?|\(GB|\(3)\s+\d+\.\d+\.\d+\b", re.IGNORECASE),
+    # Timestamp header: "1/19/26, 11:13 PM" (with or without trailing text).
+    re.compile(r"^\s*\d{1,2}/\d{1,2}/\d{2,4},\s*\d{1,2}:\d{2}\s*(AM|PM)?", re.IGNORECASE),
 ]
-
-
-def _norm_option_letter(ch):
-    """Normalize a possibly-misread option letter to uppercase A-H."""
-    ch = ch.upper()
-    return {"¢": "C", "8": "B", "0": "O"}.get(ch, ch)
 
 
 def strip_metadata(raw):
@@ -243,25 +303,66 @@ def strip_metadata(raw):
 
 
 def clean_text(s):
-    """Trim OCR noise: pipes, stray single chars, collapse whitespace."""
+    """Trim OCR noise: pipes, stray leading artifact chars, collapse whitespace."""
     s = s.replace("|", " ")
     s = re.sub(r"\s+", " ", s).strip()
-    # drop leading stray artifact chars like "© " or "= " if present
+    # drop leading stray artifact chars like "© " or "= " if present, but keep a
+    # leading '(' (real content like "(PSU)" or "(Select two)").
     s = re.sub(r"^[^\w(]+", "", s)
     return s.strip()
 
 
+def _strip_leading_icons(s):
+    """Remove any run of leading icon/checkbox glyphs + separators from option text."""
+    prev = None
+    while prev != s:
+        prev = s
+        # Note: bare circle letters (Q/O/0) only count as an icon when followed by a
+        # separator, so real words like "Open"/"Overload" keep their leading letter.
+        s = re.sub(
+            r"^\s*(?:@|\(\s*[CR]\s*\)|©|®|re\)|\[\s*[_JjA-Z]?\s*\]?|\(\s*[\]Jj#]?"
+            r"|[Ll]\s*[\])JjDd]?|O[Il1]\b|[QO0](?=[._):|\s])|\u2022)[._):|\s]*",
+            "", s)
+    return s.strip()
+
+
+def _fix_ocr_words(s):
+    """Fix known OCR word-merges/artifacts in option/stem text."""
+    fixes = [
+        (r"\bAuser\b", "A user"),
+        (r"\bandis\b", "and is"),
+        (r"\bToinstail\b", "To install"),
+        (r"\btoa\b", "to a"),
+        (r"\bwiil\b", "will"),
+        (r"\bvoitage\b", "voltage"),
+        (r"\bWattrating\b", "Watt rating"),
+        (r"\bAX\b", "ATX"),          # 3.1 Q4 'AX' / Q15 'AMX' -> ATX form factor
+    ]
+    for pat, repl in fixes:
+        s = re.sub(pat, repl, s)
+    return s
+
+
+def _norm_option_letter(ch):
+    """Normalize a possibly-misread option letter to uppercase A-H."""
+    ch = ch.upper()
+    return {"\u00a2": "C", "8": "B", "0": "O"}.get(ch, ch)
+
+
+# ---------------------------------------------------------------------------
+# Block splitting: one block per "Question N" header.
+# ---------------------------------------------------------------------------
 def split_question_blocks(raw):
     """Split OCR text into blocks at each 'Question N' header.
     Returns a list of (is_question, status, lines):
       - is_question: True if the block was introduced by a 'Question N' header
-      - status: the attempt status word (Correct/Incorrect), defaulting to Correct
+      - status: attempt status word (correct/incorrect/partial), default 'correct'
       - lines: the lines after the header
     Text before the first header (or a page with no header at all) is returned as a
-    single is_question=False block, which lets the caller skip non-question pages."""
+    single is_question=False block, letting the caller skip non-question pages."""
     lines = raw.splitlines()
     blocks = []
-    current, status, in_question = [], "Correct", False
+    current, status, in_question = [], "correct", False
     started = False
     for line in lines:
         m = QUESTION_HDR_RE.match(line)
@@ -270,7 +371,7 @@ def split_question_blocks(raw):
                 blocks.append((in_question, status, current))
             started = True
             in_question = True
-            status = (m.group(2) or "").strip() or "Correct"
+            status = (m.group(2) or "").strip().lower() or "correct"
             current = []
             trailing = (m.group(3) or "").strip()
             if trailing:
@@ -285,24 +386,41 @@ def split_question_blocks(raw):
     return blocks
 
 
+# ---------------------------------------------------------------------------
+# Option-line parsing (per format)
+# ---------------------------------------------------------------------------
+def _split_markers(text):
+    """Return (clean_text, marked_correct, marked_incorrect) after stripping any
+    trailing correct/incorrect marker from `text`."""
+    marked = bool(CORRECT_DECIDE_RE.search(text))
+    incorrect = bool(INCORRECT_MARKER_RE.search(text))
+    stripped = ANY_MARKER_RE.sub("", text)
+    return stripped.strip(), marked, incorrect
+
+
+def _finalize_option(text):
+    """Full cleanup of a raw option string -> display text."""
+    text = _strip_leading_icons(text)
+    text, _m, _i = _split_markers(text)
+    text = _strip_leading_icons(text)          # icon may sit after a stripped marker
+    text = re.sub(r"[_]+$", "", text).strip()  # trailing underscore artifact
+    text = re.sub(r"[,\s]+$", "", text)        # trailing comma/space if content remains
+    text = clean_text(text)
+    return _fix_ocr_words(text)
+
+
 def _parse_option_line(line):
-    """If `line` is an option, return (letter, text, selected, marked); else None.
-    Group layout after the optional leading '@' (group 1):
-      group 2 = letter via selected '@...' branch (a)
-      group 3 = letter via unselected icon branch (b)
-      group 4 = letter via bare uppercase branch (c)
-    In OPTION_RE the final group is the option text.
-    selected == leading '@' (group 1) OR branch (a) matched (group 2).
-    """
+    """FORMAT A helper: if `line` is a lettered option, return
+    (letter, text, selected, marked, incorrect); else None."""
     def unpack(m, has_text):
         g1 = m.group(1)
         letter = m.group(2) or m.group(3) or m.group(4)
         selected = bool(g1) or bool(m.group(2))
         text = m.group(m.lastindex) if has_text else ""
-        marked = bool(CORRECT_MARKER_RE.search(text))
-        text = CORRECT_MARKER_RE.sub("", text)
-        text = re.sub(r"_+$", "", text.strip())      # trailing underscore artifact
-        return (_norm_option_letter(letter), clean_text(text), selected, marked)
+        stripped, marked, incorrect = _split_markers(text)
+        stripped = re.sub(r"_+$", "", stripped.strip())
+        return (_norm_option_letter(letter), clean_text(stripped), selected,
+                marked, incorrect)
 
     m = OPTION_RE.match(line)
     if m:
@@ -313,95 +431,203 @@ def _parse_option_line(line):
     return None
 
 
-def _fix_ocr_words(s):
-    """Fix a few known OCR word-merges/artifacts in option/stem text."""
-    s = re.sub(r"\bAuser\b", "A user", s)
-    return s
+def _apply_marker_to_last(options, line):
+    """Fold a continuation line's marker (if any) onto the last option and return
+    the marker-stripped continuation text to be joined."""
+    if CORRECT_DECIDE_RE.search(line):
+        options[-1]["marked"] = True
+    if INCORRECT_MARKER_RE.search(line):
+        options[-1]["incorrect"] = True
+    return ANY_MARKER_RE.sub("", line)
+
+
+def _split_stem_leadin(pending):
+    """Split a buffer of not-yet-assigned lines into (stem_lines, leadin_lines).
+
+    The stem is a question ending in '?' (or ':'); any lines AFTER that terminator
+    are the wrapped lead-in of the first option. If no line ends in a terminator,
+    the whole buffer is treated as a lead-in (the stem was captured elsewhere)."""
+    last_term = -1
+    for i, ln in enumerate(pending):
+        s = ln.strip()
+        # A stem line ends in '?' or ':' (optionally followed by a "(Select N)"
+        # instruction), or contains the "(Select N)" instruction itself.
+        if (re.search(r"[?:]\s*(?:\(\s*select\b[^)]*\)?\s*)?$", s, re.IGNORECASE)
+                or SELECT_N_RE.search(s)):
+            last_term = i
+    if last_term >= 0:
+        return pending[:last_term + 1], pending[last_term + 1:]
+    return [], pending
 
 
 def _parse_options_lettered(body_lines):
-    """FORMAT A: icon + letter (A-D) + text. Returns list of option dicts.
-    This is the original 5.1-style path, kept intact for regression."""
-    options = []
-    seen_option = False
-    stem_parts = []
+    """FORMAT A: icon + letter (A-D) + text. Multi-line options join. Kept close to
+    the original 5.1 path for regression safety."""
+    options, stem_parts, seen_option = [], [], False
     for ln in body_lines:
+        if _STOP_RE.match(ln):
+            break
         parsed = _parse_option_line(ln)
         if parsed:
-            letter, text, selected, marked = parsed
-            options.append({"text": text, "selected": selected, "marked": marked,
-                            "incorrect": bool(INCORRECT_MARKER_RE.search(ln))})
+            letter, text, selected, marked, incorrect = parsed
+            options.append({"text": text, "selected": selected,
+                            "marked": marked, "incorrect": incorrect})
             seen_option = True
         elif not seen_option:
             stem_parts.append(ln)
         elif options and ln.strip():
-            # continuation of the current option's text
-            extra = ANY_MARKER_RE.sub("", ln)
-            if CORRECT_MARKER_RE.search(ln):
-                options[-1]["marked"] = True
-            if INCORRECT_MARKER_RE.search(ln):
-                options[-1]["incorrect"] = True
+            extra = _apply_marker_to_last(options, ln)
             options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
     return stem_parts, options
 
 
 def _parse_options_letterless(body_lines):
-    """FORMAT B: icon (no letter) + text, options often multi-line. An icon line
-    starts a new option; a non-icon, non-empty line continues the current option
-    (or, before any option, is stem text).
+    """FORMAT B: radio icon (no letter) + text; options often wrap across lines.
 
-    Handles the wrapped case where the option text begins on a NON-icon line and the
-    icon appears on the following line (e.g. 'Open the computer case ... physical' /
-    'O damage.'): such a pre-icon text line is buffered and prepended to the option
-    the icon starts.
+    Special cases handled:
+      * lead-in text on a NON-icon line followed by the icon on the next line
+        (the pre-icon text belongs to the option the icon starts);
+      * '@' appearing on a NON-first line of an option = a selection indicator,
+        not a new option boundary;
+      * a Correct marker on line 1 with the option text continuing on line 2.
     """
-    options = []
-    stem_parts = []
-    seen_option = False
-    pending = []          # non-icon text seen since the last option (potential
-                          # wrapped-option lead-in OR stem before the first option)
+    options, stem_parts, seen_option = [], [], False
+    pending = []       # non-icon text since the last option boundary
 
-    for ln in body_lines:
+    def _next_nonblank_starts_option(idx):
+        """True if the next non-blank line begins a NEW Format-B option (so the
+        current non-icon line is that option's wrapped lead-in, not a continuation
+        of the current option)."""
+        for j in range(idx + 1, len(body_lines)):
+            nxt = body_lines[j]
+            if not nxt.strip():
+                continue
+            if _STOP_RE.match(nxt):
+                return False
+            return bool(OPTION_B_RE.match(nxt))
+        return False
+
+    for i, ln in enumerate(body_lines):
+        if _STOP_RE.match(ln):
+            break
         if not ln.strip():
-            pending = []          # blank line: separator, discard buffered lead-in
+            # A blank line separates wrapped lead-ins from options, but the stem is
+            # often separated from the first option by a blank line too, and a
+            # wrapped lead-in can be separated from ITS option by a blank line. Only
+            # discard the buffer after an option AND when the next real line does not
+            # itself start an option (i.e. the buffer is not that option's lead-in).
+            if seen_option and not _next_nonblank_starts_option(i):
+                pending = []
             continue
         mb = OPTION_B_RE.match(ln)
         if mb:
             selected = bool(mb.group(1))
-            text = mb.group(2)
-            marked = bool(CORRECT_MARKER_RE.search(text))
-            incorrect = bool(INCORRECT_MARKER_RE.search(text))
-            text = ANY_MARKER_RE.sub("", text)
-            # Prepend any buffered pre-icon lead-in (wrapped option first line).
-            lead = " ".join(pending).strip()
+            body = mb.group(2)
+            body, marked, incorrect = _split_markers(body)
+            stem_pend, lead_pend = _split_stem_leadin(pending)
+            stem_parts.extend(stem_pend)
+            lead = " ".join(lead_pend).strip()
             pending = []
-            full = clean_text(((lead + " ") if lead else "") + text)
-            options.append({"text": full, "selected": selected, "marked": marked,
-                            "incorrect": incorrect})
+            full = clean_text(((lead + " ") if lead else "") + body)
+            options.append({"text": full, "selected": selected,
+                            "marked": marked, "incorrect": incorrect})
             seen_option = True
+        elif re.match(r"^\s*@\s+\S", ln) and seen_option:
+            # '@' on a continuation line: mark the current option selected and join.
+            extra = _apply_marker_to_last(options, re.sub(r"^\s*@\s+", "", ln))
+            options[-1]["selected"] = True
+            options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
         else:
             if not seen_option:
-                # Could be stem, or the lead-in of the first (wrapped) option. Keep
-                # it as both a stem candidate and a pending lead-in; if an icon
-                # follows, pending wins and we retroactively treat it as option text.
+                pending.append(ln)      # stem-or-leadin; resolved when an icon hits
+            elif _next_nonblank_starts_option(i):
+                # Non-icon line whose FOLLOWING line starts a new option: this is the
+                # wrapped lead-in of that next option, NOT a continuation of the
+                # current one (3.1 / Module-1 "Check if ... to both" + "0 the ...").
                 pending.append(ln)
-                stem_parts.append(ln)
             elif options:
-                # continuation of the current option
-                extra = ANY_MARKER_RE.sub("", ln)
-                if CORRECT_MARKER_RE.search(ln):
-                    options[-1]["marked"] = True
-                if INCORRECT_MARKER_RE.search(ln):
-                    options[-1]["incorrect"] = True
+                extra = _apply_marker_to_last(options, ln)
                 options[-1]["text"] = clean_text(options[-1]["text"] + " " + extra)
-
-    # If the first option absorbed a lead-in that was ALSO added to stem_parts,
-    # remove those lead-in lines from the stem (they belong to the option).
-    if options and pending is not None:
-        pass  # pending already cleared; stem cleanup handled below
     return stem_parts, options
 
 
+def _parse_options_checkbox(body_lines):
+    """FORMAT C: checkbox icon + text (multi-select). Each checkbox glyph starts a
+    new option. An icon-less line that ends in a marker is its own checked/incorrect
+    option (the checkbox glyph was dropped by OCR); a lone marker line folds onto the
+    previous option; other icon-less lines continue the current option, or (before
+    any option) are stem / a wrapped lead-in."""
+    options, stem_parts, seen_option = [], [], False
+    pending = []
+
+    def open_option(body_text, marked, incorrect):
+        """Start a new option, resolving stem vs wrapped lead-in from `pending`."""
+        nonlocal pending, seen_option
+        stem_pend, lead_pend = _split_stem_leadin(pending)
+        stem_parts.extend(stem_pend)
+        lead = " ".join(lead_pend).strip()
+        pending = []
+        full = clean_text(((lead + " ") if lead else "") + body_text)
+        options.append({"text": full, "selected": False,
+                        "marked": marked, "incorrect": incorrect})
+        seen_option = True
+
+    for ln in body_lines:
+        if _STOP_RE.match(ln):
+            break
+        if not ln.strip():
+            if seen_option:
+                pending = []
+            continue
+        mb = CHECKBOX_RE.match(ln)
+        if mb:
+            body, marked, incorrect = _split_markers(mb.group(1))
+            open_option(body, marked, incorrect)
+            continue
+        stripped, marked, incorrect = _split_markers(ln)
+        is_marker_only = (marked or incorrect) and not stripped
+        if is_marker_only and options:
+            # lone "JY Correct" / "X_ Incorrect" line: attach to previous option.
+            if marked:
+                options[-1]["marked"] = True
+            if incorrect:
+                options[-1]["incorrect"] = True
+            continue
+        if marked or incorrect:
+            # icon-less line WITH a marker: a checked/incorrect option whose checkbox
+            # glyph OCR dropped (real in 3.1 Q9/Q13/Q14 — "24-pin ... / Correct").
+            open_option(stripped, marked, incorrect)
+        elif not seen_option:
+            pending.append(ln)          # stem-or-leadin
+        elif options:
+            options[-1]["text"] = clean_text(options[-1]["text"] + " " + stripped)
+    return stem_parts, options
+
+
+def _parse_options_loose(body_lines):
+    """REWRITE 3b — loose fallback: treat each non-blank, non-stop line after the
+    stem as an option. Strip leading icon garbage; keep the remainder. Used for
+    unusual formats such as the voltage list (12 / 24 / 15 / 5 / 7 / 3.3)."""
+    options = []
+    for ln in body_lines:
+        if _STOP_RE.match(ln) or not ln.strip():
+            continue
+        stripped, marked, incorrect = _split_markers(ln)
+        text = _strip_leading_icons(stripped)
+        text = clean_text(text)
+        if not text or len(text) < 1:
+            continue
+        # skip a line that is pure garble (no alphanumeric content left)
+        if not re.search(r"[A-Za-z0-9]", text):
+            continue
+        options.append({"text": text, "selected": False,
+                        "marked": marked, "incorrect": incorrect})
+    return options
+
+
+# ---------------------------------------------------------------------------
+# Whole-question parsing
+# ---------------------------------------------------------------------------
 def parse_questions(raw):
     """Parse OCR text into question dicts, returning (questions, had_header).
 
@@ -410,7 +636,7 @@ def parse_questions(raw):
     present but could not be parsed).
 
     Each question dict: stem, options, correctAnswer, explanation, questionType,
-    plus a private _flags list of review reasons and _truncated flag.
+    and a private _flags list of review reasons.
     """
     raw = strip_metadata(raw)
     blocks = split_question_blocks(raw)
@@ -419,8 +645,9 @@ def parse_questions(raw):
 
     for is_question, header_status, block_lines in blocks:
         if not is_question:
-            continue  # pre-header / non-question text
-        # Locate the Explanation marker (everything after it is the explanation).
+            continue
+
+        # Explanation split: everything after the first "Explanation" line.
         expl_idx = None
         for i, ln in enumerate(block_lines):
             if re.match(r"^\s*explanation\b", ln, re.IGNORECASE):
@@ -428,53 +655,105 @@ def parse_questions(raw):
                 break
         body_lines = block_lines[:expl_idx] if expl_idx is not None else block_lines
         expl_lines = block_lines[expl_idx + 1:] if expl_idx is not None else []
+        # Truncate the explanation at the first metadata boundary.
+        clean_expl_lines = []
+        for ln in expl_lines:
+            if _STOP_RE.match(ln):
+                break
+            clean_expl_lines.append(ln)
 
-        # FORMAT A first (lettered). Fall back to FORMAT B (letterless) if A finds
-        # fewer than 2 options.
+        # Provisional stem (Format A path) to detect "(Select N)" early.
+        stem_probe = " ".join(l for l in body_lines if not _parse_option_line(l)
+                              and not OPTION_B_RE.match(l) and not CHECKBOX_RE.match(l))
+        select_n = bool(SELECT_N_RE.search(stem_probe)) or bool(SELECT_N_RE.search(" ".join(body_lines)))
+
+        # THREE-MODE DETECTION: A -> B -> C, take the first with >= 2 options.
+        # If the stem says "(Select N)", prefer the checkbox mode.
+        mode = None
         stem_parts, options = _parse_options_lettered(body_lines)
+        mode = "A"
+        if select_n or len(options) < 2:
+            sp_c, opt_c = _parse_options_checkbox(body_lines)
+            if len(opt_c) >= 2 and (select_n or len(opt_c) >= len(options)):
+                stem_parts, options, mode = sp_c, opt_c, "C"
         if len(options) < 2:
-            stem_parts, options = _parse_options_letterless(body_lines)
-            # In Format B, a wrapped option's lead-in line was also captured as a
-            # stem part; drop any stem line that is a prefix of an option's text.
-            opt_texts_lower = [o["text"].lower() for o in options]
+            sp_b, opt_b = _parse_options_letterless(body_lines)
+            if len(opt_b) >= 2:
+                stem_parts, options, mode = sp_b, opt_b, "B"
+        if len(options) < 2:
+            sp_c, opt_c = _parse_options_checkbox(body_lines)
+            if len(opt_c) >= 2:
+                stem_parts, options, mode = sp_c, opt_c, "C"
+        if len(options) < 2:
+            opt_loose = _parse_options_loose(body_lines)
+            if len(opt_loose) >= 2:
+                # stem = the lines that were not consumed as loose options
+                stem_parts = [l for l in body_lines
+                              if not any(clean_text(_strip_leading_icons(l)).lower()
+                                         == o["text"].lower() for o in opt_loose)]
+                options, mode = opt_loose, "loose"
+
+        # For B/C, a wrapped option's lead-in was also captured as a stem part.
+        if mode in ("B", "C"):
+            opt_prefixes = [o["text"].lower()[:25] for o in options if o["text"]]
             stem_parts = [s for s in stem_parts
-                          if not any(o.startswith(clean_text(s).lower()[:25]) and clean_text(s)
-                                     for o in opt_texts_lower)]
+                          if clean_text(s).lower()[:25] not in opt_prefixes]
 
         if len(options) < 2:
             continue  # header present but unparseable -> caller logs as error
 
+        # Finalize option display text.
+        for o in options:
+            o["text"] = _finalize_option(o["text"])
+        options = [o for o in options if o["text"]]
+        if len(options) < 2:
+            continue
+
         stem = _fix_ocr_words(clean_text(" ".join(stem_parts)))
-        option_texts = [_fix_ocr_words(o["text"]) for o in options if o["text"]]
-        explanation = _fix_ocr_words(clean_text(" ".join(expl_lines)))
+        option_texts = [o["text"] for o in options]
+        explanation = _fix_ocr_words(clean_text(" ".join(clean_expl_lines)))
 
-        header_incorrect = bool(header_status and re.search(r"incorrect", header_status, re.IGNORECASE))
+        # Is this a multi-select question? Checkbox mode OR "(Select N)" in stem.
+        is_multi = (mode == "C") or select_n
 
-        # Correct-answer logic:
-        #  - explicit "/ Correct" / "Y Correct" markers always win.
-        #  - else if the header says the attempt was correct, the SELECTED (@) option
-        #    is the correct answer.
-        #  - if the header says incorrect, the selected option is WRONG; rely on the
-        #    /Correct marker (handled above) or the explanation fallback.
+        header_incorrect = header_status == "incorrect"
+
+        # ---- CORRECT-ANSWER DETECTION (signal priority) --------------------
+        # Signal 1: explicit Correct marker on the option line (strongest).
         marked_correct = [o["text"] for o in options if o["marked"] and o["text"]]
-        if marked_correct:
-            correct = [_fix_ocr_words(t) for t in marked_correct]
-        elif not header_incorrect:
-            correct = [_fix_ocr_words(o["text"]) for o in options if o["selected"] and o["text"]]
-        else:
-            correct = []
-        found = bool(correct)
+        # Signal 3 pre-computed: options explicitly marked Incorrect are eliminated.
+        marked_incorrect = {o["text"] for o in options if o["incorrect"]}
 
+        if marked_correct:
+            correct = list(dict.fromkeys(marked_correct))
+        elif is_multi:
+            # multi-select but no markers survived truncation: nothing reliable
+            correct = []
+        elif not header_incorrect:
+            # Signal 2: header says correct -> the selected (@) option is right.
+            correct = [o["text"] for o in options if o["selected"] and o["text"]]
+        else:
+            # header incorrect + no marker: the @ option is WRONG; eliminate it and
+            # any Incorrect-marked option, then fall through to explanation mining.
+            correct = []
+
+        found = bool(correct)
         if not found:
             correct, found = _correct_from_explanation(option_texts, explanation)
+            # Never let an eliminated option be the answer.
+            correct = [c for c in correct if c not in marked_incorrect]
+            found = bool(correct)
 
-        qtype = "multi" if len(correct) > 1 else "mc"
+        # ---- TYPE --------------------------------------------------------
+        if is_multi or len(correct) > 1:
+            qtype = "multi"
+        else:
+            qtype = "mc"
         if re.search(r"\bdrag\b|\bdrop\b|match each", (stem + " " + raw).lower()):
             qtype = "drag_drop"
 
-        # Truncated-option detection: CertMaster options normally end in sentence
-        # punctuation. A short option (<15 chars) with no ending .?! is very likely
-        # cut off at the image boundary ("Escalate the", "Pe", "O documentation,").
+        # Truncated-option detection: a short option (<15 chars) without ending
+        # punctuation is likely cut off at the image boundary.
         truncated = any(len(t) < 15 and not re.search(r"[.?!]$", t) for t in option_texts)
 
         flags = []
@@ -486,6 +765,8 @@ def parse_questions(raw):
             flags.append(f"{len(option_texts)} options parsed (>{MAX_OPTIONS})")
         if truncated:
             flags.append("truncated option text")
+        if is_multi and len(correct) < 2 and found:
+            flags.append("multi-select but fewer than 2 correct answers detected")
 
         if stem:
             results.append({
