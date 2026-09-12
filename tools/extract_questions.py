@@ -32,6 +32,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from difflib import SequenceMatcher
 
 # --- optional / required deps: degrade gracefully --------------------------
 try:
@@ -401,10 +402,90 @@ def _fix_ocr_words(s):
         (r"\b95mm\b", "9.5mm"),
         (r"\bWiFi\b", "Wi-Fi"),       # 'WiFi' -> 'Wi-Fi' ('Wi-Fi' already lacks \bWiFi\b)
         (r"\bAX\b", "ATX"),          # 3.1 Q4 'AX' / Q15 'AMX' -> ATX form factor
+        # --- Modules 1-4 OCR misreads (diagnostic scan, Sep 2026) ---
+        (r"\bRAIDO\b", "RAID 0"),
+        (r"\bRAIDS\b", "RAID 5"),
+        (r"\bRAID1\b", "RAID 1"),
+        (r"\bPCle\b", "PCIe"),
+        (r"\bDVi\b", "DVI"),
+        (r"\bUVEFL\b", "UEFI"),
+        (r"\bBIOs2\b", "BIOS"),
+        (r"\bBIOs\b", "BIOS"),
+        (r"\bcmos\b", "CMOS"),
+        (r"\bDispiayPort\b", "DisplayPort"),
+        (r"\bjacking\b", "lacking"),
+        (r"\bmanuaily\b", "manually"),
+        (r"\bgraphicai\b", "graphical"),
+        (r"\boptima!\b", "optimal"),
+        # --- Modules 1-4 word joins (diagnostic scan, Sep 2026) ---
+        (r"\bItis\b", "It is"),
+        (r"\bIteliminates\b", "It eliminates"),
+        (r"\bItallows\b", "It allows"),
+        (r"\bToincrease\b", "To increase"),
+        (r"\bByusing\b", "By using"),
+        (r"\bByhalving\b", "By halving"),
+        (r"\bBymultiplying\b", "By multiplying"),
+        (r"\bLaptopcomputers\b", "Laptop computers"),
+        (r"\bLaptopcomputer\b", "Laptop computer"),
+        (r"\bSmartphoneTablets\b", "Smartphones and Tablets"),
+        (r"\bInthe\b", "In the"),
+        (r"\bforaset\b", "for a set"),
+        (r"\bAnHSM\b", "An HSM"),
+        (r"\bsDcard\b", "SD card"),
+        (r"\bLandGrid\b", "Land Grid"),
+        (r"\bBuyanew\b", "Buy a new"),
+        (r"\banewone\b", "a new one"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
     return s
+
+
+# --- CertMaster UI garble (mid-text artifacts surviving _split_markers) -----
+# OCR interpretations of checkmark icons, radio buttons, overlay text, and
+# UI borders that _split_markers does not catch (it only strips trailing markers).
+_UI_GARBLE_PATTERNS = [
+    (re.compile(r"\s*9 ycev['\u2019] lat\s*"), ""),
+    (re.compile(r"\s*Y Correct\s*"),            ""),
+    (re.compile(r"\s*Y/Y\s*"),                  ""),
+    (re.compile(r"\s*P 9 g\s*"),                ""),
+    (re.compile(r"\s*@\(c\) 8B\s*", re.I),      ""),
+    (re.compile(r"\s*@ 8B\s*"),                 ""),
+    (re.compile(r"\s*@\(c\)\s*", re.I),         ""),
+    (re.compile(r"\s*@\(r\)\s*", re.I),         ""),
+    (re.compile(r"\s*Q\)_\s*"),                 ""),
+    (re.compile(r"\s*TM~\s*"),                  ""),
+    (re.compile(r'\s*"~~\s*'),                  ""),
+    (re.compile(r"\s*yc t\s*"),                 ""),
+    (re.compile(r"\s*j F\s*"),                  ""),
+    (re.compile(r"\s*oO\s*"),                   ""),
+    (re.compile(r"\s*\u00a5\s*"),               ""),      # yen = checkmark
+    (re.compile(r"\s*\u00a7\s*"),               " "),     # section symbol
+    (re.compile(r"\s+orre\s*$"),                ""),      # orphan "orrect"
+    (re.compile(r"\s+orrect\s*$"),              ""),
+    (re.compile(r"(?<=[a-z])\s+orrect(?=\s)"),  ""),
+    (re.compile(r"\s*\bQ\s(?=[A-Z])"),          " "),     # lone Q before caps
+]
+
+
+def _strip_ui_garble(text):
+    """Strip CertMaster UI artifacts (checkmarks, radio buttons, overlay text)
+    that appear mid-text and survive _split_markers / _strip_leading_icons."""
+    if not text:
+        return text
+    for pattern, repl in _UI_GARBLE_PATTERNS:
+        text = pattern.sub(repl, text)
+    text = re.sub(r"  +", " ", text)
+    text = re.sub(r"\.\s*\.$", ".", text)
+    return text.strip()
+
+
+def _has_ui_garble_marker(text):
+    """True if text contains a CertMaster correct-answer UI marker. Used to
+    detect the correct option BEFORE garble stripping removes the signal."""
+    if not text:
+        return False
+    return bool(re.search(r"Y Correct|Y/Y|\u00a5", text))
 
 
 def _is_garbled(text):
@@ -525,6 +606,11 @@ def _finalize_option(text):
         " ", text)
     text = re.sub(r"[_]+$", "", text).strip()  # trailing underscore artifact
     text = re.sub(r"[,\s]+$", "", text)        # trailing comma/space if content remains
+    # NEW: strip mid-text CertMaster UI garble (checkmarks, radio buttons, etc.)
+    text = _strip_ui_garble(text)
+    # NEW: strip leaked option letter labels "B The USB..." -> "The USB..."
+    # Only B/C/D — never "A" (too many false positives with the article).
+    text = re.sub(r"^([BCD])\s+(?=[A-Z])", "", text)
     text = clean_text(text)
     return _fix_ocr_words(text)
 
@@ -941,9 +1027,44 @@ def parse_questions(raw):
             else:
                 continue  # header present but unparseable -> caller logs as error
 
+        # NEW: detect mid-text garble markers BEFORE finalization to recover
+        # correct-answer signal. CertMaster overlays a checkmark on the correct
+        # option — OCR renders it as "Y Correct" / yen / "Y/Y" mid-text.
+        for o in options:
+            if not o.get("marked") and _has_ui_garble_marker(o["text"]):
+                o["marked"] = True
+
         # Finalize option display text.
         for o in options:
             o["text"] = _finalize_option(o["text"])
+
+        # NEW: split merged options (>100 chars with an internal sentence boundary).
+        if not ((mode == "C") or select_n):
+            expanded = []
+            for o in options:
+                if len(o["text"]) > 100 and re.search(r"\.\s+[A-Z][a-z]", o["text"]):
+                    parts = re.split(r"(?<=\.)\s+(?=[A-Z][a-z])", o["text"])
+                    for j, part in enumerate(parts):
+                        if j == 0:
+                            new_o = dict(o)
+                            new_o["text"] = part.strip()
+                            expanded.append(new_o)
+                        else:
+                            expanded.append({"text": part.strip(), "selected": False,
+                                             "marked": False, "incorrect": False})
+                else:
+                    expanded.append(o)
+            final = []
+            for o in expanded:
+                if (len(o["text"]) < 20 and final
+                        and not re.match(r"^[A-Z]", o["text"])):
+                    final[-1]["text"] = final[-1]["text"].rstrip() + " " + o["text"]
+                    if o.get("marked"):
+                        final[-1]["marked"] = True
+                else:
+                    final.append(o)
+            options = final
+
         options = [o for o in options if o["text"]]
         # Require >= 2 options, EXCEPT a truncated single-option rescue (1 option
         # that carries a Correct marker) which is kept and flagged for review.
@@ -951,9 +1072,9 @@ def parse_questions(raw):
                                      and options[0].get("marked")):
             continue
 
-        stem = _fix_ocr_words(clean_text(" ".join(stem_parts)))
+        stem = _fix_ocr_words(_strip_ui_garble(clean_text(" ".join(stem_parts))))
         option_texts = [o["text"] for o in options]
-        explanation = _fix_ocr_words(clean_text(" ".join(clean_expl_lines)))
+        explanation = _fix_ocr_words(_strip_ui_garble(clean_text(" ".join(clean_expl_lines))))
 
         # Is this a multi-select question? Checkbox mode OR "(Select N)" in stem.
         is_multi = (mode == "C") or select_n
@@ -1342,6 +1463,42 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             review_reasons.append(f"fewer than {MIN_OPTIONS} options")
         if cls["confidence"] == "low":
             review_reasons.append("low classification confidence")
+        if review_reasons:
+            qobj["needsReview"] = True
+            qobj["reviewReasons"] = sorted(set(review_reasons))
+
+        # NEW: sync correctAnswer to match a cleaned option exactly. Option text is
+        # cleaned further after the answer was captured, so a once-identical answer
+        # can drift; re-align it to the closest option (or flag if too far).
+        if qobj["type"] == "mc" and qobj["correctAnswer"]:
+            if qobj["correctAnswer"] not in qobj["options"]:
+                best_opt = max(
+                    qobj["options"],
+                    key=lambda o: SequenceMatcher(None, qobj["correctAnswer"], o).ratio())
+                best_ratio = SequenceMatcher(None, qobj["correctAnswer"], best_opt).ratio()
+                if best_ratio > 0.80:
+                    qobj["correctAnswer"] = best_opt
+                else:
+                    review_reasons.append(
+                        f"correctAnswer not in options after cleanup (best ratio: {best_ratio:.2f})")
+        elif qobj["type"] == "multi" and isinstance(qobj["correctAnswer"], list):
+            synced = []
+            for ans in qobj["correctAnswer"]:
+                if ans in qobj["options"]:
+                    synced.append(ans)
+                else:
+                    best_opt = max(
+                        qobj["options"],
+                        key=lambda o: SequenceMatcher(None, ans, o).ratio())
+                    best_ratio = SequenceMatcher(None, ans, best_opt).ratio()
+                    if best_ratio > 0.80:
+                        synced.append(best_opt)
+                    else:
+                        review_reasons.append(
+                            f"multi correctAnswer not in options (ratio: {best_ratio:.2f})")
+                        synced.append(ans)
+            qobj["correctAnswer"] = synced
+        # Re-evaluate review flag after sync (new reasons may have been added).
         if review_reasons:
             qobj["needsReview"] = True
             qobj["reviewReasons"] = sorted(set(review_reasons))
