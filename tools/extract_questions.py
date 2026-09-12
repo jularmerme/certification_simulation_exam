@@ -512,6 +512,11 @@ def _fix_ocr_words(s):
         (r"\bQos\b", "QoS"),
         (r"\bPublicCloud\b", "Public Cloud"),
         (r"\bSiMcard\b", "SIM card"),
+        # --- Patch 5: validation failure OCR word-joins ---
+        (r"\bDatachunkorder\b", "Data chunk order"),
+        (r"\bFilepath\b", "File path"),
+        (r"\bBaremetal\b", "Bare metal"),
+        (r"\bAweb\b", "A web"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
@@ -572,6 +577,10 @@ _UI_GARBLE_PATTERNS = [
     (re.compile(r"\s*QD\s+"),                                   " "),
     (re.compile(r"\s*B_\s+(?=[A-Z])"),                          ""),
     (re.compile(r"\(\s*(?=charging)"),                          ""),
+    # --- Patch 5: bracket garble in multi-select answers ---
+    (re.compile(r"\s*\(\s*_\s*\]\s*"),                          " "),
+    (re.compile(r"\s*\[\s*_\s*\)\s*"),                          " "),
+    (re.compile(r"\s*\(\s*_\s*\)\s*"),                          " "),
 ]
 
 
@@ -585,6 +594,43 @@ def _strip_ui_garble(text):
     text = re.sub(r"  +", " ", text)
     text = re.sub(r"\.\s*\.$", ".", text)
     return text.strip()
+
+
+def _normalize_for_compare(text):
+    """Strip trailing punctuation/whitespace for answer<->option comparison, so
+    'fan is not working.' matches 'fan is not working'. (Patch 5)"""
+    return re.sub(r"[.\s!?;,]+$", "", text or "").strip()
+
+
+def _match_option(answer, options):
+    """4-tier match of a correctAnswer against the option list (Patch 5):
+    exact -> trailing-punctuation-normalized -> substring -> fuzzy.
+    Returns (best_option_or_None, ratio). The OPTION's exact text is the canonical
+    answer, so the caller assigns the returned option, not the stripped answer."""
+    if not options:
+        return None, 0.0
+    # 1. exact
+    if answer in options:
+        return answer, 1.0
+    ca_norm = _normalize_for_compare(answer)
+    # 2. normalized (trailing punctuation stripped from both sides)
+    for opt in options:
+        if ca_norm == _normalize_for_compare(opt):
+            return opt, 1.0
+    # 3. substring (one contains the other), guarded to avoid short false matches
+    ca_lower = ca_norm.lower()
+    if len(ca_lower) > 15:
+        for opt in options:
+            opt_lower = _normalize_for_compare(opt).lower()
+            if ca_lower in opt_lower or opt_lower in ca_lower:
+                return opt, 0.95
+    # 4. fuzzy
+    best_opt, best_ratio = None, 0.0
+    for opt in options:
+        ratio = SequenceMatcher(None, ca_norm, _normalize_for_compare(opt)).ratio()
+        if ratio > best_ratio:
+            best_opt, best_ratio = opt, ratio
+    return best_opt, best_ratio
 
 
 def _has_ui_garble_marker(text):
@@ -1620,6 +1666,24 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
         if isinstance(correct_answer, list):
             correct_answer = [re.sub(r"^[A-H][._]?\s+", "", ans) for ans in correct_answer]
 
+        # NEW (Patch 5): an answer may contain two answers fused by a leaked
+        # mid-string letter label, e.g. "Need to bring costs down B Need for
+        # software...". This shows up either as a bare string OR as a single list
+        # element (checkbox multi-select). Split conservatively (lowercase/period
+        # before a lone B-H then a capital) and promote to multi-select.
+        _FUSED_RE = re.compile(r"(?<=[a-z.])\s+[B-H]\s+(?=[A-Z])")
+        if isinstance(correct_answer, str) and correct_answer:
+            fused_parts = _FUSED_RE.split(correct_answer)
+            if len(fused_parts) > 1:
+                correct_answer = [p.strip() for p in fused_parts if p.strip()]
+                qtype = "multi"   # the qobj is built below from qtype
+        elif isinstance(correct_answer, list):
+            split_list = []
+            for ans in correct_answer:
+                parts = _FUSED_RE.split(ans)
+                split_list.extend(p.strip() for p in parts if p.strip())
+            correct_answer = split_list
+
         # Field order matches the production schema:
         # id, domain, objective, module, type, difficulty, stem, options,
         # correctAnswer, explanation, source, classification.
@@ -1656,16 +1720,14 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             qobj["needsReview"] = True
             qobj["reviewReasons"] = sorted(set(review_reasons))
 
-        # NEW: sync correctAnswer to match a cleaned option exactly. Option text is
-        # cleaned further after the answer was captured, so a once-identical answer
-        # can drift; re-align it to the closest option (or flag if too far).
+        # NEW: sync correctAnswer to match a cleaned option. Option text is cleaned
+        # further after the answer was captured, so a once-identical answer can
+        # drift; re-align it via 4-tier matching (exact -> trailing-punctuation
+        # normalized -> substring -> fuzzy) and assign the OPTION's exact text.
         if qobj["type"] == "mc" and qobj["correctAnswer"]:
             if qobj["correctAnswer"] not in qobj["options"]:
-                best_opt = max(
-                    qobj["options"],
-                    key=lambda o: SequenceMatcher(None, qobj["correctAnswer"], o).ratio())
-                best_ratio = SequenceMatcher(None, qobj["correctAnswer"], best_opt).ratio()
-                if best_ratio > 0.80:
+                best_opt, best_ratio = _match_option(qobj["correctAnswer"], qobj["options"])
+                if best_opt is not None and best_ratio >= 0.80:
                     qobj["correctAnswer"] = best_opt
                 else:
                     review_reasons.append(
@@ -1676,11 +1738,8 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
                 if ans in qobj["options"]:
                     synced.append(ans)
                 else:
-                    best_opt = max(
-                        qobj["options"],
-                        key=lambda o: SequenceMatcher(None, ans, o).ratio())
-                    best_ratio = SequenceMatcher(None, ans, best_opt).ratio()
-                    if best_ratio > 0.80:
+                    best_opt, best_ratio = _match_option(ans, qobj["options"])
+                    if best_opt is not None and best_ratio >= 0.80:
                         synced.append(best_opt)
                     else:
                         review_reasons.append(
