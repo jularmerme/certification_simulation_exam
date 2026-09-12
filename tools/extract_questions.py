@@ -500,6 +500,18 @@ def _fix_ocr_words(s):
         (r"\bAstepper\b", "A stepper"),
         (r"\bIsopropy!\b", "Isopropyl"),
         (r"\bAppstore\b", "App store"),
+        # --- Batch 3 catchup OCR misreads (Modules 6.4-9.1) ---
+        (r"\bToactasa\b", "To act as a"),
+        (r"\bToassign\b", "To assign"),
+        (r"\bail\b(?=\s+(?:servers|network|device|outbound|inbound))", "all"),
+        (r"\bFITC\b", "FTTC"),
+        (r"\bmuitiple\b", "multiple"),
+        (r"\bRapidelasticity\b", "Rapid elasticity"),
+        (r"\bATime\b", "A Time"),
+        (r"\bD_Itcan\b", "It can"),
+        (r"\bQos\b", "QoS"),
+        (r"\bPublicCloud\b", "Public Cloud"),
+        (r"\bSiMcard\b", "SIM card"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
