@@ -470,6 +470,36 @@ def _fix_ocr_words(s):
         (r"\bAvideo\b", "A video"),
         (r"\bRI11\b", "RJ11"),
         (r"\bfines\b(?=.*(?:telephone|cable|data))", "lines"),
+        # --- Batch 4 OCR misreads (final scan, Sep 2026) ---
+        (r"\bAppie\b", "Apple"),
+        (r"\bapproachemphasises\b", "approach emphasises"),
+        (r"\bUsea\b", "Use a"),
+        (r"\bina\b(?=\s+(?:a|an|the|single|photo))", "in a"),
+        (r"\btypicaily\b", "typically"),
+        (r"\bpiace\b", "place"),
+        (r"\bAnaging\b", "An aging"),
+        (r"\bfroma\b", "from a"),
+        (r"\bNEFC\b", "NFC"),
+        (r"\bLithiumIon\b", "Lithium-Ion"),
+        (r"\bUSB-Cconnector\b", "USB-C connector"),
+        (r"\bThesmartphone\b", "The smartphone"),
+        (r"\bperrorm\b", "perform"),
+        (r"\bAlocalprinter\b", "A local printer"),
+        (r"\bAnetwork\b(?=\s+printer)", "A network"),
+        (r"\bAshared\b", "A shared"),
+        (r"\bAweb-enabled\b", "A web-enabled"),
+        (r"\bqualit\b", "quality"),
+        (r"\biton\b", "it on"),
+        (r"\bfiim\b", "film"),
+        (r"\bsopropy\b", "isopropyl"),
+        (r"\bChargingStage\b", "Charging Stage"),
+        (r"\bDotmatrix\b", "Dot matrix"),
+        (r"\bAtractorfeed\b", "A tractor feed"),
+        (r"\bAhand\b", "A hand"),
+        (r"\bAduplexing\b", "A duplexing"),
+        (r"\bAstepper\b", "A stepper"),
+        (r"\bIsopropy!\b", "Isopropyl"),
+        (r"\bAppstore\b", "App store"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
@@ -512,6 +542,24 @@ _UI_GARBLE_PATTERNS = [
     (re.compile(r"[\u2018\u2019]+(?=\w)"),      ""),
     (re.compile(r"\s*~+\s*(?=[a-z])"),          " "),
     (re.compile(r"\s*\u2122~?\s*(?=[a-z])"),    " "),
+    # --- Batch 4 garble patterns (@ markers, P-prefix, OA variant) ---
+    (re.compile(r"\s*@\u00a9?o\.?\s*[.,;]*\s*,?\s*Y/Y\s*"),   ""),
+    (re.compile(r"\s*@od\s+p\s*\.?\s*"),                        ""),
+    (re.compile(r"\s*@oD\s+y\s+ps\s+pany\s*"),                  ""),
+    (re.compile(r"\s*@\u00a98?\s*j\s*"),                        ""),
+    (re.compile(r"\s*@\u00ae\.\s*y\s+wiping\s+propy\s*"),       ""),
+    (re.compile(r"\s*@8\s*;\s*;\s*i\s*Y~?\s*"),                 ""),
+    (re.compile(r"\s*P\s+Orie\s+laptop\s*"),                    ""),
+    (re.compile(r"\s*P\s+perrorm\s*g?\s*"),                     ""),
+    (re.compile(r"\s*P\s+with\s+sopropy['\u2019]?\s*"),         ""),
+    (re.compile(r"\s*Souanyupesting\s*;\s*"),                   ""),
+    (re.compile(r"\s*ore\s+9\s+yrep\s*"),                       ""),
+    (re.compile(r"\s*9gee\s*"),                                 ""),
+    (re.compile(r"\s*ge\s*:\s*9\s*"),                           ""),
+    (re.compile(r"\s*OA,\s*"),                                  ""),
+    (re.compile(r"\s*QD\s+"),                                   " "),
+    (re.compile(r"\s*B_\s+(?=[A-Z])"),                          ""),
+    (re.compile(r"\(\s*(?=charging)"),                          ""),
 ]
 
 
@@ -533,7 +581,8 @@ def _has_ui_garble_marker(text):
     if not text:
         return False
     return bool(re.search(
-        r"Y Correct|Y/Y|\u00a5|' Y Correct|e a\. \. '", text))
+        r"Y Correct|Y/Y|\u00a5|' Y Correct|e a\. \. '|@\s*8\s*B|@o[dD]\s|@\u00a9o|Souanyupesting|ore 9 yrep|OA,",
+        text))
 
 
 def _is_garbled(text):
@@ -662,8 +711,11 @@ def _finalize_option(text):
     # Degree symbol + surrounding garble: "un ° " urparvolag" -> "underpowered"
     text = re.sub(r'\s*\u00b0\s*["\u201c\u201d]?\s*', ' ', text)
     # NEW: strip leaked option letter labels "B The USB..." -> "The USB..."
-    # Only B/C/D — never "A" (too many false positives with the article).
+    # Only B/C/D as a bare letter — never a bare "A" (article false positives).
     text = re.sub(r"^([BCD])\s+(?=[A-Z])", "", text)
+    # A letter with an EXPLICIT label separator ("A." / "A_" / "B_") is an
+    # unambiguous option label (not the article "A "), so strip A-H here too.
+    text = re.sub(r"^[A-H][._]\s+(?=[A-Za-z])", "", text)
     text = clean_text(text)
     return _fix_ocr_words(text)
 
@@ -1087,6 +1139,28 @@ def parse_questions(raw):
             if not o.get("marked") and _has_ui_garble_marker(o["text"]):
                 o["marked"] = True
 
+        # NEW (Patch 4): split on the @8B / @(c)8B correct-answer marker that OCR
+        # leaves BETWEEN two fused options. This must run BEFORE _finalize_option,
+        # which (via _strip_ui_garble) erases the "@ 8B" split point. The first
+        # part is the correct answer; the remainder is the next option.
+        if not ((mode == "C") or select_n):
+            split_out = []
+            for o in options:
+                if re.search(r"@\s*[\u00a9\u00ae]?\s*8\s*B", o["text"]):
+                    parts = re.split(r"\s*@\s*[\u00a9\u00ae]?\s*8\s*B\s*", o["text"])
+                    for j, part in enumerate([p.strip() for p in parts if p.strip()]):
+                        if j == 0:
+                            new_o = dict(o)
+                            new_o["text"] = part
+                            new_o["marked"] = True   # first part IS correct
+                            split_out.append(new_o)
+                        else:
+                            split_out.append({"text": part, "selected": False,
+                                              "marked": False, "incorrect": False})
+                else:
+                    split_out.append(o)
+            options = split_out
+
         # Finalize option display text.
         for o in options:
             o["text"] = _finalize_option(o["text"])
@@ -1099,11 +1173,11 @@ def parse_questions(raw):
         if not ((mode == "C") or select_n):
             expanded = []
             for o in options:
-                # Primary: split on leaked label (". Op/Os/Oo/On/Oop ")
+                # Primary: split on leaked label (". Op/Os/Oo/On/Oop/OA, ")
                 if len(o["text"]) > 80 and re.search(
-                        r"[.!?)]\s+(?:Op|Os|Oo|On|Oop)\s+[A-Z]", o["text"]):
+                        r"[.!?)\"\u201d]\s+(?:Op|Os|Oo|On|Oop|OA,?)\s+[A-Z]", o["text"]):
                     parts = re.split(
-                        r"(?<=[.!?)\"\u201d])\s+(?:Op|Os|Oo|On|Oop)\s+(?=[A-Z])",
+                        r"(?<=[.!?)\"\u201d])\s+(?:Op|Os|Oo|On|Oop|OA,?)\s+(?=[A-Z])",
                         o["text"])
                     for j, part in enumerate(parts):
                         part = part.strip()
@@ -1127,6 +1201,23 @@ def parse_questions(raw):
                         if j == 0:
                             new_o = dict(o)
                             new_o["text"] = part
+                            expanded.append(new_o)
+                        else:
+                            expanded.append({"text": part, "selected": False,
+                                             "marked": False, "incorrect": False})
+                # Tertiary: split on any residual @8B / @(c)8B marker (the pre-finalize
+                # pass handles most; this catches any that reached here intact).
+                elif re.search(r"@\s*[\u00a9\u00ae]?\s*8\s*B", o["text"]):
+                    parts = re.split(
+                        r"\s*@\s*[\u00a9\u00ae]?\s*8\s*B\s*", o["text"])
+                    for j, part in enumerate(parts):
+                        part = part.strip()
+                        if not part:
+                            continue
+                        if j == 0:
+                            new_o = dict(o)
+                            new_o["text"] = part
+                            new_o["marked"] = True  # first part IS correct
                             expanded.append(new_o)
                         else:
                             expanded.append({"text": part, "selected": False,
@@ -1510,6 +1601,12 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             correct_answer = answers[0] if answers else ""
         else:
             correct_answer = answers
+
+        # NEW (Patch 4): strip leaked letter prefixes from multi-select answers.
+        # OCR sometimes yields ["C Disconnect the AC power.", "B_ Lack of ..."]
+        # instead of ["Disconnect the AC power.", "Lack of ..."].
+        if isinstance(correct_answer, list):
+            correct_answer = [re.sub(r"^[A-H][._]?\s+", "", ans) for ans in correct_answer]
 
         # Field order matches the production schema:
         # id, domain, objective, module, type, difficulty, stem, options,
