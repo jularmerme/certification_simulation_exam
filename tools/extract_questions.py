@@ -179,24 +179,29 @@ def ocr_image(im):
 _ICON_CHARS = r"@©®()\[\]{}Ll\u2022\u2013\u2014*#/\\_JD"
 
 # --- correct / incorrect markers (trailing suffix on an option line) --------
-# Correct: an optional garbled check glyph (Y y J V / \\ . followed by) + "Correct",
-# OR the bare word "Correct" at end of line. Anchored to end-of-string.
+# The garbled check glyph that can precede "Correct". Real variants observed:
+#   Y  y  / \/ ./ JY  VY  Y/  and the smart quotes " " ' ' (U+201C/D, U+2018/9)
+#   plus the true check marks (U+2713/4). Built once and reused below.
+# A standalone glyph token (space- or start-anchored) so a real word's trailing
+# letter (e.g. "they") isn't mistaken for a "Y Correct" marker.
+_CHECK_GLYPH = (r"(?:(?<=\s)|(?<=^))(?:[YyJjVv]{1,3}[/\\.]*"
+                r"|[/\\.]+|[\u2713\u2714\u201c\u201d\u2018\u2019]+)")
+# Correct: an optional garbled check glyph + "Correct", OR the bare word "Correct"
+# at end of line. Anchored to end-of-string.
 CORRECT_MARKER_RE = re.compile(
-    r"\s*(?:[Yy]|[Jj]?[Yy]|[Vv][Yy]?|[/\\.]+|[\u2713\u2714])*\s*correct\s*$",
-    re.IGNORECASE)
+    r"\s*" + _CHECK_GLYPH + r"*\s*correct\s*$", re.IGNORECASE)
 # A stricter test used to DECIDE correctness (must have a check-glyph OR the bare
 # word "correct" as a standalone trailing token — avoids matching "...is correct"
 # mid-sentence, which is handled by trimming only end-of-line).
 CORRECT_DECIDE_RE = re.compile(
-    r"(?:[Yy]|[Jj][Yy]|[Vv][Yy]?|[/\\.]+|[\u2713\u2714])\s*correct\s*$"
+    _CHECK_GLYPH + r"\s*correct\s*$"
     r"|(?<![A-Za-z])correct\s*$",
     re.IGNORECASE)
 # Incorrect: "X" / "XX" / "X_" + "Incorrect".
 INCORRECT_MARKER_RE = re.compile(r"\s*[Xx]+_?\s*incorrect\s*$", re.IGNORECASE)
 # Combined stripper: remove any trailing correct/incorrect marker from text.
 ANY_MARKER_RE = re.compile(
-    r"\s*(?:[Yy]|[Jj][Yy]|[Vv][Yy]?|[Xx]+_?|[/\\.]+|[\u2713\u2714])*\s*"
-    r"(?:in)?correct\s*$",
+    r"\s*(?:" + _CHECK_GLYPH + r"|[Xx]+_?)*\s*(?:in)?correct\s*$",
     re.IGNORECASE)
 
 # --- question header --------------------------------------------------------
@@ -230,9 +235,10 @@ _ICON_STRONG = r"[@©®\u2022]"
 OPTION_B_RE = re.compile(
     r"^\s*(?:"
     r"(@)\s*[@©®()_.\s\u2022]*"                          # (1) selected '@ ...'
+    r"|(6)\s+(?=[A-Z])"                                  # (1b) digit-6 = misread '@'
     r"|" + _ICON_STRONG + r"[@©®()_.\s\u2022]*"          # (2a) strong radio glyph(s)
     r"|re\)\s+"                                          # (2b) 're)' garbled radio
-    r"|[QO0][O0]?[_\s]+"                                 # (2c) circle letter + sep
+    r"|[QO0][QO0]?[_\s]+"                                 # (2c) circle letter (QO/OQ) + sep
     r"|\(\s*[CR]\s*\)[._)\s]*"                           # (2d) '(C)' / '(R)' text
     r")\s*(\S.*)$")
 
@@ -254,6 +260,7 @@ CHECKBOX_RE = re.compile(
     r"|[Ll][Dd]\b"                # LD
     r"|\(\s*#"                    # (#
     r"|O[Il1]\b"                  # Ol / OI / O1
+    r"|in\]"                      # in]  (garbled checkbox)
     r")[\s._|]*(\S.*)$")
 # Does the line merely LOOK like it starts with a checkbox glyph? (used for
 # continuation detection — a continuation must NOT start a new option).
@@ -336,11 +343,46 @@ def _fix_ocr_words(s):
         (r"\bwiil\b", "will"),
         (r"\bvoitage\b", "voltage"),
         (r"\bWattrating\b", "Watt rating"),
+        (r"\bTestthesolution\b", "Test the solution"),
+        (r"\bToenable\b", "To enable"),
+        (r"\b7-pinconnector\b", "7-pin connector"),
+        (r"\bSecureboot\b", "Secure boot"),
+        (r"\bDisabie\b", "Disable"),
+        (r"\b480Mbps\b", "480 Mbps"),
         (r"\bAX\b", "ATX"),          # 3.1 Q4 'AX' / Q15 'AMX' -> ATX form factor
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
     return s
+
+
+def _is_garbled(text):
+    """True if option `text` is mostly OCR noise:
+      * fewer than 3 alphanumeric characters, or
+      * more than 50% of non-space characters are non-alphanumeric, or
+      * it contains no "real word" (no whitespace token of >= 4 letters) — a run of
+        tiny fragments like "asp , pp" that survived icon/marker cleanup.
+    """
+    if not text:
+        return True
+    alnum = sum(c.isalnum() for c in text)
+    if alnum < 3:
+        return True
+    non_space = [c for c in text if not c.isspace()]
+    if not non_space:
+        return True
+    non_alnum = sum(not c.isalnum() for c in non_space)
+    if non_alnum > 0.5 * len(non_space):
+        return True
+    # A standalone stray-punctuation token ("asp , pp" -> tokens 'asp' ',' 'pp')
+    # with no real word (>= 4 letters) present is almost certainly gibberish. This
+    # keeps clean short acronym options ("VGA", "HDMI", "RJ-45") from being flagged.
+    toks = text.split()
+    has_real_word = any(len(re.sub(r"[^A-Za-z]", "", t)) >= 4 for t in toks)
+    has_punct_token = any(not re.search(r"[A-Za-z0-9]", t) for t in toks)
+    if has_punct_token and not has_real_word:
+        return True
+    return False
 
 
 def _norm_option_letter(ch):
@@ -521,8 +563,10 @@ def _parse_options_letterless(body_lines):
             continue
         mb = OPTION_B_RE.match(ln)
         if mb:
-            selected = bool(mb.group(1))
-            body = mb.group(2)
+            # group 1 = '@' (selected), group 2 = digit-6 (misread '@', selected),
+            # last group = option text.
+            selected = bool(mb.group(1)) or bool(mb.group(2))
+            body = mb.group(mb.lastindex)
             body, marked, incorrect = _split_markers(body)
             stem_pend, lead_pend = _split_stem_leadin(pending)
             stem_parts.extend(stem_pend)
@@ -605,11 +649,26 @@ def _parse_options_checkbox(body_lines):
 
 
 def _parse_options_loose(body_lines):
-    """REWRITE 3b — loose fallback: treat each non-blank, non-stop line after the
+    """REWRITE 3b — loose fallback: treat each non-blank, non-stop line AFTER the
     stem as an option. Strip leading icon garbage; keep the remainder. Used for
-    unusual formats such as the voltage list (12 / 24 / 15 / 5 / 7 / 3.3)."""
+    unusual formats such as the voltage list (12 / 24 / 15 / 5 / 7 / 3.3).
+
+    The stem (lines up to and including the last one ending in '?'/':' or carrying a
+    "(Select N)" instruction) is dropped so its lines don't become bogus options
+    (e.g. 4.1 Q11, whose only real option is truncated after a 5-line stem)."""
+    # Locate the end of the stem.
+    stem_end = -1
+    for i, ln in enumerate(body_lines):
+        s = ln.strip()
+        if _STOP_RE.match(ln):
+            break
+        if re.search(r"[?:]\s*(?:\(\s*select\b[^)]*\)?\s*)?$", s, re.IGNORECASE) \
+                or SELECT_N_RE.search(s):
+            stem_end = i
     options = []
-    for ln in body_lines:
+    for idx, ln in enumerate(body_lines):
+        if idx <= stem_end:
+            continue
         if _STOP_RE.match(ln) or not ln.strip():
             continue
         stripped, marked, incorrect = _split_markers(ln)
@@ -619,6 +678,13 @@ def _parse_options_loose(body_lines):
             continue
         # skip a line that is pure garble (no alphanumeric content left)
         if not re.search(r"[A-Za-z0-9]", text):
+            continue
+        # A marker-less line that begins lowercase is a wrapped continuation of the
+        # previous option, not a new one (4.1 Q11 "to increase the fan speed.").
+        if options and not marked and not incorrect and re.match(r"^[a-z]", text):
+            if marked:
+                options[-1]["marked"] = True
+            options[-1]["text"] = clean_text(options[-1]["text"] + " " + text)
             continue
         options.append({"text": text, "selected": False,
                         "marked": marked, "incorrect": incorrect})
@@ -672,14 +738,20 @@ def parse_questions(raw):
         mode = None
         stem_parts, options = _parse_options_lettered(body_lines)
         mode = "A"
-        if select_n or len(options) < 2:
+        single_rescue = None   # best 1-option result (a truncated question)
+        # Only prefer checkbox EARLY when the stem explicitly says "(Select N)".
+        # Otherwise a radio (Format B) question whose options happen to look a little
+        # like checkbox glyphs must NOT be hijacked into multi-select mode.
+        if select_n:
             sp_c, opt_c = _parse_options_checkbox(body_lines)
-            if len(opt_c) >= 2 and (select_n or len(opt_c) >= len(options)):
+            if len(opt_c) >= 2:
                 stem_parts, options, mode = sp_c, opt_c, "C"
         if len(options) < 2:
             sp_b, opt_b = _parse_options_letterless(body_lines)
             if len(opt_b) >= 2:
                 stem_parts, options, mode = sp_b, opt_b, "B"
+            elif len(opt_b) == 1 and opt_b[0].get("marked"):
+                single_rescue = (sp_b, opt_b, "B")   # truncated single option
         if len(options) < 2:
             sp_c, opt_c = _parse_options_checkbox(body_lines)
             if len(opt_c) >= 2:
@@ -692,6 +764,8 @@ def parse_questions(raw):
                               if not any(clean_text(_strip_leading_icons(l)).lower()
                                          == o["text"].lower() for o in opt_loose)]
                 options, mode = opt_loose, "loose"
+            elif len(opt_loose) == 1 and opt_loose[0].get("marked") and not single_rescue:
+                single_rescue = (body_lines, opt_loose, "loose")
 
         # For B/C, a wrapped option's lead-in was also captured as a stem part.
         if mode in ("B", "C"):
@@ -700,13 +774,21 @@ def parse_questions(raw):
                           if clean_text(s).lower()[:25] not in opt_prefixes]
 
         if len(options) < 2:
-            continue  # header present but unparseable -> caller logs as error
+            # Truncated question rescue: a single option carrying a Correct marker is
+            # kept (image cut off the rest); it will be flagged for review below.
+            if single_rescue:
+                stem_parts, options, mode = single_rescue
+            else:
+                continue  # header present but unparseable -> caller logs as error
 
         # Finalize option display text.
         for o in options:
             o["text"] = _finalize_option(o["text"])
         options = [o for o in options if o["text"]]
-        if len(options) < 2:
+        # Require >= 2 options, EXCEPT a truncated single-option rescue (1 option
+        # that carries a Correct marker) which is kept and flagged for review.
+        if len(options) < 2 and not (single_rescue and len(options) == 1
+                                     and options[0].get("marked")):
             continue
 
         stem = _fix_ocr_words(clean_text(" ".join(stem_parts)))
@@ -767,6 +849,10 @@ def parse_questions(raw):
             flags.append("truncated option text")
         if is_multi and len(correct) < 2 and found:
             flags.append("multi-select but fewer than 2 correct answers detected")
+        # Garbled-option detection: an option that survived cleanup as mostly noise
+        # (fewer than 3 alphanumerics, or >50% non-alphanumeric excluding spaces).
+        if any(_is_garbled(t) for t in option_texts):
+            flags.append("garbled option text")
 
         if stem:
             results.append({
