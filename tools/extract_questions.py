@@ -704,6 +704,129 @@ def _match_option(answer, options):
     return best_opt, best_ratio
 
 
+# ---------------------------------------------------------------------------
+# Patch 8 Phase 2: glyph-less radio de-fusion (POST-PROCESSING).
+# Two layers, both run ONLY when a question would otherwise fail validation
+# (correctAnswer not in options). They cannot regress a currently-valid question.
+# ---------------------------------------------------------------------------
+def _try_answer_guided_split(options, correct_answer):
+    """Layer 1: split a fused option using the correct answer as the split guide.
+    Acts only when an answer is not an option but IS a substring of exactly one
+    option. Returns (new_options, changed)."""
+    if isinstance(correct_answer, str):
+        answers = [correct_answer]
+    elif isinstance(correct_answer, list):
+        answers = list(correct_answer)
+    else:
+        return options, False
+
+    new_options = list(options)
+    changed = False
+    for ans in answers:
+        ans_stripped = ans.strip()
+        if not ans_stripped or len(ans_stripped) < 2:
+            continue
+        if any(ans_stripped.lower() == opt.lower() for opt in new_options):
+            continue  # already matches an option
+        ans_lower = ans_stripped.lower()
+        matches = [i for i, opt in enumerate(new_options)
+                   if ans_lower in opt.lower().strip() and ans_lower != opt.lower().strip()]
+        if len(matches) != 1:
+            continue  # ambiguous or none -> don't touch
+        idx = matches[0]
+        fused_opt = new_options[idx]
+        pos = fused_opt.lower().find(ans_lower)
+        if pos < 0:
+            continue
+        before = fused_opt[:pos].strip()
+        answer_part = fused_opt[pos:pos + len(ans_stripped)].strip()
+        after = fused_opt[pos + len(ans_stripped):].strip()
+        parts = []
+        if before and len(before) >= 2:
+            parts.append(before)
+        parts.append(answer_part)
+        if after and len(after) >= 2:
+            parts.append(after)
+        if len(parts) > 1:
+            new_options = new_options[:idx] + parts + new_options[idx + 1:]
+            changed = True
+    return new_options, changed
+
+
+# Connecting words (articles, prepositions, common verbs). If any appears in an
+# option, it is a phrase — NOT two fused options — so Layer 2 must not split it.
+_CONNECTING_WORDS = frozenset({
+    'a', 'an', 'the', 'and', 'or', 'but', 'of', 'in', 'on', 'at',
+    'to', 'for', 'with', 'from', 'by', 'is', 'are', 'was', 'were',
+    'be', 'been', 'being', 'has', 'have', 'had', 'do', 'does', 'did',
+    'will', 'would', 'could', 'should', 'may', 'might', 'can', 'that',
+    'which', 'who', 'whom', 'this', 'these', 'those', 'it', 'its',
+    'not', 'no', 'if', 'then', 'than', 'when', 'where', 'how', 'what',
+    'into', 'over', 'under', 'between', 'through', 'during', 'before',
+    'after', 'above', 'below', 'up', 'down', 'out', 'about', 'each',
+    'every', 'all', 'both', 'few', 'more', 'most', 'other', 'some',
+    'such', 'only', 'very', 'also', 'just', 'because', 'so', 'while',
+    'although', 'since', 'until', 'unless', 'used', 'using', 'uses',
+})
+
+
+def _try_low_option_split(options, correct_answer):
+    """Layer 2: split fused options when the option count is suspiciously low
+    (< 3) and an option is a run of short, connecting-word-free tokens. Strict
+    guards prevent splitting legitimate multi-word phrases. Returns
+    (new_options, changed)."""
+    if len(options) >= 3:
+        return options, False
+    new_options = []
+    changed = False
+    for opt in options:
+        tokens = opt.strip().split()
+        if len(tokens) < 2:
+            new_options.append(opt)
+            continue
+        if any(t.lower() in _CONNECTING_WORDS for t in tokens):
+            new_options.append(opt)          # phrase, not fused options
+            continue
+        if not all(len(t) < 25 for t in tokens):
+            new_options.append(opt)
+            continue
+        new_options.extend(tokens)           # split into individual tokens
+        changed = True
+    if changed and not (3 <= len(new_options) <= 6):
+        return options, False                # out of normal range -> reject
+    return new_options, changed
+
+
+def _answer_matches(correct_answer, options):
+    """True if the correctAnswer (str or list) is fully present in options
+    (case-insensitive)."""
+    opts_lower = [o.strip().lower() for o in options]
+    if isinstance(correct_answer, str):
+        return correct_answer.strip().lower() in opts_lower
+    if isinstance(correct_answer, list):
+        return all(a.strip().lower() in opts_lower for a in correct_answer)
+    return False
+
+
+def _post_process_fused_options(question):
+    """Orchestrate Layer 1 then Layer 2 de-fusion. Only acts when answer matching
+    already failed; only commits a split if it makes the answer validate. Returns
+    True if the question's options were changed."""
+    options = question.get("options", [])
+    correct_answer = question.get("correctAnswer", "")
+    if not options or not correct_answer:
+        return False
+    if _answer_matches(correct_answer, options):
+        return False  # already valid -> never touch
+
+    for splitter in (_try_answer_guided_split, _try_low_option_split):
+        new_options, changed = splitter(options, correct_answer)
+        if changed and _answer_matches(correct_answer, new_options):
+            question["options"] = new_options
+            return True
+    return False
+
+
 def _has_ui_garble_marker(text):
     """True if text contains a CertMaster correct-answer UI marker. Used to
     detect the correct option BEFORE garble stripping removes the signal."""
@@ -1834,6 +1957,35 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
         if review_reasons:
             qobj["needsReview"] = True
             qobj["reviewReasons"] = sorted(set(review_reasons))
+
+        # Patch 8 Phase 2: last-resort glyph-less radio de-fusion. Runs only when the
+        # answer still isn't in options (no-op on valid questions). If a split makes
+        # the answer validate, canonicalize the answer to the exact option text and
+        # drop the now-stale "not in options" review reason.
+        if _post_process_fused_options(qobj):
+            if qobj["type"] == "mc" and qobj["correctAnswer"] not in qobj["options"]:
+                best_opt, best_ratio = _match_option(qobj["correctAnswer"], qobj["options"])
+                if best_opt is not None and best_ratio >= 0.80:
+                    qobj["correctAnswer"] = best_opt
+            elif qobj["type"] == "multi" and isinstance(qobj["correctAnswer"], list):
+                qobj["correctAnswer"] = [
+                    (a if a in qobj["options"]
+                     else (_match_option(a, qobj["options"])[0] or a))
+                    for a in qobj["correctAnswer"]]
+            review_reasons = [r for r in review_reasons
+                              if "not in options" not in r]
+            if review_reasons:
+                qobj["needsReview"] = True
+                qobj["reviewReasons"] = sorted(set(review_reasons))
+            else:
+                qobj.pop("needsReview", None)
+                qobj.pop("reviewReasons", None)
+            # validationErrors is recomputed by re-validating the updated qobj.
+            v = validate_question(qobj, meta)
+            if v:
+                qobj["validationErrors"] = v
+            else:
+                qobj.pop("validationErrors", None)
 
         # B2: module is folder-derived and authoritative; a content-derived module
         # is never used to override it, so there are no module "mismatches".
