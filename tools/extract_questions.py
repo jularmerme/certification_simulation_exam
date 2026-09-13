@@ -526,6 +526,40 @@ def _fix_ocr_words(s):
         (r"\bFilepath\b", "File path"),
         (r"\bBaremetal\b", "Bare metal"),
         (r"\bAweb\b", "A web"),
+        # --- Patch 9: case-garbled tech abbreviations ---
+        (r"\busB\b", "USB"),
+        (r"\bUsb\b", "USB"),
+        (r"\bscsi\b", "SCSI"),
+        (r"\bScsi\b", "SCSI"),
+        (r"\bSata\b", "SATA"),
+        (r"\bsata\b", "SATA"),
+        (r"\bPata\b", "PATA"),
+        (r"\bpata\b", "PATA"),
+        (r"\bIde\b", "IDE"),
+        (r"\bide\b", "IDE"),
+        (r"\bNvme\b", "NVMe"),
+        (r"\bnvme\b", "NVMe"),
+        (r"\bPcie\b", "PCIe"),
+        (r"\bpcie\b", "PCIe"),
+        (r"\bHdmi\b", "HDMI"),
+        (r"\bhdmi\b", "HDMI"),
+        (r"\bSsd\b", "SSD"),
+        (r"\bssd\b", "SSD"),
+        (r"\bHdd\b", "HDD"),
+        (r"\bhdd\b", "HDD"),
+        (r"\bSodimm\b", "SODIMM"),
+        (r"\bDdr3\b", "DDR3"),
+        (r"\bDdr4\b", "DDR4"),
+        (r"\bDdr5\b", "DDR5"),
+        (r"\bDimm\b", "DIMM"),
+        (r"\bVga\b", "VGA"),
+        (r"\bDvi\b", "DVI"),
+        (r"\bAtx\b", "ATX"),
+        (r"\bmatx\b", "mATX"),
+        (r"\bItx\b", "ITX"),
+        (r"\bBios\b", "BIOS"),
+        (r"\bUefi\b", "UEFI"),
+        (r"\bRaid\b", "RAID"),
     ]
     for pat, repl in fixes:
         s = re.sub(pat, repl, s)
@@ -768,6 +802,143 @@ _CONNECTING_WORDS = frozenset({
     'such', 'only', 'very', 'also', 'just', 'because', 'so', 'while',
     'although', 'since', 'until', 'unless', 'used', 'using', 'uses',
 })
+
+
+# Patch 9: known CompTIA A+ short technical abbreviations. Used to detect fused
+# options like "SATA SCSI" that should be two options. Only whole-token matches.
+_COMPTIA_ABBREVIATIONS = frozenset({
+    # Storage interfaces / types
+    "SATA", "SCSI", "SAS", "PCIe", "NVMe", "IDE", "PATA", "eSATA",
+    "SSD", "HDD", "M.2", "mSATA",
+    # Memory
+    "DDR3", "DDR4", "DDR5", "SODIMM", "DIMM", "ECC",
+    # Display interfaces
+    "HDMI", "DVI", "VGA", "DisplayPort",
+    # Connectivity
+    "USB", "USB-A", "USB-B", "USB-C", "Thunderbolt", "Bluetooth", "NFC", "Zigbee",
+    # Motherboard form factors
+    "ATX", "mATX", "ITX", "mITX",
+    # BIOS/firmware
+    "BIOS", "UEFI", "TPM",
+    # File systems
+    "NTFS", "FAT32", "ext4", "APFS", "exFAT",
+    # Partition / RAID
+    "GPT", "MBR", "RAID",
+    # Network
+    "LAN", "WAN", "MAN", "PAN", "SAN", "WLAN", "WWAN",
+    "TCP", "UDP", "IP", "DNS", "DHCP", "HTTP", "HTTPS",
+    "FTP", "SFTP", "SSH", "RDP", "VPN", "VLAN",
+    "NAT", "SNMP", "SMTP", "POP3", "IMAP",
+    # Wireless / printing / power
+    "WiFi", "Ethernet", "AC", "DC",
+})
+_COMPTIA_ABBREV_LOWER = frozenset(t.lower() for t in _COMPTIA_ABBREVIATIONS)
+_COMPTIA_ABBREV_CANONICAL = {t.lower(): t for t in _COMPTIA_ABBREVIATIONS}
+
+
+def _try_abbreviation_split(options):
+    """Patch 9: split an option that is 2+ known tech abbreviations fused together
+    (e.g. "SATA SCSI" -> ["SATA", "SCSI"]). Only splits when EVERY token in the
+    option is a known abbreviation (so "20-pin ATX"/"AC adapter" are never split).
+    Returns (new_options, split_map) where split_map maps the old option text to
+    its list of new parts (used to de-fuse the answer)."""
+    new_options = []
+    split_map = {}
+    for opt in options:
+        opt_stripped = opt.strip()
+        tokens = opt_stripped.split()
+        if len(tokens) < 2:
+            new_options.append(opt)
+            continue
+        if not all(t.lower() in _COMPTIA_ABBREV_LOWER for t in tokens):
+            new_options.append(opt)
+            continue
+        if any(t.lower() in _CONNECTING_WORDS for t in tokens):
+            new_options.append(opt)          # defense in depth
+            continue
+        parts = [_COMPTIA_ABBREV_CANONICAL.get(t.lower(), t) for t in tokens]
+        new_options.extend(parts)
+        split_map[opt_stripped] = parts
+    if split_map and not (3 <= len(new_options) <= 7):
+        return options, {}                   # out of normal range -> reject
+    return new_options, split_map
+
+
+def _defuse_answer(correct_answer, split_map):
+    """Patch 9: when a fused option was split, re-point a correctAnswer that matched
+    the fused text to the FIRST split part (OCR keeps the selected answer first).
+    Handles str and list. Returns (new_answer, changed)."""
+    if not split_map:
+        return correct_answer, False
+    changed = False
+    if isinstance(correct_answer, str):
+        ca = correct_answer.strip()
+        for fused, parts in split_map.items():
+            if ca.lower() == fused.lower():
+                return parts[0], True
+            if ca.lower() in fused.lower():
+                for part in parts:
+                    if ca.lower() == part.lower():
+                        return part, True
+    elif isinstance(correct_answer, list):
+        new_answers = []
+        for ans in correct_answer:
+            defused = False
+            for fused, parts in split_map.items():
+                if ans.strip().lower() == fused.lower():
+                    new_answers.append(parts[0])
+                    changed = True
+                    defused = True
+                    break
+            if not defused:
+                new_answers.append(ans)
+        if changed:
+            return new_answers, True
+    return correct_answer, changed
+
+
+def _post_process_abbreviation_fusion(question):
+    """Patch 9 orchestrator: split fused-abbreviation options and de-fuse the answer.
+    Runs on EVERY question (fused abbreviations can pass validation with garbled
+    data). Only commits when the de-fused answer validates against the split options;
+    otherwise flags needsReview and makes NO change. Returns True if modified."""
+    options = question.get("options", [])
+    correct_answer = question.get("correctAnswer", "")
+    if not options or not correct_answer:
+        return False
+    new_options, split_map = _try_abbreviation_split(options)
+    if not split_map:
+        return False
+    new_answer, _ = _defuse_answer(correct_answer, split_map)
+    if isinstance(new_answer, str):
+        match = any(new_answer.strip().lower() == o.strip().lower() for o in new_options)
+    elif isinstance(new_answer, list):
+        match = all(any(a.strip().lower() == o.strip().lower() for o in new_options)
+                    for a in new_answer)
+    else:
+        match = False
+    if not match:
+        # Split found but answer can't be de-fused -> flag, do NOT change options.
+        reasons = question.get("reviewReasons", [])
+        if "fused abbreviation options (answer not auto-de-fused)" not in reasons:
+            reasons.append("fused abbreviation options (answer not auto-de-fused)")
+        question["needsReview"] = True
+        question["reviewReasons"] = sorted(set(reasons))
+        return False
+    question["options"] = new_options
+    question["correctAnswer"] = new_answer
+    # canonicalize to exact option text via the 4-tier matcher
+    if isinstance(new_answer, str):
+        best_opt, ratio = _match_option(new_answer, new_options)
+        if best_opt is not None and ratio >= 0.80:
+            question["correctAnswer"] = best_opt
+    elif isinstance(new_answer, list):
+        canon = []
+        for a in new_answer:
+            bo, r = _match_option(a, new_options)
+            canon.append(bo if (bo is not None and r >= 0.80) else a)
+        question["correctAnswer"] = canon
+    return True
 
 
 def _try_low_option_split(options, correct_answer):
@@ -1909,6 +2080,12 @@ def process_folder(folder, meta, obj_index, existing_stems, batch_seen,
             "source": "certmaster",
             "classification": {"confidence": cls["confidence"], "reasoning": cls["reasoning"]},
         }
+
+        # Patch 9: split fused-abbreviation options ("SATA SCSI" -> "SATA","SCSI")
+        # and de-fuse the answer. Runs on EVERY question (fused abbreviations can
+        # pass validation with garbled data) and BEFORE validation/answer-sync so
+        # the corrected options/answer are what gets validated.
+        _post_process_abbreviation_fusion(qobj)
 
         v = validate_question(qobj, meta)
         if v:
