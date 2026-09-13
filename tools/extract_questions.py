@@ -291,11 +291,16 @@ CHECKBOX_RE = re.compile(
     r"|\(\s*#"                    # (#
     r"|O[Il1]\b"                  # Ol / OI / O1
     r"|in\]"                      # in]  (garbled checkbox)
+    r"|\(\s*_\s*\]"               # (_]  (Patch 7)
+    r"|\[\s*_\s*\)"               # [_)  (Patch 7)
+    r"|\(\s*-\s*\)"               # (-)  (Patch 7)
+    r"|\(\s*_\s*\)"               # (_)  (Patch 7)
+    r"|\(\s*\)"                   # ()   (Patch 7, empty parens = OCR'd empty box)
     r")[\s._|]*(\S.*)$")
 # Does the line merely LOOK like it starts with a checkbox glyph? (used for
 # continuation detection — a continuation must NOT start a new option).
 CHECKBOX_LEAD_RE = re.compile(
-    r"^\s*(?:\[|\(\s*[\]Jj#]|[Ll]\s*[\])JjDd]|O[Il1]\b)")
+    r"^\s*(?:\[|\(\s*[\]Jj#_)-]|[Ll]\s*[\])JjDd]|O[Il1]\b)")
 
 # Lines that terminate the option region / start the explanation-or-metadata tail.
 _STOP_RE = re.compile(
@@ -606,6 +611,41 @@ def _normalize_for_compare(text):
     return re.sub(r"[.\s!?;,]+$", "", text or "").strip()
 
 
+# Patch 7: OCR mangles checkbox glyphs into "(_]", "()", "(-)", "DB", "OB", etc.
+# When these open a line they should START a NEW option, but the raw forms aren't
+# recognized, so the line gets appended to the previous option (fused mega-option).
+# Normalize any leading garbled checkbox glyph to a canonical "[ ] " so the checkbox
+# parser reliably begins a new option. The "[DO] + label" branch is intentionally
+# conservative (lookahead requires a single A-H label then a capital word) so real
+# words like "Database ..." are never touched.
+_GARBLED_CB_RE = re.compile(
+    r"^(\s*)"
+    r"(?:"
+    r"\(\s*_\s*\]|\[\s*_\s*\)|\(\s*\)|\(\s*-\s*\)|\[\s*_\s*\]|\(\s*_\s*\)"  # bracket garble
+    r"|[DO]\s?(?=[A-H]\s+[A-Z])"                                            # D/O + label
+    r")"
+    r"\s*")
+
+
+# After a checkbox glyph, CertMaster prints the option-label letter (A-H). Strip it
+# so every checkbox option is uniformly label-free ("[ ] B Need..." -> "[ ] Need...")
+# and the split answers match. Also handles a bare label with a dropped glyph
+# ("A Need..." at line start). Only applied to checkbox-mode lines, so a leading
+# single letter here is a label, never the article "A" of a radio option.
+_CB_LABEL_RE = re.compile(r"^(\s*)(?:\[\s*[ xX]?\s*\]\s*)?[A-H]\s+(?=[A-Z])")
+
+
+def _normalize_checkbox_glyphs(lines):
+    """Convert leading garbled checkbox glyphs to a canonical '[ ] ' and drop the
+    following option-label letter (Patch 7)."""
+    out = []
+    for ln in lines:
+        ln = _GARBLED_CB_RE.sub(r"\1[ ] ", ln)
+        ln = _CB_LABEL_RE.sub(r"\1[ ] ", ln)
+        out.append(ln)
+    return out
+
+
 def _match_option(answer, options):
     """4-tier match of a correctAnswer against the option list (Patch 5):
     exact -> trailing-punctuation-normalized -> substring -> fuzzy.
@@ -750,6 +790,10 @@ def _split_markers(text):
 
 def _finalize_option(text):
     """Full cleanup of a raw option string -> display text."""
+    # Patch 7: strip any residual checkbox glyph (raw or canonicalized) at the start.
+    text = re.sub(
+        r"^\s*(?:\(\s*_\s*\]|\[\s*_\s*\)|\(\s*\)|\(\s*-\s*\)|\[\s*_\s*\]|\(\s*_\s*\)"
+        r"|\[\s*[ xX]?\s*\])\s*", "", text)
     text = _strip_leading_icons(text)
     text, _m, _i = _split_markers(text)
     text = _strip_leading_icons(text)          # icon may sit after a stripped marker
@@ -1003,6 +1047,9 @@ def _parse_options_checkbox(body_lines):
     option (the checkbox glyph was dropped by OCR); a lone marker line folds onto the
     previous option; other icon-less lines continue the current option, or (before
     any option) are stem / a wrapped lead-in."""
+    # Patch 7: canonicalize garbled checkbox glyphs so each option line starts a new
+    # option instead of being fused into the previous one.
+    body_lines = _normalize_checkbox_glyphs(body_lines)
     options, stem_parts, seen_option = [], [], False
     pending = []
 
