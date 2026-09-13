@@ -646,6 +646,33 @@ def _normalize_checkbox_glyphs(lines):
     return out
 
 
+# Patch 8 (Phase 1): OCR renders the radio circle (●/○) as O, o, 0, or ©, or drops
+# it. When two radio options land on one OCR line, they fuse. We split ONLY where a
+# radio glyph clearly survived as a standalone token between two options. This is
+# conservative: glyph-less fusions ("SATA SCSI") are deferred to a future phase.
+_RADIO_GLYPH_LINE_RE = re.compile(
+    r"^(\s*)[Oo0\u00a9]\s+(?=[A-Z])")           # line-start "O SATA"
+_RADIO_GLYPH_MID_RE = re.compile(
+    r"(?<=\S)\s+[Oo0\u00a9]\s+(?=[A-Z][A-Za-z])")  # mid-line " O SCSI" split point
+
+
+def _normalize_radio_glyphs(lines):
+    """Split mid-line radio-glyph fusions into separate option lines (Patch 8).
+    "SATA O SCSI O PCIe" -> ["SATA", "SCSI", "PCIe"]. The " O " delimiter is
+    consumed by the split. Only runs on radio-format (Format A/B) lines."""
+    out = []
+    for line in lines:
+        parts = _RADIO_GLYPH_MID_RE.split(line)
+        if len(parts) > 1:
+            for part in parts:
+                part = part.strip()
+                if part:
+                    out.append(part)
+        else:
+            out.append(line)
+    return out
+
+
 def _match_option(answer, options):
     """4-tier match of a correctAnswer against the option list (Patch 5):
     exact -> trailing-punctuation-normalized -> substring -> fuzzy.
@@ -794,6 +821,10 @@ def _finalize_option(text):
     text = re.sub(
         r"^\s*(?:\(\s*_\s*\]|\[\s*_\s*\)|\(\s*\)|\(\s*-\s*\)|\[\s*_\s*\]|\(\s*_\s*\)"
         r"|\[\s*[ xX]?\s*\])\s*", "", text)
+    # Patch 8: strip a residual radio glyph left at the start of an option after a
+    # mid-line split (e.g. "O SATA" -> "SATA"). Only when followed by an uppercase
+    # word, so "o'clock"/"0-based"/"Open" content is not touched.
+    text = re.sub(r"^\s*[Oo0\u00a9]\s+(?=[A-Z])", "", text)
     text = _strip_leading_icons(text)
     text, _m, _i = _split_markers(text)
     text = _strip_leading_icons(text)          # icon may sit after a stripped marker
@@ -951,6 +982,7 @@ def _parse_options_letter_labeled(body_lines):
 def _parse_options_lettered(body_lines):
     """FORMAT A: icon + letter (A-D) + text. Multi-line options join. Kept close to
     the original 5.1 path for regression safety."""
+    body_lines = _normalize_radio_glyphs(body_lines)   # Patch 8: split radio fusions
     options, stem_parts, seen_option = [], [], False
     for ln in body_lines:
         if _STOP_RE.match(ln):
@@ -979,6 +1011,7 @@ def _parse_options_letterless(body_lines):
         not a new option boundary;
       * a Correct marker on line 1 with the option text continuing on line 2.
     """
+    body_lines = _normalize_radio_glyphs(body_lines)   # Patch 8: split radio fusions
     options, stem_parts, seen_option = [], [], False
     pending = []       # non-icon text since the last option boundary
 
