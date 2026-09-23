@@ -143,6 +143,14 @@ function checkAndRestoreExamState() {
               q.options.every(o => o.toLowerCase() === 'true' || o.toLowerCase() === 'false')) {
             q.options = ['True', 'False'];
           }
+          // Re-enforce "All of the above" as last option
+          if (q.options) {
+            const allAboveIdx = q.options.findIndex(o => o.toLowerCase() === 'all of the above');
+            if (allAboveIdx > -1 && allAboveIdx !== q.options.length - 1) {
+              const [allAbove] = q.options.splice(allAboveIdx, 1);
+              q.options.push(allAbove);
+            }
+          }
           return q;
         });
         
@@ -582,9 +590,14 @@ function randomizeQuestionOptions(question) {
       text: opt,
       isCorrect: opt === correctAnswerText
     }));
+
+    // Pull out any "All of the above" option before shuffling — it always goes last
+    const allAboveIdx = optionsWithCorrectMarker.findIndex(o => o.text.toLowerCase() === 'all of the above');
+    const allAboveItem = allAboveIdx > -1 ? optionsWithCorrectMarker.splice(allAboveIdx, 1)[0] : null;
     
     // Shuffle
     const shuffled = shuffleArray(optionsWithCorrectMarker);
+    if (allAboveItem) shuffled.push(allAboveItem);
     
     // Update options and find new correct answer index
     q.options = shuffled.map(item => item.text);
@@ -599,9 +612,14 @@ function randomizeQuestionOptions(question) {
       text: opt,
       isCorrect: correctAnswerTexts.includes(opt)
     }));
+
+    // Pull out any "All of the above" option before shuffling — it always goes last
+    const allAboveIdx = optionsWithCorrectMarker.findIndex(o => o.text.toLowerCase() === 'all of the above');
+    const allAboveItem = allAboveIdx > -1 ? optionsWithCorrectMarker.splice(allAboveIdx, 1)[0] : null;
     
     // Shuffle
     const shuffled = shuffleArray(optionsWithCorrectMarker);
+    if (allAboveItem) shuffled.push(allAboveItem);
     
     // Update options and correct answers
     q.options = shuffled.map(item => item.text);
