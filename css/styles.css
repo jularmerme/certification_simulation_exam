@@ -1150,6 +1150,93 @@ body.dark-theme .review-explanation {
   transition: color 0.3s ease;
 }
 
+/* ── Matching / dropdown question layout ─────────────────────────────────── */
+.matching-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-bottom: 8px;
+}
+
+.matching-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: border-color 0.15s;
+}
+
+.matching-row:hover {
+  border-color: var(--navy2);
+}
+
+.matching-label {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.matching-select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  appearance: auto;
+}
+
+.matching-select:focus {
+  outline: none;
+  border-color: var(--navy2);
+  box-shadow: 0 0 0 2px rgba(22, 58, 99, 0.15);
+}
+
+.matching-select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+body.dark-theme .matching-select {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+body.dark-theme .matching-select option {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Review: matching rows with result coloring */
+.matching-row.review-correct { border-color: var(--green); background: rgba(27,122,61,0.07); }
+.matching-row.review-incorrect { border-color: var(--red); background: rgba(200,16,46,0.07); }
+
+body.dark-theme .matching-row.review-correct  { background: rgba(46,204,113,0.1); }
+body.dark-theme .matching-row.review-incorrect { background: rgba(255,122,138,0.1); }
+
+.matching-answer-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.matching-answer-badge.correct  { color: var(--green); }
+.matching-answer-badge.incorrect { color: var(--red);  }
+
 /* FOOTER */
 footer {
   background: var(--navy);
