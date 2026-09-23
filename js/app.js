@@ -136,7 +136,15 @@ function checkAndRestoreExamState() {
       
       // CRITICAL: Restore the SAVED questions, not generate new ones
       if (state.questions && state.questions.length > 0) {
-        appState.questions = state.questions;
+        // Re-enforce True/False order on restore — saved state may carry a
+        // shuffled order from before the fix was deployed.
+        appState.questions = state.questions.map(q => {
+          if (q.options && q.options.length === 2 &&
+              q.options.every(o => o.toLowerCase() === 'true' || o.toLowerCase() === 'false')) {
+            q.options = ['True', 'False'];
+          }
+          return q;
+        });
         
         // Show exam screen
         const exam = window.questionBank.exams[state.examCode];
@@ -553,7 +561,7 @@ function randomizeQuestionOptions(question) {
 
   // Detect True/False questions and enforce True-first order — never shuffle them
   const isTrueFalse = q.options && q.options.length === 2 &&
-    q.options.every(o => o === 'True' || o === 'False');
+    q.options.every(o => o.toLowerCase() === 'true' || o.toLowerCase() === 'false');
   if (isTrueFalse) {
     q.options = ['True', 'False'];
     return q;
