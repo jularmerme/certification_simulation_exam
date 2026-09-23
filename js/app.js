@@ -669,10 +669,7 @@ function updateNavigator() {
       cell.classList.add('flagged');
     } else if (isAnswered) {
       // Question is answered but not flagged
-      // For drag-drop questions, only show status after validation
-      if (q.type === 'drag_drop' && !appState.validatedDragDrops.has(idx)) {
-        // Don't show anything - remains gray (unanswered appearance)
-      } else if (!appState.feedbackEnabled) {
+      if (!appState.feedbackEnabled) {
         // Simulation mode: reveal that a question is answered, but NOT whether it
         // is correct. Neutral blue fill, still locked. Correctness waits for results.
         cell.classList.add('answered-neutral');
@@ -753,8 +750,8 @@ function loadQuestion(index) {
   
   if (question.type === 'mc' || question.type === 'multi' || isMultiQuestion) {
     renderMultipleChoice(question, optionsContainer, index);
-  } else if (question.type === 'drag_drop') {
-    renderDragDrop(question, optionsContainer, index);
+  } else if (question.type === 'matching') {
+    renderMatching(question, optionsContainer, index);
   }
   
   // Update buttons
@@ -896,245 +893,74 @@ function renderMultipleChoice(question, container, questionIndex) {
   });
 }
 
-function renderDragDrop(question, container, questionIndex) {
-  const currentState = appState.answers[questionIndex] || {};
-  
-  // Calculate which items are currently placed (in any zone)
-  const placedItemIds = new Set();
-  Object.keys(currentState).forEach(zoneId => {
-    if (Array.isArray(currentState[zoneId])) {
-      currentState[zoneId].forEach(itemId => placedItemIds.add(itemId));
-    }
-  });
-  
-  // Main wrapper with 2 columns with larger gap
-  const wrapper = document.createElement('div');
-  wrapper.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 16px; align-items: stretch;';
-  
-  // LEFT COLUMN: Draggable items
-  const leftColumn = document.createElement('div');
-  leftColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
-  
-  const leftTitle = document.createElement('div');
-  leftTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
-  leftTitle.textContent = 'Available Options';
-  leftColumn.appendChild(leftTitle);
-  
-  const itemsDiv = document.createElement('div');
-  itemsDiv.style.cssText = 'display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #1a1f2e; border: 2px solid var(--border); border-radius: 8px; flex: 1; justify-content: flex-start;';
-  itemsDiv.id = 'items-' + questionIndex;
-  
-  // Add ondrop to available options container so items can be dragged back
-  itemsDiv.ondrop = (e) => {
-    e.preventDefault();
-    const itemId = e.dataTransfer.getData('itemId');
-    const fromZone = e.dataTransfer.getData('fromZone');
-    
-    // Remove from zone if being dragged back from a zone
-    if (fromZone && fromZone !== 'items') {
-      if (!appState.answers[questionIndex]) {
-        appState.answers[questionIndex] = {};
-      }
-      
-      if (appState.answers[questionIndex][fromZone]) {
-        appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
-      }
-      
-      loadQuestion(questionIndex);
-    }
-  };
-  
-  itemsDiv.ondragover = (e) => {
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'move';
-    itemsDiv.style.backgroundColor = '#252d3d';
-    itemsDiv.style.borderColor = '#3b82f6';
-  };
-  
-  itemsDiv.ondragleave = () => {
-    itemsDiv.style.backgroundColor = '#1a1f2e';
-    itemsDiv.style.borderColor = '#2d3748';
-  };
-  
-  question.items.forEach(item => {
-    // Only show items that haven't been placed yet
-    if (!placedItemIds.has(item.id)) {
-      const chip = document.createElement('div');
-      chip.draggable = true;
-      chip.id = 'item-' + item.id;
-      chip.className = 'drag-item';
-      chip.style.cssText = 'padding: 14px 16px; background: var(--navy); color: #fff; border-radius: 6px; cursor: grab; text-align: center; font-size: 13px; font-weight: 600; transition: all 0.2s; user-select: none; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;';
-      chip.textContent = item.label;
-      chip.ondragstart = (e) => {
-        e.dataTransfer.effectAllowed = 'move';
-        e.dataTransfer.setData('itemId', item.id);
-        e.dataTransfer.setData('fromZone', 'items');
-        chip.style.opacity = '0.6';
-      };
-      chip.ondragend = () => {
-        chip.style.opacity = '1';
-      };
-      chip.onmouseenter = () => {
-        chip.style.cursor = 'grab';
-        chip.style.transform = 'scale(1.03)';
-        chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-      };
-      chip.onmouseleave = () => {
-        chip.style.transform = 'scale(1)';
-        chip.style.boxShadow = 'none';
-      };
-      itemsDiv.appendChild(chip);
-    }
-  });
-  
-  leftColumn.appendChild(itemsDiv);
-  wrapper.appendChild(leftColumn);
-  
-  // RIGHT COLUMN: Drop zones
-  const rightColumn = document.createElement('div');
-  rightColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
-  
-  const rightTitle = document.createElement('div');
-  rightTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
-  rightTitle.textContent = 'Match To';
-  rightColumn.appendChild(rightTitle);
-  
-  // Drop zones - calculate equal height
-  const zonesContainer = document.createElement('div');
-  zonesContainer.style.cssText = 'display: flex; flex-direction: column; gap: 12px; flex: 1;';
-  
-  question.dropZones.forEach((zone, zoneIdx) => {
-    const zoneDiv = document.createElement('div');
-    zoneDiv.style.cssText = 'padding: 14px; background: #1a1f2e; border: 2px dashed var(--border); border-radius: 8px; flex: 1; min-height: 80px; transition: all 0.2s; display: flex; flex-direction: column;';
-    zoneDiv.id = 'zone-' + zone.id;
-    
-    const label = document.createElement('div');
-    label.style.cssText = 'font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.5px;';
-    label.textContent = zone.label;
-    zoneDiv.appendChild(label);
-    
-    const itemsInZone = document.createElement('div');
-    itemsInZone.id = 'zone-items-' + zone.id;
-    itemsInZone.style.cssText = 'display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;';
-    
-    // Track which items are in this zone (with order)
-    if (currentState[zone.id]) {
-      currentState[zone.id].forEach((itemId, index) => {
-        const item = question.items.find(i => i.id === itemId);
-        if (item) {
-          addPlacedItemChip(item, itemId, zone, questionIndex, index, currentState[zone.id].length, itemsInZone);
-        }
-      });
-    }
-    
-    zoneDiv.appendChild(itemsInZone);
-    
-    zoneDiv.ondrop = (e) => {
-      e.preventDefault();
-      const itemId = e.dataTransfer.getData('itemId');
-      const fromZone = e.dataTransfer.getData('fromZone');
-      
-      if (!appState.answers[questionIndex]) {
-        appState.answers[questionIndex] = {};
-      }
-      
-      // Remove from previous zone if moving between zones
-      if (fromZone && fromZone !== 'items') {
-        if (appState.answers[questionIndex][fromZone]) {
-          appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
-        }
-      }
-      
-      // Initialize zone if needed
-      if (!appState.answers[questionIndex][zone.id]) {
-        appState.answers[questionIndex][zone.id] = [];
-      }
-      
-      // Add to zone - check if at capacity (typically 1 item per zone in matching)
-      // Get max items allowed for this zone (check question structure)
-      const maxItems = zone.correctItems ? zone.correctItems.length : 1;
-      
-      // If zone is at capacity, remove the first (oldest) item
-      if (appState.answers[questionIndex][zone.id].length >= maxItems) {
-        appState.answers[questionIndex][zone.id].shift();
-      }
-      
-      // Add new item if not already there
-      if (!appState.answers[questionIndex][zone.id].includes(itemId)) {
-        appState.answers[questionIndex][zone.id].push(itemId);
-      }
-      
-      loadQuestion(questionIndex);
-    };
-    
-    zoneDiv.ondragover = (e) => {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      zoneDiv.style.backgroundColor = '#252d3d';
-      zoneDiv.style.borderColor = '#2ecc71';
-    };
-    
-    zoneDiv.ondragleave = () => {
-      zoneDiv.style.backgroundColor = '#1a1f2e';
-      zoneDiv.style.borderColor = '#2d3748';
-    };
-    
-    zonesContainer.appendChild(zoneDiv);
-  });
-  
-  rightColumn.appendChild(zonesContainer);
-  wrapper.appendChild(rightColumn);
-  container.appendChild(wrapper);
-}
+function renderMatching(question, container, questionIndex) {
+  // Normalise both schemas into a unified rows/choices structure:
+  //   rows    — array of { key, label } — the left-column items
+  //   choices — array of strings        — the right-column dropdown options
+  //   correct — { key: correctValue }
+  //
+  // matching schema:  items[] (strings) + options[] (strings)
+  const choices = question.options || [];
+  const rows = question.items.map(item => ({
+    key: item,
+    label: item,
+    correct: (question.correctAnswer && question.correctAnswer[item]) || ''
+  }));
 
-// Helper function to create placed item chip with click-to-remove
-function addPlacedItemChip(item, itemId, zone, questionIndex, itemIndex, totalInZone, container) {
-  const chip = document.createElement('div');
-  chip.draggable = true;
-  chip.id = 'item-placed-' + itemId + '-' + zone.id;
-  chip.style.cssText = 'padding: 12px 16px; background: var(--green); color: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.2s; user-select: none; position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between;';
-  chip.textContent = item.label + ' ✕';
-  chip.title = 'Click to remove or drag back to Available Options';
-  
-  // Drag support - can drag back to left column
-  chip.ondragstart = (e) => {
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('itemId', itemId);
-    e.dataTransfer.setData('fromZone', zone.id);
-    chip.style.opacity = '0.6';
-  };
-  
-  chip.ondragend = () => {
-    chip.style.opacity = '1';
-  };
-  
-  // Hover effects
-  chip.onmouseenter = () => {
-    chip.style.transform = 'scale(1.02)';
-    chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
-    chip.style.background = '#157a3a';
-  };
-  
-  chip.onmouseleave = () => {
-    chip.style.transform = 'scale(1)';
-    chip.style.boxShadow = 'none';
-    chip.style.background = 'var(--green)';
-  };
-  
-  // Click to remove
-  chip.onclick = (e) => {
-    e.preventDefault();
-    if (!appState.answers[questionIndex][zone.id]) return;
-    
-    // Find and remove this item from zone
-    const index = appState.answers[questionIndex][zone.id].indexOf(itemId);
-    if (index > -1) {
-      appState.answers[questionIndex][zone.id].splice(index, 1);
-      loadQuestion(questionIndex);
-    }
-  };
-  
-  container.appendChild(chip);
+  // Saved answer: flat object { rowKey: chosenValue }
+  const savedAnswer = appState.answers[questionIndex] || {};
+  const isAnswered = appState.answers[questionIndex] !== undefined;
+  const isFlagged  = appState.flagged.has(questionIndex);
+  const isLocked   = isAnswered && !isFlagged;
+
+  rows.forEach(row => {
+    const rowEl = document.createElement('div');
+    rowEl.className = 'matching-row';
+
+    const labelEl = document.createElement('span');
+    labelEl.className = 'matching-label';
+    labelEl.textContent = row.label;
+
+    const select = document.createElement('select');
+    select.className = 'matching-select';
+    select.disabled = isLocked;
+
+    // Blank placeholder
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = '— Select an answer —';
+    placeholder.disabled = true;
+    placeholder.selected = !savedAnswer[row.key];
+    select.appendChild(placeholder);
+
+    choices.forEach(choice => {
+      const opt = document.createElement('option');
+      opt.value = choice;
+      opt.textContent = choice;
+      opt.selected = savedAnswer[row.key] === choice;
+      select.appendChild(opt);
+    });
+
+    select.onchange = () => {
+      if (isLocked) return;
+      const current = appState.answers[questionIndex] || {};
+      current[row.key] = select.value;
+      appState.answers[questionIndex] = current;
+
+      // Check if all rows have a selection — mark answered when complete
+      const allFilled = rows.every(r => current[r.key]);
+      if (allFilled && appState.autoFlagged.has(questionIndex)) {
+        appState.flagged.delete(questionIndex);
+        appState.autoFlagged.delete(questionIndex);
+      }
+      saveExamState();
+      updateNavigator();
+    };
+
+    rowEl.appendChild(labelEl);
+    rowEl.appendChild(select);
+    container.appendChild(rowEl);
+  });
 }
 
 // Navigation
@@ -1146,17 +972,6 @@ function prevQuestion() {
     // Auto-flag unanswered questions
     appState.flagged.add(appState.currentQuestionIndex);
     appState.autoFlagged.add(appState.currentQuestionIndex);
-  } else if (currentQuestion.type === 'drag_drop') {
-    // For drag-drop: only validate (lock) if answer is 100% correct
-    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
-    if (isCorrect) {
-      // Mark as validated so navigator shows green and question locks
-      appState.validatedDragDrops.add(appState.currentQuestionIndex);
-    } else {
-      // Incomplete/incorrect drag-drop - auto-flag for review
-      appState.flagged.add(appState.currentQuestionIndex);
-      appState.autoFlagged.add(appState.currentQuestionIndex);
-    }
   }
   
   saveExamState();
@@ -1174,17 +989,6 @@ function nextQuestion() {
     // Auto-flag unanswered questions
     appState.flagged.add(appState.currentQuestionIndex);
     appState.autoFlagged.add(appState.currentQuestionIndex);
-  } else if (currentQuestion.type === 'drag_drop') {
-    // For drag-drop: only validate (lock) if answer is 100% correct
-    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
-    if (isCorrect) {
-      // Mark as validated so navigator shows green and question locks
-      appState.validatedDragDrops.add(appState.currentQuestionIndex);
-    } else {
-      // Incomplete/incorrect drag-drop - auto-flag for review
-      appState.flagged.add(appState.currentQuestionIndex);
-      appState.autoFlagged.add(appState.currentQuestionIndex);
-    }
   }
   
   saveExamState();
@@ -1591,53 +1395,85 @@ function renderReviewPage() {
     }
 
     // ── Option rows ────────────────────────────────────────────────────────
-    // For each option determine its visual state:
-    //   • correct   → green  (it IS a correct answer)
-    //   • incorrect → red    (user picked it AND it is wrong)
-    //   • missed    → amber  (user did NOT pick it but it was correct — partial only)
-    //   • neutral   → default border (not picked, not correct)
     const optionsWrap = document.createElement('div');
 
-    (q.options || []).forEach(option => {
-      const isCorrectOption = correctAnswers.includes(option);
-      const userPicked      = userAnswers.includes(option);
+    if (q.type === 'matching') {
+      // Render matching rows: left = item label, right = user's pick vs correct
+      const userMap    = (answer && typeof answer === 'object') ? answer : {};
+      const correctMap = (q.correctAnswer && typeof q.correctAnswer === 'object') ? q.correctAnswer : {};
 
-      let optClass = 'review-option';
-      let markerSymbol = '';
+      q.items.forEach(itemKey => {
+        const userPick   = userMap[itemKey] || '';
+        const correctVal = correctMap[itemKey] || '';
+        const isRight    = userPick === correctVal;
 
-      if (isCorrectOption && userPicked) {
-        // User got this one right
-        optClass += ' review-correct';
-        markerSymbol = '✓';
-      } else if (!isCorrectOption && userPicked) {
-        // User picked a wrong option
-        optClass += ' review-incorrect';
-        markerSymbol = '✗';
-      } else if (isCorrectOption && !userPicked && isMulti) {
-        // User missed a required option (only relevant for partial multi)
-        optClass += ' review-missed';
-        markerSymbol = '!';
-      } else if (isCorrectOption && !userPicked && !isMulti) {
-        // Single-choice: highlight the right answer the user didn't pick
-        optClass += ' review-correct';
-        markerSymbol = '✓';
-      }
-      // else: neutral — plain border, no marker
+        const row = document.createElement('div');
+        row.className = 'matching-row ' + (isUnanswered ? '' : isRight ? 'review-correct' : 'review-incorrect');
 
-      const row = document.createElement('div');
-      row.className = optClass;
+        const labelEl = document.createElement('span');
+        labelEl.className = 'matching-label';
+        labelEl.textContent = itemKey;
 
-      const marker = document.createElement('span');
-      marker.className = 'review-option-marker';
-      marker.textContent = markerSymbol;
+        const pickedEl = document.createElement('span');
+        pickedEl.style.cssText = 'flex: 1; font-size: 13.5px;';
+        pickedEl.textContent = userPick || '—';
 
-      const text = document.createElement('span');
-      text.textContent = option;
+        const badge = document.createElement('span');
+        badge.className = 'matching-answer-badge ' + (isUnanswered ? '' : isRight ? 'correct' : 'incorrect');
+        if (!isUnanswered && !isRight) {
+          badge.textContent = '✓ ' + correctVal;
+        } else if (!isUnanswered && isRight) {
+          badge.textContent = '✓';
+        }
 
-      row.appendChild(marker);
-      row.appendChild(text);
-      optionsWrap.appendChild(row);
-    });
+        row.appendChild(labelEl);
+        row.appendChild(pickedEl);
+        if (badge.textContent) row.appendChild(badge);
+        optionsWrap.appendChild(row);
+      });
+    } else {
+      // mc / multi option rows
+      // For each option determine its visual state:
+      //   • correct   → green  (it IS a correct answer)
+      //   • incorrect → red    (user picked it AND it is wrong)
+      //   • missed    → amber  (user did NOT pick it but it was correct — partial only)
+      //   • neutral   → default border (not picked, not correct)
+      (q.options || []).forEach(option => {
+        const isCorrectOption = correctAnswers.includes(option);
+        const userPicked      = userAnswers.includes(option);
+
+        let optClass = 'review-option';
+        let markerSymbol = '';
+
+        if (isCorrectOption && userPicked) {
+          optClass += ' review-correct';
+          markerSymbol = '✓';
+        } else if (!isCorrectOption && userPicked) {
+          optClass += ' review-incorrect';
+          markerSymbol = '✗';
+        } else if (isCorrectOption && !userPicked && isMulti) {
+          optClass += ' review-missed';
+          markerSymbol = '!';
+        } else if (isCorrectOption && !userPicked && !isMulti) {
+          optClass += ' review-correct';
+          markerSymbol = '✓';
+        }
+
+        const row = document.createElement('div');
+        row.className = optClass;
+
+        const marker = document.createElement('span');
+        marker.className = 'review-option-marker';
+        marker.textContent = markerSymbol;
+
+        const text = document.createElement('span');
+        text.textContent = option;
+
+        row.appendChild(marker);
+        row.appendChild(text);
+        optionsWrap.appendChild(row);
+      });
+    }
 
     item.appendChild(optionsWrap);
     reviewList.appendChild(item);
@@ -1678,21 +1514,13 @@ function formatUserAnswer(question, answer) {
       return answer.join(', ') || '<em>No answer selected</em>';
     }
     return '<em>No answer selected</em>';
-  } else if (question.type === 'drag_drop') {
-    let answerText = '';
-    question.dropZones.forEach(zone => {
-      const placed = answer[zone.id] || [];
-      if (placed.length > 0) {
-        const items = placed.map(itemId => {
-          const item = question.items.find(i => i.id === itemId);
-          return item ? item.label : itemId;
-        }).join(', ');
-        answerText += '<div>' + zone.label + ': ' + items + '</div>';
-      } else {
-        answerText += '<div>' + zone.label + ': <em style="color: #999;">empty</em></div>';
-      }
-    });
-    return answerText || '<em>No items placed</em>';
+  } else if (question.type === 'matching') {
+    if (answer && typeof answer === 'object') {
+      return Object.entries(answer)
+        .map(([k, v]) => '<div>' + escapeHtml(k) + ': <strong>' + escapeHtml(v) + '</strong></div>')
+        .join('') || '<em>No answer selected</em>';
+    }
+    return '<em>No answer selected</em>';
   }
   return 'N/A';
 }
@@ -1717,16 +1545,12 @@ function formatCorrectAnswer(question) {
         return correctAnswers.join(', ');
       }
     }
-  } else if (question.type === 'drag_drop') {
-    let answerText = '';
-    question.dropZones.forEach(zone => {
-      const items = zone.correctItems.map(itemId => {
-        const item = question.items.find(i => i.id === itemId);
-        return item ? item.label : itemId;
-      }).join(', ');
-      answerText += '<div>' + zone.label + ': ' + items + '</div>';
-    });
-    return answerText;
+  } else if (question.type === 'matching') {
+    if (question.correctAnswer && typeof question.correctAnswer === 'object') {
+      return Object.entries(question.correctAnswer)
+        .map(([k, v]) => '<div>' + escapeHtml(k) + ': <strong>' + escapeHtml(v) + '</strong></div>')
+        .join('');
+    }
   }
   return 'N/A';
 }

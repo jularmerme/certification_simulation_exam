@@ -146,89 +146,29 @@
           "domain": "2.0 Networking",
           "objective": "2.1",
           "module": "6.0",
-          "type": "drag_drop",
+          "type": "matching",
           "difficulty": "medium",
           "stem": "Match each network protocol to its OSI layer.",
           "explanation": "Each protocol operates at a specific OSI layer.",
           "items": [
-            {
-              "id": "ip",
-              "label": "IP (Internet Protocol)"
-            },
-            {
-              "id": "ethernet",
-              "label": "Ethernet"
-            },
-            {
-              "id": "tcp",
-              "label": "TCP"
-            },
-            {
-              "id": "dns",
-              "label": "DNS"
-            }
+            "Layer 2",
+            "Layer 3",
+            "Layer 4",
+            "Layer 7"
           ],
-          "dropZones": [
-            {
-              "id": "layer2",
-              "label": "Layer 2",
-              "correctItems": [
-                "ethernet"
-              ]
-            },
-            {
-              "id": "layer3",
-              "label": "Layer 3",
-              "correctItems": [
-                "ip"
-              ]
-            },
-            {
-              "id": "layer4",
-              "label": "Layer 4",
-              "correctItems": [
-                "tcp"
-              ]
-            },
-            {
-              "id": "layer7",
-              "label": "Layer 7",
-              "correctItems": [
-                "dns"
-              ]
-            }
-          ],
-          "correctAnswer": [
-            {
-              "id": "layer2",
-              "label": "Layer 2",
-              "correctItems": [
-                "ethernet"
-              ]
-            },
-            {
-              "id": "layer3",
-              "label": "Layer 3",
-              "correctItems": [
-                "ip"
-              ]
-            },
-            {
-              "id": "layer4",
-              "label": "Layer 4",
-              "correctItems": [
-                "tcp"
-              ]
-            },
-            {
-              "id": "layer7",
-              "label": "Layer 7",
-              "correctItems": [
-                "dns"
-              ]
-            }
-          ],
-          "origin": "original"
+          "correctAnswer": {
+            "Layer 2": "Ethernet",
+            "Layer 3": "IP (Internet Protocol)",
+            "Layer 4": "TCP",
+            "Layer 7": "DNS"
+          },
+          "origin": "original",
+          "options": [
+            "IP (Internet Protocol)",
+            "Ethernet",
+            "TCP",
+            "DNS"
+          ]
         },
         {
           "id": "1201-006",
@@ -319,53 +259,23 @@
           "domain": "3.0 Hardware",
           "objective": "3.5",
           "module": "2.0",
-          "type": "drag_drop",
+          "type": "matching",
           "difficulty": "medium",
           "stem": "Match each CPU socket type to its characteristic.",
           "explanation": "LGA has pins on the socket; PGA has pins on the CPU.",
           "items": [
-            {
-              "id": "lga",
-              "label": "LGA (Land Grid Array)"
-            },
-            {
-              "id": "pga",
-              "label": "PGA (Pin Grid Array)"
-            }
+            "Pins on motherboard socket",
+            "Pins on CPU"
           ],
-          "dropZones": [
-            {
-              "id": "socket_pins",
-              "label": "Pins on motherboard socket",
-              "correctItems": [
-                "lga"
-              ]
-            },
-            {
-              "id": "cpu_pins",
-              "label": "Pins on CPU",
-              "correctItems": [
-                "pga"
-              ]
-            }
-          ],
-          "correctAnswer": [
-            {
-              "id": "socket_pins",
-              "label": "Pins on motherboard socket",
-              "correctItems": [
-                "lga"
-              ]
-            },
-            {
-              "id": "cpu_pins",
-              "label": "Pins on CPU",
-              "correctItems": [
-                "pga"
-              ]
-            }
-          ],
-          "origin": "original"
+          "correctAnswer": {
+            "Pins on motherboard socket": "LGA (Land Grid Array)",
+            "Pins on CPU": "PGA (Pin Grid Array)"
+          },
+          "origin": "original",
+          "options": [
+            "LGA (Land Grid Array)",
+            "PGA (Pin Grid Array)"
+          ]
         },
         {
           "id": "1201-011",
