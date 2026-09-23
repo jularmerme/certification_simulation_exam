@@ -550,7 +550,15 @@ function shuffleArray(array) {
 // Randomize options within a question
 function randomizeQuestionOptions(question) {
   const q = JSON.parse(JSON.stringify(question)); // Deep copy to avoid modifying original
-  
+
+  // Detect True/False questions and enforce True-first order — never shuffle them
+  const isTrueFalse = q.options && q.options.length === 2 &&
+    q.options.every(o => o === 'True' || o === 'False');
+  if (isTrueFalse) {
+    q.options = ['True', 'False'];
+    return q;
+  }
+
   if (q.type === 'mc') {
     // For multiple choice: shuffle options and track new correct answer index
     const correctAnswerText = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
@@ -1496,64 +1504,129 @@ function renderReviewPage() {
     const answer = appState.answers[idx];
     const result = checkAnswerCorrect(q, answer);
     const isUnanswered = answer === undefined;
-    
-    // Determine score category for border color
-    let borderColor = 'var(--muted)';  // Gray for unanswered
-    let scoreLabel = 'Unanswered';
-    
+
+    // Resolve correct answers as an array of text strings
+    const correctAnswers = Array.isArray(q.correctAnswer) ? q.correctAnswer :
+      (typeof q.correctAnswer === 'string' ? [q.correctAnswer] : []);
+
+    // Resolve user answers as an array of text strings
+    let userAnswers = [];
     if (!isUnanswered) {
-      if (typeof result === 'number') {
-        if (result === 100) {
-          borderColor = 'var(--green)';
-          scoreLabel = '100% Correct';
-        } else if (result === 50) {
-          borderColor = 'var(--amber)';
-          scoreLabel = '50% Partial';
-        } else {
-          borderColor = 'var(--red)';
-          scoreLabel = '0% Incorrect';
-        }
-      } else if (result === true) {
-        borderColor = 'var(--green)';
-        scoreLabel = '100% Correct';
-      } else {
-        borderColor = 'var(--red)';
-        scoreLabel = '0% Incorrect';
+      if (Array.isArray(answer)) {
+        userAnswers = answer;
+      } else if (typeof answer === 'string') {
+        userAnswers = [answer];
       }
     }
-    
+
+    // Determine card-level score label and accent color
+    let accentColor = 'var(--muted)';
+    let scoreLabel = 'Unanswered';
+    if (!isUnanswered) {
+      if (typeof result === 'number') {
+        if (result === 100)      { accentColor = 'var(--green)'; scoreLabel = '100% Correct'; }
+        else if (result === 50)  { accentColor = 'var(--amber)'; scoreLabel = '50% Partial';  }
+        else                     { accentColor = 'var(--red)';   scoreLabel = '0% Incorrect'; }
+      } else if (result === true) {
+        accentColor = 'var(--green)'; scoreLabel = '100% Correct';
+      } else {
+        accentColor = 'var(--red)'; scoreLabel = '0% Incorrect';
+      }
+    }
+
+    // ── Question card ──────────────────────────────────────────────────────
     const item = document.createElement('div');
-    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + borderColor + '; border-radius: 8px; padding: 16px; margin-bottom: 12px;';
-    
+    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + accentColor + '; border-radius: 8px 8px 0 0; padding: 16px 18px 14px; margin-bottom: 0;';
+
+    // Header: Q number • domain + score label
     const header = document.createElement('div');
-    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 8px; display: flex; justify-content: space-between;';
-    header.innerHTML = '<span>Q' + (idx + 1) + ' • ' + q.domain + '</span><span style="font-weight: 600; color: ' + borderColor + ';">' + scoreLabel + '</span>';
-    
+    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;';
+    header.innerHTML = '<span>Q' + (idx + 1) + ' &nbsp;·&nbsp; ' + escapeHtml(q.domain) + '</span>' +
+      '<span style="font-weight: 600; color: ' + accentColor + ';">' + scoreLabel + '</span>';
+
+    // Question stem
     const stem = document.createElement('div');
-    stem.style.cssText = 'font-weight: 600; margin-bottom: 10px; font-size: 14px;';
+    stem.style.cssText = 'font-weight: 600; font-size: 14.5px; line-height: 1.5; margin-bottom: 14px;';
     stem.textContent = q.stem;
-    
-    // User answer display
-    const answerDiv = document.createElement('div');
-    answerDiv.className = 'review-item-answer';
-    answerDiv.innerHTML = '<strong>Your Answer:</strong> ' + formatUserAnswer(q, answer);
-    
-    // Correct answer display
-    const correctDiv = document.createElement('div');
-    correctDiv.className = 'review-item-answer';
-    correctDiv.innerHTML = '<strong>Correct Answer:</strong> ' + formatCorrectAnswer(q);
-    
-    // Explanation
-    const explanation = document.createElement('div');
-    explanation.style.cssText = 'font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px;';
-    explanation.innerHTML = '<strong>Explanation:</strong> ' + q.explanation;
-    
-    item.appendChild(header);
-    item.appendChild(stem);
-    item.appendChild(answerDiv);
-    item.appendChild(correctDiv);
-    item.appendChild(explanation);
+
+    // Multi-select hint
+    const isMulti = q.type === 'multi' ||
+      (!q.type && Array.isArray(q.correctAnswer) && q.correctAnswer.length > 1);
+    if (isMulti) {
+      const hint = document.createElement('div');
+      hint.style.cssText = 'font-size: 12px; font-style: italic; color: var(--muted); margin-bottom: 10px;';
+      hint.textContent = 'Select all that apply';
+      item.appendChild(header);
+      item.appendChild(stem);
+      item.appendChild(hint);
+    } else {
+      item.appendChild(header);
+      item.appendChild(stem);
+    }
+
+    // ── Option rows ────────────────────────────────────────────────────────
+    // For each option determine its visual state:
+    //   • correct   → green  (it IS a correct answer)
+    //   • incorrect → red    (user picked it AND it is wrong)
+    //   • missed    → amber  (user did NOT pick it but it was correct — partial only)
+    //   • neutral   → default border (not picked, not correct)
+    const optionsWrap = document.createElement('div');
+
+    (q.options || []).forEach(option => {
+      const isCorrectOption = correctAnswers.includes(option);
+      const userPicked      = userAnswers.includes(option);
+
+      let optClass = 'review-option';
+      let markerSymbol = '';
+
+      if (isCorrectOption && userPicked) {
+        // User got this one right
+        optClass += ' review-correct';
+        markerSymbol = '✓';
+      } else if (!isCorrectOption && userPicked) {
+        // User picked a wrong option
+        optClass += ' review-incorrect';
+        markerSymbol = '✗';
+      } else if (isCorrectOption && !userPicked && isMulti) {
+        // User missed a required option (only relevant for partial multi)
+        optClass += ' review-missed';
+        markerSymbol = '!';
+      } else if (isCorrectOption && !userPicked && !isMulti) {
+        // Single-choice: highlight the right answer the user didn't pick
+        optClass += ' review-correct';
+        markerSymbol = '✓';
+      }
+      // else: neutral — plain border, no marker
+
+      const row = document.createElement('div');
+      row.className = optClass;
+
+      const marker = document.createElement('span');
+      marker.className = 'review-option-marker';
+      marker.textContent = markerSymbol;
+
+      const text = document.createElement('span');
+      text.textContent = option;
+
+      row.appendChild(marker);
+      row.appendChild(text);
+      optionsWrap.appendChild(row);
+    });
+
+    item.appendChild(optionsWrap);
     reviewList.appendChild(item);
+
+    // ── Explanation block (separate container, outside card) ───────────────
+    if (q.explanation) {
+      const expBlock = document.createElement('div');
+      expBlock.className = 'review-explanation';
+      expBlock.innerHTML = '<strong>Explanation</strong>' + escapeHtml(q.explanation);
+      reviewList.appendChild(expBlock);
+    } else {
+      // Close-off the rounded bottom even without explanation
+      item.style.borderRadius = '8px';
+      item.style.marginBottom = '20px';
+    }
   }
   
   // Update pagination for filtered results
