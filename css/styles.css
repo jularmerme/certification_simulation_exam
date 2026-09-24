@@ -1298,3 +1298,501 @@ body.resuming-exam {
   50% { transform: scale(1.1); }
   100% { transform: scale(1); opacity: 1; }
 }
+
+/* ===========================================================================
+   PROGRESS DASHBOARD
+   =========================================================================== */
+
+/* ── Topbar progress button ─────────────────────────────────────────────── */
+.topbar-progress-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.topbar-progress-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Dashboard screen container ─────────────────────────────────────────── */
+#screenDashboard {
+  padding-bottom: 60px;
+}
+
+.db-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.db-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .db-title {
+  color: #a8d8ff;
+}
+
+/* ── A. Summary cards ───────────────────────────────────────────────────── */
+.db-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .db-summary-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .db-summary-grid { grid-template-columns: 1fr; }
+}
+
+.db-summary-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 18px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+              box-shadow 0.2s;
+}
+
+.db-summary-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.db-summary-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .db-summary-value {
+  color: #a8d8ff;
+}
+
+.db-summary-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Score colour overrides on summary values */
+.db-summary-value.db-score-green { color: var(--green); }
+.db-summary-value.db-score-amber { color: var(--amber); }
+.db-summary-value.db-score-red   { color: var(--red);   }
+
+/* ── B & C. Table wrapper ───────────────────────────────────────────────── */
+.db-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+/* Header */
+.db-th {
+  background: var(--navy);
+  color: #fff;
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+.db-th.sortable:hover {
+  background: var(--navy2);
+}
+
+.db-th.db-sort-asc,
+.db-th.db-sort-desc {
+  background: var(--navy2);
+}
+
+.db-sort-icon {
+  display: inline-block;
+  min-width: 12px;
+  margin-left: 4px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Body rows */
+.db-tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+
+.db-tr:last-child {
+  border-bottom: none;
+}
+
+.db-tr:hover {
+  background: var(--bg);
+}
+
+body.dark-theme .db-tr:hover {
+  background: rgba(127, 179, 255, 0.06);
+}
+
+.db-tr.db-tr-expanded {
+  background: var(--bg);
+}
+
+body.dark-theme .db-tr.db-tr-expanded {
+  background: rgba(127, 179, 255, 0.06);
+}
+
+.db-td {
+  padding: 10px 14px;
+  color: var(--text);
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.db-num {
+  text-align: right;
+}
+
+/* Per-category column colours */
+.db-correct   { color: var(--green); font-weight: 600; }
+.db-incorrect { color: var(--red);   font-weight: 600; }
+.db-skipped   { color: var(--muted); }
+.db-trend     { font-size: 16px; text-align: center; }
+
+/* Score badge */
+.db-score-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  min-width: 46px;
+  text-align: center;
+}
+
+.db-score-badge.db-score-green {
+  background: rgba(27, 122, 61, 0.12);
+  color: var(--green);
+}
+
+.db-score-badge.db-score-amber {
+  background: rgba(184, 121, 10, 0.12);
+  color: var(--amber);
+}
+
+.db-score-badge.db-score-red {
+  background: rgba(200, 16, 46, 0.1);
+  color: var(--red);
+}
+
+body.dark-theme .db-score-badge.db-score-green { background: rgba(46, 204, 113, 0.15); }
+body.dark-theme .db-score-badge.db-score-amber { background: rgba(243, 156, 18, 0.15); }
+body.dark-theme .db-score-badge.db-score-red   { background: rgba(255, 122, 138, 0.15); }
+
+/* ── Inline breakdown expansion ─────────────────────────────────────────── */
+.db-breakdown-row {
+  background: var(--bg);
+}
+
+body.dark-theme .db-breakdown-row {
+  background: rgba(0,0,0,0.15);
+}
+
+.db-breakdown-cell {
+  padding: 14px 20px 18px;
+  border-bottom: 2px solid var(--border);
+}
+
+.db-breakdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.db-breakdown-table th {
+  text-align: left;
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.db-breakdown-table td {
+  padding: 7px 12px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.db-breakdown-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Empty state message ────────────────────────────────────────────────── */
+.db-empty {
+  padding: 36px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+
+/* ===========================================================================
+   CLASSES EXTRACTED FROM INLINE STYLES
+   =========================================================================== */
+
+/* Intro section heading & subtitle */
+.section-title {
+  color: var(--navy);
+  font-size: 18px;
+  margin: 24px 0 12px 0;
+  transition: color 0.3s ease;
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Navigator legend swatches */
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.swatch-correct   { background: #d9ecdf; border: 1px solid #a9d3b6; }
+.swatch-partial   { background: #fdeecb; border: 1px solid #f0d9a6; }
+.swatch-incorrect { background: #fbe6e9; border: 1px solid #f0bec4; }
+.swatch-unanswered{ background: #f4f6f8; border: 1px solid #dde2e8; }
+
+body.dark-theme .swatch-correct    { background: #1e4d2b; border-color: #2e7d48; }
+body.dark-theme .swatch-partial    { background: #4d3c00; border-color: #8a6a00; }
+body.dark-theme .swatch-incorrect  { background: #4d1a1a; border-color: #8a2a2a; }
+body.dark-theme .swatch-unanswered { background: #2d3748; border-color: #4a5568; }
+
+/* Exam Completion Modal */
+.completion-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.completion-modal-overlay.hidden {
+  display: none;
+}
+
+.completion-modal-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+  transition: background-color 0.3s ease;
+}
+
+.completion-modal-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  animation: bounce 0.6s ease-out;
+  line-height: 1;
+}
+
+.completion-modal-title {
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.completion-modal-msg {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.btn-modal-cta {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-modal-cta:hover {
+  background: var(--navy2);
+  transform: translateY(-1px);
+}
+
+/* Lock indicator (was inline in app.js) */
+.lock-indicator {
+  background: #fbe6e9;
+  border-left: 4px solid var(--red);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--red);
+  font-weight: 600;
+}
+
+body.dark-theme .lock-indicator {
+  background: #3d1a1a;
+  color: var(--red);
+}
+
+/* Results screen — score label */
+.score-label {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b9c9e0;
+}
+
+/* Dashboard section headings */
+.db-section-heading {
+  margin: 28px 0 12px;
+}
+
+.db-section-heading--lg {
+  margin-top: 36px;
+}
+
+/* Dashboard clear-history row */
+.db-clear-row {
+  margin-top: 14px;
+  text-align: right;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.pagination-controls.hidden {
+  display: none;
+}
+
+/* Results back button */
+.btn-back-results {
+  margin-bottom: 16px;
+}
+
+/* Site footer */
+.site-footer {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Review list — extracted from app.js inline styles */
+.review-empty-msg {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+}
+
+.review-empty-text {
+  font-size: 14px;
+}
+
+.review-item-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--navy);   /* color overridden per-question via JS */
+  border-radius: 8px 8px 0 0;
+  padding: 16px 18px 14px;
+  margin-bottom: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.review-item-header {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.review-item-stem {
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.review-item-hint {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.review-match-picked {
+  flex: 1;
+  font-size: 13.5px;
+}
