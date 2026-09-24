@@ -29,6 +29,7 @@
 <div class="topbar">
   <div class="brand">A+ Exam Simulator &middot; <span id="topbarExamName">Select an exam</span></div>
   <div class="right">
+    <button class="topbar-progress-btn" id="btnProgress" onclick="showDashboard()" title="My Progress">📊 My Progress</button>
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light theme">☀️</button>
     <div class="timer hidden" id="timerDisplay">90:00</div>
   </div>
@@ -48,8 +49,8 @@
         <div class="intro-stat"><div class="label">Passing Score</div><div class="value" id="introPassScore">675-700/900</div></div>
       </div>
       
-      <h2 style="color: var(--navy); font-size: 18px; margin: 24px 0 12px 0;">Select Your Exam Version</h2>
-      <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">Choose which CompTIA A+ exam you want to practice. Progress is saved automatically for each exam.</p>
+      <h2 class="section-title">Select Your Exam Version</h2>
+      <p class="section-subtitle">Choose which CompTIA A+ exam you want to practice. Progress is saved automatically for each exam.</p>
       
       <div class="exam-selector">
         <!-- Card stat values are populated by populateIntroCards() once the
@@ -208,10 +209,10 @@
         <h3>Navigator</h3>
         <div class="nav-grid" id="navGrid"></div>
         <div class="legend">
-          <div><span style="background: #d9ecdf; border: 1px solid #a9d3b6;"></span>Correct (100%)</div>
-          <div><span style="background: #fdeecb; border: 1px solid #f0d9a6;"></span>Partial/Flagged</div>
-          <div><span style="background: #fbe6e9; border: 1px solid #f0d9a6;"></span>Incorrect</div>
-          <div><span style="background: #f4f6f8; border: 1px solid #dde2e8;"></span>Unanswered</div>
+          <div><span class="legend-swatch swatch-correct"></span>Correct (100%)</div>
+          <div><span class="legend-swatch swatch-partial"></span>Partial/Flagged</div>
+          <div><span class="legend-swatch swatch-incorrect"></span>Incorrect</div>
+          <div><span class="legend-swatch swatch-unanswered"></span>Unanswered</div>
         </div>
         <div class="submit-box">
           <button class="btn btn-save" onclick="saveAndExit()">Save & Exit</button>
@@ -222,21 +223,21 @@
   </div>
   
   <!-- Exam Completion Modal -->
-  <div id="completionModal" class="hidden" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;">
-    <div style="background: var(--card); border-radius: 16px; padding: 60px 40px; text-align: center; max-width: 500px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); animation: slideUp 0.3s ease-out; transition: background-color 0.3s ease;">
-      <div style="font-size: 80px; margin-bottom: 24px; animation: bounce 0.6s ease-out;">✓</div>
-      <h2 style="color: var(--green); font-size: 32px; margin-bottom: 12px; font-weight: 700; transition: color 0.3s ease;">Exam Completed!</h2>
-      <p style="color: var(--muted); font-size: 16px; margin-bottom: 32px; line-height: 1.6; transition: color 0.3s ease;">Your exam has been successfully submitted. Review your answers below to see where you excelled and where you can improve.</p>
-      <button onclick="closeCompletionModal()" style="background: var(--navy); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s;">View Results</button>
+  <div id="completionModal" class="hidden completion-modal-overlay">
+    <div class="completion-modal-card">
+      <div class="completion-modal-icon">✓</div>
+      <h2 class="completion-modal-title">Exam Completed!</h2>
+      <p class="completion-modal-msg">Your exam has been submitted. Review your answers below to see where you excelled and where you can improve.</p>
+      <button class="btn btn-modal-cta" onclick="closeCompletionModal()">View Results</button>
     </div>
   </div>
   
   <!-- RESULTS SCREEN -->
   <div id="screenResults" class="hidden">
-    <button class="btn" onclick="backToMenu()" style="margin-bottom: 16px;">&larr; Back to Start Page</button>
+    <button class="btn btn-back-results" onclick="backToMenu()">&larr; Back to Start Page</button>
     
     <div class="score-hero">
-      <div style="font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: #b9c9e0;">Your Score</div>
+      <div class="score-label">Your Score</div>
       <div class="big-score" id="scaledScore">--</div>
       <div class="scale-note">Scale: 100–900 &middot; Passing: <span id="passingScore">675</span></div>
       <div class="pass-fail" id="passFail"></div>
@@ -263,21 +264,93 @@
       </div>
     </div>
     
-    <div id="allAnsweredMessage" class="hidden" style="display: none !important;"></div>
+    <div id="allAnsweredMessage" class="hidden"></div>
     
     <h2 class="section-h">Review Your Answers</h2>
     <div id="reviewList"></div>
-    <div id="paginationControls" style="display: none; margin-top: 24px; text-align: center;"></div>
+    <div id="paginationControls" class="pagination-controls hidden"></div>
   </div>
-  
-</div>
+  <!-- DASHBOARD SCREEN -->
+  <div id="screenDashboard" class="hidden">
+    <div class="db-header">
+      <button class="btn" onclick="hideDashboard()">&larr; Back</button>
+      <h1 class="db-title">📊 My Progress</h1>
+    </div>
 
-<footer>
+    <!-- A. Summary cards -->
+    <div class="db-summary-grid" id="dbSummaryCards">
+      <div class="db-summary-card">
+        <div class="db-summary-value" id="dbTotalSessions">—</div>
+        <div class="db-summary-label">Total Sessions</div>
+      </div>
+      <div class="db-summary-card">
+        <div class="db-summary-value" id="dbBestScore">—</div>
+        <div class="db-summary-label">Best Score</div>
+      </div>
+      <div class="db-summary-card">
+        <div class="db-summary-value" id="dbLatestScore">—</div>
+        <div class="db-summary-label">Latest Score</div>
+      </div>
+      <div class="db-summary-card">
+        <div class="db-summary-value" id="dbAvgScore">—</div>
+        <div class="db-summary-label">Avg Score (last 5)</div>
+      </div>
+    </div>
+
+    <!-- B. Results table -->
+    <h2 class="section-h db-section-heading">Session History</h2>
+    <div class="db-table-wrap">
+      <table class="db-table" id="dbHistoryTable">
+        <thead>
+          <tr>
+            <th data-col="date"       class="db-th sortable db-sort-desc">Date &amp; Time <span class="db-sort-icon">↓</span></th>
+            <th data-col="examLabel"  class="db-th sortable">Exam / Mode <span class="db-sort-icon"></span></th>
+            <th data-col="totalQuestions" class="db-th sortable">Questions <span class="db-sort-icon"></span></th>
+            <th data-col="correct"    class="db-th sortable">✅ Correct <span class="db-sort-icon"></span></th>
+            <th data-col="incorrect"  class="db-th sortable">❌ Incorrect <span class="db-sort-icon"></span></th>
+            <th data-col="incomplete" class="db-th sortable">⏭ Skipped <span class="db-sort-icon"></span></th>
+            <th data-col="score"      class="db-th sortable">Score % <span class="db-sort-icon"></span></th>
+            <th data-col="durationSeconds" class="db-th sortable">Duration <span class="db-sort-icon"></span></th>
+          </tr>
+        </thead>
+        <tbody id="dbHistoryBody"></tbody>
+      </table>
+      <div id="dbEmptyMsg" class="db-empty hidden">No sessions recorded yet. Complete an exam to see your progress here.</div>
+    </div>
+    <div class="db-clear-row">
+      <button class="btn btn-exit" id="dbClearBtn" onclick="confirmClearHistory()">🗑 Clear History</button>
+    </div>
+
+    <!-- C. Domain weakness tracker -->
+    <h2 class="section-h db-section-heading db-section-heading--lg">Domain Weakness Tracker</h2>
+    <div class="db-table-wrap">
+      <table class="db-table" id="dbWeaknessTable">
+        <thead>
+          <tr>
+            <th class="db-th">Domain</th>
+            <th class="db-th">Total Answered</th>
+            <th class="db-th">Avg Score %</th>
+            <th class="db-th">Trend</th>
+            <th class="db-th">Focus?</th>
+          </tr>
+        </thead>
+        <tbody id="dbWeaknessBody"></tbody>
+      </table>
+      <div id="dbWeaknessEmptyMsg" class="db-empty hidden">Complete at least one exam to see domain breakdowns.</div>
+    </div>
+  </div>
+
+
+</div><!-- /.container -->
+
+<footer class="site-footer">
   © <span id="year"></span> CompTIA A+ Practice Exam Simulator | Designed and created by Julian Mercado
 </footer>
 
 <script src="js/scoring.js"></script>
 <script src="js/app.js"></script>
+<script src="js/results.js"></script>
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>

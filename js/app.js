@@ -295,7 +295,7 @@ function populateIntroCards() {
 
 // Screen visibility helper: show exactly one of the top-level screens.
 function showScreen(id) {
-  ['screenIntro', 'screenModePicker', 'screenExam', 'screenResults'].forEach(s => {
+  ['screenIntro', 'screenModePicker', 'screenExam', 'screenResults', 'screenDashboard'].forEach(s => {
     const el = document.getElementById(s);
     if (el) el.classList.toggle('hidden', s !== id);
   });
@@ -733,7 +733,7 @@ function loadQuestion(index) {
   if (isLocked) {
     const lockIndicator = document.createElement('div');
     lockIndicator.setAttribute('data-lock-indicator', 'true');
-    lockIndicator.style.cssText = 'background: #fbe6e9; border-left: 4px solid var(--red); padding: 10px 14px; margin-bottom: 14px; border-radius: 4px; font-size: 13px; color: var(--red); font-weight: 600;';
+    lockIndicator.className = 'lock-indicator';
     lockIndicator.textContent = '🔒 This question is locked. Only flagged questions can be revisited.';
     qStem.parentElement.insertBefore(lockIndicator, qStem);
   }
@@ -1122,6 +1122,11 @@ function submitExam() {
     examCode: appState.examCode
   }));
   
+  // Persist result to progress history before showing modal
+  if (typeof saveResult === 'function') {
+    saveResult(examResults, appState, exam);
+  }
+
   // Show completion modal first
   showCompletionModal();
 }
@@ -1318,8 +1323,8 @@ function renderReviewPage() {
     };
     const msg = EMPTY_MESSAGES[reviewPaginationState.currentFilter] || 'No questions to display';
     const emptyMsg = document.createElement('div');
-    emptyMsg.style.cssText = 'text-align: center; padding: 40px 20px; color: var(--muted);';
-    emptyMsg.innerHTML = '<div style="font-size: 14px;">' + msg + '</div>';
+    emptyMsg.className = 'review-empty-msg';
+    emptyMsg.innerHTML = '<div class="review-empty-text">' + msg + '</div>';
     reviewList.appendChild(emptyMsg);
     return;
   }
@@ -1365,17 +1370,18 @@ function renderReviewPage() {
 
     // ── Question card ──────────────────────────────────────────────────────
     const item = document.createElement('div');
-    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + accentColor + '; border-radius: 8px 8px 0 0; padding: 16px 18px 14px; margin-bottom: 0;';
+    item.className = 'review-item-card';
+    item.style.borderLeftColor = accentColor;
 
     // Header: Q number • domain + score label
     const header = document.createElement('div');
-    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;';
+    header.className = 'review-item-header';
     header.innerHTML = '<span>Q' + (idx + 1) + ' &nbsp;·&nbsp; ' + escapeHtml(q.domain) + '</span>' +
       '<span style="font-weight: 600; color: ' + accentColor + ';">' + scoreLabel + '</span>';
 
     // Question stem
     const stem = document.createElement('div');
-    stem.style.cssText = 'font-weight: 600; font-size: 14.5px; line-height: 1.5; margin-bottom: 14px;';
+    stem.className = 'review-item-stem';
     stem.textContent = q.stem;
 
     // Multi-select hint
@@ -1383,7 +1389,7 @@ function renderReviewPage() {
       (!q.type && Array.isArray(q.correctAnswer) && q.correctAnswer.length > 1);
     if (isMulti) {
       const hint = document.createElement('div');
-      hint.style.cssText = 'font-size: 12px; font-style: italic; color: var(--muted); margin-bottom: 10px;';
+      hint.className = 'review-item-hint';
       hint.textContent = 'Select all that apply';
       item.appendChild(header);
       item.appendChild(stem);
@@ -1414,7 +1420,7 @@ function renderReviewPage() {
         labelEl.textContent = itemKey;
 
         const pickedEl = document.createElement('span');
-        pickedEl.style.cssText = 'flex: 1; font-size: 13.5px;';
+        pickedEl.className = 'review-match-picked';
         pickedEl.textContent = userPick || '—';
 
         const badge = document.createElement('span');
