@@ -192,7 +192,6 @@ function saveExamState() {
     answers: appState.answers,
     flagged: Array.from(appState.flagged),
     autoFlagged: Array.from(appState.autoFlagged),
-    validatedDragDrops: Array.from(appState.validatedDragDrops),
     timeRemaining: appState.timeRemaining,
     examStartTime: appState.examStartTime,
     // P5 mode state — required so resume restores the correct mode/feedback/filter

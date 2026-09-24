@@ -683,6 +683,24 @@ body.dark-theme .option.selected {
 .option input {
   margin-top: 3px;
   cursor: pointer;
+  accent-color: var(--navy2);
+  flex-shrink: 0;
+}
+
+body.dark-theme .option input {
+  accent-color: #7fb3ff;
+}
+
+.option.selected {
+  border-color: var(--navy2);
+  background: #eef4fc;
+  transition: all 0.1s;
+}
+
+body.dark-theme .option.selected {
+  background: rgba(127, 179, 255, 0.12);
+  border-color: #7fb3ff;
+  border-left-width: 3px;
 }
 
 .option .opt-text {
@@ -692,8 +710,7 @@ body.dark-theme .option.selected {
 
 .nav-buttons {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: space-between;  gap: 12px;
   margin-top: 24px;
 }
 
