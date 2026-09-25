@@ -93,6 +93,35 @@ window.addEventListener('DOMContentLoaded', async () => {
       }))
     };
     
+    // Load Others (reference tables) quiz
+    try {
+      const othersResponse = await fetch('exam_assets/others_quiz.json');
+      if (!othersResponse.ok) throw new Error('HTTP ' + othersResponse.status);
+      const othersData = await othersResponse.json();
+      if (!othersData || !othersData.othersQuiz || !Array.isArray(othersData.othersQuiz.questions)) {
+        throw new Error('Unexpected format in others_quiz.json');
+      }
+      window.questionBank.exams['others'] = {
+        name: 'Reference Tables',
+        code: 'Reference',
+        questions: 9,
+        timeLimit: 20,
+        minScore: 0,
+        maxScore: 100,
+        passingScore: 80,
+        questionBank: othersData.othersQuiz.questions
+      };
+    } catch (othersErr) {
+      console.error('Failed to load others_quiz.json:', othersErr);
+      // Non-fatal: Core 1/2 and Acronyms still work; Others card will be disabled.
+      const othCard = document.getElementById('cardOthers');
+      if (othCard) {
+        othCard.style.opacity = '0.4';
+        othCard.style.pointerEvents = 'none';
+        othCard.title = 'Reference Tables failed to load — check others_quiz.json';
+      }
+    }
+
     // Fill in the intro cards now that every exam's bank size is known
     populateIntroCards();
     
@@ -251,14 +280,16 @@ function formatPassScore(exam) {
 const EXAM_BUTTON_LABELS = {
   '220-1201': 'Begin Core 1 Exam',
   '220-1202': 'Begin Core 2 Exam',
-  'acronyms': 'Begin Acronyms Quiz'
+  'acronyms': 'Begin Acronyms Quiz',
+  'others':   'Begin Reference Tables'
 };
 
 /** Maps each intro card's element-id prefix to its exam code. */
 const INTRO_CARDS = [
   { prefix: 'c1', code: '220-1201' },
   { prefix: 'c2', code: '220-1202' },
-  { prefix: 'acr', code: 'acronyms' }
+  { prefix: 'acr', code: 'acronyms' },
+  { prefix: 'oth', code: 'others' }
 ];
 
 function setElementText(id, value) {
@@ -307,6 +338,11 @@ function selectExam(examCode) {
   document.getElementById('card1201').classList.toggle('selected', examCode === '220-1201');
   document.getElementById('card1202').classList.toggle('selected', examCode === '220-1202');
   document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
+  document.getElementById('cardOthers').classList.toggle('selected', examCode === 'others');
+
+  // Others has no meaningful modes — skip the picker and start immediately.
+  if (examCode === 'others') { startOthersExam(); return; }
+
   openModePicker();
 }
 
@@ -339,6 +375,12 @@ function openModePicker() {
     hasDomains ? Object.keys(exam.domainWeights).length + ' domains' : 'Not available for this exam');
   setModeCardEnabled('modeModule', hasModules,
     hasModules ? Object.keys(exam.modules).length + ' modules' : 'Not available for this exam');
+
+  // Others exam: disable domain/module filters (9 reference-table questions, filtering N/A)
+  if (appState.examCode === 'others') {
+    setModeCardEnabled('modeDomain', false, 'Not available for this exam');
+    setModeCardEnabled('modeModule', false, 'Not available for this exam');
+  }
 
   showScreen('screenModePicker');
 }
@@ -462,6 +504,17 @@ function startPracticeExam() {
   appState.feedbackEnabled = true;
   appState.activeFilter = null;
   runExam(questions, count * 60);
+}
+
+// Others exam: all 9 reference-table questions, full configured time, feedback on.
+function startOthersExam() {
+  const exam = window.questionBank.exams['others'];
+  if (!exam) { alert('Reference Tables exam not loaded — check others_quiz.json'); return; }
+  const questions = selectUniqueQuestions(exam.questionBank, exam.questionBank.length);
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = null;
+  runExam(questions, examTimeLimit(exam) * 60);
 }
 
 // Simulation Exam: exam's configured count + timeLimit, feedback OFF.
@@ -625,6 +678,16 @@ function randomizeQuestionOptions(question) {
     q.correctAnswer = shuffled.filter(item => item.isCorrect).map(item => item.text);
   } 
   
+  // table_match — shuffle each column's option list once so the order stays
+  // consistent for the entire session (renderTableMatch won't re-shuffle).
+  else if (q.type === 'table_match') {
+    const shuffledOpts = {};
+    Object.keys(q.columnOptions || {}).forEach(col => {
+      shuffledOpts[col] = shuffleArray([...q.columnOptions[col]]);
+    });
+    q.columnOptions = shuffledOpts;
+  }
+
   return q;
 }
 
@@ -658,7 +721,9 @@ function updateNavigator() {
     }
     
     // Check if question is answered or flagged
-    const isAnswered = appState.answers[idx] !== undefined;
+    const isAnswered = (appState.questions[idx] && appState.questions[idx].type === 'table_match')
+      ? isTableMatchComplete(appState.questions[idx], appState.answers[idx])
+      : appState.answers[idx] !== undefined;
     const isFlagged = appState.flagged.has(idx);
     const userAnswer = appState.answers[idx];
     
@@ -699,6 +764,17 @@ function updateNavigator() {
   });
 }
 
+// Helper: true when every cell in a table_match is filled
+function isTableMatchComplete(question, answer) {
+  if (!answer || !question.rows || !question.headers) return false;
+  var colHeaders = question.headers.slice(1);
+  return question.rows.every(function(row) {
+    return colHeaders.every(function(h) {
+      return answer[row.key] && answer[row.key][h];
+    });
+  });
+}
+
 // Load question
 function loadQuestion(index) {
   if (index < 0 || index >= appState.questions.length) return;
@@ -710,7 +786,10 @@ function loadQuestion(index) {
   appState.displayedQuestionIds.add(question.id);
   
   // Check if question is locked
-  const isAnswered = appState.answers[index] !== undefined;
+  // For table_match: only lock when ALL cells are filled (not on first cell)
+  const isAnswered = question.type === 'table_match'
+    ? isTableMatchComplete(question, appState.answers[index])
+    : appState.answers[index] !== undefined;
   const isFlagged = appState.flagged.has(index);
   const isLocked = isAnswered && !isFlagged;
   
@@ -751,6 +830,8 @@ function loadQuestion(index) {
     renderMultipleChoice(question, optionsContainer, index);
   } else if (question.type === 'matching') {
     renderMatching(question, optionsContainer, index);
+  } else if (question.type === 'table_match') {
+    renderTableMatch(question, optionsContainer, index);
   }
   
   // Update buttons
@@ -953,7 +1034,7 @@ function renderMatching(question, container, questionIndex) {
         appState.autoFlagged.delete(questionIndex);
       }
       saveExamState();
-      updateNavigator();
+      // Don't call updateNavigator() — wait for Next button click, same as mc/multi.
     };
 
     rowEl.appendChild(labelEl);
@@ -961,6 +1042,104 @@ function renderMatching(question, container, questionIndex) {
     container.appendChild(rowEl);
   });
 }
+
+// Render a table-match question — multi-column matching table
+function renderTableMatch(question, container, questionIndex) {
+  const headers    = question.headers || [];
+  const colHeaders = headers.slice(1);
+  const rows       = question.rows || [];
+  const colOpts    = question.columnOptions || {};
+
+  const savedAnswer = appState.answers[questionIndex] || {};
+  const isAnswered  = isTableMatchComplete(question, appState.answers[questionIndex]);
+  const isFlagged   = appState.flagged.has(questionIndex);
+  const isLocked    = isAnswered && !isFlagged;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'table-match-wrapper';
+
+  const table = document.createElement('table');
+  table.className = 'table-match';
+
+  // Header row
+  const thead = document.createElement('thead');
+  const hRow  = document.createElement('tr');
+  headers.forEach(h => {
+    const th = document.createElement('th');
+    th.className = 'table-match-th';
+    th.textContent = h;
+    hRow.appendChild(th);
+  });
+  thead.appendChild(hRow);
+  table.appendChild(thead);
+
+  // Body rows
+  const tbody = document.createElement('tbody');
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.className = 'table-match-row';
+
+    // Fixed key cell
+    const keyTd = document.createElement('td');
+    keyTd.className = 'table-match-key';
+    keyTd.textContent = row.key;
+    tr.appendChild(keyTd);
+
+    // Dropdown cell for each non-key column
+    colHeaders.forEach(colHeader => {
+      const td = document.createElement('td');
+      td.className = 'table-match-cell';
+
+      const select = document.createElement('select');
+      select.className = 'matching-select table-match-select';
+      select.disabled = isLocked;
+
+      // Placeholder
+      const ph = document.createElement('option');
+      ph.value = '';
+      ph.textContent = '— Select —';
+      ph.disabled = true;
+      const savedCell = (savedAnswer[row.key] || {})[colHeader];
+      ph.selected = !savedCell;
+      select.appendChild(ph);
+
+      // Shuffled options
+      const opts = colOpts[colHeader] || [];
+      opts.forEach(opt => {
+        const o = document.createElement('option');
+        o.value = opt;
+        o.textContent = opt;
+        o.selected = savedCell === opt;
+        select.appendChild(o);
+      });
+
+      select.onchange = () => {
+        if (isLocked) return;
+        const current = appState.answers[questionIndex] || {};
+        if (!current[row.key]) current[row.key] = {};
+        current[row.key][colHeader] = select.value;
+        appState.answers[questionIndex] = current;
+
+        // Clear auto-flag if all cells are now filled
+        if (isTableMatchComplete(question, current) && appState.autoFlagged.has(questionIndex)) {
+          appState.flagged.delete(questionIndex);
+          appState.autoFlagged.delete(questionIndex);
+        }
+        saveExamState();
+        // Don't call updateNavigator() — wait for Next button click, same as mc/multi.
+      };
+
+      td.appendChild(select);
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+
+  table.appendChild(tbody);
+  wrapper.appendChild(table);
+  container.appendChild(wrapper);
+}
+
 
 // Navigation
 function prevQuestion() {
@@ -1122,6 +1301,10 @@ function submitExam() {
     examCode: appState.examCode
   }));
   
+  // Clear the in-progress exam state so a page reload after submission
+  // never restores this session as an unfinished exam.
+  localStorage.removeItem('aplus_exam_state');
+
   // Persist result to progress history before showing modal
   if (typeof saveResult === 'function') {
     saveResult(examResults, appState, exam);
@@ -1402,7 +1585,62 @@ function renderReviewPage() {
     // ── Option rows ────────────────────────────────────────────────────────
     const optionsWrap = document.createElement('div');
 
-    if (q.type === 'matching') {
+    if (q.type === 'table_match') {
+      // Render table_match as a comparison table: key col fixed, other cols show user vs correct
+      const userMap    = (answer && typeof answer === 'object') ? answer : {};
+      const correctMap = (q.correctAnswer && typeof q.correctAnswer === 'object') ? q.correctAnswer : {};
+      const colHeaders = (q.headers || []).slice(1);
+
+      const tbl = document.createElement('table');
+      tbl.className = 'table-match-review-table';
+
+      // Header row
+      const tHead = document.createElement('tr');
+      [(q.headers || [])[0] || 'Item'].concat(colHeaders).forEach(h => {
+        const th = document.createElement('th');
+        th.textContent = h;
+        tHead.appendChild(th);
+      });
+      tbl.appendChild(tHead);
+
+      (q.rows || []).forEach(row => {
+        const tr = document.createElement('tr');
+
+        const keyTd = document.createElement('td');
+        keyTd.className = 'tmr-key';
+        keyTd.textContent = row.key;
+        tr.appendChild(keyTd);
+
+        colHeaders.forEach(colH => {
+          const correctVal = (correctMap[row.key] || {})[colH] || '';
+          const userVal    = (userMap[row.key]    || {})[colH] || '';
+          const isRight    = !isUnanswered && userVal === correctVal;
+          const isEmpty    = !userVal;
+
+          const td = document.createElement('td');
+          if (!isUnanswered && !isEmpty) {
+            td.className = isRight ? 'tmr-correct' : 'tmr-wrong';
+          }
+
+          if (isUnanswered || isEmpty) {
+            td.innerHTML = '<span style="color:var(--muted)">—</span>';
+          } else if (isRight) {
+            td.textContent = userVal + ' ✓';
+          } else {
+            td.innerHTML = '<span style="text-decoration:line-through;opacity:0.6">' + escapeHtml(userVal) + '</span>'
+              + ' <span style="color:var(--green)">→ ' + escapeHtml(correctVal) + '</span>';
+          }
+          tr.appendChild(td);
+        });
+        tbl.appendChild(tr);
+      });
+
+      const wrap = document.createElement('div');
+      wrap.className = 'table-match-review-wrap';
+      wrap.appendChild(tbl);
+      optionsWrap.appendChild(wrap);
+
+    } else if (q.type === 'matching') {
       // Render matching rows: left = item label, right = user's pick vs correct
       const userMap    = (answer && typeof answer === 'object') ? answer : {};
       const correctMap = (q.correctAnswer && typeof q.correctAnswer === 'object') ? q.correctAnswer : {};
@@ -1526,6 +1764,16 @@ function formatUserAnswer(question, answer) {
         .join('') || '<em>No answer selected</em>';
     }
     return '<em>No answer selected</em>';
+  } else if (question.type === 'table_match') {
+    if (!answer || typeof answer !== 'object') return '<em>Not answered</em>';
+    const colHeaders = (question.headers || []).slice(1);
+    return (question.rows || []).map(row => {
+      const cells = colHeaders.map(h => {
+        const val = (answer[row.key] || {})[h] || '—';
+        return '<em>' + escapeHtml(h) + ':</em> ' + escapeHtml(val);
+      }).join(' &middot; ');
+      return '<div><strong>' + escapeHtml(row.key) + '</strong> &rarr; ' + cells + '</div>';
+    }).join('');
   }
   return 'N/A';
 }
@@ -1556,6 +1804,14 @@ function formatCorrectAnswer(question) {
         .map(([k, v]) => '<div>' + escapeHtml(k) + ': <strong>' + escapeHtml(v) + '</strong></div>')
         .join('');
     }
+  } else if (question.type === 'table_match') {
+    if (!question.correctAnswer || typeof question.correctAnswer !== 'object') return 'N/A';
+    const colHeaders = (question.headers || []).slice(1);
+    return (question.rows || []).map(row => {
+      const correct = question.correctAnswer[row.key] || {};
+      const cells = colHeaders.map(h => '<em>' + escapeHtml(h) + ':</em> <strong>' + escapeHtml(correct[h] || '—') + '</strong>').join(' &middot; ');
+      return '<div><strong>' + escapeHtml(row.key) + '</strong> &rarr; ' + cells + '</div>';
+    }).join('');
   }
   return 'N/A';
 }
