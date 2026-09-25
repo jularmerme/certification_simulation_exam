@@ -1,0 +1,1090 @@
+{
+  "othersQuiz": {
+    "questions": [
+      {
+        "id": "TBL-001",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the Ports & Protocols reference table by selecting the correct Protocol, TCP/UDP, and Purpose for each port number.",
+        "headers": [
+          "Port",
+          "Protocol",
+          "TCP/UDP",
+          "Purpose"
+        ],
+        "rows": [
+          {
+            "key": "20/21",
+            "cols": [
+              "FTP",
+              "TCP",
+              "File transfer"
+            ]
+          },
+          {
+            "key": "22",
+            "cols": [
+              "SSH / SFTP",
+              "TCP",
+              "Secure remote shell"
+            ]
+          },
+          {
+            "key": "23",
+            "cols": [
+              "Telnet",
+              "TCP",
+              "Insecure remote (avoid)"
+            ]
+          },
+          {
+            "key": "25",
+            "cols": [
+              "SMTP",
+              "TCP",
+              "Send email"
+            ]
+          },
+          {
+            "key": "53",
+            "cols": [
+              "DNS",
+              "TCP/UDP",
+              "Name to IP resolution"
+            ]
+          },
+          {
+            "key": "67/68",
+            "cols": [
+              "DHCP",
+              "UDP",
+              "Auto IP assignment"
+            ]
+          },
+          {
+            "key": "80",
+            "cols": [
+              "HTTP",
+              "TCP",
+              "Web (unencrypted)"
+            ]
+          },
+          {
+            "key": "110",
+            "cols": [
+              "POP3",
+              "TCP",
+              "Retrieve email (download)"
+            ]
+          },
+          {
+            "key": "137-139",
+            "cols": [
+              "NetBIOS/NetBT",
+              "TCP/UDP",
+              "Legacy Windows name/session"
+            ]
+          },
+          {
+            "key": "143",
+            "cols": [
+              "IMAP",
+              "TCP",
+              "Retrieve email (sync)"
+            ]
+          },
+          {
+            "key": "389",
+            "cols": [
+              "LDAP",
+              "TCP/UDP",
+              "Directory services"
+            ]
+          },
+          {
+            "key": "443",
+            "cols": [
+              "HTTPS",
+              "TCP",
+              "Web (encrypted/TLS)"
+            ]
+          },
+          {
+            "key": "445",
+            "cols": [
+              "SMB/CIFS",
+              "TCP",
+              "Windows file sharing"
+            ]
+          },
+          {
+            "key": "3389",
+            "cols": [
+              "RDP",
+              "TCP",
+              "Remote Desktop"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Protocol": [
+            "FTP",
+            "SSH / SFTP",
+            "Telnet",
+            "SMTP",
+            "DNS",
+            "DHCP",
+            "HTTP",
+            "POP3",
+            "NetBIOS/NetBT",
+            "IMAP",
+            "LDAP",
+            "HTTPS",
+            "SMB/CIFS",
+            "RDP"
+          ],
+          "TCP/UDP": [
+            "TCP",
+            "TCP/UDP",
+            "UDP"
+          ],
+          "Purpose": [
+            "File transfer",
+            "Secure remote shell",
+            "Insecure remote (avoid)",
+            "Send email",
+            "Name to IP resolution",
+            "Auto IP assignment",
+            "Web (unencrypted)",
+            "Retrieve email (download)",
+            "Legacy Windows name/session",
+            "Retrieve email (sync)",
+            "Directory services",
+            "Web (encrypted/TLS)",
+            "Windows file sharing",
+            "Remote Desktop"
+          ]
+        },
+        "correctAnswer": {
+          "20/21": {
+            "Protocol": "FTP",
+            "TCP/UDP": "TCP",
+            "Purpose": "File transfer"
+          },
+          "22": {
+            "Protocol": "SSH / SFTP",
+            "TCP/UDP": "TCP",
+            "Purpose": "Secure remote shell"
+          },
+          "23": {
+            "Protocol": "Telnet",
+            "TCP/UDP": "TCP",
+            "Purpose": "Insecure remote (avoid)"
+          },
+          "25": {
+            "Protocol": "SMTP",
+            "TCP/UDP": "TCP",
+            "Purpose": "Send email"
+          },
+          "53": {
+            "Protocol": "DNS",
+            "TCP/UDP": "TCP/UDP",
+            "Purpose": "Name to IP resolution"
+          },
+          "67/68": {
+            "Protocol": "DHCP",
+            "TCP/UDP": "UDP",
+            "Purpose": "Auto IP assignment"
+          },
+          "80": {
+            "Protocol": "HTTP",
+            "TCP/UDP": "TCP",
+            "Purpose": "Web (unencrypted)"
+          },
+          "110": {
+            "Protocol": "POP3",
+            "TCP/UDP": "TCP",
+            "Purpose": "Retrieve email (download)"
+          },
+          "137-139": {
+            "Protocol": "NetBIOS/NetBT",
+            "TCP/UDP": "TCP/UDP",
+            "Purpose": "Legacy Windows name/session"
+          },
+          "143": {
+            "Protocol": "IMAP",
+            "TCP/UDP": "TCP",
+            "Purpose": "Retrieve email (sync)"
+          },
+          "389": {
+            "Protocol": "LDAP",
+            "TCP/UDP": "TCP/UDP",
+            "Purpose": "Directory services"
+          },
+          "443": {
+            "Protocol": "HTTPS",
+            "TCP/UDP": "TCP",
+            "Purpose": "Web (encrypted/TLS)"
+          },
+          "445": {
+            "Protocol": "SMB/CIFS",
+            "TCP/UDP": "TCP",
+            "Purpose": "Windows file sharing"
+          },
+          "3389": {
+            "Protocol": "RDP",
+            "TCP/UDP": "TCP",
+            "Purpose": "Remote Desktop"
+          }
+        },
+        "explanation": "Ports 20/21=FTP, 22=SSH, 23=Telnet, 25=SMTP, 53=DNS, 67/68=DHCP, 80=HTTP, 110=POP3, 137-139=NetBIOS, 143=IMAP, 389=LDAP, 443=HTTPS, 445=SMB, 3389=RDP."
+      },
+      {
+        "id": "TBL-002",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the RAID Levels reference table by selecting the correct Name, Min Disks, Survives, and Key Fact for each RAID level.",
+        "headers": [
+          "RAID",
+          "Name",
+          "Min Disks",
+          "Survives",
+          "Key Fact"
+        ],
+        "rows": [
+          {
+            "key": "0",
+            "cols": [
+              "Striping",
+              "2",
+              "None",
+              "Fastest; 1 disk fails = ALL data lost"
+            ]
+          },
+          {
+            "key": "1",
+            "cols": [
+              "Mirroring",
+              "2",
+              "1 disk",
+              "Exact duplicate; 50% storage efficiency"
+            ]
+          },
+          {
+            "key": "5",
+            "cols": [
+              "Stripe + Parity",
+              "3",
+              "1 disk",
+              "Parity spread across all disks"
+            ]
+          },
+          {
+            "key": "6",
+            "cols": [
+              "Stripe + Double Parity",
+              "4",
+              "2 disks",
+              "Survives 2 simultaneous failures"
+            ]
+          },
+          {
+            "key": "10",
+            "cols": [
+              "Mirror + Stripe (1+0)",
+              "4",
+              "1 per pair",
+              "Best performance + redundancy"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Name": [
+            "Striping",
+            "Mirroring",
+            "Stripe + Parity",
+            "Stripe + Double Parity",
+            "Mirror + Stripe (1+0)"
+          ],
+          "Min Disks": [
+            "2",
+            "3",
+            "4"
+          ],
+          "Survives": [
+            "None",
+            "1 disk",
+            "2 disks",
+            "1 per pair"
+          ],
+          "Key Fact": [
+            "Fastest; 1 disk fails = ALL data lost",
+            "Exact duplicate; 50% storage efficiency",
+            "Parity spread across all disks",
+            "Survives 2 simultaneous failures",
+            "Best performance + redundancy"
+          ]
+        },
+        "correctAnswer": {
+          "0": {
+            "Name": "Striping",
+            "Min Disks": "2",
+            "Survives": "None",
+            "Key Fact": "Fastest; 1 disk fails = ALL data lost"
+          },
+          "1": {
+            "Name": "Mirroring",
+            "Min Disks": "2",
+            "Survives": "1 disk",
+            "Key Fact": "Exact duplicate; 50% storage efficiency"
+          },
+          "5": {
+            "Name": "Stripe + Parity",
+            "Min Disks": "3",
+            "Survives": "1 disk",
+            "Key Fact": "Parity spread across all disks"
+          },
+          "6": {
+            "Name": "Stripe + Double Parity",
+            "Min Disks": "4",
+            "Survives": "2 disks",
+            "Key Fact": "Survives 2 simultaneous failures"
+          },
+          "10": {
+            "Name": "Mirror + Stripe (1+0)",
+            "Min Disks": "4",
+            "Survives": "1 per pair",
+            "Key Fact": "Best performance + redundancy"
+          }
+        },
+        "explanation": "RAID 0=speed/no redundancy (2 disks). RAID 1=mirroring (2 disks). RAID 5=parity (3 disks). RAID 6=double parity (4 disks). RAID 10=mirror+stripe (4 disks, 1 per pair)."
+      },
+      {
+        "id": "TBL-003",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the 802.11 Wireless Standards reference table.",
+        "headers": [
+          "Standard",
+          "Wi-Fi Name",
+          "Band(s)",
+          "Max Speed",
+          "Notes"
+        ],
+        "rows": [
+          {
+            "key": "802.11a",
+            "cols": [
+              "—",
+              "5 GHz",
+              "54 Mbps",
+              "5 GHz only"
+            ]
+          },
+          {
+            "key": "802.11b",
+            "cols": [
+              "—",
+              "2.4 GHz",
+              "11 Mbps",
+              "Slowest, longest range"
+            ]
+          },
+          {
+            "key": "802.11g",
+            "cols": [
+              "—",
+              "2.4 GHz",
+              "54 Mbps",
+              "Improved b"
+            ]
+          },
+          {
+            "key": "802.11n",
+            "cols": [
+              "Wi-Fi 4",
+              "2.4 + 5 GHz",
+              "600 Mbps",
+              "MIMO antennas"
+            ]
+          },
+          {
+            "key": "802.11ac",
+            "cols": [
+              "Wi-Fi 5",
+              "5 GHz only",
+              "~3.5 Gbps",
+              "MU-MIMO"
+            ]
+          },
+          {
+            "key": "802.11ax",
+            "cols": [
+              "Wi-Fi 6/6E",
+              "2.4 + 5 + 6 GHz",
+              "~9.6 Gbps",
+              "OFDMA; 6E adds 6 GHz"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Wi-Fi Name": [
+            "—",
+            "Wi-Fi 4",
+            "Wi-Fi 5",
+            "Wi-Fi 6/6E"
+          ],
+          "Band(s)": [
+            "5 GHz",
+            "2.4 GHz",
+            "2.4 + 5 GHz",
+            "5 GHz only",
+            "2.4 + 5 + 6 GHz"
+          ],
+          "Max Speed": [
+            "54 Mbps",
+            "11 Mbps",
+            "600 Mbps",
+            "~3.5 Gbps",
+            "~9.6 Gbps"
+          ],
+          "Notes": [
+            "5 GHz only",
+            "Slowest, longest range",
+            "Improved b",
+            "MIMO antennas",
+            "MU-MIMO",
+            "OFDMA; 6E adds 6 GHz"
+          ]
+        },
+        "correctAnswer": {
+          "802.11a": {
+            "Wi-Fi Name": "—",
+            "Band(s)": "5 GHz",
+            "Max Speed": "54 Mbps",
+            "Notes": "5 GHz only"
+          },
+          "802.11b": {
+            "Wi-Fi Name": "—",
+            "Band(s)": "2.4 GHz",
+            "Max Speed": "11 Mbps",
+            "Notes": "Slowest, longest range"
+          },
+          "802.11g": {
+            "Wi-Fi Name": "—",
+            "Band(s)": "2.4 GHz",
+            "Max Speed": "54 Mbps",
+            "Notes": "Improved b"
+          },
+          "802.11n": {
+            "Wi-Fi Name": "Wi-Fi 4",
+            "Band(s)": "2.4 + 5 GHz",
+            "Max Speed": "600 Mbps",
+            "Notes": "MIMO antennas"
+          },
+          "802.11ac": {
+            "Wi-Fi Name": "Wi-Fi 5",
+            "Band(s)": "5 GHz only",
+            "Max Speed": "~3.5 Gbps",
+            "Notes": "MU-MIMO"
+          },
+          "802.11ax": {
+            "Wi-Fi Name": "Wi-Fi 6/6E",
+            "Band(s)": "2.4 + 5 + 6 GHz",
+            "Max Speed": "~9.6 Gbps",
+            "Notes": "OFDMA; 6E adds 6 GHz"
+          }
+        },
+        "explanation": "802.11a=5GHz/54Mbps. b=2.4GHz/11Mbps. g=2.4GHz/54Mbps. n(Wi-Fi 4)=dual-band/600Mbps. ac(Wi-Fi 5)=5GHz/3.5Gbps. ax(Wi-Fi 6/6E)=tri-band/9.6Gbps."
+      },
+      {
+        "id": "TBL-004",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the USB Versions reference table.",
+        "headers": [
+          "Version",
+          "Marketing Name",
+          "Max Speed",
+          "Notes"
+        ],
+        "rows": [
+          {
+            "key": "USB 2.0",
+            "cols": [
+              "Hi-Speed",
+              "480 Mbps",
+              "Black port; still very common"
+            ]
+          },
+          {
+            "key": "USB 3.0",
+            "cols": [
+              "USB 3.2 Gen 1",
+              "5 Gbps",
+              "Blue port; SuperSpeed"
+            ]
+          },
+          {
+            "key": "USB 3.1",
+            "cols": [
+              "USB 3.2 Gen 2",
+              "10 Gbps",
+              "Teal/red port on some boards"
+            ]
+          },
+          {
+            "key": "USB 3.2 Gen 2x2",
+            "cols": [
+              "—",
+              "20 Gbps",
+              "USB-C only"
+            ]
+          },
+          {
+            "key": "USB4 / Thunderbolt 3/4",
+            "cols": [
+              "—",
+              "40 Gbps",
+              "USB-C; daisy-chain capable"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Marketing Name": [
+            "Hi-Speed",
+            "USB 3.2 Gen 1",
+            "USB 3.2 Gen 2",
+            "—"
+          ],
+          "Max Speed": [
+            "480 Mbps",
+            "5 Gbps",
+            "10 Gbps",
+            "20 Gbps",
+            "40 Gbps"
+          ],
+          "Notes": [
+            "Black port; still very common",
+            "Blue port; SuperSpeed",
+            "Teal/red port on some boards",
+            "USB-C only",
+            "USB-C; daisy-chain capable"
+          ]
+        },
+        "correctAnswer": {
+          "USB 2.0": {
+            "Marketing Name": "Hi-Speed",
+            "Max Speed": "480 Mbps",
+            "Notes": "Black port; still very common"
+          },
+          "USB 3.0": {
+            "Marketing Name": "USB 3.2 Gen 1",
+            "Max Speed": "5 Gbps",
+            "Notes": "Blue port; SuperSpeed"
+          },
+          "USB 3.1": {
+            "Marketing Name": "USB 3.2 Gen 2",
+            "Max Speed": "10 Gbps",
+            "Notes": "Teal/red port on some boards"
+          },
+          "USB 3.2 Gen 2x2": {
+            "Marketing Name": "—",
+            "Max Speed": "20 Gbps",
+            "Notes": "USB-C only"
+          },
+          "USB4 / Thunderbolt 3/4": {
+            "Marketing Name": "—",
+            "Max Speed": "40 Gbps",
+            "Notes": "USB-C; daisy-chain capable"
+          }
+        },
+        "explanation": "USB 2.0=480Mbps black. USB 3.0=5Gbps blue. USB 3.1=10Gbps. USB 3.2 Gen 2x2=20Gbps USB-C. USB4/TB3/4=40Gbps USB-C."
+      },
+      {
+        "id": "TBL-005",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the SATA Versions reference table.",
+        "headers": [
+          "Version",
+          "Max Speed",
+          "Key Notes"
+        ],
+        "rows": [
+          {
+            "key": "SATA I",
+            "cols": [
+              "1.5 Gbps",
+              "Legacy"
+            ]
+          },
+          {
+            "key": "SATA II",
+            "cols": [
+              "3 Gbps",
+              "Common on older systems"
+            ]
+          },
+          {
+            "key": "SATA III",
+            "cols": [
+              "6 Gbps",
+              "Current standard; backward compatible"
+            ]
+          },
+          {
+            "key": "eSATA",
+            "cols": [
+              "6 Gbps",
+              "External; no power delivery over cable"
+            ]
+          },
+          {
+            "key": "M.2 SATA",
+            "cols": [
+              "~550 MB/s",
+              "M.2 slot running SATA (NOT NVMe)"
+            ]
+          },
+          {
+            "key": "M.2 NVMe (PCIe)",
+            "cols": [
+              "3,000-7,000 MB/s",
+              "M.2 slot running PCIe — dramatically faster"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Max Speed": [
+            "1.5 Gbps",
+            "3 Gbps",
+            "6 Gbps",
+            "~550 MB/s",
+            "3,000-7,000 MB/s"
+          ],
+          "Key Notes": [
+            "Legacy",
+            "Common on older systems",
+            "Current standard; backward compatible",
+            "External; no power delivery over cable",
+            "M.2 slot running SATA (NOT NVMe)",
+            "M.2 slot running PCIe — dramatically faster"
+          ]
+        },
+        "correctAnswer": {
+          "SATA I": {
+            "Max Speed": "1.5 Gbps",
+            "Key Notes": "Legacy"
+          },
+          "SATA II": {
+            "Max Speed": "3 Gbps",
+            "Key Notes": "Common on older systems"
+          },
+          "SATA III": {
+            "Max Speed": "6 Gbps",
+            "Key Notes": "Current standard; backward compatible"
+          },
+          "eSATA": {
+            "Max Speed": "6 Gbps",
+            "Key Notes": "External; no power delivery over cable"
+          },
+          "M.2 SATA": {
+            "Max Speed": "~550 MB/s",
+            "Key Notes": "M.2 slot running SATA (NOT NVMe)"
+          },
+          "M.2 NVMe (PCIe)": {
+            "Max Speed": "3,000-7,000 MB/s",
+            "Key Notes": "M.2 slot running PCIe — dramatically faster"
+          }
+        },
+        "explanation": "SATA I=1.5Gbps. SATA II=3Gbps. SATA III=6Gbps (current). eSATA=6Gbps external (no power). M.2 SATA=~550MB/s. M.2 NVMe=3,000-7,000MB/s via PCIe."
+      },
+      {
+        "id": "TBL-006",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the Laser Printer Imaging Process table — match each step to what happens and the common symptom or issue.",
+        "headers": [
+          "Step",
+          "What Happens",
+          "Common Symptom / Issue"
+        ],
+        "rows": [
+          {
+            "key": "1. Processing",
+            "cols": [
+              "RIP converts to bitmap",
+              "Garbled/wrong output"
+            ]
+          },
+          {
+            "key": "2. Charging",
+            "cols": [
+              "Drum coated with negative charge",
+              "—"
+            ]
+          },
+          {
+            "key": "3. Exposing",
+            "cols": [
+              "Laser writes image on drum",
+              "—"
+            ]
+          },
+          {
+            "key": "4. Developing",
+            "cols": [
+              "Toner adheres to exposed areas",
+              "Faded print = low toner"
+            ]
+          },
+          {
+            "key": "5. Transferring",
+            "cols": [
+              "Image moves to paper",
+              "Ghost/echo image = dirty transfer roller"
+            ]
+          },
+          {
+            "key": "6. Fusing",
+            "cols": [
+              "Heat bonds toner to paper",
+              "Smearing toner = failing fuser"
+            ]
+          },
+          {
+            "key": "7. Cleaning",
+            "cols": [
+              "Drum cleared for next page",
+              "Lines on page = dirty drum"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "What Happens": [
+            "RIP converts to bitmap",
+            "Drum coated with negative charge",
+            "Laser writes image on drum",
+            "Toner adheres to exposed areas",
+            "Image moves to paper",
+            "Heat bonds toner to paper",
+            "Drum cleared for next page"
+          ],
+          "Common Symptom / Issue": [
+            "Garbled/wrong output",
+            "—",
+            "Faded print = low toner",
+            "Ghost/echo image = dirty transfer roller",
+            "Smearing toner = failing fuser",
+            "Lines on page = dirty drum"
+          ]
+        },
+        "correctAnswer": {
+          "1. Processing": {
+            "What Happens": "RIP converts to bitmap",
+            "Common Symptom / Issue": "Garbled/wrong output"
+          },
+          "2. Charging": {
+            "What Happens": "Drum coated with negative charge",
+            "Common Symptom / Issue": "—"
+          },
+          "3. Exposing": {
+            "What Happens": "Laser writes image on drum",
+            "Common Symptom / Issue": "—"
+          },
+          "4. Developing": {
+            "What Happens": "Toner adheres to exposed areas",
+            "Common Symptom / Issue": "Faded print = low toner"
+          },
+          "5. Transferring": {
+            "What Happens": "Image moves to paper",
+            "Common Symptom / Issue": "Ghost/echo image = dirty transfer roller"
+          },
+          "6. Fusing": {
+            "What Happens": "Heat bonds toner to paper",
+            "Common Symptom / Issue": "Smearing toner = failing fuser"
+          },
+          "7. Cleaning": {
+            "What Happens": "Drum cleared for next page",
+            "Common Symptom / Issue": "Lines on page = dirty drum"
+          }
+        },
+        "explanation": "Mnemonic: 'Please Create Each Document Through Fusing Carefully'. Fusing failure = smearing. Ghost/echo = dirty transfer roller. Lines = dirty drum."
+      },
+      {
+        "id": "TBL-007",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the Storage At a Glance reference table.",
+        "headers": [
+          "Type",
+          "Interface",
+          "Speed",
+          "Notes"
+        ],
+        "rows": [
+          {
+            "key": "HDD",
+            "cols": [
+              "SATA III",
+              "Slowest",
+              "5400/7200 RPM; 2.5\" or 3.5\""
+            ]
+          },
+          {
+            "key": "SSD (SATA)",
+            "cols": [
+              "SATA III",
+              "~550 MB/s",
+              "2.5\" or M.2; no moving parts"
+            ]
+          },
+          {
+            "key": "NVMe SSD",
+            "cols": [
+              "PCIe (M.2)",
+              "3,000-7,000 MB/s",
+              "Fastest storage available"
+            ]
+          },
+          {
+            "key": "Optical (CD/DVD)",
+            "cols": [
+              "SATA",
+              "Slow",
+              "Legacy; still tested"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Interface": [
+            "SATA III",
+            "PCIe (M.2)",
+            "SATA"
+          ],
+          "Speed": [
+            "Slowest",
+            "~550 MB/s",
+            "3,000-7,000 MB/s",
+            "Slow"
+          ],
+          "Notes": [
+            "5400/7200 RPM; 2.5\" or 3.5\"",
+            "2.5\" or M.2; no moving parts",
+            "Fastest storage available",
+            "Legacy; still tested"
+          ]
+        },
+        "correctAnswer": {
+          "HDD": {
+            "Interface": "SATA III",
+            "Speed": "Slowest",
+            "Notes": "5400/7200 RPM; 2.5\" or 3.5\""
+          },
+          "SSD (SATA)": {
+            "Interface": "SATA III",
+            "Speed": "~550 MB/s",
+            "Notes": "2.5\" or M.2; no moving parts"
+          },
+          "NVMe SSD": {
+            "Interface": "PCIe (M.2)",
+            "Speed": "3,000-7,000 MB/s",
+            "Notes": "Fastest storage available"
+          },
+          "Optical (CD/DVD)": {
+            "Interface": "SATA",
+            "Speed": "Slow",
+            "Notes": "Legacy; still tested"
+          }
+        },
+        "explanation": "HDD=SATA/slowest. SSD SATA=~550MB/s. NVMe=3,000-7,000MB/s via PCIe M.2 (fastest). Optical=SATA/slow/legacy."
+      },
+      {
+        "id": "TBL-008",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the Cloud Service Models reference table.",
+        "headers": [
+          "Model",
+          "You Manage",
+          "Provider Manages",
+          "Example"
+        ],
+        "rows": [
+          {
+            "key": "IaaS",
+            "cols": [
+              "OS, apps, data",
+              "Hardware, network",
+              "AWS EC2"
+            ]
+          },
+          {
+            "key": "PaaS",
+            "cols": [
+              "App, data",
+              "OS, runtime, hardware",
+              "Heroku"
+            ]
+          },
+          {
+            "key": "SaaS",
+            "cols": [
+              "Data only",
+              "Everything else",
+              "Gmail / Office 365"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "You Manage": [
+            "OS, apps, data",
+            "App, data",
+            "Data only"
+          ],
+          "Provider Manages": [
+            "Hardware, network",
+            "OS, runtime, hardware",
+            "Everything else"
+          ],
+          "Example": [
+            "AWS EC2",
+            "Heroku",
+            "Gmail / Office 365"
+          ]
+        },
+        "correctAnswer": {
+          "IaaS": {
+            "You Manage": "OS, apps, data",
+            "Provider Manages": "Hardware, network",
+            "Example": "AWS EC2"
+          },
+          "PaaS": {
+            "You Manage": "App, data",
+            "Provider Manages": "OS, runtime, hardware",
+            "Example": "Heroku"
+          },
+          "SaaS": {
+            "You Manage": "Data only",
+            "Provider Manages": "Everything else",
+            "Example": "Gmail / Office 365"
+          }
+        },
+        "explanation": "IaaS=you manage OS+apps (EC2). PaaS=you manage app+data (Heroku). SaaS=data only (Gmail)."
+      },
+      {
+        "id": "TBL-009",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the IP Addressing reference table by matching each range to its type and notes.",
+        "headers": [
+          "Range",
+          "Type",
+          "Notes"
+        ],
+        "rows": [
+          {
+            "key": "10.0.0.0/8",
+            "cols": [
+              "Private",
+              "Class A — large enterprise networks"
+            ]
+          },
+          {
+            "key": "172.16.0.0–172.31.255.255",
+            "cols": [
+              "Private",
+              "Class B"
+            ]
+          },
+          {
+            "key": "192.168.0.0/16",
+            "cols": [
+              "Private",
+              "Class C — most common for SOHO"
+            ]
+          },
+          {
+            "key": "169.254.x.x",
+            "cols": [
+              "APIPA",
+              "Assigned when DHCP unreachable — no internet"
+            ]
+          },
+          {
+            "key": "127.0.0.1",
+            "cols": [
+              "Loopback",
+              "Self-test; never leaves the device"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Type": [
+            "Private",
+            "APIPA",
+            "Loopback"
+          ],
+          "Notes": [
+            "Class A — large enterprise networks",
+            "Class B",
+            "Class C — most common for SOHO",
+            "Assigned when DHCP unreachable — no internet",
+            "Self-test; never leaves the device"
+          ]
+        },
+        "correctAnswer": {
+          "10.0.0.0/8": {
+            "Type": "Private",
+            "Notes": "Class A — large enterprise networks"
+          },
+          "172.16.0.0–172.31.255.255": {
+            "Type": "Private",
+            "Notes": "Class B"
+          },
+          "192.168.0.0/16": {
+            "Type": "Private",
+            "Notes": "Class C — most common for SOHO"
+          },
+          "169.254.x.x": {
+            "Type": "APIPA",
+            "Notes": "Assigned when DHCP unreachable — no internet"
+          },
+          "127.0.0.1": {
+            "Type": "Loopback",
+            "Notes": "Self-test; never leaves the device"
+          }
+        },
+        "explanation": "Private: 10/8 (Class A), 172.16–31 (Class B), 192.168 (Class C/SOHO). 169.254.x.x=APIPA (no DHCP). 127.0.0.1=loopback."
+      }
+    ]
+  }
+}

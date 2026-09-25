@@ -18026,13 +18026,13 @@
           "stem": "Which of the following BEST describes the role of the Trusted Platform Module (TPM) in enhancing system security? Assessing whether the TPM is used to store",
           "explanation": "The TPM is designed to securely store cryptographic keys, which is crucial for protecting encrypted data and ensuring that sensitive information is not accessed by unauthorized users. While booting from USB devices can be useful for recovery, it is not related to the primary function of the TPM. The TPM is not involved in enabling or disabling boot options; its role is focused on security, particularly in storing cryptographic keys. The TPM does not play a role in supporting legacy BIOS mode. This option confuses the TPM's security functions with compatibility settings, which are unrelated to the TPM's purpose. The TPM is not involved in hardware management tasks such as controlling fan speed or temperature monitoring. This option misrepresents the TPM's role, which is centered around security and cryptographic functions, not hardware stability",
           "options": [
-            "cryptographic keys securely, preventing unauthorized access to encrypted data.",
-            "Evaluating if the TPM is enabled to allow booting from USB devices for \\ recovery purposes",
+            "Cryptographic keys securely, preventing unauthorized access to encrypted data.",
+            "Evaluating if the TPM is enabled to allow booting from USB devices for recovery purposes",
             "Verifying that the TPM is configured to support legacy BIOS mode for compatibility with older hardware.",
             "Checking if the TPM is used to control fan speed and temperature U monitoring for system stability."
           ],
           "correctAnswer": [
-            "cryptographic keys securely, preventing unauthorized access to encrypted data."
+            "Cryptographic keys securely, preventing unauthorized access to encrypted data."
           ],
           "origin": "CertMaster"
         },
@@ -18534,10 +18534,10 @@
           "stem": "Why are adapter cables important when integrating legacy devices with modern systems?",
           "explanation": "Adapter cables are crucial for integrating legacy devices with modern systems because they convert signals between different types of interfaces, allowing devices that would otherwise be incompatible to connect and communicate. Adapter cables do not increase data transfer rates. Their purpose is to enable connectivity between devices with different interfaces, not to enhance speed. Adapter cables do not affect the operational speed of devices. They only facilitate the connection between different interfaces. Adapter cables do not upgrade firmware. They are physical connectors that enable communication between different types of interfaces, not software tools for firmware updates",
           "options": [
-            "They are used to upgrade the firmware of legacy devices to be v compatible with modern systems",
+            "They are used to upgrade the firmware of legacy devices to be compatible with modern systems",
             "They ensure that legacy devices can operate at the same speed as modern devices",
             "They increase the data transfer rate between legacy and modern devices.",
-            "They allow legacy devices to connect to modern systems (.) ee ane Y by converting incompatible interfaces."
+            "They allow legacy devices to connect to modern systems by converting incompatible interfaces."
           ],
           "correctAnswer": [
             "They increase the data transfer rate between legacy and modern devices."
@@ -18655,9 +18655,9 @@
           "explanation": "Secure Boot is a security feature in UEFI systems that ensures only trusted operating systems and software are loaded during the boot process. It helps protect against malware and unauthorized software. While UEFI can contribute to faster boot times compared to legacy BIOS, Secure Boot specifically is not designed for this purpose. Secure Boot focuses on security rather than speed. Allowing users to set a password that restricts access to the BIOS/UEFI settings describes the function of a boot password, not Secure Boot. Boot passwords are used to restrict access to the firmware settings, whereas Secure Boot focuses on verifying the integrity of the software being loaded. The graphical user interface is a feature of UEFI itself, not specifically Secure Boot. Secure Boot is concerned with security, not user interface enhancements",
           "options": [
             "To provide a graphical user interface for easier navigation of firmware settings.",
-            "Toallow users to set a password that restricts access to the BIOS/UEFI \\ settings.",
+            "Toallow users to set a password that restricts access to the BIOS/UEFI settings.",
             "To enable faster boot times by optimizing hardware initialization.",
-            "To prevent unauthorized operating systems and (4) D : us Sis software from loading during the boot process."
+            "To prevent unauthorized operating systems and software from loading during the boot process."
           ],
           "correctAnswer": [
             "To enable faster boot times by optimizing hardware initialization."

@@ -192,12 +192,12 @@ body {
 
 .exam-selector {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 24px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 899px) {
   .exam-selector {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1795,4 +1795,126 @@ body.dark-theme .lock-indicator {
 .review-match-picked {
   flex: 1;
   font-size: 13.5px;
+}
+
+
+/* ===========================================================================
+   TABLE MATCH QUESTION (Others / Reference Tables exam)
+   =========================================================================== */
+
+.table-match-wrapper {
+  overflow-x: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.table-match {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 480px;
+}
+
+.table-match-th {
+  background: var(--navy);
+  color: #fff;
+  padding: 9px 14px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+body.dark-theme .table-match-th {
+  background: #0a1f3d;
+}
+
+.table-match-row:nth-child(odd)  { background: var(--card); }
+.table-match-row:nth-child(even) { background: var(--bg); }
+
+.table-match-key {
+  padding: 8px 14px;
+  font-weight: 700;
+  color: var(--navy);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  vertical-align: middle;
+  min-width: 80px;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .table-match-key { color: #7fb3ff; }
+
+.table-match-cell {
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.table-match-select {
+  width: 100%;
+  min-width: 130px;
+  max-width: 320px;
+  font-size: 13px;
+}
+
+/* Review — comparison table */
+.table-match-review-wrap {
+  overflow-x: auto;
+  margin-top: 8px;
+}
+
+.table-match-review-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table-match-review-table th {
+  background: var(--navy2);
+  color: #fff;
+  padding: 6px 10px;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.table-match-review-table td {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.table-match-review-table tr:nth-child(even) td {
+  background: var(--bg);
+}
+
+.tmr-key {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.tmr-correct {
+  background: rgba(27, 122, 61, 0.15) !important;
+  color: var(--green);
+}
+
+.tmr-wrong {
+  background: rgba(200, 16, 46, 0.1) !important;
+  color: var(--red);
+}
+
+body.dark-theme .tmr-correct { background: rgba(46, 204, 113, 0.12) !important; }
+body.dark-theme .tmr-wrong   { background: rgba(255, 107, 122, 0.12) !important; }
+
+/* Exam-selector 4-card grid */
+@media (min-width: 900px) {
+  .exam-selector {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
