@@ -675,23 +675,6 @@ body.dark-theme .option:hover {
   transition: all 0.1s;
 }
 
-/* Inline "Check" feedback on the live exam screen — same colors as the review page */
-.option.opt-correct {
-  border-color: var(--green);
-  background: rgba(27, 122, 61, 0.07);
-}
-.option.opt-incorrect {
-  border-color: var(--red);
-  background: rgba(200, 16, 46, 0.07);
-}
-.option.opt-missed {
-  border-color: var(--amber);
-  background: rgba(184, 121, 10, 0.07);
-}
-body.dark-theme .option.opt-correct   { background: rgba(46, 204, 113, 0.1); }
-body.dark-theme .option.opt-incorrect { background: rgba(255, 122, 138, 0.1); }
-body.dark-theme .option.opt-missed    { background: rgba(243, 156, 18, 0.1); }
-
 body.dark-theme .option.selected {
   background: rgba(42, 63, 95, 0.5);
   border-color: #7fb3ff;
@@ -708,17 +691,23 @@ body.dark-theme .option input {
   accent-color: #7fb3ff;
 }
 
-.option.selected {
-  border-color: var(--navy2);
-  background: #eef4fc;
-  transition: all 0.1s;
-}
-
 body.dark-theme .option.selected {
   background: rgba(127, 179, 255, 0.12);
   border-color: #7fb3ff;
   border-left-width: 3px;
 }
+
+/* Inline "Check" feedback on the live exam screen — same colors as the review
+   page. Placed after both .option.selected rules (light + dark) and marked
+   !important so a checked option's correctness color always wins over the
+   plain blue "selected" styling it also carries. */
+.option.opt-correct   { border-color: var(--green) !important; background: rgba(27, 122, 61, 0.07) !important; }
+.option.opt-incorrect { border-color: var(--red) !important; background: rgba(200, 16, 46, 0.07) !important; }
+.option.opt-missed    { border-color: var(--amber) !important; background: rgba(184, 121, 10, 0.07) !important; }
+
+body.dark-theme .option.opt-correct   { background: rgba(46, 204, 113, 0.1) !important; }
+body.dark-theme .option.opt-incorrect { background: rgba(255, 122, 138, 0.1) !important; }
+body.dark-theme .option.opt-missed    { background: rgba(243, 156, 18, 0.1) !important; }
 
 .option .opt-text {
   font-size: 14.5px;
@@ -856,7 +845,8 @@ body.dark-theme .nav-cell.flagged {
 }
 
 .nav-cell.locked {
-  cursor: not-allowed;
+  /* Still clickable — locked means read-only view, not unreachable. */
+  cursor: pointer;
   opacity: 0.6;
 }
 
@@ -1700,19 +1690,19 @@ body.dark-theme .swatch-unanswered { background: #2d3748; border-color: #4a5568;
 
 /* Lock indicator (was inline in app.js) */
 .lock-indicator {
-  background: #fbe6e9;
-  border-left: 4px solid var(--red);
+  background: #fff8e1;
+  border-left: 4px solid var(--amber);
   padding: 10px 14px;
-  margin-bottom: 14px;
+  margin-top: 14px;
   border-radius: 4px;
   font-size: 13px;
-  color: var(--red);
+  color: #8a6d1a;
   font-weight: 600;
 }
 
 body.dark-theme .lock-indicator {
-  background: #3d1a1a;
-  color: var(--red);
+  background: #3d3419;
+  color: #f0c94d;
 }
 
 /* Results screen — score label */

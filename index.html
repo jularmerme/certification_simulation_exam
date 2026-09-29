@@ -237,6 +237,7 @@
           <button class="btn flag" id="btnFlag" onclick="toggleFlag()">Flag</button>
           <button class="btn primary" id="btnNext" onclick="nextQuestion()">Next &rarr;</button>
         </div>
+        <div id="lockIndicatorSlot"></div>
       </div>
       
       <div class="sidebar">
@@ -270,6 +271,7 @@
   <div id="screenResults" class="hidden">
     <button class="btn btn-back-results" onclick="backToMenu()">&larr; Back to Start Page</button>
     <button class="btn btn-back-results hidden" id="btnStartOverTopic" onclick="restartOthersTopic()">&#x21bb; Start Over (Same Question)</button>
+    <button class="btn btn-back-results hidden" id="btnRetakeShuffled" onclick="retakeSameExamShuffled()">&#x21bb; Retake Same Exam (Shuffled Order)</button>
     
     <div class="score-hero">
       <div class="score-label">Your Score</div>
