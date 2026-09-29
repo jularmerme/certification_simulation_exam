@@ -7,6 +7,7 @@ let appState = {
   flagged: new Set(),
   autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
   checkedQuestions: new Set(), // Questions where "Check" has been pressed — feedback shown, locked
+  examTimeAllotted: 0, // Time budget (seconds) of the current run — reused when retaking the same exam
   
   displayedQuestionIds: new Set(), // Track question IDs already displayed to prevent duplicates
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
@@ -611,6 +612,7 @@ function runExam(selectedQuestions, timeSeconds) {
   const exam = window.questionBank.exams[appState.examCode];
 
   appState.questions = selectedQuestions.map(q => randomizeQuestionOptions(q));
+  appState.examTimeAllotted = timeSeconds; // Remembered so a retake can reuse the same time budget.
   appState.currentQuestionIndex = 0;
   appState.answers = {};
   appState.flagged.clear();
@@ -972,21 +974,19 @@ function loadQuestion(index) {
   // Update question text
   const qStem = document.getElementById('qStem');
   
-  // Remove any existing lock indicators from previous questions
-  const existingLockIndicator = qStem.parentElement.querySelector('[data-lock-indicator]');
-  if (existingLockIndicator) {
-    existingLockIndicator.remove();
-  }
-  
   qStem.textContent = question.stem;
   
-  // Add lock indicator if question is locked
-  if (isLocked) {
+  // Lock indicator lives below the nav buttons (outside the question/options
+  // container), not above the stem. Rebuilt fresh on every loadQuestion call.
+  const lockSlot = document.getElementById('lockIndicatorSlot');
+  if (lockSlot) {
+    lockSlot.innerHTML = '';
+  }
+  if (isLocked && lockSlot) {
     const lockIndicator = document.createElement('div');
-    lockIndicator.setAttribute('data-lock-indicator', 'true');
     lockIndicator.className = 'lock-indicator';
     lockIndicator.textContent = '🔒 This question is locked. Only flagged questions can be revisited.';
-    qStem.parentElement.insertBefore(lockIndicator, qStem);
+    lockSlot.appendChild(lockIndicator);
   }
   
   // Show hint for multi-select — mirrors the isMulti derivation in renderMultipleChoice
@@ -1366,24 +1366,12 @@ function nextQuestion() {
 }
 
 function jumpToQuestion(index) {
-  // Check if question is locked - if so, prevent navigation.
-  // Mirrors loadQuestion()'s lock rule: Simulation locks as soon as answered;
-  // all other modes lock only once "Check" has been pressed for that question.
-  const question = appState.questions[index];
-  const isAnswered = question && question.type === 'table_match'
-    ? isTableMatchComplete(question, appState.answers[index])
-    : appState.answers[index] !== undefined;
-  const isFlagged = appState.flagged.has(index);
-  const isLocked = appState.feedbackEnabled
-    ? (appState.checkedQuestions.has(index) && !isFlagged)
-    : (isAnswered && !isFlagged);
-  
-  if (isLocked) {
-    // Question is answered and not flagged - locked, cannot navigate
-    // Silently prevent navigation, the disabled cursor feedback is enough
-    return;
-  }
-  
+  // Always navigate to the clicked question, even if it's locked — locked
+  // just means its inputs are disabled (read-only view), not that it's
+  // unreachable. loadQuestion() renders the lock indicator/colors/disabled
+  // inputs itself based on the same isLocked rule, so nothing else needed here.
+  if (index < 0 || index >= appState.questions.length) return;
+
   loadQuestion(index);
   updateNavigator(); // Update navigator when jumping to a question
 }
@@ -1518,6 +1506,25 @@ function submitExam() {
     }
   }
 
+  // Remember this run's exact question set + settings so "Retake Same Exam"
+  // can relaunch them in a freshly shuffled order (options are re-randomized
+  // too, same as any other new run, via randomizeQuestionOptions in runExam).
+  // Skipped for single-question runs (Others topic mode) — "Start Over" above
+  // already covers that case and reordering 1 question is meaningless.
+  window.lastExamRetakeInfo = {
+    examCode: appState.examCode,
+    questions: appState.questions,
+    timeSeconds: appState.examTimeAllotted || (appState.questions.length * 60),
+    examMode: appState.examMode,
+    feedbackEnabled: appState.feedbackEnabled,
+    activeFilter: appState.activeFilter
+  };
+  const btnRetake = document.getElementById('btnRetakeShuffled');
+  if (btnRetake) {
+    const isSingleQuestionRun = appState.questions.length <= 1;
+    btnRetake.classList.toggle('hidden', isSingleQuestionRun);
+  }
+
   // Show completion modal first
   showCompletionModal();
 }
@@ -1526,6 +1533,26 @@ function submitExam() {
 function restartOthersTopic() {
   if (!window.lastOthersTopicId) { backToMenu(); return; }
   startOthersTopic(window.lastOthersTopicId);
+}
+
+/**
+ * Retake the exam just finished, with the exact same set of questions but in
+ * a freshly randomized order. Option order is also re-shuffled per question,
+ * same as any fresh run, via randomizeQuestionOptions() inside runExam().
+ * Same mode (practice/simulation/domain/module), same time budget, same
+ * feedback setting, and same active filter (if any) as the original run.
+ */
+function retakeSameExamShuffled() {
+  const info = window.lastExamRetakeInfo;
+  if (!info || !info.questions || info.questions.length === 0) { backToMenu(); return; }
+
+  appState.examCode = info.examCode;
+  appState.examMode = info.examMode;
+  appState.feedbackEnabled = info.feedbackEnabled;
+  appState.activeFilter = info.activeFilter;
+
+  const shuffledQuestions = shuffleArray(info.questions);
+  runExam(shuffledQuestions, info.timeSeconds);
 }
 
 // Show completion modal
