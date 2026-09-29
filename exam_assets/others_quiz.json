@@ -240,7 +240,8 @@
             "Purpose": "Remote Desktop"
           }
         },
-        "explanation": "Ports 20/21=FTP, 22=SSH, 23=Telnet, 25=SMTP, 53=DNS, 67/68=DHCP, 80=HTTP, 110=POP3, 137-139=NetBIOS, 143=IMAP, 389=LDAP, 443=HTTPS, 445=SMB, 3389=RDP."
+        "explanation": "Ports 20/21=FTP, 22=SSH, 23=Telnet, 25=SMTP, 53=DNS, 67/68=DHCP, 80=HTTP, 110=POP3, 137-139=NetBIOS, 143=IMAP, 389=LDAP, 443=HTTPS, 445=SMB, 3389=RDP.",
+        "topicLabel": "Ports & Protocols"
       },
       {
         "id": "TBL-002",
@@ -363,7 +364,8 @@
             "Key Fact": "Best performance + redundancy"
           }
         },
-        "explanation": "RAID 0=speed/no redundancy (2 disks). RAID 1=mirroring (2 disks). RAID 5=parity (3 disks). RAID 6=double parity (4 disks). RAID 10=mirror+stripe (4 disks, 1 per pair)."
+        "explanation": "RAID 0=speed/no redundancy (2 disks). RAID 1=mirroring (2 disks). RAID 5=parity (3 disks). RAID 6=double parity (4 disks). RAID 10=mirror+stripe (4 disks, 1 per pair).",
+        "topicLabel": "RAID Levels"
       },
       {
         "id": "TBL-003",
@@ -504,7 +506,8 @@
             "Notes": "OFDMA; 6E adds 6 GHz"
           }
         },
-        "explanation": "802.11a=5GHz/54Mbps. b=2.4GHz/11Mbps. g=2.4GHz/54Mbps. n(Wi-Fi 4)=dual-band/600Mbps. ac(Wi-Fi 5)=5GHz/3.5Gbps. ax(Wi-Fi 6/6E)=tri-band/9.6Gbps."
+        "explanation": "802.11a=5GHz/54Mbps. b=2.4GHz/11Mbps. g=2.4GHz/54Mbps. n(Wi-Fi 4)=dual-band/600Mbps. ac(Wi-Fi 5)=5GHz/3.5Gbps. ax(Wi-Fi 6/6E)=tri-band/9.6Gbps.",
+        "topicLabel": "802.11 Wireless Standards"
       },
       {
         "id": "TBL-004",
@@ -611,7 +614,8 @@
             "Notes": "USB-C; daisy-chain capable"
           }
         },
-        "explanation": "USB 2.0=480Mbps black. USB 3.0=5Gbps blue. USB 3.1=10Gbps. USB 3.2 Gen 2x2=20Gbps USB-C. USB4/TB3/4=40Gbps USB-C."
+        "explanation": "USB 2.0=480Mbps black. USB 3.0=5Gbps blue. USB 3.1=10Gbps. USB 3.2 Gen 2x2=20Gbps USB-C. USB4/TB3/4=40Gbps USB-C.",
+        "topicLabel": "USB Versions"
       },
       {
         "id": "TBL-005",
@@ -713,7 +717,8 @@
             "Key Notes": "M.2 slot running PCIe — dramatically faster"
           }
         },
-        "explanation": "SATA I=1.5Gbps. SATA II=3Gbps. SATA III=6Gbps (current). eSATA=6Gbps external (no power). M.2 SATA=~550MB/s. M.2 NVMe=3,000-7,000MB/s via PCIe."
+        "explanation": "SATA I=1.5Gbps. SATA II=3Gbps. SATA III=6Gbps (current). eSATA=6Gbps external (no power). M.2 SATA=~550MB/s. M.2 NVMe=3,000-7,000MB/s via PCIe.",
+        "topicLabel": "SATA Versions"
       },
       {
         "id": "TBL-006",
@@ -828,7 +833,8 @@
             "Common Symptom / Issue": "Lines on page = dirty drum"
           }
         },
-        "explanation": "Mnemonic: 'Please Create Each Document Through Fusing Carefully'. Fusing failure = smearing. Ghost/echo = dirty transfer roller. Lines = dirty drum."
+        "explanation": "Mnemonic: 'Please Create Each Document Through Fusing Carefully'. Fusing failure = smearing. Ghost/echo = dirty transfer roller. Lines = dirty drum.",
+        "topicLabel": "Laser Printer Imaging Process"
       },
       {
         "id": "TBL-007",
@@ -919,7 +925,8 @@
             "Notes": "Legacy; still tested"
           }
         },
-        "explanation": "HDD=SATA/slowest. SSD SATA=~550MB/s. NVMe=3,000-7,000MB/s via PCIe M.2 (fastest). Optical=SATA/slow/legacy."
+        "explanation": "HDD=SATA/slowest. SSD SATA=~550MB/s. NVMe=3,000-7,000MB/s via PCIe M.2 (fastest). Optical=SATA/slow/legacy.",
+        "topicLabel": "Storage At a Glance"
       },
       {
         "id": "TBL-008",
@@ -995,7 +1002,8 @@
             "Example": "Gmail / Office 365"
           }
         },
-        "explanation": "IaaS=you manage OS+apps (EC2). PaaS=you manage app+data (Heroku). SaaS=data only (Gmail)."
+        "explanation": "IaaS=you manage OS+apps (EC2). PaaS=you manage app+data (Heroku). SaaS=data only (Gmail).",
+        "topicLabel": "Cloud Service Models"
       },
       {
         "id": "TBL-009",
@@ -1083,7 +1091,144 @@
             "Notes": "Self-test; never leaves the device"
           }
         },
-        "explanation": "Private: 10/8 (Class A), 172.16–31 (Class B), 192.168 (Class C/SOHO). 169.254.x.x=APIPA (no DHCP). 127.0.0.1=loopback."
+        "explanation": "Private: 10/8 (Class A), 172.16–31 (Class B), 192.168 (Class C/SOHO). 169.254.x.x=APIPA (no DHCP). 127.0.0.1=loopback.",
+        "topicLabel": "IP Addressing & Networking"
+      },
+      {
+        "id": "TBL-010",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the RAM Facts reference table.",
+        "headers": [
+          "RAM Fact",
+          "Details"
+        ],
+        "rows": [
+          {
+            "key": "Form factors",
+            "cols": [
+              "DIMM = desktop · SODIMM = laptop/small form factor"
+            ]
+          },
+          {
+            "key": "DDR generations",
+            "cols": [
+              "DDR4 ≠ DDR5 — not backward compatible, different notch position"
+            ]
+          },
+          {
+            "key": "ECC RAM",
+            "cols": [
+              "Error-Correcting Code — servers and workstations only"
+            ]
+          },
+          {
+            "key": "Multi-channel",
+            "cols": [
+              "Install in matching pairs in same-color slots (dual-channel = 2x performance vs single)"
+            ]
+          },
+          {
+            "key": "Low RAM symptoms",
+            "cols": [
+              "Excessive paging/swapping, slow performance, low memory warnings in OS"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Details": [
+            "DIMM = desktop · SODIMM = laptop/small form factor",
+            "DDR4 ≠ DDR5 — not backward compatible, different notch position",
+            "Error-Correcting Code — servers and workstations only",
+            "Install in matching pairs in same-color slots (dual-channel = 2x performance vs single)",
+            "Excessive paging/swapping, slow performance, low memory warnings in OS"
+          ]
+        },
+        "correctAnswer": {
+          "Form factors": {
+            "Details": "DIMM = desktop · SODIMM = laptop/small form factor"
+          },
+          "DDR generations": {
+            "Details": "DDR4 ≠ DDR5 — not backward compatible, different notch position"
+          },
+          "ECC RAM": {
+            "Details": "Error-Correcting Code — servers and workstations only"
+          },
+          "Multi-channel": {
+            "Details": "Install in matching pairs in same-color slots (dual-channel = 2x performance vs single)"
+          },
+          "Low RAM symptoms": {
+            "Details": "Excessive paging/swapping, slow performance, low memory warnings in OS"
+          }
+        },
+        "explanation": "DIMM=desktop, SODIMM=laptop. DDR4/DDR5 not interchangeable. ECC=error correction for servers. Multi-channel needs matching pairs. Low RAM = paging/swapping.",
+        "topicLabel": "RAM Facts"
+      },
+      {
+        "id": "TBL-011",
+        "type": "table_match",
+        "domain": "Reference",
+        "objective": "0.0",
+        "module": "0.0",
+        "difficulty": "medium",
+        "stem": "Complete the Virtualization Concepts reference table.",
+        "headers": [
+          "Concept",
+          "Details"
+        ],
+        "rows": [
+          {
+            "key": "Type 1 Hypervisor",
+            "cols": [
+              "Bare metal — runs directly on hardware, NO host OS required (VMware ESXi, Hyper-V Server)"
+            ]
+          },
+          {
+            "key": "Type 2 Hypervisor",
+            "cols": [
+              "Hosted — runs on top of an existing OS (VirtualBox, VMware Workstation)"
+            ]
+          },
+          {
+            "key": "Containers",
+            "cols": [
+              "Lightweight, share host OS kernel — faster than VMs, less isolation (Docker)"
+            ]
+          },
+          {
+            "key": "VDI",
+            "cols": [
+              "Virtual Desktop Infrastructure — users access desktop hosted on a remote VM"
+            ]
+          }
+        ],
+        "columnOptions": {
+          "Details": [
+            "Bare metal — runs directly on hardware, NO host OS required (VMware ESXi, Hyper-V Server)",
+            "Hosted — runs on top of an existing OS (VirtualBox, VMware Workstation)",
+            "Lightweight, share host OS kernel — faster than VMs, less isolation (Docker)",
+            "Virtual Desktop Infrastructure — users access desktop hosted on a remote VM"
+          ]
+        },
+        "correctAnswer": {
+          "Type 1 Hypervisor": {
+            "Details": "Bare metal — runs directly on hardware, NO host OS required (VMware ESXi, Hyper-V Server)"
+          },
+          "Type 2 Hypervisor": {
+            "Details": "Hosted — runs on top of an existing OS (VirtualBox, VMware Workstation)"
+          },
+          "Containers": {
+            "Details": "Lightweight, share host OS kernel — faster than VMs, less isolation (Docker)"
+          },
+          "VDI": {
+            "Details": "Virtual Desktop Infrastructure — users access desktop hosted on a remote VM"
+          }
+        },
+        "explanation": "Type 1=bare metal (ESXi, Hyper-V). Type 2=hosted on OS (VirtualBox). Containers share host kernel (Docker). VDI=remote-hosted desktop.",
+        "topicLabel": "Virtualization Concepts"
       }
     ]
   }
