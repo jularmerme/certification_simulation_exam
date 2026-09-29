@@ -6,6 +6,7 @@ let appState = {
   answers: {},
   flagged: new Set(),
   autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
+  checkedQuestions: new Set(), // Questions where "Check" has been pressed — feedback shown, locked
   
   displayedQuestionIds: new Set(), // Track question IDs already displayed to prevent duplicates
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
@@ -151,6 +152,7 @@ function checkAndRestoreExamState() {
       appState.answers = state.answers || {};
       appState.flagged = new Set(state.flagged || []);
       appState.autoFlagged = new Set(state.autoFlagged || []);
+      appState.checkedQuestions = new Set(state.checkedQuestions || []);
       // saveExamState() persists this, so it must be rehydrated too or validated
       // drag-drop answers unlock themselves after a resume.
       appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
@@ -221,6 +223,7 @@ function saveExamState() {
     answers: appState.answers,
     flagged: Array.from(appState.flagged),
     autoFlagged: Array.from(appState.autoFlagged),
+    checkedQuestions: Array.from(appState.checkedQuestions),
     timeRemaining: appState.timeRemaining,
     examStartTime: appState.examStartTime,
     // P5 mode state — required so resume restores the correct mode/feedback/filter
@@ -326,7 +329,7 @@ function populateIntroCards() {
 
 // Screen visibility helper: show exactly one of the top-level screens.
 function showScreen(id) {
-  ['screenIntro', 'screenModePicker', 'screenExam', 'screenResults', 'screenDashboard'].forEach(s => {
+  ['screenIntro', 'screenModePicker', 'screenOthersPicker', 'screenExam', 'screenResults', 'screenDashboard'].forEach(s => {
     const el = document.getElementById(s);
     if (el) el.classList.toggle('hidden', s !== id);
   });
@@ -340,8 +343,9 @@ function selectExam(examCode) {
   document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
   document.getElementById('cardOthers').classList.toggle('selected', examCode === 'others');
 
-  // Others has no meaningful modes — skip the picker and start immediately.
-  if (examCode === 'others') { startOthersExam(); return; }
+  // Others skips the standard mode picker — it has its own topic picker
+  // (All Topics combined, or one of the 11 individual reference tables).
+  if (examCode === 'others') { openOthersPicker(); return; }
 
   openModePicker();
 }
@@ -517,6 +521,47 @@ function startOthersExam() {
   runExam(questions, examTimeLimit(exam) * 60);
 }
 
+/** Others topic picker: one "All Topics" card (unchanged combined mode) plus
+ *  one card per individual reference table (single-question practice). */
+function openOthersPicker() {
+  const exam = window.questionBank.exams['others'];
+  const container = document.getElementById('othersTopicButtons');
+  if (!exam || !container) return;
+  container.innerHTML = '';
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn';
+  allBtn.innerHTML = '<span>📋 All Topics (Combined)</span>' +
+    '<span class="filter-count">(' + exam.questionBank.length + ' questions)</span>';
+  allBtn.onclick = startOthersExam;
+  container.appendChild(allBtn);
+
+  exam.questionBank.forEach(q => {
+    // topicLabel is set explicitly on each question in others_quiz.json.
+    const label = q.topicLabel || q.id;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.innerHTML = '<span>' + escapeHtml(label) + '</span>' +
+      '<span class="filter-count">(1 question)</span>';
+    btn.onclick = () => startOthersTopic(q.id);
+    container.appendChild(btn);
+  });
+
+  showScreen('screenOthersPicker');
+}
+
+/** Launch a single reference-table question as its own 1-question practice run. */
+function startOthersTopic(questionId) {
+  const exam = window.questionBank.exams['others'];
+  if (!exam) return;
+  const question = exam.questionBank.find(q => q.id === questionId);
+  if (!question) { alert('Question not found: ' + questionId); return; }
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = null;
+  runExam([question], 20 * 60);
+}
+
 // Simulation Exam: exam's configured count + timeLimit, feedback OFF.
 function startSimulationExam() {
   const exam = window.questionBank.exams[appState.examCode];
@@ -570,6 +615,7 @@ function runExam(selectedQuestions, timeSeconds) {
   appState.answers = {};
   appState.flagged.clear();
   appState.autoFlagged.clear();
+  appState.checkedQuestions.clear();
   appState.validatedDragDrops.clear();
   appState.displayedQuestionIds.clear();
   appState.examStartTime = Date.now();
@@ -726,18 +772,25 @@ function updateNavigator() {
       : appState.answers[idx] !== undefined;
     const isFlagged = appState.flagged.has(idx);
     const userAnswer = appState.answers[idx];
+    const isChecked = appState.checkedQuestions.has(idx);
+    // Correctness is revealed only once feedback is enabled AND the question has
+    // actually been "Checked" (Simulation mode never reveals it at all).
+    const revealCorrectness = appState.feedbackEnabled && isChecked;
     
     // FLAGGED takes precedence over answered/unanswered
     if (isFlagged) {
       // Flagged questions are always yellow, regardless of answer state
       cell.classList.add('flagged');
     } else if (isAnswered) {
-      // Question is answered but not flagged
-      if (!appState.feedbackEnabled) {
-        // Simulation mode: reveal that a question is answered, but NOT whether it
-        // is correct. Neutral blue fill, still locked. Correctness waits for results.
+      if (!revealCorrectness) {
+        // Answered but correctness not shown yet: Simulation mode, or a
+        // practice-mode question that's answered but "Check" hasn't been
+        // pressed. Neutral blue fill. Only locked once actually checked
+        // (Simulation) or checked (practice) — stays editable until then.
         cell.classList.add('answered-neutral');
-        cell.classList.add('locked');
+        if (!appState.feedbackEnabled || isChecked) {
+          cell.classList.add('locked');
+        }
       } else {
         // Practice modes: reveal correctness via color.
         const isCorrect = checkAnswerCorrect(q, userAnswer);
@@ -776,6 +829,118 @@ function isTableMatchComplete(question, answer) {
 }
 
 // Load question
+
+/**
+ * "Check" button handler for every practice mode except Simulation.
+ * Scores the current question, marks it checked (locks inputs), paints
+ * inline correctness feedback using the same colors as the review page,
+ * and flips the Next/Check button back to "Next" — it does NOT advance.
+ */
+/**
+ * Lightweight button-only refresh, called from option onchange handlers so the
+ * Next/Check label updates immediately on selection without re-rendering the
+ * whole question (which would wipe the user's in-progress picks). Only takes
+ * effect in feedback-enabled modes (everything except Simulation); Simulation
+ * mode never shows "Check" and keeps its original Next/Submit label.
+ */
+function refreshCheckButton(questionIndex) {
+  if (!appState.feedbackEnabled) return;
+  if (appState.checkedQuestions.has(questionIndex)) return; // already checked — button stays as-is
+
+  // Mirror loadQuestion()'s isAnswered rule: table_match needs every cell
+  // filled; other types just need an answer object/value present.
+  const question = appState.questions[questionIndex];
+  const isAnswered = question && question.type === 'table_match'
+    ? isTableMatchComplete(question, appState.answers[questionIndex])
+    : appState.answers[questionIndex] !== undefined;
+  if (!isAnswered) return; // not answered enough yet — leave button as Next/disabled state
+
+  const btnNext = document.getElementById('btnNext');
+  if (!btnNext) return;
+  btnNext.textContent = 'Check';
+  btnNext.className = 'btn primary';
+  btnNext.onclick = checkCurrentQuestion;
+}
+
+function checkCurrentQuestion() {
+  const index = appState.currentQuestionIndex;
+  appState.checkedQuestions.add(index);
+
+  // Clear any auto-flag now that the question has been answered + checked.
+  if (appState.autoFlagged.has(index)) {
+    appState.flagged.delete(index);
+    appState.autoFlagged.delete(index);
+  }
+
+  saveExamState();
+  // loadQuestion() recomputes isLocked/needsCheck from checkedQuestions and will
+  // now render the question locked + colored, with the button already correct
+  // ("Next" / "Submit Exam") — no manual button fixup needed here.
+  loadQuestion(index);
+}
+
+/**
+ * Paints correct/incorrect/missed coloring directly onto the just-rendered
+ * options for the given question, reusing the same classes/colors as the
+ * review page. Called after a question has been checked (or when revisiting
+ * an already-checked question).
+ */
+function applyInlineFeedback(question, container, questionIndex) {
+  const answer = appState.answers[questionIndex];
+
+  if (question.type === 'matching') {
+    const userMap = (answer && typeof answer === 'object') ? answer : {};
+    const correctMap = question.correctAnswer || {};
+    container.querySelectorAll('.matching-row').forEach((row, i) => {
+      const key = question.items[i];
+      const isRight = userMap[key] === correctMap[key];
+      row.classList.add(isRight ? 'review-correct' : 'review-incorrect');
+    });
+  } else if (question.type === 'table_match') {
+    // Color each dropdown cell green/red based on the saved answer vs correctAnswer.
+    const userMap = (answer && typeof answer === 'object') ? answer : {};
+    const correctMap = question.correctAnswer || {};
+    const colHeaders = (question.headers || []).slice(1);
+
+    container.querySelectorAll('.table-match-row').forEach((tr, rowIdx) => {
+      const row = question.rows[rowIdx];
+      if (!row) return;
+      const cells = tr.querySelectorAll('.table-match-cell');
+      colHeaders.forEach((colHeader, colIdx) => {
+        const cell = cells[colIdx];
+        if (!cell) return;
+        const userVal = (userMap[row.key] || {})[colHeader];
+        const correctVal = (correctMap[row.key] || {})[colHeader];
+        cell.classList.add(userVal === correctVal ? 'tmr-correct' : 'tmr-wrong');
+      });
+    });
+  } else {
+    // mc / multi
+    const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer :
+      (typeof question.correctAnswer === 'string' ? [question.correctAnswer] : []);
+    const userAnswers = Array.isArray(answer) ? answer : (typeof answer === 'string' ? [answer] : []);
+    const isMulti = question.type === 'multi' ||
+      (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
+
+    container.querySelectorAll('.option').forEach(label => {
+      const optText = label.querySelector('.opt-text');
+      const option = optText ? optText.textContent : '';
+      const isCorrectOption = correctAnswers.includes(option);
+      const userPicked = userAnswers.includes(option);
+
+      if (isCorrectOption && userPicked) {
+        label.classList.add('opt-correct');
+      } else if (!isCorrectOption && userPicked) {
+        label.classList.add('opt-incorrect');
+      } else if (isCorrectOption && !userPicked && isMulti) {
+        label.classList.add('opt-missed');
+      } else if (isCorrectOption && !userPicked && !isMulti) {
+        label.classList.add('opt-correct');
+      }
+    });
+  }
+}
+
 function loadQuestion(index) {
   if (index < 0 || index >= appState.questions.length) return;
   
@@ -785,13 +950,20 @@ function loadQuestion(index) {
   // Track this question ID to prevent duplicates
   appState.displayedQuestionIds.add(question.id);
   
-  // Check if question is locked
   // For table_match: only lock when ALL cells are filled (not on first cell)
   const isAnswered = question.type === 'table_match'
     ? isTableMatchComplete(question, appState.answers[index])
     : appState.answers[index] !== undefined;
   const isFlagged = appState.flagged.has(index);
-  const isLocked = isAnswered && !isFlagged;
+
+  // Lock condition differs by mode:
+  //  - Simulation (feedbackEnabled=false): unchanged legacy behavior — locked as
+  //    soon as it's answered (you can't revisit/edit a past question).
+  //  - All other modes: options stay editable until the user presses "Check".
+  //    Flagging always unlocks (existing escape hatch), same as before.
+  const isLocked = appState.feedbackEnabled
+    ? (appState.checkedQuestions.has(index) && !isFlagged)
+    : (isAnswered && !isFlagged);
   
   // Update header
   document.getElementById('qNumber').textContent = 'Q' + (index + 1) + ' of ' + appState.questions.length;
@@ -827,11 +999,18 @@ function loadQuestion(index) {
   optionsContainer.innerHTML = '';
   
   if (question.type === 'mc' || question.type === 'multi' || isMultiQuestion) {
-    renderMultipleChoice(question, optionsContainer, index);
+    renderMultipleChoice(question, optionsContainer, index, isLocked);
   } else if (question.type === 'matching') {
-    renderMatching(question, optionsContainer, index);
+    renderMatching(question, optionsContainer, index, isLocked);
   } else if (question.type === 'table_match') {
-    renderTableMatch(question, optionsContainer, index);
+    renderTableMatch(question, optionsContainer, index, isLocked);
+  }
+
+  // Once checked (or, in Simulation mode, once answered+locked isn't shown —
+  // Simulation withholds feedback entirely), paint correctness coloring.
+  const showFeedbackNow = appState.feedbackEnabled && appState.checkedQuestions.has(index);
+  if (showFeedbackNow) {
+    applyInlineFeedback(question, optionsContainer, index);
   }
   
   // Update buttons
@@ -839,16 +1018,29 @@ function loadQuestion(index) {
   const isLastQuestion = index === appState.questions.length - 1;
   const btnNext = document.getElementById('btnNext');
   
-  if (isLastQuestion) {
+  // Simulation mode: unchanged legacy Next/Submit behavior, no Check step.
+  // All other modes: show "Check" until the question has been checked, then
+  // behave exactly like today (Next / Submit Exam).
+  const needsCheck = appState.feedbackEnabled &&
+    isAnswered && !appState.checkedQuestions.has(index) && !isFlagged;
+
+  if (needsCheck) {
     btnNext.disabled = false;
-    btnNext.textContent = 'Submit Exam';
-    btnNext.className = 'btn danger';
-    btnNext.onclick = submitExam;
-  } else {
-    btnNext.disabled = false;
-    btnNext.textContent = 'Next →';
+    btnNext.textContent = 'Check';
     btnNext.className = 'btn primary';
-    btnNext.onclick = nextQuestion;
+    btnNext.onclick = checkCurrentQuestion;
+  } else {
+    if (isLastQuestion) {
+      btnNext.disabled = false;
+      btnNext.textContent = 'Submit Exam';
+      btnNext.className = 'btn danger';
+      btnNext.onclick = submitExam;
+    } else {
+      btnNext.disabled = false;
+      btnNext.textContent = 'Next →';
+      btnNext.className = 'btn primary';
+      btnNext.onclick = nextQuestion;
+    }
   }
   
   // Update flag button
@@ -862,18 +1054,15 @@ function loadQuestion(index) {
 }
 
 // Render multiple choice
-function renderMultipleChoice(question, container, questionIndex) {
+function renderMultipleChoice(question, container, questionIndex, isLocked) {
   // Derive isMulti from the type field, with a fallback to check correctAnswer length.
   // This guards against stale localStorage data where the type field may be missing.
   const isMulti = question.type === 'multi' ||
     (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
   
   const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
-  
-  // Check if this question is locked (answered but not flagged)
-  const isAnswered = appState.answers[questionIndex] !== undefined;
-  const isFlagged = appState.flagged.has(questionIndex);
-  const isLocked = isAnswered && !isFlagged;
+  // isLocked is now computed once in loadQuestion() and passed in, so it stays
+  // consistent with the Check/Next state machine (checkedQuestions-based lock).
   
   question.options.forEach((option, idx) => {
     const label = document.createElement('label');
@@ -921,9 +1110,10 @@ function renderMultipleChoice(question, container, questionIndex) {
         if (appState.autoFlagged.has(questionIndex) && answers.length > 0) {
           appState.flagged.delete(questionIndex);
           appState.autoFlagged.delete(questionIndex);
-          saveExamState();
-          // Don't call updateNavigator() - validation happens on Next button click
         }
+        // Don't call updateNavigator() — validation happens on Check/Next button click.
+        saveExamState();
+        refreshCheckButton(questionIndex);
       };
     } else {
       // For single choice: check if option text matches saved answer
@@ -943,9 +1133,10 @@ function renderMultipleChoice(question, container, questionIndex) {
         if (appState.autoFlagged.has(questionIndex)) {
           appState.flagged.delete(questionIndex);
           appState.autoFlagged.delete(questionIndex);
-          saveExamState();
-          // Don't call updateNavigator() - validation happens on Next button click
         }
+        // Don't call updateNavigator() — validation happens on Check/Next button click.
+        saveExamState();
+        refreshCheckButton(questionIndex);
       };
     }
     
@@ -973,7 +1164,7 @@ function renderMultipleChoice(question, container, questionIndex) {
   });
 }
 
-function renderMatching(question, container, questionIndex) {
+function renderMatching(question, container, questionIndex, isLocked) {
   // Normalise both schemas into a unified rows/choices structure:
   //   rows    — array of { key, label } — the left-column items
   //   choices — array of strings        — the right-column dropdown options
@@ -989,9 +1180,7 @@ function renderMatching(question, container, questionIndex) {
 
   // Saved answer: flat object { rowKey: chosenValue }
   const savedAnswer = appState.answers[questionIndex] || {};
-  const isAnswered = appState.answers[questionIndex] !== undefined;
-  const isFlagged  = appState.flagged.has(questionIndex);
-  const isLocked   = isAnswered && !isFlagged;
+  // isLocked is now computed once in loadQuestion() and passed in.
 
   rows.forEach(row => {
     const rowEl = document.createElement('div');
@@ -1034,7 +1223,8 @@ function renderMatching(question, container, questionIndex) {
         appState.autoFlagged.delete(questionIndex);
       }
       saveExamState();
-      // Don't call updateNavigator() — wait for Next button click, same as mc/multi.
+      // Don't call updateNavigator() — wait for Check/Next button click, same as mc/multi.
+      refreshCheckButton(questionIndex);
     };
 
     rowEl.appendChild(labelEl);
@@ -1044,16 +1234,14 @@ function renderMatching(question, container, questionIndex) {
 }
 
 // Render a table-match question — multi-column matching table
-function renderTableMatch(question, container, questionIndex) {
+function renderTableMatch(question, container, questionIndex, isLocked) {
   const headers    = question.headers || [];
   const colHeaders = headers.slice(1);
   const rows       = question.rows || [];
   const colOpts    = question.columnOptions || {};
 
   const savedAnswer = appState.answers[questionIndex] || {};
-  const isAnswered  = isTableMatchComplete(question, appState.answers[questionIndex]);
-  const isFlagged   = appState.flagged.has(questionIndex);
-  const isLocked    = isAnswered && !isFlagged;
+  // isLocked is now computed once in loadQuestion() and passed in.
 
   const wrapper = document.createElement('div');
   wrapper.className = 'table-match-wrapper';
@@ -1126,7 +1314,8 @@ function renderTableMatch(question, container, questionIndex) {
           appState.autoFlagged.delete(questionIndex);
         }
         saveExamState();
-        // Don't call updateNavigator() — wait for Next button click, same as mc/multi.
+        // Don't call updateNavigator() — wait for Check/Next button click, same as mc/multi.
+        refreshCheckButton(questionIndex);
       };
 
       td.appendChild(select);
@@ -1177,11 +1366,19 @@ function nextQuestion() {
 }
 
 function jumpToQuestion(index) {
-  // Check if question is answered but not flagged - if so, prevent navigation
-  const isAnswered = appState.answers[index] !== undefined;
+  // Check if question is locked - if so, prevent navigation.
+  // Mirrors loadQuestion()'s lock rule: Simulation locks as soon as answered;
+  // all other modes lock only once "Check" has been pressed for that question.
+  const question = appState.questions[index];
+  const isAnswered = question && question.type === 'table_match'
+    ? isTableMatchComplete(question, appState.answers[index])
+    : appState.answers[index] !== undefined;
   const isFlagged = appState.flagged.has(index);
+  const isLocked = appState.feedbackEnabled
+    ? (appState.checkedQuestions.has(index) && !isFlagged)
+    : (isAnswered && !isFlagged);
   
-  if (isAnswered && !isFlagged) {
+  if (isLocked) {
     // Question is answered and not flagged - locked, cannot navigate
     // Silently prevent navigation, the disabled cursor feedback is enough
     return;
@@ -1310,8 +1507,25 @@ function submitExam() {
     saveResult(examResults, appState, exam);
   }
 
+  // Single-topic Others run (1 question): remember which topic so "Start Over"
+  // can relaunch the exact same question. Hidden for every other exam/mode.
+  const btnStartOver = document.getElementById('btnStartOverTopic');
+  if (btnStartOver) {
+    const isSingleOthersTopic = appState.examCode === 'others' && appState.questions.length === 1;
+    btnStartOver.classList.toggle('hidden', !isSingleOthersTopic);
+    if (isSingleOthersTopic) {
+      window.lastOthersTopicId = appState.questions[0].id;
+    }
+  }
+
   // Show completion modal first
   showCompletionModal();
+}
+
+/** Relaunch the same single reference-table question the user just finished. */
+function restartOthersTopic() {
+  if (!window.lastOthersTopicId) { backToMenu(); return; }
+  startOthersTopic(window.lastOthersTopicId);
 }
 
 // Show completion modal

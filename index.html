@@ -208,6 +208,16 @@
     </div>
   </div>
   
+  <!-- OTHERS TOPIC PICKER (Reference Tables) -->
+  <div id="screenOthersPicker" class="hidden">
+    <div class="intro-card">
+      <button class="btn back-btn" onclick="showScreen('screenIntro')">&larr; Back</button>
+      <h1>Reference Tables — Choose a Topic</h1>
+      <p>Practice all tables together, or focus on a single topic.</p>
+      <div id="othersTopicButtons" class="filter-grid"></div>
+    </div>
+  </div>
+
   <!-- EXAM SCREEN -->
   <div id="screenExam" class="hidden">
     <div class="exam-layout">
@@ -259,6 +269,7 @@
   <!-- RESULTS SCREEN -->
   <div id="screenResults" class="hidden">
     <button class="btn btn-back-results" onclick="backToMenu()">&larr; Back to Start Page</button>
+    <button class="btn btn-back-results hidden" id="btnStartOverTopic" onclick="restartOthersTopic()">&#x21bb; Start Over (Same Question)</button>
     
     <div class="score-hero">
       <div class="score-label">Your Score</div>

@@ -675,6 +675,23 @@ body.dark-theme .option:hover {
   transition: all 0.1s;
 }
 
+/* Inline "Check" feedback on the live exam screen — same colors as the review page */
+.option.opt-correct {
+  border-color: var(--green);
+  background: rgba(27, 122, 61, 0.07);
+}
+.option.opt-incorrect {
+  border-color: var(--red);
+  background: rgba(200, 16, 46, 0.07);
+}
+.option.opt-missed {
+  border-color: var(--amber);
+  background: rgba(184, 121, 10, 0.07);
+}
+body.dark-theme .option.opt-correct   { background: rgba(46, 204, 113, 0.1); }
+body.dark-theme .option.opt-incorrect { background: rgba(255, 122, 138, 0.1); }
+body.dark-theme .option.opt-missed    { background: rgba(243, 156, 18, 0.1); }
+
 body.dark-theme .option.selected {
   background: rgba(42, 63, 95, 0.5);
   border-color: #7fb3ff;
