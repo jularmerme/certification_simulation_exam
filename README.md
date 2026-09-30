@@ -2,8 +2,6 @@
 
 A zero-dependency, browser-based practice exam simulator for CompTIA A+ Core 1 (220-1201) and Core 2 (220-1202) certification exams.
 
-![App Screenshot](screenshot.png)
-
 ## Features
 
 - **Two-step exam launch:** choose an exam, then choose a mode.
@@ -13,11 +11,15 @@ A zero-dependency, browser-based practice exam simulator for CompTIA A+ Core 1 (
   - **Practice by Domain** — filter by exam domain, up to 25 questions.
   - **Practice by Study Module** — filter by CertMaster course module, up to 25 questions.
 - **Three exams available:**
-  - **Core 1 (220-1201):** 715 questions across 5 domains, 25 of 27 objectives, 10 modules.
-  - **Core 2 (220-1202):** 16 questions across 4 domains, 36 objectives, 12 modules.
-  - **Acronyms Quiz:** 173 acronym questions.
+  - **Core 1 (220-1201):** 1,205 questions across 5 domains, all objectives, 10 modules.
+  - **Core 2 (220-1202):** 16 questions (starter bank).
+  - **Acronyms Quiz:** 200 acronym questions.
 - **Question types:** multiple-choice, multi-select (with partial-credit scoring), matching (dropdown), and drag-and-drop.
 - Every question is tagged with **domain, objective, module, and origin source**, verified against the official CompTIA A+ Certification Exam Objectives v4.
+- **📊 My Progress Dashboard** — tracks every completed exam session with:
+  - Summary cards (total sessions, best score, latest score, avg last 5)
+  - Sortable session history table with per-domain breakdown (click any row to expand)
+  - Domain Weakness Tracker with cumulative avg score, trend (↑↓→), and focus flag (🔴🟡🟢)
 - **Save & Exit** with full state restoration — question index, answers, timer, mode, and active filter.
 - **Question flagging** and re-answering (answered questions lock unless flagged).
 - **Dark/light theme** with an anti-flash guard on load.
@@ -59,49 +61,49 @@ The four Core 2 (220-1202) domains and their exam weights:
 
 ## Question Bank Coverage
 
-### Core 1 (220-1201) — 715 questions
+### Core 1 (220-1201) — 1,205 questions
 
-The Core 1 question bank draws from two sources, tracked by the `origin` field:
+The Core 1 question bank draws from three sources, tracked by the `origin` field:
 
 | Source | Origin value | Questions | ID range |
 |--------|-------------|-----------|----------|
 | Original bank | `"original"` | 160 | `1201-001` – `1201-160` |
 | Practice Tests 01–22 | `"PT01-001"` – `"PT22-030"` | 555 | `1201-161` – `1201-715` |
-| **Total** | | **715** | |
+| CertMaster Study Material | `"CertMaster"` | 490 | `CM-1-001` – `CM-10.2-015` |
+| **Total** | | **1,205** | |
 
 **Coverage by domain:**
 
 | Domain | Questions | Bank % | Exam weight |
 |--------|-----------|--------|-------------|
-| 1.0 Mobile Devices | 118 | 16.5% | 13% |
-| 2.0 Networking | 231 | 32.3% | 23% |
-| 3.0 Hardware | 260 | 36.4% | 25% |
-| 4.0 Virtualization and Cloud Computing | 38 | 5.3% | 11% |
-| 5.0 Hardware and Network Troubleshooting | 68 | 9.5% | 28% |
+| 1.0 Mobile Devices | 183 | 15.2% | 13% |
+| 2.0 Networking | 416 | 34.5% | 23% |
+| 3.0 Hardware | 395 | 32.8% | 25% |
+| 4.0 Virtualization and Cloud Computing | 68 | 5.6% | 11% |
+| 5.0 Hardware and Network Troubleshooting | 143 | 11.9% | 28% |
 
-**Coverage by question type:**
+**CertMaster questions by module (490 total):**
 
-| Type | Count |
-|------|-------|
-| Multiple-choice (`mc`) | 563 |
-| Multi-select (`multi`) | 146 |
-| Matching / dropdown (`matching`) | 4 |
-| Drag-and-drop (`drag_drop`) | 2 |
-
-**Objective coverage:** 25 of 27 objectives have questions. Two objectives have **zero** questions:
-
-- 3.6 — Power supplies
-- 3.7 — Printers / multifunction devices
-
-**Known gaps:** Domain 4.0 (Virtualization & Cloud) and Domain 5.0 (Troubleshooting) are under-represented relative to their exam weight. Additional questions from a third source are planned.
+| Module | Topic | Questions |
+|--------|-------|-----------|
+| 1.0 | IT Specialist Intro | 5 |
+| 2.0 | Motherboards & Connectors | 55 |
+| 3.0 | System Devices | 50 |
+| 4.0 | Troubleshooting PC Hardware | 50 |
+| 5.0 | Local Networking Hardware | 70 |
+| 6.0 | Network Addressing & Internet | 75 |
+| 7.0 | Network Services | 50 |
+| 8.0 | Virtualization & Cloud | 30 |
+| 9.0 | Mobile Devices | 75 |
+| 10.0 | Print Devices | 30 |
 
 ### Core 2 (220-1202) — 16 questions
 
-This is a starter bank — most of the 36 objectives are not yet represented. Contributions welcome.
+This is a starter bank — most of the 36 objectives are not yet represented.
 
-### Acronyms — 173 questions
+### Acronyms — 200 questions
 
-Covers acronyms from both the Core 1 and Core 2 acronym lists.
+Covers acronyms from both the Core 1 and Core 2 acronym lists. Rebuilt from 8 practice test PDFs (Parts 1–8, 25 questions each).
 
 ## Project Structure
 
@@ -110,24 +112,21 @@ Covers acronyms from both the Core 1 and Core 2 acronym lists.
 ├── css/
 │   └── styles.css
 ├── js/
-│   ├── app.js
-│   └── scoring.js
+│   ├── app.js              ← exam flow, UI, state management
+│   ├── scoring.js          ← scoring engine (multi-select, drag-drop, MC)
+│   ├── results.js          ← exam history persistence (localStorage)
+│   └── dashboard.js        ← My Progress dashboard renderer
 ├── exam_assets/
 │   ├── questions.json              ← all exam data (Core 1 + Core 2 question banks)
 │   ├── acronyms_quiz.json          ← acronym quiz data
 │   ├── parse_practice_tests.py     ← practice test PDF → JSON parser script
+│   ├── extract_study_material.py   ← CertMaster image → JSON extractor (Tesseract OCR)
+│   ├── study_material/             ← per-module CertMaster JSON files (pre-merge)
 │   ├── CompTIA A+ 220-1201 Exam Objectives (2.0).pdf
 │   ├── CompTIA A+ 220-1202 Exam Objectives (2.0).pdf
-│   ├── a-plus-220-120x-perform-course.pdf   ← CertMaster Perform course
-│   ├── a-plus-220-120x-perform-course.txt   ← course text (extracted)
-│   └── a-plus-1-2-outline-perform.pdf       ← course outline
-├── review_lessons_modules_quiz_pdf/ ← module review/quiz PDFs
-├── STUDY_PLAN.md                   ← 7-week Core 1 study plan
-├── STUDY_PLAN.pdf
+│   └── a-plus-1-2-outline-perform.pdf
+├── STUDY_PLAN.md                   ← 13-day Core 1 study sprint (Oct 6, 2026)
 ├── CHEAT_SHEET.md                  ← high-yield cram reference
-├── CHEAT_SHEET.pdf
-├── PLAN_ONE_PAGER.md               ← one-page plan summary
-├── PLAN_ONE_PAGER.pdf
 ├── test_multi_select_scoring.js
 ├── package.json
 └── README.md
@@ -139,17 +138,17 @@ Covers acronyms from both the Core 1 and Core 2 acronym lists.
 - **css/styles.css** — all styling, with CSS variables for theming.
 - **js/app.js** — exam flow, UI, state management, and persistence.
 - **js/scoring.js** — scoring engine (multi-select partial credit, drag-drop, multiple-choice); importable by both the browser and the tests.
-- **exam_assets/questions.json** — all exam data: Core 1 and Core 2 question banks (with `origin` tracking), domain weights, and objective/module metadata.
-- **exam_assets/acronyms_quiz.json** — acronym quiz data (loaded at runtime into a synthetic "Acronyms" exam).
-- **exam_assets/parse_practice_tests.py** — Python script to extract questions from practice test PDFs into JSON. Requires `pdfplumber`. Uses unicode symbol markers (✓/radio/checkbox) for reliable correct-answer detection and keyword-based domain/objective mapping against the official exam objectives.
-- **test_multi_select_scoring.js** — unit tests for the scoring engine.
-- **package.json** — npm scripts (`test`, `start`).
+- **js/results.js** — exam history persistence: `saveResult()`, `loadResults()`, `clearResults()`, `getWeaknessSummary()`.
+- **js/dashboard.js** — renders the My Progress dashboard (summary cards, session history table, domain weakness tracker).
+- **exam_assets/questions.json** — all exam data: Core 1 (1,205 questions) and Core 2 question banks, domain weights, objective/module metadata.
+- **exam_assets/acronyms_quiz.json** — 200 acronym quiz questions.
+- **exam_assets/parse_practice_tests.py** — Python script to extract questions from practice test PDFs. Uses `pdfplumber` and unicode symbol markers for reliable correct-answer detection.
+- **exam_assets/extract_study_material.py** — Python/Tesseract OCR script to extract questions from CertMaster module quiz page images (JPG) into JSON. Requires `pytesseract` + `Pillow` + Tesseract installed.
 
 ### Study materials (non-app files)
 
-- **STUDY_PLAN.md/.pdf** — 7-week Core 1 (220-1201) study sprint targeting the Oct 27, 2026 exam. Point-weighted by domain, with weekly milestones and Go/No-Go readiness gate.
-- **CHEAT_SHEET.md/.pdf** — printable high-yield cram reference: ports, RAID levels, 802.11 standards, IP ranges, cloud models, laser imaging process, Windows/Linux commands, security concepts, backup types, and exam-day tactics.
-- **PLAN_ONE_PAGER.md/.pdf** — condensed wall-friendly one-page summary of the study plan.
+- **STUDY_PLAN.md** — 13-day Core 1 sprint targeting the Oct 6, 2026 exam. Point-weighted by domain, with daily sessions mapped to your schedule.
+- **CHEAT_SHEET.md** — printable high-yield cram reference: ports, RAID, 802.11, USB/SATA versions, IP ranges, cloud models, laser imaging process, and exam-day tactics.
 
 ## Getting Started
 
@@ -169,11 +168,9 @@ Opens http://localhost:8000. Requires Python 3 (uses `python -m http.server`).
 npm test
 ```
 
-Runs 16 unit tests for the scoring engine via Node.js. No browser required. The tests import the scoring functions directly from `js/scoring.js`, so they exercise the real production code rather than a copy.
+Runs unit tests for the scoring engine via Node.js. No browser required.
 
 ## Adding Questions from Practice Test PDFs
-
-The `parse_practice_tests.py` script automates extraction from practice test PDFs:
 
 ```bash
 cd exam_assets
@@ -185,8 +182,20 @@ python parse_practice_tests.py path/to/test.pdf      # process a single file
 Each PDF produces a `practice_test_N.json` file. To merge into the main `questions.json`:
 
 1. Add an `"origin"` field to each question (e.g., `"PT23-001"` for Practice Test 23, Question 1).
-2. Continue the ID sequence from the last ID in `questions.json` (currently `1201-715`).
+2. Continue the ID sequence from the last ID (currently `1201-715`).
 3. Append to the `questionBank` array in `exams["220-1201"]`.
+
+## Adding Questions from CertMaster Module Images
+
+```bash
+cd exam_assets
+pip install pytesseract Pillow
+# Install Tesseract: winget install UB-Mannheim.TesseractOCR
+python extract_study_material.py                              # process all 36 folders
+python extract_study_material.py "5.1 Network Types.pdf"     # process one folder
+```
+
+Outputs one JSON per folder to `exam_assets/study_material/`. After reviewing and cleaning the output, append each question array to `questions.json` using `origin: "CertMaster"` and IDs in the format `CM-{module}-{number}` (e.g., `CM-2.1-003`).
 
 ## Question Data Schema
 
@@ -210,26 +219,27 @@ Each entry in an exam's `questionBank` follows this shape:
 
 Fields:
 
-- **id** — unique identifier (`1201-NNN` for Core 1, `1202-NNN` for Core 2).
+- **id** — unique identifier. Format by source:
+  - `1201-NNN` — original + practice test questions (Core 1)
+  - `CM-{module}-{NNN}` — CertMaster study material (e.g., `CM-6.2-005`)
 - **domain** — must match a key in the exam's `domainWeights`.
 - **objective** — must match a key in the exam's `objectives` metadata.
 - **module** — must match a key in the exam's `modules` metadata.
-- **type** — `"mc"` (multiple-choice / true-false), `"multi"` (multi-select), `"matching"` (dropdown matching), or `"drag_drop"`.
+- **type** — `"mc"`, `"multi"`, `"matching"`, or `"drag_drop"`.
 - **difficulty** — `"easy"`, `"medium"`, or `"hard"`.
 - **stem** — the question text.
-- **explanation** — shown in the review after exam completion. Explains why the correct answer is correct.
-- **options** — array of answer choices (text). For `matching` type, these are the answer pool.
-- **correctAnswer** — for `mc`: single-element array; for `multi`: array of correct options; for `matching`: object mapping items to correct answers; for `drag_drop`: object mapping zones to items.
-- **origin** — tracks the question source: `"original"` for the initial hand-written bank, `"PT01-001"` through `"PT22-030"` for practice tests (format: `PT{test_number}-{question_number}`). New sources should use a distinct prefix.
-
-Additional fields for `matching` type:
-- **items** — array of items to match (left column / dropdown labels).
+- **explanation** — shown in review after exam completion.
+- **options** — array of answer choices.
+- **correctAnswer** — for `mc`: single-element array; for `multi`: array of correct options.
+- **origin** — source tracking:
+  - `"original"` — initial hand-written bank
+  - `"PT01-001"` – `"PT22-030"` — practice test PDFs
+  - `"CertMaster"` — CertMaster module quiz images
 
 ## Contributing
 
 - Questions must include all schema fields, including `origin`.
 - `objective` and `module` must reference valid keys in the exam's metadata tables.
-- Domain must match a key in the exam's `domainWeights`.
 - Run `npm test` before submitting.
 
 ## License

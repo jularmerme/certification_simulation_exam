@@ -6,6 +6,8 @@ let appState = {
   answers: {},
   flagged: new Set(),
   autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
+  checkedQuestions: new Set(), // Questions where "Check" has been pressed — feedback shown, locked
+  examTimeAllotted: 0, // Time budget (seconds) of the current run — reused when retaking the same exam
   
   displayedQuestionIds: new Set(), // Track question IDs already displayed to prevent duplicates
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
@@ -93,6 +95,35 @@ window.addEventListener('DOMContentLoaded', async () => {
       }))
     };
     
+    // Load Others (reference tables) quiz
+    try {
+      const othersResponse = await fetch('exam_assets/others_quiz.json');
+      if (!othersResponse.ok) throw new Error('HTTP ' + othersResponse.status);
+      const othersData = await othersResponse.json();
+      if (!othersData || !othersData.othersQuiz || !Array.isArray(othersData.othersQuiz.questions)) {
+        throw new Error('Unexpected format in others_quiz.json');
+      }
+      window.questionBank.exams['others'] = {
+        name: 'Reference Tables',
+        code: 'Reference',
+        questions: 9,
+        timeLimit: 20,
+        minScore: 0,
+        maxScore: 100,
+        passingScore: 80,
+        questionBank: othersData.othersQuiz.questions
+      };
+    } catch (othersErr) {
+      console.error('Failed to load others_quiz.json:', othersErr);
+      // Non-fatal: Core 1/2 and Acronyms still work; Others card will be disabled.
+      const othCard = document.getElementById('cardOthers');
+      if (othCard) {
+        othCard.style.opacity = '0.4';
+        othCard.style.pointerEvents = 'none';
+        othCard.title = 'Reference Tables failed to load — check others_quiz.json';
+      }
+    }
+
     // Fill in the intro cards now that every exam's bank size is known
     populateIntroCards();
     
@@ -122,6 +153,7 @@ function checkAndRestoreExamState() {
       appState.answers = state.answers || {};
       appState.flagged = new Set(state.flagged || []);
       appState.autoFlagged = new Set(state.autoFlagged || []);
+      appState.checkedQuestions = new Set(state.checkedQuestions || []);
       // saveExamState() persists this, so it must be rehydrated too or validated
       // drag-drop answers unlock themselves after a resume.
       appState.validatedDragDrops = new Set(state.validatedDragDrops || []);
@@ -136,7 +168,23 @@ function checkAndRestoreExamState() {
       
       // CRITICAL: Restore the SAVED questions, not generate new ones
       if (state.questions && state.questions.length > 0) {
-        appState.questions = state.questions;
+        // Re-enforce True/False order on restore — saved state may carry a
+        // shuffled order from before the fix was deployed.
+        appState.questions = state.questions.map(q => {
+          if (q.options && q.options.length === 2 &&
+              q.options.every(o => o.toLowerCase() === 'true' || o.toLowerCase() === 'false')) {
+            q.options = ['True', 'False'];
+          }
+          // Re-enforce "All of the above" as last option
+          if (q.options) {
+            const allAboveIdx = q.options.findIndex(o => o.toLowerCase() === 'all of the above');
+            if (allAboveIdx > -1 && allAboveIdx !== q.options.length - 1) {
+              const [allAbove] = q.options.splice(allAboveIdx, 1);
+              q.options.push(allAbove);
+            }
+          }
+          return q;
+        });
         
         // Show exam screen
         const exam = window.questionBank.exams[state.examCode];
@@ -176,7 +224,7 @@ function saveExamState() {
     answers: appState.answers,
     flagged: Array.from(appState.flagged),
     autoFlagged: Array.from(appState.autoFlagged),
-    validatedDragDrops: Array.from(appState.validatedDragDrops),
+    checkedQuestions: Array.from(appState.checkedQuestions),
     timeRemaining: appState.timeRemaining,
     examStartTime: appState.examStartTime,
     // P5 mode state — required so resume restores the correct mode/feedback/filter
@@ -236,14 +284,16 @@ function formatPassScore(exam) {
 const EXAM_BUTTON_LABELS = {
   '220-1201': 'Begin Core 1 Exam',
   '220-1202': 'Begin Core 2 Exam',
-  'acronyms': 'Begin Acronyms Quiz'
+  'acronyms': 'Begin Acronyms Quiz',
+  'others':   'Begin Reference Tables'
 };
 
 /** Maps each intro card's element-id prefix to its exam code. */
 const INTRO_CARDS = [
   { prefix: 'c1', code: '220-1201' },
   { prefix: 'c2', code: '220-1202' },
-  { prefix: 'acr', code: 'acronyms' }
+  { prefix: 'acr', code: 'acronyms' },
+  { prefix: 'oth', code: 'others' }
 ];
 
 function setElementText(id, value) {
@@ -280,7 +330,7 @@ function populateIntroCards() {
 
 // Screen visibility helper: show exactly one of the top-level screens.
 function showScreen(id) {
-  ['screenIntro', 'screenModePicker', 'screenExam', 'screenResults'].forEach(s => {
+  ['screenIntro', 'screenModePicker', 'screenOthersPicker', 'screenExam', 'screenResults', 'screenDashboard'].forEach(s => {
     const el = document.getElementById(s);
     if (el) el.classList.toggle('hidden', s !== id);
   });
@@ -292,6 +342,12 @@ function selectExam(examCode) {
   document.getElementById('card1201').classList.toggle('selected', examCode === '220-1201');
   document.getElementById('card1202').classList.toggle('selected', examCode === '220-1202');
   document.getElementById('cardAcronyms').classList.toggle('selected', examCode === 'acronyms');
+  document.getElementById('cardOthers').classList.toggle('selected', examCode === 'others');
+
+  // Others skips the standard mode picker — it has its own topic picker
+  // (All Topics combined, or one of the 11 individual reference tables).
+  if (examCode === 'others') { openOthersPicker(); return; }
+
   openModePicker();
 }
 
@@ -324,6 +380,12 @@ function openModePicker() {
     hasDomains ? Object.keys(exam.domainWeights).length + ' domains' : 'Not available for this exam');
   setModeCardEnabled('modeModule', hasModules,
     hasModules ? Object.keys(exam.modules).length + ' modules' : 'Not available for this exam');
+
+  // Others exam: disable domain/module filters (9 reference-table questions, filtering N/A)
+  if (appState.examCode === 'others') {
+    setModeCardEnabled('modeDomain', false, 'Not available for this exam');
+    setModeCardEnabled('modeModule', false, 'Not available for this exam');
+  }
 
   showScreen('screenModePicker');
 }
@@ -449,6 +511,58 @@ function startPracticeExam() {
   runExam(questions, count * 60);
 }
 
+// Others exam: all 9 reference-table questions, full configured time, feedback on.
+function startOthersExam() {
+  const exam = window.questionBank.exams['others'];
+  if (!exam) { alert('Reference Tables exam not loaded — check others_quiz.json'); return; }
+  const questions = selectUniqueQuestions(exam.questionBank, exam.questionBank.length);
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = null;
+  runExam(questions, examTimeLimit(exam) * 60);
+}
+
+/** Others topic picker: one "All Topics" card (unchanged combined mode) plus
+ *  one card per individual reference table (single-question practice). */
+function openOthersPicker() {
+  const exam = window.questionBank.exams['others'];
+  const container = document.getElementById('othersTopicButtons');
+  if (!exam || !container) return;
+  container.innerHTML = '';
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn';
+  allBtn.innerHTML = '<span>📋 All Topics (Combined)</span>' +
+    '<span class="filter-count">(' + exam.questionBank.length + ' questions)</span>';
+  allBtn.onclick = startOthersExam;
+  container.appendChild(allBtn);
+
+  exam.questionBank.forEach(q => {
+    // topicLabel is set explicitly on each question in others_quiz.json.
+    const label = q.topicLabel || q.id;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.innerHTML = '<span>' + escapeHtml(label) + '</span>' +
+      '<span class="filter-count">(1 question)</span>';
+    btn.onclick = () => startOthersTopic(q.id);
+    container.appendChild(btn);
+  });
+
+  showScreen('screenOthersPicker');
+}
+
+/** Launch a single reference-table question as its own 1-question practice run. */
+function startOthersTopic(questionId) {
+  const exam = window.questionBank.exams['others'];
+  if (!exam) return;
+  const question = exam.questionBank.find(q => q.id === questionId);
+  if (!question) { alert('Question not found: ' + questionId); return; }
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = null;
+  runExam([question], 20 * 60);
+}
+
 // Simulation Exam: exam's configured count + timeLimit, feedback OFF.
 function startSimulationExam() {
   const exam = window.questionBank.exams[appState.examCode];
@@ -498,10 +612,12 @@ function runExam(selectedQuestions, timeSeconds) {
   const exam = window.questionBank.exams[appState.examCode];
 
   appState.questions = selectedQuestions.map(q => randomizeQuestionOptions(q));
+  appState.examTimeAllotted = timeSeconds; // Remembered so a retake can reuse the same time budget.
   appState.currentQuestionIndex = 0;
   appState.answers = {};
   appState.flagged.clear();
   appState.autoFlagged.clear();
+  appState.checkedQuestions.clear();
   appState.validatedDragDrops.clear();
   appState.displayedQuestionIds.clear();
   appState.examStartTime = Date.now();
@@ -550,7 +666,15 @@ function shuffleArray(array) {
 // Randomize options within a question
 function randomizeQuestionOptions(question) {
   const q = JSON.parse(JSON.stringify(question)); // Deep copy to avoid modifying original
-  
+
+  // Detect True/False questions and enforce True-first order — never shuffle them
+  const isTrueFalse = q.options && q.options.length === 2 &&
+    q.options.every(o => o.toLowerCase() === 'true' || o.toLowerCase() === 'false');
+  if (isTrueFalse) {
+    q.options = ['True', 'False'];
+    return q;
+  }
+
   if (q.type === 'mc') {
     // For multiple choice: shuffle options and track new correct answer index
     const correctAnswerText = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
@@ -566,9 +690,14 @@ function randomizeQuestionOptions(question) {
       text: opt,
       isCorrect: opt === correctAnswerText
     }));
+
+    // Pull out any "All of the above" option before shuffling — it always goes last
+    const allAboveIdx = optionsWithCorrectMarker.findIndex(o => o.text.toLowerCase() === 'all of the above');
+    const allAboveItem = allAboveIdx > -1 ? optionsWithCorrectMarker.splice(allAboveIdx, 1)[0] : null;
     
     // Shuffle
     const shuffled = shuffleArray(optionsWithCorrectMarker);
+    if (allAboveItem) shuffled.push(allAboveItem);
     
     // Update options and find new correct answer index
     q.options = shuffled.map(item => item.text);
@@ -583,15 +712,30 @@ function randomizeQuestionOptions(question) {
       text: opt,
       isCorrect: correctAnswerTexts.includes(opt)
     }));
+
+    // Pull out any "All of the above" option before shuffling — it always goes last
+    const allAboveIdx = optionsWithCorrectMarker.findIndex(o => o.text.toLowerCase() === 'all of the above');
+    const allAboveItem = allAboveIdx > -1 ? optionsWithCorrectMarker.splice(allAboveIdx, 1)[0] : null;
     
     // Shuffle
     const shuffled = shuffleArray(optionsWithCorrectMarker);
+    if (allAboveItem) shuffled.push(allAboveItem);
     
     // Update options and correct answers
     q.options = shuffled.map(item => item.text);
     q.correctAnswer = shuffled.filter(item => item.isCorrect).map(item => item.text);
   } 
   
+  // table_match — shuffle each column's option list once so the order stays
+  // consistent for the entire session (renderTableMatch won't re-shuffle).
+  else if (q.type === 'table_match') {
+    const shuffledOpts = {};
+    Object.keys(q.columnOptions || {}).forEach(col => {
+      shuffledOpts[col] = shuffleArray([...q.columnOptions[col]]);
+    });
+    q.columnOptions = shuffledOpts;
+  }
+
   return q;
 }
 
@@ -625,24 +769,30 @@ function updateNavigator() {
     }
     
     // Check if question is answered or flagged
-    const isAnswered = appState.answers[idx] !== undefined;
+    const isAnswered = (appState.questions[idx] && appState.questions[idx].type === 'table_match')
+      ? isTableMatchComplete(appState.questions[idx], appState.answers[idx])
+      : appState.answers[idx] !== undefined;
     const isFlagged = appState.flagged.has(idx);
     const userAnswer = appState.answers[idx];
+    const isChecked = appState.checkedQuestions.has(idx);
+    // Correctness is revealed only once feedback is enabled AND the question has
+    // actually been "Checked" (Simulation mode never reveals it at all).
+    const revealCorrectness = appState.feedbackEnabled && isChecked;
     
     // FLAGGED takes precedence over answered/unanswered
     if (isFlagged) {
       // Flagged questions are always yellow, regardless of answer state
       cell.classList.add('flagged');
     } else if (isAnswered) {
-      // Question is answered but not flagged
-      // For drag-drop questions, only show status after validation
-      if (q.type === 'drag_drop' && !appState.validatedDragDrops.has(idx)) {
-        // Don't show anything - remains gray (unanswered appearance)
-      } else if (!appState.feedbackEnabled) {
-        // Simulation mode: reveal that a question is answered, but NOT whether it
-        // is correct. Neutral blue fill, still locked. Correctness waits for results.
+      if (!revealCorrectness) {
+        // Answered but correctness not shown yet: Simulation mode, or a
+        // practice-mode question that's answered but "Check" hasn't been
+        // pressed. Neutral blue fill. Only locked once actually checked
+        // (Simulation) or checked (practice) — stays editable until then.
         cell.classList.add('answered-neutral');
-        cell.classList.add('locked');
+        if (!appState.feedbackEnabled || isChecked) {
+          cell.classList.add('locked');
+        }
       } else {
         // Practice modes: reveal correctness via color.
         const isCorrect = checkAnswerCorrect(q, userAnswer);
@@ -669,7 +819,130 @@ function updateNavigator() {
   });
 }
 
+// Helper: true when every cell in a table_match is filled
+function isTableMatchComplete(question, answer) {
+  if (!answer || !question.rows || !question.headers) return false;
+  var colHeaders = question.headers.slice(1);
+  return question.rows.every(function(row) {
+    return colHeaders.every(function(h) {
+      return answer[row.key] && answer[row.key][h];
+    });
+  });
+}
+
 // Load question
+
+/**
+ * "Check" button handler for every practice mode except Simulation.
+ * Scores the current question, marks it checked (locks inputs), paints
+ * inline correctness feedback using the same colors as the review page,
+ * and flips the Next/Check button back to "Next" — it does NOT advance.
+ */
+/**
+ * Lightweight button-only refresh, called from option onchange handlers so the
+ * Next/Check label updates immediately on selection without re-rendering the
+ * whole question (which would wipe the user's in-progress picks). Only takes
+ * effect in feedback-enabled modes (everything except Simulation); Simulation
+ * mode never shows "Check" and keeps its original Next/Submit label.
+ */
+function refreshCheckButton(questionIndex) {
+  if (!appState.feedbackEnabled) return;
+  if (appState.checkedQuestions.has(questionIndex)) return; // already checked — button stays as-is
+
+  // Mirror loadQuestion()'s isAnswered rule: table_match needs every cell
+  // filled; other types just need an answer object/value present.
+  const question = appState.questions[questionIndex];
+  const isAnswered = question && question.type === 'table_match'
+    ? isTableMatchComplete(question, appState.answers[questionIndex])
+    : appState.answers[questionIndex] !== undefined;
+  if (!isAnswered) return; // not answered enough yet — leave button as Next/disabled state
+
+  const btnNext = document.getElementById('btnNext');
+  if (!btnNext) return;
+  btnNext.textContent = 'Check';
+  btnNext.className = 'btn primary';
+  btnNext.onclick = checkCurrentQuestion;
+}
+
+function checkCurrentQuestion() {
+  const index = appState.currentQuestionIndex;
+  appState.checkedQuestions.add(index);
+
+  // Clear any auto-flag now that the question has been answered + checked.
+  if (appState.autoFlagged.has(index)) {
+    appState.flagged.delete(index);
+    appState.autoFlagged.delete(index);
+  }
+
+  saveExamState();
+  // loadQuestion() recomputes isLocked/needsCheck from checkedQuestions and will
+  // now render the question locked + colored, with the button already correct
+  // ("Next" / "Submit Exam") — no manual button fixup needed here.
+  loadQuestion(index);
+}
+
+/**
+ * Paints correct/incorrect/missed coloring directly onto the just-rendered
+ * options for the given question, reusing the same classes/colors as the
+ * review page. Called after a question has been checked (or when revisiting
+ * an already-checked question).
+ */
+function applyInlineFeedback(question, container, questionIndex) {
+  const answer = appState.answers[questionIndex];
+
+  if (question.type === 'matching') {
+    const userMap = (answer && typeof answer === 'object') ? answer : {};
+    const correctMap = question.correctAnswer || {};
+    container.querySelectorAll('.matching-row').forEach((row, i) => {
+      const key = question.items[i];
+      const isRight = userMap[key] === correctMap[key];
+      row.classList.add(isRight ? 'review-correct' : 'review-incorrect');
+    });
+  } else if (question.type === 'table_match') {
+    // Color each dropdown cell green/red based on the saved answer vs correctAnswer.
+    const userMap = (answer && typeof answer === 'object') ? answer : {};
+    const correctMap = question.correctAnswer || {};
+    const colHeaders = (question.headers || []).slice(1);
+
+    container.querySelectorAll('.table-match-row').forEach((tr, rowIdx) => {
+      const row = question.rows[rowIdx];
+      if (!row) return;
+      const cells = tr.querySelectorAll('.table-match-cell');
+      colHeaders.forEach((colHeader, colIdx) => {
+        const cell = cells[colIdx];
+        if (!cell) return;
+        const userVal = (userMap[row.key] || {})[colHeader];
+        const correctVal = (correctMap[row.key] || {})[colHeader];
+        cell.classList.add(userVal === correctVal ? 'tmr-correct' : 'tmr-wrong');
+      });
+    });
+  } else {
+    // mc / multi
+    const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer :
+      (typeof question.correctAnswer === 'string' ? [question.correctAnswer] : []);
+    const userAnswers = Array.isArray(answer) ? answer : (typeof answer === 'string' ? [answer] : []);
+    const isMulti = question.type === 'multi' ||
+      (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
+
+    container.querySelectorAll('.option').forEach(label => {
+      const optText = label.querySelector('.opt-text');
+      const option = optText ? optText.textContent : '';
+      const isCorrectOption = correctAnswers.includes(option);
+      const userPicked = userAnswers.includes(option);
+
+      if (isCorrectOption && userPicked) {
+        label.classList.add('opt-correct');
+      } else if (!isCorrectOption && userPicked) {
+        label.classList.add('opt-incorrect');
+      } else if (isCorrectOption && !userPicked && isMulti) {
+        label.classList.add('opt-missed');
+      } else if (isCorrectOption && !userPicked && !isMulti) {
+        label.classList.add('opt-correct');
+      }
+    });
+  }
+}
+
 function loadQuestion(index) {
   if (index < 0 || index >= appState.questions.length) return;
   
@@ -679,10 +952,20 @@ function loadQuestion(index) {
   // Track this question ID to prevent duplicates
   appState.displayedQuestionIds.add(question.id);
   
-  // Check if question is locked
-  const isAnswered = appState.answers[index] !== undefined;
+  // For table_match: only lock when ALL cells are filled (not on first cell)
+  const isAnswered = question.type === 'table_match'
+    ? isTableMatchComplete(question, appState.answers[index])
+    : appState.answers[index] !== undefined;
   const isFlagged = appState.flagged.has(index);
-  const isLocked = isAnswered && !isFlagged;
+
+  // Lock condition differs by mode:
+  //  - Simulation (feedbackEnabled=false): unchanged legacy behavior — locked as
+  //    soon as it's answered (you can't revisit/edit a past question).
+  //  - All other modes: options stay editable until the user presses "Check".
+  //    Flagging always unlocks (existing escape hatch), same as before.
+  const isLocked = appState.feedbackEnabled
+    ? (appState.checkedQuestions.has(index) && !isFlagged)
+    : (isAnswered && !isFlagged);
   
   // Update header
   document.getElementById('qNumber').textContent = 'Q' + (index + 1) + ' of ' + appState.questions.length;
@@ -691,21 +974,19 @@ function loadQuestion(index) {
   // Update question text
   const qStem = document.getElementById('qStem');
   
-  // Remove any existing lock indicators from previous questions
-  const existingLockIndicator = qStem.parentElement.querySelector('[data-lock-indicator]');
-  if (existingLockIndicator) {
-    existingLockIndicator.remove();
-  }
-  
   qStem.textContent = question.stem;
   
-  // Add lock indicator if question is locked
-  if (isLocked) {
+  // Lock indicator lives below the nav buttons (outside the question/options
+  // container), not above the stem. Rebuilt fresh on every loadQuestion call.
+  const lockSlot = document.getElementById('lockIndicatorSlot');
+  if (lockSlot) {
+    lockSlot.innerHTML = '';
+  }
+  if (isLocked && lockSlot) {
     const lockIndicator = document.createElement('div');
-    lockIndicator.setAttribute('data-lock-indicator', 'true');
-    lockIndicator.style.cssText = 'background: #fbe6e9; border-left: 4px solid var(--red); padding: 10px 14px; margin-bottom: 14px; border-radius: 4px; font-size: 13px; color: var(--red); font-weight: 600;';
+    lockIndicator.className = 'lock-indicator';
     lockIndicator.textContent = '🔒 This question is locked. Only flagged questions can be revisited.';
-    qStem.parentElement.insertBefore(lockIndicator, qStem);
+    lockSlot.appendChild(lockIndicator);
   }
   
   // Show hint for multi-select — mirrors the isMulti derivation in renderMultipleChoice
@@ -718,9 +999,18 @@ function loadQuestion(index) {
   optionsContainer.innerHTML = '';
   
   if (question.type === 'mc' || question.type === 'multi' || isMultiQuestion) {
-    renderMultipleChoice(question, optionsContainer, index);
-  } else if (question.type === 'drag_drop') {
-    renderDragDrop(question, optionsContainer, index);
+    renderMultipleChoice(question, optionsContainer, index, isLocked);
+  } else if (question.type === 'matching') {
+    renderMatching(question, optionsContainer, index, isLocked);
+  } else if (question.type === 'table_match') {
+    renderTableMatch(question, optionsContainer, index, isLocked);
+  }
+
+  // Once checked (or, in Simulation mode, once answered+locked isn't shown —
+  // Simulation withholds feedback entirely), paint correctness coloring.
+  const showFeedbackNow = appState.feedbackEnabled && appState.checkedQuestions.has(index);
+  if (showFeedbackNow) {
+    applyInlineFeedback(question, optionsContainer, index);
   }
   
   // Update buttons
@@ -728,16 +1018,29 @@ function loadQuestion(index) {
   const isLastQuestion = index === appState.questions.length - 1;
   const btnNext = document.getElementById('btnNext');
   
-  if (isLastQuestion) {
+  // Simulation mode: unchanged legacy Next/Submit behavior, no Check step.
+  // All other modes: show "Check" until the question has been checked, then
+  // behave exactly like today (Next / Submit Exam).
+  const needsCheck = appState.feedbackEnabled &&
+    isAnswered && !appState.checkedQuestions.has(index) && !isFlagged;
+
+  if (needsCheck) {
     btnNext.disabled = false;
-    btnNext.textContent = 'Submit Exam';
-    btnNext.className = 'btn danger';
-    btnNext.onclick = submitExam;
-  } else {
-    btnNext.disabled = false;
-    btnNext.textContent = 'Next →';
+    btnNext.textContent = 'Check';
     btnNext.className = 'btn primary';
-    btnNext.onclick = nextQuestion;
+    btnNext.onclick = checkCurrentQuestion;
+  } else {
+    if (isLastQuestion) {
+      btnNext.disabled = false;
+      btnNext.textContent = 'Submit Exam';
+      btnNext.className = 'btn danger';
+      btnNext.onclick = submitExam;
+    } else {
+      btnNext.disabled = false;
+      btnNext.textContent = 'Next →';
+      btnNext.className = 'btn primary';
+      btnNext.onclick = nextQuestion;
+    }
   }
   
   // Update flag button
@@ -751,18 +1054,15 @@ function loadQuestion(index) {
 }
 
 // Render multiple choice
-function renderMultipleChoice(question, container, questionIndex) {
+function renderMultipleChoice(question, container, questionIndex, isLocked) {
   // Derive isMulti from the type field, with a fallback to check correctAnswer length.
   // This guards against stale localStorage data where the type field may be missing.
   const isMulti = question.type === 'multi' ||
     (!question.type && Array.isArray(question.correctAnswer) && question.correctAnswer.length > 1);
   
   const currentAnswers = appState.answers[questionIndex] || (isMulti ? [] : null);
-  
-  // Check if this question is locked (answered but not flagged)
-  const isAnswered = appState.answers[questionIndex] !== undefined;
-  const isFlagged = appState.flagged.has(questionIndex);
-  const isLocked = isAnswered && !isFlagged;
+  // isLocked is now computed once in loadQuestion() and passed in, so it stays
+  // consistent with the Check/Next state machine (checkedQuestions-based lock).
   
   question.options.forEach((option, idx) => {
     const label = document.createElement('label');
@@ -810,9 +1110,10 @@ function renderMultipleChoice(question, container, questionIndex) {
         if (appState.autoFlagged.has(questionIndex) && answers.length > 0) {
           appState.flagged.delete(questionIndex);
           appState.autoFlagged.delete(questionIndex);
-          saveExamState();
-          // Don't call updateNavigator() - validation happens on Next button click
         }
+        // Don't call updateNavigator() — validation happens on Check/Next button click.
+        saveExamState();
+        refreshCheckButton(questionIndex);
       };
     } else {
       // For single choice: check if option text matches saved answer
@@ -832,9 +1133,10 @@ function renderMultipleChoice(question, container, questionIndex) {
         if (appState.autoFlagged.has(questionIndex)) {
           appState.flagged.delete(questionIndex);
           appState.autoFlagged.delete(questionIndex);
-          saveExamState();
-          // Don't call updateNavigator() - validation happens on Next button click
         }
+        // Don't call updateNavigator() — validation happens on Check/Next button click.
+        saveExamState();
+        refreshCheckButton(questionIndex);
       };
     }
     
@@ -862,246 +1164,171 @@ function renderMultipleChoice(question, container, questionIndex) {
   });
 }
 
-function renderDragDrop(question, container, questionIndex) {
-  const currentState = appState.answers[questionIndex] || {};
-  
-  // Calculate which items are currently placed (in any zone)
-  const placedItemIds = new Set();
-  Object.keys(currentState).forEach(zoneId => {
-    if (Array.isArray(currentState[zoneId])) {
-      currentState[zoneId].forEach(itemId => placedItemIds.add(itemId));
-    }
+function renderMatching(question, container, questionIndex, isLocked) {
+  // Normalise both schemas into a unified rows/choices structure:
+  //   rows    — array of { key, label } — the left-column items
+  //   choices — array of strings        — the right-column dropdown options
+  //   correct — { key: correctValue }
+  //
+  // matching schema:  items[] (strings) + options[] (strings)
+  const choices = question.options || [];
+  const rows = question.items.map(item => ({
+    key: item,
+    label: item,
+    correct: (question.correctAnswer && question.correctAnswer[item]) || ''
+  }));
+
+  // Saved answer: flat object { rowKey: chosenValue }
+  const savedAnswer = appState.answers[questionIndex] || {};
+  // isLocked is now computed once in loadQuestion() and passed in.
+
+  rows.forEach(row => {
+    const rowEl = document.createElement('div');
+    rowEl.className = 'matching-row';
+
+    const labelEl = document.createElement('span');
+    labelEl.className = 'matching-label';
+    labelEl.textContent = row.label;
+
+    const select = document.createElement('select');
+    select.className = 'matching-select';
+    select.disabled = isLocked;
+
+    // Blank placeholder
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = '— Select an answer —';
+    placeholder.disabled = true;
+    placeholder.selected = !savedAnswer[row.key];
+    select.appendChild(placeholder);
+
+    choices.forEach(choice => {
+      const opt = document.createElement('option');
+      opt.value = choice;
+      opt.textContent = choice;
+      opt.selected = savedAnswer[row.key] === choice;
+      select.appendChild(opt);
+    });
+
+    select.onchange = () => {
+      if (isLocked) return;
+      const current = appState.answers[questionIndex] || {};
+      current[row.key] = select.value;
+      appState.answers[questionIndex] = current;
+
+      // Check if all rows have a selection — mark answered when complete
+      const allFilled = rows.every(r => current[r.key]);
+      if (allFilled && appState.autoFlagged.has(questionIndex)) {
+        appState.flagged.delete(questionIndex);
+        appState.autoFlagged.delete(questionIndex);
+      }
+      saveExamState();
+      // Don't call updateNavigator() — wait for Check/Next button click, same as mc/multi.
+      refreshCheckButton(questionIndex);
+    };
+
+    rowEl.appendChild(labelEl);
+    rowEl.appendChild(select);
+    container.appendChild(rowEl);
   });
-  
-  // Main wrapper with 2 columns with larger gap
+}
+
+// Render a table-match question — multi-column matching table
+function renderTableMatch(question, container, questionIndex, isLocked) {
+  const headers    = question.headers || [];
+  const colHeaders = headers.slice(1);
+  const rows       = question.rows || [];
+  const colOpts    = question.columnOptions || {};
+
+  const savedAnswer = appState.answers[questionIndex] || {};
+  // isLocked is now computed once in loadQuestion() and passed in.
+
   const wrapper = document.createElement('div');
-  wrapper.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 16px; align-items: stretch;';
-  
-  // LEFT COLUMN: Draggable items
-  const leftColumn = document.createElement('div');
-  leftColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
-  
-  const leftTitle = document.createElement('div');
-  leftTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
-  leftTitle.textContent = 'Available Options';
-  leftColumn.appendChild(leftTitle);
-  
-  const itemsDiv = document.createElement('div');
-  itemsDiv.style.cssText = 'display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #1a1f2e; border: 2px solid var(--border); border-radius: 8px; flex: 1; justify-content: flex-start;';
-  itemsDiv.id = 'items-' + questionIndex;
-  
-  // Add ondrop to available options container so items can be dragged back
-  itemsDiv.ondrop = (e) => {
-    e.preventDefault();
-    const itemId = e.dataTransfer.getData('itemId');
-    const fromZone = e.dataTransfer.getData('fromZone');
-    
-    // Remove from zone if being dragged back from a zone
-    if (fromZone && fromZone !== 'items') {
-      if (!appState.answers[questionIndex]) {
-        appState.answers[questionIndex] = {};
-      }
-      
-      if (appState.answers[questionIndex][fromZone]) {
-        appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
-      }
-      
-      loadQuestion(questionIndex);
-    }
-  };
-  
-  itemsDiv.ondragover = (e) => {
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'move';
-    itemsDiv.style.backgroundColor = '#252d3d';
-    itemsDiv.style.borderColor = '#3b82f6';
-  };
-  
-  itemsDiv.ondragleave = () => {
-    itemsDiv.style.backgroundColor = '#1a1f2e';
-    itemsDiv.style.borderColor = '#2d3748';
-  };
-  
-  question.items.forEach(item => {
-    // Only show items that haven't been placed yet
-    if (!placedItemIds.has(item.id)) {
-      const chip = document.createElement('div');
-      chip.draggable = true;
-      chip.id = 'item-' + item.id;
-      chip.className = 'drag-item';
-      chip.style.cssText = 'padding: 14px 16px; background: var(--navy); color: #fff; border-radius: 6px; cursor: grab; text-align: center; font-size: 13px; font-weight: 600; transition: all 0.2s; user-select: none; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;';
-      chip.textContent = item.label;
-      chip.ondragstart = (e) => {
-        e.dataTransfer.effectAllowed = 'move';
-        e.dataTransfer.setData('itemId', item.id);
-        e.dataTransfer.setData('fromZone', 'items');
-        chip.style.opacity = '0.6';
-      };
-      chip.ondragend = () => {
-        chip.style.opacity = '1';
-      };
-      chip.onmouseenter = () => {
-        chip.style.cursor = 'grab';
-        chip.style.transform = 'scale(1.03)';
-        chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-      };
-      chip.onmouseleave = () => {
-        chip.style.transform = 'scale(1)';
-        chip.style.boxShadow = 'none';
-      };
-      itemsDiv.appendChild(chip);
-    }
+  wrapper.className = 'table-match-wrapper';
+
+  const table = document.createElement('table');
+  table.className = 'table-match';
+
+  // Header row
+  const thead = document.createElement('thead');
+  const hRow  = document.createElement('tr');
+  headers.forEach(h => {
+    const th = document.createElement('th');
+    th.className = 'table-match-th';
+    th.textContent = h;
+    hRow.appendChild(th);
   });
-  
-  leftColumn.appendChild(itemsDiv);
-  wrapper.appendChild(leftColumn);
-  
-  // RIGHT COLUMN: Drop zones
-  const rightColumn = document.createElement('div');
-  rightColumn.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
-  
-  const rightTitle = document.createElement('div');
-  rightTitle.style.cssText = 'font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px;';
-  rightTitle.textContent = 'Match To';
-  rightColumn.appendChild(rightTitle);
-  
-  // Drop zones - calculate equal height
-  const zonesContainer = document.createElement('div');
-  zonesContainer.style.cssText = 'display: flex; flex-direction: column; gap: 12px; flex: 1;';
-  
-  question.dropZones.forEach((zone, zoneIdx) => {
-    const zoneDiv = document.createElement('div');
-    zoneDiv.style.cssText = 'padding: 14px; background: #1a1f2e; border: 2px dashed var(--border); border-radius: 8px; flex: 1; min-height: 80px; transition: all 0.2s; display: flex; flex-direction: column;';
-    zoneDiv.id = 'zone-' + zone.id;
-    
-    const label = document.createElement('div');
-    label.style.cssText = 'font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.5px;';
-    label.textContent = zone.label;
-    zoneDiv.appendChild(label);
-    
-    const itemsInZone = document.createElement('div');
-    itemsInZone.id = 'zone-items-' + zone.id;
-    itemsInZone.style.cssText = 'display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;';
-    
-    // Track which items are in this zone (with order)
-    if (currentState[zone.id]) {
-      currentState[zone.id].forEach((itemId, index) => {
-        const item = question.items.find(i => i.id === itemId);
-        if (item) {
-          addPlacedItemChip(item, itemId, zone, questionIndex, index, currentState[zone.id].length, itemsInZone);
-        }
+  thead.appendChild(hRow);
+  table.appendChild(thead);
+
+  // Body rows
+  const tbody = document.createElement('tbody');
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.className = 'table-match-row';
+
+    // Fixed key cell
+    const keyTd = document.createElement('td');
+    keyTd.className = 'table-match-key';
+    keyTd.textContent = row.key;
+    tr.appendChild(keyTd);
+
+    // Dropdown cell for each non-key column
+    colHeaders.forEach(colHeader => {
+      const td = document.createElement('td');
+      td.className = 'table-match-cell';
+
+      const select = document.createElement('select');
+      select.className = 'matching-select table-match-select';
+      select.disabled = isLocked;
+
+      // Placeholder
+      const ph = document.createElement('option');
+      ph.value = '';
+      ph.textContent = '— Select —';
+      ph.disabled = true;
+      const savedCell = (savedAnswer[row.key] || {})[colHeader];
+      ph.selected = !savedCell;
+      select.appendChild(ph);
+
+      // Shuffled options
+      const opts = colOpts[colHeader] || [];
+      opts.forEach(opt => {
+        const o = document.createElement('option');
+        o.value = opt;
+        o.textContent = opt;
+        o.selected = savedCell === opt;
+        select.appendChild(o);
       });
-    }
-    
-    zoneDiv.appendChild(itemsInZone);
-    
-    zoneDiv.ondrop = (e) => {
-      e.preventDefault();
-      const itemId = e.dataTransfer.getData('itemId');
-      const fromZone = e.dataTransfer.getData('fromZone');
-      
-      if (!appState.answers[questionIndex]) {
-        appState.answers[questionIndex] = {};
-      }
-      
-      // Remove from previous zone if moving between zones
-      if (fromZone && fromZone !== 'items') {
-        if (appState.answers[questionIndex][fromZone]) {
-          appState.answers[questionIndex][fromZone] = appState.answers[questionIndex][fromZone].filter(id => id !== itemId);
+
+      select.onchange = () => {
+        if (isLocked) return;
+        const current = appState.answers[questionIndex] || {};
+        if (!current[row.key]) current[row.key] = {};
+        current[row.key][colHeader] = select.value;
+        appState.answers[questionIndex] = current;
+
+        // Clear auto-flag if all cells are now filled
+        if (isTableMatchComplete(question, current) && appState.autoFlagged.has(questionIndex)) {
+          appState.flagged.delete(questionIndex);
+          appState.autoFlagged.delete(questionIndex);
         }
-      }
-      
-      // Initialize zone if needed
-      if (!appState.answers[questionIndex][zone.id]) {
-        appState.answers[questionIndex][zone.id] = [];
-      }
-      
-      // Add to zone - check if at capacity (typically 1 item per zone in matching)
-      // Get max items allowed for this zone (check question structure)
-      const maxItems = zone.correctItems ? zone.correctItems.length : 1;
-      
-      // If zone is at capacity, remove the first (oldest) item
-      if (appState.answers[questionIndex][zone.id].length >= maxItems) {
-        appState.answers[questionIndex][zone.id].shift();
-      }
-      
-      // Add new item if not already there
-      if (!appState.answers[questionIndex][zone.id].includes(itemId)) {
-        appState.answers[questionIndex][zone.id].push(itemId);
-      }
-      
-      loadQuestion(questionIndex);
-    };
-    
-    zoneDiv.ondragover = (e) => {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      zoneDiv.style.backgroundColor = '#252d3d';
-      zoneDiv.style.borderColor = '#2ecc71';
-    };
-    
-    zoneDiv.ondragleave = () => {
-      zoneDiv.style.backgroundColor = '#1a1f2e';
-      zoneDiv.style.borderColor = '#2d3748';
-    };
-    
-    zonesContainer.appendChild(zoneDiv);
+        saveExamState();
+        // Don't call updateNavigator() — wait for Check/Next button click, same as mc/multi.
+        refreshCheckButton(questionIndex);
+      };
+
+      td.appendChild(select);
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
   });
-  
-  rightColumn.appendChild(zonesContainer);
-  wrapper.appendChild(rightColumn);
+
+  table.appendChild(tbody);
+  wrapper.appendChild(table);
   container.appendChild(wrapper);
 }
 
-// Helper function to create placed item chip with click-to-remove
-function addPlacedItemChip(item, itemId, zone, questionIndex, itemIndex, totalInZone, container) {
-  const chip = document.createElement('div');
-  chip.draggable = true;
-  chip.id = 'item-placed-' + itemId + '-' + zone.id;
-  chip.style.cssText = 'padding: 12px 16px; background: var(--green); color: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.2s; user-select: none; position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between;';
-  chip.textContent = item.label + ' ✕';
-  chip.title = 'Click to remove or drag back to Available Options';
-  
-  // Drag support - can drag back to left column
-  chip.ondragstart = (e) => {
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('itemId', itemId);
-    e.dataTransfer.setData('fromZone', zone.id);
-    chip.style.opacity = '0.6';
-  };
-  
-  chip.ondragend = () => {
-    chip.style.opacity = '1';
-  };
-  
-  // Hover effects
-  chip.onmouseenter = () => {
-    chip.style.transform = 'scale(1.02)';
-    chip.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
-    chip.style.background = '#157a3a';
-  };
-  
-  chip.onmouseleave = () => {
-    chip.style.transform = 'scale(1)';
-    chip.style.boxShadow = 'none';
-    chip.style.background = 'var(--green)';
-  };
-  
-  // Click to remove
-  chip.onclick = (e) => {
-    e.preventDefault();
-    if (!appState.answers[questionIndex][zone.id]) return;
-    
-    // Find and remove this item from zone
-    const index = appState.answers[questionIndex][zone.id].indexOf(itemId);
-    if (index > -1) {
-      appState.answers[questionIndex][zone.id].splice(index, 1);
-      loadQuestion(questionIndex);
-    }
-  };
-  
-  container.appendChild(chip);
-}
 
 // Navigation
 function prevQuestion() {
@@ -1112,17 +1339,6 @@ function prevQuestion() {
     // Auto-flag unanswered questions
     appState.flagged.add(appState.currentQuestionIndex);
     appState.autoFlagged.add(appState.currentQuestionIndex);
-  } else if (currentQuestion.type === 'drag_drop') {
-    // For drag-drop: only validate (lock) if answer is 100% correct
-    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
-    if (isCorrect) {
-      // Mark as validated so navigator shows green and question locks
-      appState.validatedDragDrops.add(appState.currentQuestionIndex);
-    } else {
-      // Incomplete/incorrect drag-drop - auto-flag for review
-      appState.flagged.add(appState.currentQuestionIndex);
-      appState.autoFlagged.add(appState.currentQuestionIndex);
-    }
   }
   
   saveExamState();
@@ -1140,17 +1356,6 @@ function nextQuestion() {
     // Auto-flag unanswered questions
     appState.flagged.add(appState.currentQuestionIndex);
     appState.autoFlagged.add(appState.currentQuestionIndex);
-  } else if (currentQuestion.type === 'drag_drop') {
-    // For drag-drop: only validate (lock) if answer is 100% correct
-    const isCorrect = checkAnswerCorrect(currentQuestion, appState.answers[appState.currentQuestionIndex]);
-    if (isCorrect) {
-      // Mark as validated so navigator shows green and question locks
-      appState.validatedDragDrops.add(appState.currentQuestionIndex);
-    } else {
-      // Incomplete/incorrect drag-drop - auto-flag for review
-      appState.flagged.add(appState.currentQuestionIndex);
-      appState.autoFlagged.add(appState.currentQuestionIndex);
-    }
   }
   
   saveExamState();
@@ -1161,16 +1366,12 @@ function nextQuestion() {
 }
 
 function jumpToQuestion(index) {
-  // Check if question is answered but not flagged - if so, prevent navigation
-  const isAnswered = appState.answers[index] !== undefined;
-  const isFlagged = appState.flagged.has(index);
-  
-  if (isAnswered && !isFlagged) {
-    // Question is answered and not flagged - locked, cannot navigate
-    // Silently prevent navigation, the disabled cursor feedback is enough
-    return;
-  }
-  
+  // Always navigate to the clicked question, even if it's locked — locked
+  // just means its inputs are disabled (read-only view), not that it's
+  // unreachable. loadQuestion() renders the lock indicator/colors/disabled
+  // inputs itself based on the same isLocked rule, so nothing else needed here.
+  if (index < 0 || index >= appState.questions.length) return;
+
   loadQuestion(index);
   updateNavigator(); // Update navigator when jumping to a question
 }
@@ -1285,8 +1486,73 @@ function submitExam() {
     examCode: appState.examCode
   }));
   
+  // Clear the in-progress exam state so a page reload after submission
+  // never restores this session as an unfinished exam.
+  localStorage.removeItem('aplus_exam_state');
+
+  // Persist result to progress history before showing modal
+  if (typeof saveResult === 'function') {
+    saveResult(examResults, appState, exam);
+  }
+
+  // Single-topic Others run (1 question): remember which topic so "Start Over"
+  // can relaunch the exact same question. Hidden for every other exam/mode.
+  const btnStartOver = document.getElementById('btnStartOverTopic');
+  if (btnStartOver) {
+    const isSingleOthersTopic = appState.examCode === 'others' && appState.questions.length === 1;
+    btnStartOver.classList.toggle('hidden', !isSingleOthersTopic);
+    if (isSingleOthersTopic) {
+      window.lastOthersTopicId = appState.questions[0].id;
+    }
+  }
+
+  // Remember this run's exact question set + settings so "Retake Same Exam"
+  // can relaunch them in a freshly shuffled order (options are re-randomized
+  // too, same as any other new run, via randomizeQuestionOptions in runExam).
+  // Skipped for single-question runs (Others topic mode) — "Start Over" above
+  // already covers that case and reordering 1 question is meaningless.
+  window.lastExamRetakeInfo = {
+    examCode: appState.examCode,
+    questions: appState.questions,
+    timeSeconds: appState.examTimeAllotted || (appState.questions.length * 60),
+    examMode: appState.examMode,
+    feedbackEnabled: appState.feedbackEnabled,
+    activeFilter: appState.activeFilter
+  };
+  const btnRetake = document.getElementById('btnRetakeShuffled');
+  if (btnRetake) {
+    const isSingleQuestionRun = appState.questions.length <= 1;
+    btnRetake.classList.toggle('hidden', isSingleQuestionRun);
+  }
+
   // Show completion modal first
   showCompletionModal();
+}
+
+/** Relaunch the same single reference-table question the user just finished. */
+function restartOthersTopic() {
+  if (!window.lastOthersTopicId) { backToMenu(); return; }
+  startOthersTopic(window.lastOthersTopicId);
+}
+
+/**
+ * Retake the exam just finished, with the exact same set of questions but in
+ * a freshly randomized order. Option order is also re-shuffled per question,
+ * same as any fresh run, via randomizeQuestionOptions() inside runExam().
+ * Same mode (practice/simulation/domain/module), same time budget, same
+ * feedback setting, and same active filter (if any) as the original run.
+ */
+function retakeSameExamShuffled() {
+  const info = window.lastExamRetakeInfo;
+  if (!info || !info.questions || info.questions.length === 0) { backToMenu(); return; }
+
+  appState.examCode = info.examCode;
+  appState.examMode = info.examMode;
+  appState.feedbackEnabled = info.feedbackEnabled;
+  appState.activeFilter = info.activeFilter;
+
+  const shuffledQuestions = shuffleArray(info.questions);
+  runExam(shuffledQuestions, info.timeSeconds);
 }
 
 // Show completion modal
@@ -1481,8 +1747,8 @@ function renderReviewPage() {
     };
     const msg = EMPTY_MESSAGES[reviewPaginationState.currentFilter] || 'No questions to display';
     const emptyMsg = document.createElement('div');
-    emptyMsg.style.cssText = 'text-align: center; padding: 40px 20px; color: var(--muted);';
-    emptyMsg.innerHTML = '<div style="font-size: 14px;">' + msg + '</div>';
+    emptyMsg.className = 'review-empty-msg';
+    emptyMsg.innerHTML = '<div class="review-empty-text">' + msg + '</div>';
     reviewList.appendChild(emptyMsg);
     return;
   }
@@ -1496,64 +1762,217 @@ function renderReviewPage() {
     const answer = appState.answers[idx];
     const result = checkAnswerCorrect(q, answer);
     const isUnanswered = answer === undefined;
-    
-    // Determine score category for border color
-    let borderColor = 'var(--muted)';  // Gray for unanswered
-    let scoreLabel = 'Unanswered';
-    
+
+    // Resolve correct answers as an array of text strings
+    const correctAnswers = Array.isArray(q.correctAnswer) ? q.correctAnswer :
+      (typeof q.correctAnswer === 'string' ? [q.correctAnswer] : []);
+
+    // Resolve user answers as an array of text strings
+    let userAnswers = [];
     if (!isUnanswered) {
-      if (typeof result === 'number') {
-        if (result === 100) {
-          borderColor = 'var(--green)';
-          scoreLabel = '100% Correct';
-        } else if (result === 50) {
-          borderColor = 'var(--amber)';
-          scoreLabel = '50% Partial';
-        } else {
-          borderColor = 'var(--red)';
-          scoreLabel = '0% Incorrect';
-        }
-      } else if (result === true) {
-        borderColor = 'var(--green)';
-        scoreLabel = '100% Correct';
-      } else {
-        borderColor = 'var(--red)';
-        scoreLabel = '0% Incorrect';
+      if (Array.isArray(answer)) {
+        userAnswers = answer;
+      } else if (typeof answer === 'string') {
+        userAnswers = [answer];
       }
     }
-    
+
+    // Determine card-level score label and accent color
+    let accentColor = 'var(--muted)';
+    let scoreLabel = 'Unanswered';
+    if (!isUnanswered) {
+      if (typeof result === 'number') {
+        if (result === 100)      { accentColor = 'var(--green)'; scoreLabel = '100% Correct'; }
+        else if (result === 50)  { accentColor = 'var(--amber)'; scoreLabel = '50% Partial';  }
+        else                     { accentColor = 'var(--red)';   scoreLabel = '0% Incorrect'; }
+      } else if (result === true) {
+        accentColor = 'var(--green)'; scoreLabel = '100% Correct';
+      } else {
+        accentColor = 'var(--red)'; scoreLabel = '0% Incorrect';
+      }
+    }
+
+    // ── Question card ──────────────────────────────────────────────────────
     const item = document.createElement('div');
-    item.style.cssText = 'background: var(--card); border: 1px solid var(--border); border-left: 5px solid ' + borderColor + '; border-radius: 8px; padding: 16px; margin-bottom: 12px;';
-    
+    item.className = 'review-item-card';
+    item.style.borderLeftColor = accentColor;
+
+    // Header: Q number • domain + score label
     const header = document.createElement('div');
-    header.style.cssText = 'font-size: 12px; color: var(--muted); margin-bottom: 8px; display: flex; justify-content: space-between;';
-    header.innerHTML = '<span>Q' + (idx + 1) + ' • ' + q.domain + '</span><span style="font-weight: 600; color: ' + borderColor + ';">' + scoreLabel + '</span>';
-    
+    header.className = 'review-item-header';
+    header.innerHTML = '<span>Q' + (idx + 1) + ' &nbsp;·&nbsp; ' + escapeHtml(q.domain) + '</span>' +
+      '<span style="font-weight: 600; color: ' + accentColor + ';">' + scoreLabel + '</span>';
+
+    // Question stem
     const stem = document.createElement('div');
-    stem.style.cssText = 'font-weight: 600; margin-bottom: 10px; font-size: 14px;';
+    stem.className = 'review-item-stem';
     stem.textContent = q.stem;
-    
-    // User answer display
-    const answerDiv = document.createElement('div');
-    answerDiv.className = 'review-item-answer';
-    answerDiv.innerHTML = '<strong>Your Answer:</strong> ' + formatUserAnswer(q, answer);
-    
-    // Correct answer display
-    const correctDiv = document.createElement('div');
-    correctDiv.className = 'review-item-answer';
-    correctDiv.innerHTML = '<strong>Correct Answer:</strong> ' + formatCorrectAnswer(q);
-    
-    // Explanation
-    const explanation = document.createElement('div');
-    explanation.style.cssText = 'font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px;';
-    explanation.innerHTML = '<strong>Explanation:</strong> ' + q.explanation;
-    
-    item.appendChild(header);
-    item.appendChild(stem);
-    item.appendChild(answerDiv);
-    item.appendChild(correctDiv);
-    item.appendChild(explanation);
+
+    // Multi-select hint
+    const isMulti = q.type === 'multi' ||
+      (!q.type && Array.isArray(q.correctAnswer) && q.correctAnswer.length > 1);
+    if (isMulti) {
+      const hint = document.createElement('div');
+      hint.className = 'review-item-hint';
+      hint.textContent = 'Select all that apply';
+      item.appendChild(header);
+      item.appendChild(stem);
+      item.appendChild(hint);
+    } else {
+      item.appendChild(header);
+      item.appendChild(stem);
+    }
+
+    // ── Option rows ────────────────────────────────────────────────────────
+    const optionsWrap = document.createElement('div');
+
+    if (q.type === 'table_match') {
+      // Render table_match as a comparison table: key col fixed, other cols show user vs correct
+      const userMap    = (answer && typeof answer === 'object') ? answer : {};
+      const correctMap = (q.correctAnswer && typeof q.correctAnswer === 'object') ? q.correctAnswer : {};
+      const colHeaders = (q.headers || []).slice(1);
+
+      const tbl = document.createElement('table');
+      tbl.className = 'table-match-review-table';
+
+      // Header row
+      const tHead = document.createElement('tr');
+      [(q.headers || [])[0] || 'Item'].concat(colHeaders).forEach(h => {
+        const th = document.createElement('th');
+        th.textContent = h;
+        tHead.appendChild(th);
+      });
+      tbl.appendChild(tHead);
+
+      (q.rows || []).forEach(row => {
+        const tr = document.createElement('tr');
+
+        const keyTd = document.createElement('td');
+        keyTd.className = 'tmr-key';
+        keyTd.textContent = row.key;
+        tr.appendChild(keyTd);
+
+        colHeaders.forEach(colH => {
+          const correctVal = (correctMap[row.key] || {})[colH] || '';
+          const userVal    = (userMap[row.key]    || {})[colH] || '';
+          const isRight    = !isUnanswered && userVal === correctVal;
+          const isEmpty    = !userVal;
+
+          const td = document.createElement('td');
+          if (!isUnanswered && !isEmpty) {
+            td.className = isRight ? 'tmr-correct' : 'tmr-wrong';
+          }
+
+          if (isUnanswered || isEmpty) {
+            td.innerHTML = '<span style="color:var(--muted)">—</span>';
+          } else if (isRight) {
+            td.textContent = userVal + ' ✓';
+          } else {
+            td.innerHTML = '<span style="text-decoration:line-through;opacity:0.6">' + escapeHtml(userVal) + '</span>'
+              + ' <span style="color:var(--green)">→ ' + escapeHtml(correctVal) + '</span>';
+          }
+          tr.appendChild(td);
+        });
+        tbl.appendChild(tr);
+      });
+
+      const wrap = document.createElement('div');
+      wrap.className = 'table-match-review-wrap';
+      wrap.appendChild(tbl);
+      optionsWrap.appendChild(wrap);
+
+    } else if (q.type === 'matching') {
+      // Render matching rows: left = item label, right = user's pick vs correct
+      const userMap    = (answer && typeof answer === 'object') ? answer : {};
+      const correctMap = (q.correctAnswer && typeof q.correctAnswer === 'object') ? q.correctAnswer : {};
+
+      q.items.forEach(itemKey => {
+        const userPick   = userMap[itemKey] || '';
+        const correctVal = correctMap[itemKey] || '';
+        const isRight    = userPick === correctVal;
+
+        const row = document.createElement('div');
+        row.className = 'matching-row ' + (isUnanswered ? '' : isRight ? 'review-correct' : 'review-incorrect');
+
+        const labelEl = document.createElement('span');
+        labelEl.className = 'matching-label';
+        labelEl.textContent = itemKey;
+
+        const pickedEl = document.createElement('span');
+        pickedEl.className = 'review-match-picked';
+        pickedEl.textContent = userPick || '—';
+
+        const badge = document.createElement('span');
+        badge.className = 'matching-answer-badge ' + (isUnanswered ? '' : isRight ? 'correct' : 'incorrect');
+        if (!isUnanswered && !isRight) {
+          badge.textContent = '✓ ' + correctVal;
+        } else if (!isUnanswered && isRight) {
+          badge.textContent = '✓';
+        }
+
+        row.appendChild(labelEl);
+        row.appendChild(pickedEl);
+        if (badge.textContent) row.appendChild(badge);
+        optionsWrap.appendChild(row);
+      });
+    } else {
+      // mc / multi option rows
+      // For each option determine its visual state:
+      //   • correct   → green  (it IS a correct answer)
+      //   • incorrect → red    (user picked it AND it is wrong)
+      //   • missed    → amber  (user did NOT pick it but it was correct — partial only)
+      //   • neutral   → default border (not picked, not correct)
+      (q.options || []).forEach(option => {
+        const isCorrectOption = correctAnswers.includes(option);
+        const userPicked      = userAnswers.includes(option);
+
+        let optClass = 'review-option';
+        let markerSymbol = '';
+
+        if (isCorrectOption && userPicked) {
+          optClass += ' review-correct';
+          markerSymbol = '✓';
+        } else if (!isCorrectOption && userPicked) {
+          optClass += ' review-incorrect';
+          markerSymbol = '✗';
+        } else if (isCorrectOption && !userPicked && isMulti) {
+          optClass += ' review-missed';
+          markerSymbol = '!';
+        } else if (isCorrectOption && !userPicked && !isMulti) {
+          optClass += ' review-correct';
+          markerSymbol = '✓';
+        }
+
+        const row = document.createElement('div');
+        row.className = optClass;
+
+        const marker = document.createElement('span');
+        marker.className = 'review-option-marker';
+        marker.textContent = markerSymbol;
+
+        const text = document.createElement('span');
+        text.textContent = option;
+
+        row.appendChild(marker);
+        row.appendChild(text);
+        optionsWrap.appendChild(row);
+      });
+    }
+
+    item.appendChild(optionsWrap);
     reviewList.appendChild(item);
+
+    // ── Explanation block (separate container, outside card) ───────────────
+    if (q.explanation) {
+      const expBlock = document.createElement('div');
+      expBlock.className = 'review-explanation';
+      expBlock.innerHTML = '<strong>Explanation</strong>' + escapeHtml(q.explanation);
+      reviewList.appendChild(expBlock);
+    } else {
+      // Close-off the rounded bottom even without explanation
+      item.style.borderRadius = '8px';
+      item.style.marginBottom = '20px';
+    }
   }
   
   // Update pagination for filtered results
@@ -1579,21 +1998,23 @@ function formatUserAnswer(question, answer) {
       return answer.join(', ') || '<em>No answer selected</em>';
     }
     return '<em>No answer selected</em>';
-  } else if (question.type === 'drag_drop') {
-    let answerText = '';
-    question.dropZones.forEach(zone => {
-      const placed = answer[zone.id] || [];
-      if (placed.length > 0) {
-        const items = placed.map(itemId => {
-          const item = question.items.find(i => i.id === itemId);
-          return item ? item.label : itemId;
-        }).join(', ');
-        answerText += '<div>' + zone.label + ': ' + items + '</div>';
-      } else {
-        answerText += '<div>' + zone.label + ': <em style="color: #999;">empty</em></div>';
-      }
-    });
-    return answerText || '<em>No items placed</em>';
+  } else if (question.type === 'matching') {
+    if (answer && typeof answer === 'object') {
+      return Object.entries(answer)
+        .map(([k, v]) => '<div>' + escapeHtml(k) + ': <strong>' + escapeHtml(v) + '</strong></div>')
+        .join('') || '<em>No answer selected</em>';
+    }
+    return '<em>No answer selected</em>';
+  } else if (question.type === 'table_match') {
+    if (!answer || typeof answer !== 'object') return '<em>Not answered</em>';
+    const colHeaders = (question.headers || []).slice(1);
+    return (question.rows || []).map(row => {
+      const cells = colHeaders.map(h => {
+        const val = (answer[row.key] || {})[h] || '—';
+        return '<em>' + escapeHtml(h) + ':</em> ' + escapeHtml(val);
+      }).join(' &middot; ');
+      return '<div><strong>' + escapeHtml(row.key) + '</strong> &rarr; ' + cells + '</div>';
+    }).join('');
   }
   return 'N/A';
 }
@@ -1618,16 +2039,20 @@ function formatCorrectAnswer(question) {
         return correctAnswers.join(', ');
       }
     }
-  } else if (question.type === 'drag_drop') {
-    let answerText = '';
-    question.dropZones.forEach(zone => {
-      const items = zone.correctItems.map(itemId => {
-        const item = question.items.find(i => i.id === itemId);
-        return item ? item.label : itemId;
-      }).join(', ');
-      answerText += '<div>' + zone.label + ': ' + items + '</div>';
-    });
-    return answerText;
+  } else if (question.type === 'matching') {
+    if (question.correctAnswer && typeof question.correctAnswer === 'object') {
+      return Object.entries(question.correctAnswer)
+        .map(([k, v]) => '<div>' + escapeHtml(k) + ': <strong>' + escapeHtml(v) + '</strong></div>')
+        .join('');
+    }
+  } else if (question.type === 'table_match') {
+    if (!question.correctAnswer || typeof question.correctAnswer !== 'object') return 'N/A';
+    const colHeaders = (question.headers || []).slice(1);
+    return (question.rows || []).map(row => {
+      const correct = question.correctAnswer[row.key] || {};
+      const cells = colHeaders.map(h => '<em>' + escapeHtml(h) + ':</em> <strong>' + escapeHtml(correct[h] || '—') + '</strong>').join(' &middot; ');
+      return '<div><strong>' + escapeHtml(row.key) + '</strong> &rarr; ' + cells + '</div>';
+    }).join('');
   }
   return 'N/A';
 }
