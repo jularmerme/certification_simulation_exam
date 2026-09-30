@@ -17,7 +17,10 @@ let appState = {
   // P5 mode state
   examMode: 'practice',        // 'practice' | 'simulation' | 'domain' | 'module'
   feedbackEnabled: true,       // false in simulation mode (no mid-exam correctness colors)
-  activeFilter: null           // { type: 'domain'|'module', value: string, label: string } or null
+  activeFilter: null,          // { type: 'domain'|'module', value: string, label: string } or null
+  // Question-count picker: holds the pending launch config while the size modal is open.
+  // { pool: object[], mode: 'practice'|'domain'|'module', filter: {type,value,label}|null }
+  pendingLaunch: null
 };
 
 // Theme Management
@@ -367,10 +370,10 @@ function openModePicker() {
 
   // Fill per-mode meta lines.
   const bank = exam.questionBank || [];
-  const practiceN = Math.min(25, bank.length);
-  setElementText('metaPractice', practiceN + ' questions \u00b7 ' + practiceN + ' min \u00b7 feedback on');
+  setElementText('metaPractice', 'Choose 25\u2013100% of ' + bank.length + ' questions \u00b7 feedback on');
+  const simN = Math.min(SIMULATION_QUESTION_COUNT, bank.length);
   setElementText('metaSimulation',
-    examQuestionCount(exam) + ' questions \u00b7 ' + examTimeLimit(exam) + ' min \u00b7 no feedback');
+    simN + ' questions \u00b7 ' + examTimeLimit(exam) + ' min \u00b7 no feedback');
 
   // Domain / Module modes require metadata. The acronyms synthetic exam has none,
   // so disable those two cards for it rather than hiding them.
@@ -499,16 +502,14 @@ function selectUniqueQuestions(questionBank, count) {
 // activeFilter, picks a question set, then hands off to runExam().
 // ---------------------------------------------------------------------------
 
-// Practice Exam: up to 25 random from the full bank, 1 min/question, feedback on.
+// Practice Exam: choose a size (25/50/75/100% of the full bank) via the count
+// modal, then run a random set of that many questions, 1 min/question, feedback on.
 function startPracticeExam() {
   const exam = window.questionBank.exams[appState.examCode];
   if (!exam) { alert('Exam not found'); return; }
-  const count = Math.min(25, (exam.questionBank || []).length);
-  const questions = selectUniqueQuestions(exam.questionBank, count);
-  appState.examMode = 'practice';
-  appState.feedbackEnabled = true;
-  appState.activeFilter = null;
-  runExam(questions, count * 60);
+  const pool = exam.questionBank || [];
+  if (!pool.length) { alert('No questions available for this exam'); return; }
+  openCountPicker({ pool, mode: 'practice', filter: null, label: 'Practice Exam' });
 }
 
 // Others exam: all 9 reference-table questions, full configured time, feedback on.
@@ -563,32 +564,97 @@ function startOthersTopic(questionId) {
   runExam([question], 20 * 60);
 }
 
-// Simulation Exam: exam's configured count + timeLimit, feedback OFF.
+// Simulation Exam: always a fixed 90-question timed exam (clamped to bank size),
+// feedback OFF. No size prompt — simulation mimics the real exam length.
+const SIMULATION_QUESTION_COUNT = 90;
 function startSimulationExam() {
   const exam = window.questionBank.exams[appState.examCode];
   if (!exam) { alert('Exam not found'); return; }
-  const count = examQuestionCount(exam);
-  const questions = selectUniqueQuestions(exam.questionBank, count);
+  const bank = exam.questionBank || [];
+  const count = Math.min(SIMULATION_QUESTION_COUNT, bank.length);
+  const questions = selectUniqueQuestions(bank, count);
   appState.examMode = 'simulation';
   appState.feedbackEnabled = false;
   appState.activeFilter = null;
   runExam(questions, examTimeLimit(exam) * 60);
 }
 
-// Practice by Domain / Module: up to 25 random from the filtered set, feedback on.
+// Practice by Domain / Module: choose a size (25/50/75/100% of the filtered set)
+// via the count modal, then run that many random questions, feedback on.
 function startFilteredExam(type, value, label) {
   const exam = window.questionBank.exams[appState.examCode];
   if (!exam) { alert('Exam not found'); return; }
   const field = type === 'domain' ? 'domain' : 'module';
-  const filtered = (exam.questionBank || []).filter(q => q[field] === value);
-  const count = Math.min(25, filtered.length);
-  if (count === 0) return; // guarded by disabled buttons, but be safe
-  const questions = selectUniqueQuestions(filtered, count);
-  appState.examMode = type;               // 'domain' | 'module'
+  const pool = (exam.questionBank || []).filter(q => q[field] === value);
+  if (pool.length === 0) return; // guarded by disabled buttons, but be safe
+  openCountPicker({ pool, mode: type, filter: { type, value, label }, label });
+}
+
+// ---------------------------------------------------------------------------
+// Question-count picker modal. Lets the user pick 25/50/75/100% of the pending
+// question pool (whole bank for Practice, filtered set for Domain/Module) before
+// the exam starts. Simulation mode does not use this.
+// ---------------------------------------------------------------------------
+
+/** Number of questions for a given pool size and percentage: ceil, min 1. */
+function questionsForPercent(poolSize, pct) {
+  return Math.max(1, Math.min(poolSize, Math.ceil(poolSize * pct / 100)));
+}
+
+/** Open the size modal, stashing the pending launch config in appState. */
+function openCountPicker(spec) {
+  appState.pendingLaunch = spec;
+  const subtitle = document.getElementById('countPickerSubtitle');
+  if (subtitle) {
+    subtitle.textContent = spec.mode === 'practice'
+      ? 'Choose what portion of the full question bank to include (' +
+        spec.pool.length + ' available).'
+      : 'Choose what portion of "' + spec.label + '" to include (' +
+        spec.pool.length + ' available).';
+  }
+  // Reset the dropdown to 100% each time the modal opens.
+  const sel = document.getElementById('countPickerSelect');
+  if (sel) sel.value = '100';
+  updateCountPickerCount();
+  const modal = document.getElementById('countPickerModal');
+  if (modal) modal.classList.remove('hidden');
+}
+
+/** Live-update the "N questions" line as the dropdown changes. */
+function updateCountPickerCount() {
+  if (!appState.pendingLaunch) return;
+  const sel = document.getElementById('countPickerSelect');
+  const pct = Number(sel && sel.value) || 100;
+  const n = questionsForPercent(appState.pendingLaunch.pool.length, pct);
+  const line = document.getElementById('countPickerCount');
+  if (line) line.textContent = n + ' question' + (n === 1 ? '' : 's') + ' will be included.';
+}
+
+/** Cancel: close the modal and discard the pending launch. */
+function closeCountPicker() {
+  const modal = document.getElementById('countPickerModal');
+  if (modal) modal.classList.add('hidden');
+  appState.pendingLaunch = null;
+}
+
+/** Continue: build the sized question set and launch the exam. */
+function countPickerContinue() {
+  const spec = appState.pendingLaunch;
+  if (!spec) return;
+  const sel = document.getElementById('countPickerSelect');
+  const pct = Number(sel && sel.value) || 100;
+  const count = questionsForPercent(spec.pool.length, pct);
+  const questions = selectUniqueQuestions(spec.pool, count);
+
+  appState.examMode = spec.mode;                 // 'practice' | 'domain' | 'module'
   appState.feedbackEnabled = true;
-  appState.activeFilter = { type, value, label };
-  // 1 minute per (filtered) question
-  runExam(questions, count * 60);
+  appState.activeFilter = spec.filter;           // null for practice, {type,value,label} otherwise
+
+  const modal = document.getElementById('countPickerModal');
+  if (modal) modal.classList.add('hidden');
+  appState.pendingLaunch = null;
+
+  runExam(questions, count * 60);                // 1 minute per question
 }
 
 // Human-readable label for the current mode (badge + persistence display).
