@@ -3369,7 +3369,7 @@
           "module": "9.0",
           "type": "multi",
           "difficulty": "medium",
-          "stem": "Shares Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
+          "stem": "Which of the following actions are considered best practices for monitoring the health of a mobile device battery? (Select 3 answers)",
           "explanation": "Best practices for monitoring battery health include using built-in OS tools or third-party apps to track status, monitoring charging cycles and capacity degradation over time, and physically checking for swelling, overheating, or failure to hold a charge. Fully discharging before recharging is outdated advice for modern Li-ion batteries, and disabling battery-saving features would waste power without providing useful diagnostic data.",
           "options": [
             "Always fully discharge the battery before recharging",
@@ -4414,7 +4414,7 @@
           "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares A type of cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between networked computers is called:",
+          "stem": "A type of cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between networked computers is called:",
           "explanation": "SSH (Secure Shell) is a cryptographic network protocol that provides secure encrypted communication for remote command-line login, remote command execution, and other network services. RDP provides graphical remote access, Telnet is an unencrypted remote access protocol, and SCP is a file transfer protocol that actually uses SSH for security.",
           "options": [
             "RDP",
@@ -4917,7 +4917,7 @@
           "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which UDP port is used by a DHCP client to receive responses from a DHCP server?",
+          "stem": "Which UDP port is used by a DHCP client to receive responses from a DHCP server?",
           "explanation": "A DHCP client uses UDP port 68 to receive responses from the DHCP server. The DHCP communication uses a specific port pair: the server listens on UDP port 67, and the client listens on UDP port 68 for the server's reply.",
           "options": [
             "Port 66",
@@ -5434,7 +5434,7 @@
           "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which part of the AAA security architecture deals with the verification of the identity of a person or process?",
+          "stem": "Which part of the AAA security architecture deals with the verification of the identity of a person or process?",
           "explanation": "In the AAA (Authentication, Authorization, and Accounting) security architecture, Authentication is the process of verifying the identity of a person or process—confirming that users are who they claim to be through credentials like passwords, tokens, or biometrics. Authorization controls access rights, and Accounting tracks resource usage.",
           "options": [
             "Auditing",
@@ -5935,7 +5935,7 @@
           "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which of the terms listed below refers to a logical grouping of computers that allows hosts to communicate as if they are on the same broadcast domain, regardless of their physical location?",
+          "stem": "Which of the terms listed below refers to a logical grouping of computers that allows hosts to communicate as if they are on the same broadcast domain, regardless of their physical location?",
           "explanation": "A VLAN (Virtual Local Area Network) is a logical grouping of switch ports that creates separate broadcast domains, allowing hosts to communicate as if on the same network regardless of physical location. Unlike a VPN (which encrypts traffic over public networks) or a screened subnet (a DMZ), a VLAN segments traffic at Layer 2.",
           "options": [
             "VPN",
@@ -6977,7 +6977,7 @@
           "module": "6.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which hardware tool is specifically designed to trace and identify individual wires within a cable bundle?",
+          "stem": "Which hardware tool is specifically designed to trace and identify individual wires within a cable bundle?",
           "explanation": "A toner and probe kit (also called a tone generator and probe) is specifically designed to trace and identify individual wires within a cable bundle. The tone generator applies an audio signal to the cable, and the probe detects the signal to locate the specific wire.",
           "options": [
             "Cable certifier",
@@ -8044,7 +8044,7 @@
           "module": "3.0",
           "type": "multi",
           "difficulty": "medium",
-          "stem": "Shares Which of the following answers refer(s) to eSATA? (Select all that apply)",
+          "stem": "Which of the following answers refer(s) to eSATA? (Select all that apply)",
           "explanation": "eSATA (external SATA) provides an external connection for storage devices, supports data transfer rates up to 6 Gbps (matching SATA III), has a standard cable length of up to 2 meters, and is hot-swappable. The 4 Gbps option is incorrect as eSATA matches SATA III at 6 Gbps, and the 1-meter limit applies to internal SATA cables.",
           "options": [
             "Data transfer rate of up to 4 Gbps",
@@ -9131,7 +9131,7 @@
           "module": "3.0",
           "type": "multi",
           "difficulty": "medium",
-          "stem": "Shares Which of the following features differentiate memory cards from flash drives? (Select all that apply)",
+          "stem": "Which of the following features differentiate memory cards from flash drives? (Select all that apply)",
           "explanation": "Memory cards (SD, microSD, CF) differ from flash drives by being designed primarily to expand storage in compact electronics like cameras, smartphones, and tablets, and require dedicated card slots or external card readers rather than USB ports.",
           "options": [
             "Compatible with dedicated slots or card readers",
@@ -9645,7 +9645,7 @@
           "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which of the following terms refers to the advanced security feature integrated into modern UEFI firmware that ensures only digitally signed, trusted software is allowed to run during the system’s startup process?",
+          "stem": "Which of the following terms refers to the advanced security feature integrated into modern UEFI firmware that ensures only digitally signed, trusted software is allowed to run during the system’s startup process?",
           "explanation": "Secure Boot is a UEFI feature that ensures only trusted, digitally signed bootloaders are allowed to execute during startup. The firmware verifies each bootloader's digital signature against pre-loaded keys, blocking any unsigned or modified boot code that could indicate malware.",
           "options": [
             "Secure Boot",
@@ -10173,7 +10173,7 @@
           "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which of the PC components listed below operate on the 5V voltage rail?",
+          "stem": "Which of the PC components listed below operate on the 5V voltage rail?",
           "explanation": "USB ports and devices operate on the 5V voltage rail provided by the PSU. The USB specification defines 5V as the standard bus voltage, which is why USB ports can charge devices and power peripherals at this voltage level.",
           "options": [
             "Graphics cards",
@@ -10677,7 +10677,7 @@
           "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares A prepackaged set of laser printer spare parts, typically including components with a limited lifespan that must be replaced to maintain consistent performance and prevent failures, is commonly referred to as:",
+          "stem": "A prepackaged set of laser printer spare parts, typically including components with a limited lifespan that must be replaced to maintain consistent performance and prevent failures, is commonly referred to as:",
           "explanation": "A maintenance kit is a prepackaged set of laser printer replacement parts that typically includes feed rollers, a transfer roller, and a fuser unit. The printer tracks its internal page count and displays a maintenance alert when these components are due for replacement.",
           "options": [
             "Hardware replacement bundle",
@@ -11192,7 +11192,7 @@
           "module": "8.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares A company needs to run accounting software designed for Windows XP on a Windows 11 host. What would be the most practical modern solution?",
+          "stem": "A company needs to run accounting software designed for Windows XP on a Windows 11 host. What would be the most practical modern solution?",
           "explanation": "Running legacy software like Windows XP applications is a primary use case for client-side virtualization. A virtual machine allows the unsupported OS to run in an isolated environment on modern hardware without the complexity or security risks of dual-booting.",
           "options": [
             "Enable compatibility mode for Windows XP within Windows 11",
@@ -11707,7 +11707,7 @@
           "module": "8.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares Which cloud deployment model primarily relies on the concept of shared resources?",
+          "stem": "Which cloud deployment model primarily relies on the concept of shared resources?",
           "explanation": "The public cloud relies on shared (multi-tenant) resources, where computing infrastructure owned by a cloud service provider is shared across multiple organizations over the Internet. This shared model is the defining characteristic of public cloud deployment.",
           "options": [
             "Private cloud",
@@ -12211,7 +12211,7 @@
           "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares After upgrading a gaming PC with a high-performance GPU, the user notices sluggish in-game performance, system instability, unexpected shutdowns, and random reboots under heavy load. What is the most likely cause?",
+          "stem": "After upgrading a gaming PC with a high-performance GPU, the user notices sluggish in-game performance, system instability, unexpected shutdowns, and random reboots under heavy load. What is the most likely cause?",
           "explanation": "A high-performance GPU draws significantly more power than standard components. If the PSU lacks sufficient wattage to support the upgraded GPU under load, it causes system instability, sluggish performance, unexpected shutdowns, and random reboots as the power supply fails to deliver adequate power during peak demand.",
           "options": [
             "Overheating CPU",
@@ -12733,7 +12733,7 @@
           "module": "3.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "Shares A computer's internal storage drive is not detected in the BIOS/UEFI or within the operating system's Disk Management utility. What is the most likely first troubleshooting step to resolve this issue?",
+          "stem": "A computer's internal storage drive is not detected in the BIOS/UEFI or within the operating system's Disk Management utility. What is the most likely first troubleshooting step to resolve this issue?",
           "explanation": "When a storage drive isn't detected in BIOS/UEFI or Disk Management, the most likely first step is checking the drive's power and data cable connections. Loose or disconnected SATA data or power cables are the most common cause and the easiest to verify before investigating firmware or software issues.",
           "options": [
             "Initialize the drive",
@@ -13251,7 +13251,7 @@
           "module": "3.0",
           "type": "multi",
           "difficulty": "medium",
-          "stem": "Shares A display area on a user's monitor appears significantly smaller than the physical screen size, with black borders on all four sides. Which of the steps listed below would be relevant in troubleshooting this problem? (Select 2 answers)",
+          "stem": "A display area on a user's monitor appears significantly smaller than the physical screen size, with black borders on all four sides. Which of the steps listed below would be relevant in troubleshooting this problem? (Select 2 answers)",
           "explanation": "A display area smaller than the physical screen with black borders (underscan) is caused by either a non-native resolution setting or incorrect display scaling in the monitor's OSD (on-screen display) menu. Verifying the resolution matches the monitor's native resolution and adjusting the monitor's built-in scaling/overscan settings are the correct troubleshooting steps.",
           "options": [
             "Adjust the scale and layout options in the OS display settings",
@@ -14278,7 +14278,7 @@
           "module": "6.0",
           "type": "multi",
           "difficulty": "medium",
-          "stem": "Shares Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)",
+          "stem": "Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)",
           "explanation": "The primary causes of port flapping are physical layer issues: loose, faulty, or unsupported network cabling causes the link to repeatedly drop and reconnect, while mismatched speed and duplex settings between the NIC and switch port cause negotiation failures. The course material identifies bad cabling and configuration mismatches as the main culprits.",
           "options": [
             "Mismatched speed and duplex settings",
@@ -14974,7 +14974,7 @@
             "Replace the graphics card with a new one without consulting any documentation",
             "Escalate the issue to senior technical staff for further investigation",
             "Perform a full system backup before making any changes to the workstation.",
-            "Download and install the latest graphics card drivers 0 \" i from the manufacturer's website."
+            "Download and install the latest graphics card drivers from the manufacturer's website."
           ],
           "correctAnswer": [
             "Perform a full system backup before making any changes to the workstation."
@@ -15992,13 +15992,13 @@
           "stem": "Why is mass storage necessary in a computer system?",
           "explanation": "Mass storage is necessary to retain data and files even when the computer is powered off. It does not affect CPU processing speed or control the system clock, and it is used for both essential and non-essential data rather than just temporary storage",
           "options": [
-            "Tostore only non-essential data temporaril",
+            "To store only non-essential data temporaril",
             "To preserve data and files when the computer is turned off",
             "To increase the processing speed of the CPU",
             "To control the motherboard's system clock"
           ],
           "correctAnswer": [
-            "Tostore only non-essential data temporaril"
+            "To preserve data and files when the computer is turned off"
           ],
           "origin": "CertMaster"
         },
@@ -16078,7 +16078,7 @@
             "It limits the number of software applications that can run"
           ],
           "correctAnswer": [
-            "It allows any CPU model to be installed"
+            "It affects the range of devices and adapter cards that can be installed"
           ],
           "origin": "CertMaster"
         },
@@ -16330,7 +16330,7 @@
           "module": "2.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "You are an IT technician tasked with setting up a legacy network switch that only has a serial console port for configuration. You need to connect your modern laptop, which lacks a serial port, to this switch for initial setup. Which of the following solutions would BEST allow you to achieve this task? Use a USB to Serial adapter to connect the laptop's USB",
+          "stem": "You are an IT technician tasked with setting up a legacy network switch that only has a serial console port for configuration. You need to connect your modern laptop, which lacks a serial port, to this switch for initial setup. Which of the following solutions would BEST allow you to achieve this task?",
           "explanation": "Since modern laptops often lack serial ports, a USB to Serial adapter allows you to connect the laptop's USB port to the switch's serial console port, enabling configuration. HDML is a video interface and is not compatible with serial data transmission. There is no standard HDMI to Serial adapter for this purpose. VGA is a video interface and does not support serial data transmission. VGA to Serial adapters are not used for connecting to serial console ports. Ethernet and serial ports use different protocols and interfaces. An Ethernet cable cannot be directly used to connect to a serial console port without additional conversion equipment",
           "options": [
             "Use a USB to Serial adapter to connect the laptop's USB port to the switch's serial console port",
@@ -16379,7 +16379,7 @@
             "Use a VGA to VGA cable to connect the older equipment directly to the projectors"
           ],
           "correctAnswer": [
-            "Use an HDMI to HDMI cable to connect the projectors to the older equipment"
+            "Use a VGA to HDMI adapter cable to connect the older equipment to the projectors"
           ],
           "origin": "CertMaster"
         },
@@ -17726,12 +17726,12 @@
           "explanation": "Today, most computers are designed to turn off automatically if inner components overheat. In this case, the fan is probably not running. You might have forgotten to connect the power connector for the fan to the motherboard. If the CPU were bad or not supported, the computer would most likely not boot to the operating system. Although a virus could cause this symptom, the computer was not shutting down before you ever worked on it. Since you did not need to connect to the internet to upgrade the CPU, a virus is an unlikely cause",
           "options": [
             "The CPU is not supported by the BIOS",
-            "Thefanisnotrunning",
+            "The fan is not running",
             "The CPU is bad",
             "The computer has a virus"
           ],
           "correctAnswer": [
-            "Thefanisnotrunning"
+            "The fan is not running"
           ],
           "origin": "CertMaster"
         },
@@ -18067,9 +18067,9 @@
           "explanation": "Ensuring that the RAM is in dual-channel mode and the SSD is configured correctly can reveal misconfigurations that might be causing the sluggish performance. While overheating can cause performance throttling, the scenario involves recent hardware upgrades. Analyzing temperature logs is more about preventing thermal issues rather than addressing potential misconfigurations related to new hardware. Network traffic analysis is more relevant to diagnosing network-related performance issues. The scenario focuses on hardware upgrades, so network bandwidth is unlikely to be the root cause of the sluggish performance. While identifying resource-intensive processes is important, the scenario specifically involves recent hardware upgrades. The focus should be on analyzing hardware configurations rather than software processes to identify the root cause of the performance issue",
           "options": [
             "RAM is operating in dual-channel mode and the SSD is properly configured",
-            "Analyze the network traffic to determine if bandwidth limitations are \\ affecting the computer's performance",
-            "Analyze the system's temperature logs to check for any signs of U overheating that might throttle performance.",
-            "Analyze the software applications running on the system to identify any \\ resource-intensive processes."
+            "Analyze the network traffic to determine if bandwidth limitations are affecting the computer's performance",
+            "Analyze the system's temperature logs to check for any signs of overheating that might throttle performance.",
+            "Analyze the software applications running on the system to identify any resource-intensive processes."
           ],
           "correctAnswer": [
             "RAM is operating in dual-channel mode and the SSD is properly configured"
@@ -18127,13 +18127,13 @@
           "stem": "While trying to use a projector for a presentation, you receive an error that states, \"No signal detected.\" What is the MOST likely cause of this error?",
           "explanation": "A loosely connected HDMI cable often causes a projector to be unable to detect a signal. A burned-out bulb would cause the projector to be unable to display anything at all. Obstructed vents could cause the bulb to burn out or could cause a sensor to trigger a shutdown. Weak batteries in the remote control would affect the remote control's ability to communicate with the projector, but this would not result in a \"No signal detected\" error",
           "options": [
-            "Aloose HDMI cable",
+            "A loose HDMI cable",
             "Weak remote control batteries",
-            "bstructed air vents on the projector",
+            "Obstructed air vents on the projector",
             "Aburned-out bulb"
           ],
           "correctAnswer": [
-            "Aloose HDMI cable"
+            "A loose HDMI cable"
           ],
           "origin": "CertMaster"
         },
@@ -18247,7 +18247,7 @@
           "stem": "You have just purchased 10 new notebook computers for your users. You are concerned that users will leave the notebooks on for long periods of time, which could result in display burn- in. What should you do to prevent this from happening?",
           "explanation": "Burn-in can happen when the same image is displayed on the screen for an extended period of time. The best way to prevent this from happening is to configure a screen saver on each computer. Configuring the computers to automatically power off after five minutes of inactivity can prevent burn-in, but this will also make the notebooks very inconvenient to use. Increasing hardware acceleration settings will not prevent burn-in from occurring. Installing a software utility on each system that is designed to fix stuck pixels is a solution for repairing a burnt-in display, but this will not prevent burn-in from happening in the first place",
           "options": [
-            "Configure each computer to automatically power off after five minutes \\ of inactivity",
+            "Configure each computer to automatically power off after five minutes of inactivity",
             "Increase the hardware acceleration setting on each computer.",
             "Install a software utility on each computer that is designed to fix stuck VY pixels.",
             "Configure a screen saver on each computer"
@@ -18655,12 +18655,12 @@
           "explanation": "Secure Boot is a security feature in UEFI systems that ensures only trusted operating systems and software are loaded during the boot process. It helps protect against malware and unauthorized software. While UEFI can contribute to faster boot times compared to legacy BIOS, Secure Boot specifically is not designed for this purpose. Secure Boot focuses on security rather than speed. Allowing users to set a password that restricts access to the BIOS/UEFI settings describes the function of a boot password, not Secure Boot. Boot passwords are used to restrict access to the firmware settings, whereas Secure Boot focuses on verifying the integrity of the software being loaded. The graphical user interface is a feature of UEFI itself, not specifically Secure Boot. Secure Boot is concerned with security, not user interface enhancements",
           "options": [
             "To provide a graphical user interface for easier navigation of firmware settings.",
-            "Toallow users to set a password that restricts access to the BIOS/UEFI settings.",
+            "To allow users to set a password that restricts access to the BIOS/UEFI settings.",
             "To enable faster boot times by optimizing hardware initialization.",
             "To prevent unauthorized operating systems and software from loading during the boot process."
           ],
           "correctAnswer": [
-            "To enable faster boot times by optimizing hardware initialization."
+            "To prevent unauthorized operating systems and software from loading during the boot process."
           ],
           "origin": "CertMaster"
         },
