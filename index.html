@@ -171,13 +171,13 @@
         <div class="mode-card" id="modePractice" onclick="startPracticeExam()">
           <div class="mode-card-icon">📝</div>
           <h3>Practice Exam</h3>
-          <p class="mode-card-desc">25 random questions with instant feedback</p>
+          <p class="mode-card-desc">Pick your exam size, with instant feedback</p>
           <div class="mode-card-meta" id="metaPractice"></div>
         </div>
         <div class="mode-card" id="modeSimulation" onclick="startSimulationExam()">
           <div class="mode-card-icon">⏱️</div>
           <h3>Simulation Exam</h3>
-          <p class="mode-card-desc">Full timed exam — no feedback until results</p>
+          <p class="mode-card-desc">90-question timed exam — no feedback until results</p>
           <div class="mode-card-meta" id="metaSimulation"></div>
         </div>
         <div class="mode-card" id="modeDomain" onclick="openDomainPicker()">
@@ -266,7 +266,31 @@
       <button class="btn btn-modal-cta" onclick="closeCompletionModal()">View Results</button>
     </div>
   </div>
-  
+
+  <!-- Question-Count Picker Modal (choose how many questions: 25/50/75/100%) -->
+  <div id="countPickerModal" class="hidden completion-modal-overlay">
+    <div class="completion-modal-card count-picker-card">
+      <div class="completion-modal-icon">🔢</div>
+      <h2 class="completion-modal-title count-picker-title">How many questions?</h2>
+      <p class="completion-modal-msg" id="countPickerSubtitle">Choose what portion of the available questions to include.</p>
+
+      <label class="count-picker-label" for="countPickerSelect">Exam size</label>
+      <select id="countPickerSelect" class="count-picker-select" onchange="updateCountPickerCount()">
+        <option value="25">25%</option>
+        <option value="50">50%</option>
+        <option value="75">75%</option>
+        <option value="100" selected>100%</option>
+      </select>
+
+      <div class="count-picker-count" id="countPickerCount"></div>
+
+      <div class="count-picker-actions">
+        <button class="btn" onclick="closeCountPicker()">Cancel</button>
+        <button class="btn btn-modal-cta" onclick="countPickerContinue()">Continue</button>
+      </div>
+    </div>
+  </div>
+
   <!-- RESULTS SCREEN -->
   <div id="screenResults" class="hidden">
     <button class="btn btn-back-results" onclick="backToMenu()">&larr; Back to Start Page</button>
