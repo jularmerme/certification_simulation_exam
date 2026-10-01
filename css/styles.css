@@ -1493,6 +1493,12 @@ body.dark-theme .db-tr.db-tr-expanded {
   text-align: right;
 }
 
+/* Domain Weakness Tracker: Total Answered, Avg Score %, Trend, Focus columns
+   are centered instead of right-aligned (Session History keeps .db-num right-align). */
+#dbWeaknessTable .db-num {
+  text-align: center;
+}
+
 /* Per-category column colours */
 .db-correct   { color: var(--green); font-weight: 600; }
 .db-incorrect { color: var(--red);   font-weight: 600; }
@@ -1785,6 +1791,9 @@ body.dark-theme .lock-indicator {
 .db-clear-row {
   margin-top: 14px;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 /* Pagination controls */
@@ -1921,8 +1930,8 @@ body.dark-theme .table-match-key { color: #7fb3ff; }
 
 .table-match-select {
   width: 100%;
+  box-sizing: border-box;
   min-width: 130px;
-  max-width: 320px;
   font-size: 13px;
 }
 

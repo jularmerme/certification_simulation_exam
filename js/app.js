@@ -8,6 +8,7 @@ let appState = {
   autoFlagged: new Set(), // Track which questions were auto-flagged while unanswered
   checkedQuestions: new Set(), // Questions where "Check" has been pressed — feedback shown, locked
   examTimeAllotted: 0, // Time budget (seconds) of the current run — reused when retaking the same exam
+  isDrillMode: false, // true for "Retake Missed Questions" — submitExam() skips persistence when true
   
   displayedQuestionIds: new Set(), // Track question IDs already displayed to prevent duplicates
   validatedDragDrops: new Set(), // Track which drag-drop questions have been validated
@@ -152,6 +153,7 @@ function checkAndRestoreExamState() {
       
       // Restore the exam state
       appState.examCode = state.examCode;
+      appState.isDrillMode = state.isDrillMode || false;
       appState.currentQuestionIndex = state.currentQuestionIndex || 0;
       appState.answers = state.answers || {};
       appState.flagged = new Set(state.flagged || []);
@@ -222,6 +224,7 @@ function checkAndRestoreExamState() {
 function saveExamState() {
   const state = {
     examCode: appState.examCode,
+    isDrillMode: appState.isDrillMode,
     currentQuestionIndex: appState.currentQuestionIndex,
     questions: appState.questions, // SAVE the actual questions
     answers: appState.answers,
@@ -355,6 +358,39 @@ function selectExam(examCode) {
 }
 
 /** Open the mode-picker screen for the currently selected exam. */
+/**
+ * Results page button: jump back to the mode picker (Practice / Simulation /
+ * Domain / Module) for the exam just taken, instead of going all the way to
+ * the home screen. For "Others" (Reference Tables), there is no mode picker —
+ * it opens the topic picker, which fills the equivalent role.
+ */
+function goToModeSelect() {
+  clearInterval(appState.timerInterval);
+  if (appState.examCode === 'others') {
+    openOthersPicker();
+    return;
+  }
+  openModePicker();
+}
+
+/**
+ * Results page button: jump back to the specific sub-picker (Domain, Module,
+ * or Others topic) used for the exam just taken. Falls back to the mode
+ * picker if the exam wasn't run in a filterable mode (e.g. Practice/Simulation).
+ */
+function goToFilterSelect() {
+  clearInterval(appState.timerInterval);
+  if (appState.examCode === 'others') {
+    openOthersPicker();
+    return;
+  }
+  if (appState.examMode === 'domain') { openModePicker(); openDomainPicker(); return; }
+  if (appState.examMode === 'module') { openModePicker(); openModulePicker(); return; }
+  // Practice / Simulation (no domain/module filter) — the mode picker is the
+  // closest equivalent "selection" screen for this exam.
+  openModePicker();
+}
+
 function openModePicker() {
   const exam = window.questionBank && window.questionBank.exams[appState.examCode];
   if (!exam) { alert('Please select an exam'); return; }
@@ -560,7 +596,9 @@ function startOthersTopic(questionId) {
   if (!question) { alert('Question not found: ' + questionId); return; }
   appState.examMode = 'practice';
   appState.feedbackEnabled = true;
-  appState.activeFilter = null;
+  // Reuse activeFilter to carry the topic name through to the exam header
+  // badge and the Progress Dashboard's saved history label (_buildExamLabel).
+  appState.activeFilter = { type: 'topic', value: question.id, label: question.topicLabel || question.id };
   runExam([question], 20 * 60);
 }
 
@@ -674,11 +712,14 @@ function modeDisplayName() {
  * @param {object[]} selectedQuestions - already-filtered question set
  * @param {number} timeSeconds - timer duration in seconds
  */
-function runExam(selectedQuestions, timeSeconds) {
+function runExam(selectedQuestions, timeSeconds, drillMode = false) {
   const exam = window.questionBank.exams[appState.examCode];
 
   appState.questions = selectedQuestions.map(q => randomizeQuestionOptions(q));
   appState.examTimeAllotted = timeSeconds; // Remembered so a retake can reuse the same time budget.
+  // Drill mode (Retake Missed Questions): scoring/review work exactly as normal,
+  // but submitExam() skips localStorage/history persistence. See submitExam().
+  appState.isDrillMode = drillMode;
   appState.currentQuestionIndex = 0;
   appState.answers = {};
   appState.flagged.clear();
@@ -794,12 +835,16 @@ function randomizeQuestionOptions(question) {
   
   // table_match — shuffle each column's option list once so the order stays
   // consistent for the entire session (renderTableMatch won't re-shuffle).
+  // Dropdown options are sorted A→Z (not shuffled), and the row order (first
+  // column) is randomized instead of the bank's fixed order — applies to
+  // every "Others" reference-table topic.
   else if (q.type === 'table_match') {
-    const shuffledOpts = {};
+    const sortedOpts = {};
     Object.keys(q.columnOptions || {}).forEach(col => {
-      shuffledOpts[col] = shuffleArray([...q.columnOptions[col]]);
+      sortedOpts[col] = [...q.columnOptions[col]].sort((a, b) => a.localeCompare(b));
     });
-    q.columnOptions = shuffledOpts;
+    q.columnOptions = sortedOpts;
+    q.rows = shuffleArray(q.rows || []);
   }
 
   return q;
@@ -1540,36 +1585,51 @@ function submitExam() {
   
   window.examResults = examResults;
   
-  // Save to localStorage
-  localStorage.setItem('aplus_exam_results', JSON.stringify({
-    perfect: perfect,
-    partial: partial,
-    incorrect: incorrect,
-    unanswered: unanswered,
-    scaledScore: scaledScore,
-    passingScore: exam.passingScore,
-    passed: passed,
-    examCode: appState.examCode
-  }));
-  
   // Clear the in-progress exam state so a page reload after submission
   // never restores this session as an unfinished exam.
   localStorage.removeItem('aplus_exam_state');
 
-  // Persist result to progress history before showing modal
-  if (typeof saveResult === 'function') {
-    saveResult(examResults, appState, exam);
+  // Drill mode ("Retake Missed Questions"): results still display normally,
+  // but nothing is persisted — no localStorage snapshot, no Progress
+  // Dashboard history entry, and no "retake this run" buttons (a drill isn't
+  // a real attempt worth saving or re-drilling itself).
+  if (!appState.isDrillMode) {
+    // Save to localStorage
+    localStorage.setItem('aplus_exam_results', JSON.stringify({
+      perfect: perfect,
+      partial: partial,
+      incorrect: incorrect,
+      unanswered: unanswered,
+      scaledScore: scaledScore,
+      passingScore: exam.passingScore,
+      passed: passed,
+      examCode: appState.examCode
+    }));
+
+    // Persist result to progress history before showing modal
+    if (typeof saveResult === 'function') {
+      saveResult(examResults, appState, exam);
+    }
   }
 
   // Single-topic Others run (1 question): remember which topic so "Start Over"
   // can relaunch the exact same question. Hidden for every other exam/mode.
   const btnStartOver = document.getElementById('btnStartOverTopic');
   if (btnStartOver) {
-    const isSingleOthersTopic = appState.examCode === 'others' && appState.questions.length === 1;
+    const isSingleOthersTopic = !appState.isDrillMode &&
+      appState.examCode === 'others' && appState.questions.length === 1;
     btnStartOver.classList.toggle('hidden', !isSingleOthersTopic);
     if (isSingleOthersTopic) {
       window.lastOthersTopicId = appState.questions[0].id;
     }
+  }
+
+  // "Select Exam Mode" is redundant for Others — it has no mode picker, so
+  // that button and "Select Domain / Module / Topic" both just reopen the
+  // same topic picker. Keep only the one, more descriptive, button for it.
+  const btnSelectExamMode = document.getElementById('btnSelectExamMode');
+  if (btnSelectExamMode) {
+    btnSelectExamMode.classList.toggle('hidden', appState.isDrillMode || appState.examCode === 'others');
   }
 
   // Remember this run's exact question set + settings so "Retake Same Exam"
@@ -1577,18 +1637,38 @@ function submitExam() {
   // too, same as any other new run, via randomizeQuestionOptions in runExam).
   // Skipped for single-question runs (Others topic mode) — "Start Over" above
   // already covers that case and reordering 1 question is meaningless.
-  window.lastExamRetakeInfo = {
-    examCode: appState.examCode,
-    questions: appState.questions,
-    timeSeconds: appState.examTimeAllotted || (appState.questions.length * 60),
-    examMode: appState.examMode,
-    feedbackEnabled: appState.feedbackEnabled,
-    activeFilter: appState.activeFilter
-  };
+  // Also skipped entirely for drill mode runs.
+  if (!appState.isDrillMode) {
+    window.lastExamRetakeInfo = {
+      examCode: appState.examCode,
+      questions: appState.questions,
+      timeSeconds: appState.examTimeAllotted || (appState.questions.length * 60),
+      examMode: appState.examMode,
+      feedbackEnabled: appState.feedbackEnabled,
+      activeFilter: appState.activeFilter
+    };
+  }
   const btnRetake = document.getElementById('btnRetakeShuffled');
   if (btnRetake) {
-    const isSingleQuestionRun = appState.questions.length <= 1;
+    const isSingleQuestionRun = appState.isDrillMode || appState.questions.length <= 1;
     btnRetake.classList.toggle('hidden', isSingleQuestionRun);
+  }
+
+  // Show/hide the "Retake Missed Questions" button itself: only offered when
+  // this attempt actually had partial/incorrect answers to drill, and this
+  // isn't already a drill run (no drilling a drill).
+  const btnRetakeMissed = document.getElementById('btnRetakeMissed');
+  if (btnRetakeMissed) {
+    const hasMissed = (partial + incorrect) > 0;
+    btnRetakeMissed.classList.toggle('hidden', appState.isDrillMode || !hasMissed);
+    if (hasMissed) {
+      window.lastMissedQuestions = appState.questions.filter((q, idx) => {
+        const ans = appState.answers[idx];
+        if (ans === undefined) return false; // unanswered isn't "missed", it's skipped
+        const result = checkAnswerCorrect(q, ans);
+        return typeof result === 'number' ? result < 100 : result !== true;
+      });
+    }
   }
 
   // Show completion modal first
@@ -1619,6 +1699,27 @@ function retakeSameExamShuffled() {
 
   const shuffledQuestions = shuffleArray(info.questions);
   runExam(shuffledQuestions, info.timeSeconds);
+}
+
+/**
+ * "Retake Partial Credit & Incorrect Questions" — results page button.
+ * Launches a drill of only the questions that were partial-credit or
+ * incorrect on the attempt just finished (unanswered questions are excluded,
+ * same as how "missed" is scored elsewhere in the app). Runs through the
+ * exact same Check/Next practice flow and lands on its own results screen,
+ * but — being a drill — nothing about it is saved: no Progress Dashboard
+ * history entry, and the original attempt's score/history is untouched.
+ */
+function retakeMissedQuestions() {
+  const missed = window.lastMissedQuestions;
+  if (!missed || missed.length === 0) { backToMenu(); return; }
+
+  appState.examMode = 'practice';
+  appState.feedbackEnabled = true;
+  appState.activeFilter = { type: 'drill', value: 'missed', label: 'Retake: Partial/Incorrect' };
+
+  const questions = shuffleArray(missed);
+  runExam(questions, questions.length * 60, /* drillMode */ true);
 }
 
 // Show completion modal

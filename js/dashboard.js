@@ -1,6 +1,7 @@
 // dashboard.js — Progress Dashboard renderer.
 // Depends on: results.js (loadResults, clearResults, getWeaknessSummary)
 // Called by: showDashboard() / hideDashboard() (globals used by index.html)
+// Depends on: js/vendor/exceljs.min.js (window.ExcelJS) for downloadProgressExcel()
 
 // ── Sort state ────────────────────────────────────────────────────────────────
 let _sortCol = 'date';
@@ -293,4 +294,152 @@ function _escHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+// ── Excel export ──────────────────────────────────────────────────────────────
+
+/**
+ * "Download Table" button — exports both the Session History table and the
+ * Domain Weakness Tracker into one formatted .xlsx workbook (two sheets),
+ * using the data currently loaded in the dashboard (same sort order as shown
+ * on screen for Session History).
+ */
+async function downloadProgressExcel() {
+  if (typeof ExcelJS === 'undefined') {
+    alert('Excel export library failed to load. Check your internet/file setup and reload the page.');
+    return;
+  }
+
+  const history = loadResults();
+  const sortedHistory = _sortHistory(history, _sortCol, _sortDir);
+  const weakness = getWeaknessSummary(history);
+
+  const wb = new ExcelJS.Workbook();
+  wb.creator = 'CompTIA A+ Practice Exam Simulator';
+  wb.created = new Date();
+
+  const NAVY   = 'FF1A2B4D';
+  const WHITE  = 'FFFFFFFF';
+  const LIGHT  = 'FFF4F6F8';
+  const GREEN  = 'FFD9ECDF';
+  const AMBER  = 'FFFDEECB';
+  const RED    = 'FFFBE6E9';
+  const BORDER = { style: 'thin', color: { argb: 'FFD0D5DD' } };
+  const THIN_BORDER = { top: BORDER, bottom: BORDER, left: BORDER, right: BORDER };
+
+  function styleHeaderRow(row) {
+    row.eachCell(cell => {
+      cell.font = { bold: true, color: { argb: WHITE }, size: 11 };
+      cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: NAVY } };
+      cell.alignment = { vertical: 'middle', horizontal: 'center', wrapText: true };
+      cell.border = THIN_BORDER;
+    });
+    row.height = 26;
+  }
+
+  function scoreFillFor(pct) {
+    if (pct === null || pct === undefined) return null;
+    return pct >= 75 ? GREEN : pct >= 60 ? AMBER : RED;
+  }
+
+  // ── Sheet 1: Session History ────────────────────────────────────────────────
+  const histSheet = wb.addWorksheet('Session History', { views: [{ state: 'frozen', ySplit: 1 }] });
+  histSheet.columns = [
+    { header: 'Date & Time',  key: 'date',    width: 20 },
+    { header: 'Exam / Mode',  key: 'exam',    width: 32 },
+    { header: 'Questions',    key: 'total',   width: 11 },
+    { header: 'Correct',      key: 'correct', width: 10 },
+    { header: 'Incorrect',    key: 'incorrect', width: 10 },
+    { header: 'Skipped',      key: 'skipped', width: 10 },
+    { header: 'Score %',      key: 'score',   width: 10 },
+    { header: 'Duration',     key: 'duration', width: 12 }
+  ];
+  styleHeaderRow(histSheet.getRow(1));
+
+  sortedHistory.forEach((rec, i) => {
+    const row = histSheet.addRow({
+      date: _fmtDate(rec.date),
+      exam: rec.examLabel || rec.examCode || '—',
+      total: rec.totalQuestions || 0,
+      correct: rec.correct || 0,
+      incorrect: rec.incorrect || 0,
+      skipped: rec.incomplete || 0,
+      score: rec.score ?? 0,
+      duration: _fmtDuration(rec.durationSeconds)
+    });
+    const zebra = i % 2 === 1 ? LIGHT : null;
+    row.eachCell((cell, colNum) => {
+      cell.border = THIN_BORDER;
+      cell.alignment = { vertical: 'middle', horizontal: colNum <= 2 ? 'left' : 'center' };
+      if (zebra) cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: zebra } };
+    });
+    const scoreCell = row.getCell(7);
+    scoreCell.numFmt = '0"%"';
+    const fill = scoreFillFor(rec.score);
+    if (fill) {
+      scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: fill } };
+      scoreCell.font = { bold: true };
+    }
+  });
+
+  if (sortedHistory.length === 0) {
+    const row = histSheet.addRow({ date: 'No sessions recorded yet.' });
+    row.getCell(1).font = { italic: true, color: { argb: 'FF888888' } };
+  }
+
+  histSheet.autoFilter = sortedHistory.length > 0 ? { from: 'A1', to: 'H1' } : undefined;
+
+  // ── Sheet 2: Domain Weakness Tracker ─────────────────────────────────────────
+  const weakSheet = wb.addWorksheet('Domain Weakness', { views: [{ state: 'frozen', ySplit: 1 }] });
+  weakSheet.columns = [
+    { header: 'Domain',          key: 'domain', width: 34 },
+    { header: 'Total Answered',  key: 'total',  width: 16 },
+    { header: 'Avg Score %',     key: 'avg',    width: 14 },
+    { header: 'Trend',           key: 'trend',  width: 10 },
+    { header: 'Focus?',          key: 'focus',  width: 10 }
+  ];
+  styleHeaderRow(weakSheet.getRow(1));
+
+  weakness.forEach((row, i) => {
+    const r = weakSheet.addRow({
+      domain: row.domain,
+      total: row.total,
+      avg: row.avgScore,
+      trend: row.trend,
+      focus: row.focusFlag
+    });
+    const zebra = i % 2 === 1 ? LIGHT : null;
+    r.eachCell((cell, colNum) => {
+      cell.border = THIN_BORDER;
+      cell.alignment = { vertical: 'middle', horizontal: colNum === 1 ? 'left' : 'center' };
+      if (zebra) cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: zebra } };
+    });
+    const avgCell = r.getCell(3);
+    avgCell.numFmt = '0"%"';
+    const fill = scoreFillFor(row.avgScore);
+    if (fill) {
+      avgCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: fill } };
+      avgCell.font = { bold: true };
+    }
+  });
+
+  if (weakness.length === 0) {
+    const row = weakSheet.addRow({ domain: 'No domain data yet — complete at least one exam.' });
+    row.getCell(1).font = { italic: true, color: { argb: 'FF888888' } };
+  }
+
+  weakSheet.autoFilter = weakness.length > 0 ? { from: 'A1', to: 'E1' } : undefined;
+
+  // ── Trigger browser download ─────────────────────────────────────────────────
+  const buffer = await wb.xlsx.writeBuffer();
+  const blob = new Blob([buffer], { type: 'application/octet-stream' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const stamp = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = 'CompTIA_A+_Progress_' + stamp + '.xlsx';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
