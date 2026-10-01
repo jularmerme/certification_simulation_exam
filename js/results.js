@@ -161,6 +161,14 @@ function _buildExamLabel(appStateSnap, examConfig) {
 
   const examName = examConfig ? examConfig.name : code;
 
+  // Reference Tables ("Others"): single-topic runs carry the topic name via
+  // activeFilter (type: 'topic'), set in startOthersTopic(). The combined
+  // "All Topics" run has no activeFilter and falls through to the default
+  // practice label below ("Reference Tables — Practice").
+  if (code === 'others' && appStateSnap.activeFilter && appStateSnap.activeFilter.type === 'topic') {
+    return examName + ' — ' + appStateSnap.activeFilter.label;
+  }
+
   switch (mode) {
     case 'simulation': return examName + ' — Full Simulation';
     case 'practice':   return examName + ' — Practice';

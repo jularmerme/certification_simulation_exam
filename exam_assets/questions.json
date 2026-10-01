@@ -18370,10 +18370,10 @@
           "stem": "What is the primary way that DDR2, DDR3, DDR4, and DDR5 memory improve performance over earlier DDR versions?",
           "explanation": "DDR2 and subsequent DDR generations improve performance by multiplying the bus speed, which enhances bandwidth without increasing memory device speed to the point of overheating or instability. Simply increasing the memory clock speed or reducing module size alone would not achieve the same scalable performance improvements. Reducing memory cells would decrease capacity, not enhance performance",
           "options": [
-            "Byusing smaller memory modules to improve heat dissipation",
+            "By using smaller memory modules to improve heat dissipation",
             "By multiplying the bus speed to allow higher bandwidth",
             "By reducing the number of memory cells required for data storage",
-            "Byincreasing the memory clock speed"
+            "By increasing the memory clock speed"
           ],
           "correctAnswer": [
             "By multiplying the bus speed to allow higher bandwidth"
@@ -19096,11 +19096,11 @@
           "options": [
             "To provide wireless connectivity to employees",
             "To avoid using racks for network equipment",
-            "Tolimit the number of devices connected to the network To interconnect multiple switch units through a fast",
-            "oD backplane"
+            "To limit the number of devices connected to the network",
+            "To interconnect multiple switch units through a fast backplane"
           ],
           "correctAnswer": [
-            "oD backplane"
+            "To interconnect multiple switch units through a fast backplane"
           ],
           "origin": "CertMaster"
         },
@@ -19765,13 +19765,13 @@
           "stem": "What is a primary reason for using a patch panel in conjunction with a switch?",
           "explanation": "A patch panel simplifies cable organization and facilitates network management by acting as a central hub for terminating and labeling Ethernet cables. It supports scalability, troubleshooting, and reconfiguration without disturbing permanent cabling. Providing power to devices is the role of Power over Ethernet (PoE) switches or injectors, not patch panels. Enhancing wireless coverage requires wireless access points while protecting network traffic involves security protocols like TLS, WPA3, or VPN, not patch panels. --- PAGE 5.6 Module Quiz-02.jpg ---",
           "options": [
-            "Toenhance wireless network coverage To simplify cable organization and facilitate network",
-            "8 management",
+            "To enhance wireless network coverage",
+            "To simplify cable organization and facilitate network management",
             "To provide power to devices connected through Ethernet cables",
             "To protect network traffic"
           ],
           "correctAnswer": [
-            "8 management"
+            "To simplify cable organization and facilitate network management"
           ],
           "origin": "CertMaster"
         },
