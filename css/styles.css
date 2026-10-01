@@ -1688,6 +1688,65 @@ body.dark-theme .swatch-unanswered { background: #2d3748; border-color: #4a5568;
   transform: translateY(-1px);
 }
 
+/* Question-count picker modal */
+.count-picker-card {
+  padding: 40px;
+  max-width: 420px;
+}
+
+.count-picker-title {
+  color: var(--navy);
+  font-size: 24px;
+}
+
+body.dark-theme .count-picker-title {
+  color: #a8d8ff;
+}
+
+.count-picker-label {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.count-picker-select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.count-picker-select:focus {
+  outline: none;
+  border-color: var(--navy2);
+}
+
+.count-picker-count {
+  margin: 16px 0 24px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.count-picker-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.count-picker-actions .btn {
+  min-width: 120px;
+}
+
 /* Lock indicator (was inline in app.js) */
 .lock-indicator {
   background: #fff8e1;
