@@ -19031,16 +19031,16 @@
           "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "What function does an Ethernet switch perform when it receives a data frame? It decodes the frame and forwards it to the",
+          "stem": "What function does an Ethernet switch perform when it receives a data frame?",
           "explanation": "An Ethernet switch decodes the frame to identify both the source and destination MAC addresses and then forwards the frame to the port that corresponds to the destination MAC address in its table. This process makes data delivery more efficient by only sending data to the intended recipient, unlike broadcasting, which sends data to all connected devices. Broadcasting frames to all ports is inefficient and is characteristic of network hubs, not switches. Ethernet switches forward frames in real-time as long as the destination MAC address is known. Discarding frames without an entry in the MAC address table is incorrect because switches will flood the frame to all ports except the source, learning new addresses as responses are received. --- PAGE 5.2. Networking Hardware-09.jpg --- 7127126, 5:15 PM Individual Response",
           "options": [
-            "appropriate port based on the destination MAC address",
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address",
             "It broadcasts the frame to all ports",
             "It discards the frame if the destination is not in its MAC address table",
             "It stores the frame until the destination device requests it"
           ],
           "correctAnswer": [
-            "appropriate port based on the destination MAC address"
+            "It decodes the frame and forwards it to the appropriate port based on the destination MAC address"
           ],
           "origin": "CertMaster"
         },
@@ -19135,12 +19135,12 @@
           "explanation": "An Ethernet switch eliminates collisions by assigning a separate collision domain to each port, allowing devices to communicate independently. This configuration ensures that each device connected to the switch operates in full-duplex mode, enabling simultaneous sending and receiving of data at the network's full speed. Reducing the number of devices does not address collisions, as collisions occur based on how traffic is handled, not the number of connections. Preventing devices from sending data simultaneously is unnecessary because full-duplex communication inherently supports simultaneous transmissions. Limiting data to avoid congestion relates to traffic management, not collision prevention, which is handled by creating isolated collision domains per port",
           "options": [
             "It limits the amount of data transmitted to avoid congestion",
-            "It assigns a separate collision domain to each port. Y",
+            "It assigns a separate collision domain to each port.",
             "It reduces the number of devices connected to the network",
             "It prevents devices from sending data at the same time"
           ],
           "correctAnswer": [
-            "It assigns a separate collision domain to each port. Y"
+            "It assigns a separate collision domain to each port."
           ],
           "origin": "CertMaster"
         },
@@ -19439,10 +19439,10 @@
             "Cable stripper",
             "Loopback plug",
             "Multimeter",
-            "Tonegenerator andprobe"
+            "Tone generator and probe"
           ],
           "correctAnswer": [
-            "Tonegenerator andprobe"
+            "Tone generator and probe"
           ],
           "origin": "CertMaster"
         },
@@ -20090,7 +20090,7 @@
           "explanation": "A storage area network (SAN) is a special type of network that provides high-speed access to storage across the network. Specialized hardware is used to store and provide access to needed data. In a peer-to-peer network, each host can provide network resources to other hosts or access resources located on other hosts. It does not use special hardware to provide high-speed access to storage across the network. A local area network is a network in a small geographic area, like an office. A LAN typically uses wires to connect systems together. It does not use special hardware to provide high-speed access to storage across the network. In a client-server network, hosts have specific roles. For example, some hosts are assigned server roles, which allow them to provide network resources to other hosts. Other hosts are assigned client roles, which allow them to consume network resources. It does not use special hardware to provide high- speed access to storage across the network. --- PAGE 5.6 Module Quiz-16.jpg ---",
           "options": [
             "Peer-to-peer network",
-            "Storage areanetwork",
+            "Storage area network",
             "Client-server network",
             "Local area network"
           ],
@@ -22833,7 +22833,7 @@
           "explanation": "To enable an external network configuration for a virtual machine, you must connect the virtual machine to the host's physical network adapter (NIC). This is done using the virtual switch manager within the hypervisor software. The virtual switch manager allows you to create a virtual switch and associate it with the physical NIC of the host system. By selecting the appropriate NIC, the virtual machine can access the external network, enabling communication with other devices and systems outside the host machine. This step is essential for external network connectivity. Setting the RAM on the virtual machine to match the host system is unrelated to enabling external network configuration. This step pertains to resource allocation and ensures that the virtual machine has enough memory to operate efficiently. While proper RAM allocation is important for the performance of the virtual machine, it does not affect its ability to connect to an external network. Configuring the virtual machine to use Remote Desktop Protocol (RDP) is a step that allows remote access to the virtual machine. While RDP is useful for managing and accessing the virtual machine from another device, it is not a requirement for setting up external network connectivity. RDP configuration is a separate process that involves enabling the RDP service within the guest operating system and ensuring network settings allow RDP traffic. Using a Type 1 hypervisor (bare-metal hypervisor) is not a requirement for enabling external network configuration. Both Type 1 and Type 2 hypervisors can support external network connectivity as long as the virtual switch manager is used to associate the virtual machine with the host's physical NIC. The choice of hypervisor type depends on the deployment environment and performance requirements, but it does not directly impact the ability to configure an external network for the virtual machine. --- PAGE 8.1 Client-Side Virtualization-09.jpg ---",
           "options": [
             "Make sure that you are using a Type 1 hypervisor",
-            "Configure the virtual machine to use Remote Desktop Protocol ) (RDP)",
+            "Configure the virtual machine to use Remote Desktop Protocol (RDP)",
             "Select a NIC using the virtual switch manager",
             "Set the RAM on the virtual machine to match the host"
           ],
