@@ -19031,16 +19031,16 @@
           "module": "5.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "What function does an Ethernet switch perform when it receives a data frame? It decodes the frame and forwards it to the",
+          "stem": "What function does an Ethernet switch perform when it receives a data frame?",
           "explanation": "An Ethernet switch decodes the frame to identify both the source and destination MAC addresses and then forwards the frame to the port that corresponds to the destination MAC address in its table. This process makes data delivery more efficient by only sending data to the intended recipient, unlike broadcasting, which sends data to all connected devices. Broadcasting frames to all ports is inefficient and is characteristic of network hubs, not switches. Ethernet switches forward frames in real-time as long as the destination MAC address is known. Discarding frames without an entry in the MAC address table is incorrect because switches will flood the frame to all ports except the source, learning new addresses as responses are received. --- PAGE 5.2. Networking Hardware-09.jpg --- 7127126, 5:15 PM Individual Response",
           "options": [
-            "appropriate port based on the destination MAC address",
+            "It decodes the frame and forwards it to theappropriate port based on the destination MAC address",
             "It broadcasts the frame to all ports",
             "It discards the frame if the destination is not in its MAC address table",
             "It stores the frame until the destination device requests it"
           ],
           "correctAnswer": [
-            "appropriate port based on the destination MAC address"
+            "It decodes the frame and forwards it to theappropriate port based on the destination MAC address"
           ],
           "origin": "CertMaster"
         },
