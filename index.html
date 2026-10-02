@@ -293,14 +293,17 @@
 
   <!-- RESULTS SCREEN -->
   <div id="screenResults" class="hidden">
+    <div class="results-actions-row">
     <button class="btn btn-back-results" onclick="backToMenu()">&larr; Back to Home</button>
     <button class="btn btn-back-results" id="btnSelectExamMode" onclick="goToModeSelect()">&#x1F3AF; Select Exam Mode</button>
     <button class="btn btn-back-results" onclick="goToFilterSelect()">&#x1F5C2; Select Domain / Module / Topic</button>
     <button class="btn btn-back-results hidden" id="btnStartOverTopic" onclick="restartOthersTopic()">&#x21bb; Start Over (Same Question)</button>
-    <button class="btn btn-back-results hidden" id="btnRetakeShuffled" onclick="retakeSameExamShuffled()">&#x21bb; Retake Same Exam (Shuffled Order)</button>
-    <button class="btn btn-back-results hidden" id="btnRetakeMissed" onclick="retakeMissedQuestions()">&#x1F501; Retake Partial Credit &amp; Incorrect</button>
+    <button class="btn btn-back-results hidden" id="btnRetakeShuffled" onclick="retakeSameExamShuffled()">&#x21bb; Retake Exam</button>
+    <button class="btn btn-back-results hidden" id="btnRetakeMissed" onclick="retakeMissedQuestions()">&#x1F501; Retake Incorrects</button>
+    </div>
     
     <div class="score-hero">
+      <div class="score-exam-label" id="resultsExamLabel"></div>
       <div class="score-label">Your Score</div>
       <div class="big-score" id="scaledScore">--</div>
       <div class="scale-note">Scale: 100–900 &middot; Passing: <span id="passingScore">675</span></div>

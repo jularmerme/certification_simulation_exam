@@ -1778,6 +1778,15 @@ body.dark-theme .lock-indicator {
   color: #b9c9e0;
 }
 
+/* Results screen — exam/mode name above "Your Score" */
+.score-exam-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
 /* Dashboard section headings */
 .db-section-heading {
   margin: 28px 0 12px;
@@ -1807,6 +1816,16 @@ body.dark-theme .lock-indicator {
 }
 
 /* Results back button */
+.results-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.results-actions-row .btn-back-results {
+  margin-bottom: 0;
+}
 .btn-back-results {
   margin-bottom: 16px;
 }
