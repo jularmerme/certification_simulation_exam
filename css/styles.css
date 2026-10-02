@@ -1493,6 +1493,12 @@ body.dark-theme .db-tr.db-tr-expanded {
   text-align: right;
 }
 
+/* Domain Weakness Tracker: Total Answered, Avg Score %, Trend, Focus columns
+   are centered instead of right-aligned (Session History keeps .db-num right-align). */
+#dbWeaknessTable .db-num {
+  text-align: center;
+}
+
 /* Per-category column colours */
 .db-correct   { color: var(--green); font-weight: 600; }
 .db-incorrect { color: var(--red);   font-weight: 600; }
@@ -1772,6 +1778,15 @@ body.dark-theme .lock-indicator {
   color: #b9c9e0;
 }
 
+/* Results screen — exam/mode name above "Your Score" */
+.score-exam-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
 /* Dashboard section headings */
 .db-section-heading {
   margin: 28px 0 12px;
@@ -1785,6 +1800,9 @@ body.dark-theme .lock-indicator {
 .db-clear-row {
   margin-top: 14px;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 /* Pagination controls */
@@ -1798,6 +1816,16 @@ body.dark-theme .lock-indicator {
 }
 
 /* Results back button */
+.results-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.results-actions-row .btn-back-results {
+  margin-bottom: 0;
+}
 .btn-back-results {
   margin-bottom: 16px;
 }
@@ -1921,8 +1949,8 @@ body.dark-theme .table-match-key { color: #7fb3ff; }
 
 .table-match-select {
   width: 100%;
+  box-sizing: border-box;
   min-width: 130px;
-  max-width: 320px;
   font-size: 13px;
 }
 
