@@ -21985,7 +21985,7 @@
           "module": "7.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "What is a key characteristic of a legacy system? A legacy system is no longer directly supported b",
+          "stem": "What is a key characteristic of a legacy system?",
           "explanation": "A legacy system is one that is no longer directly supported by its vendor. This lack of support is a defining characteristic of legacy systems and poses security risks. Legacy systems are generally used for older applications and services that are too complex or costly to migrate to modern platforms. They are not typically associated with modern applications. Legacy systems often do not integrate well with new technologies.",
           "options": [
             "A legacy system is no longer directly supported by its vendor.",

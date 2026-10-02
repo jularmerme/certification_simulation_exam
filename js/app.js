@@ -513,12 +513,85 @@ function escapeHtml(s) {
 }
 
 // Select unique questions ensuring no duplicates
+// ---------------------------------------------------------------------------
+// Coverage tracking ("no-repeat until exhausted") — Core 1 only.
+//
+// One shared seen-question ledger per exam code, persisted in localStorage.
+// Every draw (Practice Exam, Simulation, Domain, Module) pulls unseen
+// questions first; once the entire bank for that exam has been served at
+// least once, the ledger silently resets so repeats become possible again
+// in a fresh random order. Scope is intentionally the WHOLE exam bank, not
+// per-domain/per-module — a question seen in domain practice also counts as
+// seen for a later full Practice Exam draw, and vice versa.
+// ---------------------------------------------------------------------------
+
+const COVERAGE_KEY = 'aplus_seen_questions';
+const COVERAGE_EXAM_CODES = ['220-1201']; // Core 1 only, per spec.
+
+/** Load the full coverage map ({ examCode: [ids] }) from localStorage. */
+function _loadCoverageMap() {
+  try {
+    const raw = localStorage.getItem(COVERAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+/** Persist the full coverage map back to localStorage. */
+function _saveCoverageMap(map) {
+  try {
+    localStorage.setItem(COVERAGE_KEY, JSON.stringify(map));
+  } catch (e) {
+    console.warn('Failed to save coverage map:', e);
+  }
+}
+
+/** Mark a batch of question IDs as seen for the given exam code. Silently
+ *  resets that exam's ledger if the ENTIRE exam bank has now been covered. */
+function _markQuestionsSeen(examCode, questionIds, fullBankIds) {
+  const map = _loadCoverageMap();
+  const seen = new Set(map[examCode] || []);
+  questionIds.forEach(id => seen.add(id));
+
+  // Cycle complete: every question in the whole bank has been served at
+  // least once. Reset silently — no message, next draw just starts fresh.
+  const fullSet = new Set(fullBankIds);
+  const coveredEverything = fullBankIds.length > 0 &&
+    [...fullSet].every(id => seen.has(id));
+
+  map[examCode] = coveredEverything ? [] : [...seen];
+  _saveCoverageMap(map);
+}
+
+/** Set of question IDs already seen for the given exam code (empty if none / not tracked). */
+function _getSeenIds(examCode) {
+  if (!COVERAGE_EXAM_CODES.includes(examCode)) return new Set();
+  const map = _loadCoverageMap();
+  return new Set(map[examCode] || []);
+}
+
 function selectUniqueQuestions(questionBank, count) {
   const selected = [];
   const seenIds = new Set();
-  const shuffled = shuffleArray([...questionBank]);
-  
-  for (const q of shuffled) {
+
+  const examCode = appState.examCode;
+  const trackCoverage = COVERAGE_EXAM_CODES.includes(examCode);
+  const previouslySeen = trackCoverage ? _getSeenIds(examCode) : new Set();
+
+  // Split the draw pool into unseen-first, then already-seen as a top-up
+  // source. Without tracking (non-Core-1 exams), this is just one shuffled
+  // pool — identical to the old behavior.
+  const unseenPool = trackCoverage
+    ? questionBank.filter(q => !previouslySeen.has(q.id))
+    : questionBank;
+  const seenPool = trackCoverage
+    ? questionBank.filter(q => previouslySeen.has(q.id))
+    : [];
+
+  const orderedCandidates = [...shuffleArray([...unseenPool]), ...shuffleArray([...seenPool])];
+
+  for (const q of orderedCandidates) {
     if (selected.length >= count) break;
     if (!seenIds.has(q.id)) {
       selected.push(q);
@@ -529,6 +602,15 @@ function selectUniqueQuestions(questionBank, count) {
   // If we don't have enough unique questions, log warning
   if (selected.length < count) {
     console.warn(`Requested ${count} unique questions but only ${selected.length} available`);
+  }
+
+  // Record this draw's questions as seen, scoped to the WHOLE exam bank
+  // (not just this filtered pool) so Domain/Module/Practice/Simulation all
+  // share one coverage ledger.
+  if (trackCoverage && selected.length > 0) {
+    const exam = window.questionBank && window.questionBank.exams[examCode];
+    const fullBankIds = exam ? exam.questionBank.map(q => q.id) : [];
+    _markQuestionsSeen(examCode, selected.map(q => q.id), fullBankIds);
   }
   
   return selected;
@@ -1575,6 +1657,7 @@ function submitExam() {
     partial: partial,
     incorrect: incorrect,
     unanswered: unanswered,
+    examLabel: typeof _buildExamLabel === 'function' ? _buildExamLabel(appState, exam) : exam.name,
     scaledScore: scaledScore,
     passingScore: exam.passingScore,
     passed: passed,
@@ -1750,6 +1833,7 @@ function formatResultLabel(name, count, total) {
 
 // Display exam results on the results page
 function displayExamResults(results) {
+  setElementText('resultsExamLabel', results.examLabel || '');
   document.getElementById('scaledScore').textContent = results.scaledScore;
   document.getElementById('passingScore').textContent = results.passingScore;
   
