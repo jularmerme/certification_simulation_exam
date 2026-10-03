@@ -727,108 +727,132 @@
         "objective": "0.0",
         "module": "0.0",
         "difficulty": "medium",
-        "stem": "Complete the Laser Printer Imaging Process table — match each step to what happens and the common symptom or issue.",
+        "stem": "Complete the Laser Printer Imaging Process table — match each step number to its step name, what happens, and the common symptom or issue.",
         "headers": [
           "Step",
+          "Step Name",
           "What Happens",
           "Common Symptom / Issue"
         ],
         "rows": [
           {
-            "key": "1. Processing",
+            "key": "1",
             "cols": [
+              "Processing",
               "RIP converts to bitmap",
               "Garbled/wrong output"
             ]
           },
           {
-            "key": "2. Charging",
+            "key": "2",
             "cols": [
+              "Charging",
               "Drum coated with negative charge",
               "—"
             ]
           },
           {
-            "key": "3. Exposing",
+            "key": "3",
             "cols": [
+              "Exposing",
               "Laser writes image on drum",
               "—"
             ]
           },
           {
-            "key": "4. Developing",
+            "key": "4",
             "cols": [
+              "Developing",
               "Toner adheres to exposed areas",
               "Faded print = low toner"
             ]
           },
           {
-            "key": "5. Transferring",
+            "key": "5",
             "cols": [
+              "Transferring",
               "Image moves to paper",
               "Ghost/echo image = dirty transfer roller"
             ]
           },
           {
-            "key": "6. Fusing",
+            "key": "6",
             "cols": [
+              "Fusing",
               "Heat bonds toner to paper",
               "Smearing toner = failing fuser"
             ]
           },
           {
-            "key": "7. Cleaning",
+            "key": "7",
             "cols": [
+              "Cleaning",
               "Drum cleared for next page",
               "Lines on page = dirty drum"
             ]
           }
         ],
         "columnOptions": {
+          "Step Name": [
+            "Charging",
+            "Cleaning",
+            "Developing",
+            "Exposing",
+            "Fusing",
+            "Processing",
+            "Transferring"
+          ],
           "What Happens": [
-            "RIP converts to bitmap",
+            "Drum cleared for next page",
             "Drum coated with negative charge",
-            "Laser writes image on drum",
-            "Toner adheres to exposed areas",
-            "Image moves to paper",
             "Heat bonds toner to paper",
-            "Drum cleared for next page"
+            "Image moves to paper",
+            "Laser writes image on drum",
+            "RIP converts to bitmap",
+            "Toner adheres to exposed areas"
           ],
           "Common Symptom / Issue": [
-            "Garbled/wrong output",
-            "—",
             "Faded print = low toner",
+            "Garbled/wrong output",
             "Ghost/echo image = dirty transfer roller",
+            "Lines on page = dirty drum",
             "Smearing toner = failing fuser",
-            "Lines on page = dirty drum"
+            "—"
           ]
         },
         "correctAnswer": {
-          "1. Processing": {
+          "1": {
+            "Step Name": "Processing",
             "What Happens": "RIP converts to bitmap",
             "Common Symptom / Issue": "Garbled/wrong output"
           },
-          "2. Charging": {
+          "2": {
+            "Step Name": "Charging",
             "What Happens": "Drum coated with negative charge",
             "Common Symptom / Issue": "—"
           },
-          "3. Exposing": {
+          "3": {
+            "Step Name": "Exposing",
             "What Happens": "Laser writes image on drum",
             "Common Symptom / Issue": "—"
           },
-          "4. Developing": {
+          "4": {
+            "Step Name": "Developing",
             "What Happens": "Toner adheres to exposed areas",
             "Common Symptom / Issue": "Faded print = low toner"
           },
-          "5. Transferring": {
+          "5": {
+            "Step Name": "Transferring",
             "What Happens": "Image moves to paper",
             "Common Symptom / Issue": "Ghost/echo image = dirty transfer roller"
           },
-          "6. Fusing": {
+          "6": {
+            "Step Name": "Fusing",
             "What Happens": "Heat bonds toner to paper",
             "Common Symptom / Issue": "Smearing toner = failing fuser"
           },
-          "7. Cleaning": {
+          "7": {
+            "Step Name": "Cleaning",
             "What Happens": "Drum cleared for next page",
             "Common Symptom / Issue": "Lines on page = dirty drum"
           }
