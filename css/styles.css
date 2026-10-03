@@ -411,6 +411,38 @@ body.dark-theme .mode-card h3 {
   font-weight: 600;
   color: var(--text);
   transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mastery progress fill — sits behind the label/count, clipped to the
+   button's rounded corners. Width is set inline per-button (0-100%). */
+.filter-btn-mastery-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: width 0.3s ease;
+  opacity: 0.28;
+}
+.filter-btn-mastery-bar.mastery-red    { background: var(--red); }
+.filter-btn-mastery-bar.mastery-yellow { background: var(--amber); }
+.filter-btn-mastery-bar.mastery-green  { background: var(--green); }
+
+body.dark-theme .filter-btn-mastery-bar {
+  opacity: 0.35;
+}
+
+/* Label + count row sits above the mastery fill. */
+.filter-btn-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
 }
 
 .filter-btn:hover:not(:disabled) {
@@ -1751,6 +1783,45 @@ body.dark-theme .count-picker-title {
 
 .count-picker-actions .btn {
   min-width: 120px;
+}
+
+/* Count-picker modal: Continue (green, glow) and Cancel (red, glow) */
+.count-picker-continue {
+  background: var(--green);
+  color: #fff;
+  border: 2px solid var(--green);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(27, 122, 61, 0.4);
+  transition: all 0.2s ease;
+}
+.count-picker-continue:hover {
+  box-shadow: 0 0 16px rgba(27, 122, 61, 0.65);
+  transform: translateY(-1px);
+}
+body.dark-theme .count-picker-continue {
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.45);
+}
+body.dark-theme .count-picker-continue:hover {
+  box-shadow: 0 0 16px rgba(46, 204, 113, 0.7);
+}
+
+.count-picker-cancel {
+  background: var(--red);
+  color: #fff;
+  border: 2px solid var(--red);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(200, 16, 46, 0.4);
+  transition: all 0.2s ease;
+}
+.count-picker-cancel:hover {
+  box-shadow: 0 0 16px rgba(200, 16, 46, 0.65);
+  transform: translateY(-1px);
+}
+body.dark-theme .count-picker-cancel {
+  box-shadow: 0 0 10px rgba(255, 122, 138, 0.45);
+}
+body.dark-theme .count-picker-cancel:hover {
+  box-shadow: 0 0 16px rgba(255, 122, 138, 0.7);
 }
 
 /* Lock indicator (was inline in app.js) */

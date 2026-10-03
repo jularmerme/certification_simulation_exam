@@ -16614,12 +16614,12 @@
           "explanation": "microUSB connectors are typically used by compact, portable electronic devices, such as smartphones, tablets, GPS devices, and some external storage peripherals. Printers and scanners typically use a Type-B connector. Some networking devices, such as hubs and modems, also use Type-B connectors",
           "options": [
             "Network hubs and modems",
-            "SmartphoneTablets",
+            "Smartphone Tablets",
             "Scanners",
             "Printers"
           ],
           "correctAnswer": [
-            "SmartphoneTablets"
+            "Smartphone Tablets"
           ],
           "origin": "CertMaster"
         },
@@ -17706,12 +17706,12 @@
           "explanation": "Intel processors typically use the Land Grid Array (LGA) socket design, where the pins are on the motherboard socket rather than the CPU. The CPU has flat contacts that connect to the pins, in contrast to AMD's more common use of PGA sockets",
           "options": [
             "Pin Grid Array (PGA)",
-            "landGridArray(LGA)",
+            "Land Grid Array(LGA)",
             "Zero Insertion Force (ZIF)",
             "Ball Grid Array (BGA)"
           ],
           "correctAnswer": [
-            "landGridArray(LGA)"
+            "Land Grid Array(LGA)"
           ],
           "origin": "CertMaster"
         },
@@ -17785,13 +17785,13 @@
           "stem": "In the context of system firmware, what is the primary purpose of configuring USB permissions through the UEFI setup program?",
           "explanation": "The primary purpose of configuring USB permissions through the UEFI setup program is to enable or disable USB ports, which can be an important security measure to prevent unauthorized access or data transfer. Configuring USB permissions in the UEFI setup program does not affect the data transfer speed of USB devices. Speed is determined by the USB version and hardware capabilities. Installing drivers for USB devices is typically done within the operating system, not through the UEFI setup program. Updating the firmware of USB-connected devices is not related to configuring USB permissions in the UEFI setup program. Firmware updates are usually performed through specific software tools provided by the device manufacturer",
           "options": [
-            "Toinstall drivers for USB devices",
-            "Toenable or disable USB ports for security reasons. \\",
-            "Toincrease the data transfer speed of USB devices",
+            "To install drivers for USB devices",
+            "To enable or disable USB ports for security reasons. \\",
+            "To increase the data transfer speed of USB devices",
             "To update the firmware of USB-connected devices"
           ],
           "correctAnswer": [
-            "Toenable or disable USB ports for security reasons. \\"
+            "To enable or disable USB ports for security reasons. \\"
           ],
           "origin": "CertMaster"
         },
@@ -18431,12 +18431,12 @@
           "explanation": "After replacing the USB cable, the next logical step is to test whether the solution resolved the issue. Testing ensures that the external hard drive is now accessible and functioning as expected. This aligns with the troubleshooting methodology, which emphasizes verifying full- system functionality after implementing a solution. While documentation is a critical step in the troubleshooting process, it is not the immediate next step after replacing the USB cable. According to the methodology, documentation should occur after verifying that the solution works and the issue is resolved. This ensures that the documentation reflects the complete resolution process, including any lessons learned or preventive measures implemented. Determining if escalation is necessary is a step taken when the problem cannot be resolved or if the issue requires expertise or resources beyond your scope. Since the problem has been addressed by replacing the USB cable, escalation is not relevant at this stage. Testing the solution comes first to confirm that escalation is unnecessary. Creating an action plan is a step that occurs earlier in the troubleshooting process before implementing a solution. It involves planning the steps to resolve the problem. Since the cable has already been replaced, the action plan has already been executed, and the next step is to test the solution to ensure it worked",
           "options": [
             "Document the problem and solution",
-            "Testthesolution",
+            "Test the solution",
             "Create an action plan",
             "Determine if escalation is necessary"
           ],
           "correctAnswer": [
-            "Testthesolution"
+            "Test the solution"
           ],
           "origin": "CertMaster"
         },
@@ -18595,12 +18595,12 @@
           "explanation": "Today, most computers are designed to turn off automatically if inner components overheat. In this case, the fan is probably not running. You might have forgotten to connect the power connector for the fan to the motherboard. If the CPU were bad or not supported, the computer would most likely not boot to the operating system. Although a virus could cause this symptom, the computer was not shutting down before you ever worked on it. Since you did not need to connect to the internet to upgrade the CPU, a virus is an unlikely cause",
           "options": [
             "The CPU is not supported by the BIOS",
-            "Thefanisnotrunning",
+            "The fan is not running",
             "The CPU is bad",
             "The computer has a virus"
           ],
           "correctAnswer": [
-            "Thefanisnotrunning"
+            "The fan is not running"
           ],
           "origin": "CertMaster"
         },
