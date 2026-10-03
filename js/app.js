@@ -68,12 +68,15 @@ window.addEventListener('DOMContentLoaded', async () => {
   
   // Load questions from JSON
   try {
-    const response = await fetch('exam_assets/questions.json');
+    // Cache-bust every fetch with a timestamp query param so edits to these
+    // JSON files always show up on reload, even if the browser/dev server
+    // would otherwise serve a stale cached response for a plain fetch().
+    const response = await fetch('exam_assets/questions.json?v=' + Date.now());
     const data = await response.json();
     window.questionBank = data;
     
     // Load acronyms quiz
-    const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json');
+    const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json?v=' + Date.now());
     const acronymsData = await acronymsResponse.json();
     
     // Convert acronyms to exam format compatible with existing code.
@@ -101,7 +104,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     
     // Load Others (reference tables) quiz
     try {
-      const othersResponse = await fetch('exam_assets/others_quiz.json');
+      const othersResponse = await fetch('exam_assets/others_quiz.json?v=' + Date.now());
       if (!othersResponse.ok) throw new Error('HTTP ' + othersResponse.status);
       const othersData = await othersResponse.json();
       if (!othersData || !othersData.othersQuiz || !Array.isArray(othersData.othersQuiz.questions)) {
@@ -457,6 +460,15 @@ function countBy(bank, field, value) {
 }
 
 /** Practice by Domain sub-picker: one button per domainWeights key, with counts. */
+/**
+ * Build the mastery progress-bar HTML for a .filter-btn: a background fill
+ * sized to `percent`, color-coded red (<50%) / yellow (50-85%) / green (>85%).
+ */
+function _buildMasteryBarHtml(percent) {
+  const colorClass = percent > 85 ? 'mastery-green' : percent >= 50 ? 'mastery-yellow' : 'mastery-red';
+  return '<div class="filter-btn-mastery-bar ' + colorClass + '" style="width:' + percent + '%"></div>';
+}
+
 function openDomainPicker() {
   const exam = window.questionBank.exams[appState.examCode];
   if (!exam || !exam.domainWeights) return;
@@ -469,8 +481,11 @@ function openDomainPicker() {
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
     btn.disabled = n === 0;
-    btn.innerHTML = '<span>' + escapeHtml(domain) + '</span>' +
-      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span>';
+    const domainIds = bank.filter(q => q.domain === domain).map(q => q.id);
+    const pct = _getMasteryPercent(appState.examCode, domainIds);
+    btn.innerHTML = _buildMasteryBarHtml(pct) +
+      '<span class="filter-btn-content"><span>' + escapeHtml(domain) + '</span>' +
+      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span></span>';
     if (n > 0) btn.onclick = () => startFilteredExam('domain', domain, domain);
     container.appendChild(btn);
   });
@@ -495,8 +510,11 @@ function openModulePicker() {
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
     btn.disabled = n === 0;
-    btn.innerHTML = '<span>' + escapeHtml(label) + '</span>' +
-      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span>';
+    const moduleIds = bank.filter(q => q.module === moduleNum).map(q => q.id);
+    const pct = _getMasteryPercent(appState.examCode, moduleIds);
+    btn.innerHTML = _buildMasteryBarHtml(pct) +
+      '<span class="filter-btn-content"><span>' + escapeHtml(label) + '</span>' +
+      '<span class="filter-count">(' + n + ' question' + (n === 1 ? '' : 's') + ')</span></span>';
     if (n > 0) btn.onclick = () => startFilteredExam('module', moduleNum, label);
     container.appendChild(btn);
   });
@@ -513,6 +531,59 @@ function escapeHtml(s) {
 }
 
 // Select unique questions ensuring no duplicates
+// ---------------------------------------------------------------------------
+// Mastery tracking — Core 1 only. Powers the per-domain/per-module progress
+// bars shown on the Domain/Module picker buttons.
+//
+// "Mastered" = your MOST RECENT attempt at a question was 100% correct.
+// This can go backward: get it right once, then wrong later, and it drops
+// back out of the mastered count. One map per exam code, keyed by question
+// ID -> boolean (true = correct last time, false = incorrect last time).
+// Unattempted questions simply have no entry (treated as not mastered).
+// ---------------------------------------------------------------------------
+
+const MASTERY_KEY = 'aplus_question_mastery';
+const MASTERY_EXAM_CODES = ['220-1201']; // Core 1 only, per spec.
+
+function _loadMasteryMap() {
+  try {
+    const raw = localStorage.getItem(MASTERY_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function _saveMasteryMap(map) {
+  try {
+    localStorage.setItem(MASTERY_KEY, JSON.stringify(map));
+  } catch (e) {
+    console.warn('Failed to save mastery map:', e);
+  }
+}
+
+/** Record the latest result (true/false) for one question under its exam code. */
+function _recordMastery(examCode, questionId, wasCorrect) {
+  if (!MASTERY_EXAM_CODES.includes(examCode)) return;
+  const map = _loadMasteryMap();
+  if (!map[examCode]) map[examCode] = {};
+  map[examCode][questionId] = wasCorrect;
+  _saveMasteryMap(map);
+}
+
+/**
+ * Mastery percent (0-100) for a specific set of question IDs (e.g. all
+ * questions in one domain or module). Returns 0 if the exam isn't tracked
+ * or the set is empty.
+ */
+function _getMasteryPercent(examCode, questionIds) {
+  if (!MASTERY_EXAM_CODES.includes(examCode) || questionIds.length === 0) return 0;
+  const map = _loadMasteryMap();
+  const examMap = map[examCode] || {};
+  const masteredCount = questionIds.filter(id => examMap[id] === true).length;
+  return Math.round((masteredCount / questionIds.length) * 100);
+}
+
 // ---------------------------------------------------------------------------
 // Coverage tracking ("no-repeat until exhausted") — Core 1 only.
 //
@@ -919,14 +990,18 @@ function randomizeQuestionOptions(question) {
   // consistent for the entire session (renderTableMatch won't re-shuffle).
   // Dropdown options are sorted A→Z (not shuffled), and the row order (first
   // column) is randomized instead of the bank's fixed order — applies to
-  // every "Others" reference-table topic.
+  // every "Others" reference-table topic, EXCEPT TBL-006 (Laser Printer
+  // Imaging Process), whose "Step" column is a fixed sequence (1–7) and must
+  // stay in ascending order — only its dropdown columns get sorted A→Z.
   else if (q.type === 'table_match') {
     const sortedOpts = {};
     Object.keys(q.columnOptions || {}).forEach(col => {
       sortedOpts[col] = [...q.columnOptions[col]].sort((a, b) => a.localeCompare(b));
     });
     q.columnOptions = sortedOpts;
-    q.rows = shuffleArray(q.rows || []);
+    if (q.id !== 'TBL-006') {
+      q.rows = shuffleArray(q.rows || []);
+    }
   }
 
   return q;
@@ -1624,6 +1699,10 @@ function submitExam() {
       unanswered++;
     } else {
       const result = checkAnswerCorrect(q, appState.answers[idx]);
+      // Mastery tracking: record this question's most-recent result,
+      // regardless of mode (Practice/Simulation/Domain/Module/drill).
+      const isFullyCorrect = typeof result === 'number' ? result === 100 : result === true;
+      _recordMastery(appState.examCode, q.id, isFullyCorrect);
       
       if (typeof result === 'number') {
         // Multi-select scoring
