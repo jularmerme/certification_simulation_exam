@@ -151,10 +151,10 @@
           "stem": "Match each network protocol to its OSI layer.",
           "explanation": "Each protocol operates at a specific OSI layer.",
           "items": [
-            "Layer 2",
-            "Layer 3",
+            "Layer 7",
             "Layer 4",
-            "Layer 7"
+            "Layer 3",
+            "Layer 2"
           ],
           "correctAnswer": {
             "Layer 2": "Ethernet",
