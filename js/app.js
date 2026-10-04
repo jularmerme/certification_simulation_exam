@@ -618,20 +618,32 @@ function _saveCoverageMap(map) {
   }
 }
 
-/** Mark a batch of question IDs as seen for the given exam code. Silently
- *  resets that exam's ledger if the ENTIRE exam bank has now been covered. */
-function _markQuestionsSeen(examCode, questionIds, fullBankIds) {
+/**
+ * Mark a batch of question IDs as seen for the given exam code. Silently
+ * resets JUST the current draw pool's IDs (not the whole ledger) once every
+ * question IN THAT POOL has been covered — e.g. a 70-question module cycles
+ * on its own 70, a domain cycles on its own set, and Practice/Simulation
+ * (whose pool IS the whole bank) cycle on the whole bank. Everything else
+ * already marked seen (from other modules/domains) is left untouched, so
+ * the shared ledger still carries over between modes as designed.
+ */
+function _markQuestionsSeen(examCode, questionIds, poolIds) {
   const map = _loadCoverageMap();
   const seen = new Set(map[examCode] || []);
   questionIds.forEach(id => seen.add(id));
 
-  // Cycle complete: every question in the whole bank has been served at
-  // least once. Reset silently — no message, next draw just starts fresh.
-  const fullSet = new Set(fullBankIds);
-  const coveredEverything = fullBankIds.length > 0 &&
-    [...fullSet].every(id => seen.has(id));
+  // Cycle complete for THIS pool: every question in the pool just drawn from
+  // (module/domain/whole-bank) has now been served at least once. Reset
+  // silently — no message — by removing only this pool's IDs from the seen
+  // set so it can draw everything fresh again, next time.
+  const poolCovered = poolIds.length > 0 && poolIds.every(id => seen.has(id));
 
-  map[examCode] = coveredEverything ? [] : [...seen];
+  if (poolCovered) {
+    const poolSet = new Set(poolIds);
+    map[examCode] = [...seen].filter(id => !poolSet.has(id));
+  } else {
+    map[examCode] = [...seen];
+  }
   _saveCoverageMap(map);
 }
 
@@ -675,13 +687,14 @@ function selectUniqueQuestions(questionBank, count) {
     console.warn(`Requested ${count} unique questions but only ${selected.length} available`);
   }
 
-  // Record this draw's questions as seen, scoped to the WHOLE exam bank
-  // (not just this filtered pool) so Domain/Module/Practice/Simulation all
-  // share one coverage ledger.
+  // Record this draw's questions as seen. The shared ledger still spans all
+  // modes (a question seen in Module practice counts as seen in a later
+  // Practice Exam draw too) — but the cycle-reset check is scoped to THIS
+  // draw's own pool (the module/domain being practiced, or the whole bank
+  // for Practice/Simulation) so a 70-question module can complete its own
+  // cycle without waiting for the entire 1,205-question bank to be covered.
   if (trackCoverage && selected.length > 0) {
-    const exam = window.questionBank && window.questionBank.exams[examCode];
-    const fullBankIds = exam ? exam.questionBank.map(q => q.id) : [];
-    _markQuestionsSeen(examCode, selected.map(q => q.id), fullBankIds);
+    _markQuestionsSeen(examCode, selected.map(q => q.id), questionBank.map(q => q.id));
   }
   
   return selected;

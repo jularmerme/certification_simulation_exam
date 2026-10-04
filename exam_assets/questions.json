@@ -18063,16 +18063,16 @@
           "module": "4.0",
           "type": "mc",
           "difficulty": "medium",
-          "stem": "A company employee reports that their computer, which was recently upgraded with additional RAM and a new SSD, is still experiencing sluggish performance. As an IT analyst, you need to determine the underlying cause of the issue. Which of the following analyses would BEST help you identify the root cause of the sluggish performance? Analyze the system configuration to ensure that the new",
+          "stem": "A company employee reports that their computer, which was recently upgraded with additional RAM and a new SSD, is still experiencing sluggish performance. As an IT analyst, you need to determine the underlying cause of the issue. Which of the following analyses would BEST help you identify the root cause of the sluggish performance?",
           "explanation": "Ensuring that the RAM is in dual-channel mode and the SSD is configured correctly can reveal misconfigurations that might be causing the sluggish performance. While overheating can cause performance throttling, the scenario involves recent hardware upgrades. Analyzing temperature logs is more about preventing thermal issues rather than addressing potential misconfigurations related to new hardware. Network traffic analysis is more relevant to diagnosing network-related performance issues. The scenario focuses on hardware upgrades, so network bandwidth is unlikely to be the root cause of the sluggish performance. While identifying resource-intensive processes is important, the scenario specifically involves recent hardware upgrades. The focus should be on analyzing hardware configurations rather than software processes to identify the root cause of the performance issue",
           "options": [
-            "RAM is operating in dual-channel mode and the SSD is properly configured",
+            "Analyze the system configuration to ensure that the new RAM is operating in dual-channel mode and the SSD is properly configured",
             "Analyze the network traffic to determine if bandwidth limitations are affecting the computer's performance",
             "Analyze the system's temperature logs to check for any signs of overheating that might throttle performance.",
             "Analyze the software applications running on the system to identify any resource-intensive processes."
           ],
           "correctAnswer": [
-            "RAM is operating in dual-channel mode and the SSD is properly configured"
+            "Analyze the system configuration to ensure that the new RAM is operating in dual-channel mode and the SSD is properly configured"
           ],
           "origin": "CertMaster"
         },
