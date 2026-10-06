@@ -654,25 +654,45 @@ function _getSeenIds(examCode) {
   return new Set(map[examCode] || []);
 }
 
-function selectUniqueQuestions(questionBank, count) {
+/**
+ * Pick `count` unique questions from `questionBank`.
+ *
+ * Draw order (strict tiers), used only when `prioritizeMissed` is true:
+ *   1. Missed last time   (latest mastery result is wrong/partial)
+ *   2. Never attempted    (no mastery record yet)
+ *   3. Answered correctly last time
+ * Inside each tier, questions NOT yet in the no-repeat coverage ledger come
+ * first, then already-seen ones; each group is shuffled. With
+ * `prioritizeMissed` false (Simulation, non-Core-1 exams) every question sits
+ * in one tier, so the draw is the plain unseen-first behavior.
+ */
+function selectUniqueQuestions(questionBank, count, prioritizeMissed = false) {
   const selected = [];
   const seenIds = new Set();
 
   const examCode = appState.examCode;
   const trackCoverage = COVERAGE_EXAM_CODES.includes(examCode);
   const previouslySeen = trackCoverage ? _getSeenIds(examCode) : new Set();
+  const masteryMap = (prioritizeMissed && MASTERY_EXAM_CODES.includes(examCode))
+    ? (_loadMasteryMap()[examCode] || {})
+    : null;
 
-  // Split the draw pool into unseen-first, then already-seen as a top-up
-  // source. Without tracking (non-Core-1 exams), this is just one shuffled
-  // pool — identical to the old behavior.
-  const unseenPool = trackCoverage
-    ? questionBank.filter(q => !previouslySeen.has(q.id))
-    : questionBank;
-  const seenPool = trackCoverage
-    ? questionBank.filter(q => previouslySeen.has(q.id))
-    : [];
+  // 0 = missed last time, 1 = never attempted, 2 = answered correctly last time.
+  const tierOf = q => {
+    if (!masteryMap) return 0;
+    const lastResult = masteryMap[q.id];
+    if (lastResult === false) return 0;
+    return lastResult === undefined ? 1 : 2;
+  };
 
-  const orderedCandidates = [...shuffleArray([...unseenPool]), ...shuffleArray([...seenPool])];
+  const orderedCandidates = [];
+  for (let tier = 0; tier <= 2; tier++) {
+    const inTier = questionBank.filter(q => tierOf(q) === tier);
+    orderedCandidates.push(
+      ...shuffleArray(inTier.filter(q => !previouslySeen.has(q.id))),
+      ...shuffleArray(inTier.filter(q => previouslySeen.has(q.id)))
+    );
+  }
 
   for (const q of orderedCandidates) {
     if (selected.length >= count) break;
@@ -681,22 +701,18 @@ function selectUniqueQuestions(questionBank, count) {
       seenIds.add(q.id);
     }
   }
-  
+
   // If we don't have enough unique questions, log warning
   if (selected.length < count) {
     console.warn(`Requested ${count} unique questions but only ${selected.length} available`);
   }
 
-  // Record this draw's questions as seen. The shared ledger still spans all
-  // modes (a question seen in Module practice counts as seen in a later
-  // Practice Exam draw too) — but the cycle-reset check is scoped to THIS
-  // draw's own pool (the module/domain being practiced, or the whole bank
-  // for Practice/Simulation) so a 70-question module can complete its own
-  // cycle without waiting for the entire 1,205-question bank to be covered.
+  // Record this draw in the shared coverage ledger. The cycle-reset check is
+  // scoped to THIS draw's own pool (module/domain, or whole bank for Practice).
   if (trackCoverage && selected.length > 0) {
     _markQuestionsSeen(examCode, selected.map(q => q.id), questionBank.map(q => q.id));
   }
-  
+
   return selected;
 }
 // ---------------------------------------------------------------------------
@@ -848,7 +864,7 @@ function countPickerContinue() {
   const sel = document.getElementById('countPickerSelect');
   const pct = Number(sel && sel.value) || 100;
   const count = questionsForPercent(spec.pool.length, pct);
-  const questions = selectUniqueQuestions(spec.pool, count);
+  const questions = selectUniqueQuestions(spec.pool, count, /* prioritizeMissed */ true);
 
   appState.examMode = spec.mode;                 // 'practice' | 'domain' | 'module'
   appState.feedbackEnabled = true;
@@ -1674,6 +1690,9 @@ function toggleFlag() {
 function startTimer() {
   clearInterval(appState.timerInterval);
   document.getElementById('timerDisplay').classList.remove('hidden');
+  // Draw the starting value right away. Without this, a retake/restart keeps
+  // showing the previous run's last value until the first 1-second tick.
+  updateTimerDisplay();
   
   appState.timerInterval = setInterval(() => {
     appState.timeRemaining--;
@@ -1690,11 +1709,11 @@ function updateTimerDisplay() {
   const mins = Math.floor(appState.timeRemaining / 60);
   const secs = appState.timeRemaining % 60;
   const display = String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
-  document.getElementById('timerDisplay').textContent = display;
-  
-  if (appState.timeRemaining <= 300) { // 5 min warning
-    document.getElementById('timerDisplay').classList.add('warn');
-  }
+  const timerEl = document.getElementById('timerDisplay');
+  timerEl.textContent = display;
+  // 5 min warning. Toggled (not just added) so a fresh run with plenty of
+  // time left doesn't inherit the previous run's red warning state.
+  timerEl.classList.toggle('warn', appState.timeRemaining <= 300);
 }
 
 // Submit exam

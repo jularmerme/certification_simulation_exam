@@ -19000,7 +19000,7 @@
             "To prevent data collisions"
           ],
           "correctAnswer": [
-            "Toreduce errors during troubleshooting"
+            "To reduce errors during troubleshooting"
           ],
           "origin": "CertMaster"
         },
@@ -19357,10 +19357,10 @@
             "Loopback plug",
             "Tone generator",
             "Toner probe",
-            "Cabletester"
+            "Cable tester"
           ],
           "correctAnswer": [
-            "Cabletester"
+            "Cable tester"
           ],
           "origin": "CertMaster"
         },
@@ -19498,8 +19498,8 @@
           "options": [
             "802.11n",
             "802.11b",
-            "802.119",
-            "802.114"
+            "802.11g",
+            "802.11a"
           ],
           "correctAnswer": [
             "802.11n"
@@ -19725,13 +19725,13 @@
           "explanation": "The 802.11ac standard uses the 5 GHz frequency and supports data transmission speeds up to 2.6 Gbps. 802.11g and 802.11a both support data transmission speeds up to 54 Mbps. 802.11b supports data transmission speeds up to 11 Mbps. 802.11n supports data transmission speeds up to 600 Mbps.",
           "options": [
             "802.11g",
-            "8:02.11ac",
+            "802.11ac",
             "802.11n",
             "802.11b",
-            "QeE 802.11a"
+            "802.11a"
           ],
           "correctAnswer": [
-            "8:02.11ac"
+            "802.11ac"
           ],
           "origin": "CertMaster"
         },
