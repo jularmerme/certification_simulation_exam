@@ -1,0 +1,353 @@
+[
+  {
+    "id": "1202-BRW-001",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Hashing is the process of using a cryptographic algorithm to generate a unique, fixed-length string of characters (a hash value or checksum) from a file, which acts as the file's digital fingerprint. By comparing the calculated hash of a downloaded file with a known, trusted hash provided by the original software vendor, a user can verify the file's integrity and authenticity. A matching hash confirms that the file has not been altered or corrupted during the download process, thereby mitigating the risks of malware or data integrity loss.",
+    "explanation": "True. Comparing hashes verifies a download's integrity.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-002",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Browser patching refers to the process of keeping web browsers updated with the latest security patches, bug fixes, and performance improvements released by the vendor. Regular patching helps close vulnerabilities that attackers could exploit through malicious websites, extensions, or scripts. Enabling automatic updates and obtaining patches directly from the browser's official source are best practices for maintaining browser security and protecting system integrity.",
+    "explanation": "True. Keep browsers patched, ideally automatically and from the official source.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-003",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Browser extensions and plug-ins are software components that add functionality to web browsers. Extensions typically enhance user experience by adding features such as ad blocking, password management, or productivity tools. Plug-ins are often used to handle specific content types, such as video or interactive media. Security best practices include installing these components only from trusted sources, regularly updating them, and disabling or removing those that are unnecessary or potentially unsafe.",
+    "explanation": "True. Install only from trusted sources, keep them updated and remove unneeded ones.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-004",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is reviewing web browser security configuration. Which setting should be modified to enable secure password storage?",
+    "explanation": "The browser's built-in password manager is the setting that stores passwords securely.",
+    "options": [
+      "Disable saving form data",
+      "Enable password manager",
+      "Disable autofill",
+      "Clear saved credentials on exit"
+    ],
+    "correctAnswer": [
+      "Enable password manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-005",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which network protocol ensures that all data exchanged between a web browser and a server is encrypted and protected from interception?",
+    "explanation": "HTTPS encrypts data between the browser and web server.",
+    "options": [
+      "SFTP",
+      "IPsec",
+      "SSH",
+      "HTTPS"
+    ],
+    "correctAnswer": [
+      "HTTPS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-006",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the standard method for viewing a website's certificate details in most modern browsers?",
+    "explanation": "Click the padlock or security icon in the address bar to see the certificate.",
+    "options": [
+      "Right-clicking the web page and selecting the \"Inspect\" option",
+      "Hovering the mouse cursor over the website's favicon in the tab header",
+      "Finding the relevant section in the browser's settings menu",
+      "Clicking the padlock or security icon in the browser's address bar"
+    ],
+    "correctAnswer": [
+      "Clicking the padlock or security icon in the browser's address bar"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-007",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user complains that multiple advertising windows open automatically when visiting websites. Which browser feature should be enabled to prevent this behavior?",
+    "explanation": "A pop-up blocker prevents sites from opening new windows automatically.",
+    "options": [
+      "Tracking prevention",
+      "Pop-up blocker",
+      "Ad blocker",
+      "Private-browsing mode"
+    ],
+    "correctAnswer": [
+      "Pop-up blocker"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-008",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is attempting to complete a secured transaction on a trusted e-commerce site, but the necessary third-party payment gateway window fails to load after clicking the checkout button. Which browser setting should be adjusted to resolve the issue?",
+    "explanation": "The payment window is likely being blocked as a pop-up, so allow it for this trusted site.",
+    "options": [
+      "Add the site to the pop-up blocker's allowed list",
+      "Complete the transaction using the browser's private/incognito mode",
+      "Disable the browser's ad blocker extension",
+      "Enable compatibility view in the browser's settings"
+    ],
+    "correctAnswer": [
+      "Add the site to the pop-up blocker's allowed list"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-009",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a website automatically signs in under a previous user's account on a shared workstation. Which browser maintenance task will prevent this issue from recurring?",
+    "explanation": "Clearing browsing data removes the saved sessions, cookies and sign-in information.",
+    "options": [
+      "Clear autofill form data",
+      "Clear browsing data",
+      "Clear saved passwords",
+      "Clear the browser cache"
+    ],
+    "correctAnswer": [
+      "Clear browsing data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-010",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A support technician suspects a web application is loading outdated scripts stored locally. What is the most appropriate step to resolve this issue?",
+    "explanation": "Outdated locally stored scripts come from the cache, so clear it.",
+    "options": [
+      "Update the application",
+      "Reset the browser to default settings",
+      "Clear the browser cache",
+      "Reinstall the browser"
+    ],
+    "correctAnswer": [
+      "Clear the browser cache"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-011",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "By default, private-browsing mode:",
+    "explanation": "Private browsing doesn't save history or session data locally. It does not encrypt traffic or hide activity from websites or ISPs.",
+    "options": [
+      "Blocks ads or third-party trackers",
+      "Encrypts network traffic",
+      "Prevents the local storage of browsing history and session data",
+      "Hides user activity from websites or ISPs"
+    ],
+    "correctAnswer": [
+      "Prevents the local storage of browsing history and session data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-012",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which feature allows a user to maintain consistent browser preferences, extensions, and login credentials across multiple devices?",
+    "explanation": "Signing in to the browser and enabling data synchronization keeps settings consistent across devices.",
+    "options": [
+      "Domain-based login",
+      "Sign-in/browser data synchronization",
+      "Roaming user profile",
+      "Single sign-on authentication"
+    ],
+    "correctAnswer": [
+      "Sign-in/browser data synchronization"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-013",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following web browser features reduces bandwidth usage and improves page load performance by stopping embedded advertising media content?",
+    "explanation": "An ad blocker stops embedded ad content from loading.",
+    "options": [
+      "Pop-up blocker",
+      "Ad blocker",
+      "Private-browsing mode",
+      "Proxy server"
+    ],
+    "correctAnswer": [
+      "Ad blocker"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-014",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to configure a user's web browser to route traffic through a corporate content filter. Which feature should be used to accomplish this task?",
+    "explanation": "A proxy server setting routes browser traffic through the corporate filter.",
+    "options": [
+      "VPN connection",
+      "Proxy server",
+      "Web content filter extension",
+      "Firewall rule"
+    ],
+    "correctAnswer": [
+      "Proxy server"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-015",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which protocols are used by Secure DNS implementations to encrypt and protect DNS queries? (Select 2 answers)",
+    "explanation": "Secure DNS encrypts queries using DNS over TLS (DoT) or DNS over HTTPS (DoH).",
+    "options": [
+      "IPsec",
+      "TLS",
+      "SFTP",
+      "VPN",
+      "HTTPS"
+    ],
+    "correctAnswer": [
+      "TLS",
+      "HTTPS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-016",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which web browser feature helps prevent ISPs and other intermediaries from viewing which websites are being accessed?",
+    "explanation": "Secure DNS encrypts DNS lookups so the ISP can't see which sites are being resolved.",
+    "options": [
+      "Proxy settings",
+      "Private-browsing mode",
+      "Do Not Track setting",
+      "Secure DNS"
+    ],
+    "correctAnswer": [
+      "Secure DNS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-BRW-017",
+    "topic": "Web Browser Security",
+    "domain": "2.0 Security",
+    "objective": "2.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Web browser feature management involves the administrative control over a browser's functionality, including the ability to enable, disable, install, or remove components such as plug-ins, extensions, and built-in features like password managers, synchronization, or geolocation. This management is critical for enforcing security policies, minimizing attack surface, reducing resource consumption, and maintaining a consistent user experience in managed environments.",
+    "explanation": "True. Managing features and extensions reduces attack surface and enforces policy.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

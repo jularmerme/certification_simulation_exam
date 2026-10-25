@@ -1,0 +1,182 @@
+[
+  {
+    "id": "CM2-14.8-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While on a business trip, an employee accesses the company's internal network and transfers files using an encrypted connection. Which of the following digital security methods is the employee MOST likely using?",
+    "explanation": "A virtual private network (VPN) is an encrypted tunnel between remote users and a private network. Data loss prevention (DLP) programs monitor operations such as file transfers and emails for user activity that could compromise data security. An access control list contains users and groups that are granted access to files, folders, and other resources. Firewalls are usually placed between a company's network and the internet to filter network traffic at the IP level. VPNs are what usually tunnel through these firewalls. In some cases, both functions may be available on one device.",
+    "options": [
+      "Access control list",
+      "DLP",
+      "Firewall",
+      "VPN"
+    ],
+    "correctAnswer": [
+      "VPN"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user brings in a Windows 10 laptop that has been experiencing frequent crashes and performance issues. After troubleshooting, you determine that the operating system has become corrupted due to a failed update. The user has critical files stored on the device that have not been backed up. You decide to analyze the available recovery options to resolve the issue while preserving the user's data. Which of the following recovery methods would BEST address the situation?",
+    "explanation": "The \"Reset this PC\" operation with the \"Keep my files\" option reinstalls Windows while preserving the user's personal files. This method is ideal for resolving operating system corruption caused by a failed update while ensuring that critical user data is not lost. The \"Remove everything\" option in the \"Reset this PC\" operation reinstalls Windows but deletes all user files, applications, and settings. While this would resolve the operating system corruption, it would result in the loss of the user's critical files, which is not acceptable in this scenario. System Restore can roll back the system to a previous configuration, but it does not guarantee that the operating system corruption caused by the failed update will be fully resolved. Additionally, System Restore does not affect user files, but it may not be effective if no suitable restore points exist or if the corruption extends beyond configuration changes. Reimaging the system using a backup from another device would overwrite the entire system, including the user's files, with the contents of the backup. This would not preserve the user's critical files and is not the best option for this scenario. Additionally, reimaging requires a pre-existing system image backup, which may not be available in this case.",
+    "options": [
+      "Use the \"System Restore\" option to roll back the system to a previous restore point.",
+      "Use the \"Reset this PC\" operation with the \"Keep my files\" option.",
+      "Perform a \"Reimage\" operation using a system image backup created on another device.",
+      "Perform a \"Reset this PC\" operation with the \"Remove everything\" option."
+    ],
+    "correctAnswer": [
+      "Use the \"Reset this PC\" operation with the \"Keep my files\" option."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When typed at the command prompt in a Microsoft Windows client, what is the purpose of the ipconfig command?",
+    "explanation": "Troubleshooting network activity will start with an investigation of the network adapter settings. When used without switches, the ipconfig displays the IP address, subnet mask, and default gateway (router) configurations to aid in troubleshooting. The netstat (network status) command will enable investigations of connections on a local host. It can also verify whether ports are open, closed, or if another client is connected. The nslookup tool can troubleshoot Domain Name System (DNS), either interactively or from the command prompt. The ping command is a command-line utility that works as a diagnostic tool to test whether a host can communicate with another host or reach a specifically targeted host.",
+    "options": [
+      "View and troubleshoot Domain Name System (DNS).",
+      "Test host-to-host communications.",
+      "View open/closed or ports with active connections.",
+      "Troubleshoot the network adapter."
+    ],
+    "correctAnswer": [
+      "Troubleshoot the network adapter."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is working with a technician to solve a software problem on their computer. What application allows a user to ask for help from a technician or co-worker via an invitation file protected by a passcode?",
+    "explanation": "Microsoft Remote assistance (MSRA) allows a user to ask for help from a technician or co-worker by an invitation file protected by a passcode. The helper opens the invitation file to connect to the remote system. A virtual private network allows users to connect to an office computer or network remotely and securely. A VPN is also commonly used to allow for anonymous web browsing on the internet. Windows uses the Remote Desktop Protocol (RDP) to implement terminal server and client functionality. Secure Shell (SSH) connects to a command interpreter rather than a desktop window manager using encryption to protect the session.",
+    "options": [
+      "Virtual private network (VPN)",
+      "Remote Desktop Protocol (RDP)",
+      "Microsoft Remote Assistance (MSRA)",
+      "Secure Shell (SSH)"
+    ],
+    "correctAnswer": [
+      "Microsoft Remote Assistance (MSRA)"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a Windows system that frequently crashes during startup. To identify the cause, you decide to use the System Configuration Utility (msconfig). Which of the following steps should you take to isolate the problematic service or application?",
+    "explanation": "The System Configuration Utility (msconfig) allows you to configure the system to boot into Safe Mode using the Boot tab. Safe Mode loads only essential services and drivers, making it easier to isolate the problematic service or application by gradually enabling additional services and observing the system's behavior. While the Performance tab in Task Manager is useful for monitoring resource usage, it does not help in isolating problematic services or applications during startup. This answer confuses the purpose of Task Manager with the functionality of the System Configuration Utility. Event Viewer is a diagnostic tool for reviewing logs and identifying errors, but it does not allow you to modify startup configurations or isolate problematic services. This answer misrepresents the role of Event Viewer in troubleshooting startup issues. Disabling the network adapter in Device Manager might be useful in specific scenarios, such as troubleshooting network-related issues, but it is not relevant to isolating startup problems using the System Configuration Utility. This answer does not align with the functionality of msconfig.",
+    "options": [
+      "Use the Performance tab in Task Manager to monitor resource usage during startup.",
+      "Disable the network adapter in Device Manager to prevent external interference during startup.",
+      "Open the Event Viewer and review the System log for critical errors during the last startup.",
+      "Boot the system into Safe Mode and gradually enable services to identify the issue."
+    ],
+    "correctAnswer": [
+      "Boot the system into Safe Mode and gradually enable services to identify the issue."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What tool will distinguish client accounts and provide support for recording and reporting billable support activity?",
+    "explanation": "Remote Monitoring and Management (RMM) tools are principally designed for use by managed service providers (MSPs). Remote Desktop Protocol (RDP) implements terminal server and client functionality. RDP authentication and session data are always encrypted. A virtual private network (VPN) establishes a tunneled link that joins a local computer to a remote network. Establish a VPN link and then use a remote desktop to connect to a host on the private network. Virtual network computing (VNC) is a freeware product with similar functionality to RDP. It works over TCP port 5900. Not all versions of VNC support connection security.",
+    "options": [
+      "RMM",
+      "VNC",
+      "VPN",
+      "RDP"
+    ],
+    "correctAnswer": [
+      "RMM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that they are unable to access a shared printer on the local network. You suspect a network connectivity issue and decide to troubleshoot using the ping command. You successfully ping the loopback address (127.0.0.1) and the workstation's IP address. However, when you attempt to ping the default gateway, the request times out. What is the MOST likely cause of the issue?",
+    "explanation": "The default gateway is responsible for routing traffic between the local network and other networks. If the ping command to the default gateway times out, it indicates that the workstation cannot communicate with the gateway. This could mean the gateway is down, misconfigured, or there is a physical connectivity issue between the workstation and the gateway. While a turned-off printer would prevent the user from accessing it, this issue would not cause the ping command to fail when testing the default gateway. The problem lies in the network connectivity, not the printer's operational status. If the workstation's IP address were misconfigured, the ping command to the workstation's own IP address would fail. However, in this scenario, the ping to the workstation's IP address was successful, ruling out this possibility. A corrupted printer driver would prevent the user from printing, but it would not affect the ability to ping the default gateway. This is a software issue unrelated to the network connectivity problem being diagnosed.",
+    "options": [
+      "The printer driver on the user's workstation is corrupted.",
+      "The workstation's IP address is misconfigured.",
+      "The shared printer is turned off.",
+      "The default gateway is down or unreachable."
+    ],
+    "correctAnswer": [
+      "The default gateway is down or unreachable."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-016",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a technician troubleshooting a Windows 10 system that has been experiencing frequent crashes. After opening the Event Viewer, you need to determine which default log file will provide information about hardware conflicts or driver load failures. Which log file should you examine?",
+    "explanation": "The System Log records events that affect the core operating system, such as service load failures, hardware conflicts, driver load failures, and network issues. Since the scenario involves troubleshooting crashes likely caused by hardware or driver issues, this is the correct log to examine. The Application Log contains information about non-core processes, utilities, and some third-party applications. While it may provide insights into application-related issues, it does not record hardware conflicts or driver load failures, making it irrelevant to this scenario. The Security Log holds audit data for the system, such as login attempts and resource access. It is used for tracking security-related events, not for diagnosing hardware or driver issues, so it is not the correct choice. The Setup Log records installation events, such as software or driver installations. While it may contain some information about driver installations, it does not provide ongoing monitoring of hardware conflicts or driver load failures, making it unsuitable for this scenario.",
+    "options": [
+      "Setup Log",
+      "System Log",
+      "Security Log",
+      "Application Log"
+    ],
+    "correctAnswer": [
+      "System Log"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.8-018",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.8",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A cyber architect wants to enhance their work computer for better optimization, storage space, and speed efficiency. What can the architect consider to meet the desired optimization outcome?",
+    "explanation": "The cyber architect can add resources to support the needs of the computing work. An example of adding a resource can include using a solid-state device over a standardized hard-disk drive. More recently, the resource of cloud storage versus physical storage has provided better support to users. There are various instances in which a program or application should be uninstalled and then reinstalled. These instances include troubleshooting failures, application/program crashes, etc. A system reboot is the intentional or unintentional restarting of a computing/mobile device where the operating system is refreshed and loaded. After certain programs/applications are installed/updated, a restart service is required. The program/application will boot and perform the desired tasks upon restart.",
+    "options": [
+      "Reboot.",
+      "Uninstall applications.",
+      "Add resources.",
+      "Restart service."
+    ],
+    "correctAnswer": [
+      "Add resources."
+    ],
+    "origin": "CertMaster"
+  }
+]

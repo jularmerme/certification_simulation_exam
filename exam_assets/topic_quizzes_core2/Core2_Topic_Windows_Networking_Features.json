@@ -1,0 +1,666 @@
+[
+  {
+    "id": "1202-WNF-001",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below best describe how resource sharing is managed in a Windows domain environment? (Select 3 answers)",
+    "explanation": "A domain uses centralized access control through Active Directory and scales to many users and devices.",
+    "options": [
+      "Centralized access control",
+      "Local user-based access control",
+      "Active Directory integration",
+      "Manual configuration per device",
+      "Scalable across many users/devices",
+      "Limited to small networks"
+    ],
+    "correctAnswer": [
+      "Centralized access control",
+      "Active Directory integration",
+      "Scalable across many users/devices"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-002",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following statements are true regarding resource sharing in Windows workgroups? (Select 3 answers)",
+    "explanation": "A workgroup is peer-to-peer. Each device is configured manually with local user accounts, and it suits small networks.",
+    "options": [
+      "Limited to small networks",
+      "Scalable across many users/devices",
+      "Manual configuration per device",
+      "Active Directory integration",
+      "Local user-based access control",
+      "Centralized access control"
+    ],
+    "correctAnswer": [
+      "Limited to small networks",
+      "Manual configuration per device",
+      "Local user-based access control"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-003",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which navigation paths in Windows Control Panel provide access to resource sharing options? (Select 2 answers)",
+    "explanation": "Advanced sharing settings are reached through the Network and Sharing Center (category or icon view).",
+    "options": [
+      "Network and Internet (in category view) > Sharing options",
+      "Internet Options (in icon view) > Connections > LAN settings",
+      "Network and Internet (in category view) > Network and Sharing Center > Change advanced sharing settings",
+      "Devices and Printers (in icon view) > Manage network devices > Sharing options",
+      "Network and Sharing Center (in icon view) > Change advanced sharing settings"
+    ],
+    "correctAnswer": [
+      "Network and Internet (in category view) > Network and Sharing Center > Change advanced sharing settings",
+      "Network and Sharing Center (in icon view) > Change advanced sharing settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-004",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The resource sharing options in the Windows 11 Settings app can be accessed via:",
+    "explanation": "In Windows 11 the path is Settings > Network & internet > Advanced network settings > Advanced sharing settings.",
+    "options": [
+      "Update & Security > Windows Security > Firewall & network protection > Advanced settings",
+      "Network & Internet > Status > Network and Sharing Center > Change advanced sharing settings",
+      "Devices > Printers & scanners > Manage (after selecting a device)",
+      "Network & internet > Advanced network settings > Advanced sharing settings"
+    ],
+    "correctAnswer": [
+      "Network & internet > Advanced network settings > Advanced sharing settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-005",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to ensure that a Windows system can both find and be found by other devices on a trusted LAN. Which feature of the advanced sharing settings must be turned on to enable this functionality?",
+    "explanation": "Network discovery lets the PC see other devices and be seen by them.",
+    "options": [
+      "Remote access",
+      "SSID broadcast",
+      "Network discovery",
+      "Guest account"
+    ],
+    "correctAnswer": [
+      "Network discovery"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-006",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that others can see their Windows PC on the network, but cannot access the shared printer attached to it. In advanced sharing settings, which feature is most likely disabled?",
+    "explanation": "The PC is discoverable (network discovery is on), so file and printer sharing is the setting that's off.",
+    "options": [
+      "Network discovery",
+      "File and printer sharing",
+      "Remote access",
+      "Network profile type"
+    ],
+    "correctAnswer": [
+      "File and printer sharing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-007",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows-based system configured with correct network and sharing settings still prompts remote users for credentials. To allow unauthenticated access in a trusted environment, which feature in the advanced sharing settings should be turned off?",
+    "explanation": "Turning off password-protected sharing lets remote users access shares without credentials.",
+    "options": [
+      "Administrative access",
+      "NTFS permissions",
+      "Password-protected sharing",
+      "Inbound firewall rules"
+    ],
+    "correctAnswer": [
+      "Password-protected sharing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-008",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which character, when appended to the end of the name of a network share in Windows, indicates that the network share is intended for administrative access and not visible to regular users?",
+    "explanation": "A trailing $ makes a share hidden (an administrative share such as C$).",
+    "options": [
+      "#",
+      "$",
+      "?",
+      "&"
+    ],
+    "correctAnswer": [
+      "$"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-009",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the options listed below provides access to shared folders in a Windows environment?",
+    "explanation": "Shared folders can be viewed through Computer Management (Windows 10 and 11) and with net share on the command line.",
+    "options": [
+      "Control Panel > Administrative Tools (Windows 10) > Computer Management > System Tools > Shared Folders > Shares",
+      "Windows command-line interface > Run the net share command",
+      "Control Panel > Windows Tools (Windows 11) > Computer Management > System Tools > Shared Folders > Shares",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-010",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "In the Windows Control Panel, local printer sharing can be enabled via: (Select all that apply)",
+    "explanation": "Printer sharing is on the Sharing tab of Printer properties. Plain 'Properties' (option 3) is the device properties, not the printer properties.",
+    "options": [
+      "Windows Control Panel (icon view) > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Windows Control Panel (category view) > Hardware and Sound > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Windows Control Panel (icon view) > Devices and Printers > right-click on a selected printer > Properties > Sharing tab",
+      "Windows Control Panel (category view) > View devices and printers (under Hardware and Sound) > right-click on a selected printer > Printer properties > Sharing tab"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (icon view) > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Windows Control Panel (category view) > Hardware and Sound > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Windows Control Panel (category view) > View devices and printers (under Hardware and Sound) > right-click on a selected printer > Printer properties > Sharing tab"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-011",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which path in the Windows 10 Settings app provides access to printer sharing configuration options?",
+    "explanation": "In Windows 10 the path is Settings > Devices > Printers & scanners > select the printer > Manage > Printer properties > Sharing tab.",
+    "options": [
+      "Devices > Printers & scanners > left-click on a selected printer > Manage > Printer properties > Sharing tab",
+      "Hardware and Sound > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Bluetooth & devices > Printers & scanners > left-click on a selected printer > Printer properties > Sharing tab"
+    ],
+    "correctAnswer": [
+      "Devices > Printers & scanners > left-click on a selected printer > Manage > Printer properties > Sharing tab"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-012",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the Windows 11 Settings app, printer sharing options can be accessed via:",
+    "explanation": "In Windows 11 the path starts at Settings > Bluetooth & devices > Printers & scanners.",
+    "options": [
+      "Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Hardware and Sound > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab",
+      "Bluetooth & devices > Printers & scanners > left-click on a selected printer > Printer properties > Sharing tab",
+      "Devices > Printers & scanners > left-click on a selected printer > Manage > Printer properties > Sharing tab"
+    ],
+    "correctAnswer": [
+      "Bluetooth & devices > Printers & scanners > left-click on a selected printer > Printer properties > Sharing tab"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-013",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following protocols is commonly used by Windows servers to share files, printers, and other resources over a network?",
+    "explanation": "Server Message Block (SMB) is the Windows file and printer sharing protocol.",
+    "options": [
+      "FTP",
+      "SMB",
+      "NetBIOS",
+      "LDAP"
+    ],
+    "correctAnswer": [
+      "SMB"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-014",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user needs to access a folder named Projects located on a shared Windows file server FS1. Which UNC path would a technician use to connect to this resource?",
+    "explanation": "A UNC path starts with two backslashes: \\\\server\\share.",
+    "options": [
+      "//FS1\\Projects",
+      ":\\FS1\\Projects",
+      "\\\\FS1\\Projects",
+      "FS1:\\\\Projects"
+    ],
+    "correctAnswer": [
+      "\\\\FS1\\Projects"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-015",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The primary purpose of mapping a network drive in Windows is to assign a drive letter locally to a shared folder stored on a remote computer or server, making the resource appear as part of the local file system. This enables faster navigation, provides a consistent access point through a fixed drive letter, allows applications that require a local path to work seamlessly, and includes an option to automatically reconnect the drive at user sign-in to maintain ongoing access.",
+    "explanation": "True. This describes the purpose of mapping a network drive.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-016",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the correct syntax for mapping a network drive using the Windows command-line interpreter?",
+    "explanation": "net use Z: \\\\Server\\Share maps a network drive from the command line.",
+    "options": [
+      "net map Z: \\\\Server\\Share",
+      "map drive Z: \\\\Server\\Share",
+      "net use Z: \\\\Server\\Share",
+      "drive map Z: \\\\Server\\Share"
+    ],
+    "correctAnswer": [
+      "net use Z: \\\\Server\\Share"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-017",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to map a network drive for a user. The shared folder is located at \\\\Server1\\Documents, and the user wants it mapped to the drive letter X. What should the technician do to accomplish this task?",
+    "explanation": "Right-click This PC in File Explorer and choose Map network drive. The command-line options use commands that don't exist (the real one is net use).",
+    "options": [
+      "Open File Explorer > right-click \"This PC\" > select \"Map network drive\" > choose X from the dropdown list, and enter \\\\Server1\\Documents",
+      "Launch Windows command-line interpreter > type \"map drive X: \\\\Server1\\Documents\" (without double quotes), and press Enter",
+      "Open File Explorer > right-click on the shared folder > select \"Pin to Quick access\" > choose X from the dropdown list, and enter \\\\Server1\\Documents",
+      "Launch Windows command-line interpreter > type \"net map X: \\\\Server1\\Documents\" (without double quotes), and press Enter"
+    ],
+    "correctAnswer": [
+      "Open File Explorer > right-click \"This PC\" > select \"Map network drive\" > choose X from the dropdown list, and enter \\\\Server1\\Documents"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-018",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the steps listed below provide(s) access to an interface that allows users to modify how apps communicate through Windows Defender Firewall? (Select all that apply)",
+    "explanation": "Windows Defender Firewall sits under System and Security in category view, not under Network and Internet.",
+    "options": [
+      "Windows Control Panel (category view) > System and Security > Allow an app through Windows Firewall (under Windows Defender Firewall)",
+      "Windows Control Panel (icon view) > Network and Sharing Center > Windows Defender Firewall (bottom left pane) > Allow an app or feature through Windows Defender Firewall",
+      "Windows Control Panel (category view) > Network and Internet > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall",
+      "Windows Control Panel (icon view) > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (category view) > System and Security > Allow an app through Windows Firewall (under Windows Defender Firewall)",
+      "Windows Control Panel (icon view) > Network and Sharing Center > Windows Defender Firewall (bottom left pane) > Allow an app or feature through Windows Defender Firewall",
+      "Windows Control Panel (icon view) > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-019",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A systems administrator is tasked with securing a company laptop used by a traveling sales executive. The laptop requires advanced inbound, outbound, and encrypted connection rules, which can be managed through Windows Defender Firewall with Advanced Security. Which navigation path in Windows can the administrator use to access this tool? (Select 2 answers)",
+    "explanation": "Open Windows Defender Firewall and click Advanced settings, from either Control Panel view.",
+    "options": [
+      "Windows Control Panel (icon view) > Internet Options > Security tab > Windows Defender Firewall with Advanced Security",
+      "Windows Control Panel (category view) > System and Security > Windows Defender Firewall > Advanced settings",
+      "Windows Control Panel (icon view) > Windows Defender Firewall > Advanced settings",
+      "Windows Control Panel (category view) > System and Security > Windows Defender Firewall with Advanced Security",
+      "Windows Control Panel (icon view) > Security and Maintenance > Windows Defender Firewall with Advanced Security"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (category view) > System and Security > Windows Defender Firewall > Advanced settings",
+      "Windows Control Panel (icon view) > Windows Defender Firewall > Advanced settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-020",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refer(s) to information required for manual configuration of TCP/IP settings on a network adapter in Windows? (Select all that apply)",
+    "explanation": "Manual TCP/IP configuration needs an IP address, subnet mask, default gateway and DNS server address. SSID and MAC address are not entered.",
+    "options": [
+      "IP address",
+      "Subnet mask",
+      "Default gateway",
+      "SSID (a.k.a. network name)",
+      "MAC address",
+      "DNS server address"
+    ],
+    "correctAnswer": [
+      "IP address",
+      "Subnet mask",
+      "Default gateway",
+      "DNS server address"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-021",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What is the correct sequence of steps for accessing the Network Connections applet that displays all available network adapters in Windows? (Select all that apply)",
+    "explanation": "The Network Connections applet is ncpa.cpl, or Network and Sharing Center > Change adapter settings. Device Manager is a different tool.",
+    "options": [
+      "Control Panel (category view) > Hardware and Sound > Devices and Printers > Network adapters",
+      "Control Panel (icon view) > Device Manager > Network adapters",
+      "Windows Run dialog box > type \"ncpa.cpl\" (without double quotes), and press Enter",
+      "Control Panel (category view) > Network and Internet > Network and Sharing Center > Change adapter settings",
+      "Control Panel (icon view) > Network and Sharing Center > Change adapter settings"
+    ],
+    "correctAnswer": [
+      "Windows Run dialog box > type \"ncpa.cpl\" (without double quotes), and press Enter",
+      "Control Panel (category view) > Network and Internet > Network and Sharing Center > Change adapter settings",
+      "Control Panel (icon view) > Network and Sharing Center > Change adapter settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-022",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a laptop that occasionally fails to obtain an IP address from a DHCP server. To maintain network connectivity in these cases, they plan to configure a fallback static IP address. After opening the Network Connections applet and locating the correct adapter, which navigation path should they follow to reach the appropriate configuration interface?",
+    "explanation": "IP settings are under the adapter's Properties > Internet Protocol version 4 (TCP/IPv4) > Properties (the Alternate Configuration tab holds the fallback).",
+    "options": [
+      "Right-click on the adapter > Properties > Internet Protocol version 4 (TCP/IPv4) > Properties",
+      "Select the adapter > press Alt to display Menu bar > File > Properties",
+      "Right-click on the adapter > Properties > Configure... > Advanced tab",
+      "Select the adapter > Change settings for this connection (in the Command Bar) > Configure..."
+    ],
+    "correctAnswer": [
+      "Right-click on the adapter > Properties > Internet Protocol version 4 (TCP/IPv4) > Properties"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-023",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which sequence of steps in Windows provides access to an interface for creating network connections? (Select 2 answers)",
+    "explanation": "Set up a new connection or network is in the Network and Sharing Center, reached through icon view or View network status and tasks.",
+    "options": [
+      "Windows Control Panel (category view) > Internet Options > Set up a new connection or network",
+      "Windows Control Panel (icon view) > Network and Sharing Center > Set up a new connection or network",
+      "Windows Control Panel (category view) > View network status and tasks > Set up a new connection or network",
+      "Windows Control Panel (icon view) > Internet Options > General tab > Set up a new connection or network",
+      "Windows Control Panel (category view) > Network and Internet > Set up a new connection or network"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (icon view) > Network and Sharing Center > Set up a new connection or network",
+      "Windows Control Panel (category view) > View network status and tasks > Set up a new connection or network"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-024",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows, proxy settings can be accessed via:",
+    "explanation": "Every listed path leads to the proxy settings.",
+    "options": [
+      "Windows Control Panel (category view) > Network and Internet > Internet Options > Connections tab > LAN settings > Proxy server",
+      "Windows Start > Settings > Network & Internet (Windows 10) > Proxy",
+      "Windows Control Panel (icon view) > Internet Options > Connections tab > LAN settings > Proxy server",
+      "Windows Run dialog box > type \"inetcpl.cpl\" (without double quotes), and press Enter > Connections tab > LAN settings > Proxy server",
+      "Windows Start > Settings > Network & internet (Windows 11) > Proxy",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-025",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below describe the default behavior of a private network profile in Windows? (Select 3 answers)",
+    "explanation": "The private profile is for trusted networks. The PC is discoverable and file and printer sharing is allowed.",
+    "options": [
+      "The PC remains hidden from other devices on the network",
+      "Used for trusted networks, such as home or work networks",
+      "The PC can't be used for file and printer sharing",
+      "Enables the PC to become discoverable to other devices on the network",
+      "Used for untrusted networks, such as a Wi-Fi network at a coffee shop",
+      "Enables the PC to be used for file and printer sharing"
+    ],
+    "correctAnswer": [
+      "Used for trusted networks, such as home or work networks",
+      "Enables the PC to become discoverable to other devices on the network",
+      "Enables the PC to be used for file and printer sharing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-026",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers describe the default characteristics of a public network profile in Windows? (Select 3 answers)",
+    "explanation": "The public profile is for untrusted networks. The PC is hidden and file and printer sharing is off.",
+    "options": [
+      "Used for trusted networks, such as home or work networks",
+      "Enables the PC to become discoverable to other devices on the network",
+      "The PC can't be used for file and printer sharing",
+      "Enables the PC to be used for file and printer sharing",
+      "Used for untrusted networks, such as a Wi-Fi network at a coffee shop",
+      "The PC remains hidden from other devices on the network"
+    ],
+    "correctAnswer": [
+      "The PC can't be used for file and printer sharing",
+      "Used for untrusted networks, such as a Wi-Fi network at a coffee shop",
+      "The PC remains hidden from other devices on the network"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-027",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which navigation paths in Windows provide access to a configuration interface used for modifying public/private network profile settings? (Select 2 answers)",
+    "explanation": "Network profile sharing settings are in Change advanced sharing settings in the Network and Sharing Center.",
+    "options": [
+      "Windows Control Panel (icon view) > Internet Options > Connections tab > LAN settings > Change advanced sharing settings",
+      "Windows Control Panel (category view) > View network status and tasks > Change advanced sharing settings",
+      "Windows Control Panel (icon view) > Windows Defender Firewall > expand Private/Public networks menu > modify network profile settings",
+      "Windows Control Panel (category view) > System and Security > Check firewall status > expand Private/Public networks menu > modify network profile settings",
+      "Windows Control Panel (icon view) > Network and Sharing Center > Change advanced sharing settings"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (category view) > View network status and tasks > Change advanced sharing settings",
+      "Windows Control Panel (icon view) > Network and Sharing Center > Change advanced sharing settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-028",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "File Explorer network navigation is a Windows feature that allows users to access and manage shared files, folders, and devices on a local network. Instead of using a web browser or specialized programs, users can browse network resources just like they would browse files stored locally on their own computer. To access a specific shared location, users can type its full network path into the address bar of File Explorer. This path begins with two backslashes, followed by the name of the computer or server, and then the name of the shared folder or resource, such as in \\\\ComputerName\\SharedFolder.",
+    "explanation": "True. Typing a UNC path in the File Explorer address bar opens the shared location.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-029",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "(The beginning of this question is missing in the source screenshot) ...checking, the technician discovers the laptop is connected to a mobile hotspot with a data limit. What is the most likely cause of the update issue?",
+    "explanation": "A metered connection (such as a hotspot with a data limit) pauses large downloads like Windows updates.",
+    "options": [
+      "Laptop's firewall is blocking all update traffic",
+      "Network profile is set to public, which blocks Windows Update traffic",
+      "Connection is set to metered, which pauses large downloads",
+      "User has manually disabled all Windows updates"
+    ],
+    "correctAnswer": [
+      "Connection is set to metered, which pauses large downloads"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WNF-030",
+    "topic": "Windows Networking Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows utility is used to enable or disable a metered connection?",
+    "explanation": "The metered connection toggle is in the Settings app (Network & internet).",
+    "options": [
+      "Computer Management",
+      "Settings app",
+      "Network and Sharing Center",
+      "Internet Options"
+    ],
+    "correctAnswer": [
+      "Settings app"
+    ],
+    "origin": "ExamCompass"
+  }
+]

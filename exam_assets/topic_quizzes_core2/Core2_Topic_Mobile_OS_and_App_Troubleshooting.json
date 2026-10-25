@@ -1,0 +1,801 @@
+[
+  {
+    "id": "1202-MTS-001",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the most common initial troubleshooting step used to resolve general mobile OS and application issues?",
+    "explanation": "Power cycling (restarting) the device is the least invasive first step.",
+    "options": [
+      "Performing factory reset",
+      "Applying system updates",
+      "Clearing cached data",
+      "Power cycling the device"
+    ],
+    "correctAnswer": [
+      "Power cycling the device"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-002",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a mobile app fails to launch on their smartphone. Which of the options listed below is the best initial troubleshooting step to resolve this issue?",
+    "explanation": "Start with the least invasive fix: restart the device. Clearing the cache or data comes later.",
+    "options": [
+      "Free up storage space",
+      "Clear the app cache/data",
+      "Restart the device",
+      "Verify app permissions"
+    ],
+    "correctAnswer": [
+      "Restart the device"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-003",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "To force stop a mobile app means to: (Select all that apply)",
+    "explanation": "A force stop ends all of the app's processes in both the foreground and the background. It doesn't disable the app or revoke permissions.",
+    "options": [
+      "Terminate all processes related to the app",
+      "Stop the app from running in the foreground",
+      "Disable the app until it is manually re-enabled",
+      "Revoke permissions granted to the app",
+      "Stop the app from running in the background"
+    ],
+    "correctAnswer": [
+      "Terminate all processes related to the app",
+      "Stop the app from running in the foreground",
+      "Stop the app from running in the background"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-004",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "matching",
+    "difficulty": "medium",
+    "stem": "For each mobile app troubleshooting action on the left select the root cause it is primarily intended to resolve (according to the standard least-invasive-first methodology).",
+    "explanation": "Each action targets a specific cause: reinstall fixes corrupted app files, clearing cache/data fixes corrupted temporary or user data, an update fixes known bugs, a restart clears memory conflicts and hung processes, and a force close stops a frozen app.",
+    "items": [
+      "Reinstall the app",
+      "Clear the app cache/data",
+      "Update the app",
+      "Restart the device",
+      "Force close the app"
+    ],
+    "options": [
+      "Core application files are corrupted, incomplete, mismatched, or fail integrity checks",
+      "Crashes or misbehavior are caused by corrupted temporary files, cached data, or user-specific settings",
+      "Known bugs or compatibility issues have been fixed in a newer version of the app",
+      "Crashes are caused by temporary memory conflicts, hung processes, or system resource issues",
+      "An app is unresponsive, frozen, or stuck in a loop"
+    ],
+    "correctAnswer": {
+      "Reinstall the app": "Core application files are corrupted, incomplete, mismatched, or fail integrity checks",
+      "Clear the app cache/data": "Crashes or misbehavior are caused by corrupted temporary files, cached data, or user-specific settings",
+      "Update the app": "Known bugs or compatibility issues have been fixed in a newer version of the app",
+      "Restart the device": "Crashes are caused by temporary memory conflicts, hung processes, or system resource issues",
+      "Force close the app": "An app is unresponsive, frozen, or stuck in a loop"
+    },
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-005",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A mobile device cannot update an app, and the system displays an error related to account authentication. What is the most likely cause?",
+    "explanation": "An authentication error points to expired app store credentials.",
+    "options": [
+      "Expired app store credentials",
+      "Two-factor authentication timeout",
+      "App store access restricted by firewall",
+      "Failed device compliance check"
+    ],
+    "correctAnswer": [
+      "Expired app store credentials"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-006",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a mobile app from the official app store will not install on a company-managed smartphone. What is the most likely reason for this issue?",
+    "explanation": "On a company-managed device, MDM policy restrictions commonly block installs.",
+    "options": [
+      "Corrupted installation files",
+      "Pending system updates",
+      "MDM policy restrictions",
+      "Disabled sideloading option"
+    ],
+    "correctAnswer": [
+      "MDM policy restrictions"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-007",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following actions would be of help while troubleshooting a mobile app that becomes slow to respond?",
+    "explanation": "All of these can improve a slow-responding app.",
+    "options": [
+      "Restart the device",
+      "Force stop and relaunch the app",
+      "Update the app",
+      "Clear the app cache/data",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-008",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Most mobile OS updates require a minimum battery percentage or a charging status to prevent the device from shutting down during the update process.",
+    "explanation": "True. Updates require enough battery or a charger.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-009",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An OS update installation begins on a mobile device but consistently stops and reverses the process at 75% complete. The device has plenty of free space and is on a fast network. What does this behavior most strongly suggest?",
+    "explanation": "With enough space and a fast network, an update that rolls back partway suggests a corrupted update package.",
+    "options": [
+      "Corrupted update package",
+      "Insufficient amount of RAM",
+      "Battery charge below threshold",
+      "Exceeded data usage limit"
+    ],
+    "correctAnswer": [
+      "Corrupted update package"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-010",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is troubleshooting a personally-owned mobile device that repeatedly fails to initiate an operating system update. The device is currently connected to a known good home office Wi-Fi network, plugged into a charger, and the update package is confirmed to be available for download. Which of the following is the most likely cause of the update failure?",
+    "explanation": "Network and power are fine and the device is personal (no MDM), so insufficient free storage space is the most likely cause.",
+    "options": [
+      "Operating system incompatibility",
+      "Corrupted installation files",
+      "MDM policy restrictions",
+      "Insufficient free storage space"
+    ],
+    "correctAnswer": [
+      "Insufficient free storage space"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-011",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A tablet's battery drains unusually fast even when the device is idle. Which of the actions listed below will most likely resolve the issue?",
+    "explanation": "Idle battery drain usually comes from background apps, so identify and restrict them.",
+    "options": [
+      "Reduce the screen brightness to its minimum",
+      "Check for physical damage to the battery",
+      "Identify and restrict background applications",
+      "Update the device's operating system"
+    ],
+    "correctAnswer": [
+      "Identify and restrict background applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-012",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A mobile device repeatedly loses battery charge in areas with no reliable cellular coverage. Which action can most effectively reduce the battery drain?",
+    "explanation": "The radio keeps searching for a signal, so airplane mode stops the drain.",
+    "options": [
+      "Enable battery saver mode",
+      "Reset the device's network settings",
+      "Turn off location services",
+      "Enable airplane mode"
+    ],
+    "correctAnswer": [
+      "Enable airplane mode"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-013",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A corrupted OS installation has been isolated as the most likely cause of persistent random reboots on a user's mobile device. After backing up all user data and charging the device, what is the next troubleshooting step a technician should take?",
+    "explanation": "With a corrupted OS and the data backed up, the fix is a factory reset.",
+    "options": [
+      "Check for and install the latest OS update",
+      "Reboot into diagnostic startup mode",
+      "Downgrade the OS to the previous stable version",
+      "Perform a factory reset of the device"
+    ],
+    "correctAnswer": [
+      "Perform a factory reset of the device"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-014",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician observes that a mobile device reboots randomly during high CPU/GPU load. Which of the following is the most probable cause?",
+    "explanation": "High CPU/GPU load generates heat, and overheating causes random reboots.",
+    "options": [
+      "Outdated firmware",
+      "Degraded battery",
+      "Malware infection",
+      "Device overheating"
+    ],
+    "correctAnswer": [
+      "Device overheating"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-015",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Bluetooth connectivity issues on a mobile device can be resolved by: (Select all that apply)",
+    "explanation": "Bluetooth fixes include keeping the devices close, toggling Bluetooth, restarting both devices and re-pairing. An access point is irrelevant to Bluetooth.",
+    "options": [
+      "Moving the device closer to an access point",
+      "Ensuring the connecting devices are adequately close to each other",
+      "Turning Bluetooth off and then turning it on again",
+      "Restarting the connected devices",
+      "Unpairing and then re-pairing the device"
+    ],
+    "correctAnswer": [
+      "Ensuring the connecting devices are adequately close to each other",
+      "Turning Bluetooth off and then turning it on again",
+      "Restarting the connected devices",
+      "Unpairing and then re-pairing the device"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-016",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below will have no effect on resolving Wi-Fi connectivity issues on a mobile device?",
+    "explanation": "The SIM card is used for cellular service and has no effect on Wi-Fi.",
+    "options": [
+      "Move the device closer to the wireless router",
+      "Disable airplane mode",
+      "Reseat the mobile device's SIM card",
+      "Forget the network and reconnect",
+      "Restart the wireless router",
+      "Verify the correctness of Wi-Fi credentials"
+    ],
+    "correctAnswer": [
+      "Reseat the mobile device's SIM card"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-017",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is not a valid troubleshooting step for resolving problems with contactless payment transactions on a mobile device?",
+    "explanation": "Airplane mode turns off NFC, so it would break contactless payments rather than fix them.",
+    "options": [
+      "Ensure the phone is awake and unlocked",
+      "If used, remove the device's EMF/RFID protective case",
+      "Enable NFC in phone settings",
+      "Verify payment card details in the mobile wallet app",
+      "Maintain very close proximity between the phone and the terminal",
+      "Enable airplane mode to reduce wireless interference"
+    ],
+    "correctAnswer": [
+      "Enable airplane mode to reduce wireless interference"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-018",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Modern mobile devices have the capability to automatically present landscape or portrait views of the device's screen based on how the device is being held. If the screen does not auto-rotate, the easiest troubleshooting step is to modify the appropriate system settings, such as disabling Portrait Orientation Lock on Apple devices or enabling Auto-rotate on Android devices.",
+    "explanation": "True. Check the orientation lock or auto-rotate setting first.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-019",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the name of the package file format used by the Android OS for the distribution and installation of mobile applications?",
+    "explanation": "APK is the Android package format. IPA is for iOS.",
+    "options": [
+      "xap",
+      "apk",
+      "ipa",
+      "exe"
+    ],
+    "correctAnswer": [
+      "apk"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-020",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The practice of installing mobile apps from untrusted sources (i.e., websites and app stores other than the official marketplaces) is referred to as:",
+    "explanation": "Sideloading is installing apps from outside the official store.",
+    "options": [
+      "Sandboxing",
+      "Jailbreaking",
+      "Rooting",
+      "Sideloading"
+    ],
+    "correctAnswer": [
+      "Sideloading"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-021",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Sideloading via APK is the primary method for installing unverified apps from third-party sites on:",
+    "explanation": "APK sideloading is an Android method.",
+    "options": [
+      "iOS",
+      "Android",
+      "Windows Mobile",
+      "Other"
+    ],
+    "correctAnswer": [
+      "Android"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-022",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Installing mobile apps from the official, trusted sources such as Apple's App Store or Google Play significantly reduces malware-related security risks.",
+    "explanation": "True. Official stores vet the apps they distribute.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-023",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the name of an iOS/Android feature that provides access to advanced system settings hidden by default from regular users?",
+    "explanation": "Developer Mode (developer options) exposes advanced settings hidden by default.",
+    "options": [
+      "Recovery mode",
+      "Safe Mode",
+      "Kernel mode",
+      "Developer Mode/options"
+    ],
+    "correctAnswer": [
+      "Developer Mode/options"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-024",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to the process of granting a regular user elevated privileges on an Android-based mobile device?",
+    "explanation": "Rooting gives a user root (superuser) access on Android.",
+    "options": [
+      "Sideloading",
+      "Rooting",
+      "Carrier unlocking",
+      "Jailbreaking"
+    ],
+    "correctAnswer": [
+      "Rooting"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-025",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The process of bypassing Apple's built-in software restrictions on iOS/iPadOS devices is known as:",
+    "explanation": "Jailbreaking removes Apple's software restrictions on iOS/iPadOS.",
+    "options": [
+      "Sideloading",
+      "Carrier unlocking",
+      "Rooting",
+      "Jailbreaking"
+    ],
+    "correctAnswer": [
+      "Jailbreaking"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-026",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following enables installation of software that is not available through the official Apple App Store?",
+    "explanation": "Jailbreaking lets an Apple device install software outside the App Store.",
+    "options": [
+      "Jailbreaking",
+      "Rooting",
+      "Sideloading",
+      "Carrier unlocking"
+    ],
+    "correctAnswer": [
+      "Jailbreaking"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-027",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below best describes the concept of application spoofing?",
+    "explanation": "Application spoofing is a malicious app that disguises itself as a legitimate one.",
+    "options": [
+      "A situation in which a web form field accepts data other than expected (e.g., server commands)",
+      "A type of attack aimed at exploiting an unknown vulnerability in already released software",
+      "A mobile app performing unwanted and harmful actions in disguise of a legitimate and useful program",
+      "A method for gaining unauthorized root access to a mobile device's operating system"
+    ],
+    "correctAnswer": [
+      "A mobile app performing unwanted and harmful actions in disguise of a legitimate and useful program"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-028",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following actions would be the best initial diagnostic step to identify the source of excessive traffic on a mobile device?",
+    "explanation": "Per-app data usage logs show which app is generating the traffic.",
+    "options": [
+      "Force stop background applications",
+      "Perform a network speed benchmark",
+      "Review per-app data usage logs",
+      "Contact the mobile service provider"
+    ],
+    "correctAnswer": [
+      "Review per-app data usage logs"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-029",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below would most likely improve degraded response times on a mobile device? (Select 3 answers)",
+    "explanation": "Updates, closing background apps and restarting improve responsiveness. The quiz marked reviewing resource usage and developer options as not correct.",
+    "options": [
+      "Installing operating system or application updates",
+      "Reviewing CPU, RAM, or storage usage for resource-heavy apps",
+      "Closing unnecessary background applications",
+      "Enabling developer options to generate more detailed system logs",
+      "Restarting the device to clear temporary processes"
+    ],
+    "correctAnswer": [
+      "Installing operating system or application updates",
+      "Closing unnecessary background applications",
+      "Restarting the device to clear temporary processes"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-030",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A mobile device repeatedly displays data-usage limit notifications despite minimal user activity. Which condition is most likely the direct cause of this symptom?",
+    "explanation": "Unexpected high data use points to a malicious app.",
+    "options": [
+      "Outdated OS",
+      "Enabled developer options",
+      "Malicious app",
+      "Faulty SIM card"
+    ],
+    "correctAnswer": [
+      "Malicious app"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-031",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports their mobile device frequently loses Wi-Fi connection or cannot connect to any networks. Which of the following would be the most targeted and least disruptive troubleshooting step to resolve this problem?",
+    "explanation": "Restarting the Wi-Fi adapter targets the problem directly with the least disruption.",
+    "options": [
+      "Remove and reinsert the device's SIM card",
+      "Perform a hard reboot (forced restart) of the device",
+      "Forget all networks from the device's saved Wi-Fi list and try to reconnect",
+      "Restart the device's Wi-Fi adapter to reset the connection"
+    ],
+    "correctAnswer": [
+      "Restart the device's Wi-Fi adapter to reset the connection"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-032",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "If a mobile device intermittently loses Wi-Fi connection, which action will have no effect on improving its stability?",
+    "explanation": "The SIM card handles cellular service and doesn't affect Wi-Fi stability.",
+    "options": [
+      "Forget and reconnect to the Wi-Fi network",
+      "Move closer to the Wi-Fi router or access point",
+      "Restart the Wi-Fi adapter on the device",
+      "Check for and reduce Wi-Fi interference from other devices",
+      "Remove and reinsert the device's SIM card"
+    ],
+    "correctAnswer": [
+      "Remove and reinsert the device's SIM card"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-033",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a mobile device with no internet connectivity. They notice the device is also experiencing rapid battery drain and high data usage alerts. After isolating the device from the network, what should the technician do next?",
+    "explanation": "The symptoms suggest malware, so scan for it after isolating the device.",
+    "options": [
+      "Replace the device battery",
+      "Factory reset the device",
+      "Perform a malware scan",
+      "Contact the cellular provider"
+    ],
+    "correctAnswer": [
+      "Perform a malware scan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-034",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After installing an application from outside the Google Play Store, an Android user notices that the device is displaying an excessive number of advertisements, including pop-ups appearing outside of the web browser. What is the most likely explanation for this issue?",
+    "explanation": "Apps from outside the official store can contain adware, which shows excessive ads.",
+    "options": [
+      "Outdated operating system",
+      "Disabled pop-up blocker",
+      "Unverified apps containing adware",
+      "Disabled Google Play Protect"
+    ],
+    "correctAnswer": [
+      "Unverified apps containing adware"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-035",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The primary goal of delivering a fake security warning to a mobile device user is to:",
+    "explanation": "Fake security warnings aim to trick the user into installing malicious software.",
+    "options": [
+      "Mislead the user into disabling real security features",
+      "Trick the user into installing malicious software",
+      "Misinform the user about the device's actual security status",
+      "Pressure the user into buying a legitimate third-party app"
+    ],
+    "correctAnswer": [
+      "Trick the user into installing malicious software"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-036",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An Android user reports that several system settings change back to default automatically and the device frequently reboots. A technician discovers Developer Mode was enabled and an application was sideloaded from a third-party website. What is the most effective method to completely remove the threat and restore the device to normal operation?",
+    "explanation": "A factory reset removes the threat completely and restores normal operation.",
+    "options": [
+      "Disable Developer Mode",
+      "Force stop the suspicious application",
+      "Perform a factory reset of the device",
+      "Uninstall the application"
+    ],
+    "correctAnswer": [
+      "Perform a factory reset of the device"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MTS-037",
+    "topic": "Mobile OS and App Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.2",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An employee notices their private photos and contacts have been posted to a public social media site without their consent. A technician inspects the device and finds apps with administrative privileges that the user does not remember installing. What is the best course of action to fully remediate the device and remove unauthorized access?",
+    "explanation": "Apps with administrative privileges that the user never installed mean the device is compromised, so reset it to factory defaults.",
+    "options": [
+      "Uninstall the suspicious apps",
+      "Perform a full malware scan",
+      "Reset the device to factory defaults",
+      "Quarantine the device via MDM"
+    ],
+    "correctAnswer": [
+      "Reset the device to factory defaults"
+    ],
+    "origin": "ExamCompass"
+  }
+]

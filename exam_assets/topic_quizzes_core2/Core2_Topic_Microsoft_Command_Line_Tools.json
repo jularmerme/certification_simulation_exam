@@ -1,0 +1,1120 @@
+[
+  {
+    "id": "1202-MCL-001",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to Windows command-line command used for directory traversal?",
+    "explanation": "cd (change directory) moves between directories. dir only lists contents.",
+    "options": [
+      "pwd",
+      "dir",
+      "cd",
+      "path"
+    ],
+    "correctAnswer": [
+      "cd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-002",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Windows command-line commands can be used to list all files and subdirectories in the current directory?",
+    "explanation": "dir lists the files and subdirectories in the current directory. dir /? shows help.",
+    "options": [
+      "dir /all",
+      "dir",
+      "dir /list",
+      "dir /?"
+    ],
+    "correctAnswer": [
+      "dir"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-003",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the name of a Windows command-line utility that can be used to display TCP/IP configuration settings?",
+    "explanation": "ipconfig displays TCP/IP configuration. ifconfig is the Linux tool.",
+    "options": [
+      "ifconfig",
+      "nslookup",
+      "ipconfig",
+      "netstat"
+    ],
+    "correctAnswer": [
+      "ipconfig"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-004",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows command-line utility used for checking the reachability of a remote network host is called:",
+    "explanation": "ping tests whether a remote host is reachable.",
+    "options": [
+      "ping",
+      "tracert",
+      "dig",
+      "netstat"
+    ],
+    "correctAnswer": [
+      "ping"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-005",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The netstat command-line utility is used for: (Select 2 answers)",
+    "explanation": "netstat displays active connections and listening ports, and network protocol statistics.",
+    "options": [
+      "Displaying active TCP/IP connections",
+      "Testing the reachability of a remote host",
+      "Displaying intermediary points on the packet route",
+      "Viewing the TCP/IP configuration details",
+      "Displaying network protocol statistics"
+    ],
+    "correctAnswer": [
+      "Displaying active TCP/IP connections",
+      "Displaying network protocol statistics"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-006",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the network command-line tools listed below resolves a domain name to an IP address?",
+    "explanation": "nslookup queries DNS to resolve a domain name to an IP address.",
+    "options": [
+      "netstat",
+      "nslookup",
+      "tracert",
+      "pathping"
+    ],
+    "correctAnswer": [
+      "nslookup"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-007",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the Windows command-line commands is used to manage connections to network resources?",
+    "explanation": "net use connects to and disconnects from shared network resources, including mapping drive letters.",
+    "options": [
+      "net map",
+      "net share",
+      "net use",
+      "net mount"
+    ],
+    "correctAnswer": [
+      "net use"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-008",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network command-line utility in Windows that tracks and displays the route taken by IP packets on their way to another host is known as:",
+    "explanation": "tracert is the Windows route-tracing tool. traceroute is its Linux counterpart.",
+    "options": [
+      "nslookup",
+      "tracert",
+      "ping",
+      "traceroute"
+    ],
+    "correctAnswer": [
+      "tracert"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-009",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which network command-line utility in Windows combines the features of ping and traceroute?",
+    "explanation": "pathping combines ping and tracert, tracing the route and measuring latency and packet loss at each hop.",
+    "options": [
+      "pathping",
+      "netcfg",
+      "dig",
+      "rpcping"
+    ],
+    "correctAnswer": [
+      "pathping"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-010",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following command-line utilities in Windows is used to verify file system integrity and fix logical file system errors?",
+    "explanation": "chkdsk checks the file system and disk for errors and can repair them.",
+    "options": [
+      "grep",
+      "chkdsk",
+      "sfc",
+      "dism"
+    ],
+    "correctAnswer": [
+      "chkdsk"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-011",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command-line tool in Windows initializes a drive by setting it up with a structure that supports file storage?",
+    "explanation": "format prepares a drive with a file system structure for file storage.",
+    "options": [
+      "gpart",
+      "sfdisk",
+      "mount",
+      "format"
+    ],
+    "correctAnswer": [
+      "format"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-012",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the commands in Windows launches a text-based, command-line partitioning utility?",
+    "explanation": "diskpart is the text-based, command-line partitioning utility in Windows.",
+    "options": [
+      "sfdisk",
+      "diskutil",
+      "gpart",
+      "diskpart"
+    ],
+    "correctAnswer": [
+      "diskpart"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-013",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a Windows command-line command used to create a directory or subdirectory?",
+    "explanation": "md (or mkdir) creates a directory.",
+    "options": [
+      "mkdr",
+      "md",
+      "mkd",
+      "mdir"
+    ],
+    "correctAnswer": [
+      "md"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-014",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following command-line commands in Windows can be used to delete a directory?",
+    "explanation": "rmdir (or rd) removes a directory. del deletes files.",
+    "options": [
+      "del",
+      "rmdir",
+      "dir /d",
+      "popd"
+    ],
+    "correctAnswer": [
+      "rmdir"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-015",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which copying utility accessible via Windows command line interface offers the widest range of options?",
+    "explanation": "robocopy (Robust File Copy) has the widest range of options, including retries, mirroring and resume.",
+    "options": [
+      "xcopy",
+      "move",
+      "robocopy",
+      "copy"
+    ],
+    "correctAnswer": [
+      "robocopy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-016",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command-line command in Windows displays the name of the current computer a user is connected to?",
+    "explanation": "hostname displays the name of the current computer.",
+    "options": [
+      "host",
+      "hosts",
+      "hostname",
+      "localhost"
+    ],
+    "correctAnswer": [
+      "hostname"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-017",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the Windows command-line commands, when run on a Windows computer without additional parameters, lists all local user accounts configured on that specific computer?",
+    "explanation": "net user with no parameters lists the local user accounts on the computer.",
+    "options": [
+      "net view",
+      "net session",
+      "net user",
+      "net accounts"
+    ],
+    "correctAnswer": [
+      "net user"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-018",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the command-line commands in Windows launches a pop-up window containing a brief summary of the installed operating system?",
+    "explanation": "winver opens a small pop-up window showing the Windows version and build. msinfo32 opens the larger System Information tool.",
+    "options": [
+      "msinfo32",
+      "systeminfo",
+      "winver",
+      "msconfig"
+    ],
+    "correctAnswer": [
+      "winver"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-019",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command-line utility provides information about the currently logged-on Windows user?",
+    "explanation": "whoami displays the currently logged-on user. id and logname are Linux commands.",
+    "options": [
+      "hostname",
+      "whoami",
+      "id",
+      "logname"
+    ],
+    "correctAnswer": [
+      "whoami"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-020",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the standard syntax in Windows command line for displaying help or usage information related to a specific utility?",
+    "explanation": "Appending /? to a command shows its help and usage.",
+    "options": [
+      "[command name] info",
+      "[command name] man",
+      "[command name] /?",
+      "[command name] help"
+    ],
+    "correctAnswer": [
+      "[command name] /?"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-021",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows command-line utility that refreshes Group Policy settings on a local computer without requiring a restart or logoff is called:",
+    "explanation": "gpupdate refreshes Group Policy settings without a restart or logoff.",
+    "options": [
+      "net user",
+      "gpupdate",
+      "bcdedit",
+      "gpresult"
+    ],
+    "correctAnswer": [
+      "gpupdate"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-022",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a command-line tool in Windows that can be used to display current Group Policy settings for a user or computer?",
+    "explanation": "gpresult displays the Group Policy settings applied to a user or computer.",
+    "options": [
+      "gpresult",
+      "net view",
+      "verify",
+      "gpupdate"
+    ],
+    "correctAnswer": [
+      "gpresult"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-023",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The sfc command-line utility in Windows: (Select 2 answers)",
+    "explanation": "System File Checker (sfc) scans the integrity of protected system files and replaces incorrect versions with the correct Microsoft versions. Checking disk volumes is chkdsk.",
+    "options": [
+      "Scans disk volumes for file system errors",
+      "Identifies and recovers readable data from bad sectors on a drive",
+      "Encrypts files to prevent unauthorized access to sensitive data",
+      "Replaces incorrect system file versions with correct Microsoft versions",
+      "Scans the integrity of all protected system files"
+    ],
+    "correctAnswer": [
+      "Replaces incorrect system file versions with correct Microsoft versions",
+      "Scans the integrity of all protected system files"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-024",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command-line command in MS Windows moves the command-line prompt one folder up in the directory tree (sets the prompt at the parent folder of the current folder)?",
+    "explanation": "cd .. moves up one level to the parent folder.",
+    "options": [
+      "cd \\",
+      "cd .",
+      "cd /^",
+      "cd .."
+    ],
+    "correctAnswer": [
+      "cd .."
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-025",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Windows command-line commands changes the current directory to the root directory?",
+    "explanation": "cd \\ changes to the root directory of the current drive.",
+    "options": [
+      "cd /^",
+      "cd ..",
+      "cd /r",
+      "cd \\"
+    ],
+    "correctAnswer": [
+      "cd \\"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-026",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows technician needs to locate all .exe files within a directory, including those in its subdirectories. Which command should they use?",
+    "explanation": "The /s switch makes dir search the current directory and all its subdirectories.",
+    "options": [
+      "dir *.exe /a:s",
+      "dir v *.exe",
+      "dir *.exe",
+      "dir /s *.exe"
+    ],
+    "correctAnswer": [
+      "dir /s *.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-027",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to an ipconfig parameter used for displaying the full TCP/IP configuration information for all adapters?",
+    "explanation": "ipconfig /all shows the full TCP/IP configuration for all adapters.",
+    "options": [
+      "-a",
+      "/?",
+      "/all",
+      "/-a"
+    ],
+    "correctAnswer": [
+      "/all"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-028",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which command-line commands in MS Windows are used to refresh the DHCP configuration for all network adapters? (Select 2 answers)",
+    "explanation": "ipconfig /release drops the current DHCP lease and ipconfig /renew requests a new one.",
+    "options": [
+      "ipconfig /flush",
+      "ifconfig eth0 down",
+      "ipconfig /release",
+      "ipconfig /renew",
+      "ifconfig eth0 up",
+      "ipconfig /register"
+    ],
+    "correctAnswer": [
+      "ipconfig /release",
+      "ipconfig /renew"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-029",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports an inability to access any websites or network shares. As the first troubleshooting step, a technician needs to verify whether the TCP/IP stack on the local Windows machine is functioning correctly. Which ping command should they use for this initial test?",
+    "explanation": "127.0.0.1 is the loopback address, so pinging it tests the local TCP/IP stack without involving the network.",
+    "options": [
+      "ping 8.8.8.8",
+      "ping 192.168.1.1",
+      "ping 1.1.1.1",
+      "ping 127.0.0.1"
+    ],
+    "correctAnswer": [
+      "ping 127.0.0.1"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-030",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which netstat parameter is used to display all active TCP/UDP connections and listening ports?",
+    "explanation": "netstat -a displays all connections and listening ports.",
+    "options": [
+      "-a",
+      "-p",
+      "-e",
+      "-r"
+    ],
+    "correctAnswer": [
+      "-a"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-031",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The -b netstat parameter in Microsoft Windows allows users to view the name of the application associated with each active connection or listening port.",
+    "explanation": "True. netstat -b shows the executable that created each connection or listening port (it needs elevation).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-032",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which parameter, when used with the netstat command, displays addresses and port numbers in numerical form?",
+    "explanation": "netstat -n shows addresses and port numbers in numerical form without resolving names.",
+    "options": [
+      "-b",
+      "-n",
+      "-q",
+      "-r"
+    ],
+    "correctAnswer": [
+      "-n"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-033",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the command-line tools listed below can be used for troubleshooting DNS-related problems?",
+    "explanation": "nslookup queries DNS servers and is the Windows tool for DNS troubleshooting.",
+    "options": [
+      "pathping",
+      "tracert",
+      "arp",
+      "nslookup"
+    ],
+    "correctAnswer": [
+      "nslookup"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-034",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to map a network share located at \\\\SERVER\\Data to the drive letter Z: on a user's computer. Which of the following commands should the technician use?",
+    "explanation": "The syntax is net use Z: \\\\SERVER\\Data (drive letter first, then the UNC path).",
+    "options": [
+      "net share Z: \\\\SERVER\\Data",
+      "net use Z: \\\\SERVER\\Data",
+      "map drive Z: \\\\SERVER\\Data",
+      "net use \\\\SERVER\\Data Z:"
+    ],
+    "correctAnswer": [
+      "net use Z: \\\\SERVER\\Data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-035",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The output of the Windows tracert command-line utility primarily displays a list of all intermediate routers (hops) that an IP packet traverses to reach a specified destination, along with the round-trip time (latency) to each of those hops. This information is useful for identifying network bottlenecks, diagnosing where delays or packet loss are occurring, and determining whether a routing issue is within the local network, the ISP, or further along the internet path.",
+    "explanation": "True. tracert lists each hop and its round-trip time, which helps locate where delays occur.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-036",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What are the most important functionalities provided by the pathping utility? (Select 2 answers)",
+    "explanation": "pathping traces the path to the destination and measures latency and packet loss at each hop.",
+    "options": [
+      "Tests connectivity to a specific port",
+      "Displays network statistics",
+      "Traces the path to the destination",
+      "Sends broadcast messages over the network",
+      "Measures latency and packet loss"
+    ],
+    "correctAnswer": [
+      "Traces the path to the destination",
+      "Measures latency and packet loss"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-037",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The /f switch of the chkdsk command-line utility in MS Windows instructs the utility to:",
+    "explanation": "chkdsk /f fixes file system errors. /r also locates bad sectors and recovers readable data.",
+    "options": [
+      "Scan the system for corrupted or missing system files",
+      "Automatically repair detected file system errors on the disk",
+      "Identify bad sectors on the disk and attempt to recover any readable data from them",
+      "Optimize disk usage by consolidating fragmented file data"
+    ],
+    "correctAnswer": [
+      "Automatically repair detected file system errors on the disk"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-038",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The chkdsk /r command in Windows: (Select 2 answers)",
+    "explanation": "chkdsk /r identifies bad sectors and attempts to recover readable data from them. Repairing system files is sfc, and defragmenting is a separate tool.",
+    "options": [
+      "Compresses files on the disk to save space",
+      "Attempts to recover any readable data from bad sectors",
+      "Optimizes disk usage by consolidating fragmented file data",
+      "Scans for and repairs corrupted system files",
+      "Identifies bad sectors on the disk"
+    ],
+    "correctAnswer": [
+      "Attempts to recover any readable data from bad sectors",
+      "Identifies bad sectors on the disk"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-039",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is preparing to reinstall Windows on a user's PC. They want to quickly prepare the D: drive by removing all file system references to existing data without performing a thorough overwrite. Which variant of the format command in the Windows command-line interface should they use to achieve that goal?",
+    "explanation": "format /q performs a quick format. It removes file system references without overwriting the data.",
+    "options": [
+      "format d: /p",
+      "format d: /f",
+      "format d: /q",
+      "format d: /d"
+    ],
+    "correctAnswer": [
+      "format d: /q"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-040",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is trying to clean and repartition a disk with the diskpart command-line utility in Windows, but encounters an \"Access is denied\" error. What is the most likely cause of this problem?",
+    "explanation": "diskpart needs an elevated prompt (Run as administrator). Without it you get \"Access is denied\".",
+    "options": [
+      "The drive is offline and needs to be brought online first",
+      "The utility is trying to access a non-existent drive",
+      "The drive is currently in use by another application and is locked",
+      "The utility was not launched with administrative privileges"
+    ],
+    "correctAnswer": [
+      "The utility was not launched with administrative privileges"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-041",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the difference between md and mkdir command-line commands in MS Windows?",
+    "explanation": "md is simply the short form of mkdir. Both do the same thing.",
+    "options": [
+      "The md command supports creating multiple directories at once, while mkdir does not",
+      "The mkdir command requires administrative privileges, while md does not",
+      "The md command is specific to older MS DOS versions, mkdir is for modern Windows",
+      "There is no difference, as both commands provide the same functionality"
+    ],
+    "correctAnswer": [
+      "There is no difference, as both commands provide the same functionality"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-042",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to delete the entire directory named Data located at C:\\Files\\Data along with all its subdirectories and files using the Windows command-line. Which variant of the rmdir command should they run?",
+    "explanation": "The correct command would be rmdir C:\\Files\\Data /s. All of the listed options point at C:\\Files, which would target the wrong directory.",
+    "options": [
+      "rmdir C:\\Files /s",
+      "rmdir C:\\Files /q",
+      "rmdir C:\\Files /r",
+      "None of the above"
+    ],
+    "correctAnswer": [
+      "None of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-043",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows technician is setting up an automated nightly task to copy an entire folder tree, including all subdirectories and empty folders, from a network drive to a local backup location. The process must retry failed copies automatically. Which command-line utility should they use?",
+    "explanation": "robocopy supports copying whole trees including empty folders and automatically retrying failed copies.",
+    "options": [
+      "move",
+      "xcopy",
+      "robocopy",
+      "copy"
+    ],
+    "correctAnswer": [
+      "robocopy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-044",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user needs to copy a very large volume of files from one Windows host to another. The task must resume automatically if interrupted due to network issues. Which command-line tool is best suited for this task?",
+    "explanation": "robocopy can resume interrupted copies and retry on failure, which suits large network transfers.",
+    "options": [
+      "copy",
+      "robocopy",
+      "move",
+      "xcopy"
+    ],
+    "correctAnswer": [
+      "robocopy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-045",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician suspects that a Windows user account named guest has been locked out or disabled due to multiple failed login attempts. The technician also needs to check when the account last logged in and whether it requires a password. Which of the following commands will provide this information?",
+    "explanation": "net user guest shows account details such as status, last logon and whether a password is required.",
+    "options": [
+      "net view guest",
+      "whoami /user",
+      "net user guest",
+      "net accounts guest"
+    ],
+    "correctAnswer": [
+      "net user guest"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-046",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A support technician is remotely connected to multiple Windows machines and needs to confirm the network identity of the computer they are currently operating on. Which command should they use to verify this?",
+    "explanation": "hostname displays the computer's name.",
+    "options": [
+      "hostname",
+      "winver",
+      "localhost",
+      "msconfig"
+    ],
+    "correctAnswer": [
+      "hostname"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-047",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT technician needs to confirm the Windows OS version and build number to verify its compatibility with an upcoming system patch. Which command-line command should they run?",
+    "explanation": "winver shows the Windows version and build number.",
+    "options": [
+      "msconfig",
+      "whoami",
+      "hostname",
+      "winver"
+    ],
+    "correctAnswer": [
+      "winver"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-048",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows technician wants to view a comprehensive snapshot of the current user's security context, including its privileges, group memberships, logon ID, and security identifiers. Which whoami parameter should they use?",
+    "explanation": "whoami /all displays the user, groups, privileges, logon ID and SIDs together.",
+    "options": [
+      "/groups",
+      "/user",
+      "/logonid",
+      "/all"
+    ],
+    "correctAnswer": [
+      "/all"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-049",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the Windows command line environment, which common syntax can be used as an alternative to appending /? after a command name to display help?",
+    "explanation": "help [command name] displays help for that command, the same as [command name] /?.",
+    "options": [
+      "[command name] help",
+      "man [command name]",
+      "[command name] about",
+      "help [command name]"
+    ],
+    "correctAnswer": [
+      "help [command name]"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-050",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Used without any parameters, the help command in MS Windows displays a list of available system commands along with a brief description of each command.",
+    "explanation": "True. help with no parameters lists the available commands with short descriptions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-051",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the default behavior of the gpupdate command-line command in Windows if no parameters are specified?",
+    "explanation": "With no parameters, gpupdate refreshes both user and computer policies. /target limits it to one.",
+    "options": [
+      "It refreshes only computer policies",
+      "It does not refresh any policies",
+      "It refreshes both user and computer policies",
+      "It refreshes only user policies"
+    ],
+    "correctAnswer": [
+      "It refreshes both user and computer policies"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-052",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "During a routine audit, an IT technician needs a concise report of all Group Policy settings that have been applied to a specific host. Which gpresult parameter in Windows command line instructs the utility to provide this summary?",
+    "explanation": "gpresult /r displays a summary of the Group Policy results. /s specifies a remote computer.",
+    "options": [
+      "/s",
+      "/u",
+      "/p",
+      "/r"
+    ],
+    "correctAnswer": [
+      "/r"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MCL-053",
+    "topic": "Microsoft Command-Line Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which parameter of the sfc command in Windows command line enables a file check that scans integrity of all protected system files and attempts to repair corrupted files?",
+    "explanation": "sfc /scannow scans all protected system files and repairs corrupted ones.",
+    "options": [
+      "/scannow",
+      "/verify",
+      "/scanfile",
+      "/verifyfile"
+    ],
+    "correctAnswer": [
+      "/scannow"
+    ],
+    "origin": "ExamCompass"
+  }
+]

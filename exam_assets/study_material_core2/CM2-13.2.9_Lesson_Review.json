@@ -1,0 +1,205 @@
+[
+  {
+    "id": "CM2-13.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a system issue that requires you to run a command with elevated privileges. When you attempt to execute the command, you receive the error message: \"The requested operation requires elevation.\" What is the correct way to proceed?",
+    "explanation": "By right-clicking the shortcut and selecting \"Run as administrator,\" you ensure the command prompt is elevated, allowing you to execute commands that require administrative rights. The UAC (User Account Control) prompt is a security feature that confirms your intent to run the program with elevated privileges. Pressing CTRL+SHIFT+ENTER does not elevate the privileges of an already open Command Prompt. Instead, this shortcut is used to open a new Command Prompt window with administrative privileges from the Instant Search box. The command itself cannot be elevated after the Command Prompt is already open. CTRL+ALT+DEL is used to access the Windows Security screen, not to elevate privileges in the Command Prompt. This action does not help in running commands that require administrative rights. The \"help\" command provides syntax and usage information for commands but does not offer alternative commands that bypass the need for elevated privileges. If a command requires elevation, it must be run in an elevated Command Prompt.",
+    "options": [
+      "Use the help command to find an alternative command that does not require elevated privileges.",
+      "Open the Command Prompt, type the command, and press CTRL+SHIFT+ENTER to execute it with elevated privileges.",
+      "Right-click the Command Prompt shortcut, select \"Run as administrator,\" and confirm the UAC prompt before running the command.",
+      "Type cmd in the Instant Search box, press CTRL+ALT+DEL, and then execute the command."
+    ],
+    "correctAnswer": [
+      "Right-click the Command Prompt shortcut, select \"Run as administrator,\" and confirm the UAC prompt before running the command."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user experiences issues with large files and wants to run diagnostics to help figure out what might be the issue. Which of the following commands should the user try?",
+    "explanation": "The chkdsk scans the file system and/or disk sectors for faults and attempts to repair any problems detected. The format command writes a new file system to a drive. This process deletes any data existing on the drive. The basic command is format X: /fs:SYS, where X is a drive letter, and SYS is the file system, such as NTFS, FAT32, or EXFAT. The command diskpart is the interface underlying the Disk Management tool. The Disk Management tool prevents users from completing destructive actions, like deleting the system or boot volume. However, it does not have restrictions in this way, so users should use it with care. The winver command reports version information. Users will often need to use this for support.",
+    "options": [
+      "winver",
+      "chkdsk",
+      "diskpart",
+      "format"
+    ],
+    "correctAnswer": [
+      "chkdsk"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the sfc /scannow command in Windows?",
+    "explanation": "The sfc /scannow command is part of the System File Checker tool in Windows. Its primary purpose is to scan all protected system files for corruption and automatically replace any corrupted files with a cached copy stored in a compressed folder. This is the correct answer, as it accurately describes the function of the command. To scan the hard drive for bad sectors and attempt to repair them describes the purpose of the chkdsk command, not sfc. The sfc command focuses on system files, not the physical state of the hard drive. Therefore, this answer is incorrect. To display detailed information about the system's hardware and software describes the purpose of the systeminfo or msinfo32 commands, not sfc. The sfc command does not provide detailed system information; it is specifically used for checking and repairing system files. Thus, this answer is incorrect. To check the disk for file system errors and fix them, if possible, describes the purpose of the chkdsk command with specific switches (e.g., /f), not sfc. The sfc command is unrelated to file system errors and focuses solely on system file integrity. Therefore, this answer is incorrect.",
+    "options": [
+      "To display detailed information about the system's hardware and software.",
+      "To check the disk for file system errors and fix them if possible.",
+      "To scan and repair corrupted system files on the operating system.",
+      "To scan the hard drive for bad sectors and attempt to repair them."
+    ],
+    "correctAnswer": [
+      "To scan and repair corrupted system files on the operating system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are using the dir command in Command Prompt and want to display all files in the current directory, including hidden and system files. Which switch should you use?",
+    "explanation": "The /a switch is used to display files with specific attributes, such as hidden (h) and system (s) files. By default, hidden and system files are not displayed, so this switch is necessary to include them in the output. The /o:n switch sorts files alphabetically by name but does not affect which files are displayed. It does not include hidden or system files in the output. The /t:c switch is used to display or sort files based on their creation date. It does not include hidden or system files in the output. The /s switch lists all files in the current directory and its subdirectories, but it does not specifically include hidden or system files unless combined with the /a switch.",
+    "options": [
+      "/a",
+      "/s",
+      "/o:n",
+      "/t:c"
+    ],
+    "correctAnswer": [
+      "/a"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with scheduling a system shutdown on a Windows machine to occur in 30 minutes. You want to ensure users are notified of the shutdown and have time to save their work. Which of the following commands should you use?",
+    "explanation": "The shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\" command schedules a system shutdown (/s) in 30 minutes (/t 1800, where 1800 seconds equals 30 minutes). The /c switch provides a comment or notification message to users, informing them about the shutdown and giving them time to save their work. This is the correct command for the given scenario. The shutdown /r /t 1800 /c \"System maintenance scheduled. Please save your work.\" command schedules a system restart (/r) instead of a shutdown. While it includes the correct timing (/t 1800) and notification message (/c), it does not meet the requirement to shut down the system, making it incorrect. The shutdown /s /t 0 /c \"System maintenance scheduled. Please save your work.\" command initiates an immediate shutdown (/t 0), giving users no time to save their work. Although it includes the correct shutdown switch (/s) and notification message (/c), it fails to meet the requirement of scheduling the shutdown for 30 minutes later, making it incorrect. The shutdown /h /t 1800 /c \"System maintenance scheduled. Please save your work.\" command attempts to schedule the system to hibernate (/h) rather than shut down. The /t 1800 and /c switches are valid, but hibernation is not the same as shutting down the system, making this option incorrect.",
+    "options": [
+      "shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /r /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /h /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /s /t 0 /c \"System maintenance scheduled. Please save your work.\""
+    ],
+    "correctAnswer": [
+      "shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which commands can you use to create a new directory? (Select two.)",
+    "explanation": "Use md or mkdir to create a new directory. Use cd to change the working directory. Use rd to delete a directory. The newdir command does not exist in Windows.",
+    "options": [
+      "rd",
+      "mkdir",
+      "newdir",
+      "md",
+      "cd"
+    ],
+    "correctAnswer": [
+      "mkdir",
+      "md"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command would you use to change the current directory to the immediate parent directory?",
+    "explanation": "Use cd .. to change the current directory to the immediate parent directory. The cd command by itself shows the current directory. Use dir to display a list of files and subdirectories in a directory. The pdir command is not a valid Windows command.",
+    "options": [
+      "cd",
+      "cd ..",
+      "pdir",
+      "dir"
+    ],
+    "correctAnswer": [
+      "cd .."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command is used to copy entire folder structures between volumes or across a network while maintaining all NTFS file permissions and attributes?",
+    "explanation": "The robocopy (short for robust file copy) command is used to copy entire folder structures between volumes or across a network. The benefit of using robocopy is that all NTFS file permissions and attributes are maintained, and interrupted transfers can be resumed. The copy command copies files from one location to another. The xcopy command copies files and directory trees, but does not maintain all NTFS file permissions and attributes.",
+    "options": [
+      "copy",
+      "copy /robust",
+      "robocopy",
+      "xcopy"
+    ],
+    "correctAnswer": [
+      "robocopy"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A user wants to use the xcopy command at a command (CMD) prompt but is unfamiliar with the syntax and switches. What can they use to learn more? (Select two.)",
+    "explanation": "When using help command, the help system lists the syntax and switches used for the command. The user can also display help on a particular command by using the /? switch. Using xcopy help will result in an attempt to copy the help file if it exists in the directory. Using xcopy | will result in an error stating that the syntax is incorrect.",
+    "options": [
+      "xcopy |",
+      "xcopy help",
+      "help xcopy",
+      "xcopy /?"
+    ],
+    "correctAnswer": [
+      "help xcopy",
+      "xcopy /?"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are working in the Command Prompt and need to list all .txt files in the current directory that were last modified on a specific date. Which command would you use?",
+    "explanation": "The dir *.txt /t:w command lists all .txt files in the current directory and uses the /t:w switch to sort or display files based on their last modified (written) date. This is the correct approach to identify files modified on a specific date. The /a:r switch displays files with the \"read-only\" attribute, which is unrelated to sorting or filtering by modification date. The /o:n switch sorts files alphabetically by name, which does not help in identifying files based on their modification date. The /t:c switch sorts or displays files based on their creation date, not their last modified date.",
+    "options": [
+      "dir *.txt /t:w",
+      "dir *.txt /o:n",
+      "dir *.txt /a:r",
+      "dir *.txt /t:c"
+    ],
+    "correctAnswer": [
+      "dir *.txt /t:w"
+    ],
+    "origin": "CertMaster"
+  }
+]

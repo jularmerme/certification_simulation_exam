@@ -1,0 +1,187 @@
+[
+  {
+    "id": "1202-SOC-001",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answer choices is an example of a threat vector type that is typical for voice communication?",
+    "explanation": "Vishing is voice phishing, done over the phone.",
+    "options": [
+      "Pharming",
+      "Vishing",
+      "Phishing",
+      "Smishing"
+    ],
+    "correctAnswer": [
+      "Vishing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-002",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the terms listed below refers to a threat vector commonly associated with SMS-based communication?",
+    "explanation": "Smishing is phishing carried out by SMS text message.",
+    "options": [
+      "Phishing",
+      "Vishing",
+      "Smishing",
+      "Pharming"
+    ],
+    "correctAnswer": [
+      "Smishing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-003",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Quick Response (QR) code phishing is a form of social engineering in which attackers embed malicious URLs into QR codes. These codes may appear in emails, on posters, product packaging, websites, or digital displays, and can be read with a mobile device's camera or a dedicated QR scanning app. Once scanned, they may redirect users to fake login pages, initiate malware downloads, or capture sensitive information.",
+    "explanation": "True. This is QR code phishing (quishing).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-004",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a phishing attack aimed at specific individuals or groups?",
+    "explanation": "Spear phishing targets specific individuals or groups with personalized messages.",
+    "options": [
+      "Email spoofing",
+      "Whaling",
+      "Spear phishing",
+      "Watering hole attack"
+    ],
+    "correctAnswer": [
+      "Spear phishing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-005",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A senior company executive receives a personalized email, appearing to be from an external law firm, demanding urgent settlement of a fictitious legal matter. This type of phishing attack is an example of:",
+    "explanation": "Whaling is spear phishing aimed at senior executives.",
+    "options": [
+      "Spear phishing",
+      "Business email compromise",
+      "Impersonation attack",
+      "Whaling"
+    ],
+    "correctAnswer": [
+      "Whaling"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-006",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Privacy filter is a protective overlay placed on the computer screen that narrows the viewing angle, so the screen content is only visible directly in front of the monitor and cannot be seen by others nearby. This type of protection provides a countermeasure against:",
+    "explanation": "A privacy filter prevents shoulder surfing.",
+    "options": [
+      "Identity theft",
+      "Shoulder surfing",
+      "Privilege escalation",
+      "Screen scraping"
+    ],
+    "correctAnswer": [
+      "Shoulder surfing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-007",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A visitor without a badge enters a company building right after a delivery worker opens the door. This situation best describes:",
+    "explanation": "Tailgating is following an authorized person through a door without authorization.",
+    "options": [
+      "Tailgating",
+      "Shoulder surfing",
+      "Pretexting",
+      "Impersonation"
+    ],
+    "correctAnswer": [
+      "Tailgating"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-008",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician receives a call from someone claiming to be a data center manager requesting an immediate password reset for a critical account. This scenario is an example of:",
+    "explanation": "Pretending to be someone else to gain trust or access is impersonation.",
+    "options": [
+      "Identity theft",
+      "Phishing",
+      "Unauthorized access",
+      "Impersonation"
+    ],
+    "correctAnswer": [
+      "Impersonation"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOC-009",
+    "topic": "Social Engineering",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the context of computer security, the term \"Dumpster diving\" refers to the practice of searching through trash for discarded documents or storage media. Found items may contain sensitive data, such as employee names, positions, and other confidential information, which can be used for malicious purposes.",
+    "explanation": "True. Dumpster diving recovers sensitive data from discarded material.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

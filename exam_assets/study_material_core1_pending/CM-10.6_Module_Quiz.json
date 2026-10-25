@@ -1,0 +1,1507 @@
+[
+  {
+    "id": "CM-10.6-001",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a network administrator troubleshooting a network printer that is frequently experiencing paper jams. You have checked the paper tray and confirmed that the paper is not curled, wrinkled, dusty, wet, torn, or folded. The paper stack does not exceed the limit, nor is it above the arrow on the edge guide. However, the printer still jams when multiple pages are being fed. What should you check next?",
+    "explanation": "Checking the feed rollers and the tray alignment guide is the correct answer. If multiple pages are being fed through the printer overlapping or in a stack, the media is failing to separate. This can be caused by problems with the feed rollers or the tray alignment guide. Checking the printer's IP address is incorrect. The IP address of the printer is related to network connectivity issues, not paper jams. Checking the printer's driver is incorrect. The printer driver is software that allows the printer to communicate with the computer. It does not have a direct impact on physical issues like paper jams. Checking the printer's memory is incorrect. While a printer's memory can affect its performance, it does not directly cause paper jams.",
+    "options": [
+      "The printer's driver",
+      "The feed rollers and the tray alignment guide",
+      "The printer's IP address",
+      "The printer's memory"
+    ],
+    "correctAnswer": [
+      "The feed rollers and the tray alignment guide"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-002",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As an IT technician, you added a printer for a client. When you did this, you were prompted to select and install the drivers. Which of the following can you do to avoid repeating this step for subsequent clients?",
+    "explanation": "When you install the proper printer drivers on the print server, they are automatically downloaded and configured for the client whenever you add a printer. Making each client a print server defeats the purpose of having a single print server for all clients. Printer drivers are always needed as part of the print process. Simply configuring a wireless print server to be accessible on the network does not solve the issue. You would still need to install the printer drivers on the print server.",
+    "options": [
+      "Configure the computer for each client to act as a print server.",
+      "Install the printer drivers on the print server.",
+      "Reconfigure the printer as a wireless printer so that the printer drivers are not necessary.",
+      "Configure a wireless print server to be accessible on the network."
+    ],
+    "correctAnswer": [
+      "Install the printer drivers on the print server."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-003",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a key reason for regularly updating the firmware on multifunction devices and printers?",
+    "explanation": "Regular firmware updates are crucial for improving device performance, fixing existing bugs, and addressing security vulnerabilities, especially for networked printers handling sensitive data. Firmware updates do not typically increase the physical printing speed of a device. The speed is generally determined by the hardware capabilities of the printer. Firmware updates cannot alter the physical dimensions of a printer. The size and shape of a printer are determined by its hardware design. While firmware updates can improve overall device performance, they do not directly enhance the color resolution of printed documents. Resolution is primarily determined by the printer's hardware and print settings.",
+    "options": [
+      "To change the printer's physical dimensions.",
+      "To enhance the color resolution of printed documents.",
+      "To improve performance, fix bugs, and address security vulnerabilities.",
+      "To increase the physical printing speed of the device."
+    ],
+    "correctAnswer": [
+      "To improve performance, fix bugs, and address security vulnerabilities."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-004",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A user has accidentally put too much paper in the feed. What possible issues might this cause? (Select all that apply.)",
+    "explanation": "An excessive number of sheets is also the primary cause of staple jams. Remove the staple cartridge, and release the catch at the end to allow the removal of stuck staples. The main issue with hole punching is exceeding the maximum number of sheets. Make sure print jobs are sent in batches of less than the maximum permissible sheet count. The paper size and orientation must be set correctly for the print job or the finishing/binding will be aligned to the wrong edge. A backed-up print queue means that there are multiple prints pending but not printing. This might occur because the print device is offline or out of paper or ink/toner.",
+    "options": [
+      "Misaligned binding",
+      "Staple jams",
+      "Backed-up print queue",
+      "Hole punching issues"
+    ],
+    "correctAnswer": [
+      "Staple jams",
+      "Hole punching issues"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-005",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is trying to print visual graphics for an upcoming meeting, but the paper is coming out faded. What should they check first?",
+    "explanation": "For faded or faint prints, if a simple cause such as the user choosing an option for low density (draft output) can be discounted, then this is most likely to indicate that the toner cartridge needs replacing. If paper is not feeding into the printer check that the paper is not creased, damp, or dirty. If the printer is feeding multiple sheets also check the paper size and weight. For incorrect page orientation, the paper size and orientation must be set correctly for the print job or the finishing/binding will be aligned to the wrong edge.",
+    "options": [
+      "Paper weight",
+      "Orientation",
+      "Creased paper",
+      "Toner cartridge"
+    ],
+    "correctAnswer": [
+      "Toner cartridge"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-006",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a recommended practice when performing maintenance on a laser printer?",
+    "explanation": "It is important to unplug the printer from the power supply and allow all components to cool to room temperature before performing any maintenance. This is a safety measure to prevent electrical hazards and to ensure that the components are not hot, which could cause burns or other injuries. You should not use compressed air to clean a laser printer, as it can disperse toner dust into the air, creating a health hazard. Using a domestic vacuum cleaner to collect loose toner can damage the motor and pass through the dust collection bag, potentially causing further issues. It is important to unplug the printer before maintenance to avoid electrical hazards, making this option unsafe and not recommended.",
+    "options": [
+      "Leave the printer plugged in to ensure it is ready for testing immediately after maintenance.",
+      "Unplug the printer and allow components to cool before maintenance.",
+      "Use a domestic vacuum cleaner to remove toner dust.",
+      "Use compressed air to clean the interior of the printer."
+    ],
+    "correctAnswer": [
+      "Unplug the printer and allow components to cool before maintenance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-007",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A manager wants to print copies of their monthly budget report using the office's laser printer. A 600V electrical charge occurs across the imaging drum's surface as the printer starts making the copies. Which specific component caused this electrical spike?",
+    "explanation": "The primary charge roller (PCR) conditions the imaging drum in the charging stage. The PCR applies a uniform -600V electrical charge across the drum's surface. From the transfer assembly, the paper passes into the fuser assembly. The fuser unit squeezes the paper between a hot roller and a pressure roller to melt the toner. Laser toner is composed of a fine compound of dyestuff and wax or plastic particles. The toner is fed evenly onto a magnetized developer roller. Color laser print devices use separate toner cartridges for each additive color. For example, one may use four passes to put each color in turn; others combine the colored toner on a transfer belt and print in one pass.",
+    "options": [
+      "Transfer belt",
+      "Primary charge roller",
+      "Fuser unit",
+      "Developer roller"
+    ],
+    "correctAnswer": [
+      "Primary charge roller"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-008",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with configuring a new printer in your office to ensure it meets the specific needs of your design team, who require high-quality color prints for client presentations. Which of the following actions should you take in the Printer Properties dialog to optimize the printer's performance for this task?",
+    "explanation": "Adjusting the printer's resolution to the highest dpi setting will ensure that the prints are of the highest quality, which is essential for producing high-quality color prints for client presentations. Higher dpi settings result in better image clarity and detail, which is crucial for design work. While enabling draft mode can increase printing speed, it reduces print quality. This setting is not suitable for high-quality color prints needed for client presentations, as it compromises the detail and clarity of the images. Setting the printer to monochrome mode will only produce black and white prints, which is not suitable for a design team that requires high-quality color prints. This option does not meet the needs of the task. Disabling the automatic duplex unit does not directly impact print quality. While it may be relevant for specific presentation requirements, it does not optimize the printer's performance for high-quality color printing, which is the primary goal in this scenario.",
+    "options": [
+      "Set the printer to monochrome mode to save on color ink.",
+      "Disable the automatic duplex unit to prevent double-sided printing.",
+      "Enable the draft mode to increase printing speed.",
+      "Adjust the printer's resolution to the highest dots per inch (dpi) setting available."
+    ],
+    "correctAnswer": [
+      "Adjust the printer's resolution to the highest dots per inch (dpi) setting available."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-009",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following causes the ink in an inkjet printer to break up into small pumps, which give an electrical charge when they leave the print head and can either stick to the paper or fall off?",
+    "explanation": "In Epson design, the nozzle contains a piezoelectric element, which changes shape when a voltage is applied. The steady stream is the ink sent through the print head, and the ink that falls off is recycled. The thermal method is when the ink at each nozzle in the print head is heated, creating a bubble. When the bubble bursts, it sprays ink through the nozzle and draws more ink from the reservoir. The imaging drum is a round rotating cylinder conditioned by the primary charge roller (PCR) in a laser printer. Transfer roller applies a positive charge to the underside of the paper in a laser printer.",
+    "options": [
+      "Thermal method",
+      "Epson design",
+      "Imaging drum",
+      "Transfer roller"
+    ],
+    "correctAnswer": [
+      "Epson design"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-010",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which printer management feature would you use to view the drivers that a printer uses?",
+    "explanation": "View Printer Properties to see all the drivers that a printer uses. You can also use Printer Properties to view the port that a printer uses, manage user permissions, and configure color management profiles. Use Print Server Properties to view all the printer ports that a system uses. This function also displays the print drivers for the system, including drivers required by network users, notifications, and the spooler location. The print spooling service is a software process that captures print jobs from applications, places them in the print queue, and then sends each print job to the print device. The print queue is the location on the hard disk that holds print jobs waiting to be processed.",
+    "options": [
+      "Print queue",
+      "Print spooling service",
+      "Printer Properties",
+      "Print Server Properties"
+    ],
+    "correctAnswer": [
+      "Printer Properties"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-011",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the ONLY type of printer that can print multi-part forms that use carbon paper?",
+    "explanation": "The only printer that can handle multi-part forms using carbonless or carbon paper is an impact printer, as the printhead physically strikes the surface. A laser printer, inkjet printer, or thermal printer cannot print forms with carbon paper because these types of printers do not physically strike the surface.",
+    "options": [
+      "Thermal printer",
+      "Inkjet printer",
+      "Impact printer",
+      "Laser printer"
+    ],
+    "correctAnswer": [
+      "Impact printer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-012",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An operations manager for a transportation company works out of an office with several workers that come and go. The manager wants to install a printer for multiple shared devices, but no network drops are available in the building. What options does the operations manager have for installation? (Select all that apply.)",
+    "explanation": "Wi-Fi direct configures a software-implemented access point on the print device to facilitate connections to client devices. To connect a Windows client to a printer via Bluetooth, use the print device control panel to make it discoverable, then use the Bluetooth page in Windows Settings to add the device. USB would not be a good option for multiple computers. To install a printer with USB connectivity, connect the device plug (usually a Type B connector) to the printer's USB port and the Type A host plug to a free port on the computer. Most printers get fitted with an Ethernet network adapter and RJ45 port; however, the manager does not have network drops available in the building.",
+    "options": [
+      "Wi-Fi",
+      "Bluetooth",
+      "Ethernet",
+      "USB"
+    ],
+    "correctAnswer": [
+      "Wi-Fi",
+      "Bluetooth"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-013",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is experiencing frequent printer connectivity issues, with devices often appearing offline. After performing basic checks, which of the following actions would be the MOST effective in evaluating and resolving the root cause of these connectivity problems?",
+    "explanation": "Updating firmware and drivers is an evaluative action that addresses potential software-related issues causing connectivity problems. It ensures that the printer is compatible with the latest OS updates, which is crucial for resolving frequent connectivity issues. While replacing the cable can help identify if the cable is faulty, it does not evaluate the broader issue of frequent connectivity problems. This action is more of a basic troubleshooting step rather than an evaluative approach to resolving the root cause. A factory reset can resolve configuration issues but does not evaluate the underlying cause of frequent connectivity problems. It is a more drastic measure that may not address the specific issue if it is related to network or driver compatibility. While ensuring proper network connection and checking for interference are important, these actions are more about immediate troubleshooting rather than evaluating and resolving the root cause of frequent connectivity issues. They do not address potential software or driver-related problems.",
+    "options": [
+      "Ensure the printer is connected to the correct Wi-Fi network and check for network interference.",
+      "Update the printer's firmware and drivers to ensure compatibility with the operating system.",
+      "Perform a factory reset on the printer to restore default settings.",
+      "Replace the USB/Ethernet cable with a known good cable and test for connectivity."
+    ],
+    "correctAnswer": [
+      "Update the printer's firmware and drivers to ensure compatibility with the operating system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-014",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are testing a printer that you just installed by using the operator panel on the printer to print a test page. Later, you use the printer properties on your computer to print a test page. Instead of a normal test page, you receive several pages with garbled characters on them. What is the MOST likely cause of the problem?",
+    "explanation": "When you print a test page from your computer, and it does not work properly, you most likely have an incorrect printer driver or a printer cable that is not fastened properly. You would probably not be able to install an incorrect toner cartridge in a printer. Memory or power supply problems are rare in printers.",
+    "options": [
+      "Wrong printer driver",
+      "Wrong toner cartridge",
+      "Bad printer memory",
+      "A problem with the printer power supply or power cable"
+    ],
+    "correctAnswer": [
+      "Wrong printer driver"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-015",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A chemical engineering specialist is researching what laser toner consists of to reverse engineer it and make a cheaper solution. What will the laser toner consist of?",
+    "explanation": "Laser toner is composed of a fine compound of dyestuff and wax or plastic particles and is used in laser printers. Stereolithography (SLA) uses liquid plastic resin or photopolymer to create objects cured using an ultraviolet laser. The most popular plastics are polylactic acid (PLA) and acrylonitrile butadiene styrene (ABS). A filament spool supplies the \"ink\" for common 3-D printers. For laser printer maintenance, use IPA (99% Isopropyl Alcohol solution) and non-scratch, lint-free swabs to clean rollers and electronic contacts. The chemical engineer specialist should take care not to scratch the roller.",
+    "options": [
+      "Filament",
+      "Dyestuff",
+      "IPA",
+      "Resin"
+    ],
+    "correctAnswer": [
+      "Dyestuff"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-016",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A printer allows connection to a network through the infrastructure mode. Which of the following connections is the printer most likely using when referring to an infrastructure mode connection?",
+    "explanation": "Wireless has two interfaces, Bluetooth and Wi-Fi. Bluetooth allows access by using the print device control panel to make it discoverable Then, the Bluetooth page adds the device. USB connects the device plug to the printer's USB port and the host plug to a free port on the computer. An engineer can configure Ethernet to obtain an Internet Protocol (IP) configuration from a Dynamic Host Configuration Protocol (DHCP) server or they can manually configure this. Engineers use duplex units for double-sided printing and a finisher unit for folding, stapling, and hole punching.",
+    "options": [
+      "Wireless",
+      "Ethernet",
+      "Duplex Unit",
+      "USB"
+    ],
+    "correctAnswer": [
+      "Wireless"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-017",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Inkjet printers spray microscopic dots of ink with precise, controlled movement. Which of the following components carries the printhead back and forth during a print job?",
+    "explanation": "The carriage assembly carries the printhead and ink cartridges back and forth with precise, controlled movement during a print job. The duplexing assembly is an optional printer attachment that automatically turns over paper and reroutes it back through the printer for two-sided printing. Plastic or rubber rollers tightly pinch the paper and move it through the printing process. The stepper motor helps move the carriage back and forth and advances the paper rollers one print line at a time.",
+    "options": [
+      "Rubber rollers",
+      "Stepper motor",
+      "Carriage assembly",
+      "Duplexing assembly"
+    ],
+    "correctAnswer": [
+      "Carriage assembly"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-018",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST describes a routine maintenance task necessary for keeping an inkjet printer in good working condition?",
+    "explanation": "Cleaning the printhead and ensuring the carriage system is free of obstructions are essential maintenance tasks for inkjet printers. These tasks help maintain print quality and prevent mechanical issues. Inkjet printers use ink cartridges, not toner cartridges. Toner cartridges are specific to laser printers, and replacing them is not relevant to inkjet printer maintenance. Using compressed air is not recommended for cleaning inkjet printers. It can disperse ink particles and cause damage. Instead, cleaning should be done with a soft cloth or per the manufacturer's instructions. Fuser units and rollers are components of laser printers, not inkjet printers. Inkjet printers do not have these components, so this maintenance task is not applicable.",
+    "options": [
+      "Regularly replace the toner cartridge to prevent print quality issues.",
+      "Clean the printhead and ensure the carriage system is free of obstructions.",
+      "Use a compressed air canister to clean the interior of the printer.",
+      "Replace the fuser unit and rollers as part of the maintenance kit."
+    ],
+    "correctAnswer": [
+      "Clean the printhead and ensure the carriage system is free of obstructions."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-019",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A graphic design firm has been experiencing issues with its inkjet printer, where the printed images appear streaky, and colors are not as vibrant as expected. The printer is primarily used for high-quality photo printing. As the IT technician, you are tasked with analyzing the situation and recommending a maintenance solution. Which of the following actions should you take to resolve the issue?",
+    "explanation": "Cleaning the printhead is a crucial maintenance task for resolving streaky prints and dull colors. Dried ink on the printhead can obstruct ink flow, leading to the described issues. While replacing ink cartridges can sometimes resolve print quality issues, the symptoms described (streaky images and dull colors) are more indicative of a printhead issue rather than depleted ink cartridges. Therefore, this may not directly address the root cause. Adjusting the platen gap is relevant when dealing with thicker media, but it is unlikely to resolve issues related to streaky prints and color vibrancy. This adjustment is more about media handling than print quality. While calibration can help with color balance, it does not address the issue of streaky prints caused by potential blockages in the printhead. Cleaning the printhead is a more direct solution for the symptoms described.",
+    "options": [
+      "Adjust the platen gap to accommodate thicker media and improve print quality.",
+      "Replace the ink cartridges with new ones to ensure consistent ink flow.",
+      "Clean the printhead to remove any dried ink and ensure proper ink distribution.",
+      "Perform a manual calibration to adjust the print density and color balance."
+    ],
+    "correctAnswer": [
+      "Clean the printhead to remove any dried ink and ensure proper ink distribution."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-020",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After printing a report, a user notices speckling on the paper. What should the user do?",
+    "explanation": "Speckling on output indicates loose toner may be getting onto the paper. Clean the inside of the printer using an approved toner vacuum. Double/echo images is a sign that the photosensitive drum has not been cleaned properly. Try printing a series of different images, and see if the problem resolves itself. If not, replace the drum/toner cartridge. For an incorrect chroma display, prints come out in the wrong color. Ensure that the toner cartridges have been installed in the correct location. A loud or grinding noise, or any sort of clicking sound, is a sign of a mechanical problem.",
+    "options": [
+      "Check the mechanical components.",
+      "Ensure toner cartridges are in the correct slot.",
+      "Use a toner vacuum.",
+      "Replace the drum."
+    ],
+    "correctAnswer": [
+      "Use a toner vacuum."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-021",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An Italian artisan is experimenting with printing digital artwork and has recently purchased a thermal printer. What special specific consideration will thermal printers need?",
+    "explanation": "Most direct thermal print devices require special thermal paper containing chemicals designed to react and change color as heated by the heating element within the printer. Thermal inkjet print heads are for inkjet printers. In general, thermal inkjet print heads are cheaper and simpler to produce, but the heating elements have a relatively short life. Inkjet printers build up the image line by line. A carriage system moves the print head back and forth over the paper. Laser printers use laser toner. Laser toner is composed of a fine compound of dyestuff and wax or plastic particles.",
+    "options": [
+      "Thermal print heads",
+      "Special paper",
+      "Laser toner",
+      "Carriage system"
+    ],
+    "correctAnswer": [
+      "Special paper"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-022",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following network scan services must the multi-function device (MFD) configure with the path to a suitable file server and shared folder?",
+    "explanation": "The Server Message Block (SMB) protocol means the scan generates as a file on a shared network folder. Each user must have permission to write to the share. Scan to email is when the scan generates as a file attachment to an email message. The MFD configuration has the IP address of a Simple Mail Transfer Protocol (SMTP) server. Scan to cloud is when the scan is uploaded as a file to document storage and sharing accounts in the cloud. Cloud services such as OneDrive or Dropbox will generally be available as options on the MFD. A flatbed scanner works by shining a bright light at the object placed on a protective glass surface.",
+    "options": [
+      "SMB",
+      "Scan to cloud",
+      "Flatbed scanner",
+      "Scan to email"
+    ],
+    "correctAnswer": [
+      "SMB"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-023",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What format uses a system of mirrors that reflects the illuminated image of the object onto a lens that uses a prism to split the image into its component RGB colors?",
+    "explanation": "A flatbed scanner works by shining a bright light at the object placed on a protective glass surface. This information creates a bitmap file of the object. The Server Message Block (SMB) protocol means the scan generates as a file on a shared network folder. Each user must have permission to write to the share. Optical character recognition (OCR) is software that can convert scanned text into digital documents ready for editing. An automatic document feeder (ADF) passes paper over a fixed scan head. This is a more efficient way of scanning multi-page documents.",
+    "options": [
+      "ADF",
+      "SMB",
+      "OCR",
+      "Flatbed scanner"
+    ],
+    "correctAnswer": [
+      "Flatbed scanner"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-024",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator in a mid-sized company. The marketing department has requested that their new color laser printer be shared across the network so that all team members can print directly from their workstations. The printer is connected to a Windows print server. Which of the following steps should you take to ensure the printer is shared correctly and securely across the network?",
+    "explanation": "Enabling printer sharing on the print server and assigning the \"Marketing\" group print permissions to the printer ensures that the printer is shared across the network and only accessible to the intended users in the marketing department. By assigning the \"Marketing\" group print permissions, you maintain control over who can use the printer, enhancing security and preventing unauthorized access. While enabling printer sharing is necessary, assigning the \"Everyone\" group full control permissions poses a security risk. It allows all users, regardless of their department or role, to manage printer settings, which could lead to unauthorized changes or misuse. While connecting the printer directly to the network and using a static IP address can be part of network configuration, it does not address the requirement of sharing the printer through a Windows print server. This option bypasses the server and does not utilize the sharing capabilities of the print server. Installing the printer driver on each workstation manually and connecting each workstation to the printer using a USB cable is inefficient and impractical for a networked environment. It requires physical connections to each workstation, which defeats the purpose of network sharing. Additionally, it does not utilize the print server for centralized management and sharing.",
+    "options": [
+      "Enable printer sharing on the print server and assign the \"Marketing\" group print permissions to the printer.",
+      "Install the printer driver on each workstation manually and connect each workstation to the printer using a USB cable.",
+      "Connect the printer directly to the network via Ethernet and configure it with a static IP address.",
+      "Enable printer sharing on the print server and assign the \"Everyone\" group full control permissions to the printer."
+    ],
+    "correctAnswer": [
+      "Enable printer sharing on the print server and assign the \"Marketing\" group print permissions to the printer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-025",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the MOST likely cause of double or echo images in a laser printer, and how can this issue be resolved?",
+    "explanation": "Double or echo images occur when the photosensitive drum is not properly cleaned after transferring the image to the paper. This results in residual toner from a previous image being transferred again, creating a ghost or echo effect. Replacing the drum or toner cartridge resolves this issue because the cleaning mechanism is part of these components. While dirty or damaged feed rollers can cause print quality issues such as vertical or horizontal lines, they do not cause double or echo images. Feed rollers are responsible for moving the paper through the printer, not for image transfer. Low toner levels can lead to faded or faint prints, but they do not cause double or echo images. Double images are related to the cleaning mechanism of the photosensitive drum, not the amount of toner available. A misaligned transfer belt can cause color misalignment or shadows in color prints, but it does not result in double or echo images. This issue is specific to the cleaning of the photosensitive drum.",
+    "options": [
+      "Low toner levels in the cartridge; refill or replace the toner cartridge.",
+      "Misaligned transfer belt; reseat the transfer belt and run the calibration utility.",
+      "Dirty or damaged feed rollers; clean or replace the feed rollers.",
+      "Improperly cleaned photosensitive drum; replace the drum or toner cartridge."
+    ],
+    "correctAnswer": [
+      "Improperly cleaned photosensitive drum; replace the drum or toner cartridge."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-026",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Oliver, a user in your company, is using an Inkjet printer. After using this printer for several months, he notices that streaks are beginning to appear on his printed pages. Oliver has asked you to fix this issue. Which of the following is MOST likely causing Oliver's printer to malfunction?",
+    "explanation": "Streaks on an Inkjet printer's pages are commonly caused by printheads that are out of alignment. You can generally fix this problem using your printer's alignment function to straighten them. An image drum, fusing unit, and mirror are all components of a laser printer and could not be an issue with Oliver's Inkjet printer.",
+    "options": [
+      "The fusing unit is too hot, causing some of the ink from the previous job to remain on the unit.",
+      "The imaging drum is probably at end of life.",
+      "The mirror in the printer is dusty and needs to be cleaned.",
+      "The printer's heads are out of position and need to be aligned."
+    ],
+    "correctAnswer": [
+      "The printer's heads are out of position and need to be aligned."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-027",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As a network administrator, you notice several multifunction devices (MFDs) in your organization are experiencing intermittent printing errors, and security vulnerabilities have been reported. After analyzing the situation, you determine that the firmware across these devices is outdated. Which of the following actions should you prioritize to address the printing errors and security vulnerabilities?",
+    "explanation": "The best course of action is to perform a test firmware update on a single device. This allows you to verify that the update resolves the printing errors and security vulnerabilities without introducing new issues. Once confirmed, you can safely deploy the update across all devices. Resetting all devices to factory settings is a drastic measure that may not address the root cause of the issues and could lead to data loss or additional configuration work. It does not specifically target the firmware-related problems. Disabling network connections is not a practical solution as it disrupts operations and does not directly address the firmware issues causing printing errors and security vulnerabilities. While increasing maintenance checks can help monitor performance, it does not resolve the underlying firmware issues. Firmware updates are necessary to fix the errors and vulnerabilities identified.",
+    "options": [
+      "Perform a test firmware update on a single device before deploying it across all devices.",
+      "Increase the frequency of maintenance checks on the MFDs to monitor performance.",
+      "Conduct a network-wide reset of all MFDs to restore factory settings.",
+      "Disable all network connections to the MFDs until the issues are resolved."
+    ],
+    "correctAnswer": [
+      "Perform a test firmware update on a single device before deploying it across all devices."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-028",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their laser printer is producing faded prints. After verifying that the toner cartridge is not empty, what is the MOST appropriate next step to evaluate and resolve the issue?",
+    "explanation": "Faded prints can result from the printer being set to a low-density (draft) mode. Evaluating and adjusting the print settings ensures the printer is configured for normal or high-quality output, resolving the issue. While the fuser unit is responsible for fusing toner to the paper, it does not cause faded prints. Faded prints are more likely related to toner settings or cartridge issues. Cleaning the feed rollers addresses paper feed issues, not toner distribution or faded prints. This action would not resolve the problem in this scenario. A damaged transfer roller can cause blank or incomplete prints, but it is not typically the cause of faded prints. This action would not address the issue described.",
+    "options": [
+      "Check if the printer is set to a low-density (draft) print mode.",
+      "Replace the transfer roller to restore proper image transfer.",
+      "Replace the printer's fuser unit to ensure proper toner adhesion.",
+      "Clean the printer's feed rollers to improve toner distribution."
+    ],
+    "correctAnswer": [
+      "Check if the printer is set to a low-density (draft) print mode."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-029",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A medium-sized organization expands operations and grows the administrative team to keep up with increased business. As part of expanding administrative capabilities for record-keeping, they have purchased an impact printer for its versatility in usefulness. Which of the following types of paper can the organization use? (Select all that apply.)",
+    "explanation": "The organization can use plain paper. It is held firmly against the moving roller (the platen) and pulled through the mechanism by friction as the platen rotates. The organization can also use carbon paper (or impact paper). It makes multiple copies of a document in the same pass (hence carbon copy, or \"cc\"). The organization can also use tractor-fed paper. It includes removable, perforated side strips. The holes in these strips secure over studded rollers at each end of the platen. Thermal paper is not compatible. Most direct thermal print devices require special thermal paper containing chemicals designed to react and change color as heated by the heating element within the printer.",
+    "options": [
+      "Tractor-fed",
+      "Plain",
+      "Carbon",
+      "Thermal"
+    ],
+    "correctAnswer": [
+      "Tractor-fed",
+      "Plain",
+      "Carbon"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-030",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A marketing director purchased a printer for their office and is currently setting it up. Which of the following is the least of considerations for placement?",
+    "explanation": "The print device must have a power outlet and potentially a network data port. However, if there is wireless, the printer only needs a power outlet. As with a PC, ensure that the print device does not get exposed to direct sunlight. Make sure that there is space around it for air to flow. A well-ventilated area ensures the dispersal of fumes, such as ozone generated during printer operation. The print device should be accessible to its users but take account of noise and foot traffic that might be disruptive to employees working at nearby desks.",
+    "options": [
+      "No direct sunlight exposure",
+      "Network data port",
+      "Accessibility",
+      "Air flow"
+    ],
+    "correctAnswer": [
+      "Network data port"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-031",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A graphic design firm has been experiencing issues with its thermal printer, where the printed labels are coming out faint and uneven. Upon inspection, you notice a buildup of residue on the printhead. What should you do to resolve this issue and prevent it from recurring?",
+    "explanation": "The faint and uneven print is likely due to residue on the printhead, which can interfere with the heat transfer process. Cleaning the printhead with isopropyl alcohol will remove the residue, and scheduling regular cleanings will help prevent future issues. While using high-quality thermal paper is important, the issue described is due to residue on the printhead, not the paper quality. Replacing the paper alone will not resolve the problem. Increasing the temperature settings may temporarily improve print quality but can also lead to faster wear of the printhead and does not address the underlying issue of residue buildup. Using a domestic vacuum cleaner is not recommended as it can damage the printer's components and is not effective for cleaning the printhead. Isopropyl alcohol is the appropriate cleaning agent for this task.",
+    "options": [
+      "Replace the thermal paper with a higher-quality brand.",
+      "Adjust the printer's temperature settings to a higher level.",
+      "Clean the printhead with isopropyl alcohol and ensure regular cleaning is scheduled.",
+      "Use a domestic vacuum cleaner to remove the residue from the printhead."
+    ],
+    "correctAnswer": [
+      "Clean the printhead with isopropyl alcohol and ensure regular cleaning is scheduled."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-032",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their printer is not recognizing the paper tray. Which of the following steps should you take first to troubleshoot this issue?",
+    "explanation": "Ensuring the tray is properly inserted and locked into place is a basic check that should always be performed first when troubleshooting tray recognition issues. Many times, the tray may not be seated correctly, causing the printer to fail to recognize it. Replacing the printer's firmware is a more advanced troubleshooting step and should only be considered after basic checks have been performed. Cleaning the printer's rollers is unrelated to tray recognition issues and is more relevant for paper feed or print quality problems. Updating the printer driver is important for connectivity and compatibility issues but is not the first step for resolving tray recognition problems.",
+    "options": [
+      "Clean the printer's rollers with an approved cleaning solution.",
+      "Verify that the tray is properly inserted and locked into place.",
+      "Update the printer driver on the user's computer.",
+      "Replace the printer's firmware."
+    ],
+    "correctAnswer": [
+      "Verify that the tray is properly inserted and locked into place."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-033",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A printer technician performs maintenance on a roller and wants to make sure that it gets cleaned properly according to standards. What should the printer technician use to clean it?",
+    "explanation": "Use IPA (99% Isopropyl Alcohol solution) and non-scratch, lint-free swabs to clean rollers and electronic contacts. Take care not to scratch a roller. When toner spills on skin or clothes, wash it off with cold water. Using hot water is not recommended as heat can open the skin's pores and allow toner particles to penetrate more easily. A maintenance kit contains replacement feed rollers, a transfer roller, and a fuser unit. The technician is not replacing parts, only cleaning the roller. Wipe dust and toner away from the printer interior or exterior with a soft cloth, or use a toner-safe vacuum.",
+    "options": [
+      "Cold water",
+      "Maintenance kit",
+      "Soft cloth",
+      "IPA"
+    ],
+    "correctAnswer": [
+      "IPA"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-034",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A printer support technician at a corporate office receives a call from the administrative office that the office inkjet printer is online, but it is making a grinding noise while printing. What type of error is this?",
+    "explanation": "A carriage mechanism holds the ink cartridges in an inkjet printer. Grinding noises during printing are a symptom of a carriage mechanism fault. A paper jam occurs when paper incorrectly feeds through the printer and gets lodged within. A print quality issue is when a job prints, but the printed media is smudged, faded, skewed, or has other defects. Incorrect orientation (portrait or landscape) will cause the output media to be printed incorrectly. A finishing tray may incorrectly staple, fold, or punch media if the pages are not printed in the correct orientation.",
+    "options": [
+      "Paper jam",
+      "Print quality issue",
+      "Carriage mechanism fault",
+      "Incorrect page orientation"
+    ],
+    "correctAnswer": [
+      "Carriage mechanism fault"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-035",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is experiencing a paper jam in a printer that loads paper through friction. The user opens the printer up to try and find the part that will fix the problem. The user should check on which assembly part?",
+    "explanation": "Paper is friction-fed through the print mechanism in the feed assembly by a stepper motor turning a rubber-coated roller. From the transfer assembly, the paper passes into the fuser assembly. The fuser unit squeezes the paper between a hot roller and a pressure roller. When the paper has passed through the fuser and has a duplexing assembly unit installed, it turns over and returns to the developer unit to print the second side. If the media and pickup rollers are good and if the jam occurs within the drum assembly before fusing the image, the cause could be a faulty static eliminator.",
+    "options": [
+      "Feed assembly",
+      "Drum assembly",
+      "Fuser assembly",
+      "Duplexing assembly"
+    ],
+    "correctAnswer": [
+      "Feed assembly"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-036",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the MOST likely cause of a grinding noise in a laser printer, and what should be checked first?",
+    "explanation": "A grinding noise in a laser printer often indicates an issue with the fuser, toner cartridge, or gears/rollers. The fuser is a common culprit, and inspecting or reseating it is a logical first step to resolve the issue. While a faulty toner cartridge can sometimes cause grinding noises, it is less likely than issues with the fuser or gears. The toner cartridge should be checked only after inspecting the fuser. A misaligned paper tray can cause paper feed issues, but it does not typically result in grinding noises. Grinding noises are more likely related to mechanical components like the fuser or rollers. Dirty feed rollers can cause paper jams or misfeeds, but they do not usually produce grinding noises. The grinding noise is more likely caused by mechanical issues with the fuser or gears.",
+    "options": [
+      "Dirty feed rollers; clean the feed rollers.",
+      "Misaligned paper tray; reseat the paper tray.",
+      "Damaged or improperly seated fuser; inspect and reseat the fuser.",
+      "Faulty toner cartridge; replace the toner cartridge."
+    ],
+    "correctAnswer": [
+      "Damaged or improperly seated fuser; inspect and reseat the fuser."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-037",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that when plugging in the printer to the computer, the computer did not detect the printer and work. The support technician realized the wrong type of cable connected the printer to the computer. What kind of cable did the user NOT plug in that would have enabled the printer to work correctly?",
+    "explanation": "Small printers typically can hook up with USB, Ethernet, and Wi-Fi. However, only USB cables hook up directly to the computer during a printer setup. Ethernet is for wired printers that connect to the local network. Users do not use Ethernet to hook to a computer directly. Ethernet connectivity is typically better than Wi-Fi connectivity but requires a nearby port for connection. Coaxial cable is for television and internet connectivity but not used for setting up printers. In the same vein as coaxial cable, fiber is for internet and television connectivity but not used for printers.",
+    "options": [
+      "Coaxial",
+      "USB",
+      "Ethernet",
+      "Fiber"
+    ],
+    "correctAnswer": [
+      "USB"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-038",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their printouts are consistently garbled or unreadable. After verifying the printer is properly connected and functional, which of the following would be the BEST next step to evaluate and resolve the issue?",
+    "explanation": "Evaluating the printer driver is the best next step because garbled print output is often caused by an outdated or incompatible driver. Updating the driver ensures that the printer can correctly interpret and process the data sent from the computer. A toner cartridge issue would typically result in faded, smudged, or incomplete prints, not garbled or unreadable output. Replacing the toner cartridge would not address the underlying issue of data miscommunication between the computer and the printer. While restarting the printer may resolve some temporary issues, it is unlikely to fix garbled output caused by driver problems. This step does not evaluate or address the root cause of the issue, making it an ineffective solution in this scenario. Incorrect paper size would result in misaligned or cut-off prints, not garbled or unreadable output. Paper size is unrelated to the data processing issue that causes garbled print jobs.",
+    "options": [
+      "Verify that the printer is loaded with the correct paper size.",
+      "Restart the printer and resend the print job.",
+      "Check and update the printer driver.",
+      "Replace the printer's toner cartridge."
+    ],
+    "correctAnswer": [
+      "Check and update the printer driver."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-039",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An editor at a magazine company has a lifelong dream of starting their own business and being their own boss. The editor created a business plan, acquired funding, and is currently in the stages of buying equipment. The business needs printers that can automatically print on both sides of the pages since manually feeding paper through would not be cost-effective. What type of item should the editor ensure that the printers have?",
+    "explanation": "When the paper has passed through the fuser and has a duplexing assembly unit installed, it turns over and returns to the developer unit to print the second side. Color laser print devices use separate toner cartridges for each additive color. One may use four passes to put each color in turn; others combine the colored toner on a transfer belt and print in one pass. The fuser assembly squeezes the paper between a hot roller and a pressure roller so that the toner melts onto the paper's surface. A pickup roller turns against the paper stack, pushing the paper into a feed and separation roller assembly. This assembly allows only one sheet to pass through.",
+    "options": [
+      "Fuser assembly",
+      "Transfer belt",
+      "Pickup roller",
+      "Duplexing assembly"
+    ],
+    "correctAnswer": [
+      "Duplexing assembly"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-040",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A marketing manager reviews a printer configuration and finds that someone set up the printer in infrastructure mode. What medium will the marketing manager need to connect to the printer?",
+    "explanation": "In infrastructure mode, the printer's wireless adapter must support an 802.11 standard available on the access point. Most printers get fitted with an Ethernet network adapter and an RJ45 port. The manager can configure the print device to obtain an internet protocol (IP) configuration from a Dynamic Host Configuration Protocol (DHCP) server or manually configure it. To install a printer with USB connectivity, connect the device plug (usually a Type B connector) to the printer's USB port and the Type A host plug to a free port on the computer. Printers do not generally connect through Thunderbolt.",
+    "options": [
+      "USB",
+      "Wireless",
+      "Thunderbolt",
+      "Ethernet"
+    ],
+    "correctAnswer": [
+      "Wireless"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-041",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having trouble with their laser printer and notices that the light from the laser is not shining on this part of the printer. What part of the printer has a photosensitive surface?",
+    "explanation": "An imaging drum is in the charging stage of the laser printer. The imaging drum is a round rotating cylinder conditioned by the primary charge roller (PCR). The toner is charged with a high negative charge and applies to the drum. The laser toner consists of a fine compound of dyestuff and wax or plastic particles. The developer roller is very close to the photosensitive drum. The toner carries the same negative charge polarity as the drum. Transfer roller applies a positive charge to the underside of the paper. This causes the toner on the drum to be attracted to the paper.",
+    "options": [
+      "Transfer roller",
+      "Imaging drum",
+      "Toner",
+      "Developer roller"
+    ],
+    "correctAnswer": [
+      "Imaging drum"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-042",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a common cause of frequent paper jams in a printer?",
+    "explanation": "Frequent jams often result from unsuitable media (such as paper or labels) or faulty rollers. These issues can cause paper to become lodged in the printer, leading to jams. While an incorrectly installed toner cartridge can cause print quality issues, it is not typically a cause of frequent paper jams. Outdated printer drivers can lead to connectivity issues or print quality problems, but they are not directly related to causing paper jams. Low ink levels can affect print quality, particularly in inkjet printers, but they do not cause paper jams.",
+    "options": [
+      "Incorrectly installed toner cartridge",
+      "Outdated printer drivers",
+      "Unsuitable media or faulty rollers",
+      "Low ink levels in the cartridge"
+    ],
+    "correctAnswer": [
+      "Unsuitable media or faulty rollers"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-043",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Hannah has been working for your company for several years. Recently, she moved to a new department, which is located on a different floor. After the move, Hannah informs you that when she tries to print a Microsoft Word document (the same program she has always used), the printer on her new floor prints page after page of seemingly random characters. Which of the following is the MOST likely cause of Hannah's print problems?",
+    "explanation": "In most cases, the issue described in this question is the result of a bad or incorrect printer driver. When Hannah moved and created a connection to her new printer, she selected the wrong printer driver. A failing hard drive has been known to corrupt a printer driver, but since others are not having the same issue, the most likely cause of the problem is the driver on Hannah's computer. If the cable was bad or failing, the print job would not make it to the printer, and others in the company would experience the same problem. Since Hannah used the same word process in her old department, it is unlikely that it would suddenly stop working because of a bug in the software.",
+    "options": [
+      "The wrong printer driver has been selected.",
+      "The cable connecting the printer to the network is failing.",
+      "The program used to create the document has a bug.",
+      "The hard drive on the print server is corrupt."
+    ],
+    "correctAnswer": [
+      "The wrong printer driver has been selected."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-044",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the MOST likely symptom of a dirty drum or roller in a laser printer?",
+    "explanation": "A dirty drum or roller can create lines or speckles at regular intervals on the print job. A vertical black line or white stripe is often caused by a dirty corona wire. Missing lines on a print job, are often caused by the toner in the cartridge not being distributed evenly. A faint image on the print job (called ghosting) is often caused by the fluorescent lamp and rubber scraper not removing the remaining toner from the drum prior to starting a new print job.",
+    "options": [
+      "Lines or speckles repeated at regular intervals on the print job",
+      "A vertical black or white stripe on the print job",
+      "Missing lines on the print job",
+      "A faint image on the print job"
+    ],
+    "correctAnswer": [
+      "Lines or speckles repeated at regular intervals on the print job"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-045",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What are the manufacturers' specific recommendations for cleaning and maintaining laser printers? (Select all that apply.)",
+    "explanation": "Wipe dust and toner away from the printer interior or exterior with a soft cloth. The soft cloth can be damp to clean the exterior surface. Use a toner-safe vacuum to get rid of the printer interior or exterior dust. A technician should not use a compressed air blaster to clean a laser printer since it risks blowing the toner dust into the room. A technician should not use a domestic vacuum cleaner because the toner is conductive and can damage the motor. Toner is also so fine that it will pass straight through the dust collection bag and back into the room.",
+    "options": [
+      "Use a domestic vacuum.",
+      "Use a compressed air blaster.",
+      "Use a toner-safe vacuum.",
+      "Wipe with a soft cloth."
+    ],
+    "correctAnswer": [
+      "Use a toner-safe vacuum.",
+      "Wipe with a soft cloth."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-046",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a common function performed by a finisher unit on laser printers and MFDs?",
+    "explanation": "A finisher unit on laser printers and MFDs can perform functions like stapling pages or punching holes for binders. This is a specific task associated with finishing processes in printing. Printing in color is a basic function of a printer, not specifically a task performed by a finisher unit. Scanning documents is a function typically associated with multifunction devices (MFDs) but not specifically with the finisher unit. Sending faxes is a communication function that some multifunction printers may have, but it is not related to the finishing process.",
+    "options": [
+      "Sending faxes",
+      "Stapling pages",
+      "Scanning documents",
+      "Printing in color"
+    ],
+    "correctAnswer": [
+      "Stapling pages"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-047",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Inkjet printers are popular for small businesses because they provide good-quality printouts. However, fuzzy lines can appear in artwork, or colored areas in images can sometimes start and stop before they should. Which of the following should you do when this happens?",
+    "explanation": "Calibration ensures that the printhead and paper are properly aligned so that printouts are aligned and clear, avoiding fuzzy lines or colored areas that sometimes start and stop before they should. The feeder or rollers can become jammed, but a jammed feeder or rollers do not affect the printed image's misalignment, which can cause fuzzy lines or other issues. Clean the printhead if the printout looks smudged or blotchy or if a specific color is missing. Replace ink cartridges in a timely manner to avoid dried ink and blocked printheads.",
+    "options": [
+      "Calibrate the printer.",
+      "Clean the printhead.",
+      "Replace the ink supply.",
+      "Clear the paper jam."
+    ],
+    "correctAnswer": [
+      "Calibrate the printer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-048",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a key maintenance task for impact printers to ensure optimal performance?",
+    "explanation": "Impact printers use a printhead that strikes an ink ribbon to produce text and images on paper. Over time, debris and ink residue can accumulate on the printhead and ribbon path, affecting print quality. Regular cleaning of these components is essential to maintain optimal performance and prevent paper jams or poor print quality. Regularly replacing the toner cartridge is associated with laser printers, not impact printers. Impact printers use ink ribbons instead of toner cartridges, so replacing a toner cartridge is not relevant to their maintenance. Calibrating color balance is a maintenance task for color printers, such as inkjet or color laser printers, to ensure accurate color reproduction. Impact printers typically produce monochrome output and do not require color calibration. High-quality photo paper is used in inkjet printers for printing photos and high-resolution images. Impact printers are designed for standard paper and forms, and using photo paper is not applicable to their maintenance or operation.",
+    "options": [
+      "Using high-quality photo paper",
+      "Cleaning the printhead and ribbon path",
+      "Calibrating the color balance",
+      "Regularly replacing the toner cartridge"
+    ],
+    "correctAnswer": [
+      "Cleaning the printhead and ribbon path"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-049",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What can be done to allow workstations on the same network to send print jobs to a printer that is directly connected to a Windows workstation?",
+    "explanation": "You can configure a printer that is attached to a Windows workstation as a network printer by configuring it to be a shared printer. Do this by accessing the Devices and Printers panel on the workstation (Windows 10) or Bluetooth devices & Printers and scanners (Windows 11) and then opening the Properties window and configuring the settings on the Sharing tab. Disconnecting the printer from the workstation and connecting the printer to the network defeats the purpose of sharing the printer from a workstation. You cannot configure a workstation as a printer driver or a printer as a print server. The printer driver and print server are separate components of the printing process.",
+    "options": [
+      "Disconnect the printer from the workstation and connect the printer to the network.",
+      "Configure the printer to be a shared printer.",
+      "Configure the workstation as a printer driver.",
+      "Configure the printer to be a print server."
+    ],
+    "correctAnswer": [
+      "Configure the printer to be a shared printer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-050",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following maintenance practices is MOST effective for ensuring the optimal performance of a laser printer?",
+    "explanation": "It is important to follow the manufacturer's recommendations for replacing dust and ozone filters as part of regular maintenance. This practice helps maintain the printer's performance and prevents potential issues caused by accumulated dust and ozone, which can affect print quality and the printer's longevity. You should not use a domestic vacuum cleaner for cleaning toner spills, as toner can damage the vacuum motor and pass through the dust collection bag, potentially causing further issues. While continuously printing until the toner cartridge is completely empty to maximize its usage might seem cost-effective, you should replace the toner cartridge when the printer indicates low toner to maintain print quality. Continuing to print with an empty cartridge can lead to poor print quality and potential damage to the printer. You should not use creased, dirty, or damp paper, as it can cause paper jams and affect print quality. Using high-quality paper is recommended to ensure optimal printer performance and prevent mechanical issues.",
+    "options": [
+      "Continuously printing until the toner cartridge is completely empty to maximize its usage",
+      "Using a domestic vacuum cleaner to clean toner spills inside the printer",
+      "Regularly replacing the printer's dust and ozone filters",
+      "Using creased and damp paper to save costs on new paper purchases"
+    ],
+    "correctAnswer": [
+      "Regularly replacing the printer's dust and ozone filters"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-051",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user has just sent a job to the print queue but the ink has vertical lines on the paper. What is this indicative of?",
+    "explanation": "Vertical or horizontal lines marks that appear in the same place are often due to dirty feed rollers or a damaged or dirty photosensitive drum. Garbled print typically occurs because of a fault in rendering the print job somewhere in the path between the application, printer driver, page description language, and print device. Toner not fused to paper has symptoms of output that smudges easily. This indicates that the fuser needs replacing. Most paper jams arise because the media (paper or labels) are not suitable for the printer or because a sheet is creased, folded, or not loaded properly in the tray.",
+    "options": [
+      "Toner not fusing",
+      "Paper jam",
+      "Dirty feed roller",
+      "Print driver"
+    ],
+    "correctAnswer": [
+      "Dirty feed roller"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-052",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A support technician at a corporate office needs to recommend a new laser printer for the administrative office. One of the considerations is the speed of the printer. How is the basic speed of a printer measured?",
+    "explanation": "The basic speed of a printer is measured in pages per minute (PPM). Different printers may also have varying PPM based on what is printing. The output tray is where printed materials go. This is important when in an environment with a higher level of printing, as the printer will automatically stop when the output tray is full. The maximum supported resolution, measured in dots per inch (DPI), determines output quality. This is not to be confused with PPI since multiple dots can make up one pixel. Pixel dimensions will appear separately from DPI to avoid confusion. Resolution varies by printer. Vertical and horizontal resolutions may also be different.",
+    "options": [
+      "Pixels per inch (PPI)",
+      "Output tray capacity",
+      "Pages per minute",
+      "Dots per inch (DPI)"
+    ],
+    "correctAnswer": [
+      "Pages per minute"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-053",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your company has recently upgraded to a new network scanner that supports advanced security features and network scan services. During a routine audit, you discover that scanned documents are not being delivered to the intended recipients and unauthorized users have accessed some scanned files. What should you analyze first to resolve these issues and enhance security?",
+    "explanation": "Analyzing the scanner's user authentication and access control settings is crucial to resolving unauthorized access issues. Ensuring that only authorized users have access to scanned documents will enhance security and address the problem of unauthorized access. While the physical location can impact accessibility and convenience, it does not directly address issues related to document delivery and unauthorized access. The problem is more likely related to network and security configurations. While network configuration settings are important for connectivity, they are not the primary concern when dealing with unauthorized access and document delivery issues. The focus should be on security settings. The type of paper used does not impact the delivery of scanned documents or unauthorized access. This option is irrelevant to the issues described and does not contribute to resolving them.",
+    "options": [
+      "The type of paper used in the scanner to ensure it is compatible with the device",
+      "The scanner's user authentication and access control settings",
+      "The network configuration settings to verify the correct IP address and DNS settings",
+      "The physical location of the scanner to ensure it is not in a high-traffic area"
+    ],
+    "correctAnswer": [
+      "The scanner's user authentication and access control settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-054",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of printer uses a drum, plastic toner, and fuser to create a printed page?",
+    "explanation": "Laser printers use a laser to charge a metal drum. The drum picks up plastic toner, and the toner is then fused onto the paper (using rollers and heat). Dot matrix printers use an inked ribbon. The printing mechanism strikes the ribbon to put ink onto the paper. A dye sublimation printer is a non-impact printer that uses film-embedded dye. Inkjet printers are quiet, non-impact printers that store ink in a reservoir.",
+    "options": [
+      "Dot matrix",
+      "Laser",
+      "Ink jet",
+      "Dye sublimation"
+    ],
+    "correctAnswer": [
+      "Laser"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-055",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As the technician for a data logging center, you order a box of continuous computer paper for your printer. Which of the following components needs to be included in the printer for the ordered paper to work properly?",
+    "explanation": "A tractor feed (included in a dot matrix printer) ensures that the continuous computer paper is fed through the printer at a consistent rate. This type of printer and paper is ideal for data logging. Laser printers, Inkjet printers, and thermal printers do not use a tractor feed system, which is required for using continuous computer paper.",
+    "options": [
+      "A duplexing assembly",
+      "A stepper motor",
+      "A tractor feed",
+      "A hand paper feeder"
+    ],
+    "correctAnswer": [
+      "A tractor feed"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-056",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST explains why inkjet printers might be preferred over laser printers for certain applications?",
+    "explanation": "Inkjet printers are often preferred for applications requiring high-quality color output, such as photo printing because they can produce vibrant and detailed images, especially when using high-grade, treated paper. Inkjet printers are generally slower and have a higher cost per page compared to laser printers, making them less suitable for high-volume printing tasks. While inkjet printers can be quieter, they often require more frequent maintenance due to expensive ink cartridges and the need for high-grade paper, unlike laser printers, which are more robust for office environments. While inkjet printers can handle various media types, laser printers are also capable of handling different sizes and types of media, and the statement does not specifically address why inkjets are preferred for certain applications like photo printing.",
+    "options": [
+      "Inkjet printers are chosen for high-quality color output, such as photo printing, due to their ability to produce vibrant images on treated paper.",
+      "Inkjet printers are favored for their ability to handle a wide range of media sizes and types, unlike laser printers, which are limited to standard paper sizes.",
+      "Inkjet printers are ideal for environments requiring quiet operation and minimal maintenance, making them superior to laser printers.",
+      "Inkjet printers are preferred for high-volume printing due to their faster speed and lower cost per page compared to laser printers."
+    ],
+    "correctAnswer": [
+      "Inkjet printers are chosen for high-quality color output, such as photo printing, due to their ability to produce vibrant images on treated paper."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-057",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following actions is the MOST appropriate first step to resolve a paper jam in a laser printer's fuser unit?",
+    "explanation": "Using the release levers on the fuser unit to remove the paper is the correct action because forcing the paper out can damage the fuser rollers, and the release levers are specifically designed to safely remove jammed paper without causing further damage. Pulling the paper forcefully can damage the rollers and leave debris in the printer, leading to additional issues. The toner cartridge is unrelated to resolving a paper jam in the fuser unit. Replacing it would not address the issue. Restarting the printer does not physically remove the jammed paper. Manual intervention is required to clear the jam properly.",
+    "options": [
+      "Use the release levers on the fuser unit to remove the paper.",
+      "Restart the printer to clear the jam automatically.",
+      "Forcefully pull the jammed paper out to clear the path.",
+      "Replace the printer's toner cartridge."
+    ],
+    "correctAnswer": [
+      "Use the release levers on the fuser unit to remove the paper."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-058",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "One of the employees in your company calls and complains that text printed on the laser printer smudges easily and is staining hands and clothes. Which of the following printer components (if adjusted or replaced) would BEST fix the printer?",
+    "explanation": "After the toner has been applied to the paper, the paper passes through two heated rollers known as the fuser, or fuser unit. The heat and pressure from the rollers fuse the toner particles into the fibers on the paper. If the toner on the finished printed paper is smudging, the most likely issue is that the fuser unit is malfunctioning in some way. Since the text is being printed, the toner hopper is dispensing toner and would not cause the issue. The photoreceptor and the environmentally friendly version known as organic photoconductor drums (OPC drums) receive the charge from the corona wire. If these parts were not working, the text would not be transferred to the paper. If the laser were not working, the image of the text would not be drawn on the photoreceptor drum, and the paper would come out blank.",
+    "options": [
+      "Toner hopper",
+      "Fuser unit",
+      "Laser",
+      "OPC drum"
+    ],
+    "correctAnswer": [
+      "Fuser unit"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-059",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A top-secret military installation requires certain users to print, but anyone can map the printer who views the configuration setting physically on the machine. The administrators set up certain users to print but worry that some users could set up the printer themselves and print documents that should not get printed. What can the administrators do for a best practice to monitor access?",
+    "explanation": "If the print device generates a log, then the administrator can configure a log collector, such as syslog, to transmit the logs to a centralized log server. Enabling File Transfer Protocol (FTP) on a printer would not help secure a printer, but it would decrease overall security. FTP is a plaintext protocol. While the administrator recommends changing the default password on the printer, it does not help audit and monitor usage. An automatic duplex unit helps with double-sided printing, and a finisher unit helps with folding, stapling, and hole punching.",
+    "options": [
+      "Enable the duplex setting.",
+      "Change the default printer password.",
+      "Forward syslog.",
+      "Enable FTP on the printer."
+    ],
+    "correctAnswer": [
+      "Forward syslog."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-060",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A printer is experiencing frequent multipage misfeeds where two or more sheets are being pulled into the printer at the same time. The paper is loaded properly, and the printer's maintenance kit has not been replaced recently. What should you do next to address the issue?",
+    "explanation": "The maintenance kit includes components like pickup rollers, which are critical for proper paper feeding. Replacing the maintenance kit is the best solution for resolving multipage misfeeds caused by worn-out rollers. While using heavier paper might reduce misfeeds temporarily, it is not a long-term solution and does not address the root cause of worn-out rollers. Restarting the printer and reloading the paper tray may temporarily resolve minor issues but will not fix mechanical problems like worn-out rollers. Updating the firmware is useful for addressing software-related issues but does not resolve mechanical problems like multipage misfeeds.",
+    "options": [
+      "Restart the printer and reload the paper tray.",
+      "Update the printer's firmware to the latest version.",
+      "Use a different type of paper with a heavier weight.",
+      "Replace the printer's maintenance kit, including the pickup rollers."
+    ],
+    "correctAnswer": [
+      "Replace the printer's maintenance kit, including the pickup rollers."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-061",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An employee uses a device that gives them authentication to release the print job. What is this device?",
+    "explanation": "Badging means the print device has a smart card reader. An employee must present an ID badge to the reader to start the print job. A print server is a hardware and firmware that allows client computers to connect directly over the network without going via a server computer. An audit log can identify printed documents that have gone missing or identify the unauthorized release of information. A company can configure user authentication on a print share. User authentication means that the printer sharing server or print device will only accept print jobs from authorized user accounts.",
+    "options": [
+      "Print server",
+      "Badging",
+      "User authentication",
+      "Audit log"
+    ],
+    "correctAnswer": [
+      "Badging"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-062",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A support technician at a corporate office needs to recommend a new laser printer for the administrative office. The office personnel requests a printer they will not have to refill with paper as often as their current printer. What does the technician need to look for to make the proper decision on which printer to get?",
+    "explanation": "The input tray capacity is the total number of pages per media type that the printer can support. The output tray is where printed materials go. This is important in an environment with a higher level of printing, as the printer will automatically stop when the output tray is full. The basic speed of a printer is measured in pages per minute (ppm). Different printers may also have varying PPM based on what is printing. Paper handling refers to the sizes and types of paper media that can be loaded into a printer. It may be important for a printer to handle printing documents, photos, and other types of media.",
+    "options": [
+      "Paper handling",
+      "Input tray capacity",
+      "Output tray capacity",
+      "Pages per minute (PPM)"
+    ],
+    "correctAnswer": [
+      "Input tray capacity"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-063",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A design team in your company is experiencing issues with their multifunction printer. They report that print jobs are frequently delayed, and sometimes the printer becomes unresponsive. After checking the network connectivity and ensuring there are no hardware issues, you suspect the problem might be related to outdated firmware. How should you proceed to analyze and resolve the issue?",
+    "explanation": "This approach of analyzing the current state of the printer's firmware, comparing it with the latest available version, and updating it if needed helps ensure that the firmware is indeed the cause of the issue and resolves it effectively. Reflashing the firmware without verifying the current version or necessity can lead to unnecessary risks and potential issues if the process is interrupted. It's important to first analyze the situation by checking the current firmware version. Replacing the printer with a new model, assuming the current one is defective, is a premature decision without proper analysis. The issue might be resolved with a firmware update, and replacing the printer without a thorough investigation could be costly and unnecessary. Disabling security features can expose the printer to vulnerabilities and is not a recommended step for analyzing or resolving performance issues. The problem is more likely related to outdated firmware rather than security settings.",
+    "options": [
+      "Replace the printer with a new model, assuming the current one is defective.",
+      "Check the current firmware version, compare it with the latest release, and update if necessary.",
+      "Immediately reflash the firmware without checking the current version to ensure the printer is up-to-date.",
+      "Disable all security features on the printer to see if they are causing the delays."
+    ],
+    "correctAnswer": [
+      "Check the current firmware version, compare it with the latest release, and update if necessary."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-064",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Regular cleaning of your thermal printhead prevents you from having to replace the printhead often. Which of the following describes the recommended procedure to remove carbon buildup and adhesives from a thermal printhead?",
+    "explanation": "The recommended procedure for cleaning your thermal printhead is to wipe it with isopropyl alcohol on a lint-free cloth or cotton swab to remove carbon buildup and ribbon dust that may collect over time. Clean a laser printer drum by running 10 to 15 blank pages. Clean an Inkjet printhead with water. Some Inkjet printers have a Clean Printhead function, but this function does not normally exist for a thermal printer.",
+    "options": [
+      "Clean with just water to remove dried ink and paper dust that is caked on.",
+      "Clean by printing 10 to 15 blank pages to clean off any residual debris.",
+      "Clean by wiping with isopropyl alcohol on a lint-free cloth or cotton swab.",
+      "Clean by running the Clean Printhead function from your computer."
+    ],
+    "correctAnswer": [
+      "Clean by wiping with isopropyl alcohol on a lint-free cloth or cotton swab."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-065",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company that processes personal loans allows its employees to work from home but must still coordinate and work collaboratively with various other teams that handle different aspects of the loan. Since the company saves money by employees working at home, they have opted to buy low-cost multifunction devices for each employee to use and need to preconfigure settings before distribution. Which option would be the best setting for their situation?",
+    "explanation": "Scanning to the cloud would be ideal for users spread apart and working from home. Cloud services, such as OneDrive or Dropbox will generally be available as options on the device. Scanning to email would be an option but not as efficient as scanning directly to a cloud share where an administrator can enable role-based authentication for access. Scan to Server Message Block (SMB) would most likely not be an option as the printer would have to connect to a VPN to the corporate network for others to access it. An automatic document feeder (ADF) passes paper over a fixed scan head which is a more efficient means of scanning multi-page documents.",
+    "options": [
+      "Scan to email",
+      "Scan to ADF",
+      "Scan to SMB",
+      "Scan to cloud"
+    ],
+    "correctAnswer": [
+      "Scan to cloud"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-066",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A graphic design firm is experiencing issues with its laser printer where the printed images appear faint and incomplete. Upon inspection, you find that the toner cartridge is full, and the paper is of high quality. Based on the laser printer imaging process, which step should you take next to resolve the issue?",
+    "explanation": "If the printed images are faint and incomplete, it could be due to an issue with the Charging Stage. The primary charge roller (PCR) might not be applying a uniform negative charge to the imaging drum, which would prevent the toner from adhering properly. Checking and ensuring the PCR is functioning correctly can resolve the issue. The fuser unit is responsible for bonding toner to the paper using heat and pressure. If the issue were related to the fuser, the toner would not be properly bonded, leading to smudging or toner rubbing off rather than faint and incomplete images. Cleaning the paper feed rollers addresses paper movement issues, such as jams or misfeeds, but it does not affect the quality of the printed image in terms of faintness or completeness. Adjusting the paper guides ensures that the paper is fed correctly through the printer, preventing jams or misalignment. However, it does not impact the imaging process on the drum or the quality of the printed image.",
+    "options": [
+      "Clean the paper feed rollers to ensure smooth paper movement.",
+      "Adjust the paper guides to ensure correct paper alignment.",
+      "Replace the fuser unit to ensure proper bonding of toner to the paper.",
+      "Check the primary charge roller (PCR) for proper charging of the imaging drum."
+    ],
+    "correctAnswer": [
+      "Check the primary charge roller (PCR) for proper charging of the imaging drum."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-067",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Print Spooler service in a Windows environment?",
+    "explanation": "The Print Spooler service is responsible for managing print jobs by temporarily storing them in a queue and sending them to the printer in the correct order. This allows users to continue working while their documents are being printed. The physical connection is managed by the operating system and printer drivers, not the Print Spooler service. Updating drivers and firmware is not a function of the Print Spooler service; it is typically handled manually or through separate software. While the Print Spooler interacts with the printer, monitoring hardware status is not its primary purpose.",
+    "options": [
+      "To temporarily store print jobs and send them to the printer in sequence.",
+      "To update printer drivers and firmware automatically.",
+      "To manage the physical connection between the printer and the computer.",
+      "To monitor the printer's hardware status and report errors."
+    ],
+    "correctAnswer": [
+      "To temporarily store print jobs and send them to the printer in sequence."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-068",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user complains that their printer is not feeding paper at all. Upon inspection, you find that the paper is loaded correctly, and the media guides are properly aligned. What should you do next to resolve the issue?",
+    "explanation": "If the printer is not feeding paper, one of the first steps is to ensure that the paper size and weight are compatible with the printer's specifications. Incompatible paper can cause feeding issues. Cleaning the printer's interior is typically done to address print quality issues, such as speckling or smudging, rather than paper feed problems. Updating firmware and drivers is useful for resolving connectivity or software-related issues but does not address mechanical problems like paper feed issues. The fuser unit is responsible for fusing toner to the paper and is unrelated to the paper feed mechanism. Replacing it would not resolve the issue of the printer not feeding paper.",
+    "options": [
+      "Clean the printer's interior with an approved toner vacuum.",
+      "Verify that the paper size and weight are compatible with the printer.",
+      "Update the printer's firmware and drivers.",
+      "Replace the printer's fuser unit."
+    ],
+    "correctAnswer": [
+      "Verify that the paper size and weight are compatible with the printer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-069",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In an inkjet printer, what is the MOST likely cause of a grinding noise, and how can it be resolved?",
+    "explanation": "In an inkjet printer, a grinding noise is typically caused by a fault in the carriage mechanism, which moves the print head. Re-engaging the clutch mechanism as per the vendor's instructions can resolve this issue. While a faulty paper feed mechanism can cause paper jams or misfeeds, it does not typically produce grinding noises. Grinding noises in inkjet printers are more likely related to the carriage mechanism. Low ink levels can lead to poor print quality or incomplete prints, but they do not cause grinding noises. Grinding noises are mechanical in nature and unrelated to ink levels. A misaligned print head can cause print quality issues, such as blurry or misaligned text, but it does not result in grinding noises. Grinding noises are caused by mechanical faults, such as issues with the carriage mechanism.",
+    "options": [
+      "Carriage mechanism fault; consult vendor documentation to re-engage the clutch mechanism.",
+      "Faulty paper feed mechanism; clean the feed rollers.",
+      "Misaligned print head; run the printer's alignment utility.",
+      "Low ink levels; refill or replace the ink cartridges."
+    ],
+    "correctAnswer": [
+      "Carriage mechanism fault; consult vendor documentation to re-engage the clutch mechanism."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-070",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a laser printer that frequently jams and produces uneven print quality. After reviewing the maintenance logs, you notice that the printer has not had its maintenance kit replaced in over a year despite heavy usage. What should be your next step?",
+    "explanation": "A maintenance kit, which includes components like feed rollers, a transfer roller, and a fuser unit, should be replaced based on the printer's usage and internal page count. Given the heavy usage and the fact that the maintenance kit hasn't been replaced in over a year, it's likely that worn-out components are causing the jamming and uneven print quality. Replacing the maintenance kit is the appropriate next step. While outdated firmware can cause some issues, the symptoms described (frequent jams and uneven print quality) are more directly related to mechanical wear and tear, which is addressed by replacing the maintenance kit. While overloading paper trays can cause jams, the maintenance kit's wear is a more likely cause of the issues, given the heavy usage and time since the last replacement. An incompatible toner cartridge could cause print quality issues, but it is less likely to cause frequent jamming. The maintenance kit's condition is a more probable cause for both issues.",
+    "options": [
+      "The printer's paper trays are overloaded; reduce the paper load to prevent jamming and improve print quality.",
+      "The printer's firmware is outdated; update it to resolve the jamming and print quality issues.",
+      "The printer's toner cartridge is incompatible; replace it with a compatible one to fix the problems.",
+      "The printer's maintenance kit components are likely worn out; replace the maintenance kit to address the issues."
+    ],
+    "correctAnswer": [
+      "The printer's maintenance kit components are likely worn out; replace the maintenance kit to address the issues."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-071",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a key maintenance task for a thermal printer to ensure its optimal performance?",
+    "explanation": "Thermal printers do not use ink or toner cartridges; instead, they rely on heat to transfer images onto paper. Cleaning the printhead with isopropyl alcohol is a key maintenance task to remove any residue or debris that could affect print quality. Thermal printers do not use toner cartridges; this task is relevant to laser printers. Thermal printers use heat-sensitive paper, so replacing toner is not applicable. Thermal printers do not use ink cartridges. This maintenance task is associated with inkjet printers, which require ink to produce images. Using compressed air can disperse debris and potentially damage the sensitive components of a thermal printer. It is not recommended for cleaning thermal printers.",
+    "options": [
+      "Clean the printhead with isopropyl alcohol.",
+      "Regularly replace the toner cartridge.",
+      "Refill the ink cartridges frequently.",
+      "Use compressed air to clean the interior."
+    ],
+    "correctAnswer": [
+      "Clean the printhead with isopropyl alcohol."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-072",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is using a printer that uses Adobe's device-independent language for text-to-raster conversion. Which of the following is this?",
+    "explanation": "PostScript is Adobe's device-independent page description language (PDL) and is widely used in professional desktop publishing and graphical design. A page description language (PDL) is a broad term for languages that create a raster file from the print commands sent by the software application. A raster file is a dot-by-dot description of where the printer should place ink. Printer Control Language (PCL) is a printer language developed by Hewlett-Packard. It is device-dependent and used for various printing tasks, but it is not specifically an Adobe language. Infrastructure mode connects the printer to an access point to make it available to clients on the network via an IP address.",
+    "options": [
+      "PostScript",
+      "Infrastructure mode",
+      "PCL",
+      "PDL"
+    ],
+    "correctAnswer": [
+      "PostScript"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-073",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have just received a new multifunction printer for your office. After unboxing it, you notice that the printer was delivered on a cold winter day and has been sitting in the delivery truck for several hours. What is the BEST course of action before powering on the printer?",
+    "explanation": "It is important to allow the printer to acclimate to the room temperature after unboxing, especially if it has been moved from a cold to a warm environment. This prevents condensation from forming inside the printer, which could damage its internal components when powered on. Powering on the printer immediately after it has been exposed to cold temperatures can lead to condensation inside the device, potentially causing electrical damage or malfunctions. Placing the printer near a heater can cause uneven heating, which may damage the printer's components. Running a test print immediately without allowing the printer to acclimate can lead to condensation-related issues.",
+    "options": [
+      "Unbox the printer, connect it to the power outlet, and run a test print immediately to check for any issues.",
+      "Allow the printer to acclimate to room temperature for a few hours before powering it on.",
+      "Power on the printer immediately to ensure it is functioning properly after delivery.",
+      "Place the printer near a heater to warm it up quickly and then power it on."
+    ],
+    "correctAnswer": [
+      "Allow the printer to acclimate to room temperature for a few hours before powering it on."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-074",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the print server?",
+    "explanation": "A print server is the process that manages the flow of print requests for how and when documents are sent to the printer. The print queue is the location on the hard disk that holds print jobs that are waiting to be processed. The print driver is the software that allows the printer to communicate with the print device. The print spooling service captures print jobs from an application, holds them in a queue, and then sends each job to the print device.",
+    "options": [
+      "The location on the hard disk that holds print jobs that are waiting to be processed",
+      "The process that manages the flow of print requests for how and when documents are sent to the printer",
+      "The software that allows the printer to communicate with the print device",
+      "The service that captures print jobs from an application, holds them in a queue, and then sends each job to the print device"
+    ],
+    "correctAnswer": [
+      "The process that manages the flow of print requests for how and when documents are sent to the printer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM-10.6-075",
+    "domain": "3.0 Hardware",
+    "objective": "10.6",
+    "module": "10.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "For the past several days, print jobs from your Inkjet printer have been missing colors and leaving gaps. Which of the following will MOST likely resolve the problem?",
+    "explanation": "Use an Inkjet's automatic cleaning feature if letters have missing lines and there are gaps. With Inkjet printers, the nozzles sometimes become clogged, preventing ink from reaching the paper. On dot matrix printers, you should check the gap between the printhead and paper to prevent printer images from becoming faint. Color profiles are typically created by the manufacturer, and they correct problems when the printed colors don't match what you see on the screen. Add memory to a printer if the end of a printed page is missing.",
+    "options": [
+      "Recalibrate the printer's color profile.",
+      "Add additional memory to the printer.",
+      "Use an automatic printhead cleaning feature.",
+      "Check the gap between the printhead and the paper."
+    ],
+    "correctAnswer": [
+      "Use an automatic printhead cleaning feature."
+    ],
+    "origin": "CertMaster"
+  }
+]

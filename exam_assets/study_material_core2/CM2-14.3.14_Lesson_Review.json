@@ -1,0 +1,303 @@
+[
+  {
+    "id": "CM2-14.3-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their computer is running very slowly, especially when opening files or saving documents. Upon investigation, you notice that the Disk Monitoring section in Task Manager shows high disk utilization and slow response times. Based on this information, what is the MOST appropriate action to take to resolve the issue?",
+    "explanation": "High disk utilization and slow response times are often caused by the limitations of traditional hard disk drives (HDDs), especially if the system is using older or slower HDD technology. Replacing the HDD with an SSD can significantly improve performance because SSDs have faster read/write speeds and lower latency. This is the most effective solution for addressing the root cause of the issue described in the scenario. While increasing RAM can reduce paging and improve performance in systems with insufficient memory, the scenario specifically points to high disk utilization and slow response times as the primary issue. Adding RAM would not directly address the limitations of the HDD or resolve the slow response times caused by the disk. Disabling antivirus software might temporarily reduce disk activity, but it is not a recommended or sustainable solution. Furthermore, antivirus software is unlikely to be the sole cause of high disk utilization in this scenario, and disabling it could expose the system to security risks. While file corruption can contribute to performance issues, the scenario does not provide evidence that file corruption is the root cause. Reinstalling the operating system is a time-consuming process and would not address the underlying hardware limitations of the HDD.",
+    "options": [
+      "Reinstall the operating system to fix file corruption.",
+      "Increase the system's RAM to reduce paging.",
+      "Disable the antivirus software to reduce disk activity.",
+      "Replace the hard drive with a solid-state drive (SSD)."
+    ],
+    "correctAnswer": [
+      "Replace the hard drive with a solid-state drive (SSD)."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the purpose of performance counters in system monitoring?",
+    "explanation": "Performance counters are designed to monitor and report real-time data on various system resources, such as CPU, memory, disk, and network usage. They are essential for diagnosing performance issues and establishing baselines for system performance. This aligns with the role of performance counters in monitoring system performance. Configuring startup processes and services is managed through tools like the System Configuration Utility (msconfig) or the Startup tab in Task Manager, not performance counters. Performance counters focus on monitoring, not configuration. Managing user accounts and permissions is handled through tools like the User Accounts settings or Active Directory, not performance counters. Performance counters are unrelated to account management. Creating and managing system restore points is done through the System Restore utility in Windows. Performance counters do not deal with system recovery or restore points; they are strictly for monitoring performance metrics.",
+    "options": [
+      "Performance counters are tools for creating and managing system restore points.",
+      "Performance counters provide real-time data about system resource usage.",
+      "Performance counters are used to configure startup processes and services.",
+      "Performance counters are used to manage user accounts and permissions."
+    ],
+    "correctAnswer": [
+      "Performance counters provide real-time data about system resource usage."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What information does the CPU page in Task Manager provide about the system's processor?",
+    "explanation": "The CPU page in Task Manager provides detailed information about the processor, including the number of cores, logical processors (HyperThreading), whether the system is multisocket, and whether virtualization is enabled. These details help users understand the processor's capabilities and current utilization. The amount of graphics memory available and utilization statistics are displayed on the GPU page in Task Manager, not the CPU page. The GPU page focuses on graphics-related data, such as memory and utilization statistics for the graphics adapter. The IP address and MAC address of the active network adapter are provided on the Ethernet or Wi-Fi tab in Task Manager, which monitors network activity. It is unrelated to the CPU page. The type, capacity, and read/write speeds of the disk drives is displayed on the Disk pages in Task Manager, which monitor storage devices. It does not pertain to the CPU page.",
+    "options": [
+      "The type, capacity, and read/write speeds of the disk drives",
+      "The number of cores and logical processors",
+      "The amount of graphics memory available and utilization statistics",
+      "The IP address and MAC address of the active network adapter"
+    ],
+    "correctAnswer": [
+      "The number of cores and logical processors"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows system is experiencing slow performance after startup. You suspect that unnecessary startup programs are consuming resources. Using the System Configuration Utility (msconfig), you analyze the situation. Which of the following actions would best help you determine which startup program is causing the issue?",
+    "explanation": "The System Configuration Utility (msconfig) allows you to disable all startup programs and services. By enabling them one at a time, you can analyze which specific program or service is causing the performance issue. While Task Manager's Services tab can be used to stop services, it does not provide the same level of control over startup programs as msconfig. Additionally, stopping services directly in Task Manager does not allow for a systematic analysis of startup programs, which is the focus of this question. Event Viewer is useful for identifying errors and warnings, but it does not allow you to disable or enable startup programs for analysis. This answer misrepresents the role of Event Viewer in troubleshooting startup performance issues. Resource Monitor provides real-time performance data, but it does not allow you to control or analyze startup programs systematically. While it can help identify resource-heavy processes, it is not the best tool for isolating problematic startup programs.",
+    "options": [
+      "Disable all startup programs and services, then enable them one at a time while monitoring system performance.",
+      "Use the Services tab in Task Manager to stop all non-Microsoft services and observe the system's behavior without the services.",
+      "Open the Event Viewer and analyze the Application log for errors related to startup programs.",
+      "Use the Resource Monitor to track CPU and memory usage of all running processes during startup."
+    ],
+    "correctAnswer": [
+      "Disable all startup programs and services, then enable them one at a time while monitoring system performance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security analyst is investigating a possible incident and wants to view the logs on a remote computer. What should the security analyst use to accomplish this?",
+    "explanation": "The Event Viewer (eventvwr.msc) is a management console snap-in for viewing and managing logs on a Windows host. The default page summarizes system status, with recent errors and warning events collected for viewing. The System Information (msinfo32.exe) tool produces a comprehensive report about the system's hardware and software components. Running the tool produces an inventory of system resources, firmware, OS versions, driver file locations, and more. The Group Policy Editor (gpedit.msc) provides a more robust means of configuring many of the Windows settings than editing the registry directly. The Services console (services.msc) starts, stops, and pauses processes running in the background. The services console could disable nonessential services to improve performance or security.",
+    "options": [
+      "msinfo32.exe",
+      "eventvwr.msc",
+      "services.msc",
+      "gpedit.msc"
+    ],
+    "correctAnswer": [
+      "eventvwr.msc"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user complains that their computer takes an unusually long time to boot. After reviewing the Startup Processes and Services Console, you notice several unnecessary applications set to start automatically. What is the BEST course of action to improve the system's boot time?",
+    "explanation": "Disabling non-critical applications reduces the load on system resources during startup, improving performance while maintaining necessary operations. Disabling all startup applications and services could prevent critical system functions or essential applications (e.g., antivirus software) from running, potentially causing system instability or security risks. While increasing memory may improve overall system performance, it does not address the root cause of the slow boot time, which is the unnecessary applications set to start automatically. Uninstalling applications is an extreme measure and may not be necessary. Some applications may still be useful but do not need to run at startup. Disabling them from starting automatically is a more efficient and less disruptive solution.",
+    "options": [
+      "Uninstall all applications listed in the Startup Processes and Services Console.",
+      "Disable all startup applications and services to ensure a faster boot time.",
+      "Disable only the applications that are not critical to the system's functionality.",
+      "Increase the system's memory to handle the startup load more efficiently."
+    ],
+    "correctAnswer": [
+      "Disable only the applications that are not critical to the system's functionality."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a key function of Memory Monitoring in Task Manager?",
+    "explanation": "Memory Monitoring in Task Manager provides information about the memory usage of the system, including how much memory is currently being used and how much is available. This is essential for diagnosing performance issues related to insufficient memory. Monitoring the number of logical processors and cores is a function of CPU Monitoring, not Memory Monitoring. Monitoring network throughput is a function of Network Monitoring, not Memory Monitoring. GPU utilization statistics are part of GPU Monitoring, not Memory Monitoring.",
+    "options": [
+      "Shows the amount of memory being used and available memory",
+      "Displays the number of logical processors and cores in the CPU",
+      "Monitors the send and receive throughput of the active network adapter",
+      "Reports the utilization statistics of the GPU"
+    ],
+    "correctAnswer": [
+      "Shows the amount of memory being used and available memory"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tool can you use to gather data and display statistics (in counters) that help you monitor the operation of a Windows system?",
+    "explanation": "Performance Monitor gathers data and displays statistics (using counters) that help you monitor the operation of a Windows system. Statistics gathered include items such as memory and CPU use, disk throughput, and network utilization. You use Event Viewer to view log messages generated by applications, system events, and security incidents. Computer Management is an MMC console that is used to manage the Windows system, such as scheduling tasks, sharing folders, and managing device drivers. You use MSinfo to view system information, such as hardware status.",
+    "options": [
+      "Event Viewer",
+      "MSinfo",
+      "Computer Management",
+      "Performance Monitor"
+    ],
+    "correctAnswer": [
+      "Performance Monitor"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are monitoring a multi-user Windows system using Task Manager. You notice that one user is consuming a significant amount of CPU and memory resources, causing performance issues for others. After reviewing the data in the Users tab, which of the following is the BEST course of action to resolve the issue?",
+    "explanation": "By collaborating with the user, you can identify and close unnecessary applications, reducing resource usage without abruptly terminating processes or logging off the user. While ending the most resource-intensive process under the Processes tab without consulting the user might free up resources, it is not the best approach because it could disrupt the user's work or terminate critical processes. It is important to communicate with the user before taking such actions. Logging off the user will free up resources but is a drastic measure that could result in data loss or disruption of the user's work. This should only be done as a last resort after consulting with the user. Increasing virtual memory might help in some cases, but it is not a direct solution to the problem of one user consuming excessive resources. It also does not address the root cause of the issue, which is the user's resource-intensive activity.",
+    "options": [
+      "Contact the user to determine if any unnecessary applications can be closed.",
+      "Log off the user from the Users tab to immediately free up resources.",
+      "End the most resource-intensive process under the Processes tab without consulting the user.",
+      "Increase the system's virtual memory to accommodate the high resource usage."
+    ],
+    "correctAnswer": [
+      "Contact the user to determine if any unnecessary applications can be closed."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A software technician is working on a help ticket for a Windows-based computer that appears to have performance issues. What provides a console that offers live monitoring of resource utilization data for the CPU, system memory, disk/file system, and network?",
+    "explanation": "The Resource Monitor (resmon.exe) provides a console for live monitoring of resource utilization data for the CPU, system memory, disk/file system, and network and shows an enhanced version of the sort of snapshot monitoring provided by Task Manager. The Certificate Manager provides a console for managing digital certificates for the current user and trusted root certification authority certificates. The Task Scheduler (taskschd.msc) is an administrative tool that runs software and scripts according to calendar or event triggers. The Group Policy Editor (gpedit.msc) is a console for configuring detailed user and system registry settings via policies.",
+    "options": [
+      "certmgr.msc",
+      "gpedit.msc",
+      "resmon.exe",
+      "taskschd.msc"
+    ],
+    "correctAnswer": [
+      "resmon.exe"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why might sustained periods of high CPU utilization, as shown on the CPU page in Task Manager, require action?",
+    "explanation": "Sustained periods of high CPU utilization indicate the system is under heavy load. To address this, users may need to add more resources (e.g., upgrading the CPU or adding more memory) or reduce the number of running processes to maintain optimal performance. High CPU utilization is unrelated to the network adapter's functionality. Network adapter issues would typically be monitored on the Ethernet or Wi-Fi tab in Task Manager, not the CPU page. The GPU page in Task Manager monitors the graphics adapter's utilization. High CPU utilization does not directly indicate an issue with the graphics adapter. Issues with disk drives, such as excessive paging or bad sectors, would be monitored on the Disk pages in Task Manager. High CPU utilization does not directly correlate with disk drive problems.",
+    "options": [
+      "It suggests that the system's graphics adapter is overburdened.",
+      "It shows that the disk drives are experiencing excessive paging or bad sectors.",
+      "It means the system may need additional resources.",
+      "It indicates that the system's network adapter is malfunctioning."
+    ],
+    "correctAnswer": [
+      "It means the system may need additional resources."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the System Information tool (msinfo32.exe) in Windows?",
+    "explanation": "The System Information tool (msinfo32.exe) is specifically designed to provide a detailed inventory of the system's hardware and software components. It includes information such as system resources, firmware and OS versions, driver file locations, environment variables, and network status. Monitoring CPU and GPU utilization is a function of the Task Manager's Performance tab, not the System Information tool. The System Information tool does not provide real-time performance monitoring. Managing and viewing system log files is the purpose of the Event Viewer, not the System Information tool. Event Viewer is used to analyze logs such as system, application, and security logs for troubleshooting purposes. Configuring startup processes and services is done through the System Configuration Utility (msconfig.exe) or the Startup tab in Task Manager, not the System Information tool. The System Information tool is focused on providing system details rather than configuration options.",
+    "options": [
+      "To monitor CPU and GPU utilization in real-time.",
+      "To generate a comprehensive report on the system's hardware and software components.",
+      "To manage and view system log files for troubleshooting.",
+      "To configure startup processes and services."
+    ],
+    "correctAnswer": [
+      "To generate a comprehensive report on the system's hardware and software components."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jodie's computer is acting unusually sluggish today. She calls you, an IT technician, to see if you can find out what's going on and how to improve her computer's performance. You run Task Manager on Jodie's computer and find that a suspicious application has nearly 90% CPU utilization. Which of the following actions can you take from the Task Manager to immediately stop the application from running?",
+    "explanation": "From the Processes page, you can right-click on the offending application and select End task. This stops the program from running immediately, and the computer's CPU should return to a more normal utilization. Right-click > Switch to from the App history tab opens a Microsoft application. Right-click > Disable from the Startup tab stops a program from running on the next boot. Right-click > Disconnect from the Users tab disconnects a user from a computer. Right-click > Stop from the Services page stops a service from running.",
+    "options": [
+      "Right-click > Switch to",
+      "Right-click > Disable",
+      "Right-click > End task",
+      "Right-click > Disconnect",
+      "Right-click > Stop"
+    ],
+    "correctAnswer": [
+      "Right-click > End task"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a system experiencing slow performance during peak usage hours. Which of the following actions involving performance counters would be the MOST effective in evaluating the root cause of the issue?",
+    "explanation": "Performance counters are specifically designed to provide real-time and historical data on system resource usage. Monitoring CPU, memory, disk, and network utilization over time allows the technician to evaluate which resource is being overutilized and causing the performance issue. This aligns with using performance counters to diagnose system performance problems. Performance counters are not used to configure or disable startup processes and services. Tools like the System Configuration Utility (msconfig) or the Startup tab in Task Manager are used for this purpose. Performance counters are for monitoring, not configuration. Resetting system logs is not a function of performance counters. While logs can be useful for troubleshooting, performance counters are used to monitor resource usage and performance metrics, not to manage or reset logs. Monitoring user login attempts and authentication failures is a function of the Security log in Event Viewer, not performance counters. Performance counters are focused on system resource monitoring, not security-related events.",
+    "options": [
+      "Use performance counters to disable unnecessary startup processes and services.",
+      "Use performance counters to reset all system logs and start fresh monitoring.",
+      "Use performance counters to monitor user login attempts and authentication failures.",
+      "Use performance counters to identify resource bottlenecks."
+    ],
+    "correctAnswer": [
+      "Use performance counters to identify resource bottlenecks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.3-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.3.14",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tool can you use to display hardware utilization statistics that tell you about your computer's operation?",
+    "explanation": "Resource Monitor displays statistics that tell you about the operation of your computer. Statistics include memory and CPU use, disk access, and network utilization. Use Event Viewer to view logs about programs, system events, and security. Computer Management is a saved Microsoft Management Console (MMC) console that you can use to manage your computer. Use Advanced System Settings to configure settings such as remote access and the location of your paging file.",
+    "options": [
+      "Event Viewer",
+      "Computer Management",
+      "Resource Monitor",
+      "Advanced System Settings"
+    ],
+    "correctAnswer": [
+      "Resource Monitor"
+    ],
+    "origin": "CertMaster"
+  }
+]

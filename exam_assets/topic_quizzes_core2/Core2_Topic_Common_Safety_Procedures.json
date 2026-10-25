@@ -1,0 +1,351 @@
+[
+  {
+    "id": "1202-SAF-001",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which action violates proper ESD strap usage?",
+    "explanation": "An ESD strap only works while it touches your skin and is connected to a ground. Working with it disconnected defeats it.",
+    "options": [
+      "Ensuring the strap makes skin contact",
+      "Connecting the strap to a grounded metal object",
+      "Wearing the strap on the wrist",
+      "Leaving the strap disconnected while working"
+    ],
+    "correctAnswer": [
+      "Leaving the strap disconnected while working"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-002",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements is not true?",
+    "explanation": "A mat is used together with a wrist strap and must be grounded. It does not give complete protection by itself.",
+    "options": [
+      "An ESD mat must be connected to an unpainted, grounded metal surface to operate correctly",
+      "An ESD mat is designed to be used in conjunction with a grounded ESD wrist strap",
+      "An ESD mat alone provides complete protection against electrostatic discharge",
+      "An ESD mat requires a physical connection to a verified ground to function as intended"
+    ],
+    "correctAnswer": [
+      "An ESD mat alone provides complete protection against electrostatic discharge"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-003",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An ESD mat is connected to a metal computer chassis, but the chassis is sitting on a wooden table and is not plugged into a wall outlet. Which of the statements listed below is true?",
+    "explanation": "Connecting the mat to the chassis equalizes their potential, but with no path to earth ground neither is grounded. Wood is an insulator, not a ground.",
+    "options": [
+      "The mat is now a high-voltage hazard",
+      "The mat will still dissipate all static to the floor",
+      "The mat and chassis are at the same potential, but neither is grounded",
+      "The wooden table acts as a ground for the mat"
+    ],
+    "correctAnswer": [
+      "The mat and chassis are at the same potential, but neither is grounded"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-004",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which devices may pose a risk to electrical safety due to accumulated high voltage? (Select all that apply)",
+    "explanation": "CRT displays, power supplies, display inverters and laser printers (fuser/high-voltage circuits) can hold dangerous voltage. A GPU does not.",
+    "options": [
+      "CRTs",
+      "PSUs",
+      "Inverters",
+      "GPUs",
+      "Laser printers"
+    ],
+    "correctAnswer": [
+      "CRTs",
+      "PSUs",
+      "Inverters",
+      "Laser printers"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-005",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements best describes the purpose of electrical grounding in a workstation?",
+    "explanation": "Grounding gives stray current a low-resistance path to earth so it doesn't pass through a person.",
+    "options": [
+      "Balances the electrical potential between the user and the internal components",
+      "Prevents voltage fluctuations from affecting internal workstation components",
+      "Provides a low-resistance path to earth for stray current to protect the user from shock",
+      "Prevents high-voltage spikes from damaging the power supply during a lightning strike"
+    ],
+    "correctAnswer": [
+      "Provides a low-resistance path to earth for stray current to protect the user from shock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-006",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which best practices help protect internal PC components from physical damage during handling or storage? (Select 3 answers)",
+    "explanation": "Hold parts by the edges, use antistatic bags and store in a dry, temperature-controlled place. Ordinary plastic bags can build static, and cotton gloves aren't an ESD precaution.",
+    "options": [
+      "Holding components by their edges",
+      "Placing components in antistatic bags for temporary storage",
+      "Storing components in a dry, temperature-controlled environment for long-term storage",
+      "Keeping components in sealed plastic bags to prevent moisture",
+      "Wearing cotton gloves to improve grip on components"
+    ],
+    "correctAnswer": [
+      "Holding components by their edges",
+      "Placing components in antistatic bags for temporary storage",
+      "Storing components in a dry, temperature-controlled environment for long-term storage"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-007",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below does not align with cable-management best practices?",
+    "explanation": "Power and data cables should be kept separate because power cables can cause interference on data cables.",
+    "options": [
+      "Securing external cables within wall-mounted raceways in an office environment",
+      "Routing cables away from fans and vents inside a desktop PC case",
+      "Providing additional slack at cable ends to reduce strain on connectors",
+      "Bundling power and data cables together for easier installation through wall conduits",
+      "Using cable ties (e.g., Velcro straps) to bundle cables loosely",
+      "Labeling networking cables at both ends for easy identification during maintenance"
+    ],
+    "correctAnswer": [
+      "Bundling power and data cables together for easier installation through wall conduits"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-008",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following items do not require antistatic bags for safe handling when not installed?",
+    "explanation": "Power cables have no static-sensitive electronics. Motherboards, expansion cards and RAM do.",
+    "options": [
+      "Motherboards",
+      "Expansion cards",
+      "Power cables",
+      "Memory modules"
+    ],
+    "correctAnswer": [
+      "Power cables"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-009",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Examples of devices/components regulated under special disposal procedures due to environmental/safety hazards include: (Select all that apply)",
+    "explanation": "CRTs, toner cartridges and batteries contain hazardous materials and need special disposal. Heatsinks do not.",
+    "options": [
+      "Heatsinks",
+      "CRTs",
+      "Toner cartridges",
+      "Batteries"
+    ],
+    "correctAnswer": [
+      "CRTs",
+      "Toner cartridges",
+      "Batteries"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-010",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is preparing to replace a faulty internal cooling fan inside a PC workstation. Which of the actions listed below is the most important first step to ensure personal safety?",
+    "explanation": "Unplugging the PC from the wall is the only way to be sure no power reaches it. Switches can leave the standby circuits live.",
+    "options": [
+      "Switch off the surge protector connected to the PC",
+      "Press and hold the power button for several seconds",
+      "Turn off the power supply switch on the back of the PC",
+      "Disconnect the power cable from the wall outlet"
+    ],
+    "correctAnswer": [
+      "Disconnect the power cable from the wall outlet"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-011",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following actions is considered an incorrect lifting technique according to workplace safety guidelines?",
+    "explanation": "Bend at the knees and lift with the legs. Locking the knees shifts the strain to the back.",
+    "options": [
+      "Lifting with the legs, not the back",
+      "Performing a team lift for heavy objects",
+      "Locking the knees while lifting",
+      "Keeping the load close to the body"
+    ],
+    "correctAnswer": [
+      "Locking the knees while lifting"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-012",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician encounters a small electrical fire inside a desktop PC. Which action is unsafe?",
+    "explanation": "Water conducts electricity and can cause electrocution. Use a Class C extinguisher on electrical fires.",
+    "options": [
+      "Disconnecting the PC from power",
+      "Using a Class C extinguisher",
+      "Evacuating if the fire spreads",
+      "Using water to extinguish the fire"
+    ],
+    "correctAnswer": [
+      "Using water to extinguish the fire"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-013",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of fire extinguishing agent poses the greatest safety risk to humans due to the rapid displacement of oxygen?",
+    "explanation": "CO2 extinguishers displace oxygen quickly, which can suffocate people in an enclosed space.",
+    "options": [
+      "Water-based foam",
+      "Clean agent gas",
+      "Dry powder chemical",
+      "Carbon dioxide"
+    ],
+    "correctAnswer": [
+      "Carbon dioxide"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-014",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary reason clean agent fire suppression systems are preferred over traditional sprinkler systems in modern IT environments?",
+    "explanation": "Clean agents suppress fire without water or residue, so they don't damage electronics.",
+    "options": [
+      "They lower the air pressure to prevent combustion",
+      "They reduce the cost of fire suppression system maintenance",
+      "They are easier to install than traditional sprinkler systems",
+      "They do not damage sensitive electronic hardware"
+    ],
+    "correctAnswer": [
+      "They do not damage sensitive electronic hardware"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-015",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Safety goggles reduce the risk of eye injury during tasks that involve:",
+    "explanation": "Every task listed can throw debris, chemicals or sparks toward the eyes, so goggles apply to all of them.",
+    "options": [
+      "Handling damaged or swollen batteries",
+      "Cutting or trimming cables",
+      "Using pressurized air",
+      "Grinding, cutting, or drilling metal parts",
+      "Soldering or desoldering components",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SAF-016",
+    "topic": "Common Safety Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.4",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While servicing a laser printer a technician notices spilled toner inside the chassis. Which piece of safety equipment is most important to wear before beginning the cleanup?",
+    "explanation": "Toner is a fine powder that shouldn't be inhaled, so wear an air filter mask. Clean it with a toner-rated vacuum.",
+    "options": [
+      "Safety goggles",
+      "Latex gloves",
+      "ESD wrist strap",
+      "Air filter mask"
+    ],
+    "correctAnswer": [
+      "Air filter mask"
+    ],
+    "origin": "ExamCompass"
+  }
+]

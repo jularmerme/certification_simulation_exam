@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-12.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Network Settings in Windows?",
+    "explanation": "The Network Settings in Windows are specifically designed to allow users to manage and configure network connections, such as Wi-Fi, Ethernet, VPN, and other network-related settings. This is a fundamental function of the Network Settings interface. Display and sound device configurations are managed under the \"Device Settings\" or \"System Settings\" pages, not Network Settings. These settings are unrelated to networking functions. Power options are configured under \"Power Options\" or \"System Settings,\" not Network Settings. Power management is focused on energy usage and has no direct relation to network configurations. User profiles and environment variables are managed under \"Advanced System Settings\" or similar sections, not Network Settings. These settings are related to system performance and user-specific configurations, not networking.",
+    "options": [
+      "To configure display and sound devices.",
+      "To adjust power options for energy efficiency.",
+      "To manage network connections and settings.",
+      "To configure user profiles and environment variables."
+    ],
+    "correctAnswer": [
+      "To manage network connections and settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which settings page in Windows allows you to configure Display and Sound devices?",
+    "explanation": "The \"System settings pages contain options for configuring Display and Sound devices.\" This makes \"System Settings\" the correct answer. While the \"Bluetooth & Devices Settings\" page is used for configuring input devices like mice, keyboards, and other peripherals, it does not specifically handle Display and Sound settings. The \"Devices and Printers applet\" in the Control Panel is used for adding devices manually and accessing configuration pages for connected devices, but it is not the primary interface for Display and Sound settings. The \"Device Manager\" is an advanced management console for managing both system and peripheral devices, but it is not the main interface for configuring Display and Sound settings.",
+    "options": [
+      "Device Manager",
+      "System Settings",
+      "Bluetooth & Devices Settings",
+      "Devices and Printers applet"
+    ],
+    "correctAnswer": [
+      "System Settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their USB mouse, which was working previously, is no longer functioning after a recent Windows update. Upon investigation, you find the mouse is listed in the Device Manager with a warning icon. You suspect the issue is related to the driver. What is the BEST course of action to resolve the issue based on your analysis of the situation?",
+    "explanation": "The warning icon in Device Manager indicates a driver issue, which is a common problem after a Windows update. Rolling back the driver to a previous version is the best course of action because it allows you to revert to a known working driver version. This approach directly addresses the root cause of the problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem.",
+    "options": [
+      "Adjust the performance options in the System Settings page to prioritize foreground processes.",
+      "Roll back the driver to a previous version using Device Manager.",
+      "Use the Devices and Printers applet to manually add the mouse again.",
+      "Disable and re-enable the mouse in the Bluetooth & Devices Settings page."
+    ],
+    "correctAnswer": [
+      "Roll back the driver to a previous version using Device Manager."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with troubleshooting a printer that is connected to a Windows computer but is not functioning properly. You suspect the issue is related to the printer driver. Which tool should you use to verify the printer driver and update it if necessary?",
+    "explanation": "Device Manager is the appropriate tool for advanced hardware management, including verifying and updating drivers for connected devices such as printers. It allows you to check the status of the printer, view driver details, and update or reinstall the driver if necessary. While the Devices and Printers applet provides an interface for adding devices and accessing configuration shortcuts, it does not allow you to directly manage or update drivers. This tool is more suited for basic device management tasks, not advanced troubleshooting. While the Bluetooth & Devices settings pages contain options for input devices and adding and managing other peripherals attached over Bluetooth or USB, it does not allow you to directly manage or update drivers. The System Settings page for Display and Sound is used for configuring display and sound devices, not for managing or troubleshooting printers. It is unrelated to the task of verifying or updating printer drivers.",
+    "options": [
+      "Bluetooth & Devices Settings page",
+      "Devices and Printers applet in Control Panel",
+      "System Settings page for Display and Sound",
+      "Device Manager"
+    ],
+    "correctAnswer": [
+      "Device Manager"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a Windows computer for a user who reports that a specific application is not functioning correctly. The user wants to repair the application without uninstalling it. Which of the following steps should you take to resolve the issue?",
+    "explanation": "The \"Apps, Programs, and Features\" settings provide options to modify or repair certain applications without uninstalling them. This is the appropriate action to take when troubleshooting an application that is not functioning correctly, as described in the scenario. \"Device Manager\" is used to manage hardware devices and their drivers, not software applications. Applications are not listed in \"Device Manager,\" so this step would not help in repairing the application. \"Windows Update\" is used to update the operating system and install security patches or driver updates. While some applications may receive updates through this feature, it does not provide options to repair or modify an application. Adjusting virtual memory in \"System Settings\" is related to system performance and resource allocation, not repairing or modifying an application. This action would not address the issue described in the scenario.",
+    "options": [
+      "Open \"Device Manager,\" locate the application, and update its driver.",
+      "Open \"System Settings\" and adjust the virtual memory to improve application performance.",
+      "Open the \"Apps, Programs, and Features\" settings, select the application, and choose the \"Modify\" or \"Repair\" option if available.",
+      "Navigate to \"Windows Update\" and check for updates related to the application."
+    ],
+    "correctAnswer": [
+      "Open the \"Apps, Programs, and Features\" settings, select the application, and choose the \"Modify\" or \"Repair\" option if available."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is the Administrative Tools menu important in Windows system management?",
+    "explanation": "The Administrative Tools menu is a collection of shortcuts to advanced tools for system management, such as performance monitoring, disk management, and event logging. The Administrative Tools menu does not facilitate the installation of third-party applications. It is designed for system management and configuration, not software installation. While some tools within Administrative Tools may relate to user account management, its purpose is much broader, encompassing various system management tasks. Windows Update settings are managed separately through the Update & Security section in the Settings app, not through Administrative Tools.",
+    "options": [
+      "It provides access to the Windows Update settings for patch management.",
+      "It provides shortcuts to configure advanced system settings and management tools.",
+      "It allows users to install third-party applications directly.",
+      "It is used to manage user accounts and passwords exclusively."
+    ],
+    "correctAnswer": [
+      "It provides shortcuts to configure advanced system settings and management tools."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "From your Windows laptop, you have been working on a large project that has required you to open a lot of items (programs, files, etc.). It is time to leave the office and make the two-hour journey home. You will be working on this project a bit more when you arrive home. Your computer's battery is failing and only has a very short life span (about one hour) before your computer loses power. When you arrive home and open the laptop lid, nothing happens. After plugging in your computer and powering it on, you find that all of your programs and files have been closed. To troubleshoot, you open the Control Panel and navigate to the settings that control what your computer will do when the laptop lid is closed. Which of the following power settings MUST you choose to prevent the same problem in the future?",
+    "explanation": "Hibernate saves the state of your computer to the hard disk and completely powers off your computer. When the device resumes, the saved state is restored to RAM, and you can pick up where you left off. Sleep, Suspend, and Standby are all different terms that have been used for various versions of Windows. Regardless of which option is available for your Windows version, none will turn off your computer. Instead, they put the computer and all peripherals on a low-power consumption mode. Since your battery is not fully charged and can only power your computer for a short time, Sleep, Suspend, and Standby run the risk of the computer losing power, resulting in the closure of your programs and files. Shut down closes all files and programs and terminates all power.",
+    "options": [
+      "When I close the lid: Sleep/Suspend",
+      "When I close the lid: Standby",
+      "When I close the lid: Hibernate",
+      "When I close the lid: Shut down"
+    ],
+    "correctAnswer": [
+      "When I close the lid: Hibernate"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the purpose of the \"Apps, Programs, and Features\" settings in Windows?",
+    "explanation": "The \"Apps, Programs, and Features\" settings in Windows are specifically designed to allow users to manage installed applications. This includes uninstalling programs, modifying existing features, and sometimes repairing installations. System-level settings such as power options and virtual memory are managed under the \"System Settings\" or \"Advanced System Settings\" sections, not under \"Apps, Programs, and Features.\" These settings are unrelated to managing installed applications. Managing hardware devices and installing drivers is handled through settings like \"Device Manager\" or \"Devices and Printers,\" not through \"Apps, Programs, and Features.\" These settings focus on hardware, not software applications. Updating the operating system and installing security patches is managed through \"Windows Update\" under the \"Update and Security\" settings. These tasks are unrelated to managing installed applications or features.",
+    "options": [
+      "To update the operating system and install security patches.",
+      "To configure system-level settings such as power options and virtual memory.",
+      "To manage and configure installed applications.",
+      "To manage hardware devices and install drivers for peripherals."
+    ],
+    "correctAnswer": [
+      "To manage and configure installed applications."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following methods can be used to access the Administrative Tools menu in Windows?",
+    "explanation": "The Administrative Tools menu can be accessed via the Control Panel. This is a standard method for accessing advanced system management tools in Windows. While pressing Ctrl + Alt + Del provides options like Task Manager, Lock, and Sign Out, it does not provide direct access to the Administrative Tools menu. Right-clicking on the desktop opens a context menu for display and personalization settings, but it does not provide access to Administrative Tools. Task Manager is used for monitoring and managing processes, performance, and startup programs, but it does not provide direct access to Administrative Tools.",
+    "options": [
+      "Through the Control Panel",
+      "Through the Task Manager",
+      "By right-clicking on the desktop",
+      "By pressing Ctrl + Alt + Del"
+    ],
+    "correctAnswer": [
+      "Through the Control Panel"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You work for a large company as an IT administrator. With the many external attacks being perpetrated in the form of security breaches, you are concerned that your Windows 11 computers may be vulnerable. You also want to ensure that Windows is using the latest features. Which of the following would BEST protect your computers?",
+    "explanation": "By default, Windows 11 automatically checks for updates and installs any updates it finds. Although this function can be disabled, Microsoft strongly encourages the use of automatic updates to keep your computer up to date with the latest features. These updates often include patches to fix security issues found in applications. Automatic maintenance can perform these checks. Scheduled backups are important to have and would be useful when a computer has a virus or the computer has been ransomed. They do not, however, keep the computer safe from application security leaks or update Windows with the latest features. Scheduled disk maintenance allows systems to diagnose and repair disk errors. It does not back up files. Antivirus software and updates are important when trying to protect your computer from viruses. However, additional steps are necessary to ensure that security leaks in applications are fixed. In addition, antivirus software does not update Windows with the latest features.",
+    "options": [
+      "Windows updates",
+      "Scheduled backups",
+      "Scheduled disk maintenance",
+      "Antivirus updates"
+    ],
+    "correctAnswer": [
+      "Windows updates"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to uninstall an application that they no longer use and also check if there are any optional features they can add to enhance their system's functionality. Which section of Windows Settings should they navigate to?",
+    "explanation": "The Apps Settings page is the correct place to manage installed applications and optional features. This section allows users to uninstall applications and explore optional Windows features that can be added to enhance system functionality. The System Settings page is used for configuring system-level options such as performance settings, environment variables, and system protection. It does not provide tools for managing applications or optional features. Device Settings are used to manage hardware devices such as printers, Bluetooth devices, and display settings. It does not include options for uninstalling applications or managing optional features. Update and Security Settings are used for managing Windows updates, security features like Windows Defender, and activation settings. It does not relate to managing applications or optional features.",
+    "options": [
+      "System Settings",
+      "Update and Security Settings",
+      "Device Settings",
+      "Apps Settings"
+    ],
+    "correctAnswer": [
+      "Apps Settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their system is running out of storage space, and they suspect that unused applications and unnecessary optional features are taking up significant space. They also want to identify which apps are consuming the most storage. What should the user do to analyze and address the issue?",
+    "explanation": "The Apps Settings page allows users to analyze the list of installed applications, view the amount of storage each app consumes, and uninstall unnecessary apps. It also provides access to optional features that can be removed to free up additional space. Adjusting virtual memory settings does not directly address the issue of storage space being consumed by unused applications or optional features. Virtual memory settings are related to system performance, not storage management. The Device Settings page is used for managing hardware devices, such as printers and Bluetooth devices. It does not provide tools for analyzing or managing storage space related to applications or optional features. While the Update and Security Settings page can help manage updates, it is not the primary tool for analyzing or managing storage space consumed by applications or optional features. Deleting old updates is not the most effective solution for this scenario.",
+    "options": [
+      "Access the Update and Security Settings page to delete old Windows updates and free up space.",
+      "Open the System Settings page and adjust virtual memory settings to free up space.",
+      "Use the Device Settings page to check for unused hardware drivers and remove them.",
+      "Open the Apps Settings page to review installed applications and optional features and uninstall unnecessary ones."
+    ],
+    "correctAnswer": [
+      "Open the Apps Settings page to review installed applications and optional features and uninstall unnecessary ones."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following options can be configured on the System Settings page of the Windows Settings app?",
+    "explanation": "The System Settings page in the Windows Settings app allows users to configure input and output devices, power options, remote desktop, notifications, and clipboard settings. Desktop visual effects and virtual memory settings are part of the advanced system settings, which are accessible through links at the bottom of the System Settings page, but they are not directly configured within the System Settings page itself. Windows Defender Firewall rule sets are managed through the Windows Security settings, not the System Settings page. Device drivers for hardware peripherals are managed through Device Manager or Windows Update, not the System Settings page.",
+    "options": [
+      "Input and output devices, power, and clipboard settings",
+      "Device drivers for hardware peripherals",
+      "Desktop visual effects and virtual memory settings",
+      "Windows Defender Firewall rule sets"
+    ],
+    "correctAnswer": [
+      "Input and output devices, power, and clipboard settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which keyboard shortcut provides access to the Management Shortcuts menu in Windows, allowing users to quickly access tools like Device Manager, Disk Management, and Task Manager?",
+    "explanation": "The \"Windows + X\" keyboard shortcut opens the Management Shortcuts menu, also known as the Quick Link menu, in Windows. This menu provides quick access to various system management tools, such as Device Manager, Disk Management, Task Manager, and more. It is a convenient way to access administrative tools without navigating through multiple menus. Ctrl + Alt + Del opens a security options menu that includes options like Lock, Switch User, Sign Out, and Task Manager. While Task Manager is accessible from this menu, it does not provide access to the full range of management tools available in the Management Shortcuts menu. Alt + Tab is used to switch between open applications and windows. It is unrelated to accessing system management tools or the Management Shortcuts menu. Windows + R opens the Run dialog box, which allows users to execute commands or open files and applications directly. While it can be used to open some management tools by typing their commands, it does not directly provide access to the Management Shortcuts menu.",
+    "options": [
+      "Alt + Tab",
+      "Windows + R",
+      "Ctrl + Alt + Del",
+      "Windows + X"
+    ],
+    "correctAnswer": [
+      "Windows + X"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows 10 computer is unable to connect to the internet after a recent update. Upon investigation, you find that the network adapter is enabled, but the system is not obtaining an IP address automatically. Which of the following actions should you take to analyze and resolve the issue?",
+    "explanation": "The Windows Event Viewer logs can provide detailed information about errors or issues related to the network adapter or recent updates. By analyzing these logs, you can identify the root cause of the problem, such as a failed update or driver issue, and take appropriate corrective action. The Windows Defender Firewall does not control IP address assignment or DHCP functionality. Disabling and re-enabling the firewall will not resolve issues related to obtaining an IP address. Manually assigning a static IP address is a workaround, not a solution. It does not address the underlying issue of why the system is failing to obtain an IP address automatically, which could be related to DHCP or network adapter configuration. Uninstalling and reinstalling updates should only be done if the update is confirmed to be the root cause of the issue. Without analyzing the problem first (e.g., through Event Viewer logs), this action is premature and may not resolve the issue.",
+    "options": [
+      "Manually assign a static IP address to the network adapter.",
+      "Uninstall and reinstall the most recent Windows update to restore connectivity.",
+      "Disable and re-enable the Windows Defender Firewall to reset network settings.",
+      "Check the Windows Event Viewer logs for errors related to the network adapter."
+    ],
+    "correctAnswer": [
+      "Check the Windows Event Viewer logs for errors related to the network adapter."
+    ],
+    "origin": "CertMaster"
+  }
+]

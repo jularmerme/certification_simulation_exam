@@ -1,0 +1,487 @@
+[
+  {
+    "id": "1202-WOS-001",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and 11, which section of the Windows Security app is used to turn Microsoft Defender Antivirus on or off?",
+    "explanation": "Defender Antivirus is turned on or off under Virus & threat protection (in its settings).",
+    "options": [
+      "Firewall & network protection",
+      "App & browser control",
+      "Device security",
+      "Virus & threat protection"
+    ],
+    "correctAnswer": [
+      "Virus & threat protection"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-002",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which feature in Windows 10 and Windows 11 enables automatic installation of Microsoft Defender Antivirus definitions?",
+    "explanation": "Definition updates are delivered automatically through Windows Update.",
+    "options": [
+      "Task Scheduler",
+      "Virus & threat protection settings",
+      "Windows Update",
+      "System Configuration"
+    ],
+    "correctAnswer": [
+      "Windows Update"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-003",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and Windows 11, which section of the Windows Security app provides the option to manually update Microsoft Defender Antivirus definitions?",
+    "explanation": "Virus & threat protection > Protection updates > Check for updates updates the definitions manually.",
+    "options": [
+      "Virus & threat protection",
+      "Firewall & network protection",
+      "App & browser control",
+      "Device performance & health"
+    ],
+    "correctAnswer": [
+      "Virus & threat protection"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-004",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which Control Panel paths in Windows provide access to turn Windows Defender Firewall on or off? (Select 2 answers)",
+    "explanation": "In icon view the applet is directly under Control Panel. In category view it is under System and Security.",
+    "options": [
+      "Control Panel (category view) > Network and Internet > Windows Defender Firewall",
+      "Control Panel (icon view) > System and Security > Windows Defender Firewall",
+      "Control Panel (category view) > Security and Maintenance > Windows Defender Firewall",
+      "Control Panel (icon view) > Windows Defender Firewall",
+      "Control Panel (category view) > System and Security > Windows Defender Firewall"
+    ],
+    "correctAnswer": [
+      "Control Panel (icon view) > Windows Defender Firewall",
+      "Control Panel (category view) > System and Security > Windows Defender Firewall"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-005",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Windows Security app in Windows 10 and 11 contains the option to turn the firewall on or off?",
+    "explanation": "The firewall on/off options are in Firewall & network protection.",
+    "options": [
+      "Windows Defender Firewall",
+      "Virus & threat protection settings",
+      "Device security",
+      "Firewall & network protection"
+    ],
+    "correctAnswer": [
+      "Firewall & network protection"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-006",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and 11, a firewall interface providing options to create custom exceptions for applications or ports can be accessed via:",
+    "explanation": "All of these routes open Windows Defender Firewall with Advanced Security, where you create inbound and outbound rules.",
+    "options": [
+      "Control Panel (icon view) > Windows Defender Firewall > Advanced settings > right-click on Inbound/Outbound Rules > New Rule...",
+      "Control Panel (category view) > System and Security > Windows Defender Firewall > Advanced settings > right-click on Inbound/Outbound Rules > New Rule...",
+      "Windows Security app > Firewall & network protection > Advanced settings > right-click on Inbound/Outbound Rules > New Rule...",
+      "Any of the above paths"
+    ],
+    "correctAnswer": [
+      "Any of the above paths"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-007",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which navigation path in Windows 10 and Windows 11 can be used to access a simplified interface for allowing or blocking applications across private or public networks?",
+    "explanation": "All three routes lead to the same Allowed apps screen.",
+    "options": [
+      "Control Panel (icon view) > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall",
+      "Control Panel (category view) > System and Security > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall",
+      "Windows Security app > Firewall & network protection > Allow an app through the firewall",
+      "Any of the above"
+    ],
+    "correctAnswer": [
+      "Any of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-008",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of Windows account is primarily used for an offline, single-device setup?",
+    "explanation": "A local account exists only on that device and works offline. A Microsoft account is cloud-based.",
+    "options": [
+      "Microsoft account",
+      "Local account",
+      "Domain account",
+      "Administrator account"
+    ],
+    "correctAnswer": [
+      "Local account"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-009",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to an SSO account type in Windows?",
+    "explanation": "A Microsoft account gives single sign-on across Windows, Microsoft 365, OneDrive and the Microsoft Store.",
+    "options": [
+      "Local account",
+      "Microsoft account",
+      "Administrator account",
+      "Standard account"
+    ],
+    "correctAnswer": [
+      "Microsoft account"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-010",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which user group in Windows 10 and 11 can use most of the software and change system settings that do not affect other users or the computer's security?",
+    "explanation": "Standard users can run most software and change settings that affect only their own profile.",
+    "options": [
+      "Standard Users",
+      "Guests",
+      "Power Users",
+      "Administrators"
+    ],
+    "correctAnswer": [
+      "Standard Users"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-011",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a built-in Windows account type that has complete and unrestricted access to a computer or domain?",
+    "explanation": "Administrators have complete, unrestricted access.",
+    "options": [
+      "Account Operators",
+      "Power Users",
+      "Network Configuration Operators",
+      "Administrators"
+    ],
+    "correctAnswer": [
+      "Administrators"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-012",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Microsoft Windows environments, the Guest account is intended for users who do not have a permanent account on a Windows computer or domain. Users with this type of account cannot install software or hardware, change system settings, create passwords, or access protected files and folders. However, because the Guest account allows logging on to a network, browsing the Internet, and shutting down the computer, it is recommended to keep it disabled unless temporarily required for a specific purpose.",
+    "explanation": "True. The Guest account is limited and should stay disabled unless it is needed temporarily.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-013",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which user group in Windows 10 and Windows 11 is largely a legacy local group with limited administrative rights retained for backward compatibility with older applications and Windows versions?",
+    "explanation": "Power Users is a legacy group kept for backward compatibility with older applications.",
+    "options": [
+      "Standard Users",
+      "Replicators",
+      "Account Operators",
+      "Power Users"
+    ],
+    "correctAnswer": [
+      "Power Users"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-014",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows authentication method is device-independent, allowing users to log into different systems with the same set of credentials?",
+    "explanation": "A username and password works on any system. A PIN or fingerprint is tied to the device.",
+    "options": [
+      "PIN",
+      "Username and password",
+      "Windows Hello",
+      "Fingerprint"
+    ],
+    "correctAnswer": [
+      "Username and password"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-015",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows sign-in method uses a device-specific code that is stored locally and not transmitted over the network?",
+    "explanation": "A Windows Hello PIN is bound to the device and stored locally, so it is not sent over the network.",
+    "options": [
+      "Username and password",
+      "PIN",
+      "Security key",
+      "Passwordless authentication"
+    ],
+    "correctAnswer": [
+      "PIN"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-016",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refer(s) to built-in biometric authentication options available in Windows 10 and Windows 11? (Select all that apply)",
+    "explanation": "Windows Hello's built-in biometrics are fingerprint and facial recognition. Smart cards aren't biometric.",
+    "options": [
+      "Fingerprint",
+      "Smart card sign-in",
+      "Voice recognition",
+      "Retina scan",
+      "Facial recognition"
+    ],
+    "correctAnswer": [
+      "Fingerprint",
+      "Facial recognition"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-017",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician sets up a new Windows 11 computer for a user. The user wants to log in once and have automatic access to Microsoft 365, OneDrive, and the Microsoft Store without re-entering credentials. Which feature enables this functionality?",
+    "explanation": "Single sign-on lets one login give access to several connected services.",
+    "options": [
+      "Domain-based authentication",
+      "Biometric authentication",
+      "Single sign-on authentication",
+      "Passwordless authentication"
+    ],
+    "correctAnswer": [
+      "Single sign-on authentication"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-018",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Windows Hello is a built-in authentication system in Windows 10 and Windows 11 that lets users sign in to devices, apps, and online services without relying solely on a traditional password. Instead, it provides passwordless sign-in options such as: (Select all that apply)",
+    "explanation": "Windows Hello supports a PIN, fingerprint and facial recognition. Voice recognition isn't one of its options.",
+    "options": [
+      "PIN-based sign-in",
+      "Fingerprint scan",
+      "Voice recognition",
+      "Facial recognition"
+    ],
+    "correctAnswer": [
+      "PIN-based sign-in",
+      "Fingerprint scan",
+      "Facial recognition"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-019",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The \"Run as administrator\" option is a Windows feature that launches a program with elevated system privileges, allowing it to perform tasks that a standard user account cannot, such as installing software, modifying system settings, or accessing protected files. The option can be used by right-clicking an executable or shortcut and selecting \"Run as administrator\" from the context menu, which may require administrator credentials to confirm the elevated action.",
+    "explanation": "True. Run as administrator elevates the program's privileges.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-020",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows Vista and newer releases of the Microsoft operating system offer a security feature that limits the privileges of software applications and access to administrative tasks. When a program makes a change that requires administrator-level permissions or a user attempts to modify system settings that require administrative access, it triggers an on-screen prompt requiring an administrator password to proceed. This functionality is known as:",
+    "explanation": "User Account Control (UAC) prompts for elevation before administrative changes.",
+    "options": [
+      "ACL",
+      "UAC",
+      "AppLocker",
+      "SmartScreen Filter"
+    ],
+    "correctAnswer": [
+      "UAC"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-021",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows feature enables encryption of entire drives?",
+    "explanation": "BitLocker is the Windows full-drive encryption feature. FileVault is the macOS equivalent.",
+    "options": [
+      "FileVault",
+      "DriveCrypt",
+      "BitLocker",
+      "TrueCrypt"
+    ],
+    "correctAnswer": [
+      "BitLocker"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-022",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a Microsoft Windows feature specifically designed to encrypt removable drives?",
+    "explanation": "BitLocker To Go encrypts removable drives such as USB flash drives.",
+    "options": [
+      "BitLocker",
+      "TrueCrypt",
+      "BitLocker To Go",
+      "DriveCrypt"
+    ],
+    "correctAnswer": [
+      "BitLocker To Go"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WOS-023",
+    "topic": "Windows OS Security",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which built-in Windows component enables the encryption of individual files?",
+    "explanation": "The Encrypting File System (EFS) encrypts individual files and folders on NTFS.",
+    "options": [
+      "AES",
+      "HSM",
+      "EFS",
+      "TPM"
+    ],
+    "correctAnswer": [
+      "EFS"
+    ],
+    "origin": "ExamCompass"
+  }
+]

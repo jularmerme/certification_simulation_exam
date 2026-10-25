@@ -1,0 +1,491 @@
+[
+  {
+    "id": "1202-WTS-001",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The Blue Screen of Death (BSoD), also known as a stop error screen, appears in Microsoft Windows when the system encounters a critical error it cannot recover from without risking further instability. The BSoD typically displays technical details that may help advanced users diagnose the underlying cause of the error. In earlier versions of Windows, the BSoD included elements such as an error code, the memory address where the fault occurred, and the name of the driver that caused it. Beginning with Windows 8, the screen was redesigned to present a simplified message, along with a stop code, a URL, and a QR code linking to online troubleshooting resources. For Windows to recover from a BSoD, a system restart is required, which may occur automatically or be triggered manually using the computer's power button.",
+    "explanation": "True. A BSoD requires a restart to recover.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-002",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the tools listed below can be used to identify resource-intensive applications that cause degraded performance in Microsoft Windows?",
+    "explanation": "Task Manager shows CPU, memory, disk and network use per process.",
+    "options": [
+      "Event Viewer",
+      "Windows Memory Diagnostic",
+      "System Information",
+      "Task Manager"
+    ],
+    "correctAnswer": [
+      "Task Manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-003",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which actions are most likely to resolve a Windows boot issue caused by the system attempting to start from an incorrect device? (Select 2 answers)",
+    "explanation": "If the system tries to boot from the wrong device, fix the boot order and remove removable drives.",
+    "options": [
+      "Disabling Secure Boot in the UEFI firmware",
+      "Updating the boot order in BIOS",
+      "Running Startup Repair from the Windows Recovery Environment",
+      "Booting into Safe Mode",
+      "Disconnecting any removable drives"
+    ],
+    "correctAnswer": [
+      "Updating the boot order in BIOS",
+      "Disconnecting any removable drives"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-004",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Windows Recovery Environment (WinRE) tools is specifically designed to automatically recover from operating system boot failures?",
+    "explanation": "Startup Repair automatically diagnoses and fixes problems that prevent Windows from booting.",
+    "options": [
+      "System Restore",
+      "Safe Mode",
+      "System Image Recovery",
+      "Startup Repair"
+    ],
+    "correctAnswer": [
+      "Startup Repair"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-005",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "During system boot, a user receives \"Windows Boot Configuration Data file is missing some required information\" error message. Which command-line command should a technician use to troubleshoot this error?",
+    "explanation": "The BCD error is fixed by rebuilding the Boot Configuration Data with bootrec /rebuildbcd.",
+    "options": [
+      "bootrec /scanos",
+      "bootrec /rebuildbcd",
+      "bootrec /fixmbr",
+      "bootrec /fixboot"
+    ],
+    "correctAnswer": [
+      "bootrec /rebuildbcd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-006",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a Windows system that powers off unexpectedly after a GPU driver update. Which Windows utility should the technician use to manually roll back the specific driver?",
+    "explanation": "Device Manager > device Properties > Driver > Roll Back Driver.",
+    "options": [
+      "System Restore",
+      "Windows Update",
+      "Control Panel",
+      "Device Manager"
+    ],
+    "correctAnswer": [
+      "Device Manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-007",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows desktop restarts several times a day without displaying a blue screen. Which system utility can a technician use to review detailed system logs and determine the cause?",
+    "explanation": "Event Viewer holds the detailed system logs, including shutdown and restart events.",
+    "options": [
+      "Event Viewer",
+      "Reliability Monitor",
+      "System Information",
+      "Windows Registry"
+    ],
+    "correctAnswer": [
+      "Event Viewer"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-008",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a Windows 11 computer restarts randomly during normal operation. A technician suspects the issue is caused by corrupted system files. Which built-in command-line tool should be run to verify and repair these files?",
+    "explanation": "sfc /scannow verifies protected system files and repairs corrupted ones.",
+    "options": [
+      "diskpart /rescan",
+      "chkdsk /f",
+      "sfc /scannow",
+      "bootrec /rebuildbcd"
+    ],
+    "correctAnswer": [
+      "sfc /scannow"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-009",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows desktop powers off randomly only when non-Microsoft services are loaded. The issue does not occur in Safe Mode. Which step should be taken to isolate the cause?",
+    "explanation": "A clean boot starts only Microsoft services, so you can add third-party ones back to find the culprit.",
+    "options": [
+      "Run a full antivirus scan",
+      "End background processes in Task Manager",
+      "Roll back the latest Windows update",
+      "Perform a clean boot"
+    ],
+    "correctAnswer": [
+      "Perform a clean boot"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-010",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows diagnostic tool provides a timeline of system events and failures, including unexpected shutdowns?",
+    "explanation": "Reliability Monitor shows a timeline of failures and a stability index.",
+    "options": [
+      "Reliability Monitor",
+      "Event Viewer",
+      "Performance Monitor",
+      "Resource Monitor"
+    ],
+    "correctAnswer": [
+      "Reliability Monitor"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-011",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The \"Disable automatic restart on system failure\" option in Windows is specifically used to prevent a computer from immediately rebooting after a blue screen error, allowing time to view the stop error code and other critical information needed for troubleshooting.",
+    "explanation": "True. It keeps the BSoD on screen so you can read the stop code.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-012",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In MS Windows, Services (services.msc) is a system applet used for managing background applications and processes. The applet interface can be accessed by pressing Windows logo + R key combination, typing services.msc in the Run dialog box and pressing Enter. Inside the interface, double-clicking on a service opens its Properties menu, which can also be displayed by right-clicking on the service and selecting Properties from the context menu. The General tab of the Properties menu contains all the basic controls necessary for manual service management such as Start, Stop, Pause, and Resume buttons. If a service fails to start, automatic system response can be set on the Recovery tab. Troubleshooting can also involve checking the Dependencies tab to determine which services are required by the selected service and which services depend on it.",
+    "explanation": "True. This accurately describes services.msc.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-013",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which system utility in Windows is the primary source for reviewing detailed information regarding application crashes?",
+    "explanation": "Application crashes are logged in Event Viewer, in the Application log.",
+    "options": [
+      "Resource Monitor",
+      "Task Manager",
+      "Performance Monitor",
+      "Event Viewer"
+    ],
+    "correctAnswer": [
+      "Event Viewer"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-014",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While troubleshooting a persistent application crash, a technician determines the application must be completely reinstalled. Which Windows utility would provide access to the procedure for performing this action?",
+    "explanation": "Programs and Features uninstalls and repairs applications.",
+    "options": [
+      "Windows Troubleshooter",
+      "System Configuration",
+      "Registry Editor",
+      "Programs and Features"
+    ],
+    "correctAnswer": [
+      "Programs and Features"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-015",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Microsoft Windows, a reserved portion of the storage drive used for data that cannot be stored in RAM due to insufficient memory space is called:",
+    "explanation": "The paging file (pagefile.sys) is virtual memory on disk. A swap partition is the Linux term.",
+    "options": [
+      "Memory buffer",
+      "System cache",
+      "Paging file",
+      "Swap partition"
+    ],
+    "correctAnswer": [
+      "Paging file"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-016",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A Windows workstation frequently displays low memory warnings while multiple applications are running. Which Windows utilities can a technician use to identify the processes consuming the most memory? (Select 2 answers)",
+    "explanation": "Task Manager and Resource Monitor show memory use per process. Windows Memory Diagnostic tests RAM hardware.",
+    "options": [
+      "Reliability Monitor",
+      "Task Manager",
+      "Windows Memory Diagnostic",
+      "Event Viewer",
+      "Resource Monitor"
+    ],
+    "correctAnswer": [
+      "Task Manager",
+      "Resource Monitor"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-017",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Recommended methods for resolving or preventing low memory warnings on a Windows-based system include: (Select all that apply)",
+    "explanation": "Add RAM, close unneeded applications and increase the paging file. Defragmenting and a bigger drive cache don't address low memory.",
+    "options": [
+      "Increasing the storage drive's cache size",
+      "Upgrading system memory",
+      "Defragmenting the main system drive",
+      "Closing unnecessary background applications",
+      "Increasing the size of the paging file"
+    ],
+    "correctAnswer": [
+      "Upgrading system memory",
+      "Closing unnecessary background applications",
+      "Increasing the size of the paging file"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-018",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The common causes of USB controller resource warnings include USB devices exceeding the number of available endpoints (a.k.a. data buffers) or drawing too much power. In Microsoft Windows, troubleshooting solutions that can be applied to resolve such problems include: (Select 2 answers)",
+    "explanation": "Unplug unused devices and spread devices across ports on different USB controllers.",
+    "options": [
+      "Enabling hardware virtualization in the BIOS/UEFI firmware",
+      "Unplugging USB devices that are not in use",
+      "Setting the affected USB device to a lower process priority in Task Manager",
+      "Moving devices to ports linked to a different USB controller",
+      "Changing the Windows power plan to High Performance"
+    ],
+    "correctAnswer": [
+      "Unplugging USB devices that are not in use",
+      "Moving devices to ports linked to a different USB controller"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-019",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows system instability is commonly caused by hardware failures, driver conflicts, corrupted system files, overheating, insufficient power, or incompatible software. The condition is typically manifested as unpredictable behavior such as random freezes, crashes, reboots, or system hangs. Troubleshooting involves isolating faulty components, verifying system integrity, and restoring stability through updates, diagnostics, and repairs. Common tools include Event Viewer for error analysis, Safe Mode for driver and startup isolation, Windows Memory Diagnostic for testing RAM, and the SFC utility for repairing corrupted system files.",
+    "explanation": "True. This accurately describes system instability and its tools.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-020",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A Windows user reports that their PC displays \"Operating system not found\" error immediately after the POST sequence. Assuming the physical storage drive is functional, which options are the most likely causes of the OS detection failure? (Select 2 answers)",
+    "explanation": "The firmware either isn't looking at the right drive (boot order) or can't find valid boot records.",
+    "options": [
+      "Expired Windows license key",
+      "Corrupted user profiles in Windows",
+      "Incorrect BIOS/UEFI boot order",
+      "Missing device drivers",
+      "Corrupted boot records/files"
+    ],
+    "correctAnswer": [
+      "Incorrect BIOS/UEFI boot order",
+      "Corrupted boot records/files"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-021",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows domain user experiences long delays during login, and the profile takes several minutes to load. What is a common solution to this issue?",
+    "explanation": "A slow profile load is typically fixed by rebuilding the (corrupted or bloated) user profile.",
+    "options": [
+      "Modifying login script",
+      "Disabling SSO authentication",
+      "Rebuilding Windows profiles",
+      "Applying system updates"
+    ],
+    "correctAnswer": [
+      "Rebuilding Windows profiles"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-022",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are valid causes of time drift in Windows? (Select 3 answers)",
+    "explanation": "Time drift comes from a disabled Windows Time service, a failing CMOS battery or an unreachable or misconfigured NTP server. A wrong time zone shifts the displayed time but isn't drift.",
+    "options": [
+      "Incorrect system time zone settings",
+      "Disabled Windows Time (W32Time) service",
+      "CMOS battery failure",
+      "Unreachable or misconfigured NTP server",
+      "Disabled Task Scheduler service"
+    ],
+    "correctAnswer": [
+      "Disabled Windows Time (W32Time) service",
+      "CMOS battery failure",
+      "Unreachable or misconfigured NTP server"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTS-023",
+    "topic": "Windows OS Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Time synchronization settings in Windows 10 and Windows 11 can be accessed via:",
+    "explanation": "All of these routes lead to the time synchronization settings.",
+    "options": [
+      "Windows Start > Settings > Time & Language > Date & time",
+      "Windows Control Panel (icon view) > Date and Time > Internet Time tab > Change settings...",
+      "Windows Control Panel (category view) > Clock and Region > Set the time and date > Internet Time tab > Change settings...",
+      "Any of the above navigation paths"
+    ],
+    "correctAnswer": [
+      "Any of the above navigation paths"
+    ],
+    "origin": "ExamCompass"
+  }
+]

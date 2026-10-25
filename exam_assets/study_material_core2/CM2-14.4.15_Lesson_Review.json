@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-14.4-001",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a Windows 11 system that fails to boot. The system displays a black screen after the POST process. You decide to use the Advanced Boot Options menu to diagnose the issue. Which of the following steps would BEST allow you to isolate the problem to a driver or a service issue?",
+    "explanation": "Booting into Safe Mode loads only the essential drivers and services required to start the system. This isolates the issue to add-in drivers or application services, helping you determine if the problem is caused by a third-party driver or service. This is the most effective first step for diagnosing such issues. While Startup Repair is useful for fixing damaged boot files, it does not isolate driver or service issues. It is more appropriate for repairing boot-related problems, such as missing or corrupt boot files. A full system reset reinstalls Windows and removes all applications and settings. While this might resolve the issue, it is a last-resort option and does not help in diagnosing the root cause of the problem. Reinstalling Windows is a drastic measure that erases the current installation. It does not allow for diagnosis or isolation of the issue and should only be used when other troubleshooting methods fail.",
+    "options": [
+      "Use the Startup Repair option from the Windows Recovery Environment (WinRE).",
+      "Perform a full system reset from the recovery environment.",
+      "Reinstall Windows using the product media.",
+      "Boot into Safe Mode using the Advanced Boot Options menu."
+    ],
+    "correctAnswer": [
+      "Boot into Safe Mode using the Advanced Boot Options menu."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-002",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician troubleshooting a Windows system that has encountered a Blue Screen of Death (BSOD). The error message displayed on the BSOD indicates \"INACCESSIBLE_BOOT_DEVICE.\" The user reports that the issue began after they updated their system drivers. Based on this scenario, what is the MOST appropriate action to resolve the issue?",
+    "explanation": "The BSOD error \"INACCESSIBLE_BOOT_DEVICE\" often occurs due to driver issues or configuration changes that prevent the system from accessing the boot device. Booting into Safe Mode allows the system to load only essential drivers, and using System Restore can revert the system to a previous state where the configuration was functional. This approach directly addresses the root cause of the issue without requiring drastic measures like reinstalling the OS. Reinstalling the operating system is a last-resort solution. It is time-consuming and unnecessary in this scenario, as the issue can likely be resolved by rolling back the configuration using System Restore. Reinstalling the OS would also result in the loss of user-installed applications and settings unless a backup is available. The chkdsk command is primarily used to check and repair disk errors, such as bad sectors or file system corruption. While it is a useful tool, it does not directly address the driver-related issue causing the \"INACCESSIBLE_BOOT_DEVICE\" error. Running chkdsk would not resolve the problem in this scenario. Secure Boot is a security feature that ensures only trusted software is loaded during the boot process. Disabling Secure Boot is unrelated to the \"INACCESSIBLE_BOOT_DEVICE\" error and would not resolve the issue. Changing BIOS/UEFI settings should only be done if the issue is directly related to those configurations, which is not the case here.",
+    "options": [
+      "Reinstall the operating system to ensure all corrupted files are replaced.",
+      "Use the Windows Recovery Environment (WinRE) to run the chkdsk command.",
+      "Boot into Safe Mode and use System Restore to roll back to a previous configuration.",
+      "Access the BIOS/UEFI settings and disable Secure Boot."
+    ],
+    "correctAnswer": [
+      "Boot into Safe Mode and use System Restore to roll back to a previous configuration."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-003",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a Windows computer that fails to boot. Upon inspection, you find that the system uses a legacy BIOS configuration. During the boot process, the system displays an error indicating that the boot manager cannot be found. Which of the following actions should you take to resolve the issue?",
+    "explanation": "The error indicates that the boot manager cannot be found, which is often caused by corruption or misconfiguration of the Boot Configuration Data (BCD). Using the recovery environment to repair the BCD is the appropriate action because it directly addresses the issue with the boot process. This approach avoids unnecessary data loss and is a standard troubleshooting step for boot-related issues in a legacy BIOS configuration. Reformatting the hard drive and reinstalling Windows is an extreme measure that should only be taken as a last resort. The issue described is specific to the boot manager, which can often be resolved without reinstalling the operating system. This option would result in unnecessary data loss and is not the most efficient solution. While a failed hard drive could cause boot issues, the error message specifically mentions the boot manager, which suggests a software issue rather than a hardware failure. Replacing the hard drive without further diagnostics would be premature and could lead to unnecessary expenses. Switching from BIOS to UEFI mode is not a solution to the problem described. The system is already configured to use legacy BIOS, and changing the firmware mode would require reconfiguring the system and reinstalling the operating system. This action does not address the immediate issue with the boot manager.",
+    "options": [
+      "Use the recovery environment to repair the BCD.",
+      "Replace the hard drive, as it has likely failed.",
+      "Update the firmware to switch from BIOS to UEFI mode.",
+      "Reformat the hard drive and reinstall Windows."
+    ],
+    "correctAnswer": [
+      "Use the recovery environment to repair the BCD."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-004",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows profile is loading with a temporary profile every time they log in. You investigate and find that the user's profile folder exists on the system, but the system is unable to load it. After analyzing the situation, what is the MOST likely cause of the issue and the best solution to resolve it?",
+    "explanation": "Analyzing the situation reveals that the profile folder exists, so the problem lies in the system's ability to locate and load it. Correcting the profile path in the registry ensures the system can properly load the user's profile during login. While deleting the profile folder may resolve the issue by forcing the system to create a new profile, this approach does not analyze or address the root cause of the problem. Additionally, it can result in the loss of user data stored in the profile folder. Misconfigured folder permissions can cause profile loading issues, but in this case, the problem is not related to permissions. The fact that a temporary profile is being loaded points to a registry issue rather than a permissions problem. While insufficient disk space can cause various system issues, it is unlikely to result in the system loading a temporary profile. The presence of the user's profile folder and the specific behavior described in the scenario indicate a registry-related issue, not a disk space problem.",
+    "options": [
+      "The system is running out of disk space. Boot into Safe Mode and free up disk space to allow the profile to load properly.",
+      "The user's profile is corrupted. Boot into Safe Mode and delete the profile folder to force the system to create a new one.",
+      "The user's profile path in the registry is incorrect. Boot into Safe Mode, access the registry editor, and correct the profile path under HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList.",
+      "The user's profile folder permissions are misconfigured. Boot into Safe Mode, access the profile folder, and reset the folder permissions to allow full access for the user."
+    ],
+    "correctAnswer": [
+      "The user's profile path in the registry is incorrect. Boot into Safe Mode, access the registry editor, and correct the profile path under HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-005",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In which of the following situations would driver rollback be the BEST option to use?",
+    "explanation": "Driver rollback would be best suited to a situation where you've installed a misbehaving driver and need to revert to an older version. Driver rollback preserves the old driver every time you install a newer driver. So, you could use driver rollback to uninstall the current driver and restore the previous version. Restoring several driver files that were accidentally deleted is not a function of driver rollback. It simply attempts to restore the previously selected driver. If you need to uninstall a new application that's causing erratic behavior, you should use the Uninstall feature (accessed through the Control Panel). Restoring emails is not a feature of driver rollback, which focuses on restoring the previously installed device driver.",
+    "options": [
+      "You recently installed a new video driver, and now the system behaves erratically.",
+      "You recently installed a new application, and now the system behaves erratically.",
+      "You need to restore several driver files that were accidentally deleted.",
+      "You accidentally deleted several important emails from Outlook and need to restore them."
+    ],
+    "correctAnswer": [
+      "You recently installed a new video driver, and now the system behaves erratically."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-006",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What tool can you use to create a full system image of your Windows drive?",
+    "explanation": "The \"Backup and Restore\" tool in Windows allows users to create a full system image of their Windows drive. A system image is a complete backup of the entire drive, including the operating system, installed programs, settings, and user data. This tool is specifically designed for creating and restoring full system images, making it the correct answer to the question. A recovery drive is used to create a bootable USB drive that contains recovery tools to troubleshoot and repair a Windows installation. While it can help in recovering or repairing a system, it does not create a full system image of the Windows drive. Therefore, it is not the correct answer. A system repair disk is used to boot into the Windows Recovery Environment (WinRE) to troubleshoot and repair issues with the operating system. It provides tools like Startup Repair, System Restore, and Command Prompt but does not create a full system image. Hence, it is not the correct answer. Windows installation media is used to install or reinstall the Windows operating system. It does not include the capability to create a full system image of the Windows drive. Its purpose is limited to installing or repairing the OS, making it an incorrect answer to this question.",
+    "options": [
+      "Recovery drive",
+      "System Repair",
+      "Backup and Restore",
+      "Windows Installation Media"
+    ],
+    "correctAnswer": [
+      "Backup and Restore"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-007",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT technician for your company. Fred calls you to complain that every time he opens his internet browser, the default home page has been changed to a site he is not familiar with. You suspect this change is being caused by a malware infection on his system. However, after you run antimalware and antivirus software on Fred's system, it is still having the same issue. Which of the following would be the next BEST way to remove the malware?",
+    "explanation": "Although all of the options could remove the malware and virus, the best first step is to try to restore the computer back to a restore point prior to the infection. If the infection has been included in all of the restore points, the next best thing would be to restore the drive using a good image that contains the operating system and the programs and files required by your company.",
+    "options": [
+      "Purchase a new disk and deploy a backup image of Windows.",
+      "Format Fred's disks and perform a clean installation of the operating system.",
+      "Perform an image deployment from a backup image to restore Fred's computer to a known good point.",
+      "Restore Fred's computer back to a previous restore point."
+    ],
+    "correctAnswer": [
+      "Restore Fred's computer back to a previous restore point."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-008",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A curious IT professional investigates the hidden System Reserved partition. What does the BOOTMGFW.EFI read to identify whether to show a boot menu and to find the location of WINLOAD.EFI?",
+    "explanation": "BOOTMGFW.EFI reads the BCD to identify whether to show a boot menu and to find the location of WINLOAD.EFI. From this point, the Windows boot loader continues the boot process by loading the kernel, as described previously. Remote monitoring and management (RMM) tools are principally designed for use by managed service providers (MSPs). An MSP is an outsourcing company that specializes in handling all IT support for its clients. Some hazard information will be provided on labels, but the supplier must also provide more detailed information on a material safety data sheet (MSDS). Network Level Authentication (NLA) protects the Remote Desktop Protocol (RDP) server against denial of service attacks. Without NLA, the system configures a desktop before the user logs on.",
+    "options": [
+      "MSDS",
+      "BCD",
+      "NLA",
+      "RMM"
+    ],
+    "correctAnswer": [
+      "BCD"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-009",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their USB devices are not functioning properly after a recent Windows update. Upon investigation, you find that the USB ports are not recognizing any connected devices, and the Device Manager shows a warning icon next to the USB controller. What is the MOST appropriate action to resolve the issue?",
+    "explanation": "The issue likely stems from the recent Windows update, which may have installed an incompatible or faulty USB controller driver. Using Device Manager to roll back the driver to a previous, stable version is the most effective way to resolve the issue. This directly addresses the root cause without requiring more drastic measures. Reinstalling Windows is a time-consuming and unnecessary solution for this scenario. The issue is driver-related and can be resolved by rolling back the USB controller driver. Reinstalling Windows would also result in the loss of user-installed applications and settings unless a backup is available. The chkdsk command is used to check and repair disk errors, such as bad sectors or file system corruption. While it is a useful tool, it does not address driver-related issues, which are the likely cause of the USB problem in this scenario. Disabling and re-enabling the USB controller in the BIOS/UEFI settings does not address the driver issue causing the problem. While it might temporarily reset the USB functionality, it does not resolve the underlying issue with the incompatible or faulty driver. Rolling back the driver is a more effective and permanent solution.",
+    "options": [
+      "Reinstall Windows to ensure all drivers are properly configured.",
+      "Use Device Manager to roll back the USB controller driver to a previous version.",
+      "Disable and re-enable the USB controller in the BIOS/UEFI settings.",
+      "Use the Windows Recovery Environment (WinRE) to run the chkdsk command."
+    ],
+    "correctAnswer": [
+      "Use Device Manager to roll back the USB controller driver to a previous version."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-010",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician, and a user reports that their computer's display started flickering after a recent graphics driver update. The user needs the issue resolved quickly so they can continue working. What is the BEST course of action to resolve the issue?",
+    "explanation": "The \"Roll Back Driver\" feature in Device Manager is specifically designed to address issues caused by a recently updated driver. It allows you to revert to the previously installed driver, which was functioning correctly before the update. This is the best solution in this scenario because it directly targets the root cause of the issue (the problematic driver update) without affecting other system settings or files. While uninstalling the driver and letting Windows install a generic driver might resolve the flickering issue temporarily, it is not the best solution. The generic driver may lack the necessary features and optimizations for the user's specific graphics hardware, potentially leading to reduced performance or functionality. This approach is less efficient and less targeted than using the \"Roll Back Driver\" feature. System Restore can roll back system changes, including driver updates, but it is not the most efficient solution in this case. Using System Restore would affect the entire system, potentially undoing other unrelated changes or updates that the user may want to keep. The \"Roll Back Driver\" feature is a more precise and less disruptive solution for this specific issue. Updating the driver again might resolve the issue if the manufacturer has released a newer, fixed version of the driver. However, this approach assumes that a newer version is available and does not guarantee an immediate resolution. Additionally, it introduces unnecessary complexity when the \"Roll Back Driver\" feature provides a simpler and more reliable solution to revert to a known working driver.",
+    "options": [
+      "Update the graphics driver again to the latest version from the manufacturer's website.",
+      "Perform a System Restore to roll back the entire system to a previous state before the driver update.",
+      "Use the \"Roll Back Driver\" feature in Device Manager to revert to the previous driver.",
+      "Uninstall the graphics driver completely and restart the computer to allow Windows to install a generic driver."
+    ],
+    "correctAnswer": [
+      "Use the \"Roll Back Driver\" feature in Device Manager to revert to the previous driver."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-011",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You want to perform a Windows update on your Windows 11 computer. Before doing so, you want to make sure you can easily go back to the state it was in prior to the update. Which of the following Control Panel utilities is BEST to enable and use prior to the update?",
+    "explanation": "System protection provides full control over your System Restore operations. In Windows 11, System Protection is disabled by default. Before you perform the Windows update, you should enable this feature. Once enabled, Windows will automatically create restore points when system changes are made. However, it may be best to create the first restore point manually. If, for some reason, your Windows system is not functioning properly after the update, you can use this feature to restore your system back to the restore point created prior to the upgrade. Performance lets you adjust settings to use for the appearance and performance of Windows. It also lets you configure some advanced settings, such as configuring virtual memory. It cannot be used to create or use restore points. View hidden files will let you see and work with files that are normally hidden. It cannot be used to create or use restore points. Program and Features lets you view the programs installed on your computer and, if needed, uninstall, change, or repair an application. It cannot be used to create or use restore points.",
+    "options": [
+      "View hidden files",
+      "Performance",
+      "System protection",
+      "Program and Features"
+    ],
+    "correctAnswer": [
+      "System protection"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-012",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a critical business application crashes immediately after launching. Upon investigation, you find that the application was recently updated. Which of the following is the BEST course of action to resolve the issue?",
+    "explanation": "Using System Restore is the best option in this scenario because it allows you to roll back the system configuration, including application updates, to a previous state where the application was functioning correctly. This approach is non-destructive to user data and specifically targets configuration changes that could have caused the issue. Reinstalling the operating system is an extreme measure and is not necessary in this case. The issue is isolated to a single application, and System Restore provides a much less invasive solution. Reinstalling the OS would also require significant time and effort, including reinstalling all applications and restoring user data, which is not justified for this problem. While Task Manager can help identify and terminate problematic processes, it does not address the root cause of the application crashing after an update. This approach is more of a temporary workaround and does not resolve the underlying issue caused by the recent update. Updating device drivers is not directly related to resolving an issue caused by an application update. The problem described is specific to the application itself, and there is no indication that device drivers are contributing to the crash. This option would not effectively address the issue at hand.",
+    "options": [
+      "Update the device drivers for the system to ensure compatibility with the application.",
+      "Use Task Manager to end all background processes and relaunch the application.",
+      "Reinstall the operating system to ensure all system files are intact.",
+      "Use System Restore to revert the system to a point before the application update was installed."
+    ],
+    "correctAnswer": [
+      "Use System Restore to revert the system to a point before the application update was installed."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-013",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You've just connected a new USB device to your Windows system. You used the installation disc that came with the device to install the drivers needed to support the device. Since the installation, the system frequently crashes when you try to access the new device. Which of the following steps would MOST likely resolve this issue?",
+    "explanation": "The first step is to download and install the latest driver for the device from the manufacturer's website. Reinstalling or replacing the device should only be done as a last resort after you've performed other troubleshooting tasks. You would use the Add Hardware wizard to configure legacy (non-plug-and-play) devices.",
+    "options": [
+      "Remove and then reinstall the device.",
+      "Run the Add Legacy Hardware wizard and manually configure the device.",
+      "Replace the device itself.",
+      "Download and install the latest driver from the manufacturer's website."
+    ],
+    "correctAnswer": [
+      "Download and install the latest driver from the manufacturer's website."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-014",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have just received a call from one of your customers. She informs you that after turning her computer on, she received the following error:\n\nError loading operating system\nBOOTMGR is missing\nPress Ctrl+Alt+Del to restart\n\nEvery time she restarts her computer, the same error appears. Which of the following tools will work BEST to fix this issue?",
+    "explanation": "To fix a Master Boot Record (MBR) error, run the bootrec /fixmbr command. You could include other switches as well to further repair the boot sector or rebuild the entire boot configuration data. diskpart is a disk partition utility. format is a command that formats a drive, which erases all data on that drive. chkdsk can identify and correct file system errors and make sure that you can continue to load and write data from the hard drive. However, this command will not fix a problem with the MBR.",
+    "options": [
+      "bootrec",
+      "diskpart",
+      "format",
+      "chkdsk"
+    ],
+    "correctAnswer": [
+      "bootrec"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.4-015",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "14.4.15",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user brings in a laptop that does not boot. Based on the user's description, the assistant suggests running chkdsk. How can the user do this?",
+    "explanation": "Drop into the Windows Recovery Environment (WinRE) command prompt, where the user can run commands such as diskpart, sfc, chkdsk, bootrec, bcdedit, or regedit to try to repair the installation manually. System Restore or restore from an image backup performs a refresh, or reset reinstallation of Windows. This will not allow running commands. The basic input/output system (BIOS) or the Unified Extensible Firmware Interface (UEFI) setup allows users to configure the recovery media as the priority boot device. This does not typically allow commands to run. The BOOTMGR and the boot configuration data (BCD) file are normally installed to a hidden System Reserved partition.",
+    "options": [
+      "BCD",
+      "WinRE",
+      "System Restore",
+      "UEFI"
+    ],
+    "correctAnswer": [
+      "WinRE"
+    ],
+    "origin": "CertMaster"
+  }
+]

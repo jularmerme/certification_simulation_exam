@@ -1,0 +1,996 @@
+[
+  {
+    "id": "1202-WST-001",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which locations in Windows 10 and Windows 11 provide access to the Internet Properties system utility? (Select 3 answers)",
+    "explanation": "Internet Properties opens from the Internet Options applet, from the Network and Sharing Center, and by running inetcpl.cpl.",
+    "options": [
+      "Internet Options applet in Windows Control Panel",
+      "Network and Sharing Center applet in Windows Control Panel",
+      "Ease of Access applet in Windows Control Panel",
+      "Windows Run dialog box (after typing inetcpl.cpl, and pressing Enter)",
+      "Internet Options menu item in Microsoft Edge Tools menu"
+    ],
+    "correctAnswer": [
+      "Internet Options applet in Windows Control Panel",
+      "Network and Sharing Center applet in Windows Control Panel",
+      "Windows Run dialog box (after typing inetcpl.cpl, and pressing Enter)"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-002",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab of the Windows Internet Properties applet provides an option for deleting temporary Internet files, cookies, web browsing and download history, saved passwords, and data typed into web forms?",
+    "explanation": "The General tab holds the browsing history section, which deletes temporary files, cookies, history, passwords and form data.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "General"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-003",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The Security tab of the Internet Properties applet in MS Windows allows users to configure zone-based restrictions for websites and control the type of content that can be accessed through the system's built-in web components.",
+    "explanation": "True. The Security tab configures security zones (Internet, Local intranet, Trusted sites, Restricted sites).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-004",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a Windows Internet Properties applet tab that provides settings for a built-in pop-up blocker?",
+    "explanation": "The Privacy tab holds the pop-up blocker settings.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "Privacy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-005",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab of the Internet Properties applet in Windows provides access to advanced cookie management options?",
+    "explanation": "Cookie handling is managed on the Privacy tab.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "Privacy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-006",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the Windows Internet Properties applet tabs enables the management of digital certificates, the AutoComplete functionality, and RSS feeds?",
+    "explanation": "The Content tab handles certificates, AutoComplete and feeds.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "Content"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-007",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refer to network settings accessible through the Connections tab of the Internet Properties applet in Windows? (Select 3 answers)",
+    "explanation": "The Connections tab holds LAN settings, dial-up and VPN settings, and proxy server settings.",
+    "options": [
+      "Network adapter settings",
+      "Internet security zone settings",
+      "LAN settings",
+      "Dial-up and VPN settings",
+      "Proxy server settings"
+    ],
+    "correctAnswer": [
+      "LAN settings",
+      "Dial-up and VPN settings",
+      "Proxy server settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-008",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the Windows Internet Properties applet tabs provides options for managing web browser extensions and setting default applications?",
+    "explanation": "The Programs tab manages add-ons and default programs.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "Programs"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-009",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab of the Windows Internet Properties applet provides access to detailed settings for customizing the built-in web browser's behavior, including options for resetting browser configurations, managing accessibility, browsing, security, and multimedia features?",
+    "explanation": "The Advanced tab holds the detailed settings and the Reset option.",
+    "options": [
+      "General",
+      "Security",
+      "Privacy",
+      "Content",
+      "Connections",
+      "Programs",
+      "Advanced"
+    ],
+    "correctAnswer": [
+      "Advanced"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-010",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refer to features of the Windows Devices and Printers Control Panel applet? (Select 3 answers)",
+    "explanation": "Devices and Printers gives a simplified view of connected devices and lets you add/remove them and troubleshoot. Driver rollback and the detailed view belong to Device Manager.",
+    "options": [
+      "Allows users to add/remove wired and wireless devices",
+      "Does not include troubleshooting features",
+      "Provides a simplified view of all connected devices",
+      "Allows users to restore a device driver to the previously installed version",
+      "Provides a detailed view of all connected devices",
+      "Allows users to troubleshoot a device that is not working properly"
+    ],
+    "correctAnswer": [
+      "Allows users to add/remove wired and wireless devices",
+      "Provides a simplified view of all connected devices",
+      "Allows users to troubleshoot a device that is not working properly"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-011",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The Programs and Features Control Panel applet in Windows enables: (Select all that apply)",
+    "explanation": "Programs and Features can repair or uninstall programs, turn Windows features on or off, and show installed updates. Restore points are in System Protection.",
+    "options": [
+      "Repairing a malfunctioning program",
+      "Accessing an option for enabling or disabling Windows features",
+      "Creating or deleting system restore points",
+      "Accessing an option to view installed updates",
+      "Uninstalling applications"
+    ],
+    "correctAnswer": [
+      "Repairing a malfunctioning program",
+      "Accessing an option for enabling or disabling Windows features",
+      "Accessing an option to view installed updates",
+      "Uninstalling applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-012",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The Network and Sharing Center Control Panel applet in Windows allows users to: (Select 3 answers)",
+    "explanation": "The Network and Sharing Center shows active networks, sets up new connections and troubleshoots network problems. Firewall and proxy settings are elsewhere.",
+    "options": [
+      "Configure firewall settings",
+      "View active networks",
+      "Set up a new connection or network",
+      "Configure proxy server settings",
+      "Troubleshoot network problems"
+    ],
+    "correctAnswer": [
+      "View active networks",
+      "Set up a new connection or network",
+      "Troubleshoot network problems"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-013",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The Network and Sharing Center Control Panel applet in Windows provides access to: (Select 3 answers)",
+    "explanation": "It links to adapter settings, advanced sharing settings and media streaming options. Security zones are in Internet Properties.",
+    "options": [
+      "Network adapter settings",
+      "Advanced sharing settings",
+      "Internet security zone settings",
+      "Physical location settings",
+      "Media streaming options"
+    ],
+    "correctAnswer": [
+      "Network adapter settings",
+      "Advanced sharing settings",
+      "Media streaming options"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-014",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In newer versions of Microsoft Windows, the classic System applet in Control Panel has been deprecated and now redirects to the About page within the System section of the Settings app. The About page displays detailed hardware and system information, including CPU model and speed, installed and usable RAM, as well as the Windows edition and version. It also offers quick access to common system utilities such as Device Manager and System Properties. In premium editions of Windows 10 and 11, this page additionally includes links to BitLocker and Remote Desktop.",
+    "explanation": "True. The classic System applet now redirects to Settings > System > About.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-015",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and 11, the About page within the System section of Windows Settings can be accessed through the following paths: (Select all that apply)",
+    "explanation": "The About page can be reached from Control Panel (either view), the right-click Start menu, or Settings > System > About. Programs and Features doesn't lead there.",
+    "options": [
+      "Windows Control Panel (icon view) > System",
+      "Windows Start > System (via right-click on the Start button)",
+      "Windows Control Panel (category view) > System and Security > System",
+      "Windows Start > Settings > System > About page",
+      "Windows Control Panel > Programs and Features > System"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (icon view) > System",
+      "Windows Start > System (via right-click on the Start button)",
+      "Windows Control Panel (category view) > System and Security > System",
+      "Windows Start > Settings > System > About page"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-016",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Control Panel applets in Windows 10 and Windows 11 provides access to firewall settings?",
+    "explanation": "The applet is called Windows Defender Firewall in Windows 10 and 11.",
+    "options": [
+      "Network and Sharing Center",
+      "Windows Firewall",
+      "Security and Maintenance",
+      "Windows Defender Firewall"
+    ],
+    "correctAnswer": [
+      "Windows Defender Firewall"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-017",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and Windows 11, the Control Panel applet providing access to Microsoft Outlook configuration options is called:",
+    "explanation": "The Mail applet configures Outlook mail profiles and accounts.",
+    "options": [
+      "Mail",
+      "Programs and Features",
+      "User Accounts",
+      "Administrative Tools"
+    ],
+    "correctAnswer": [
+      "Mail"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-018",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to an audio configuration Control Panel applet in Windows 10 and Windows 11?",
+    "explanation": "The Sound applet configures audio devices.",
+    "options": [
+      "Sound",
+      "Device Manager",
+      "Sounds and Audio Devices",
+      "Computer Management"
+    ],
+    "correctAnswer": [
+      "Sound"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-019",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which applet in the Windows Control Panel enables the modification of local user account settings?",
+    "explanation": "The User Accounts applet modifies local user account settings.",
+    "options": [
+      "User Accounts",
+      "Local Users and Groups",
+      "Security and Maintenance",
+      "User Account Control"
+    ],
+    "correctAnswer": [
+      "User Accounts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-020",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows Control Panel applet allows users to manage hardware and driver settings?",
+    "explanation": "Device Manager manages hardware and drivers (update, disable, roll back).",
+    "options": [
+      "Devices and Printers",
+      "Computer Management",
+      "Device Manager",
+      "Administrative Tools"
+    ],
+    "correctAnswer": [
+      "Device Manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-021",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows Control Panel applet designed to improve file search performance is known as:",
+    "explanation": "Indexing Options controls the search index, which speeds up file searches.",
+    "options": [
+      "Storage Spaces",
+      "Disk Clean-up",
+      "Sync Center",
+      "Indexing Options"
+    ],
+    "correctAnswer": [
+      "Indexing Options"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-022",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows Administrative Tools (renamed to Windows Tools in Windows 11) is a folder within the Control Panel that serves as a centralized collection of shortcuts to various system utilities and management consoles primarily designed for advanced configuration, monitoring, troubleshooting, and maintenance tasks on a Windows computer.",
+    "explanation": "True. Administrative Tools (Windows Tools in Windows 11) collects shortcuts to management consoles.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-023",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which path in the Windows 10 and Windows 11 Control Panel provides access to a configuration setting that enables displaying hidden files, folders, and drives?",
+    "explanation": "The path is File Explorer Options > View tab > Advanced settings > Show hidden files, folders, and drives.",
+    "options": [
+      "Folder Options applet > General tab > Show hidden files, folders, and drives",
+      "File Explorer Options applet > View tab > Advanced settings: > Show hidden files, folders, and drives",
+      "Folder Options applet > General tab > Advanced settings: > Show hidden files, folders, and drives",
+      "File Explorer Options applet > Advanced settings: > Show hidden files, folders, and drives"
+    ],
+    "correctAnswer": [
+      "File Explorer Options applet > View tab > Advanced settings: > Show hidden files, folders, and drives"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-024",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following actions provides access to the Windows 10 and Windows 11 File Explorer setting that toggles the visibility of files and folders marked by default as hidden?",
+    "explanation": "In File Explorer (Windows key + E), the View menu has a Hidden items checkbox.",
+    "options": [
+      "Windows logo key + E > View > Hidden items",
+      "Windows logo key + F > File > Change folder and search options > Hidden items",
+      "Windows logo key + E > View > Advanced settings > Hidden items",
+      "Windows logo key + F > File > Show hidden files and folders"
+    ],
+    "correctAnswer": [
+      "Windows logo key + E > View > Hidden items"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-025",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which sequence of steps in Windows 10 and Windows 11 Control Panel provides access to a configuration setting that enables showing or hiding extensions for known file types?",
+    "explanation": "The setting is under File Explorer Options > View tab > Advanced settings > Hide extensions for known file types.",
+    "options": [
+      "Folder Options applet > View tab > Hide extensions for known file types",
+      "File Explorer Options applet > View tab > Advanced settings: > Hide extensions for known file types",
+      "Folder Options applet > General tab > Hide extensions for known file types",
+      "File Explorer Options applet > Advanced settings tab > Hide extensions for known file types"
+    ],
+    "correctAnswer": [
+      "File Explorer Options applet > View tab > Advanced settings: > Hide extensions for known file types"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-026",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The File Explorer setting that enables showing or hiding extensions for known file types in Windows 10 and 11 can be accessed via:",
+    "explanation": "In File Explorer, View has a File name extensions checkbox for quick toggling.",
+    "options": [
+      "Windows logo key + E > View > File name extensions",
+      "Windows logo key + F > File > Change folder and search options > File name extensions",
+      "Windows logo key + E > View > Options > Advanced settings > File name extensions",
+      "Windows logo key + F > File > Settings > File name extensions"
+    ],
+    "correctAnswer": [
+      "Windows logo key + E > View > File name extensions"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-027",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the settings listed below is not part of the General tab of the File Explorer Options Control Panel applet in Windows 10 and Windows 11?",
+    "explanation": "Hidden file visibility is on the View tab. The General tab covers the starting folder, browsing, opening items and privacy/history.",
+    "options": [
+      "Selection of the default starting folder after launching File Explorer",
+      "Visibility of hidden files, folders, and drives",
+      "Folder browsing options (opening each folder in the same window or in its own window)",
+      "Opening items (single-click vs. double-click to open an item)",
+      "File Explorer browsing history options (Privacy section)"
+    ],
+    "correctAnswer": [
+      "Visibility of hidden files, folders, and drives"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-028",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Windows 10 and Windows 11, the File Explorer View menu (accessed via Windows logo key + E > View) enables quick visual and layout changes for the current folder, while the File Explorer Options View tab (accessed via Control Panel > File Explorer Options > View) provides access to a system-wide, persistent configuration interface for File Explorer behavior.",
+    "explanation": "True. The View menu is for quick changes. The Options dialog holds system-wide settings.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-029",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refer to hibernation mode in Windows? (Select 3 answers)",
+    "explanation": "Hibernation saves the system state to disk and powers off, so it uses no power and resumes more slowly than sleep.",
+    "options": [
+      "Saves the system state (e.g., all open/unsaved files and running applications) to a storage drive",
+      "Resumes full system operation more slowly than it does when waking from sleep mode",
+      "Turns the computer off after saving the system state to disk",
+      "Requires a small amount of power to maintain system memory",
+      "Keeps system state (e.g., all open/unsaved files and running applications) in RAM",
+      "Resumes full system operation faster than when waking from sleep mode"
+    ],
+    "correctAnswer": [
+      "Saves the system state (e.g., all open/unsaved files and running applications) to a storage drive",
+      "Resumes full system operation more slowly than it does when waking from sleep mode",
+      "Turns the computer off after saving the system state to disk"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-030",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows power plan is a collection of hardware and system settings that determine how the computer uses power. In Windows Control Panel, the applet providing access to these settings is called:",
+    "explanation": "Power Options is the applet for power plans.",
+    "options": [
+      "Hardware and Sound",
+      "Computer Management",
+      "Power Options",
+      "System Properties"
+    ],
+    "correctAnswer": [
+      "Power Options"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-031",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below describe the behavior of sleep mode in Windows? (Select 3 answers)",
+    "explanation": "Sleep keeps the state in RAM, uses a small amount of power and resumes faster than hibernation.",
+    "options": [
+      "Requires a small amount of power to maintain system memory",
+      "Saves the system state (e.g., all open/unsaved files and running applications) to a storage drive",
+      "Turns the computer off after saving the system state to disk",
+      "Resumes full system operation faster than it does when recovering from hibernation mode",
+      "Keeps the system state (e.g., all open/unsaved files and running applications) in RAM",
+      "Resumes full system operation more slowly than when recovering from hibernation mode"
+    ],
+    "correctAnswer": [
+      "Requires a small amount of power to maintain system memory",
+      "Resumes full system operation faster than it does when recovering from hibernation mode",
+      "Keeps the system state (e.g., all open/unsaved files and running applications) in RAM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-032",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "On Windows-based laptops, the Microsoft operating system includes an additional power configuration setting that lets users choose what happens when the laptop lid is closed (e.g., Do Nothing, Sleep, Hibernate, or Shutdown). This setting can be accessed via the following steps: (Select all that apply)",
+    "explanation": "Choose what closing the lid does is under Power Options, reached from Control Panel (either view) or Settings > System > Power & sleep. Power & sleep is not under Devices.",
+    "options": [
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Choose what closing the lid does",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Choose what closing the lid does",
+      "Windows Control Panel (icon view) > Power Options > Choose what closing the lid does",
+      "Windows Start > Settings > Devices > Power & sleep > Additional power settings > Choose what closing the lid does"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Choose what closing the lid does",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Choose what closing the lid does",
+      "Windows Control Panel (icon view) > Power Options > Choose what closing the lid does"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-033",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The fast startup feature in Windows 10 and 11 puts the computer into a hibernation-like state, allowing the system to resume operation more quickly when powered on. Which of the actions listed below provide(s) access to this setting? (Select all that apply)",
+    "explanation": "Fast startup is under Power Options > Choose what the power buttons do > Change settings that are currently unavailable. Settings > Devices isn't a valid route.",
+    "options": [
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup",
+      "Windows Start > Settings > Devices > Power & sleep > Additional power settings > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup",
+      "Windows Control Panel (icon view) > Power Options > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup",
+      "Windows Control Panel (icon view) > Power Options > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-034",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "USB selective suspend is a power-saving feature in Windows that allows the system to temporarily disable an individual USB port when the connected device is not in use. The USB selective suspend setting can be accessed via: (Select all that apply)",
+    "explanation": "USB selective suspend is in a power plan's advanced settings under USB settings. The routes through Control Panel and Settings > System lead there, and Settings > Devices doesn't.",
+    "options": [
+      "Windows Control Panel (icon view) > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting",
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting",
+      "Windows Start > Settings > Devices > Power & sleep > Additional power settings > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting"
+    ],
+    "correctAnswer": [
+      "Windows Control Panel (icon view) > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting",
+      "Windows Start > Settings > System > Power & sleep > Additional power settings > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting",
+      "Windows Control Panel (category view) > Hardware and Sound > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-035",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following sections of the Settings app in Windows 10 includes configuration options aimed at users with disabilities?",
+    "explanation": "Ease of Access is the Windows 10 Settings section for accessibility options.",
+    "options": [
+      "Accessibility",
+      "Ease of Access Center",
+      "User Accounts",
+      "Ease of Access"
+    ],
+    "correctAnswer": [
+      "Ease of Access"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-036",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Windows Settings app enables configuration of date, time, region, language, and speech recognition settings?",
+    "explanation": "Time & Language holds date, time, region, language and speech settings.",
+    "options": [
+      "System",
+      "Date and Time",
+      "Clock and Region",
+      "Time & Language"
+    ],
+    "correctAnswer": [
+      "Time & Language"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-037",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the sections listed below provides access to backup, recovery, and OS upgrade options within the Windows 10 Settings app?",
+    "explanation": "Windows 10's Update & Security section covers updates, backup, recovery and activation.",
+    "options": [
+      "Windows Update",
+      "System",
+      "Update & Security",
+      "Backup and Restore"
+    ],
+    "correctAnswer": [
+      "Update & Security"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-038",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the Windows Settings app, which section hosts desktop customization settings?",
+    "explanation": "Personalization holds desktop customization such as background, colors and themes.",
+    "options": [
+      "Personalization",
+      "System",
+      "Appearance and Personalization",
+      "Programs and Features"
+    ],
+    "correctAnswer": [
+      "Personalization"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-039",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Windows Settings app includes options to modify installed programs?",
+    "explanation": "The Apps section lets you modify or uninstall installed programs.",
+    "options": [
+      "System",
+      "Apps",
+      "Privacy",
+      "Storage"
+    ],
+    "correctAnswer": [
+      "Apps"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-040",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Settings app in Windows 10 allows users to modify permissions for the operating system and applications?",
+    "explanation": "Privacy controls permissions for the OS and apps. Privacy & security is the Windows 11 name.",
+    "options": [
+      "Update & Security",
+      "Privacy",
+      "Apps",
+      "Privacy & security"
+    ],
+    "correctAnswer": [
+      "Privacy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-041",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the Windows Settings app, which section provides access to settings for display, sound, notifications, power management, and storage?",
+    "explanation": "The System section holds display, sound, notifications, power and storage settings.",
+    "options": [
+      "Devices",
+      "System",
+      "Hardware and Sound",
+      "Device Manager"
+    ],
+    "correctAnswer": [
+      "System"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-042",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Settings app in Windows 10 includes options for managing Bluetooth devices, printers, and other connected hardware?",
+    "explanation": "In Windows 10, Settings > Devices manages Bluetooth devices, printers and connected hardware. Bluetooth & devices is the Windows 11 name.",
+    "options": [
+      "Device Manager",
+      "Devices",
+      "Bluetooth & devices",
+      "Devices and Printers"
+    ],
+    "correctAnswer": [
+      "Devices"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-043",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Windows Settings app provides access to network configuration options?",
+    "explanation": "Network & Internet is the Settings section for network configuration.",
+    "options": [
+      "Network & Internet",
+      "Internet Options",
+      "Network and Sharing Center",
+      "Network Connections"
+    ],
+    "correctAnswer": [
+      "Network & Internet"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-044",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following enables access to gaming options in the Windows Settings app?",
+    "explanation": "The Gaming section holds Game bar, captures and Game Mode.",
+    "options": [
+      "Apps",
+      "System",
+      "Programs and Features",
+      "Gaming"
+    ],
+    "correctAnswer": [
+      "Gaming"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WST-045",
+    "topic": "Microsoft Windows Settings",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which section of the Settings app in Windows 10 and Windows 11 allows users to manage sign-in options and connected account settings, including email?",
+    "explanation": "The Accounts section manages sign-in options and account settings, including email accounts.",
+    "options": [
+      "Accessibility",
+      "Network & internet",
+      "Accounts",
+      "Privacy & security"
+    ],
+    "correctAnswer": [
+      "Accounts"
+    ],
+    "origin": "ExamCompass"
+  }
+]

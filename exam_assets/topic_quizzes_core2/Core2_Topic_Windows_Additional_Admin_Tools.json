@@ -1,0 +1,175 @@
+[
+  {
+    "id": "1202-WAT-001",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Microsoft Windows application utility used for displaying details about a computer's hardware resources, components, and software environment is known as:",
+    "explanation": "msinfo32.exe is System Information. winver only shows the Windows version.",
+    "options": [
+      "msconfig.exe",
+      "winver.exe",
+      "msinfo32.exe",
+      "control.exe"
+    ],
+    "correctAnswer": [
+      "msinfo32.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-002",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which administrative tool in MS Windows provides detailed graphs of hardware activity (CPU, Memory, Disk, and Network) along with real-time, per-process breakdowns of system resource usage?",
+    "explanation": "Resource Monitor (resmon.exe) shows detailed real-time graphs and per-process resource use.",
+    "options": [
+      "resmon.exe",
+      "compmgmt.msc",
+      "perfmon.exe",
+      "eventvwr.msc"
+    ],
+    "correctAnswer": [
+      "resmon.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-003",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following refers to a Microsoft Windows tool designed for troubleshooting system startup problems?",
+    "explanation": "msconfig.exe (System Configuration) controls startup selection, boot options and services for troubleshooting startup problems.",
+    "options": [
+      "eventvwr.msc",
+      "sysdm.cpl",
+      "compmgmt.msc",
+      "msconfig.exe"
+    ],
+    "correctAnswer": [
+      "msconfig.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-004",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab of the System Configuration utility in MS Windows includes the option for normal, diagnostic, and selective system startup modes?",
+    "explanation": "The General tab contains the Normal, Diagnostic and Selective startup options.",
+    "options": [
+      "General",
+      "Boot",
+      "Services",
+      "Startup",
+      "Tools"
+    ],
+    "correctAnswer": [
+      "General"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-005",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the settings listed below can be managed through the Boot tab of the System Configuration utility in Windows? (Select all that apply)",
+    "explanation": "The Boot tab handles safe boot, boot logging, the default OS and resource limits. Startup items are managed in Task Manager.",
+    "options": [
+      "Safe boot, including an option to load minimal drivers and services for troubleshooting during system startup",
+      "Boot logging, which collects detailed information about the startup process for diagnostic purposes",
+      "Selecting the default operating system to load in a multiboot environment",
+      "Limits on hardware resources, such as maximum RAM, allocated to the selected OS in a multiboot environment",
+      "Startup items, including programs and services set to launch automatically during system boot"
+    ],
+    "correctAnswer": [
+      "Safe boot, including an option to load minimal drivers and services for troubleshooting during system startup",
+      "Boot logging, which collects detailed information about the startup process for diagnostic purposes",
+      "Selecting the default operating system to load in a multiboot environment",
+      "Limits on hardware resources, such as maximum RAM, allocated to the selected OS in a multiboot environment"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-006",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the Microsoft Windows utilities helps recover storage space by deleting unnecessary files and temporary data?",
+    "explanation": "cleanmgr.exe is Disk Cleanup.",
+    "options": [
+      "cleanmgr.exe",
+      "dfrgui.exe",
+      "compmgmt.msc",
+      "diskmgmt.msc"
+    ],
+    "correctAnswer": [
+      "cleanmgr.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-007",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following tools can be used to optimize drive performance in Windows?",
+    "explanation": "dfrgui.exe is Defragment and Optimize Drives.",
+    "options": [
+      "diskmgmt.msc",
+      "cleanmgr.exe",
+      "dfrgui.exe",
+      "compmgmt.msc"
+    ],
+    "correctAnswer": [
+      "dfrgui.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WAT-008",
+    "topic": "Windows Additional Admin Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the system utilities in Windows provides access to a hierarchical database that stores low-level system configuration data?",
+    "explanation": "regedit.exe is the Registry Editor, which edits the registry (the hierarchical configuration database).",
+    "options": [
+      "msconfig.exe",
+      "sysdm.cpl",
+      "regedit.exe",
+      "msinfo32.exe"
+    ],
+    "correctAnswer": [
+      "regedit.exe"
+    ],
+    "origin": "ExamCompass"
+  }
+]

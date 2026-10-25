@@ -17,3 +17,7 @@ add_pt01.py
 test_write.py
 exam_assets/extract_study_material.py
 exam_assets/parse_practice_tests.py
+
+# Backup files
+*.bak
+*.bak_*

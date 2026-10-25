@@ -1,0 +1,216 @@
+[
+  {
+    "id": "1202-OST-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which workstation operating system is most widely adopted in business environments due to its strong compatibility with enterprise applications, management tools, and network infrastructure?",
+    "explanation": "Windows is the dominant business workstation OS because of its broad enterprise application support, management tooling (Active Directory, Group Policy) and network infrastructure compatibility.",
+    "options": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Chrome OS"
+    ],
+    "correctAnswer": [
+      "Windows"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "A software development company is setting up new workstations for programmers who frequently use command-line tools, need extensive system configuration capabilities, and prefer a fully open-source platform for building and testing applications. Which OS is best suited for their needs?",
+    "explanation": "Linux is open source, command-line centric and highly configurable, which suits developers who want a fully open-source build and test platform.",
+    "options": [
+      "Chrome OS",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "correctAnswer": [
+      "Linux"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which workstation OS runs natively only on Apple hardware?",
+    "explanation": "macOS is licensed to run only on Apple hardware. CentOS (Linux) and ReactOS (a Windows-compatible open-source OS) run on generic PC hardware, and Chrome OS runs on Chromebooks.",
+    "options": [
+      "CentOS",
+      "macOS",
+      "ReactOS",
+      "Chrome OS"
+    ],
+    "correctAnswer": [
+      "macOS"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which of the answers listed below refers to an operating system designed for lightweight, low-cost laptops optimized for web-based applications?",
+    "explanation": "Chrome OS is Google's lightweight, browser-centric OS built for low-cost Chromebooks and web-based applications.",
+    "options": [
+      "Chrome OS",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "correctAnswer": [
+      "Chrome OS"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which mobile operating system restricts app installation strictly to the App Store unless the device is modified?",
+    "explanation": "iOS is a closed ecosystem: apps come only from Apple's App Store unless the device is jailbroken. Android allows installs from other sources when enabled.",
+    "options": [
+      "iOS",
+      "Android",
+      "Chrome OS",
+      "macOS"
+    ],
+    "correctAnswer": [
+      "iOS"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which of the following answers refers to a mobile OS widely adopted by device manufacturers for its open-source base and flexible customization options?",
+    "explanation": "Android is built on an open-source base (AOSP) that manufacturers can customize, so it is widely adopted by many device makers.",
+    "options": [
+      "Symbian",
+      "webOS",
+      "Chrome OS",
+      "Android"
+    ],
+    "correctAnswer": [
+      "Android"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which device type is iPadOS specifically developed for?",
+    "explanation": "iPadOS is Apple's OS for the iPad tablet. iPhones run iOS, Apple Watches run watchOS and Macs run macOS.",
+    "options": [
+      "Tablet",
+      "Smartphone",
+      "Laptop",
+      "Smartwatch"
+    ],
+    "correctAnswer": [
+      "Tablet"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Which mobile OS is exclusive to Apple's iPhones?",
+    "explanation": "iOS runs on the iPhone. iPadOS is for iPads, macOS is for Mac computers and watchOS is for Apple Watch.",
+    "options": [
+      "iPadOS",
+      "macOS",
+      "iOS",
+      "watchOS"
+    ],
+    "correctAnswer": [
+      "iOS"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "A digital artist needs a mobile operating system that supports advanced stylus features. Which OS is the best fit?",
+    "explanation": "iPadOS runs on the iPad, which supports the Apple Pencil and advanced stylus features. iOS is for iPhones and macOS is a desktop OS.",
+    "options": [
+      "iPadOS",
+      "iOS",
+      "macOS",
+      "Chrome OS"
+    ],
+    "correctAnswer": [
+      "iPadOS"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  },
+  {
+    "id": "1202-OST-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "easy",
+    "stem": "What are the key characteristics of Android OS? (Select 3 answers)",
+    "explanation": "Android is an open-source platform with a high level of customization, and apps can be installed from third-party sources when that setting is enabled. A closed ecosystem and App Store-only installs describe iOS.",
+    "options": [
+      "Limited customization options",
+      "Closed ecosystem",
+      "Apps installable from third-party sources (if enabled)",
+      "Open-source platform",
+      "Apps limited only to official App Store",
+      "High level of customization"
+    ],
+    "correctAnswer": [
+      "Apps installable from third-party sources (if enabled)",
+      "Open-source platform",
+      "High level of customization"
+    ],
+    "origin": "ExamCompass",
+    "topic": "Common OS Types"
+  }
+]

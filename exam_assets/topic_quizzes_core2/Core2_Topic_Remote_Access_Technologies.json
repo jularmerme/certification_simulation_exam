@@ -1,0 +1,324 @@
+[
+  {
+    "id": "1202-RAT-001",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to enable full graphical remote control of a Windows 11 Pro workstation for troubleshooting from another Windows device. Which built-in remote access method is the most appropriate?",
+    "explanation": "RDP (Remote Desktop Protocol) is built into Windows and gives full graphical remote control.",
+    "options": [
+      "SSH",
+      "VNC",
+      "WinRM",
+      "RDP"
+    ],
+    "correctAnswer": [
+      "RDP"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-002",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A field technician at a client site needs to securely access internal company servers and shared folders from an untrusted Wi-Fi network. Which remote access method best addresses this requirement?",
+    "explanation": "A VPN creates an encrypted tunnel into the internal network, which makes it the right choice on an untrusted network.",
+    "options": [
+      "RDP",
+      "SSH",
+      "VPN",
+      "VNC"
+    ],
+    "correctAnswer": [
+      "VPN"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-003",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to remotely control a Linux workstation's graphical desktop from a Windows laptop. Which remote access method should the technician use to accomplish this task?",
+    "explanation": "VNC gives cross-platform graphical desktop control. SSH is command-line only.",
+    "options": [
+      "VNC",
+      "RDP",
+      "WinRM",
+      "SSH"
+    ],
+    "correctAnswer": [
+      "VNC"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-004",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to securely manage a remote Linux server using a command-line interface over the internet. Which remote access technology should be used?",
+    "explanation": "SSH is the secure command-line remote access tool. Telnet and rlogin are unencrypted.",
+    "options": [
+      "IPsec",
+      "Telnet",
+      "SSH",
+      "rlogin"
+    ],
+    "correctAnswer": [
+      "SSH"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-005",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the terms listed below refers to a general category of software platforms designed for the remote monitoring, management, maintenance, and support of client computers, servers, and networks?",
+    "explanation": "Remote monitoring and management (RMM) platforms manage and support client computers, servers and networks remotely.",
+    "options": [
+      "EDR",
+      "RMM",
+      "VDI",
+      "MDM"
+    ],
+    "correctAnswer": [
+      "RMM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-006",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an open-source remote desktop protocol designed for virtual machine access?",
+    "explanation": "SPICE (Simple Protocol for Independent Computing Environments) is an open-source remote display protocol for virtual machines.",
+    "options": [
+      "WinRM",
+      "VNC",
+      "DaaS",
+      "SPICE"
+    ],
+    "correctAnswer": [
+      "SPICE"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-007",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator needs to execute a PowerShell script on multiple remote Windows workstations without opening a graphical session on each machine. Which protocol should be used?",
+    "explanation": "WinRM (Windows Remote Management) runs PowerShell commands and scripts remotely without a graphical session.",
+    "options": [
+      "PCoIP",
+      "SSH",
+      "WinRM",
+      "Telnet"
+    ],
+    "correctAnswer": [
+      "WinRM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-008",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "matching",
+    "difficulty": "medium",
+    "stem": "Choose an answer from the drop-down list on the right to pair a remote access tool category with its matching software examples.",
+    "explanation": "TeamViewer, AnyDesk and GoToMyPC are screen-sharing tools. Zoom, Teams and Meet are videoconferencing. Dropbox, Google Drive and FileZilla transfer files. ManageEngine and Intune are desktop management.",
+    "items": [
+      "Screen-sharing software",
+      "Videoconferencing software",
+      "File transfer software",
+      "Desktop management software"
+    ],
+    "options": [
+      "TeamViewer, AnyDesk, GoToMyPC",
+      "Zoom, Microsoft Teams, Google Meet",
+      "Dropbox, Google Drive, FileZilla",
+      "ManageEngine Endpoint Central, Microsoft Intune"
+    ],
+    "correctAnswer": {
+      "Screen-sharing software": "TeamViewer, AnyDesk, GoToMyPC",
+      "Videoconferencing software": "Zoom, Microsoft Teams, Google Meet",
+      "File transfer software": "Dropbox, Google Drive, FileZilla",
+      "Desktop management software": "ManageEngine Endpoint Central, Microsoft Intune"
+    },
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-009",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which default TCP port must be restricted or managed on a firewall to prevent unauthorized RDP connections?",
+    "explanation": "RDP uses TCP port 3389. SSH is 22 and VNC is 5900.",
+    "options": [
+      "Port 513",
+      "Port 3389",
+      "Port 22",
+      "Port 5900"
+    ],
+    "correctAnswer": [
+      "Port 3389"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-010",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which practice best mitigates the risk of unauthorized VPN access?",
+    "explanation": "Multifactor authentication is the strongest mitigation against unauthorized VPN access.",
+    "options": [
+      "Requiring multifactor authentication for VPN logins",
+      "Enabling a split-tunneling setup for all remote users",
+      "Increasing the VPN session timeout value",
+      "Requiring users to connect only during business hours"
+    ],
+    "correctAnswer": [
+      "Requiring multifactor authentication for VPN logins"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-011",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Unlike RDP, standard VNC is often considered less secure because it frequently lacks native end-to-end encryption for the entire session and typically requires the use of an SSH tunnel or a VPN to secure data in transit and prevent credential interception.",
+    "explanation": "True. Standard VNC needs an SSH tunnel or VPN for protection.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-012",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator is concerned about automated brute-force attacks successfully guessing passwords on a Linux server used for remote management. Which of the actions listed below would provide the most significant increase in security for the SSH service in this scenario?",
+    "explanation": "Public-key authentication removes passwords from the equation, so password guessing can't succeed.",
+    "options": [
+      "Restricting SSH access to specific IP addresses or using a firewall",
+      "Disabling direct root user or administrator login capability",
+      "Changing the default TCP port 22 to reduce automated attacks",
+      "Using public-key authentication (SSH keys) instead of passwords"
+    ],
+    "correctAnswer": [
+      "Using public-key authentication (SSH keys) instead of passwords"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-013",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the most significant architectural security risk associated with RMM platforms?",
+    "explanation": "An RMM platform gives centralized control over many endpoints, so a compromised platform exposes all of them.",
+    "options": [
+      "Data exfiltration",
+      "Insecure APIs",
+      "Human error",
+      "Centralized control"
+    ],
+    "correctAnswer": [
+      "Centralized control"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-014",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator is configuring SPICE for secure remote access across multiple guest operating systems. What is the most important security measure that should be implemented to protect data in transit?",
+    "explanation": "TLS encryption protects the data in transit. The other options limit exposure but don't encrypt traffic.",
+    "options": [
+      "Enabling TLS encryption for all SPICE channels",
+      "Changing the default SPICE port to a non-standard port",
+      "Restricting SPICE access to specific IP addresses using firewall rules",
+      "Limiting SPICE connections to a trusted VLAN"
+    ],
+    "correctAnswer": [
+      "Enabling TLS encryption for all SPICE channels"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-RAT-015",
+    "topic": "Remote Access Technologies",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network technician is configuring a Windows workstation for remote PowerShell management over an untrusted network segment. To ensure that remote management traffic is encrypted during transit, the technician should modify the WinRM configuration and switch from the default HTTP setting to:",
+    "explanation": "WinRM can use HTTPS (with a certificate) to encrypt its traffic instead of the default HTTP listener.",
+    "options": [
+      "SSH",
+      "HTTPS",
+      "IPsec",
+      "VPN"
+    ],
+    "correctAnswer": [
+      "HTTPS"
+    ],
+    "origin": "ExamCompass"
+  }
+]

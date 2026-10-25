@@ -1,0 +1,467 @@
+[
+  {
+    "id": "CM2-14.9-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Many of the most widely used operating systems such as Linux, macOS, and iOS originated from the same kernel developed over fifty years ago. What is the name of this source operating system?",
+    "explanation": "UNIX is a trademark for a series of operating systems created in the late 1960s at Bell Laboratories. All UNIX systems share a kernel/shell architecture. Microsoft's Windows 10 and Windows 11 are proprietary operating systems developed with a hybrid kernel based on the NT kernel that has benefits of both monolithic and microkernel architectures. Android is a smartphone/tablet OS developed by the Open Handset Alliance, primarily driven by Google. Chrome OS is a closed-source operating system based on Linux that uses the Chromium open-source operating system as a base. Chrome OS is a Google-developed operating system that runs on devices aimed at the budget and education sectors.",
+    "options": [
+      "UNIX",
+      "Windows",
+      "Chrome OS",
+      "Android"
+    ],
+    "correctAnswer": [
+      "UNIX"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A cyber architect is reviewing a ticketed computer and discovers that the newest driver is corrupted and wants to revert to a good driver. What can the architect do to complete this task?",
+    "explanation": "There are instances when drivers are not effective, whether containing bugs or not fully tested, where a user wants to roll back to the last known good driver. Reimaging is a method of loading a saved profile or new operating system onto a device. Reimaging can assist a user in not losing all of their data, applications, and files. Restoring a device allows users to regain access to potentially lost data due to corrupted or damaged files. Restoring is removing a current profile and replacing it with a previously used profile. Rebuilding a profile allows users to create a new account/profile and then copy files from the old profile to the new one when a profile has become corrupt.",
+    "options": [
+      "Restore the device.",
+      "Roll back an update.",
+      "Reimage the device.",
+      "Rebuild a Windows profile."
+    ],
+    "correctAnswer": [
+      "Roll back an update."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You work for a large company as an IT administrator. With the many external attacks being perpetrated in the form of security breaches, you are concerned that your Windows 11 computers may be vulnerable. You also want to ensure that Windows is using the latest features. Which of the following would BEST protect your computers?",
+    "explanation": "By default, Windows 11 automatically checks for updates and installs any updates it finds. Although this function can be disabled, Microsoft strongly encourages the use of automatic updates to keep your computer up to date with the latest features. These updates often include patches to fix security issues found in applications. Automatic maintenance can perform these checks. Scheduled backups are important to have and would be useful when a computer has a virus or the computer has been ransomed. They do not, however, keep the computer safe from application security leaks or update Windows with the latest features. Scheduled disk maintenance allows systems to diagnose and repair disk errors. It does not back up files. Antivirus software and updates are important when trying to protect your computer from viruses. However, additional steps are necessary to ensure that security leaks in applications are fixed. In addition, antivirus software does not update Windows with the latest features.",
+    "options": [
+      "Antivirus updates",
+      "Scheduled disk maintenance",
+      "Windows updates",
+      "Scheduled backups"
+    ],
+    "correctAnswer": [
+      "Windows updates"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of verifying and documenting in the troubleshooting methodology?",
+    "explanation": "Verifying ensures that the implemented solution resolves the issue completely and that the system is functioning as expected. Documenting the findings, actions, and outcomes is essential for creating a reference for future troubleshooting and improving organizational knowledge. Identifying the root cause is part of the earlier steps in the troubleshooting methodology, such as establishing and testing a theory. Verifying and documenting occur after the solution has been implemented. Escalation is a step taken when the problem cannot be resolved at the current level. Verifying and documenting occur after the problem has been resolved, not during escalation. Gathering information from the user is part of the initial step, \"Identify the Problem,\" and not part of the verifying and documenting phase.",
+    "options": [
+      "To ensure the solution works and record the process for future reference.",
+      "To escalate the issue to senior staff for further investigation.",
+      "To gather information from the user about the problem.",
+      "To identify the root cause of the problem."
+    ],
+    "correctAnswer": [
+      "To ensure the solution works and record the process for future reference."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a first-line desktop support technician. A user reports that he cannot access several network files. After some investigation, you determine that the problem is with a network server. Which of the following actions should you perform next?",
+    "explanation": "After you identify the most probable cause, escalate the problem if it is beyond your ability to fix or your scope of management. For example, the problem might be on the network server configuration, which you are not authorized to correct. When forwarding the problem to someone else, be sure to describe the nature of the problem, the actions you've already taken, and the symptoms that lead you to believe the problem is outside of your area of responsibility. If you've decided that escalation is not necessary, create an action plan that includes the fix and identifies possible side effects of implementing it. After you've implemented the solution, verify that it works and that there were no unforeseen consequences. Finally, document the problem and the solution.",
+    "options": [
+      "Document the problem.",
+      "Determine if escalation is needed.",
+      "Fix the problem.",
+      "Create an action plan."
+    ],
+    "correctAnswer": [
+      "Determine if escalation is needed."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting an organizational computer that is continually restarting without any action from the user. What is the computer doing?",
+    "explanation": "Reboot is a term used when a computer has intentionally or unintentionally restarted and cycles through the entire operating system loading process. When installing updates to a program on a computer, restarting services means that the user must restart the computer to apply the updates to the program or application. As part of the troubleshooting methodology, a user may have to uninstall, reinstall, or update applications to work correctly on the selected device. Adding resources to a computing asset means that a user can add additional resources, such as memory, RAM, or other devices, to assist in the computing efforts.",
+    "options": [
+      "Restarting service",
+      "Uninstalling/Reinstalling or updated applications",
+      "Adding resources",
+      "Rebooting"
+    ],
+    "correctAnswer": [
+      "Rebooting"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator will need to configure the local users and groups on a stand-alone computer (PC). What default console provides an administrator the ability to schedule tasks and configure disks, services, devices, and local users and groups?",
+    "explanation": "The Computer Management (compmgmt.msc) Console is the default console that provides an administrator the ability to schedule tasks and configure disks, services, devices, and local users and groups. The Disk Management Console (diskmgmt.msc) displays a summary of fixed and removable hard disk drives (HDDs), solid-state drives (SSDs), and optical drives attached to the system. The Windows Performance Monitor (perfmon.msc) can provide up-to-date system resource information and can log data to a file for long-term analysis. The Event Viewer (eventvwr.msc) is a computer management snap-in that enables the review of the system, security, and application logs.",
+    "options": [
+      "Windows Performance Monitor (Perfmon.msc)",
+      "Disk Management (Diskmgmt.msc)",
+      "Event Viewer (eventvwr.msc)",
+      "Computer Management (compmgmt.msc)"
+    ],
+    "correctAnswer": [
+      "Computer Management (compmgmt.msc)"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are using the dir command in Command Prompt and want to display all files in the current directory, including hidden and system files. Which switch should you use?",
+    "explanation": "The /a switch is used to display files with specific attributes, such as hidden (h) and system (s) files. By default, hidden and system files are not displayed, so this switch is necessary to include them in the output. The /o:n switch sorts files alphabetically by name but does not affect which files are displayed. It does not include hidden or system files in the output. The /t:c switch is used to display or sort files based on their creation date. It does not include hidden or system files in the output. The /s switch lists all files in the current directory and its subdirectories, but it does not specifically include hidden or system files unless combined with the /a switch.",
+    "options": [
+      "/o:n",
+      "/s",
+      "/a",
+      "/t:c"
+    ],
+    "correctAnswer": [
+      "/a"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Disk Management Console in Windows?",
+    "explanation": "The Disk Management Console is specifically designed to manage the disk subsystem of a computer. It allows users to view and manage all fixed and removable disks, including tasks such as initializing disks, partitioning, formatting, and managing volumes. Managing user accounts and security groups is done through the Local Users and Groups Console, not the Disk Management Console. The Disk Management Console focuses on storage devices and their configurations. Troubleshooting and updating device drivers is the primary function of the Device Manager, not the Disk Management Console. The Disk Management Console is unrelated to device driver management. Configuring and enforcing group policies is the role of the Group Policy Editor, not the Disk Management Console. The Disk Management Console deals with storage devices and their logical organization.",
+    "options": [
+      "To manage and edit user accounts and security groups.",
+      "To manage all fixed and removable disks attached to the system.",
+      "To configure and enforce group policies across the system.",
+      "To troubleshoot and update device drivers."
+    ],
+    "correctAnswer": [
+      "To manage all fixed and removable disks attached to the system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with installing a new application on multiple desktops in your organization. The application setup file is stored on a shared network folder, and you want to ensure the installation process is automated and does not require manual intervention on each computer. Which method should you use to accomplish this?",
+    "explanation": "Group Policy Objects (GPOs) can be used to automate the installation of applications from a network folder. This method allows the IT department to deploy the application remotely without requiring manual intervention on each computer, making it efficient for large-scale deployments. Manually copying the setup file and running the installation on each desktop is time-consuming and inefficient, especially in an organization with many desktops. Automated methods like GPOs are a better solution. Using USB drives to distribute and install the application is not practical for large-scale deployments. It is also less secure and more prone to errors compared to network-based automated methods like GPOs. A physical hardware token is used for secure authentication, not for distributing or automating the installation of applications. It is unrelated to the scenario described in the question.",
+    "options": [
+      "Use a physical hardware token to authenticate the installation process.",
+      "Copy the setup file to each desktop manually and run the installation locally.",
+      "Use Group Policy Objects (GPOs) to remotely install the application from the network folder.",
+      "Distribute the setup file on USB drives and install it on each desktop individually."
+    ],
+    "correctAnswer": [
+      "Use Group Policy Objects (GPOs) to remotely install the application from the network folder."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is to use clear and concise statements that avoid jargon, abbreviations, acronyms that a user might not understand?",
+    "explanation": "Proper language is not being overly familiar with customers. Do not use slang phrases and any language that may cause offense. When actively listening, the employee makes a conscious effort to focus on what the other person is saying. Cultural sensitivity means being aware of customs and habits used by other people. Formal attire means matching suit clothes in sober color and minimal accessories or jewelry. This is used for business meetings. Business casual means smart clothes. Jeans, shorts and short skirts, and T-shirts are not smart workwear. Business casual is typically sufficient for troubleshooting appointments.",
+    "options": [
+      "Cultural sensitivity",
+      "Proper language",
+      "Formal attire",
+      "Business attire"
+    ],
+    "correctAnswer": [
+      "Proper language"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having trouble communicating on the network. The user sees that the computer is an hour off when looking at the desktop. Where can the user go to set the computer to the correct hour to be able to communicate on the local network?",
+    "explanation": "The user can go to the Time and Language settings page to set the correct date/time and time zone. Keeping the PC time-synchronized is important for processes, such as authentication and backup. The Personalization settings allow users to select and customize themes, which set the appearance of the desktop environment. Privacy settings govern what usage data Windows collects and what device functions are enabled, and for which apps. The Accounts settings app allows users to manage their current user account, add sign-in credentials for other accounts, configure sign-in options, join the computer to a centrally managed domain, and more.",
+    "options": [
+      "Personalization",
+      "Accounts",
+      "Time and Language settings",
+      "Privacy"
+    ],
+    "correctAnswer": [
+      "Time and Language settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When troubleshooting a computer problem, what is the purpose of \"Questioning the Obvious\"?",
+    "explanation": "\"Questioning the Obvious\" involves systematically identifying and eliminating potential non-causes to isolate the actual issue. This method ensures that simple and obvious causes are not overlooked, which can save time and effort in the troubleshooting process. \"Questioning the Obvious\" is a step in the troubleshooting process that occurs before escalation. Escalation is only recommended when the problem cannot be resolved after thorough investigation and testing. \"Questioning the Obvious\" applies to both hardware and software issues. It involves systematically checking all potential causes, regardless of whether they are hardware or software-related. \"Questioning the Obvious\" emphasizes the importance of performing basic checks first. Skipping these checks could lead to overlooking simple solutions and wasting time on unnecessary complex diagnostics.",
+    "options": [
+      "To escalate the issue to senior technical staff immediately.",
+      "To skip basic checks and move directly to complex diagnostics.",
+      "To identify and eliminate non-causes systematically.",
+      "To focus only on software-related issues."
+    ],
+    "correctAnswer": [
+      "To identify and eliminate non-causes systematically."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While you are answering help desk calls, a field customer calls and complains that he cannot print to a workgroup laser printer. Which of the following should be the first question you ask?",
+    "explanation": "According to the troubleshooting methodology, the first step is to identify the problem by gathering information from the user. Asking whether the user has ever successfully printed to the printer helps determine whether the issue is new or recurring. This question provides critical context about whether the problem is related to the user's setup, permissions, or a recent change, and it helps narrow down the scope of the investigation. While checking the cables is an important step in diagnosing printer issues, it is not the first question to ask. According to the troubleshooting methodology, the process begins with gathering information from the user to understand the context of the problem. Asking about the cables assumes a specific cause without first identifying the history or scope of the problem. This step would come later, after gathering initial information. Rebooting the printer is a potential troubleshooting step, but it is not the first question to ask. Before taking action, the methodology emphasizes understanding the problem by asking questions to gather relevant details. Rebooting the printer may not be necessary if the issue is related to user access, configuration, or network connectivity, which can only be determined after asking initial diagnostic questions. This question is not relevant to the specific issue of printing to a workgroup laser printer. Safe mode is typically used for troubleshooting operating system issues, not printer connectivity or functionality. Asking this question would not align with the methodology's focus on gathering relevant and targeted information about the specific problem at hand.",
+    "options": [
+      "Have you ever successfully printed to that printer?",
+      "Have you rebooted the printer?",
+      "Have you rebooted and chosen safe mode?",
+      "Have you checked the cables?"
+    ],
+    "correctAnswer": [
+      "Have you ever successfully printed to that printer?"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a laptop for an employee who will use it to connect to the office network and public Wi-Fi at coffee shops. The employee needs to share files with colleagues while in the office but must ensure the laptop is secure and undiscoverable when using public Wi-Fi. How should you configure the network profile types in Windows Defender Firewall?",
+    "explanation": "Setting a network to \"Private\" allows the PC to be discoverable and enables file sharing, which is appropriate for a trusted office network. For public Wi-Fi, setting the network to \"Public\" ensures the PC is secure and undiscoverable, which is ideal for untrusted environments like coffee shops. Setting all networks to \"Private\" would make the laptop discoverable on public Wi-Fi, which is a security risk. It is recommended to use the \"Public\" profile for untrusted networks to block access and ensure the host is undiscoverable. While setting all networks to \"Public\" would maximize security, it would also prevent file sharing and discoverability on the trusted office network. The \"Private\" profile is suitable for trusted networks where sharing is required. The \"Domain\" profile is only applicable if the computer is joined to a domain, which is not mentioned in the scenario. Additionally, setting public Wi-Fi to \"Private\" would make the laptop discoverable on an untrusted network, which is a security risk.",
+    "options": [
+      "Set all networks to \"Public\" to ensure maximum security.",
+      "Set the office network to \"Domain\" and public Wi-Fi networks to \"Private.\"",
+      "Set all networks to \"Private\" to allow file sharing and discoverability.",
+      "Set the office network to \"Private\" and public Wi-Fi networks to \"Public.\""
+    ],
+    "correctAnswer": [
+      "Set the office network to \"Private\" and public Wi-Fi networks to \"Public.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-016",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is unable to access a remote server by its domain name. You suspect a DNS issue. After running ipconfig /displaydns, you notice that the DNS resolver cache contains outdated records. What should you do next to analyze and resolve the issue?",
+    "explanation": "Clearing the DNS resolver cache with ipconfig /flushdns removes outdated records, ensuring that the system queries the DNS server for updated information. This is the most appropriate step when outdated records are identified. Requesting a new IP address lease with ipconfig /renew is unrelated to DNS resolution issues. This command is used for troubleshooting DHCP-related problems. While ping can test connectivity to the server's IP address, it does not address the issue of outdated DNS records. This step would only confirm connectivity, not resolve the DNS issue. Verifying the DNS server configuration with ipconfig /all is useful for identifying misconfigurations, but it does not resolve the issue of outdated DNS records already in the resolver cache.",
+    "options": [
+      "Use the ipconfig /renew command to request a new IP address lease.",
+      "Use the ipconfig /flushdns command to clear the DNS resolver cache.",
+      "Use the ipconfig /all command to verify the DNS server configuration.",
+      "Use the ping command to test connectivity to the server's IP address."
+    ],
+    "correctAnswer": [
+      "Use the ipconfig /flushdns command to clear the DNS resolver cache."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-017",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When creating a new ticket in the ticketing system, a technical support agent must enter all relevant ticket information related to the issue. Where should the agent go to get an accurate initial description of the problem?",
+    "explanation": "The affected user is the primary source for gathering an initial description of the device's problem. The device inventory record tracks all devices on hand, commonly by service tag or asset ID. This is not a part of the ticketing system, but they can link it to the system. An asset ID is a unique tag assigned to a device to identify it in an inventory database. The system log contains information about events that affect the core OS. These include service load failures, hardware conflicts, driver load failures, network issues, and so on.",
+    "options": [
+      "Device inventory record",
+      "The affected user",
+      "Asset ID",
+      "System log"
+    ],
+    "correctAnswer": [
+      "The affected user"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-018",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As you arrive on-site to fix an issue, you are met by a frantic employee who immediately details how critical the issue is and how important it is to fix it as quickly as possible. Having seen this same issue many times, you say to the customer, \"Stop worrying. I know what I'm doing.\" Which of the following professionalism principles are you failing to follow?",
+    "explanation": "Although you may have great skills and may have even fixed the same issues on many occasions, to this customer, this problem is new, critical, and frightening. You should always listen intently and acknowledge the customer's concerns. You should never dismiss the customer's problems, even if it is only to say you know how to fix the issue.",
+    "options": [
+      "Maintain a positive attitude.",
+      "Avoid an argument with the customer.",
+      "Avoid dismissing customer problems.",
+      "Avoid being judgmental."
+    ],
+    "correctAnswer": [
+      "Avoid dismissing customer problems."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-019",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What technique is often used to exhibit fake antivirus and security warnings or other malicious advertising?",
+    "explanation": "Pop-ups can be used by malicious actors to scare a user with fake antivirus or security warnings. An untrusted source is when an installer cannot be verified through a digital signature or has been a security risk and is likely to expose the user to unwanted adverts. Some untrusted sources do not block ads or have pop-up blockers. As the browser is a security-critical type of software, it is particularly important to use a trusted source, such as an app store. Likewise, if installed as a desktop application, the user should ensure using a reputable vendor. Private browsing mode disables the caching features of the browser so that no cookies, browsing history, form fields, passwords, or temp files will be stored when the session is closed.",
+    "options": [
+      "Untrusted source",
+      "Private browsing mode",
+      "Trusted source",
+      "Pop-ups"
+    ],
+    "correctAnswer": [
+      "Pop-ups"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-020",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "From a Windows 10 command prompt, what command would display a network adapter's configuration and aid in troubleshooting the network adapter?",
+    "explanation": "Troubleshooting network activity will start with an investigation of the network adapter settings. When used without switches, the ipconfig displays the IP address, subnet mask, and default gateway (router) configurations to aid in troubleshooting. The ping command is a command-line utility that works as a diagnostic tool to test whether a host can communicate with another host or reach a specific targeted host. The nslookup tool can troubleshoot Domain Name System (DNS), either interactively or from the command prompt. The netstat (network status) command will enable investigations of connections on a local host. It can also verify whether ports are open, closed, or if another client is connected.",
+    "options": [
+      "ping",
+      "ipconfig",
+      "nslookup",
+      "netstat"
+    ],
+    "correctAnswer": [
+      "ipconfig"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-021",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Every month, a user receives a bill from a provider that charges the user for the exact amount of computing, storage, and network resource units consumed the previous month. The provider bills the user for what kind of connection?",
+    "explanation": "The user is using a metered connection. A user can define the network type as metered and set a data limit within Windows to avoid the risk of exceeding the provider's cap. Most obtain an address automatically, using a service called the Dynamic Host Configuration Protocol (DHCP), which is a protocol that automatically assigns IP addressing information to hosts. Configuring large numbers of hosts with valid static addressing parameters is a complex management task. A proxy server forwards client internet requests to the internet. The proxy may also cache pages and content that multiple clients request, reducing bandwidth.",
+    "options": [
+      "Static",
+      "Dynamic",
+      "Metered",
+      "Proxy"
+    ],
+    "correctAnswer": [
+      "Metered"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-022",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their computer is not functioning as expected. They mention the following issues:\n- The text on their screen is too small to read.\n- The clock on their computer is displaying the wrong time.\n- When they close the lid of their laptop, the system does not turn off, causing the battery to drain.\nWhich of the following actions would BEST address all of the user's issues using the appropriate Windows 10 administrative interface?",
+    "explanation": "The Windows 10 Settings app is the preferred interface for managing modern configuration tasks. Ease of Access settings can be used to adjust text size for better readability. The Date & Time settings allow the user to correct the system clock. The Power & Sleep settings can be configured to adjust the behavior when the laptop lid is closed. While the Control Panel can be used for some legacy tasks, the Windows Settings app is the preferred interface for most modern configuration tasks. Additionally, adjusting text size (Ease of Access) is not typically done through the Control Panel. Task Manager is used for monitoring and managing system performance, processes, and applications. It is not designed for adjusting display settings, system time, or power options, as these are configuration tasks handled by the Windows 10 Settings app or Control Panel. While the Command Prompt can be used for advanced administrative tasks, it is not the most efficient or user-friendly method for addressing these specific issues.",
+    "options": [
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings.",
+      "Use the Control Panel to adjust the display resolution, change the system time, and configure power settings.",
+      "Use the Command Prompt to execute commands for changing display settings, updating the system time, and modifying power settings.",
+      "Use the Task Manager to adjust display settings, update the system time, and configure power options."
+    ],
+    "correctAnswer": [
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.9-023",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.9",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "During the Runtime (RT) stage of the UEFI boot process, system control passes to ntoskrnl.exe. Which of the following tasks does ntoskrnl.exe perform? (Select three.)",
+    "explanation": "The ntoskrnl.exe utility performs the tasks below. Loads device drivers. Starts services. Configures the OS environment. The wininit and winlogon programs run after ntoskrnl.exe to allow user logon. The mounting and initialization of system drives occurs during the Driver Execution Environment stage (DXE), which occurs before the ntoskrnl.exe utility is loaded. The system memory and CPU are initialized and verified during the Pre-EFI Initialization (PEI) stage, which occurs before the ntoskrnl.exe utility is loaded.",
+    "options": [
+      "Mounts and initializes system drives",
+      "Verifies and fully initializes the CPU and chipset",
+      "Starts services",
+      "Loads device drivers",
+      "Allows user logon",
+      "Initializes, verifies, and allocates system memory",
+      "Configures the OS environment"
+    ],
+    "correctAnswer": [
+      "Starts services",
+      "Loads device drivers",
+      "Configures the OS environment"
+    ],
+    "origin": "CertMaster"
+  }
+]

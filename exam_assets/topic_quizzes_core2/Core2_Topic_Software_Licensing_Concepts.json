@@ -1,0 +1,196 @@
+[
+  {
+    "id": "1202-SLC-001",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which action best ensures compliance with software licensing requirements?",
+    "explanation": "Tracking license keys and installations lets you compare what you own with what is installed.",
+    "options": [
+      "Monitoring application launch frequency",
+      "Purchasing a perpetual license for every device",
+      "Tracking license keys and installations",
+      "Enforcing DRM restrictions across all devices"
+    ],
+    "correctAnswer": [
+      "Tracking license keys and installations"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-002",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The primary purpose of DRM is to:",
+    "explanation": "Digital rights management (DRM) enforces access and usage restrictions on digital content. The EULA defines the legal rights.",
+    "options": [
+      "Specify the number of permitted software installations",
+      "Define legal rights and obligations for software use",
+      "Monitor software installation activity for license compliance",
+      "Enforce access and usage restrictions on digital content"
+    ],
+    "correctAnswer": [
+      "Enforce access and usage restrictions on digital content"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-003",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is tasked with reviewing the permissions for a new software suite. The company needs to know the specific restrictions regarding the redistribution of the software and the consequences of exceeding the allowed installation count. Which document contains this information?",
+    "explanation": "The end-user license agreement (EULA) spells out redistribution restrictions and installation limits.",
+    "options": [
+      "SLA",
+      "EULA",
+      "ToS",
+      "AUP"
+    ],
+    "correctAnswer": [
+      "EULA"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-004",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An IT asset manager is performing a department-wide software audit to ensure that all applications have valid licenses. Which of the following elements must be verified to confirm full licensing compliance? (Select all that apply)",
+    "explanation": "Verify the seat count, proof of purchase and authorized usage scope. Event logs aren't part of license compliance.",
+    "options": [
+      "Permitted seat count or installation limit",
+      "Legal entitlement or proof of purchase",
+      "Authorized usage scope based on license type",
+      "Event log entries related to application usage"
+    ],
+    "correctAnswer": [
+      "Permitted seat count or installation limit",
+      "Legal entitlement or proof of purchase",
+      "Authorized usage scope based on license type"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-005",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which statement best defines a perpetual license agreement?",
+    "explanation": "A perpetual license allows indefinite use after a one-time purchase. A subscription needs regular renewal.",
+    "options": [
+      "Grants the user ownership of the software source code",
+      "Provides unlimited installations across all devices",
+      "Allows indefinite software use after a one-time purchase",
+      "Requires regular renewal payments for continued access"
+    ],
+    "correctAnswer": [
+      "Allows indefinite software use after a one-time purchase"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-006",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician finds that an employee installed a personal-use licensed application for business tasks on a company-owned workstation. This indicates that the software is:",
+    "explanation": "A personal-use license doesn't cover business use.",
+    "options": [
+      "Exempt from licensing rules",
+      "Not licensed for business use",
+      "Automatically covered by corporate licensing",
+      "Open source and unrestricted"
+    ],
+    "correctAnswer": [
+      "Not licensed for business use"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-007",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below accurately describe the characteristics of a personal-use software license? (Select 3 answers)",
+    "explanation": "A personal-use license grants usage rights only, prohibits redistribution or resale and limits use to non-commercial purposes.",
+    "options": [
+      "Grants usage rights without transferring legal ownership",
+      "Prohibits the redistribution or resale of the software",
+      "Allows the end user to modify the software",
+      "Transfers full legal ownership of the software to the end user",
+      "Restricts the software usage to non-commercial purposes"
+    ],
+    "correctAnswer": [
+      "Grants usage rights without transferring legal ownership",
+      "Prohibits the redistribution or resale of the software",
+      "Restricts the software usage to non-commercial purposes"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-008",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is tasked with setting up a shared computer in a retail environment. The computer will be used by various employees to process customer orders and manage inventory. Which of the following license types must be assigned to the software to ensure the business remains compliant with legal usage rights?",
+    "explanation": "Business use requires a corporate-use license.",
+    "options": [
+      "Shareware license",
+      "Corporate-use license",
+      "Perpetual license",
+      "Concurrent license"
+    ],
+    "correctAnswer": [
+      "Corporate-use license"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SLC-009",
+    "topic": "Software Licensing Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of software licensing model grants free access to the application code as well as permission to modify and redistribute the application?",
+    "explanation": "Open-source licensing gives free access to the code and the right to modify and redistribute it.",
+    "options": [
+      "Perpetual license",
+      "Freeware license",
+      "Open-source license",
+      "Shareware license"
+    ],
+    "correctAnswer": [
+      "Open-source license"
+    ],
+    "origin": "ExamCompass"
+  }
+]

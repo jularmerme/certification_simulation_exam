@@ -1,0 +1,197 @@
+[
+  {
+    "id": "1202-WLS-001",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the wireless encryption schemes listed below offers the highest level of protection?",
+    "explanation": "WPA3 is the newest and strongest Wi-Fi security standard.",
+    "options": [
+      "WEP",
+      "WPA3",
+      "TKIP",
+      "WPS"
+    ],
+    "correctAnswer": [
+      "WPA3"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-002",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following characteristics apply to the WPA2/WPA3 Personal mode? (Select 3)",
+    "explanation": "Personal mode uses one shared password, is simple to set up and is common in home and SOHO networks.",
+    "options": [
+      "Provides unique login credentials for each user",
+      "Typically deployed in business or enterprise networks",
+      "Authentication through 802.1X with a RADIUS server",
+      "Simple to set up without requiring extra infrastructure",
+      "Commonly used in home or SOHO environments",
+      "Authentication via a single, shared password"
+    ],
+    "correctAnswer": [
+      "Simple to set up without requiring extra infrastructure",
+      "Commonly used in home or SOHO environments",
+      "Authentication via a single, shared password"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-003",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refer to the characteristic features of the WPA2/WPA3 Enterprise mode? (Select 3 answers)",
+    "explanation": "Enterprise mode uses 802.1X with a RADIUS server and gives each user their own credentials, typically in business networks.",
+    "options": [
+      "Authentication via a single, shared password",
+      "Simple to set up without requiring extra infrastructure",
+      "Typically deployed in business or enterprise networks",
+      "Authentication through 802.1X with a RADIUS server",
+      "Provides unique login credentials for each user",
+      "Commonly used in home or SOHO environments"
+    ],
+    "correctAnswer": [
+      "Typically deployed in business or enterprise networks",
+      "Authentication through 802.1X with a RADIUS server",
+      "Provides unique login credentials for each user"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-004",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a stopgap protocol introduced with WPA to replace WEP?",
+    "explanation": "TKIP was the temporary fix introduced with WPA to replace WEP's weak encryption. WPA2 moved to AES (CCMP).",
+    "options": [
+      "AES",
+      "TKIP",
+      "CCMP",
+      "RC4"
+    ],
+    "correctAnswer": [
+      "TKIP"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-005",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the cryptographic algorithms listed below is the least vulnerable to attacks?",
+    "explanation": "AES is the strongest of these. DES, 3DES and RC4 are all considered weak or outdated.",
+    "options": [
+      "AES",
+      "DES",
+      "RC4",
+      "3DES"
+    ],
+    "correctAnswer": [
+      "AES"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-006",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "For a wireless client to be able to connect to a network, the security type (e.g., WEP, WPA, WPA2, or WPA3) and encryption type (e.g., TKIP or AES) settings on the connecting host must match the corresponding wireless security settings on a WAP.",
+    "explanation": "True. The client and access point security and encryption settings must match.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-007",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which AAA solution uses UDP as its transport protocol, combines authentication and authorization, and is commonly deployed for network access control such as VPNs and Wi-Fi authentication?",
+    "explanation": "RADIUS uses UDP and combines authentication and authorization. It's commonly used for VPN and Wi-Fi access.",
+    "options": [
+      "RADIUS",
+      "LDAP",
+      "TACACS+",
+      "Kerberos"
+    ],
+    "correctAnswer": [
+      "RADIUS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-008",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following AAA solutions relies on TCP, separates authentication, authorization, and accounting, and is commonly used for device administration in enterprise networks?",
+    "explanation": "TACACS+ uses TCP and separates the three AAA functions. It's commonly used for managing network devices.",
+    "options": [
+      "OAuth",
+      "TACACS+",
+      "SAML",
+      "RADIUS"
+    ],
+    "correctAnswer": [
+      "TACACS+"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WLS-009",
+    "topic": "Wireless Security",
+    "domain": "2.0 Security",
+    "objective": "2.3",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to the primary and default authentication protocol used in Windows Active Directory environments to enable SSO?",
+    "explanation": "Kerberos is the default authentication protocol in Active Directory and enables SSO.",
+    "options": [
+      "RADIUS",
+      "NTLM",
+      "Kerberos",
+      "MS-CHAP"
+    ],
+    "correctAnswer": [
+      "Kerberos"
+    ],
+    "origin": "ExamCompass"
+  }
+]

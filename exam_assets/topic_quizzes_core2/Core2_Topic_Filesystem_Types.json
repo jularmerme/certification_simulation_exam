@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1202-FS-001",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a Microsoft-developed file system that provides advanced features such as file and folder permissions, encryption, compression, and support for very large files and partitions?",
+    "explanation": "NTFS is the Windows file system with permissions, EFS encryption, compression and very large file/volume support.",
+    "options": [
+      "FAT32",
+      "HFS+",
+      "exFAT",
+      "NTFS"
+    ],
+    "correctAnswer": [
+      "NTFS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-002",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Microsoft file system was specifically designed for maximum resilience, data integrity, and large-scale storage deployments in enterprise environments?",
+    "explanation": "ReFS (Resilient File System) is Microsoft's file system built for resilience and integrity at large scale.",
+    "options": [
+      "XFS",
+      "Btrfs",
+      "ZFS",
+      "ReFS"
+    ],
+    "correctAnswer": [
+      "ReFS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-003",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following file systems is known for its 4 GB maximum file size and 2 TB maximum volume size limitations?",
+    "explanation": "FAT32 limits individual files to 4 GB. Its commonly cited volume limit is 2 TB.",
+    "options": [
+      "NTFS",
+      "FAT32",
+      "NFS",
+      "exFAT"
+    ],
+    "correctAnswer": [
+      "FAT32"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-004",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which file system is the default choice for many modern Linux distributions?",
+    "explanation": "ext4 is the default for many modern Linux distributions.",
+    "options": [
+      "APFS",
+      "ext4",
+      "HFS+",
+      "exFAT"
+    ],
+    "correctAnswer": [
+      "ext4"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-005",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a high-performance file system commonly used in UNIX-like operating systems such as Linux to handle very large files and storage volumes?",
+    "explanation": "XFS is a high-performance journaling file system used on Linux/UNIX for very large files and volumes.",
+    "options": [
+      "ReFS",
+      "DFS",
+      "XFS",
+      "exFAT"
+    ],
+    "correctAnswer": [
+      "XFS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-006",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Microsoft-developed file system designed for flash storage and large removable drives is known as:",
+    "explanation": "exFAT is designed for flash drives and large removable media, without FAT32's 4 GB file limit.",
+    "options": [
+      "FAT32",
+      "NFS",
+      "exFAT",
+      "CDFS"
+    ],
+    "correctAnswer": [
+      "exFAT"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-007",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to the default macOS file system optimized for SSDs and encryption?",
+    "explanation": "APFS (Apple File System) is the macOS default and is optimized for SSDs and encryption. HFS+ is the older one.",
+    "options": [
+      "ReFS",
+      "HFS+",
+      "EFS",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "APFS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-FS-008",
+    "topic": "Filesystem Types",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.1",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which file systems offer the broadest cross-platform compatibility across Windows, macOS, and Linux systems? (Select 2 answers)",
+    "explanation": "FAT32 and exFAT are readable by Windows, macOS and Linux. NTFS, ext4 and APFS are native to a single platform.",
+    "options": [
+      "FAT32",
+      "ext4",
+      "NTFS",
+      "exFAT",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "FAT32",
+      "exFAT"
+    ],
+    "origin": "ExamCompass"
+  }
+]

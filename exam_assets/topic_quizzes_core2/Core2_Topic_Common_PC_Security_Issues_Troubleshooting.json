@@ -1,0 +1,196 @@
+[
+  {
+    "id": "1202-PCS-001",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a Windows PC that suddenly cannot access network shares or the internet. The network adapter shows connectivity, and other devices on the same switch port are working fine. The technician suspects malware has altered a system file to prevent network access. Which system file, if modified by malware, is most likely responsible for redirecting domain names to incorrect IP addresses or blocking name resolution?",
+    "explanation": "The hosts file maps names to IP addresses locally and is checked before DNS, so malware often edits it to redirect or block sites.",
+    "options": [
+      "tcpip.sys",
+      "win.ini",
+      "hosts",
+      "system.ini"
+    ],
+    "correctAnswer": [
+      "hosts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-002",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user's PC displays repeated desktop alerts claiming the antivirus subscription has expired, but the antivirus dashboard shows it is active. What is the most appropriate troubleshooting step?",
+    "explanation": "Alerts that contradict the real antivirus status are likely fake. Run a full malware scan rather than ignoring or silencing them.",
+    "options": [
+      "Turn the app notifications off",
+      "Perform a full malware scan",
+      "Ignore the alerts",
+      "Reinstall the antivirus software"
+    ],
+    "correctAnswer": [
+      "Perform a full malware scan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-003",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A PC user reports that many personal files have suddenly been renamed with unfamiliar extensions, and several folders appear to be missing. The user can no longer open any of the affected files. After disconnecting the PC from the network, what should the technician do next to identify the cause of the issue?",
+    "explanation": "Renamed files with unfamiliar extensions suggest ransomware or other malware. After isolating the PC, scan to identify the cause before restoring anything.",
+    "options": [
+      "Restore the files from backup",
+      "Perform a full malware scan",
+      "Adjust user permissions",
+      "Attempt to repair the file system"
+    ],
+    "correctAnswer": [
+      "Perform a full malware scan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-004",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user's Windows PC displays frequent alerts requesting activation of an unknown system protection tool. What step should be taken to address this symptom?",
+    "explanation": "Unknown protection-tool prompts are a fake security warning symptom. Run a full malware scan.",
+    "options": [
+      "Disable OS notifications",
+      "Ignore the alerts",
+      "Update Windows",
+      "Run a full malware scan"
+    ],
+    "correctAnswer": [
+      "Run a full malware scan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-005",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a PC that cannot connect to Microsoft Update servers. The technician wants to use a built-in automated tool to diagnose common update problems. Which utility should the technician use?",
+    "explanation": "The Windows Update Troubleshooter is the built-in tool that diagnoses and fixes common update problems.",
+    "options": [
+      "Windows Update service",
+      "System File Checker",
+      "Windows Update Troubleshooter",
+      "Network Troubleshooter"
+    ],
+    "correctAnswer": [
+      "Windows Update Troubleshooter"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-006",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which troubleshooting steps would help resolve random or frequent pop-ups displayed in a web browser? (Select 3 answers)",
+    "explanation": "Frequent pop-ups usually come from malicious extensions or adware. Remove the extensions, scan for malware and reset the browser. Ending processes or disabling JavaScript doesn't fix the cause.",
+    "options": [
+      "Remove suspicious browser extensions",
+      "Perform a malware removal scan",
+      "Reset the browser to its default settings",
+      "Use Task Manager to end browser processes",
+      "Disable the browser's JavaScript engine"
+    ],
+    "correctAnswer": [
+      "Remove suspicious browser extensions",
+      "Perform a malware removal scan",
+      "Reset the browser to its default settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-007",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user notices that their web browser displays a warning indicating the website's SSL/TLS certificate is not trusted. What is the most likely cause?",
+    "explanation": "Certificate warnings are typically caused by an expired (or invalid/untrusted) certificate.",
+    "options": [
+      "The website contains malware",
+      "The browser's proxy settings are incorrect",
+      "The website uses HTTP instead of HTTPS",
+      "The certificate has expired"
+    ],
+    "correctAnswer": [
+      "The certificate has expired"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-008",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A web browser redirecting the user to a website other than intended might indicate a security issue related to:",
+    "explanation": "Redirection to the wrong site points to DNS tampering (poisoning or a modified hosts file/DNS settings).",
+    "options": [
+      "TLS",
+      "HTTP",
+      "NAT",
+      "DNS"
+    ],
+    "correctAnswer": [
+      "DNS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PCS-009",
+    "topic": "Common PC Security Issues Troubleshooting",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below is least likely to improve degraded web browser performance?",
+    "explanation": "Virtual memory settings are an OS-level setting and aren't a typical fix for browser slowness. Closing tabs, clearing the cache, removing extensions, updating and resetting the browser all help.",
+    "options": [
+      "Resetting the browser to its defaults",
+      "Closing unnecessary browser tabs",
+      "Emptying the browser's cache",
+      "Removing suspicious browser extensions",
+      "Updating the browser",
+      "Adjusting the virtual memory settings"
+    ],
+    "correctAnswer": [
+      "Adjusting the virtual memory settings"
+    ],
+    "origin": "ExamCompass"
+  }
+]

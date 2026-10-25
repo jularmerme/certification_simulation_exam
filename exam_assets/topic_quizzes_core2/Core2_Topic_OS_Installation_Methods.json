@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1202-OIM-001",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which OS installation method removes all existing data on the selected target partition?",
+    "explanation": "A clean installation wipes the target partition and installs a fresh OS.",
+    "options": [
+      "Live OS installation",
+      "In-place upgrade",
+      "Clean installation",
+      "Repair installation"
+    ],
+    "correctAnswer": [
+      "Clean installation"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-002",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a method that installs a newer OS version over an existing, older version without erasing user data, applications, and settings?",
+    "explanation": "An in-place upgrade installs the newer version over the old one and keeps data, applications and settings.",
+    "options": [
+      "Image deployment",
+      "Remote network installation",
+      "In-place upgrade",
+      "Repair installation"
+    ],
+    "correctAnswer": [
+      "In-place upgrade"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-003",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In enterprise environments, the process of setting up operating systems across many devices using a single, consistent configuration template is referred to as:",
+    "explanation": "Image deployment copies a standardized image (a configuration template) to many devices.",
+    "options": [
+      "In-place upgrade",
+      "Remote network installation",
+      "Image deployment",
+      "Unattended installation"
+    ],
+    "correctAnswer": [
+      "Image deployment"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-004",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT team is deploying a batch of newly purchased desktops across multiple office locations. The devices have no pre-installed operating systems or removable media, and physical access is limited. To install the OS remotely, the department has already set up a server with a centralized OS image and uses DHCP and TFTP to deliver boot instructions. Which installation method should they use?",
+    "explanation": "Booting from the network with DHCP and TFTP and pulling an image from a central server is a remote network installation.",
+    "options": [
+      "Internet-based installation",
+      "Unattended installation",
+      "Image deployment",
+      "Remote network installation"
+    ],
+    "correctAnswer": [
+      "Remote network installation"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-005",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization wants to automate the deployment of operating systems on dozens of diskless workstations that do not have any local storage. The workstations must boot directly from the network every time they power on, retrieving the OS image from a central server without any local media involved. Which technology allows this network boot and OS loading process?",
+    "explanation": "PXE lets a computer boot over the network with no local storage. WDS is a server role that can serve images, but PXE is the boot technology.",
+    "options": [
+      "NFS",
+      "SMB",
+      "WDS",
+      "PXE"
+    ],
+    "correctAnswer": [
+      "PXE"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-006",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which installation method requires no manual input at any stage, fully automating OS deployment across multiple systems?",
+    "explanation": "Zero-touch deployment needs no manual input. Lite-touch still needs some.",
+    "options": [
+      "Zero-touch deployment",
+      "Remote network installation",
+      "Image-based deployment",
+      "Lite-touch installation"
+    ],
+    "correctAnswer": [
+      "Zero-touch deployment"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-007",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a built-in solution for restoring an operating system to its factory settings without the use of external media?",
+    "explanation": "A recovery partition on the drive holds a factory image, so no external media is needed.",
+    "options": [
+      "Disk imaging",
+      "System restore",
+      "Recovery partition",
+      "Shadow copy"
+    ],
+    "correctAnswer": [
+      "Recovery partition"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-008",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which statement best describes the outcome of a typical Windows repair installation?",
+    "explanation": "A repair installation replaces system files while preserving user data (and usually applications and settings).",
+    "options": [
+      "User applications are removed",
+      "User data is deleted",
+      "User application settings are reset",
+      "User data is preserved"
+    ],
+    "correctAnswer": [
+      "User data is preserved"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-009",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "During the installation of a new operating system on a custom-built PC, the installer fails to detect the RAID array configured on the system. What is the most appropriate action to resolve this issue?",
+    "explanation": "When the installer can't see the RAID array, load the controller's third-party drivers from external media during setup.",
+    "options": [
+      "Restart the installation and select a different drive",
+      "Update the BIOS firmware to the latest version",
+      "Load the appropriate third-party RAID drivers from external media",
+      "Replace the RAID controller with a compatible model"
+    ],
+    "correctAnswer": [
+      "Load the appropriate third-party RAID drivers from external media"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OIM-010",
+    "topic": "OS Installation Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is attempting to install a new operating system on a recently assembled custom workstation. During the installation process, the installer fails to detect the installed NVMe solid-state drive, preventing the installation from proceeding. All physical connections to the NVMe drive have been verified as secure. What should the technician do to resolve this problem?",
+    "explanation": "If the installer doesn't see the drive, load the storage drivers (third-party NVMe drivers) from external media.",
+    "options": [
+      "Update the workstation's BIOS/UEFI firmware",
+      "Restart the installation and select a different drive",
+      "Load the appropriate third-party NVMe drivers from external media",
+      "Verify the boot order in the system's BIOS/UEFI settings"
+    ],
+    "correctAnswer": [
+      "Load the appropriate third-party NVMe drivers from external media"
+    ],
+    "origin": "ExamCompass"
+  }
+]

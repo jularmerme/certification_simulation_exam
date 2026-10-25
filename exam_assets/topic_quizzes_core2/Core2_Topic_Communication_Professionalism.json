@@ -1,0 +1,373 @@
+[
+  {
+    "id": "1202-COM-001",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which description best defines appropriate attire in a professional IT environment?",
+    "explanation": "Dress to match the required attire of the environment (formal or business casual), as set by the company dress code.",
+    "options": [
+      "Casual clothing with minimal branding",
+      "Clothing that prioritizes comfort",
+      "Clothing that adheres to company dress code",
+      "Clothing suitable for physical labor"
+    ],
+    "correctAnswer": [
+      "Clothing that adheres to company dress code"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-002",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which approach best demonstrates effective communication with a customer in a technical support scenario?",
+    "explanation": "Use plain language and avoid jargon, acronyms and slang when applicable.",
+    "options": [
+      "Describe the issue with precise, technical terms to avoid any ambiguity",
+      "Use technical abbreviations to streamline the communication process",
+      "Avoid using jargon, acronyms, and slang when applicable",
+      "Describe the issue using informal language to simplify the explanation"
+    ],
+    "correctAnswer": [
+      "Avoid using jargon, acronyms, and slang when applicable"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-003",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a recurring software issue while the user expresses frustration. Which behavior best demonstrates maintaining a positive attitude?",
+    "explanation": "Stay calm and respectful and acknowledge the frustration. Don't promise a fix time you can't guarantee.",
+    "options": [
+      "Focusing exclusively on resolving the issue without engaging the user",
+      "Promising a definitive fix time regardless of the actual troubleshooting progress",
+      "Informing the user that similar issues are common and unavoidable",
+      "Acknowledging the user's frustration while remaining calm and respectful"
+    ],
+    "correctAnswer": [
+      "Acknowledging the user's frustration while remaining calm and respectful"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-004",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below best describes projecting confidence in a customer support role?",
+    "explanation": "Projecting confidence means showing competence while setting realistic expectations, not overpromising or brushing off the customer.",
+    "options": [
+      "Reassuring the customer by minimizing the perceived complexity of the issue",
+      "Providing a definitive repair timeline before completing a full diagnostic",
+      "Communicating assurance and competence while managing expectations",
+      "Minimizing the customer's questions to maintain control of the interaction"
+    ],
+    "correctAnswer": [
+      "Communicating assurance and competence while managing expectations"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-005",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A customer begins describing a printing issue in detail. Which action best demonstrates active listening according to professional support standards?",
+    "explanation": "Actively listen and avoid interrupting the customer.",
+    "options": [
+      "Interrupting to confirm understanding of something stated earlier in the description",
+      "Politely cutting in to redirect a lengthy or off-topic story back to the main technical issue",
+      "Listening without interrupting until the customer finishes describing the problem",
+      "Correcting the customer's technical terminology or phrasing during their explanation"
+    ],
+    "correctAnswer": [
+      "Listening without interrupting until the customer finishes describing the problem"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-006",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which behavior best reflects the guideline to use appropriate professional titles and designations?",
+    "explanation": "Use appropriate professional titles and designations when applicable, e.g. Dr. for someone who identifies as a PhD holder.",
+    "options": [
+      "Relying on generic respectful terms when unsure about the provided title",
+      "Applying titles or designations only when explicitly requested to do so",
+      "Omitting titles entirely to focus attention on the technical problem",
+      "Addressing a self-identified PhD holder as Dr. followed by the last name"
+    ],
+    "correctAnswer": [
+      "Addressing a self-identified PhD holder as Dr. followed by the last name"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-007",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which actions best demonstrate proper time management in customer support interactions? (Select 2 answers)",
+    "explanation": "Be on time by planning ahead, and if you will be late, contact the customer.",
+    "options": [
+      "Relying on the customer to reschedule if a delay occurs",
+      "Planning travel and preparation to avoid delays",
+      "Offering extra service time to compensate for late arrival",
+      "Contacting the customer promptly if running late",
+      "Depending on customer understanding of common overruns"
+    ],
+    "correctAnswer": [
+      "Planning travel and preparation to avoid delays",
+      "Contacting the customer promptly if running late"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-008",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following activities are considered unprofessional distractions that should be avoided in a customer support scenario? (Select 3 answers)",
+    "explanation": "Avoid distractions such as personal calls, texting/social media and personal interruptions (including side conversations with co-workers).",
+    "options": [
+      "Photographing damaged equipment",
+      "Texting or using social media sites",
+      "Answering a supervisor's call",
+      "Engaging in personal conversations with co-workers",
+      "Taking personal calls"
+    ],
+    "correctAnswer": [
+      "Texting or using social media sites",
+      "Engaging in personal conversations with co-workers",
+      "Taking personal calls"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-009",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which practice most directly supports the guideline to not argue with the customer or be defensive?",
+    "explanation": "Don't argue or get defensive. Listen to the complaint without counterarguments.",
+    "options": [
+      "Asking the customer to remain calm before continuing",
+      "Redirecting the discussion to a different topic",
+      "Escalating the issue immediately to avoid conflict",
+      "Avoiding counterarguments when facing complaints"
+    ],
+    "correctAnswer": [
+      "Avoiding counterarguments when facing complaints"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-010",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below align with the guideline to avoid dismissing customer issues? (Select 3 answers)",
+    "explanation": "Take every symptom seriously, restate the concern and ask open-ended questions. Interrupting or saying the problem is common dismisses the customer.",
+    "options": [
+      "Treating every reported symptom as legitimate until investigated",
+      "Restating the customer's concern to confirm understanding",
+      "Asking open-ended questions to better understand the complaint",
+      "Clarifying customer statements by interrupting them if necessary",
+      "Pointing out that the problem is common among other customers"
+    ],
+    "correctAnswer": [
+      "Treating every reported symptom as legitimate until investigated",
+      "Restating the customer's concern to confirm understanding",
+      "Asking open-ended questions to better understand the complaint"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-011",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following actions align with avoiding being judgmental in a technical support scenario? (Select 3 answers)",
+    "explanation": "Avoid being judgmental by asking open-ended questions, making no assumptions about their knowledge, and focusing on facts and solutions.",
+    "options": [
+      "Reassuring the customer that the mistake is understandable for non-technical users",
+      "Asking open-ended questions to better understand the complaint",
+      "Treating the customer's technical knowledge level without assumption or criticism",
+      "Focusing on facts and solutions rather than the customer's past decisions",
+      "Advising the customer to stop experimenting with settings they don't understand"
+    ],
+    "correctAnswer": [
+      "Asking open-ended questions to better understand the complaint",
+      "Treating the customer's technical knowledge level without assumption or criticism",
+      "Focusing on facts and solutions rather than the customer's past decisions"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-012",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "In a customer support scenario, which actions best demonstrate the ability to clarify customer statements? (Select 3 answers)",
+    "explanation": "Clarify by restating the issue, asking questions to confirm details, and asking open-ended questions to narrow the scope.",
+    "options": [
+      "Restating the customer's description to verify understanding",
+      "Aligning communication style with the customer's technical level",
+      "Correcting the customer's use of non-technical language",
+      "Questioning to confirm key details of the reported problem",
+      "Asking open-ended questions to narrow the scope of the issue"
+    ],
+    "correctAnswer": [
+      "Restating the customer's description to verify understanding",
+      "Questioning to confirm key details of the reported problem",
+      "Asking open-ended questions to narrow the scope of the issue"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-013",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the practices listed below do not align with the guideline on maintaining discretion when discussing past customer encounters? (Select 2 answers)",
+    "explanation": "Don't discuss specific customer experiences outside work or post them on social media. Anonymized examples are fine.",
+    "options": [
+      "Focusing on technical details when describing issues",
+      "Discussing specific customer experiences outside work",
+      "Avoiding specific customer names or locations",
+      "Posting details of a customer interaction on a personal social media account",
+      "Using anonymized examples in training or meetings"
+    ],
+    "correctAnswer": [
+      "Discussing specific customer experiences outside work",
+      "Posting details of a customer interaction on a personal social media account"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-014",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After diagnosing a failed motherboard on a laptop that is out of warranty, a technician determines the repair cost is nearly equal to a new system. Which of the following is the most professional course of action?",
+    "explanation": "Offer repair/replacement options as needed and let the customer decide.",
+    "options": [
+      "Present both options but emphasize repair as better value",
+      "Quote only the repair cost without mentioning replacement price",
+      "Recommend replacing the laptop with a new system",
+      "Offer both repair and replacement options to the customer"
+    ],
+    "correctAnswer": [
+      "Offer both repair and replacement options to the customer"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-015",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After finishing a repair and verifying full system functionality, what is the most important final step to complete the service workflow?",
+    "explanation": "After the repair, provide the customer with proper documentation of the services performed.",
+    "options": [
+      "Providing the customer with proper documentation of the services performed",
+      "Asking the customer to sign a waiver stating that no other components were damaged",
+      "Identifying potential negative impacts of the implemented solution",
+      "Updating internal documentation with the hardware manufacturer's information"
+    ],
+    "correctAnswer": [
+      "Providing the customer with proper documentation of the services performed"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-016",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After resolving a customer issue, following up at a later date to verify satisfaction is optional unless the customer reports a new problem.",
+    "explanation": "False. Following up with the customer/user later to verify satisfaction is part of the expected process.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-COM-017",
+    "topic": "Communication & Professionalism",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.7",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below describes appropriate handling of the customer's confidential data in a situation where troubleshooting requires access to a password-protected system?",
+    "explanation": "Have the user enter their own password so you never learn it, which respects the customer's confidential and private material.",
+    "options": [
+      "Create a temporary account with the same permissions",
+      "Ask user to type in the password themselves",
+      "Temporarily disable password protection",
+      "Ask user for password and their consent to use it"
+    ],
+    "correctAnswer": [
+      "Ask user to type in the password themselves"
+    ],
+    "origin": "ExamCompass"
+  }
+]

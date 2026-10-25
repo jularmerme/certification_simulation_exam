@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-14.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Examine the following output:\n\nReply from 64.78.193.84: bytes=32 time=86ms TTL=115\nReply from 64.78.193.84: bytes=32 time=43ms TTL=115\nReply from 64.78.193.84: bytes=32 time=44ms TTL=115\nReply from 64.78.193.84: bytes=32 time=44ms TTL=115\n\nWhich utility produced this output?",
+    "explanation": "The output shown was produced by the ping utility. Specifically, the information output was created using the ping -t command. The -t switch causes packets to be sent to the remote host continuously until stopped manually. ping is a useful tool for testing connectivity between devices on a network. Using the -t switch with ping can be useful in determining whether the network is congested. As such, a condition will cause sporadic failures in the ping stream. tracert is similar to ping in that it tests connectivity between two hosts on the network. The difference is that tracert reports information on all intermediate devices between the host system and the target system. ping, on the other hand, does not report information on intermediate devices. nslookup is a tool provided on Linux, Unix, and Windows systems that allows manual name resolution requests to be made to a DNS server. This can be useful when troubleshooting name-resolution problems. ifconfig is a tool used on Unix, Linux, and Macintosh systems to view the configuration of network interfaces, including TCP/IP network settings.",
+    "options": [
+      "tracert",
+      "ping",
+      "ifconfig",
+      "nslookup"
+    ],
+    "correctAnswer": [
+      "ping"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Examine the following output:\n\n4 22 ms 21 ms 22 ms sttlwa01gr02.bb.ispxy.com [154.11.10.62]\n5 39 ms 39 ms 65 ms plalca01gr00.bb.ispxy.com [154.11.12.11]\n6 39 ms 39 ms 39 ms Rwest.plalca01gr00.bb.ispxy.com [154.11.3.14]\n7 40 ms 39 ms 46 ms svl-core-03.inet.ispxy.net [205.171.205.29]\n8 75 ms 117 ms 63 ms dia-core-01.inet.ispxy.net [205.171.142.1]\n\nWhich command produced this output?",
+    "explanation": "The output is from a tracert command run on a Windows Server system. The tracert command provides information on each step in the route that a packet takes to reach a remote host. Responses from each hop on the route are measured three times to provide an accurate representation of how long the packet takes to reach and return from that host. This information can be useful in locating congestion points on a network or when verifying that network routing is operating as expected. The ping command is used to test connectivity between devices on a network. Like tracert, ping sends packets to the target host, but it does not report information on any intermediate devices it traverses to reach the target. nslookup is a tool provided on Linux, Unix, and Windows systems that allows manual name resolution requests to be made to a DNS server. This can be useful when troubleshooting name-resolution problems. netstat displays information such as active TCP or UDP connections, open ports, and the local routing table.",
+    "options": [
+      "tracert",
+      "netstat",
+      "ping",
+      "nslookup"
+    ],
+    "correctAnswer": [
+      "tracert"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that they cannot access a shared folder on a local server. You begin troubleshooting by using the ping command. The results are as follows: Ping to the loopback address (127.0.0.1) is successful. Ping to the workstation's IP address is successful. Ping to the default gateway is successful. Ping to the server's IP address returns \"Request timed out.\" Based on these results, what is the MOST likely cause of the issue?",
+    "explanation": "The successful pings to the loopback address, the workstation's IP address, and the default gateway indicate that the user's workstation is correctly configured and has network connectivity. However, the inability to ping the server's IP address suggests that the server is either powered off, disconnected from the network, or configured not to respond to ICMP requests. If the workstation had an incorrect subnet mask, it would likely fail to communicate with the default gateway or other devices on the network. Since the ping to the default gateway was successful, this is not the issue. A misconfigured default gateway would prevent communication with devices outside the local network. However, the issue here is with a local server, and the successful ping to the default gateway rules out this possibility. Incorrect folder permissions would prevent access to the shared folder but would not cause the server to fail to respond to a ping. This is a separate issue unrelated to network connectivity.",
+    "options": [
+      "The user's workstation has an incorrect subnet mask.",
+      "The shared folder permissions are incorrectly set.",
+      "The server is powered off or disconnected from the network.",
+      "The default gateway is misconfigured."
+    ],
+    "correctAnswer": [
+      "The server is powered off or disconnected from the network."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that they are unable to access a specific website, and you suspect a name resolution issue. You decide to analyze the problem by verifying the DNS configuration and testing name resolution. After running the ipconfig /all command, you notice that the DNS server address is correctly configured. However, when you attempt to access the website using its domain name, it fails. Which of the following steps would BEST help you identify the root cause of the issue?",
+    "explanation": "The ipconfig /displaydns command allows you to view the DNS resolver cache, which contains recently queried domain names and their corresponding IP addresses. By analyzing the cache, you can determine if there are outdated or incorrect entries that might be causing the name resolution issue. If the cache contains incorrect mappings, it could explain why the domain name fails to resolve. While testing connectivity to the default gateway can help verify local network connectivity, it does not provide any insight into DNS or name resolution issues. The problem described is specific to resolving a domain name, not general network connectivity. Renewing the DHCP lease is useful for addressing IP configuration issues, but it does not directly address DNS or name resolution problems. Since the DNS server address is already correctly configured, this step would not help identify the root cause. The hostname command only displays the name of the local machine. While this information is useful in some scenarios, it is unrelated to troubleshooting DNS or name resolution issues for external websites.",
+    "options": [
+      "Use the ipconfig /renew command to refresh the DHCP lease and obtain a new IP address.",
+      "Use the hostname command to verify the local machine's name configuration.",
+      "Use the ipconfig /displaydns command to view the DNS resolver cache and analyze its contents.",
+      "Use the ping command to test connectivity to the default gateway."
+    ],
+    "correctAnswer": [
+      "Use the ipconfig /displaydns command to view the DNS resolver cache and analyze its contents."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A vulnerability manager cleans up the patching program in their enterprise. After getting it back to a good state, the manager focuses efforts on hardening. They begin with a test box and want to look at open connections from services. What command should the manager use?",
+    "explanation": "The netstat command can be used to investigate open ports and connections on the local host. This can be used to see what ports are open on a server and whether other clients are connecting to them. If the technician identifies or suspects a problem with name resolution, the technician can troubleshoot DNS with the nslookup command, either interactively or from the command prompt. The tracert command line utility is used to trace the path a packet of information takes to get to its target. Used without switches, ipconfig displays the IP address, subnet mask, and default gateway (router) for all network adapters to which TCP/IP is bound.",
+    "options": [
+      "netstat",
+      "tracert",
+      "nslookup",
+      "ipconfig"
+    ],
+    "correctAnswer": [
+      "netstat"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user working remotely reports that they cannot access a file server on the company network, even though they are connected through a VPN. You suspect an issue with remote network connectivity. After verifying that the user's IP configuration is correct, what is the next step you should take to analyze the issue?",
+    "explanation": "Pinging the IP address of the file server to verify connectivity to the remote resource directly tests the connection to the remote file server, helping to identify whether the issue is with the remote resource or the network path leading to it. While pinging the loopback address (127.0.0.1) to verify TCP/IP is installed correctly verifies that TCP/IP is installed and functioning on the user's device, the issue is with remote connectivity. Since the IP configuration is already verified, this step does not address the remote connectivity problem. Pinging the IP address of the default gateway to verify local network connectivity checks whether the user can communicate with the local network's gateway. However, the problem lies with remote connectivity, not local network connectivity. Restarting the computer may resolve some network issues, but it is not an analytical step to diagnose the problem. This action should be considered only after other troubleshooting steps fail.",
+    "options": [
+      "Ping the IP address of the file server to verify connectivity to the remote resource.",
+      "Ping the loopback address (127.0.0.1) to verify that TCP/IP is installed correctly.",
+      "Ping the IP address of the default gateway to verify local network connectivity.",
+      "Restart the user's computer to reset the network stack."
+    ],
+    "correctAnswer": [
+      "Ping the IP address of the file server to verify connectivity to the remote resource."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that they cannot browse to a specific website on the internet. From their computer, you find that a ping test to the IP address of the web server succeeds. A tracert test shows 17 hops to the destination web server. What is the MOST likely cause of the problem?",
+    "explanation": "In this scenario, a ping test to the IP address of the website succeeds, while accessing the website through the browser does not work. Users type hostnames in the browser to go to websites, and hostnames must be translated to IP addresses by a DNS server. Possible issues include the workstation using the wrong address for the DNS server, the DNS server not being available, or the DNS server not having an entry for the website. Because the ping and tracert tests work, you know that the IP address, subnet mask, and default gateway values are correct. So, the DNS server address must be incorrect.",
+    "options": [
+      "Incorrect DNS server address",
+      "Duplicate IP addresses",
+      "Incorrect subnet mask value",
+      "Incorrect default gateway address"
+    ],
+    "correctAnswer": [
+      "Incorrect DNS server address"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a network issue where a user cannot connect to a web server hosted on port 80. You suspect the port might be blocked by a firewall. Which of the following actions would BEST help you confirm whether the port is open and accessible?",
+    "explanation": "The netstat -b command is used to display all active connections and the executable responsible for opening each port. By running this command on the server, you can confirm whether the server is actively listening on port 80. If port 80 is not listed, the issue may be with the server's configuration or firewall settings. The ping command can confirm basic connectivity to the server's IP address but does not provide information about whether the server is listening on a specific port. The tracert command traces the route packets take to reach the server. While it can help identify network path issues, it does not confirm whether the server is listening on port 80. The ipconfig command only provides details about the user's local IP configuration. It does not provide information about active listening ports on the server.",
+    "options": [
+      "Use the ping command to test connectivity to the server's IP address.",
+      "Use the tracert command to trace the route to the server.",
+      "Use the netstat -b command to check for active listening ports on the server.",
+      "Use the ipconfig command to verify the user's local IP configuration."
+    ],
+    "correctAnswer": [
+      "Use the netstat -b command to check for active listening ports on the server."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user calls in to support, complaining that they can not seem to reach anything on the network. However, the user was able to receive an IP address of 169.254.15.83. What is the MOST likely problem?",
+    "explanation": "When no Dynamic Host Configuration Protocol (DHCP) server can be contacted, the adapter will either use an address from the automatic IP addressing (APIPA) 169.254.x.y range or will use an address specified as an alternate configuration in IPv4 properties. Receiving a 169.254 automatic private IP address (APIPA) does not necessarily mean that there is no internet access. It could mean that the DHCP reservations are full or that a DHCP server cannot be found. An APIPA is not associated with a domain name system (DNS) entry. DNS entries are usually created when the computer is joined to a domain. The scenario does not specify if the user is connecting wirelessly or through a wired connection.",
+    "options": [
+      "It cannot find the wireless SSID.",
+      "No internet access.",
+      "The computer does not receive a DNS entry.",
+      "No DHCP server found."
+    ],
+    "correctAnswer": [
+      "No DHCP server found."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is experiencing what seems to be latency, which is affecting their ability to work. They decide to validate their theory with a ping test. What will indicate latency?",
+    "explanation": "If the ping is successful, it responds with the message Reply from the IP Address and the time it takes for the host's response to arrive. The millisecond (ms) measures of round-trip time (RTT) can be used to diagnose latency problems. Address Resolution Protocol (ARP) is used to locate the hardware or media access control (MAC) address of the interface that owns an IP address. When no DHCP server can be contacted, the adapter will either use an address from the automatic private IP addressing (APIPA) 169.254.x.y range or will use an address specified as an alternate configuration in IPv4 properties. The domain name system (DNS) itself is not really useful to test latency. The RTT value should be used.",
+    "options": [
+      "DNS",
+      "RTT",
+      "APIPA",
+      "ARP"
+    ],
+    "correctAnswer": [
+      "RTT"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is unable to access a specific website by its domain name, but they can access other websites without any issues. You suspect a DNS issue and want to verify if the DNS server is correctly resolving the domain name. Which command should you apply to analyze the issue?",
+    "explanation": "The nslookup domainname.com command queries the DNS server to check if it is correctly resolving the domain name to an IP address. This is the most appropriate command to analyze DNS resolution issues for a specific domain. The ipconfig /flushdns command clears the DNS resolver cache, which can resolve issues with outdated or corrupted DNS records. However, it does not directly test whether the DNS server is resolving the domain name correctly. The ping domainname.com command tests connectivity to the domain name but relies on DNS resolution to work. If DNS is not resolving the domain name, the ping command will fail without providing insight into the DNS server's behavior. The ipconfig /renew command requests a new IP address lease from the DHCP server. This is unrelated to DNS resolution and would not help analyze whether the DNS server is resolving the domain name correctly.",
+    "options": [
+      "ping domainname.com",
+      "ipconfig /flushdns",
+      "nslookup domainname.com",
+      "ipconfig /renew"
+    ],
+    "correctAnswer": [
+      "nslookup domainname.com"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having problems connecting to other computers using hostnames. Which of the following commands will BEST help you troubleshoot this problem?",
+    "explanation": "You can use nslookup to troubleshoot DNS name resolution problems. You use arp to view information about MAC addresses and their corresponding IP addresses. You use netstat (network statistics) to display network connections (both incoming and outgoing), routing tables, and a number of network interface statistics. You use nbtstat to help troubleshoot NetBIOS name resolution problems.",
+    "options": [
+      "netstat",
+      "nbtstat",
+      "arp",
+      "nslookup"
+    ],
+    "correctAnswer": [
+      "nslookup"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following tasks can the netstat command help you perform when troubleshooting network ports?",
+    "explanation": "The netstat command is used to display active connections and listening ports on the local machine. It provides detailed information about which ports are open and the associated processes, making it an essential tool for troubleshooting network ports. Testing connectivity to a remote server's IP address is performed using the ping command, not netstat. The netstat command focuses on local machine connections and listening ports. Tracing the route packets take to a remote server is done using the tracert command, not netstat. The netstat command does not provide routing information. Displaying the IP configuration of the local machine is done using the ipconfig command, not netstat. The netstat command is used for monitoring network connections and ports.",
+    "options": [
+      "Display the IP configuration of the local machine.",
+      "Trace the route packets take to reach a remote server.",
+      "Test connectivity to a remote server's IP address.",
+      "Determine whether a specific port is actively listening on the local machine."
+    ],
+    "correctAnswer": [
+      "Determine whether a specific port is actively listening on the local machine."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A remote user reports they cannot access a file server while working from a hotel. You verify that their IP configuration is valid, they are using a VPN, and can successfully ping the default gateway. However, when attempting to ping the file server's IP address, the request times out. What is the MOST likely cause of the issue, and what should you do next?",
+    "explanation": "The file server may be configured to ignore ICMP (ping) requests for security reasons. Since the user can successfully ping the default gateway, the issue is not with their local network configuration. Testing access to the file server using its hostname (e.g., through file sharing or remote desktop) would help confirm whether the server is reachable despite not responding to ping. The user can successfully ping the default gateway, which indicates that the IP configuration is valid and there is no IP conflict. A duplicate IP address would typically prevent successful communication with the gateway or other devices on the network. The hotel's router is unlikely to have a route to the file server's private network. Remote access to the file server would typically require a VPN or other secure connection, which is not mentioned in the scenario. The issue lies elsewhere. The issue described involves pinging the file server's IP address directly, which bypasses DNS resolution. Flushing the DNS cache would not resolve the problem in this case.",
+    "options": [
+      "The hotel's router does not have a route to the file server's network. Contact the hotel's IT support to configure the router.",
+      "The DNS resolver cache on the user's laptop is outdated. Flush the DNS cache and retry the connection.",
+      "The user's laptop has a duplicate IP address. Reconfigure the IP settings to resolve the conflict.",
+      "The file server is configured not to respond to ping requests. Verify connectivity by testing access to the file server using its hostname."
+    ],
+    "correctAnswer": [
+      "The file server is configured not to respond to ping requests. Verify connectivity by testing access to the file server using its hostname."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.1-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.1.10",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command would you use to have a workstation stop using an IP address that it obtained from a DHCP server?",
+    "explanation": "You can use ipconfig /release to release the IP configuration information obtained from the DHCP server. Use ipconfig /renew to request new IP configuration information from the DHCP server. Use net stop to stop a network service. Use net logoff to break the connection between your computer and a shared resource.",
+    "options": [
+      "net stop",
+      "net logoff",
+      "ipconfig /renew",
+      "ipconfig /release"
+    ],
+    "correctAnswer": [
+      "ipconfig /release"
+    ],
+    "origin": "CertMaster"
+  }
+]

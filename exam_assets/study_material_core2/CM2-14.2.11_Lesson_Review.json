@@ -1,0 +1,304 @@
+[
+  {
+    "id": "CM2-14.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which port must be opened on the firewall of a Windows system so that a Remote Desktop connection can be established?",
+    "explanation": "A Windows system firewall must be configured to allow Remote Desktop traffic through. This is done by opening TCP port 3389 (by default). This port is opened automatically on the Remote Desktop host when remote connections are enabled. SSH uses port 22, Telnet uses port 23, and Network Time Protocol uses port 123.",
+    "options": [
+      "23",
+      "22",
+      "123",
+      "3389"
+    ],
+    "correctAnswer": [
+      "3389"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a network administrator for a large financial institution. There are several account advisors who are constantly on the road with their Windows laptop devices. You want to be able to occasionally check on the health of these laptops, including the ability to receive automated alerts for any unusual activity that may indicate some kind of security breach. Which of the following remote management technologies would BEST help you monitor these laptops?",
+    "explanation": "Remote management and monitoring (RMM) software lets you perform tasks remotely, such as analyzing activity and receiving automated alerts for unusual device activity. An RMM is the best solution in this scenario. While desktop management software can help you remotely perform tasks such as installing software and managing user permissions, it is not specifically designed to check device health or security. File transfer software is specifically designed for secure remote transfer of files from one device to another. This software is not designed to manage and monitor devices. Microsoft Remote Assistant (MSRA) is designed for technical support and troubleshooting by turning control of your system to another remote user. MSRA is not designed for continuous remote device monitoring or management.",
+    "options": [
+      "File transfer software",
+      "Desktop management software",
+      "RMM",
+      "MSRA"
+    ],
+    "correctAnswer": [
+      "RMM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security analyst working on a monitoring team wants to implement new monitoring mechanisms around Secure Shell (SSH) authentication. Which of the following should the analyst focus on?",
+    "explanation": "Monitoring for and removing compromised client public keys is a critical security task. Many recent attacks on web servers have exploited poor SSH key management. SSH works over port 22. Quick Assist works over the encrypted HTTPS port TCP/443. The helper must be signed in with a Microsoft account to offer assistance. To connect to a server via Remote Desktop, open the Remote Desktop Connection shortcut or run mstsc.exe. This works over port 3389. In macOS, users can use the screen sharing feature for remote desktop functionality. Screen sharing is based on the Virtual Network Computing (VNC) protocol.",
+    "options": [
+      "Monitor netflows for port 3389 traffic.",
+      "Monitor for compromised keys.",
+      "Monitor the screen sharing service.",
+      "Monitor netflows for port 443 traffic."
+    ],
+    "correctAnswer": [
+      "Monitor for compromised keys."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "You provide desktop support for a small company. The company has two locations in the same city, but they are several miles away. You get a call from an employee who is having problems with an application. He tries to describe what he is doing in the application, but you just can't understand what might be causing the problem. Which of the following is the BEST way to provide the assistance the employee needs? (Select two.)",
+    "explanation": "The best approach is to instruct the employee to establish a Remote Assistance or Quick Assist session to watch what he is doing. In the session, you could also take control and show the employee how to complete the task. With Remote Desktop, you could try to perform the task on the employee's computer, but the employee would not be able to see what you were doing. Driving to the location or scheduling training would not be as effective or timely as establishing a Remote Assistance or Quick Assist session.",
+    "options": [
+      "Establish a Remote Assistance connection and watch what the employee is doing.",
+      "Establish a Remote Desktop connection and perform the task on the employee's system.",
+      "Establish a Quick Assist session with the employee and watch what he is doing.",
+      "Schedule the employee to receive more training on using the application.",
+      "Drive to the other location as soon as possible and then watch as the employee performs the task."
+    ],
+    "correctAnswer": [
+      "Establish a Remote Assistance connection and watch what the employee is doing.",
+      "Establish a Quick Assist session with the employee and watch what he is doing."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which remote access solution provides you with full remote access to the graphical desktop of a Windows system, including the ability to run programs, manipulate files, and restart or power down the computer?",
+    "explanation": "Remote Desktop provides a remote user with full access to the graphical desktop of a Windows system. This allows them to run programs, manipulate files, and restart or power down the computer (just like a regular user). Remote Assistance does not provide full graphical desktop access. Telnet does not provide full graphical desktop access. Screen sharing is designed for macOS.",
+    "options": [
+      "Telnet",
+      "Remote Desktop",
+      "Screen sharing",
+      "Remote Assistance"
+    ],
+    "correctAnswer": [
+      "Remote Desktop"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator wants to remotely deploy firmware updates to their managed devices. This type of update usually occurs overnight while devices are turned off. Which of the following tools should the administrator set up in order to facilitate these updates?",
+    "explanation": "Remote network boot capability is often referred to as wake on LAN (WOL) and allows devices to be remotely powered on over a network. This would allow the administrator to ensure all devices can be powered on to then start the update process. Endpoint detection and response (EDR) security scanning is associated more with security monitoring than the ability to push firmware. Remote monitoring and management (RMM) tools are principally designed for use by managed service providers (MSPs). An MSP is an outsourcing company that specializes in handling all IT support for its clients. Mobile device management (MDM) suites are designed for deployment by a single organization and focus primarily on access control and authorization.",
+    "options": [
+      "EDR",
+      "MDM",
+      "RMM",
+      "WOL"
+    ],
+    "correctAnswer": [
+      "WOL"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the purpose of Remote Monitoring and Desktop Management Tools?",
+    "explanation": "Remote Monitoring and Desktop Management Tools are designed to help IT administrators oversee and maintain remote systems. These tools provide functionalities such as monitoring system performance, managing updates, and troubleshooting issues remotely. While remote access tools allow users to access their desktops remotely, the statement is incorrect because security measures are a critical aspect of remote access technologies. Encryption and authentication are important to secure remote connections. While VPNs are a method to secure remote connections, they are not the primary purpose of Remote Monitoring and Desktop Management Tools. VPNs are a separate technology used to establish secure communication channels. Encryption is indeed a critical feature of remote desktop tools, but it is not the primary focus of Remote Monitoring and Desktop Management Tools. These tools are more comprehensive and focus on monitoring, managing, and troubleshooting systems rather than solely encrypting data.",
+    "options": [
+      "They enable IT administrators to monitor, manage, and troubleshoot remote systems efficiently.",
+      "They are tools designed to encrypt all data transmitted over remote desktop sessions to prevent unauthorized access.",
+      "They are primarily used for creating virtual private networks (VPNs) to secure remote connections.",
+      "They allow users to remotely access their desktops from any device without requiring security measures."
+    ],
+    "correctAnswer": [
+      "They enable IT administrators to monitor, manage, and troubleshoot remote systems efficiently."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As a Help Desk Level 2 operator, you are attempting to use Remote Desktop to connect to an employee's Windows desktop to resolve a printing issue that has been given to you by another Level 2 operator. You know that your Windows and the employee's Windows computers are configured correctly for this Remote Desktop connection. You also have the correct connection information. In starting your work, you receive a message that another user has locked the computer and you are not provided the ability to disconnect or take over the session. Which of the following is the MOST likely reason that you cannot connect to the desktop?",
+    "explanation": "In order for you to connect to the employee's desktop using Remote Desktop, all other remote connections must be inactive. Because this is an issue given to you by another Level 2 operator, it is highly likely that the Remote Desktop connection between the original Level 2 operator and the employee's desktop has not been disconnected. If you have the correct connection information, the IP address that you need to enter should be correct. By default, when you enable Remote Desktop, the local Windows firewall is automatically updated with rules that allow Remote Desktop connections to be made to the computer. This includes opening TCP port 3389 to allow RDP traffic. Although you cannot connect to a computer that is turned off, it is highly unlikely that the employee's computer is turned off, as the Level 1 operator has just established an RDP connection with the desktop.",
+    "options": [
+      "Your firewall is not set up to allow the connection through port 3389.",
+      "The remote session from the original Level 2 operator has not been disconnected.",
+      "The employee's computer is turned off.",
+      "You have the wrong IP address for the employee's computer."
+    ],
+    "correctAnswer": [
+      "The remote session from the original Level 2 operator has not been disconnected."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user experiences issues with their computer and has asked someone to remote desktop onto their computer to help resolve the issue. Unfortunately, the firewall only allows port 443 traffic. What should they use for assistance?",
+    "explanation": "Quick Assist works over the encrypted HTTPS port TCP/443. The helper must be signed in with a Microsoft account to offer assistance. Microsoft Remote Assistance (MSRA) assigns a port dynamically from the ephemeral range (49152 to 65535). This makes it difficult to configure a firewall securely to allow the connection. To connect to a server via the Remote Desktop, open the Remote Desktop Connection shortcut or run mstsc.exe. This works over port 3389. If the Remote Desktop is used to connect to a server that has been compromised by malware, the credentials of the user account used to make the connection become highly vulnerable. RDP Restricted Admin (RDPRA) mode is one means of mitigating this risk.",
+    "options": [
+      "MSRA",
+      "RDPRA",
+      "mstsc",
+      "Quick Assist"
+    ],
+    "correctAnswer": [
+      "Quick Assist"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Simple Protocol for Independent Computing Environments (SPICE)?",
+    "explanation": "SPICE is specifically designed to provide remote desktop functionality for virtualized environments. It allows users to interact with virtual machines as if they were local, offering a seamless and efficient remote desktop experience. This is the primary purpose of SPICE, making this the correct answer. Providing secure shell access to remote systems describes the functionality of Secure Shell (SSH), not SPICE. SSH is used for secure command-line access to remote systems, whereas SPICE focuses on graphical remote desktop functionality for virtualized environments. Monitoring and managing network devices remotely describes the role of remote monitoring and management (RMM) tools, not SPICE. SPICE is not designed for network device management but rather for remote desktop access in virtualized environments. Encrypting data transmitted over a VPN connection describes the functionality of a Virtual Private Network (VPN), not SPICE. While SPICE may use encryption for secure connections, its primary purpose is not to encrypt VPN data but to provide remote desktop access for virtual machines.",
+    "options": [
+      "To encrypt data transmitted over a VPN connection.",
+      "To provide secure shell access to remote systems.",
+      "To enable remote desktop functionality for virtualized environments.",
+      "To monitor and manage network devices remotely."
+    ],
+    "correctAnswer": [
+      "To enable remote desktop functionality for virtualized environments."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A helpdesk operator formerly worked with Windows computers in the environment, but the company started rolling out test Mac computers. The operator needs to connect to a user's Mac. What tool would the operator likely use?",
+    "explanation": "In macOS, users can use the screen sharing feature for remote desktop functionality. Screen sharing is based on the Virtual Network Computing (VNC) protocol. Windows uses the Remote Desktop Protocol (RDP) to implement terminal server and client functionality. To connect to a server via Remote Desktop, open the Remote Desktop Connection shortcut or run mstsc.exe. Enter the server's IP address or fully qualified domain name (FQDN). Corporate-owned, business only (COBO) means that the device is the property of the company and may only be used for company business.",
+    "options": [
+      "RDP",
+      "COBO",
+      "VNC",
+      "mstsc"
+    ],
+    "correctAnswer": [
+      "VNC"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company's threat intelligence team determines that one of a threat actor's techniques is to perform a denial of service against the Remote Desktop Protocol (RDP) functionality in servers. What can the company enable to help prevent this?",
+    "explanation": "Network Level Authentication (NLA) protects the Remote Desktop Protocol (RDP) server against denial of service attacks. Without NLA, the system configures a desktop before the user logs on. If the remote desktop is used to connect to a server that has been compromised by malware, the credentials of the user account used to make the connection become highly vulnerable. RDP restricted admin (RDPRA) mode is one means of mitigating this risk. Remote credential guard is also a means of mitigating the risk with compromised credentials of compromised user accounts. In macOS, users can use the screen sharing feature for remote desktop functionality. Screen sharing is based on the Virtual Network Computing (VNC) protocol.",
+    "options": [
+      "RDPRA",
+      "Remote credential guard",
+      "VNC",
+      "NLA"
+    ],
+    "correctAnswer": [
+      "NLA"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which remote assistance solution provides the user with a six-digit code to share with the corresponding remote user?",
+    "explanation": "Quick Assist is a newer Windows app that provides an even easier method to receive or provide assistance remotely. To assist another user, you access Quick Assist and are provided a six-digit code that you can send to the person you want to help. After they enter the number into Quick Assist, you will be able to either view their screen or take control of their system. Remote Desktop, Remote Assistance, and screen sharing require the use of usernames and passwords, not a six-digit code to share with a remote user.",
+    "options": [
+      "Screen sharing",
+      "Remote Desktop",
+      "Remote Assistance",
+      "Quick Assist"
+    ],
+    "correctAnswer": [
+      "Quick Assist"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is assisting a remote user who is using macOS and needs to troubleshoot an issue on their system. The technician wants to use screen sharing software that is natively supported by macOS and ensures the connection is encrypted. Which of the following options should the technician choose?",
+    "explanation": "Screen sharing is a native feature in macOS that uses the Virtual Network Computing (VNC) protocol. It provides remote desktop functionality and ensures that the connection is encrypted, making it a secure option for troubleshooting macOS systems. This aligns with the scenario where the technician needs a macOS-compatible and secure solution. While RDP is a widely used remote desktop protocol, it is primarily designed for Windows systems. Although there are RDP clients available for macOS, it is not natively supported by macOS for hosting remote desktop sessions. Therefore, it is not the best choice in this scenario. SSH is a command-line tool used for secure remote access to systems, typically for managing servers or performing administrative tasks. It does not provide a graphical user interface (GUI) for screen sharing or remote desktop functionality, which is required in this scenario. SPICE is a protocol used for virtualized environments to provide remote access to virtual machines. It is not natively supported by macOS and is not relevant for troubleshooting a physical macOS system in this scenario.",
+    "options": [
+      "Screen sharing (VNC)",
+      "Secure Shell (SSH)",
+      "Remote Desktop Protocol (RDP)",
+      "Simple Protocol for Independent Computing Environments (SPICE)"
+    ],
+    "correctAnswer": [
+      "Screen sharing (VNC)"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-14.2-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "14.2.11",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator is deciding whether to use WinRM for remote management in their organization. Which of the following is the MOST critical factor to evaluate when determining if WinRM is the appropriate tool for their needs?",
+    "explanation": "Security is a critical factor when evaluating remote management tools. WinRM uses the WS-Management protocol, which must align with the organization's security policies to ensure safe and compliant remote management. Security considerations are important when using remote access technologies. WinRM is not primarily designed for file transfer. While remote management tools may facilitate some file operations, this is not the primary function of WinRM, and it should not be the most critical factor in the evaluation. WinRM is a command-line-based tool. While a GUI might be a preference for some administrators, it is not the most critical factor to evaluate when determining the suitability of WinRM. While network speed can impact the performance of remote management tools, it is not specific to WinRM. The decision to use WinRM should focus more on its functionality and security rather than network speed.",
+    "options": [
+      "The ability to transfer large files between systems",
+      "The compatibility of WinRM with the organization's existing security policies",
+      "The speed of the network connection between the administrator and the remote system",
+      "The availability of a graphical user interface (GUI) for remote management"
+    ],
+    "correctAnswer": [
+      "The compatibility of WinRM with the organization's existing security policies"
+    ],
+    "origin": "CertMaster"
+  }
+]

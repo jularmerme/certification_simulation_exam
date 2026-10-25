@@ -1,0 +1,342 @@
+[
+  {
+    "id": "CM2-12.6-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to organize their files on a shared drive by creating a new folder for a specific project. However, they are unsure how to create a folder in File Explorer. What steps should you guide them to take?",
+    "explanation": "File Explorer is used to manage files and folders. To create a new folder, the user can navigate to the desired location, right-click, select \"New,\" and then choose \"Folder.\" This is the standard method for creating folders in File Explorer. The Control Panel does not have a \"Create New Folder\" option under Storage Settings. Folder creation is managed directly within File Explorer, not through the Control Panel. The Task Manager is not designed for file or folder management. It is used for monitoring and managing system processes and performance and does not have a \"File Management\" feature for creating folders. \"Ctrl + N\" in File Explorer opens a new window, not a new folder. The correct method for creating a folder is to right-click, select \"New,\" and then choose \"Folder.\"",
+    "options": [
+      "Navigate to the desired location in File Explorer, right-click, select \"New,\" and then choose \"Folder.\"",
+      "Use the Task Manager to create a new folder by selecting \"File Management\" under the Processes tab.",
+      "Navigate to the desired location in File Explorer and press \"Ctrl + N\" to create a new folder.",
+      "Open the Control Panel, go to Storage Settings, and select \"Create New Folder.\""
+    ],
+    "correctAnswer": [
+      "Navigate to the desired location in File Explorer, right-click, select \"New,\" and then choose \"Folder.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is comparing the desktop features of Windows 10 and Windows 11 to determine which operating system better suits their needs. They prioritize having a modern interface with improved usability for touch devices and the ability to organize their workspaces. Which of the following statements BEST supports their decision?",
+    "explanation": "Windows 11 refreshes the desktop style with a center-aligned taskbar, rounded corners, and better spacing for touch control. Additionally, it makes the multiple desktops feature more accessible, which aligns with the user's priorities for a modern interface and workspace organization. While Windows 10 does offer a touch-optimized Start menu, it lacks the modern interface improvements (e.g., center-aligned taskbar, rounded corners) and enhanced multiple desktops feature that Windows 11 provides. The user prioritizes these features, making Windows 11 a better choice. Both Windows 10 and Windows 11 include a notification area and the ability to pin icons to the taskbar. These features are not unique to Windows 10 and do not address the user's specific priorities for a modern interface and workspace organization. Windows 11 does not eliminate the taskbar. Instead, it introduces a center-aligned taskbar, which is a key feature of its modern interface. Additionally, Windows 11 focuses on more than just touch-optimized features, such as improving workspace organization with multiple desktops.",
+    "options": [
+      "Windows 10 is better because it includes a notification area for background processes and pinned taskbar icons.",
+      "Windows 10 is better because it offers a touch-optimized Start menu and a traditional taskbar layout.",
+      "Windows 11 is better because it eliminates the need for a taskbar and focuses solely on touch-optimized features.",
+      "Windows 11 is better because it introduces a center-aligned taskbar, rounded corners, and improved multiple desktop accessibility."
+    ],
+    "correctAnswer": [
+      "Windows 11 is better because it introduces a center-aligned taskbar, rounded corners, and improved multiple desktop accessibility."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A digital forensics expert investigates a laptop that was completely powered down. They are looking for a hibernation file on the local hard drive. Which power mode would perform this?",
+    "explanation": "Hibernate mode suspends to disk. It saves any open but unsaved file data in memory to disk (as hiberfil.sys in the root of the boot volume) and then turns the computer off, which is also referred to as ACPI mode S4. A computer creates a hibernation file in the hybrid sleep mode and then goes into the standby state, referred to as hybrid sleep mode. Modern standby utilizes a device's ability to function in an S0 low-power idle mode to maintain network connectivity without consuming too much energy. Standby suspends to RAM, which cuts power to most devices but maintains power to the memory, also called ACPI modes S1-S3.",
+    "options": [
+      "Hibernate",
+      "Modern standby",
+      "Standby",
+      "Hybrid sleep"
+    ],
+    "correctAnswer": [
+      "Hibernate"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization has implemented a cloud-based email system to improve collaboration. A manager notices that emails sent from their desktop are not appearing in the \"Sent Items\" folder on their mobile device. What should the manager do to resolve this issue?",
+    "explanation": "Cloud-based email systems rely on synchronization to ensure that emails and folders are consistent across devices. Verifying and enabling synchronization for the \"Sent Items\" folder resolves the issue. Reinstalling the email application on the desktop is unnecessary and does not address the synchronization settings, which are the likely cause of the issue. Advising the manager to only send emails from their mobile device is not a practical solution and does not utilize the full functionality of the cloud-based email system. Disabling synchronization defeats the purpose of using a cloud-based email system, which is designed to provide seamless access and synchronization across devices.",
+    "options": [
+      "Check if the email system's synchronization feature is enabled for the \"Sent Items\" folder.",
+      "Reinstall the email application on the desktop to fix the synchronization issue.",
+      "Disable the synchronization feature on all devices to prevent further issues.",
+      "Advise the manager to only send emails from their mobile device to avoid the problem."
+    ],
+    "correctAnswer": [
+      "Check if the email system's synchronization feature is enabled for the \"Sent Items\" folder."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their desktop computer is running slowly, particularly when multiple applications are open. Upon investigation, you find that the system is set to prioritize background processes and has desktop visual effects enabled for best appearance. Which of the following actions would BEST address the issue?",
+    "explanation": "The Advanced System Settings allow you to adjust performance options, such as desktop visual effects and process prioritization. Changing these settings to prioritize foreground processes and optimize for best performance directly addresses the issue of slow performance when multiple applications are open. Disabling Windows Defender Firewall is not recommended as it compromises system security and does not address the root cause of the performance issue. Disabling unused hardware devices in Device Manager may free up minimal resources but is not a targeted solution for improving application performance or addressing process prioritization. Configuring sleep mode in power options only affects the system when it is idle and does not resolve the performance issue during active use.",
+    "options": [
+      "Configure the power options in System Settings to enable sleep mode when the system is idle.",
+      "Disable Windows Defender Firewall to free up system resources.",
+      "Adjust the performance options in Advanced System Settings to prioritize foreground processes and optimize for best performance.",
+      "Use the Device Manager to disable unused hardware devices."
+    ],
+    "correctAnswer": [
+      "Adjust the performance options in Advanced System Settings to prioritize foreground processes and optimize for best performance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What type of update introduces changes to OS features and tools in Windows Update?",
+    "explanation": "A Feature update is the correct answer because this type of update is released periodically and introduces changes to OS features and tools. It may also include new functionalities or improvements to the operating system. A Patch update is incorrect because it primarily addresses coding problems in the system or application files to improve reliability, security, or performance. It does not introduce new features or tools. A Security update is incorrect because it focuses on fixing vulnerabilities and protecting the system from threats like viruses and malware. It does not involve changes to OS features or tools. A Driver update is incorrect because it is used to update hardware device drivers to ensure compatibility and performance. It does not introduce changes to the operating system's features or tools.",
+    "options": [
+      "Driver update",
+      "Patch update",
+      "Feature update",
+      "Security update"
+    ],
+    "correctAnswer": [
+      "Feature update"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user has recently upgraded to Windows 11 and wants to set up two separate workspaces: one for business applications and another for personal apps and games. Which feature of the Windows 11 desktop should the user utilize to achieve this?",
+    "explanation": "Windows 11 makes the multiple desktops feature more accessible. This feature allows users to set up different workspaces, such as one for business apps and another for personal apps and games, which directly addresses the user's need in the scenario. The touch-optimized Start menu is a feature of Windows 10, not Windows 11. Additionally, the Start menu is not related to creating separate workspaces for different applications. The notification area is used to display icons for background processes and notifications. It does not provide functionality for setting up separate workspaces or managing multiple desktops. The taskbar pinning feature allows users to pin frequently used applications to the taskbar for quick access. While useful, it does not help in creating separate workspaces for business and personal applications.",
+    "options": [
+      "The notification area",
+      "The taskbar pinning feature",
+      "The touch-optimized Start menu",
+      "The multiple desktops feature"
+    ],
+    "correctAnswer": [
+      "The multiple desktops feature"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios best evaluates whether a computer system meets the Central Processing Unit (CPU), System Memory, and Storage Requirements for installing a new application?",
+    "explanation": "That the system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space is correct because it evaluates a scenario where the system meets all the application's requirements for CPU architecture, system memory (RAM), and storage space. The 64-bit CPU and OS are compatible with the application, and the system has sufficient RAM and storage space to install and run the application effectively. The system has a 32-bit CPU and OS, which are incompatible with the application's requirement for a 64-bit CPU and OS. While the RAM and storage space might be sufficient, the CPU architecture mismatch prevents the application from being installed or run. Although the system has a compatible 64-bit CPU and OS, it does not meet the application's minimum requirements for RAM (8GB required, but only 4GB available) and free storage space (100GB required, but only 50GB available). This would result in the application failing to install or run properly. While the system exceeds the application's CPU, RAM, and storage requirements, it lacks a dedicated graphics card, which is necessary for certain demanding applications like graphic design software or games. This omission would prevent the application from functioning as intended.",
+    "options": [
+      "The system has a 32-bit CPU and OS, 4GB of RAM, and 100GB of free storage space, but the application requires a 64-bit CPU and OS.",
+      "The system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space, meeting all the application's requirements.",
+      "The system has a 64-bit CPU and OS, 4GB of RAM, and 50GB of free storage space, but the application requires 8GB of RAM and 100GB of free storage space.",
+      "The system has a 64-bit CPU and OS, 16GB of RAM, and 1TB of free storage space, but the application requires a dedicated graphics card."
+    ],
+    "correctAnswer": [
+      "The system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space, meeting all the application's requirements."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is the Windows Settings app considered the preferred administrative interface over the Control Panel in modern versions of Windows?",
+    "explanation": "The Windows Settings app is the preferred administrative interface because it is touch-enabled and organizes configuration options into \"pages\" under main headings, making it more user-friendly and modern compared to the legacy Control Panel. Allowing users to execute advanced commands and scripts for system configuration describes the functionality of the Command Prompt or PowerShell, not the Windows Settings app. The Settings app is designed for graphical configuration, not command-line operations. Not all configuration options from the Control Panel are included in the Windows Settings app. Some legacy options still require the use of the Control Panel. While the Windows Settings app is the preferred interface, it is not the only one. The Control Panel and other tools can also be used for managing user accounts and devices.",
+    "options": [
+      "It is the only interface available for managing user accounts and devices.",
+      "It provides a touch-enabled interface and organizes configuration options into easily navigable headings.",
+      "It includes all legacy configuration options from the Control Panel.",
+      "It allows users to execute advanced commands and scripts for system configuration."
+    ],
+    "correctAnswer": [
+      "It provides a touch-enabled interface and organizes configuration options into easily navigable headings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST describes the importance of OS requirements for applications?",
+    "explanation": "A 64-bit application requires both a 64-bit CPU and a 64-bit OS platform to function. This is a fundamental compatibility requirement for software applications. Software applications are designed to run under specific operating systems. For example, macOS applications cannot run on Windows unless additional compatibility tools (like emulators) are used. 32-bit applications can run on a 64-bit operating system using a special compatibility environment, such as WOW64 (Windows on Windows 64-bit). While compatibility between Linux distributions is generally not an issue, some applications may still require manual compilation from source code if they are not released in a compatible package format for a specific distribution.",
+    "options": [
+      "Linux applications are always compatible with all Linux distributions without any modifications.",
+      "Applications designed for macOS can run on Windows without compatibility issues.",
+      "32-bit applications cannot run on a 64-bit operating system.",
+      "A 64-bit application requires both a 64-bit CPU and a 64-bit OS to function."
+    ],
+    "correctAnswer": [
+      "A 64-bit application requires both a 64-bit CPU and a 64-bit OS to function."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You would like to set Windows Update to delay updates for a week. Which of the following Windows Update settings would you use to configure the delay?",
+    "explanation": "By using the Pause Updates settings, you can delay applying updates for up to a week. Update History gives you access to several update logs, including feature updates, driver updates, and more. Advanced Options gives you access to a group of settings for configuring items, such as receiving updates for other Microsoft products and active hours when Windows will not reboot for an update. However, these options do not include a setting for delaying an update. Windows Insider Program is a software-testing program. You can select from three levels of participation in the program, but you cannot use the options to delay an update.",
+    "options": [
+      "Update History",
+      "Windows Insider Program",
+      "Pause Updates",
+      "Advanced Options"
+    ],
+    "correctAnswer": [
+      "Pause Updates"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates the effective use of cloud storage synchronization?",
+    "explanation": "A user editing a document on their laptop with the changes automatically updating on their phone via the cloud highlights the core functionality of cloud storage synchronization, where changes made on one device are automatically updated across all connected devices. This ensures files are always up-to-date and accessible. While uploading and deleting files from a local device can save space, it does not demonstrate synchronization, as the file is no longer accessible locally. Downloading and emailing a file does not involve synchronization; it is a manual process that bypasses the cloud's automatic updating capabilities. Pausing synchronization prevents updates, which is the opposite of demonstrating effective use of synchronization.",
+    "options": [
+      "A user edits a document on their laptop, and the changes automatically update on their phone via the cloud.",
+      "A user uploads a file to a cloud storage service and deletes it from their local device to save space.",
+      "A user downloads a file from their cloud storage to their desktop and emails it to a colleague.",
+      "A user pauses synchronization to prevent updates while using a metered internet connection."
+    ],
+    "correctAnswer": [
+      "A user edits a document on their laptop, and the changes automatically update on their phone via the cloud."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the impact of cloud-based email systems on collaboration within an organization?",
+    "explanation": "Cloud-based email systems enabling real-time synchronization of emails and folders, improving collaboration among employees, best describes the impact of cloud-based email systems on collaboration by emphasizing real-time synchronization, which ensures employees can work together seamlessly regardless of their location or device. Cloud-based email systems allowing employees to access emails from any device, but not supporting folder synchronization, incorrectly states that cloud-based email systems do not support folder synchronization, which is a key feature that enhances collaboration. Cloud-based email systems requiring employees to use a single device for accessing emails, limiting collaboration opportunities, misrepresents cloud-based email systems by suggesting they limit access to a single device, which is contrary to their purpose of enabling multi-device access. The description that cloud-based email systems are only suitable for personal use and do not support enterprise-level collaboration incorrectly claims that cloud-based email systems are unsuitable for enterprise-level collaboration, ignoring their widespread use in organizations for improving teamwork and communication.",
+    "options": [
+      "Cloud-based email systems are only suitable for personal use and do not support enterprise-level collaboration.",
+      "Cloud-based email systems allow employees to access emails from any device, but they do not support folder synchronization.",
+      "Cloud-based email systems enable real-time synchronization of emails and folders, improving collaboration among employees.",
+      "Cloud-based email systems require employees to use a single device for accessing emails, limiting collaboration opportunities."
+    ],
+    "correctAnswer": [
+      "Cloud-based email systems enable real-time synchronization of emails and folders, improving collaboration among employees."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Cindy wants to install a new application on her computer. This application requires the operating system to have 1 gigabyte of working memory to function properly. Which of the following system requirements does Cindy need to check for compatibility?",
+    "explanation": "Cindy should check the amount of RAM (random access memory) available on her system to see if she has the available memory to run 1 gigabyte of RAM. RAM is data storage that is lost when the system shuts down. Storage locations in RAM can be accessed in any order and simultaneously, and this allows programs to run more quickly than if they were dependent on accessing data stored on the hard drive or SSD. The CPU capacity refers to the central processing unit, which retrieves instructions, decodes them, and performs the program calculations. SSD is the solid-state drive, which is a storage device that stores data in semiconductor cells and retains the data when the system is shut down. VRAM (video random access memory) is the memory used to store image data that is displayed on a computer.",
+    "options": [
+      "RAM capacity",
+      "CPU capacity",
+      "SSD storage capacity",
+      "VRAM capacity"
+    ],
+    "correctAnswer": [
+      "RAM capacity"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an example of a distribution method for installing applications?",
+    "explanation": "Network-based installers are a distribution method for deploying applications. This involves copying the setup file to a shared folder on the network and running the setup file from there. It is a valid and commonly used method for distributing applications, especially in corporate environments. Running the application directly from the cloud without installation is not a distribution method for installing applications. Instead, it refers to cloud-based services or Software as a Service (SaaS), which do not require local installation. Writing custom code to create the application refers to the development of an application, not its distribution. Distribution methods involve how pre-developed applications are made available for installation, such as through network-based installers, physical media, or downloads. A physical hardware token is a security device used for authentication, not a method for distributing or installing applications. It is unrelated to the process of making applications available for installation.",
+    "options": [
+      "Using a network-based installer",
+      "Running the application directly from the cloud without installation",
+      "Writing custom code to create the application",
+      "Using a physical hardware token"
+    ],
+    "correctAnswer": [
+      "Using a network-based installer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-016",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An intern for a Windows server team is watching a server administrator verify the authenticity and integrity of an installer. Where did the administrator most likely get it from?",
+    "explanation": "When downloading an installer from an internet location, it is imperative to verify the package's authenticity and integrity and scan it for malware. Setup files can be distributed on physical media, such as CD/DVD or a USB thumb drive. USBs might be a secondary medium after it was downloaded from the internet first, however. If an administrator was pulling a file from a local share, it probably first came from the internet and should have been scanned during the initial download. ISO files stored on removable media or a host system are often used to install virtual machine operating systems. The file itself might be an ISO, but they would have had to get it from somewhere.",
+    "options": [
+      "ISO",
+      "Share drive",
+      "Internet download",
+      "USB"
+    ],
+    "correctAnswer": [
+      "Internet download"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-017",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization is experiencing issues with inconsistent permissions between their cloud-based resources in Google Cloud and their on-premise systems managed through Microsoft Active Directory. Employees are required to remember separate credentials for each environment, leading to frequent login issues and administrative overhead. After reviewing their setup, the IT team decides to implement identity synchronization. Which of the following outcomes would BEST resolve the organization's challenges?",
+    "explanation": "Identity synchronization allows for unified credentials and consistent permissions across cloud and on-premise environments. This directly addresses the organization's challenges of inconsistent permissions and the need for multiple credentials. Identity synchronization eliminates the need for separate credentials by unifying them. While permissions are synchronized, the solution also simplifies authentication by allowing a single set of credentials. Identity synchronization ensures consistent permissions across environments. Additionally, authentication is still required, but it is streamlined through the use of unified credentials. Identity synchronization not only unifies credentials but also synchronizes permissions and policies. Manual configuration of permissions would contradict the benefits of identity synchronization.",
+    "options": [
+      "Employees will use a single set of credentials, and permissions will be consistently applied across both environments.",
+      "Permissions will remain inconsistent, but employees will no longer need to authenticate to access resources.",
+      "Employees will still need separate credentials, but permissions will be synchronized between the environments.",
+      "Employees will use a single set of credentials, but permissions will need to be manually configured for each environment."
+    ],
+    "correctAnswer": [
+      "Employees will use a single set of credentials, and permissions will be consistently applied across both environments."
+    ],
+    "origin": "CertMaster"
+  }
+]

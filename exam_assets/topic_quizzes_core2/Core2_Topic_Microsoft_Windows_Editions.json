@@ -1,0 +1,313 @@
+[
+  {
+    "id": "1202-WED-001",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows 10 and Windows 11 N editions are special regional versions of Microsoft Windows designed for the European market. They are identical to their standard counterparts in terms of core functionality but exclude certain preinstalled multimedia features. The \"N\" designation refers specifically to the absence of Windows Media Player and related multimedia components in these editions.",
+    "explanation": "True. N editions leave out Windows Media Player and related multimedia components.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-002",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The Home editions for Windows 10 and Windows 11 support participation in workgroups, but do not support joining Active Directory domains.",
+    "explanation": "True. Home editions can't join an Active Directory domain. Pro and higher can.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-003",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Premium editions of Microsoft Windows 10 and 11 allow IT administrators to customize, restrict, or lock down specific user interface elements, such as disabling access to certain settings, hiding specific Start Menu items, or enforcing standardized desktop backgrounds. This is in contrast to Windows 10 and 11 Home editions, which offer only basic personalization features in that respect.",
+    "explanation": "True. Group Policy in the premium editions allows that kind of lockdown, and Home doesn't have it.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-004",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which edition of Windows 10 and Windows 11 by default cannot function as an RDP host (i.e., allow incoming remote desktop connections)?",
+    "explanation": "Home can't act as an RDP host. Pro, Pro for Workstations and Enterprise can.",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "correctAnswer": [
+      "Home"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-005",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "All editions of Windows 10 and Windows 11, including their respective N versions, come with the preinstalled RDP client software.",
+    "explanation": "True. Every edition includes the RDP client. Only the RDP host (server) capability is missing from Home.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-006",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the 32-bit editions of Windows 10 has a physical memory limit of 4 GB?",
+    "explanation": "All 32-bit editions of Windows are limited to 4 GB of RAM.",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-007",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which 64-bit editions of Windows 10 and Windows 11 have a maximum RAM limit of 128 GB?",
+    "explanation": "64-bit Home is limited to 128 GB of RAM.",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "correctAnswer": [
+      "Home"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-008",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the maximum physical memory supported by the 64-bit Pro editions of Windows 10 and Windows 11?",
+    "explanation": "64-bit Pro supports up to 2 TB of RAM.",
+    "options": [
+      "2 TB",
+      "4 TB",
+      "6 TB",
+      "8 TB"
+    ],
+    "correctAnswer": [
+      "2 TB"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-009",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to the physical memory limit for Windows 10 Pro for Workstations?",
+    "explanation": "Pro for Workstations supports up to 6 TB of RAM.",
+    "options": [
+      "2 TB",
+      "4 TB",
+      "6 TB",
+      "8 TB"
+    ],
+    "correctAnswer": [
+      "6 TB"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-010",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the maximum physical memory supported by the 64-bit Enterprise editions of Windows 10 and Windows 11?",
+    "explanation": "64-bit Enterprise supports up to 6 TB of RAM.",
+    "options": [
+      "2 TB",
+      "4 TB",
+      "6 TB",
+      "8 TB"
+    ],
+    "correctAnswer": [
+      "6 TB"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-011",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which edition(s) of Microsoft Windows 10 include(s) the BitLocker Drive Encryption feature? (Select all that apply)",
+    "explanation": "BitLocker is in Pro, Pro for Workstations and Enterprise. Home doesn't include it.",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "correctAnswer": [
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-012",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which edition of Windows 11 does not include the built-in BitLocker encryption feature?",
+    "explanation": "Home doesn't include BitLocker.",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "correctAnswer": [
+      "Home"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-013",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which edition of Windows 10 does not include the gpedit.msc administrative tool?",
+    "explanation": "Home doesn't include the Local Group Policy Editor (gpedit.msc).",
+    "options": [
+      "Home",
+      "Pro",
+      "Pro for Workstations",
+      "Enterprise"
+    ],
+    "correctAnswer": [
+      "Home"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-014",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows 11 Home, Pro, and Enterprise editions include the Group Policy Editor component by default.",
+    "explanation": "False. Windows 11 Home does not include the Group Policy Editor.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WED-015",
+    "topic": "Microsoft Windows Editions",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are minimum requirements for installing Windows 11? (Select 3 answers)",
+    "explanation": "Windows 11 requires UEFI with Secure Boot, TPM 2.0 and a compatible 64-bit processor. The memory (4 GB) and storage (64 GB) minimums in the other options are wrong.",
+    "options": [
+      "UEFI firmware with Secure Boot",
+      "TPM version 2.0 support",
+      "64-bit processor listed on Microsoft's Windows 11 compatibility list",
+      "At least 2 GB of system memory",
+      "A minimum of 32 GB of available storage space"
+    ],
+    "correctAnswer": [
+      "UEFI firmware with Secure Boot",
+      "TPM version 2.0 support",
+      "64-bit processor listed on Microsoft's Windows 11 compatibility list"
+    ],
+    "origin": "ExamCompass"
+  }
+]

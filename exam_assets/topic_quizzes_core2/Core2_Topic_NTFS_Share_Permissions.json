@@ -1,0 +1,267 @@
+[
+  {
+    "id": "1202-NTF-001",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following statements describing share permissions in Microsoft Windows are true? (Select 2 answers)",
+    "explanation": "Share permissions apply only to network access and can be set only on shared folders. NTFS permissions apply to local and network users.",
+    "options": [
+      "Apply exclusively to network users",
+      "Can be set only at the file level",
+      "Apply to both network and local users",
+      "Can be set only at the folder level"
+    ],
+    "correctAnswer": [
+      "Apply exclusively to network users",
+      "Can be set only at the folder level"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-002",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of these statements about NTFS permissions are correct? (Select 2 answers)",
+    "explanation": "NTFS permissions apply to both local and network access and can be set on folders or individual files.",
+    "options": [
+      "Apply to both network and local users",
+      "Can be set only at the folder level",
+      "Apply exclusively to local users",
+      "Can be applied at the folder or file level"
+    ],
+    "correctAnswer": [
+      "Apply to both network and local users",
+      "Can be applied at the folder or file level"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-003",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows resource with conflicting NTFS and share permissions will assume:",
+    "explanation": "When NTFS and share permissions conflict, the most restrictive permission wins.",
+    "options": [
+      "The least restrictive permission",
+      "NTFS permissions",
+      "The most restrictive permission",
+      "Share permissions"
+    ],
+    "correctAnswer": [
+      "The most restrictive permission"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-004",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The share permissions on a Windows folder grant Read access, while the NTFS permissions grant Modify access. What are the user's effective permission levels? (Select 2 answers)",
+    "explanation": "Remotely, the share's Read limit applies. Locally, share permissions don't apply, so the NTFS Modify applies.",
+    "options": [
+      "Read when accessing the share remotely",
+      "Modify when accessing the folder locally",
+      "Read when accessing the folder locally",
+      "Modify when accessing the share remotely"
+    ],
+    "correctAnswer": [
+      "Read when accessing the share remotely",
+      "Modify when accessing the folder locally"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-005",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The share permissions on a Windows folder grant the user Full Control access, while the NTFS permissions grant Read access. Which of the answers listed below represent the user's effective permission levels? (Select 2 answers)",
+    "explanation": "The most restrictive applies remotely (Read), and locally only the NTFS Read applies.",
+    "options": [
+      "Read when accessing the share remotely",
+      "Full Control when accessing the folder locally",
+      "Read when accessing the folder locally",
+      "Full Control when accessing the share remotely"
+    ],
+    "correctAnswer": [
+      "Read when accessing the share remotely",
+      "Read when accessing the folder locally"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-006",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the correct hierarchy of precedence for permissions settings in NTFS?",
+    "explanation": "Explicit permissions beat inherited ones, and Deny beats Allow at each level: Explicit Deny, Explicit Allow, Inherited Deny, Inherited Allow.",
+    "options": [
+      "Explicit Allow > Inherited Allow > Explicit Deny > Inherited Deny",
+      "Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow",
+      "Explicit Allow > Explicit Deny > Inherited Deny > Inherited Allow",
+      "Explicit Deny > Inherited Deny > Explicit Allow > Inherited Allow"
+    ],
+    "correctAnswer": [
+      "Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-007",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In MS Windows, the attrib command is used to display or modify file and folder attributes. Some of the available options for this command include read-only (R), archive (A), system (S), and hidden (H). With attrib, the \"+\" symbol sets an attribute on a file or folder, and the \"-\" symbol removes an attribute.",
+    "explanation": "True. For example, attrib +R sets read-only and attrib -R removes it.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-008",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the correct syntax for applying the read-only attribute to a file in Windows?",
+    "explanation": "The syntax is attrib +R followed by the file path.",
+    "options": [
+      "attrib +R [drive:][path][filename]",
+      "attrib [drive:][path][filename] /R",
+      "attrib /R [drive:][path][filename]",
+      "attrib [drive:][path][filename] +R"
+    ],
+    "correctAnswer": [
+      "attrib +R [drive:][path][filename]"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-009",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In NTFS, permissions inherited from a parent object, such as a folder or user group, take precedence over explicit permissions applied directly to an object.",
+    "explanation": "False. Explicit permissions take precedence over inherited ones.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-010",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In NTFS, a folder or file moved from one location to another on the same volume inherits the permissions of its new parent folder.",
+    "explanation": "False. A move within the same volume keeps the original permissions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-011",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In NTFS, a folder or file copied from one location to another on the same volume retains its original permissions.",
+    "explanation": "False. A copy is a new object, so it inherits the permissions of the destination folder.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-012",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In NTFS, a file or folder copied or moved from one location to another on a different volume inherits the permissions of its new parent folder.",
+    "explanation": "True. Across volumes, a copy or move creates a new object that inherits the destination's permissions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-NTF-013",
+    "topic": "NTFS & Share Permissions",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In NTFS, permission propagation occurs when a folder or file created inside another folder takes on (inherits) permissions applied to that folder, so that the permissions applied to the parent folder propagate down to its child objects, i.e., folders and files created inside the parent folder.",
+    "explanation": "True. That is permission propagation (inheritance).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

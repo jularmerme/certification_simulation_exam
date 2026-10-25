@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-12.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An enthusiastic computer user wants to test out the new Windows 11 desktop. Which of the following has become more easily accessible using Windows 11?",
+    "explanation": "Multiple desktops allow the user to set up different workspaces, such as one desktop that has windows for business apps open and another with windows and shortcuts for personal apps and games. In Windows 10, in addition to the Start button, the taskbar contains the Instant Search box. The Start menu is activated by selecting the Start button or by pressing the START or Windows logo key on the keyboard. Windows 10 also contains the Task View button. The middle part of the taskbar contains icons for apps that have an open window. Windows 10 also introduced the notification area. The notification area contains icons for background processes.",
+    "options": [
+      "Instant Search",
+      "Multiple desktops",
+      "Task View",
+      "Notification area"
+    ],
+    "correctAnswer": [
+      "Multiple desktops"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the primary purpose of File Explorer in Windows?",
+    "explanation": "File Explorer is a core component of the Windows operating system designed to allow users to navigate, manage, and organize files and folders. It provides a graphical interface for accessing storage drives, creating folders, moving files, and viewing hidden files. Configuring system settings and user accounts is primarily done through the Windows Settings app or the Control Panel, not File Explorer. While File Explorer allows access to files, it does not handle administrative tasks like user account management. Troubleshooting hardware and software issues is typically done using tools like the Device Manager, Task Manager, or dedicated troubleshooting utilities in Windows. File Explorer is not designed for troubleshooting purposes. Monitoring system performance and resource usage is the function of the Task Manager or Performance Monitor in Windows. File Explorer is focused on file and folder management, not system performance monitoring.",
+    "options": [
+      "To manage and organize files and folders on the computer.",
+      "To monitor system performance and resource usage.",
+      "To configure system settings and user accounts.",
+      "To troubleshoot hardware and software issues."
+    ],
+    "correctAnswer": [
+      "To manage and organize files and folders on the computer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having difficulty using their keyboard and mouse due to a physical disability. They need to enable features like Sticky Keys and Mouse Keys to make interaction with their computer easier. Which section of the Ease of Access settings should they navigate to in order to configure these options?",
+    "explanation": "The Interaction settings within the Ease of Access menu are specifically designed to help users with physical disabilities. This section includes options like Sticky Keys, which allows users to press keyboard shortcuts one key at a time, and Mouse Keys, which enables the numeric keypad to control the mouse pointer. These settings are tailored to improve interaction with the computer for users with accessibility needs. The Display settings in Ease of Access are used to adjust visual elements, such as text size, screen brightness, and high contrast modes, to assist users with visual impairments. These settings do not address keyboard or mouse interaction issues. The Audio settings in Ease of Access are focused on assisting users with hearing impairments. They include options like turning on visual notifications for system sounds or enabling mono audio. These settings are unrelated to keyboard and mouse interaction. Privacy settings are not part of the Ease of Access menu. They are used to manage permissions for apps and services, such as location, camera, and microphone access. They do not provide options for configuring accessibility features like Sticky Keys or Mouse Keys.",
+    "options": [
+      "Audio settings",
+      "Display settings",
+      "Interaction settings",
+      "Privacy settings"
+    ],
+    "correctAnswer": [
+      "Interaction settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are working on your computer when a person from the shipping department delivers a new external solid-state drive (SSD) you ordered. When you plug the drive into your USB port, Windows cannot find a suitable device driver for the drive. Which of the following Windows consoles would you access Device Manager from to resolve the issue?",
+    "explanation": "The best way to add the device driver for your SSD is to use Device Manager. Control Panel is the only listed Windows console that will give you access to the Device Manager console. Microsoft Component Services (also known as COM+) provides a system for developing, deploying, and managing high-performance enterprise, internet, and intranet server applications. COM+ does not provide tools for managing devices. Windows Services are applications that start when the computer boots and run in the background until they are shut down. The Microsoft System Configuration (msconfig) tool can be used to change configuration settings, such as which software opens with Windows. This tool does not provide functionality for managing devices.",
+    "options": [
+      "Control Panel",
+      "Component Services",
+      "System Configuration",
+      "Services"
+    ],
+    "correctAnswer": [
+      "Control Panel"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security-conscious user limits what usage data Windows permits to collect. They also limit what device functions it enables and for which apps. Where does the user accomplish this?",
+    "explanation": "Privacy settings govern what usage data Windows is permitted to collect, what device functions are enabled, and for which apps. There are multiple settings toggles to determine what data collection and app permissions are allowed. The User Accounts applet in the Control Panel is the legacy interface. It cannot be used to add new accounts but does provide options for adjusting the account name and changing the account privilege level between an administrator and a standard user. In Windows 10, in addition to the Start button, the taskbar contains the Instant Search box. DisplayPort was developed as a royalty-free standard by the Video Electronics Standards Association (VESA), which is an organization that represents PC graphics adapter and display technology companies.",
+    "options": [
+      "VESA",
+      "Instant Search",
+      "User accounts",
+      "Privacy settings"
+    ],
+    "correctAnswer": [
+      "Privacy settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a feature found under the Ease of Access settings menu in Windows?",
+    "explanation": "The Narrator tool is a feature under the Ease of Access settings menu in Windows. It is designed to assist users with visual impairments by reading text and elements on the screen aloud. This aligns with the purpose of Ease of Access, which is to make the system more accessible to users with disabilities. While adjusting screen resolution is a display-related setting, it is not part of the Ease of Access menu. This setting is typically found under the Display settings or Control Panel. Configuring the system date and time is not related to accessibility. It is managed through the Date & Time settings in Windows, not Ease of Access. Managing user accounts is an administrative task and is not part of the Ease of Access settings. It is typically handled through the Accounts section in Windows Settings or the Control Panel.",
+    "options": [
+      "Configuring the system date and time",
+      "Adjusting the screen resolution",
+      "Managing user accounts",
+      "Enabling the Narrator tool"
+    ],
+    "correctAnswer": [
+      "Enabling the Narrator tool"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their laptop is not behaving as expected when they close the lid. Instead of going into sleep mode, the laptop continues to run, draining the battery. You need to analyze the issue and determine the correct steps to resolve it. What should you do?",
+    "explanation": "System behavior, such as what happens when the laptop lid is closed, can be configured through Power Options in the Control Panel. Adjusting the \"Choose what closing the lid does\" settings allows you to specify whether the laptop should sleep, hibernate, or do nothing when the lid is closed. File Explorer is used for managing files and folders, not for configuring system power settings. There is no \"System Sleep Mode\" option in File Explorer Options. Task Manager is used for managing processes, applications, and system performance. It does not have the capability to configure power settings or control what happens when the laptop lid is closed. Display Settings in Windows Settings are used to configure screen resolution, orientation, and other display-related options. Power settings, including lid-close behavior, are managed through Power Options in the Control Panel, not Display Settings.",
+    "options": [
+      "Open Windows Settings, navigate to Display Settings, and enable \"Sleep Mode on Lid Close.\"",
+      "Open the Control Panel, navigate to Power Options, and adjust the \"Choose what closing the lid does\" settings.",
+      "Open File Explorer and enable the \"System Sleep Mode\" option under File Explorer Options.",
+      "Use the Task Manager to force the laptop into sleep mode when the lid is closed."
+    ],
+    "correctAnswer": [
+      "Open the Control Panel, navigate to Power Options, and adjust the \"Choose what closing the lid does\" settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their computer is not functioning as expected. They mention the following issues: The text on their screen is too small to read. The clock on their computer is displaying the wrong time. When they close the lid of their laptop, the system does not turn off, causing the battery to drain. Which of the following actions would BEST address all of the user's issues using the appropriate Windows 10 administrative interface?",
+    "explanation": "The Windows 10 Settings app is the preferred interface for managing modern configuration tasks. Ease of Access settings can be used to adjust text size for better readability. The Date & Time settings allow the user to correct the system clock. The Power & Sleep settings can be configured to adjust the behavior when the laptop lid is closed. While the Control Panel can be used for some legacy tasks, the Windows Settings app is the preferred interface for most modern configuration tasks. Additionally, adjusting text size (Ease of Access) is not typically done through the Control Panel. Task Manager is used for monitoring and managing system performance, processes, and applications. It is not designed for adjusting display settings, system time, or power options, as these are configuration tasks handled by the Windows 10 Settings app or Control Panel. While the Command Prompt can be used for advanced administrative tasks, it is not the most efficient or user-friendly method for addressing these specific issues.",
+    "options": [
+      "Use the Command Prompt to execute commands for changing display settings, updating the system time, and modifying power settings.",
+      "Use the Control Panel to adjust the display resolution, change the system time, and configure power settings.",
+      "Use the Task Manager to adjust display settings, update the system time, and configure power options.",
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings."
+    ],
+    "correctAnswer": [
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to add a new family member to their Windows computer so that the family member can have their own personalized settings and files. Which action should the user take in the Accounts Settings menu?",
+    "explanation": "The \"Family & other users\" section within the Accounts Settings menu is specifically designed for managing additional accounts on the system. By selecting \"Add a family member,\" the user can create a new account for the family member, allowing them to have their own personalized settings, files, and access permissions. The \"Sign-in options\" section is used to configure authentication methods, such as passwords, PINs, and biometric authentication (e.g., fingerprint or facial recognition). It does not allow the user to add new accounts. The \"Access work or school\" section is used to connect the system to organizational accounts, such as work or school accounts. It is not used for adding personal or family member accounts. The \"Sync your settings\" section is used to synchronize settings (like themes, passwords, and language preferences) across devices using the same Microsoft account. It does not allow the user to add new accounts to the system.",
+    "options": [
+      "Open \"Sync your settings\" and enable synchronization for all accounts.",
+      "Open the \"Sign-in options\" section and enable biometric authentication.",
+      "Navigate to \"Family & other users\" and select \"Add a family member.\"",
+      "Go to \"Access work or school\" and connect to a school account."
+    ],
+    "correctAnswer": [
+      "Navigate to \"Family & other users\" and select \"Add a family member.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the purpose of Indexing Options in Windows?",
+    "explanation": "Indexing Options in Windows are specifically designed to optimize and manage the search functionality. It allows users to configure which locations and file types are indexed, making searches faster and more efficient. Configuring user account permissions and security settings is managed through tools like the User Accounts settings or the Security & Privacy settings, not Indexing Options. Display resolution and brightness settings are managed through the Display settings in Windows, not through Indexing Options. Enabling or disabling system updates and patches is handled through the Windows Update settings, not Indexing Options.",
+    "options": [
+      "To adjust the display resolution and screen brightness.",
+      "To manage how and where Windows searches for files and folders.",
+      "To enable or disable system updates and patches.",
+      "To configure user account permissions and security settings."
+    ],
+    "correctAnswer": [
+      "To manage how and where Windows searches for files and folders."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does the Windows 11 desktop improve accessibility and usability compared to the Windows 10 desktop?",
+    "explanation": "Windows 11 refreshes the desktop style by introducing better spacing for touch control and rounded corners. These changes improve accessibility and usability, especially for touch-enabled devices. The touch-optimized Start menu is a feature of Windows 10, not Windows 11. Windows 10 uses a touch-optimized Start menu interface, while Windows 11 focuses on other improvements. The notification area is still present in Windows 11. The notification area contains icons for background processes, which is a feature of Windows 10 and Windows 11. The taskbar is not eliminated in Windows 11. Instead, it is center-aligned, which is a key feature of the Windows 11 desktop. The taskbar remains an essential part of the user interface for managing applications and notifications.",
+    "options": [
+      "By providing better spacing for touch control and rounded corners",
+      "By removing the notification area to simplify the interface",
+      "By eliminating the taskbar to maximize screen space",
+      "By introducing a touch-optimized Start menu"
+    ],
+    "correctAnswer": [
+      "By providing better spacing for touch control and rounded corners"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having difficulty navigating between multiple open applications on their Windows 10 computer. They want to quickly switch between program windows without using the mouse. Which of the following actions should the user take?",
+    "explanation": "Learning keyboard shortcuts is useful for navigating the desktop and program windows quickly. The Alt + Tab shortcut is specifically designed to allow users to switch between open program windows efficiently without using the mouse. While pressing the Windows logo key opens the Start menu, this action does not help the user switch between open applications. The Start menu is used to launch applications or access system settings, not for navigating between already open windows. There is no \"Switch Applications\" option available when right-clicking on the desktop. This action would typically bring up a context menu for desktop-specific settings, such as display or personalization options. While Task Manager can show a list of running applications, it is not the most efficient or practical way to switch between open program windows. The user would need to manually select and switch to the desired application, which is more cumbersome than using the Alt + Tab shortcut.",
+    "options": [
+      "Use the keyboard shortcut Alt + Tab.",
+      "Open the Control Panel and navigate to \"Task Manager.\"",
+      "Press the Windows logo key to open the Start menu.",
+      "Right-click on the desktop and select \"Switch Applications.\""
+    ],
+    "correctAnswer": [
+      "Use the keyboard shortcut Alt + Tab."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Accounts Settings menu in Windows?",
+    "explanation": "The Accounts Settings menu in Windows is specifically designed to manage user accounts, including creating, modifying, or deleting accounts, as well as configuring sign-in options such as passwords, PINs, and biometric authentication. This is the primary purpose of this menu, making it the correct answer. Display resolution and color settings are managed through the Display Settings menu, not the Accounts Settings menu. These settings are unrelated to user account management. Indexing options are configured in the Indexing Options menu, which is part of the File Explorer Options. It has no connection to user accounts or sign-in options. Background processes are managed through the Task Manager or the Startup Apps section in the Settings app, not the Accounts Settings menu. This functionality is unrelated to managing user accounts.",
+    "options": [
+      "To adjust indexing options for faster file searches.",
+      "To configure display resolution and color settings.",
+      "To manage user accounts and sign-in options.",
+      "To enable or disable background processes."
+    ],
+    "correctAnswer": [
+      "To manage user accounts and sign-in options."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following options can be configured in the File Explorer Options in Windows?",
+    "explanation": "Hide extensions for known file types is a specific setting available in File Explorer Options. It allows users to hide or show file extensions for known file types, which can help in identifying file types or simplifying the display of file names. This setting is particularly useful for users who want to customize how files are displayed in File Explorer. Enabling dark mode is not a setting found in File Explorer Options. Instead, dark mode is a system-wide appearance setting that can be configured through the Windows Settings app under \"Personalization.\" Adjusting screen resolution is not related to File Explorer Options. Screen resolution settings are managed through the Display settings in the Windows Settings app or the Control Panel, not within File Explorer. Managing user accounts is not a function of File Explorer Options. User account management is handled through the Windows Settings app or the Control Panel under \"User Accounts.\" File Explorer Options are specifically for configuring how files and folders are displayed and managed in File Explorer.",
+    "options": [
+      "Manage user accounts.",
+      "Enable dark mode for File Explorer.",
+      "Hide extensions for known file types.",
+      "Adjust screen resolution."
+    ],
+    "correctAnswer": [
+      "Hide extensions for known file types."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user needs to access a hidden system file to troubleshoot an issue on their computer. They open File Explorer but cannot see the file in the directory. What should the user do to make the hidden file visible?",
+    "explanation": "Hidden files and folders can be made visible by enabling the \"Show hidden files, folders, and drives\" option in File Explorer Options. This is the appropriate step to access hidden system files. There is no \"Unhide System Files\" option available in the context menu when right-clicking on a directory in File Explorer. Hidden files are managed through File Explorer Options, not through right-click menus. The Task Manager is used for managing system processes and monitoring performance. It does not have any functionality for locating or unhiding files in File Explorer. The Control Panel does not have a specific \"Show system files\" option under System Settings. The correct method for viewing hidden files is through File Explorer Options.",
+    "options": [
+      "Use the Task Manager to locate and unhide the file.",
+      "Open the Control Panel and enable \"Show system files\" under System Settings.",
+      "Open File Explorer Options and enable the \"Show hidden files, folders, and drives\" option.",
+      "Right-click on the directory and select \"Unhide System Files\" from the context menu."
+    ],
+    "correctAnswer": [
+      "Open File Explorer Options and enable the \"Show hidden files, folders, and drives\" option."
+    ],
+    "origin": "CertMaster"
+  }
+]

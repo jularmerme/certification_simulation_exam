@@ -1,0 +1,149 @@
+[
+  {
+    "id": "1202-AD-001",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows tool allows administrators to verify that a computer is successfully joined to a domain?",
+    "explanation": "System Properties (sysdm.cpl, Computer Name tab) shows the computer's full name and the domain it belongs to, and is where you join a domain or change membership. The Group Policy Editor configures policies, not domain membership. Computer Management covers local tools such as disks, services and local users. The Windows Security app handles antivirus and firewall settings.",
+    "options": [
+      "Group Policy Editor",
+      "Windows Security app",
+      "Computer Management",
+      "System Properties"
+    ],
+    "correctAnswer": [
+      "System Properties"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-002",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company hires a new employee, and the IT administrator needs to ensure that the employee's network drives are mapped and shared printers are available as part of their desktop setup. Which Active Directory feature should the administrator use to configure this initial desktop environment?",
+    "explanation": "A log-in script is assigned to the user in Active Directory and runs at sign-in, which makes it the standard way to map network drives and printers automatically. Task Scheduler runs scheduled tasks, Local Security Policy sets security options on one computer, and a user profile stores a user's settings and files rather than running setup steps.",
+    "options": [
+      "Task Scheduler",
+      "Local Security Policy",
+      "User Profile",
+      "Log-in script"
+    ],
+    "correctAnswer": [
+      "Log-in script"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-003",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator needs to move a user account from the Sales Organizational Unit (OU) to the Marketing OU. Which Active Directory tool is used to perform this action?",
+    "explanation": "Active Directory Users and Computers (dsa.msc) is where you create and manage user accounts and groups and move objects between OUs. Domains and Trusts manages trust relationships between domains. Sites and Services manages replication and site topology. The Migration Tool moves objects between domains or forests, not between OUs.",
+    "options": [
+      "Active Directory Domains and Trusts",
+      "Active Directory Migration Tool",
+      "Active Directory Users and Computers",
+      "Active Directory Sites and Services"
+    ],
+    "correctAnswer": [
+      "Active Directory Users and Computers"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-004",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Active Directory feature provides each domain user with a dedicated network location to store personal documents on a network share?",
+    "explanation": "A home folder is a personal network location assigned to each user in Active Directory, usually mapped to a drive letter, where they store documents on a share. A roaming profile copies the user's whole profile between computers. My Documents is a local folder by default, and a shared network drive is open to many users rather than dedicated to one.",
+    "options": [
+      "Roaming profile",
+      "My Documents folder",
+      "Shared network drive",
+      "Home folder"
+    ],
+    "correctAnswer": [
+      "Home folder"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-005",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An Active Directory domain admin wants to prevent users in a specific Organizational Unit (OU) from running a particular application. Which tool should the administrator use to enforce this setting?",
+    "explanation": "The Group Policy Management Console (gpmc.msc) is used to create Group Policy Objects and link them to an OU, so a restriction applies to every user in that OU. Local Security Policy only affects the one computer it is set on. Active Directory Users and Computers manages accounts and groups, not policies. System Configuration (msconfig) controls startup on a single machine.",
+    "options": [
+      "System Configuration",
+      "Group Policy Management Console",
+      "Active Directory Users and Computers",
+      "Local Security Policy"
+    ],
+    "correctAnswer": [
+      "Group Policy Management Console"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-006",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tool is used to add a user to a security group in Active Directory?",
+    "explanation": "Group membership is managed in Active Directory Users and Computers: open the group (or the user) and add the member. Domains and Trusts manages trusts between domains. The Group Policy Management Console and the Group Policy Object Editor manage and edit policies, not group membership.",
+    "options": [
+      "Active Directory Domains and Trusts",
+      "Group Policy Object Editor",
+      "Active Directory Users and Computers",
+      "Group Policy Management Console"
+    ],
+    "correctAnswer": [
+      "Active Directory Users and Computers"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AD-007",
+    "topic": "Active Directory",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which feature of the Windows Active Directory's Group Policy Management Console is used to ensure a user's profile folders are stored on a centralized network share rather than on their local computer?",
+    "explanation": "Folder redirection, configured through Group Policy, redirects folders such as Documents and Desktop to a network share instead of the local computer. Roaming profiles copy the entire profile at sign-in and sign-out. Home folders are a personal network location assigned to each user, not a Group Policy setting for profile folders. Drive quotas only limit disk space.",
+    "options": [
+      "Home folders",
+      "Roaming profiles",
+      "Folder redirection",
+      "Drive quotas"
+    ],
+    "correctAnswer": [
+      "Folder redirection"
+    ],
+    "origin": "ExamCompass"
+  }
+]

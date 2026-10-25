@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-13.7-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator tasked with managing a large number of Windows workstations across your organization. To streamline administrative tasks, you decide to create a custom Microsoft Management Console (MMC) tailored to your needs. Which of the following steps is critical to ensure that your custom MMC is functional and meets your specific requirements?",
+    "explanation": "The primary purpose of creating a custom MMC is to include the specific snap-ins (administrative tools) required to manage your systems effectively. Snap-ins are modular components that provide functionality for tasks like managing users, devices, or disks. Without adding the appropriate snap-ins, the custom MMC would not serve its intended purpose. Simply saving the console without adding or configuring snap-ins does not make it functional or tailored to your needs. The location where the console is saved is secondary to ensuring it contains the necessary tools for the tasks you need to perform. The default MMC is not tailored to your specific administrative needs. While it may provide general functionality, it lacks the customization required to streamline your workflow and focus on the tasks relevant to your organization. Disabling all snap-ins would render the MMC useless for administrative tasks. Instead, you should focus on securing access to the MMC through proper user permissions and security measures rather than disabling its functionality.",
+    "options": [
+      "Add the necessary snap-ins to the console based on the tasks you need to perform.",
+      "Save the console in the default location without modifying any settings.",
+      "Use the default pre-configured MMC provided by Windows without customization.",
+      "Disable all snap-ins to prevent unauthorized access to administrative tools."
+    ],
+    "correctAnswer": [
+      "Add the necessary snap-ins to the console based on the tasks you need to perform."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A transportation company wants to set up software that gathers statistics from the controller area network for trailers hauling loads, enabling them to adjust processes to optimize cost savings. What type of adapter will the company need to send the statistics back to their cloud network?",
+    "explanation": "Wireless Wide Area Network (WWAN) uses a cellular adapter to connect to the internet via a provider's network. These networks are typically metered with a set data limit. A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network. Almost all wired network connections are based on some Ethernet. The adapter's media type must match the switch it is connected to. While WWAN could be considered wireless, wireless generally refers to a computer that connects to the 2.4 or 5 GHz spectrum with a limited physical range.",
+    "options": [
+      "WWAN",
+      "Wireless",
+      "VPN",
+      "Wired"
+    ],
+    "correctAnswer": [
+      "WWAN"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a storage issue on a Windows system. A new hard drive has been installed but is not visible in File Explorer. You open Command Prompt and use the diskpart utility. After selecting the disk, you want to assign a drive letter to the new volume so it can be accessed. Which diskpart command should you use?",
+    "explanation": "The assign command in diskpart is specifically used to assign a drive letter to a volume, making it accessible in File Explorer. This is the appropriate command to resolve the issue described in the scenario. While the create partition primary command is used to create a new partition on a disk, it does not assign a drive letter. Assigning a drive letter is a separate step that requires the assign command. The detail volume command is used to display detailed information about a selected volume, such as its file system, size, and drive letter (if assigned). However, it does not assign a drive letter to the volume. The format fs=ntfs command is used to format a volume with the NTFS file system. While formatting is often necessary for a new volume, it does not assign a drive letter. The assign command must be used for that purpose.",
+    "options": [
+      "assign",
+      "create partition primary",
+      "format fs=ntfs",
+      "detail volume"
+    ],
+    "correctAnswer": [
+      "assign"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user experiences issues with large files and wants to run diagnostics to help figure out what might be the issue. Which of the following commands should the user try?",
+    "explanation": "The chkdsk scans the file system and/or disk sectors for faults and attempts to repair any problems detected. The format command writes a new file system to a drive. This process deletes any data existing on the drive. The basic command is format X: /fs:SYS, where X is a drive letter, and SYS is the file system, such as NTFS, FAT32, or EXFAT. The command diskpart is the interface underlying the Disk Management tool. The Disk Management tool prevents users from completing destructive actions, like deleting the system or boot volume. However, it does not have restrictions in this way, so users should use it with care. The winver command reports version information. Users will often need to use this for support.",
+    "options": [
+      "winver",
+      "format",
+      "chkdsk",
+      "diskpart"
+    ],
+    "correctAnswer": [
+      "chkdsk"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user calls into the helpdesk after receiving a recent update to their computer and now certain functions are no longer working properly. The helpdesk technician asks for their FQDN. What would be an example of the FQDN?",
+    "explanation": "userhost.comptia.com would be an example of a fully qualified domain name (FQDN). This includes both the name of the host as well as the domain it is on. userhost would only be an example of the host name. The addition of the domain makes it an FQDN. comptia.com would be an example of a DNS alias. Typically, a host is also configured with the addresses of Domain Name System (DNS) servers that can resolve requests for name resources to IP addresses. The 192.168.14.25 would be an example of the host's possible IP address. An Internet Protocol (IP) addressing scheme can use either IPv4 or IPv6.",
+    "options": [
+      "userhost.comptia.com",
+      "192.168.14.25",
+      "userhost",
+      "comptia.com"
+    ],
+    "correctAnswer": [
+      "userhost.comptia.com"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows system is experiencing frequent crashes after a recent software installation. Upon investigation, you suspect the software has made incorrect changes to the Windows Registry. How should you analyze and address the issue using the Registry Editor?",
+    "explanation": "The correct approach is to analyze the issue by comparing the current registry settings with a backup or baseline. This allows you to identify any discrepancies caused by the recent software installation. Once identified, you can restore or modify the affected keys to resolve the issue. This method demonstrates analytical thinking by isolating the root cause and applying a targeted solution. Deleting all registry keys associated with the software may cause additional issues, such as making the software unusable or creating orphaned entries. It is not an analytical approach and does not address the specific problem. Disabling all startup programs is a broad action that does not specifically address the registry issue. It may temporarily stop the crashes but does not resolve the underlying problem in the registry. Reinstalling the operating system is an extreme measure that should only be used as a last resort. It does not involve analyzing the issue and is not a practical solution for a registry-related problem caused by a single software installation.",
+    "options": [
+      "Delete all registry keys associated with the recently installed software to eliminate any potential conflicts.",
+      "Reinstall the operating system to ensure all registry settings are reset to their default values.",
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys.",
+      "Use the Registry Editor to disable all startup programs to prevent the software from running and causing crashes."
+    ],
+    "correctAnswer": [
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator notices that the disk optimizer task scheduled by the Task Scheduler has not been running successfully. What would be the MOST effective course of action to evaluate and resolve the issue?",
+    "explanation": "It is important to regularly check for issues with tasks scheduled by the Task Scheduler, such as unsuccessful runs of the disk optimizer. Manually running the tool allows the administrator to evaluate its performance and identify any errors or issues that may be preventing the task from completing successfully. The Disk Management Console is unrelated to the Task Scheduler or the disk optimizer task. The Disk Management Console is used for tasks like partitioning and formatting disks, not for scheduling or running optimization tasks. Disabling the Task Scheduler would prevent all automated tasks, including disk optimization, from running. The importance of the Task Scheduler in automating maintenance tasks makes this an ineffective solution. Updating storage device drivers is not directly related to resolving issues with the Task Scheduler or the disk optimizer task. While driver updates can improve hardware performance, they are not a solution for unsuccessful scheduled tasks.",
+    "options": [
+      "Manually run the disk optimizer tool and monitor its performance for errors.",
+      "Disable the Task Scheduler and rely on manual optimization instead.",
+      "Reinstall the Disk Management Console to ensure proper functionality.",
+      "Update the drivers for the storage devices using the Device Manager."
+    ],
+    "correctAnswer": [
+      "Manually run the disk optimizer tool and monitor its performance for errors."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with copying all subdirectories, including empty ones, from the \"C:\\Projects\" directory to the \"D:\\Backup\" directory. Additionally, you want to ensure that long file names and NTFS attributes are preserved during the copy process. Which command should you use?",
+    "explanation": "The robocopy command is specifically designed for robust file copying. The /E switch ensures that all subdirectories, including empty ones, are copied. Furthermore, robocopy handles long file names and NTFS attributes effectively, meeting all the requirements of the scenario. While the xcopy command can copy subdirectories, the /S switch only copies non-empty subdirectories. This does not meet the requirement of copying all subdirectories, including empty ones. Additionally, xcopy is less robust than robocopy when handling long file names and NTFS attributes, which are explicitly required in the scenario. The copy command is a basic file-copying tool and does not support copying directories or subdirectories. It also lacks the ability to preserve NTFS attributes or handle long file names, making it unsuitable for this task. The move command is used to transfer files or directories to a new location, but it does not create a copy. This command would remove the original files from \"C:\\Projects,\" which is not what the scenario requires. Additionally, it does not handle NTFS attributes or long file names as effectively as robocopy.",
+    "options": [
+      "xcopy C:\\Projects D:\\Backup /S",
+      "robocopy C:\\Projects D:\\Backup /E",
+      "copy C:\\Projects D:\\Backup",
+      "move C:\\Projects D:\\Backup"
+    ],
+    "correctAnswer": [
+      "robocopy C:\\Projects D:\\Backup /E"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network technician is building an Ethernet network using Cat5. What type of network will this be?",
+    "explanation": "The technician is building a wired network. Almost all wired network connections are on some type of Ethernet. Therefore, the adapter's media type must match the switch that connects the adapter. To establish a wireless network connection, select the network status icon in the notification area, and select from the list of displayed Wi-Fi networks. Wireless Wide Area Network (WWAN) refers to using a cellular adapter to connect to the internet. The bandwidth depends on the adapter's supported technologies and the local cell tower. A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network.",
+    "options": [
+      "Wired",
+      "Wireless",
+      "WWAN",
+      "VPN"
+    ],
+    "correctAnswer": [
+      "Wired"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator sets up static network configurations for servers since they do not want the IP address to change. The administrator sets up the IP address on a 24-bit subnet. What should the administrator set the subnet mask to?",
+    "explanation": "Administrators can also adjust the IP configuration via the settings app. In this dialog, they need to enter the mask as a prefix length in bits. A 255.255.255.0 mask is 24 bits. A subnet mask of 255.255.0.0 would be the subnet mask for the 16-bit wildcard mask. An example would mean the subnet is from 192.168.0.0 - 192.168.255.255. A subnet mask of 255.0.0.0 would be the subnet mask for the 8-bit wildcard mask. An example would mean the subnet is from 10.0.0.0 - 10.255.255.255. A subnet mask of 0.0.0.0 would be non-routable. This is usually a black hole where traffic is dropped.",
+    "options": [
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.0.0.0",
+      "0.0.0.0"
+    ],
+    "correctAnswer": [
+      "255.255.255.0"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following switches for the shutdown command is used to schedule a shutdown after a specified amount of time?",
+    "explanation": "The /t switch is used with the shutdown command to specify the time delay (in seconds) before the shutdown occurs. For example, shutdown /s /t 60 schedules a shutdown in 60 seconds. This is the correct answer as it directly relates to scheduling a shutdown. The /s switch is used to initiate a shutdown, but it does not allow you to specify a time delay. It simply tells the system to shut down. While it is part of the shutdown command, it does not meet the requirement of scheduling a shutdown, making it incorrect. The /r switch is used to restart the system rather than shutting it down. While it is a valid switch for the shutdown command, it does not relate to scheduling a shutdown, making it incorrect. The /a switch is used to abort a scheduled shutdown or restart. It does not schedule a shutdown or specify a time delay, so it is not relevant to the question and is incorrect.",
+    "options": [
+      "/a",
+      "/t",
+      "/r",
+      "/s"
+    ],
+    "correctAnswer": [
+      "/t"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A transportation company outfits its mobile units with devices that will enable it to analyze routes, patterns, and create efficiencies. The devices will connect to their cloud servers through a 4G WWAN. What will the company need to ensure the devices connect to the cloud resources?",
+    "explanation": "For GSM and 4G or 5G services, the adapter must also be fitted with a subscriber identity module (SIM) card issued by the network provider. The bandwidth depends on the technologies supported by the adapter and by the local cell tower (3G, 4G, or 5G, for instance). A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network. When a user connects to a new network, the Windows Network Location Awareness (NLA) service prompts the user to set the network type. In Windows settings, the Link-layer Topology Discovery protocol provides network mapping and discovery functions for networks without dedicated name servers.",
+    "options": [
+      "VPN",
+      "SIM",
+      "Link-layer Topology Discovery",
+      "NLA"
+    ],
+    "correctAnswer": [
+      "SIM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a new workstation for a department with multiple employees who need access to shared resources. Each employee requires different levels of access based on their role. Using the Local Users and Groups Console, what is the best way to configure access?",
+    "explanation": "The best practice is to create individual user accounts for each employee and assign them to security groups that reflect their roles. This approach ensures that access permissions are managed efficiently and securely while also maintaining accountability and auditability for each user's actions. Sharing a single account among multiple employees is a poor security practice. It eliminates accountability, as actions cannot be traced back to individual users, and it increases the risk of unauthorized access if the credentials are compromised. The Guest account is intended for temporary or minimal access and is not suitable for employees who require different levels of access based on their roles. This approach would severely limit functionality and hinder productivity. Using the Administrator account for all employees is a significant security risk. It grants excessive privileges to users who may not need them, increasing the likelihood of accidental or malicious changes to the system. This approach violates the principle of least privilege.",
+    "options": [
+      "Create a single user account for the department and share the login credentials with all employees.",
+      "Use the Administrator account for all employees to simplify access management.",
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles.",
+      "Assign all employees to the Guest account to ensure limited access to the system."
+    ],
+    "correctAnswer": [
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A helpdesk technician receiving a support request can ask the client to use what command at the command prompt to identify the local machine requiring support?",
+    "explanation": "The remote helpdesk technician could instruct the user to use the hostname command from the command prompt. Typing the hostname command returns the local machine name. The tracert command-line tool will trace a packet's path to get to its target. The tracert command can accept an IP address or website as an argument. Typing help at the command prompt will return general help information. The user can also get help for a particular command by using the /? switch after the command requiring it. The net user command can manage, add, and force password changes to user and administrator accounts from the command line, although it will require an administrative command prompt.",
+    "options": [
+      "net user",
+      "hostname",
+      "tracert",
+      "help"
+    ],
+    "correctAnswer": [
+      "hostname"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Disk Defragmenter tool on a hard disk drive (HDD)?",
+    "explanation": "The Disk Defragmenter tool is specifically designed to reorganize fragmented file data on an HDD into contiguous clusters. This process reduces the time the disk controller needs to seek across the disk to read a file, thereby improving read performance. TRIM operations are specific to SSDs (Solid State Drives), not HDDs. While the Disk Defragmenter tool can optimize SSDs by running TRIM operations, its primary purpose on HDDs is to defragment files, not perform TRIM. Identifying files safe for deletion is the function of the Disk Clean-up tool, not the Disk Defragmenter. Disk Clean-up helps free up space by removing temporary files, files in the Recycle Bin, and other unnecessary data. Repairing corrupted files is not the function of the Disk Defragmenter. Tools, like Check Disk (chkdsk) or third-party recovery software, are used to repair corrupted files or address physical disk damage. The Disk Defragmenter focuses on improving performance by reorganizing file data.",
+    "options": [
+      "Reorganize file data into contiguous clusters to improve read performance.",
+      "Repair corrupted files caused by physical damage to the disk.",
+      "Identify files safe for deletion to free up disk space.",
+      "Perform a TRIM operation to mark OS-deletable data as writable."
+    ],
+    "correctAnswer": [
+      "Reorganize file data into contiguous clusters to improve read performance."
+    ],
+    "origin": "CertMaster"
+  }
+]

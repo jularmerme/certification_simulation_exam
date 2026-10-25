@@ -1,0 +1,173 @@
+[
+  {
+    "id": "1202-IR-001",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the primary purpose of maintaining a chain of custody?",
+    "explanation": "Chain of custody documents who handled evidence and when, to preserve its integrity for legal proceedings.",
+    "options": [
+      "To provide a step-by-step log of the incident remediation process",
+      "To track the movement of corporate assets for inventory management purposes",
+      "To track which systems were affected during an incident",
+      "To preserve the integrity of evidence for potential legal proceedings"
+    ],
+    "correctAnswer": [
+      "To preserve the integrity of evidence for potential legal proceedings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-002",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which items must always be included when documenting a chain of custody? (Select 2 answers)",
+    "explanation": "Chain of custody records who handled the evidence, in order, and the date and time of each transfer.",
+    "options": [
+      "Description of the location where the evidence was found",
+      "Method used to collect the evidence",
+      "Chronological log of everyone who handled the evidence",
+      "Date and time of evidence transfer",
+      "List of remediation steps taken after evidence collection"
+    ],
+    "correctAnswer": [
+      "Chronological log of everyone who handled the evidence",
+      "Date and time of evidence transfer"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-003",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician discovers evidence of credit card data theft on a company server. What is the most appropriate next step?",
+    "explanation": "Inform management and follow the escalation procedure. Management decides when to involve law enforcement.",
+    "options": [
+      "Shut down the server to preserve its current state",
+      "Contact local law enforcement directly",
+      "Disconnect the server from the network to prevent further access",
+      "Notify management and follow escalation procedures"
+    ],
+    "correctAnswer": [
+      "Notify management and follow escalation procedures"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-004",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the terms listed below is used to describe a forensic copy of a storage device that captures every sector of the drive, including deleted files, hidden partitions, and unallocated space?",
+    "explanation": "A bit-by-bit (forensic) image copies every sector, preserving data integrity for investigation.",
+    "options": [
+      "Disk mirroring",
+      "File system dump",
+      "Bit-by-bit image",
+      "Snapshot image"
+    ],
+    "correctAnswer": [
+      "Bit-by-bit image"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-005",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "During an incident investigation, a technician must acquire data from a suspect's storage drive without altering any information. Which of the following ensures the contents of the drive cannot be modified during this process?",
+    "explanation": "A write blocker allows reading from a drive but blocks any writes to it.",
+    "options": [
+      "Disk encryption",
+      "Password-protected access",
+      "Checksum verification",
+      "Write blocker"
+    ],
+    "correctAnswer": [
+      "Write blocker"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-006",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to confirm that a forensic image has not been altered since its creation. Which method provides this assurance?",
+    "explanation": "Matching the hash of the image against the hash taken at creation proves it hasn't changed.",
+    "options": [
+      "Running a disk integrity check",
+      "Checking the system event logs",
+      "Examining the evidence transfer records",
+      "Comparing hash values"
+    ],
+    "correctAnswer": [
+      "Comparing hash values"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-007",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When documenting a security incident, which type of detail should be strictly avoided to maintain the integrity of the report?",
+    "explanation": "Incident documentation should stick to facts. Speculation compromises the report.",
+    "options": [
+      "Timeline of events",
+      "Actions taken during remediation",
+      "Personnel involved in the incident",
+      "Collected evidence",
+      "Speculative statements"
+    ],
+    "correctAnswer": [
+      "Speculative statements"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-IR-008",
+    "topic": "Incident Response",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below shows the basic order of volatility for a typical system?",
+    "explanation": "Collect the most volatile data first: CPU registers/cache, then RAM, then disk, then archival media.",
+    "options": [
+      "Archival media, Disk, RAM, CPU registers/cache",
+      "RAM, CPU registers/cache, Disk, Archival media",
+      "Disk, Archival media, CPU registers/cache, RAM",
+      "CPU registers/cache, RAM, Disk, Archival media"
+    ],
+    "correctAnswer": [
+      "CPU registers/cache, RAM, Disk, Archival media"
+    ],
+    "origin": "ExamCompass"
+  }
+]

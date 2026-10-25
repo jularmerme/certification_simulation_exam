@@ -1,0 +1,341 @@
+[
+  {
+    "id": "1202-MDS-001",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which method of protecting mobile devices ensures that all data on the device is rendered unreadable without proper authentication?",
+    "explanation": "Device encryption makes the stored data unreadable without proper authentication.",
+    "options": [
+      "Password protection",
+      "Data hashing",
+      "Remote wipe",
+      "Device encryption"
+    ],
+    "correctAnswer": [
+      "Device encryption"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-002",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which biometric screen lock implementations are commonly used on mobile devices? (Select 2 answers)",
+    "explanation": "Fingerprint and facial recognition are the common biometric screen locks on phones.",
+    "options": [
+      "Keystroke dynamics",
+      "Fingerprint",
+      "Signature recognition",
+      "Hand geometry",
+      "Facial recognition"
+    ],
+    "correctAnswer": [
+      "Fingerprint",
+      "Facial recognition"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-003",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a knowledge-based authentication factor used with screen locks?",
+    "explanation": "A PIN is something you know, so it's a knowledge-based factor.",
+    "options": [
+      "Geolocation",
+      "Digital signature",
+      "PIN code",
+      "Software token"
+    ],
+    "correctAnswer": [
+      "PIN code"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-004",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the typical, primary fallback authentication method when enabling biometrics on a mobile device?",
+    "explanation": "A PIN or passcode is the standard fallback when biometrics fail.",
+    "options": [
+      "QR code scan",
+      "Security question",
+      "PIN or passcode",
+      "Pattern unlock"
+    ],
+    "correctAnswer": [
+      "PIN or passcode"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-005",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which screen lock method requires tracing a specific design on the screen to unlock an Android device?",
+    "explanation": "Pattern unlock requires tracing a specific pattern over a grid of dots.",
+    "options": [
+      "Fingerprint scan",
+      "Touch ID",
+      "Swipe gesture",
+      "Pattern unlock"
+    ],
+    "correctAnswer": [
+      "Pattern unlock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-006",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which mobile screen lock implementation, while providing no authentication, allows the user to unlock the device with a single, continuous gesture across the screen?",
+    "explanation": "Swipe unlock needs just a swipe, so it gives no real authentication.",
+    "options": [
+      "Pattern unlock",
+      "NFC tap-to-unlock",
+      "Proximity sensor lock",
+      "Swipe unlock"
+    ],
+    "correctAnswer": [
+      "Swipe unlock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-007",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a type of file commonly deployed through MDM or similar systems to enforce specific settings and restrictions on mobile devices?",
+    "explanation": "MDM pushes configuration profiles to enforce settings and restrictions.",
+    "options": [
+      "Security template",
+      "Manifest file",
+      "Configuration profile",
+      "Automation script"
+    ],
+    "correctAnswer": [
+      "Configuration profile"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-008",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company wants to ensure all mobile devices automatically receive the latest operating system and application security updates. Which process should be implemented?",
+    "explanation": "Patch management keeps the OS and applications up to date with security fixes.",
+    "options": [
+      "Malware signature update",
+      "Vulnerability assessment",
+      "Patch management",
+      "Group policy enforcement"
+    ],
+    "correctAnswer": [
+      "Patch management"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-009",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Endpoint security software on mobile devices encompasses a range of applications designed to protect the device from security threats. Common examples of endpoint security applications include: (Select all that apply)",
+    "explanation": "Antivirus, content filters and anti-malware are endpoint security software. A password manager is not.",
+    "options": [
+      "Antivirus software",
+      "Content filters",
+      "Anti-malware software",
+      "Password managers"
+    ],
+    "correctAnswer": [
+      "Antivirus software",
+      "Content filters",
+      "Anti-malware software"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-010",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a dedicated software type that uses positional telemetry for geofencing and remote device recovery?",
+    "explanation": "A locator application uses location data to find a lost device and supports geofencing and recovery.",
+    "options": [
+      "Asset inventory software",
+      "Stalkerware",
+      "Locator application",
+      "Mobile telemetry app"
+    ],
+    "correctAnswer": [
+      "Locator application"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-011",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary security reason for using an MDM to enforce remote wipe capability on a mobile device?",
+    "explanation": "Remote wipe is mainly used to stop unauthorized access to corporate data on lost or stolen devices.",
+    "options": [
+      "Minimizing the impact of malicious software",
+      "Preventing unauthorized access to corporate data",
+      "Restoring device to its default configuration",
+      "Protecting the privacy of user's personal data"
+    ],
+    "correctAnswer": [
+      "Preventing unauthorized access to corporate data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-012",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A mobile device security administrator needs to ensure that a user's corporate data can be restored to a replacement device after the original device is permanently lost. Which solution provides this capability?",
+    "explanation": "Remote backup applications keep a copy of the data off the device so it can be restored to a replacement.",
+    "options": [
+      "Configuration profiles",
+      "Device provisioning",
+      "Containerization",
+      "Remote backup applications"
+    ],
+    "correctAnswer": [
+      "Remote backup applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-013",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Failed log-in attempt restrictions are mobile device security controls that limit the number of consecutive unsuccessful authentication attempts. When the limit is reached, the device may lock temporarily, extend delay intervals between attempts, or trigger protective actions such as data wipe or account suspension. Failed log-in attempt restrictions are used to mitigate brute-force attacks and unauthorized access.",
+    "explanation": "True. Limiting failed attempts mitigates brute-force attacks.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-014",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security administrator uses MDM software to restrict camera use and prevent file transfers over USB on company-issued smartphones. What type of control is being applied?",
+    "explanation": "Restricting features such as the camera and USB transfers through MDM is device policy enforcement.",
+    "options": [
+      "Hardware access control",
+      "Device policy enforcement",
+      "Configuration profile deployment",
+      "Device provisioning"
+    ],
+    "correctAnswer": [
+      "Device policy enforcement"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-015",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What are the organizational and administrative advantages of a corporate-owned mobile device deployment model over a BYOD policy? (Select 3 answers)",
+    "explanation": "Corporate-owned devices give full administrative control, standardization and centralized MDM policy enforcement. Containerization and looser policies are BYOD traits.",
+    "options": [
+      "Full administrative control over the entire device",
+      "Separation of personal and corporate data via containerization",
+      "Less restrictive usage policies for non-work activities",
+      "Standardization of hardware, software, and configuration",
+      "Centralized device policy enforcement through MDM"
+    ],
+    "correctAnswer": [
+      "Full administrative control over the entire device",
+      "Standardization of hardware, software, and configuration",
+      "Centralized device policy enforcement through MDM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MDS-016",
+    "topic": "Mobile Device Security",
+    "domain": "2.0 Security",
+    "objective": "2.8",
+    "module": "20.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Profile security requirements are predefined security rules and configurations applied to mobile devices. They are implemented via configuration profiles, typically managed by MDM systems, to ensure compliance with organizational standards for authentication, data protection, and access control.",
+    "explanation": "True. Profile security requirements are applied through MDM configuration profiles.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

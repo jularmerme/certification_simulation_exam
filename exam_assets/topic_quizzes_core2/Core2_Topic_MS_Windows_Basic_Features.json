@@ -1,0 +1,180 @@
+[
+  {
+    "id": "1202-WBF-001",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below apply to Windows domains? (Select 3 answers)",
+    "explanation": "A domain is client-server. Accounts and security policies are administered centrally, and one set of credentials works on any domain computer.",
+    "options": [
+      "Each computer on a Windows domain is governed by its own security policy",
+      "Logging into any computer on a Windows domain requires a single set of credentials",
+      "Windows domains are based on P2P networking architecture",
+      "Security policies and permissions on a Windows domain are administered centrally",
+      "All members of a Windows domain must be on the same local network or subnet",
+      "Windows domains are based on client-server networking architecture"
+    ],
+    "correctAnswer": [
+      "Logging into any computer on a Windows domain requires a single set of credentials",
+      "Security policies and permissions on a Windows domain are administered centrally",
+      "Windows domains are based on client-server networking architecture"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-002",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers apply to Windows workgroups? (Select 3 answers)",
+    "explanation": "A workgroup is peer-to-peer. Every computer has its own accounts and its own security policy, and it suits small networks of fewer than about twenty computers.",
+    "options": [
+      "Security policies and permissions in workgroups are administered centrally",
+      "Logging into any computer on a workgroup requires a single account (single sign-on feature)",
+      "Workgroups are typically recommended for small networks of fewer than twenty computers",
+      "There is no limit on the number of hosts that can become a part of a single workgroup",
+      "Logging into any computer in a workgroup requires an account on that computer",
+      "Each computer in a workgroup has its own security policy"
+    ],
+    "correctAnswer": [
+      "Workgroups are typically recommended for small networks of fewer than twenty computers",
+      "Logging into any computer in a workgroup requires an account on that computer",
+      "Each computer in a workgroup has its own security policy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-003",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below are true? (Select 3 answers)",
+    "explanation": "Every Windows computer on a network belongs to either a workgroup or a domain. Workplace networks usually use domains and home networks usually use workgroups.",
+    "options": [
+      "Windows-based computers on home networks must be part of a HomeGroup",
+      "Windows-based computers on a network must be part of a workgroup or a domain",
+      "Windows-based computers on workplace networks are usually part of a domain",
+      "Windows-based computers on workplace networks are usually part of a workgroup",
+      "Windows-based computers on home networks are usually part of a workgroup",
+      "Windows-based computers on home networks are usually part of a domain"
+    ],
+    "correctAnswer": [
+      "Windows-based computers on a network must be part of a workgroup or a domain",
+      "Windows-based computers on workplace networks are usually part of a domain",
+      "Windows-based computers on home networks are usually part of a workgroup"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-004",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following tools, available in the premium editions of Microsoft Windows, enables administrative control of desktop and user interface settings for all users on a device?",
+    "explanation": "The Group Policy Editor (gpedit.msc) is available in Pro, Enterprise and similar editions. It controls desktop and UI settings centrally.",
+    "options": [
+      "Control Panel",
+      "System Configuration",
+      "Group Policy Editor",
+      "Registry Editor"
+    ],
+    "correctAnswer": [
+      "Group Policy Editor"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-005",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Microsoft-proprietary protocol enables remote access and administration of another networked host through a graphical user interface?",
+    "explanation": "Remote Desktop Protocol (RDP) is Microsoft's proprietary protocol for graphical remote access (port 3389).",
+    "options": [
+      "VDI",
+      "RDP",
+      "SSH",
+      "VNC"
+    ],
+    "correctAnswer": [
+      "RDP"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-006",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Most client editions of 32-bit Microsoft Windows are limited to 4 GB of usable RAM, regardless of the version or edition.",
+    "explanation": "True. 32-bit Windows can address only about 4 GB of RAM.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-007",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the name of a Microsoft Windows feature that enables encryption of entire drives?",
+    "explanation": "BitLocker is the Windows full-drive encryption feature. FileVault is the macOS equivalent.",
+    "options": [
+      "FileVault",
+      "DriveCrypt",
+      "BitLocker",
+      "TrueCrypt"
+    ],
+    "correctAnswer": [
+      "BitLocker"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WBF-008",
+    "topic": "MS Windows Basic Features",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Microsoft Windows MMC snap-in that allows local administrators to manage system and user configuration policies is called:",
+    "explanation": "gpedit.msc is the Local Group Policy Editor. gpmc.msc is the domain Group Policy Management Console.",
+    "options": [
+      "gpedit.msc",
+      "compmgmt.msc",
+      "gpmc.msc",
+      "lusrmgr.msc"
+    ],
+    "correctAnswer": [
+      "gpedit.msc"
+    ],
+    "origin": "ExamCompass"
+  }
+]

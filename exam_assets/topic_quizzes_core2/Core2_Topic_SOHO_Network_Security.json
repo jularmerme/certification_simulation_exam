@@ -1,0 +1,301 @@
+[
+  {
+    "id": "1202-SOH-001",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is setting up a new SOHO router. After connecting with the factory default credentials, what is the most important first step to secure the device?",
+    "explanation": "Factory default credentials are publicly known, so changing them is the first step.",
+    "options": [
+      "Disable unused ports",
+      "Update the router firmware",
+      "Change admin credentials",
+      "Turn off SSID broadcast"
+    ],
+    "correctAnswer": [
+      "Change admin credentials"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-002",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are direct use cases for IP filtering on a SOHO router? (Select 2 answers)",
+    "explanation": "IP filtering allows or blocks traffic by IP address, such as limiting which internal devices get internet access and blocking specific external IPs. Blocking websites by content is content filtering.",
+    "options": [
+      "Blocking websites containing inappropriate content",
+      "Allowing only specific internal devices to access the internet",
+      "Preventing users from downloading and installing unauthorized applications",
+      "Allowing external hosts to connect to a specific internal service",
+      "Blocking traffic from specific external IP addresses"
+    ],
+    "correctAnswer": [
+      "Allowing only specific internal devices to access the internet",
+      "Blocking traffic from specific external IP addresses"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-003",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Firmware is a type of permanent software programmed into a hardware device, such as a SOHO router, that provides low-level control for the device's specific hardware. Firmware updates are patches or new versions of the device's firmware released by the manufacturer to fix security vulnerabilities, resolve bugs, and occasionally add new features. Applying these updates is a critical security and maintenance task for network devices.",
+    "explanation": "True. Router firmware updates fix vulnerabilities and bugs.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-004",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a router feature that inspects data streams for specific criteria, such as keywords, file types, or patterns, and blocks traffic that indicates inappropriate, harmful, or malicious payload?",
+    "explanation": "Content filtering inspects content for keywords, file types and patterns and blocks what matches.",
+    "options": [
+      "Malware inspection",
+      "Packet filtering",
+      "Traffic shaping",
+      "Content filtering"
+    ],
+    "correctAnswer": [
+      "Content filtering"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-005",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A SOHO router is positioned directly against a wall that separates the office from a public hallway. This placement primarily increases the risk of: (Select 2 answers)",
+    "explanation": "Placing the router against a public wall lets the signal leak out, which makes unauthorized wireless access easier.",
+    "options": [
+      "Excessive signal reflection",
+      "SSID broadcast suppression",
+      "Wireless signal leakage",
+      "Reduced signal range within the office",
+      "Unauthorized wireless access"
+    ],
+    "correctAnswer": [
+      "Wireless signal leakage",
+      "Unauthorized wireless access"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-006",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are valid reasons to leave UPnP disabled on a SOHO router? (Select 2 answers)",
+    "explanation": "UPnP lets applications open ports automatically. Leaving it disabled reduces external access to internal devices and prevents automatic port forwarding.",
+    "options": [
+      "To reduce the risk of external access to internal devices",
+      "To minimize the chance of a successful port scanning attack",
+      "To prevent the router from broadcasting its external WAN IP address",
+      "To reduce the number of connected clients on the network",
+      "To prevent automatic port forwarding by unknown applications"
+    ],
+    "correctAnswer": [
+      "To reduce the risk of external access to internal devices",
+      "To prevent automatic port forwarding by unknown applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-007",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A screened subnet is an example of a semi-trusted network segment that acts as a buffer zone between the trusted internal network and untrusted external networks.",
+    "explanation": "True. A screened subnet (formerly DMZ) sits between the internal network and the internet.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-008",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below is not considered a security best practice for access management on a SOHO router?",
+    "explanation": "Changing the SSID obscures the router's identity but is not an access management control for the admin interface.",
+    "options": [
+      "Disabling remote access when not needed",
+      "Enforcing strong authentication for administrative access",
+      "Using encrypted protocols (e.g., HTTPS or SSH)",
+      "Limiting access to trusted IP ranges",
+      "Changing the default SSID to hide network identity"
+    ],
+    "correctAnswer": [
+      "Changing the default SSID to hide network identity"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-009",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A service set identifier (SSID) is the public name assigned to a wireless network that distinguishes it from other nearby networks. Since the default SSID is often a manufacturer-specific name (e.g., \"Linksys\", \"TP-Link\") followed by a suffix, changing it to a unique name helps to obscure the router's identity.",
+    "explanation": "True. Changing the default SSID hides the manufacturer and model.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-010",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following would hide the wireless network name from casual scanning?",
+    "explanation": "Disabling SSID broadcast hides the network name from casual scanning.",
+    "options": [
+      "Enabling encryption",
+      "Disabling unused services/ports",
+      "Enabling firewall rules for inbound traffic",
+      "Disabling SSID broadcast"
+    ],
+    "correctAnswer": [
+      "Disabling SSID broadcast"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-011",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is configuring encryption settings on a new SOHO wireless router and wants to ensure the strongest possible security levels for wireless communications. Which option should be selected?",
+    "explanation": "WPA3-SAE is the strongest option for a home or SOHO network. WPA3-Enterprise needs a RADIUS server.",
+    "options": [
+      "WPA-TKIP",
+      "WPA2-AES",
+      "WPA3-SAE",
+      "WPA3-Enterprise"
+    ],
+    "correctAnswer": [
+      "WPA3-SAE"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-012",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refer to the typical characteristics of a SOHO guest wireless network? (Select 3 answers)",
+    "explanation": "A guest network has its own SSID, is isolated from the main LAN, and uses open access or a separate passphrase.",
+    "options": [
+      "Shared encryption and authentication settings",
+      "Access to internal LAN devices",
+      "Separate SSID",
+      "Guest network isolation from the main LAN",
+      "Open access or shared passphrase different from the main LAN",
+      "SSID shared with the main network"
+    ],
+    "correctAnswer": [
+      "Separate SSID",
+      "Guest network isolation from the main LAN",
+      "Open access or shared passphrase different from the main LAN"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-013",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network technician wants to secure a SOHO network by disabling unused TCP/UDP ports. Where should this configuration be applied?",
+    "explanation": "Open ports are controlled in the router's firewall settings.",
+    "options": [
+      "Content filtering settings on the SOHO router",
+      "Port configuration settings on a network switch",
+      "Firewall settings on the SOHO router",
+      "TCP/IP configuration settings on client devices"
+    ],
+    "correctAnswer": [
+      "Firewall settings on the SOHO router"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SOH-014",
+    "topic": "SOHO Network Security",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network admin has been tasked with configuring a SOHO router to allow users from the public internet to connect to a web server that resides on the private internal network. Which router setting is required to map incoming requests from the public interface to the specific private IP address of the web server?",
+    "explanation": "Port forwarding maps incoming requests on a public port to a specific private IP address.",
+    "options": [
+      "Port labeling",
+      "Port bonding",
+      "Port forwarding",
+      "Port mirroring"
+    ],
+    "correctAnswer": [
+      "Port forwarding"
+    ],
+    "origin": "ExamCompass"
+  }
+]
