@@ -1,0 +1,383 @@
+[
+  {
+    "id": "1202-THR-001",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Denial-of-Service (DoS) attack is a cyberattack that disrupts access to a website, service, or network by overwhelming it with excessive traffic or malicious requests from a single, compromised source. A more advanced form of DoS attack where multiple compromised systems flood a target with traffic, making it harder to detect and defend against, is referred to as:",
+    "explanation": "A distributed denial of service (DDoS) uses many compromised systems at once.",
+    "options": [
+      "Syn flood",
+      "Amplification attack",
+      "DDoS",
+      "MitM attack"
+    ],
+    "correctAnswer": [
+      "DDoS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-002",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The term \"Evil twin\" refers to a rogue WAP set up for eavesdropping or stealing sensitive user data. The evil twin replaces a legitimate AP by advertising its own presence with the same SSID, which causes networked hosts to perceive it as the correct AP to connect to.",
+    "explanation": "True. An evil twin imitates a legitimate access point by using the same SSID.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-003",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An attack that takes advantage of a previously unknown software vulnerability that the developer has not yet patched is known as:",
+    "explanation": "A zero-day attack exploits a vulnerability that has no patch yet.",
+    "options": [
+      "Trojan horse",
+      "Backdoor exploit",
+      "Logic bomb",
+      "Zero-day attack"
+    ],
+    "correctAnswer": [
+      "Zero-day attack"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-004",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which term best describes a situation where an attacker falsifies an identifier (email address, IP address, MAC address, caller ID, or website) to appear as a trusted source, with the intent to deceive targets, bypass filters, or redirect traffic for malicious purposes?",
+    "explanation": "Falsifying an identifier such as an IP, MAC, email address or caller ID is spoofing.",
+    "options": [
+      "Phishing",
+      "Impersonation",
+      "Spoofing",
+      "Pretexting"
+    ],
+    "correctAnswer": [
+      "Spoofing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-005",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the statements listed below describe an on-path attack? (Select 3 answers)",
+    "explanation": "An on-path (man-in-the-middle) attacker sits on the communication route, intercepts and modifies packets, and may impersonate one party. It doesn't need physical access or a compromised endpoint.",
+    "options": [
+      "Attackers intercept and modify the packets sent between two communicating devices",
+      "Attackers must have physical access to the network infrastructure to execute an on-path attack",
+      "Attackers can impersonate one of the communicating parties to alter the communication",
+      "An on-path attack may succeed only if at least one of the communicating devices has been compromised",
+      "Attackers place themselves on the communication route between two devices"
+    ],
+    "correctAnswer": [
+      "Attackers intercept and modify the packets sent between two communicating devices",
+      "Attackers can impersonate one of the communicating parties to alter the communication",
+      "Attackers place themselves on the communication route between two devices"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-006",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a cyberattack that relies on testing every possible combination of letters, numbers, and symbols to gain unauthorized access to accounts, systems, or encrypted data?",
+    "explanation": "A brute-force attack tries every possible combination.",
+    "options": [
+      "Replay attack",
+      "Brute-force attack",
+      "Dictionary attack",
+      "Birthday attack"
+    ],
+    "correctAnswer": [
+      "Brute-force attack"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-007",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which password attack takes advantage of a predefined list of words?",
+    "explanation": "A dictionary attack tries words from a predefined list.",
+    "options": [
+      "Birthday attack",
+      "Replay attack",
+      "Dictionary attack",
+      "Brute-force attack"
+    ],
+    "correctAnswer": [
+      "Dictionary attack"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-008",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which term best describes a disgruntled employee abusing legitimate access to a company's internal resources?",
+    "explanation": "An insider threat is someone inside the organization abusing legitimate access.",
+    "options": [
+      "APT",
+      "Insider threat",
+      "Gray hat",
+      "Threat actor"
+    ],
+    "correctAnswer": [
+      "Insider threat"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-009",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a security vulnerability that allows an attacker to inject malicious code into input fields, such as search bars or login forms, to execute unauthorized commands on a database?",
+    "explanation": "SQL injection inserts SQL commands into input fields to run unauthorized commands against a database.",
+    "options": [
+      "Format string exploit",
+      "Buffer overflow",
+      "SQL injection",
+      "Cross-site scripting"
+    ],
+    "correctAnswer": [
+      "SQL injection"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-010",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers can be used to describe the characteristics of an XSS attack? (Select 3 answers)",
+    "explanation": "XSS injects a malicious script into a trusted site, the script runs in the victim's browser, and it exploits the browser's trust in the site. The other options describe CSRF.",
+    "options": [
+      "A user unknowingly submits a forged request to a trusted website",
+      "An attack that exploits the trust a website has in the user's web browser",
+      "The trusted website executes an action on behalf of the user without their consent",
+      "An attacker injects a malicious script into a trusted website",
+      "An attack that exploits the trust a user's web browser has in a website",
+      "The attacker's script is executed in the user's browser"
+    ],
+    "correctAnswer": [
+      "An attacker injects a malicious script into a trusted website",
+      "An attack that exploits the trust a user's web browser has in a website",
+      "The attacker's script is executed in the user's browser"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-011",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A BEC attack is a targeted subtype of which broader social engineering attack category?",
+    "explanation": "Business email compromise is a targeted form of phishing.",
+    "options": [
+      "Smishing",
+      "Phishing",
+      "Vishing",
+      "Pharming"
+    ],
+    "correctAnswer": [
+      "Phishing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-012",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which cyberattack involves impersonating executives, vendors, or trusted partners via email to trick organizations into harmful actions such as making unauthorized wire transfers or disclosing sensitive data?",
+    "explanation": "Business email compromise (BEC) uses impersonation by email for fraud such as unauthorized wire transfers.",
+    "options": [
+      "APT",
+      "BEC",
+      "TTP",
+      "ATO"
+    ],
+    "correctAnswer": [
+      "BEC"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-013",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a cybersecurity threat in which attackers compromise a trusted third-party vendor, software provider, or service in the distribution pipeline to insert malicious code, hardware, or updates?",
+    "explanation": "A supply chain (pipeline) attack compromises a trusted vendor or provider to reach its customers.",
+    "options": [
+      "On-path attack",
+      "Man-in-the-middle attack",
+      "Supply chain attack",
+      "Insider threat"
+    ],
+    "correctAnswer": [
+      "Supply chain attack"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-014",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Network Access Control (NAC) defines a set of rules enforced in a network that clients attempting to access the network must comply with. With NAC, policies can be enforced before or after end-stations gain access to the network. NAC can be implemented as pre-admission NAC, where a host must, for example, be virus-free or have patches applied before it is allowed to connect to the network, and/or post-admission NAC, where a host is granted or denied permissions based on its actions after it has been provided access to the network.",
+    "explanation": "True. NAC supports both pre-admission and post-admission checks.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-015",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator is using an asset inventory report to identify systems running web server software with recently disclosed critical security flaws. This task is an example of managing which type of vulnerability?",
+    "explanation": "Finding systems with known, disclosed flaws that still need fixing is managing unpatched systems.",
+    "options": [
+      "Unpatched systems",
+      "Zero-day exploits",
+      "Non-compliant systems",
+      "Configuration drift"
+    ],
+    "correctAnswer": [
+      "Unpatched systems"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-016",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following controls are considered basic first-line, active defenses that reduce risk from common vulnerabilities on endpoints? (Select 2 answers)",
+    "explanation": "A host-based firewall and antivirus software are first-line active endpoint defenses.",
+    "options": [
+      "Strong passwords",
+      "Host-based firewall",
+      "Security awareness training",
+      "Encryption",
+      "Antivirus software"
+    ],
+    "correctAnswer": [
+      "Host-based firewall",
+      "Antivirus software"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-017",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The most critical security risk posed by an EOL system is that newly discovered vulnerabilities will remain permanently unpatched.",
+    "explanation": "True. End-of-life systems no longer receive security patches.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-THR-018",
+    "topic": "Threats & Vulnerabilities",
+    "domain": "2.0 Security",
+    "objective": "2.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which mobile device deployment model allows employees to use their personal mobile devices to access a company's restricted data and applications?",
+    "explanation": "Bring your own device (BYOD) lets employees use their personal devices for work.",
+    "options": [
+      "COPE",
+      "CYOD",
+      "BYOD",
+      "COBO"
+    ],
+    "correctAnswer": [
+      "BYOD"
+    ],
+    "origin": "ExamCompass"
+  }
+]

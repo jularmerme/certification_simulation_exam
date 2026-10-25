@@ -1,0 +1,376 @@
+[
+  {
+    "id": "1202-LSC-001",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities is referred to as:",
+    "explanation": "The principle of least privilege gives users only the access their job requires.",
+    "options": [
+      "Implicit deny policy",
+      "Zero Trust model",
+      "Principle of least privilege",
+      "Separation of duties"
+    ],
+    "correctAnswer": [
+      "Principle of least privilege"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-002",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a security approach that eliminates implicit trust from networks requiring all users and devices to be continuously verified before being granted access to resources?",
+    "explanation": "Zero Trust removes implicit trust. Every user and device is verified continuously.",
+    "options": [
+      "Least privilege access",
+      "AAA framework",
+      "Zero Trust model",
+      "Policy-driven access control"
+    ],
+    "correctAnswer": [
+      "Zero Trust model"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-003",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the acronyms listed below refers to a logical security rule set that controls access to objects and specifies the operations allowed on a given object?",
+    "explanation": "An access control list (ACL) defines who can access an object and which operations are allowed.",
+    "options": [
+      "AUP",
+      "SSO",
+      "ACL",
+      "OTP"
+    ],
+    "correctAnswer": [
+      "ACL"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-004",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Authentication processes can be based on various categories of factors. These include knowledge-based factors, such as usernames, passwords, PINs, or security question answers (\"something you know\"); possession-based factors, such as smart cards, key fobs, or security keys (\"something you have\"); inherence-based factors, including unique physical traits such as fingerprints, iris scans, facial recognition, or voice patterns (\"something you are\"); and location-based factors, such as geolocation data or IP addresses (\"somewhere you are\"). A multifactor authentication system requires the implementation of authentication factors from two or more distinct categories.",
+    "explanation": "True. MFA needs factors from two or more different categories, not two of the same kind.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-005",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After typing in a password, a login system prompts the user to enter a one-time verification code sent to the account's associated inbox. Which MFA method is being used?",
+    "explanation": "A code delivered to the account's inbox is email-based MFA.",
+    "options": [
+      "TOTP",
+      "SMS",
+      "Email",
+      "PIN code"
+    ],
+    "correctAnswer": [
+      "Email"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-006",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician begins the login process by entering a password. The system detects that the account is configured for multifactor authentication and prompts the technician for a USB-based cryptographic key. What type of MFA device is the technician using?",
+    "explanation": "A USB-based cryptographic key is a hardware token.",
+    "options": [
+      "Software token",
+      "OTP display key fob",
+      "Hardware token",
+      "USB flash drive"
+    ],
+    "correctAnswer": [
+      "Hardware token"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-007",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is troubleshooting a user's failed login attempt. The user states they are using an authenticator application, and the code they entered was incorrect. What is the most likely cause of this issue?",
+    "explanation": "Authenticator apps generate time-based codes (TOTP), so a wrong clock on the phone produces codes the server rejects.",
+    "options": [
+      "The user is not connected to the internet",
+      "The user's phone is set to the wrong time",
+      "The user's password was entered incorrectly",
+      "The MFA service is experiencing an outage"
+    ],
+    "correctAnswer": [
+      "The user's phone is set to the wrong time"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-008",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "After entering a password, a user receives a text message containing a one-time verification code. Which delivery method is being used for the second MFA prompt?",
+    "explanation": "A code sent by text message is SMS-based MFA.",
+    "options": [
+      "PIN code",
+      "Email",
+      "SMS",
+      "TOTP app"
+    ],
+    "correctAnswer": [
+      "SMS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-009",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In voice call multifactor authentication, a user receives a one-time verification code or approval prompt through an automated or live telephone call.",
+    "explanation": "True. Voice call MFA delivers the code or approval prompt by phone call.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-010",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements about TOTP is not true?",
+    "explanation": "TOTP codes are only valid for a short, recurring time window (for example 30 seconds), so this statement is false.",
+    "options": [
+      "Generated offline using a shared secret and the current time",
+      "Requires time synchronization between client and server",
+      "Its validity does not depend on short, recurring time intervals",
+      "Commonly implemented in authenticator apps and hardware tokens"
+    ],
+    "correctAnswer": [
+      "Its validity does not depend on short, recurring time intervals"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-011",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which acronym is used to describe a general category of single-use authentication codes?",
+    "explanation": "A one-time password/passcode (OTP) is a single-use code. TOTP is one type of OTP.",
+    "options": [
+      "MFA",
+      "PIV",
+      "OTP",
+      "SSO"
+    ],
+    "correctAnswer": [
+      "OTP"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-012",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a markup language used for exchanging authentication and authorization data?",
+    "explanation": "SAML (Security Assertion Markup Language) is an XML-based format for exchanging authentication and authorization data, and is often used for SSO.",
+    "options": [
+      "OAuth",
+      "XML",
+      "SAML",
+      "XHTML"
+    ],
+    "correctAnswer": [
+      "SAML"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-013",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An authentication subsystem that enables a user to access multiple, connected system components (such as separate hosts on a network) after a single login on only one of the components is called:",
+    "explanation": "Single sign-on (SSO) lets one login give access to multiple connected systems.",
+    "options": [
+      "NAC",
+      "SSO",
+      "AAA",
+      "MFA"
+    ],
+    "correctAnswer": [
+      "SSO"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-014",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a security measure that grants temporary, on-demand, and limited-time access to privileged accounts?",
+    "explanation": "Just-in-time (JIT) access gives privileged access only when it is needed, and only for a limited time.",
+    "options": [
+      "Zero Trust architecture",
+      "Context-based authentication",
+      "Principle of least privilege",
+      "Just-in-time access"
+    ],
+    "correctAnswer": [
+      "Just-in-time access"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-015",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following refers to a cybersecurity tool dedicated to managing, monitoring, and securing access to critical systems and accounts with elevated privileges?",
+    "explanation": "Privileged access management (PAM) manages, monitors and secures privileged accounts.",
+    "options": [
+      "OAuth",
+      "IAM",
+      "RBAC",
+      "PAM"
+    ],
+    "correctAnswer": [
+      "PAM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-016",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of software provides a solution specifically designed to centrally manage, monitor, and secure mobile devices such as smartphones and tablets?",
+    "explanation": "Mobile device management (MDM) centrally manages and secures smartphones and tablets.",
+    "options": [
+      "UEM",
+      "EDR",
+      "IAM",
+      "MDM"
+    ],
+    "correctAnswer": [
+      "MDM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-017",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the acronyms listed below refers to a dedicated software or hardware-based security solution designed to detect and prevent unauthorized use and transmission of confidential information?",
+    "explanation": "Data loss prevention (DLP) detects and blocks unauthorized use or transmission of confidential data.",
+    "options": [
+      "DEP",
+      "IPS",
+      "DLP",
+      "UTM"
+    ],
+    "correctAnswer": [
+      "DLP"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LSC-018",
+    "topic": "Logical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following refers to a comprehensive security framework that manages the entire lifecycle of a digital identity (such as a user account or device) and controls how it can access organizational resources?",
+    "explanation": "Identity and access management (IAM) manages the lifecycle of identities and their access to resources.",
+    "options": [
+      "AAA",
+      "SSO",
+      "RADIUS",
+      "IAM"
+    ],
+    "correctAnswer": [
+      "IAM"
+    ],
+    "origin": "ExamCompass"
+  }
+]

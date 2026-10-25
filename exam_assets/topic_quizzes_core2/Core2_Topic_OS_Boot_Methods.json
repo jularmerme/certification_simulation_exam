@@ -1,0 +1,255 @@
+[
+  {
+    "id": "1202-OBM-001",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the actions listed below is not required when preparing a USB drive to serve as bootable installation media for an operating system?",
+    "explanation": "Bootable installation media only needs the drive formatted, a bootable partition and the installation image written to it. The OS is installed onto the target computer, not onto the USB drive.",
+    "options": [
+      "Formatting the USB drive with a supported file system",
+      "Creating a bootable partition on the USB drive",
+      "Writing the operating system installation image to the USB",
+      "Installing the operating system onto the USB drive"
+    ],
+    "correctAnswer": [
+      "Installing the operating system onto the USB drive"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-002",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a solution widely used in enterprise environments for deploying operating systems at scale, particularly when the use of physical media is not feasible?",
+    "explanation": "PXE (Preboot Execution Environment) lets a computer boot from the network and pull an OS image from a server, so no physical media is needed.",
+    "options": [
+      "NAS",
+      "RDP",
+      "PXE",
+      "SAN"
+    ],
+    "correctAnswer": [
+      "PXE"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-003",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What are the advantages of using SSDs for OS installations compared to traditional hard drives? (Select 3 answers)",
+    "explanation": "SSDs give faster transfers, quicker boot times and faster application loading. HDDs are still cheaper per gigabyte and offer higher capacities.",
+    "options": [
+      "Lower cost per gigabyte",
+      "Improved file transfer speeds",
+      "Much quicker boot times",
+      "Faster application loading",
+      "Higher storage capacity"
+    ],
+    "correctAnswer": [
+      "Improved file transfer speeds",
+      "Much quicker boot times",
+      "Faster application loading"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-004",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below describe characteristics of an internet-based OS installation method? (Select 2 answers)",
+    "explanation": "Internet-based installation suits single users and remote workers with no local infrastructure, and it downloads files from external servers or vendor sites. PXE/DHCP/TFTP and internal image servers describe network installation.",
+    "options": [
+      "Optimized for mass deployment with standardized configuration across multiple systems",
+      "Uses internal servers to deploy OS images over the local network",
+      "Primarily suited for single users, remote workers, or when local network infrastructure is not available",
+      "Commonly deployed via PXE/DHCP/TFTP protocols",
+      "Relies on external servers, cloud services, or vendor websites for installation files"
+    ],
+    "correctAnswer": [
+      "Primarily suited for single users, remote workers, or when local network infrastructure is not available",
+      "Relies on external servers, cloud services, or vendor websites for installation files"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-005",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "For an internet-based OS installation, what should a technician consider regarding data integrity and security of the downloaded files?",
+    "explanation": "Compare the downloaded file's cryptographic hash with the vendor's published value to confirm it hasn't been altered or corrupted.",
+    "options": [
+      "Antivirus signature updates",
+      "Local security settings",
+      "Software licensing keys",
+      "Cryptographic hash values"
+    ],
+    "correctAnswer": [
+      "Cryptographic hash values"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-006",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is preparing an external storage drive to serve as a bootable OS installation medium. What is the primary requirement for the computer to recognize and boot from this drive?",
+    "explanation": "The firmware must be set to boot from the external drive first (boot order or one-time boot menu).",
+    "options": [
+      "The operating system must support plug and play detection",
+      "The computer's internal storage drives must be disabled through BIOS/UEFI",
+      "The BIOS/UEFI boot order must prioritize the external drive",
+      "The external drive must be formatted using the exFAT file system"
+    ],
+    "correctAnswer": [
+      "The BIOS/UEFI boot order must prioritize the external drive"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-007",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following allows a storage drive to be safely removed and replaced while the system remains powered on and operational?",
+    "explanation": "Hot-swapping means removing and replacing a drive while the system stays powered on. A hot spare is an idle drive that takes over automatically when another fails.",
+    "options": [
+      "Cold-plugging",
+      "Hot spare",
+      "Stand-by drive",
+      "Hot-swapping"
+    ],
+    "correctAnswer": [
+      "Hot-swapping"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-008",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "If an operating system partition on an internal storage drive becomes corrupted and unbootable, the immediate challenge in recovering personal files (if they are not on a separate data partition) is that they become inaccessible through normal means, requiring specialized recovery methods like booting from external media or using data recovery tools.",
+    "explanation": "True. Files on a corrupted, unbootable OS partition can only be reached by booting from external media or using recovery tools.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-009",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician has physically installed a brand-new internal storage drive inside the computer case, but it is not yet recognized as usable storage. What should be the first configuration step to make the drive accessible for OS installation?",
+    "explanation": "A new drive must first be initialized (given a partition table, GPT or MBR). Then partition, format and assign a drive letter.",
+    "options": [
+      "Format the drive",
+      "Partition the drive",
+      "Initialize the drive",
+      "Assign drive letter"
+    ],
+    "correctAnswer": [
+      "Initialize the drive"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-010",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the most common use case for a multiboot configuration?",
+    "explanation": "Multiboot lets you pick one of several installed operating systems at startup for specific tasks. Running them simultaneously or isolating software are virtualization uses.",
+    "options": [
+      "Running multiple operating systems simultaneously",
+      "Keeping legacy software operational in a controlled environment",
+      "Isolating potentially harmful software away from the main OS",
+      "Utilizing different operating systems for specific tasks"
+    ],
+    "correctAnswer": [
+      "Utilizing different operating systems for specific tasks"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-011",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In a multiboot environment, each operating system must reside on a separate partition or drive to prevent file system conflicts and data corruption between the different OS installations.",
+    "explanation": "True. Each OS needs its own partition or drive.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-OBM-012",
+    "topic": "OS Boot Methods",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.2",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to add a Linux distribution to an existing Windows 11 installation to create a multiboot system. Which of the actions listed below should typically be the next logical step after shrinking the Windows partition to create unallocated space for Linux?",
+    "explanation": "After shrinking the Windows partition, install Linux into the unallocated space. Reformatting the whole drive would wipe Windows.",
+    "options": [
+      "Creating a Windows restore point",
+      "Performing a full system backup",
+      "Installing the Linux distribution",
+      "Reformatting the entire storage drive"
+    ],
+    "correctAnswer": [
+      "Installing the Linux distribution"
+    ],
+    "origin": "ExamCompass"
+  }
+]

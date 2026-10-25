@@ -1,0 +1,702 @@
+[
+  {
+    "id": "1202-MAC-001",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What does a macOS file with the .dmg extension primarily represent?",
+    "explanation": "A .dmg is a disk image that mounts as a volume.",
+    "options": [
+      "Compressed archive format similar to a .zip file",
+      "Virtual disk image that can be mounted as a volume",
+      "Application package file that installs directly from the App Store",
+      "Executable installer file similar to a Windows .exe"
+    ],
+    "correctAnswer": [
+      "Virtual disk image that can be mounted as a volume"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-002",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following refers to an installer file format processed by the macOS Installer utility?",
+    "explanation": ".pkg is the installer package processed by the macOS Installer.",
+    "options": [
+      ".app",
+      ".pkg",
+      ".exe",
+      ".dmg"
+    ],
+    "correctAnswer": [
+      ".pkg"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-003",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An .app file in macOS is a specialized folder (an application bundle) represented as a single file in Finder. This self-contained bundle includes all the essential components required to run the application, such as the executable program, resource files like icons and images, and configuration settings. It functions as an executable, so double-clicking it launches the application inside the bundle. Another important characteristic of .app files in macOS is that they can easily be moved or copied without affecting the application's functionality.",
+    "explanation": "True. An .app is an application bundle that can be moved or copied freely.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-004",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a macOS built-in feature and tool that serves as the official digital distribution platform for applications?",
+    "explanation": "The App Store is the official distribution platform for macOS apps.",
+    "options": [
+      "Spotlight",
+      "AirDrop",
+      "Launchpad",
+      "App Store"
+    ],
+    "correctAnswer": [
+      "App Store"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-005",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In macOS, most applications can be uninstalled by simply dragging the .app file to the Trash, a method often referred to as drag & drop deletion. Applications installed via the App Store can also be removed from Launchpad. In Launchpad, applications installed via the App Store can be deleted by clicking and holding an app icon until it wiggles, then selecting the \"X\" that appears on the icon. Some applications installed through .pkg files may require a dedicated uninstaller provided by the software developer.",
+    "explanation": "True. This is the standard macOS uninstall process.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-006",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS folder is the default location for both Apple-supplied and user-installed software?",
+    "explanation": "/Applications holds installed applications.",
+    "options": [
+      "/Users",
+      "/Applications",
+      "/Library",
+      "/System"
+    ],
+    "correctAnswer": [
+      "/Applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-007",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to access their personal files in macOS. Where should they navigate to?",
+    "explanation": "Each user's personal files are in /Users/[username] (the home folder).",
+    "options": [
+      "/Users/[username]",
+      "/Applications/[username]",
+      "/Library/[username]",
+      "/System/[username]"
+    ],
+    "correctAnswer": [
+      "/Users/[username]"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-008",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to macOS folder containing system-wide resources and settings used by applications and the operating system?",
+    "explanation": "/Library holds system-wide resources and settings. /System holds the core OS files.",
+    "options": [
+      "/Users",
+      "/Applications",
+      "/Library",
+      "/System"
+    ],
+    "correctAnswer": [
+      "/Library"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-009",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which folder in macOS contains the core OS files necessary for the system to run?",
+    "explanation": "/System contains the core OS files.",
+    "options": [
+      "/Library",
+      "/Config",
+      "/Applications",
+      "/System"
+    ],
+    "correctAnswer": [
+      "/System"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-010",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a macOS folder designed to store application data and settings specific to an individual user account?",
+    "explanation": "The per-user Library folder, /Users/[username]/Library, holds that user's application data and settings.",
+    "options": [
+      "/System/Library/[username]",
+      "/Library/[username]/Preferences",
+      "/System/[username]/Library",
+      "/Users/[username]/Library"
+    ],
+    "correctAnswer": [
+      "/Users/[username]/Library"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-011",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following provides SSO access exclusive to Apple's own ecosystem of products and services?",
+    "explanation": "An Apple ID is the single account for Apple's own products and services.",
+    "options": [
+      "Apple Passkey",
+      "Gatekeeper",
+      "Apple ID",
+      "Sign in with Apple"
+    ],
+    "correctAnswer": [
+      "Apple ID"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-012",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a common method for enforcing corporate restrictions on macOS devices?",
+    "explanation": "Mobile device management (MDM) enforces corporate restrictions and configuration profiles.",
+    "options": [
+      "RSR",
+      "MDM",
+      "UAC",
+      "MFA"
+    ],
+    "correctAnswer": [
+      "MDM"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-013",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A reliable data backup strategy includes keeping multiple copies of data on different media types, storing at least one copy offsite, encrypting backup data, retaining multiple historical versions, automating backups, and periodically testing restoration.",
+    "explanation": "True. These are good backup practices (3-2-1 rule).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-014",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While macOS includes integrated malware protection features such as XProtect and Gatekeeper, organizations in business and regulated sectors often deploy third-party antivirus solutions to strengthen security against both known and emerging threats.",
+    "explanation": "True. Organizations often add third-party antivirus to the built-in protection.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-015",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is configuring a batch of new macOS devices for a small business. The client wants to ensure all systems stay up to date with the latest patches automatically. Which System Settings location allows the technician to enable this functionality?",
+    "explanation": "Automatic updates are set under System Settings > General > Software Update.",
+    "options": [
+      "Control Center > Updates",
+      "Admin Tools > Updates",
+      "Maintenance > Update Options",
+      "General > Software Update"
+    ],
+    "correctAnswer": [
+      "General > Software Update"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-016",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to an Apple-exclusive mechanism for deploying time-sensitive security patches independently of major OS updates?",
+    "explanation": "Rapid Security Response (RSR) delivers quick security patches without a full OS update. YUM, APT and RPM are Linux package tools.",
+    "options": [
+      "YUM",
+      "RSR",
+      "APT",
+      "RPM"
+    ],
+    "correctAnswer": [
+      "RSR"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-017",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In macOS, the System Settings menu (formerly System Preferences), accessible from the Apple menu, provides a centralized location to configure hardware and peripheral devices such as displays, printers, or scanners. It can also be used to manage network connections, privacy and accessibility options, as well as system backups.",
+    "explanation": "True. System Settings is the central configuration location.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-018",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to the built-in backup utility in macOS?",
+    "explanation": "Time Machine is the macOS built-in backup utility.",
+    "options": [
+      "Time Machine",
+      "ChronoSync",
+      "iDrive",
+      "Retrospect"
+    ],
+    "correctAnswer": [
+      "Time Machine"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-019",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS feature allows users to group and organize full-screen applications and windows into multiple virtual desktop environments?",
+    "explanation": "Spaces provides multiple virtual desktops.",
+    "options": [
+      "Dashboard",
+      "Control Center",
+      "Desktop Window Manager",
+      "Spaces"
+    ],
+    "correctAnswer": [
+      "Spaces"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-020",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A macOS feature providing single-screen thumbnail preview of all open windows and applications is known as:",
+    "explanation": "Mission Control shows all open windows and Spaces on one screen.",
+    "options": [
+      "Quick Look",
+      "Spotlight",
+      "Mission Control",
+      "Stage Manager"
+    ],
+    "correctAnswer": [
+      "Mission Control"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-021",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which built-in macOS utility provides secure storage and management of passwords, encryption keys, certificates, and other sensitive credentials?",
+    "explanation": "Keychain securely stores passwords, keys and certificates.",
+    "options": [
+      "Keychain",
+      "Credential Manager",
+      "Apple ID",
+      "FileVault"
+    ],
+    "correctAnswer": [
+      "Keychain"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-022",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a macOS system search utility?",
+    "explanation": "Spotlight is the macOS system-wide search tool. Finder is the file manager.",
+    "options": [
+      "Explorer",
+      "File explorer",
+      "Spotlight",
+      "Finder"
+    ],
+    "correctAnswer": [
+      "Spotlight"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-023",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Apple's cloud service for storing and syncing data across devices is called:",
+    "explanation": "iCloud is Apple's cloud storage and sync service.",
+    "options": [
+      "iDrive",
+      "AirDrop",
+      "OneDrive",
+      "iCloud"
+    ],
+    "correctAnswer": [
+      "iCloud"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-024",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Apple's iMessage is a proprietary service designed for secure exchange of email messages between Apple devices.",
+    "explanation": "False. iMessage is a text messaging service, not email.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-025",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS app can be used for real-time audio and video calling between Apple devices?",
+    "explanation": "FaceTime provides audio and video calls between Apple devices.",
+    "options": [
+      "iChat",
+      "FaceTime",
+      "Signal",
+      "Zoom"
+    ],
+    "correctAnswer": [
+      "FaceTime"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-026",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user works on a MacBook at the office and wants to continue editing the same files later on their iPad at home. They need a solution that stores files in the cloud so the latest version is automatically available on all their Apple devices. Which macOS feature should they use?",
+    "explanation": "iCloud Drive syncs files across Apple devices.",
+    "options": [
+      "iCloud Drive",
+      "AirDrop",
+      "iDrive",
+      "Continuity"
+    ],
+    "correctAnswer": [
+      "iCloud Drive"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-027",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In modern macOS versions, gestures can be customized in System Settings under Trackpad preferences.",
+    "explanation": "True. Gestures are customized under Trackpad in System Settings.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-028",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to the default file management application for macOS?",
+    "explanation": "Finder is the default macOS file manager.",
+    "options": [
+      "Dock",
+      "Explorer",
+      "Spotlight",
+      "Finder"
+    ],
+    "correctAnswer": [
+      "Finder"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-029",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the name of the macOS feature that functions similarly to the Windows taskbar, providing quick access to frequently used and running applications, as well as minimized windows?",
+    "explanation": "The Dock gives quick access to frequently used and running apps.",
+    "options": [
+      "Menu Bar",
+      "Quick Look",
+      "Dock",
+      "Preview"
+    ],
+    "correctAnswer": [
+      "Dock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-030",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A set of features allowing users to seamlessly transition tasks and data between different Apple devices is referred to as:",
+    "explanation": "Continuity is the set of features (Handoff, Universal Clipboard and others) that moves tasks between Apple devices.",
+    "options": [
+      "iMessages",
+      "Continuity",
+      "Universal Clipboard",
+      "iCloud Drive"
+    ],
+    "correctAnswer": [
+      "Continuity"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-031",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS tool allows users to create .dmg files?",
+    "explanation": "Disk Utility can create disk images (.dmg).",
+    "options": [
+      "Disk Management",
+      "iDrive",
+      "GParted",
+      "Disk Utility"
+    ],
+    "correctAnswer": [
+      "Disk Utility"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-032",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS feature encrypts the contents of the startup disk to protect user data from unauthorized access?",
+    "explanation": "FileVault provides full-disk encryption of the startup disk.",
+    "options": [
+      "TrueCrypt",
+      "FileVault",
+      "Keychain",
+      "Gatekeeper"
+    ],
+    "correctAnswer": [
+      "FileVault"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-033",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS tool provides access to different command-line shells?",
+    "explanation": "Terminal gives access to command-line shells such as zsh and bash.",
+    "options": [
+      "PowerShell",
+      "Command Prompt",
+      "Terminal",
+      "Console"
+    ],
+    "correctAnswer": [
+      "Terminal"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MAC-034",
+    "topic": "macOS",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.8",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which macOS feature allows users to terminate an unresponsive application or process?",
+    "explanation": "Force Quit ends an unresponsive application (Option+Command+Esc).",
+    "options": [
+      "Safe Quit",
+      "Force Stop",
+      "End Task",
+      "Force Quit"
+    ],
+    "correctAnswer": [
+      "Force Quit"
+    ],
+    "origin": "ExamCompass"
+  }
+]

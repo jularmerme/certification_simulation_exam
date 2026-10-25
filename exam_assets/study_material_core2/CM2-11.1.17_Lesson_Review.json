@@ -1,0 +1,305 @@
+[
+  {
+    "id": "CM2-11.1-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of documenting \"Lessons Learned\" in IT support processes?",
+    "explanation": "The primary purpose of documenting Lessons Learned is to analyze past incidents and identify ways to improve processes, ensuring that similar issues are avoided in the future. This aligns with the best practices for continuous improvement in IT support and knowledge management. The goal of documenting Lessons Learned is not to assign blame but to foster a culture of improvement and collaboration. Blame-focused approaches can discourage open communication and hinder problem-solving. While timely ticket resolution is important, it is not the purpose of Lessons Learned. This process focuses on analyzing incidents after they occur to improve future outcomes, not on operational metrics like ticket closure times. Tracking technician performance is unrelated to the Lessons Learned process. The focus is on improving systems and processes, not individual performance metrics.",
+    "options": [
+      "To track the number of incidents handled by each technician.",
+      "To ensure all tickets are closed on time.",
+      "To identify and assign blame for incidents.",
+      "To improve future processes and prevent recurring issues."
+    ],
+    "correctAnswer": [
+      "To improve future processes and prevent recurring issues."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the correct definition of a \"Critical Incident\"?",
+    "explanation": "A Critical Incident is one that has a widespread effect on customers or involves a potential or actual data breach. This is a severity classification. An incident that affects a limited group of customers or involves a suspected security violation describes a Major Incident, not a Critical Incident. Major incidents affect a limited group of customers or involve a suspected security violation, which is less severe than a critical incident. An incident that is not having a significant effect on customer groups describes a Minor Incident, which does not have a significant effect on customer groups. Minor incidents are the least severe in the classification system. An incident related to provisioning things that the IT department has a SOP for, such as setting up new user accounts, describes a Request, not an incident. Requests are related to provisioning tasks that the IT department has a standard operating procedure (SOP) for, such as setting up new user accounts or deploying hardware/software.",
+    "options": [
+      "An incident that has a widespread effect on customers or involves a potential or actual data breach.",
+      "An incident that affects a limited group of customers or involves a suspected security violation.",
+      "An incident related to provisioning things that the IT department has a SOP for, such as setting up new user accounts.",
+      "An incident that is not having a significant effect on customer groups."
+    ],
+    "correctAnswer": [
+      "An incident that has a widespread effect on customers or involves a potential or actual data breach."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is clear written communication important during the ticket management process?",
+    "explanation": "Clear written communication is essential for documenting the steps taken to resolve an issue, which allows other team members to quickly understand the ticket's progress and continue troubleshooting if necessary. This is particularly important during handoffs between shifts or escalation to higher tiers. While self-service options like knowledge bases can help end-users resolve issues, clear written communication in ticket management is primarily for internal use by support teams, not for enabling end-users to resolve their own issues. Escalation is often necessary for complex or severe issues, regardless of how clearly the ticket is documented. Clear communication facilitates escalation but does not eliminate its need. Clear communication supports efficient ticket resolution, but it does not guarantee SLA compliance. Other factors, such as resource availability and issue complexity, also influence SLA adherence.",
+    "options": [
+      "It guarantees that all tickets are resolved within the SLA timeframe.",
+      "It allows end-users to resolve their own issues without contacting support.",
+      "It eliminates the need for escalation to higher support tiers.",
+      "It ensures that all team members understand the ticket's history and current status."
+    ],
+    "correctAnswer": [
+      "It ensures that all team members understand the ticket's history and current status."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is categorizing tickets in a ticketing system important?",
+    "explanation": "Categorizing tickets helps group related issues together, making it easier to assign them to the relevant support section or technician. This process improves efficiency and ensures that the right expertise is applied to resolve the issue. Categorizing tickets does not eliminate the need for escalation. Escalation is necessary when an issue cannot be resolved at the current level, regardless of how tickets are categorized. Categorizing tickets is a back-end process that helps support teams manage issues. Self-service options (like knowledge bases) are not directly related to ticket categorization. Categorizing tickets does not guarantee resolution within a specific time frame. Categorization helps with organization and assignment, but resolution times depend on the severity and complexity of the issue.",
+    "options": [
+      "It eliminates the need for escalation to senior technicians.",
+      "It ensures tickets are assigned to the appropriate support section or technician.",
+      "It allows end-users to resolve their own issues without contacting the help desk.",
+      "It guarantees that all tickets are resolved within a specific time frame."
+    ],
+    "correctAnswer": [
+      "It ensures tickets are assigned to the appropriate support section or technician."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company's help desk receives multiple tickets reporting that customers cannot access the company's online payment system. Upon investigation, it is discovered that the issue is affecting all customers and may involve a potential data breach. Based on the standard severity levels, how should this incident be classified?",
+    "explanation": "A \"Critical Incident\" is one that has a widespread effect on customers or involves potential or actual data breaches. In this scenario, the issue affects all customers and may involve a data breach, making it a critical incident that requires immediate attention. A \"Minor Incident\" is defined as one that does not have a significant effect on customer groups. Since this issue affects all customers and involves a potential data breach, it is far more severe than a minor incident. A \"Major Incident\" affects a limited group of customers or involves a suspected security violation. In this case, the issue affects all customers and involves a potential data breach, which escalates it to a critical incident. A \"Request\" refers to provisioning tasks, such as setting up new user accounts or deploying hardware/software, and is unrelated to incidents. This scenario clearly describes an incident, not a request.",
+    "options": [
+      "Minor Incident",
+      "Critical Incident",
+      "Request",
+      "Major Incident"
+    ],
+    "correctAnswer": [
+      "Critical Incident"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security manager wants to create a step-by-step list of the completed actions for any given task to comply with policy. What is the manager creating?",
+    "explanation": "A standard operating procedure (SOP) is a step-by-step list of the actions that must be completed for any given task to comply with policy. Most IT procedures should be governed by SOPs. Scalability means that the costs involved in supplying the service to more users are linear. If it costs more than double, the system is less scalable. Elasticity refers to the system's ability to handle changes on-demand in real-time. A system with high elasticity will not experience loss of service or performance if demand suddenly doubles (or triples, or quadruples). Encryption encodes data using a key to give it the property of confidentiality. Confidentiality is not one of the two main principles of backing up.",
+    "options": [
+      "SOP",
+      "Elasticity",
+      "Scalability",
+      "Confidentiality"
+    ],
+    "correctAnswer": [
+      "SOP"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A help desk team is receiving multiple tickets from users reporting that they cannot access a shared drive. Upon reviewing the tickets, you notice that all the affected users are from the same department, and the issue started after a recent server update. What should you do to address the situation effectively?",
+    "explanation": "When multiple incidents of the same type are reported, they may indicate an underlying problem. Opening a problem ticket allows for a deeper analysis of the root cause and ensures that the issue is addressed systematically rather than treating each ticket as an isolated incident. It is important to group related tickets to identify patterns and address the root cause. Treating each ticket individually would waste time and resources without addressing the underlying problem. Closing tickets without proper resolution or communication to the users is not a best practice. It is important to analyze related tickets and escalate them appropriately, but closing tickets prematurely could lead to unresolved issues and user dissatisfaction. Reassigning tickets without analyzing their commonality does not address the root cause. It is important to categorize and analyze tickets to identify problems, rather than simply redistributing the workload.",
+    "options": [
+      "Reassign the tickets to different agents to speed up resolution.",
+      "Escalate one ticket to Tier 2 and close the rest, assuming they are duplicates.",
+      "Treat each ticket as a separate incident and troubleshoot them individually.",
+      "Analyze the tickets to identify a common cause and open a problem ticket for further investigation."
+    ],
+    "correctAnswer": [
+      "Analyze the tickets to identify a common cause and open a problem ticket for further investigation."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Where could a company employee find out how to reset a password or change their voicemail message?",
+    "explanation": "A knowledge base is a centralized repository of information, including FAQs, troubleshooting procedures, and step-by-step guides for common tasks. Employees can refer to the knowledge base to find detailed instructions on how to reset a password or change their voicemail message. It is designed to provide self-service options for users, making it the most appropriate resource for such tasks. A security policy outlines an organization's overall approach to maintaining the security of its systems, data, and infrastructure. While it may include high-level guidelines about password complexity or security best practices, it does not provide specific, step-by-step instructions for tasks like resetting a password or changing a voicemail message. Therefore, it is not the correct resource for this scenario. An Acceptable Use Policy (AUP) defines the rules and guidelines for how employees can use company resources, such as computers, networks, and communication systems. It may include restrictions on prohibited activities or content but does not provide operational instructions for tasks like resetting passwords or changing voicemail messages. As such, it is not the appropriate resource for this question. A Bring Your Own Device (BYOD) Policy governs the use of personal devices (such as smartphones or laptops) for work purposes. It typically includes guidelines for security, access, and acceptable use of personal devices within the company's network. However, it does not include instructions for resetting passwords or changing voicemail messages, making it irrelevant to this scenario.",
+    "options": [
+      "Bring Your Own Device (BYOD) Policy",
+      "Acceptable Use Policy (AUP)",
+      "Security Policy",
+      "Knowledge base"
+    ],
+    "correctAnswer": [
+      "Knowledge base"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a manager at an IT company, and your team is reviewing the organization's policy documentation to ensure compliance with company standards. During the review, you notice that a Standard Operating Procedure (SOP) for onboarding new employees includes steps for granting access to IT systems but does not reference the Acceptable Use Policy (AUP). How should you address this issue?",
+    "explanation": "SOPs are designed to provide step-by-step instructions that align with and support the organization's policies. By updating the SOP to include a step for reviewing and acknowledging the AUP, you ensure that the procedure complies with the organization's overarching policy and reinforces the importance of acceptable use guidelines during onboarding. Removing the SOP is an overreaction. The SOP is still valuable for guiding the onboarding process, and the issue can be resolved by updating it to align with the policy. Removing it would create unnecessary gaps in procedural documentation. Policies and SOPs are not independent of each other. SOPs are meant to operationalize policies by providing actionable steps. Ignoring the lack of alignment between the SOP and the AUP would result in a procedural gap and could lead to non-compliance. Creating a new policy is unnecessary. The Acceptable Use Policy (AUP) already exists and governs the acceptable use of IT resources. The issue lies in the SOP, which needs to be updated to reference the existing policy, rather than creating redundant documentation.",
+    "options": [
+      "Remove the SOP entirely, as it does not align with the organization's policies.",
+      "Leave the SOP as it is since policies and SOPs are independent of each other and do not need to reference one another.",
+      "Create a new policy specifically for onboarding employees to address the gap in the SOP.",
+      "Update the SOP to include a step requiring new employees to review and acknowledge the Acceptable Use Policy (AUP)."
+    ],
+    "correctAnswer": [
+      "Update the SOP to include a step requiring new employees to review and acknowledge the Acceptable Use Policy (AUP)."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jason is a sales rep with a computer company that sells customized laptops to the public. He is opening a ticket to help resolve a customer issue with a malfunctioning laptop, which was purchased by an important customer who is relying on the laptop to complete a critical project. Which of the following items in the ticket can Jason use to help the support team immediately determine the time sensitivity of resolving this issue?",
+    "explanation": "One of the most important ticket categories is the severity level. This helps the support team determine the time sensitivity of resolving an issue. While you can also include a department assignment in the help ticket to direct it to a specialized group (such as networking or application resolution), this information does not help the support team determine time sensitivity. While it's important to provide as many details as possible to help the support team understand exactly what's going on, the severity level is the best way to help them determine the time sensitivity of resolving an issue. Although you can assign a ticket to a one-, two-, or three-tier level, this assignment does not indicate the time sensitivity of resolving the issue.",
+    "options": [
+      "Tier assignment",
+      "Severity level",
+      "Detailed issue description",
+      "Department assignment"
+    ],
+    "correctAnswer": [
+      "Severity level"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-011",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are true about a policy? (Select two.)",
+    "explanation": "A \"policy\" is a high-level statement of intent that includes rules established by an organization to address specific problems or concerns. These rules are designed to guide employee behavior and ensure compliance with organizational goals, legal requirements, and best practices. A policy often identifies the problem it is addressing, explaining why action is necessary and providing guidance on the type of action that should be taken. This ensures that employees understand the purpose of the policy and the rationale behind the rules it enforces. While a policy may provide general guidance on actions to address a problem, it does not typically include detailed, step-by-step instructions. Instead, this level of detail is usually found in Standard Operating Procedures (SOPs), which are designed to operationalize policies. Therefore, this is not an accurate description of a policy. A policy defines a desired outcome but does not typically outline the specific steps or procedures to achieve that outcome. The \"how\" is usually addressed in SOPs or guidelines, which are more detailed and task-specific. Thus, this is not entirely accurate for a policy. A policy does not generally specify who is responsible for completing specific tasks. This level of detail is typically found in SOPs or role-specific documentation. Policies focus on overarching rules and objectives rather than assigning responsibilities. A policy does not usually include timelines or deadlines for completing specific tasks. This information is more likely to be found in project plans, SOPs, or operational guidelines. Policies are broader in scope and focus on principles rather than operational details.",
+    "options": [
+      "Defines a desired outcome and outlines how that outcome should be met.",
+      "Identifies the problem, such as why action is needed and which action should be taken.",
+      "Explains which action should be taken.",
+      "Defines when the work should be completed.",
+      "Includes rules that have been set by an organization to address a particular problem or concern.",
+      "Defines who should complete the work."
+    ],
+    "correctAnswer": [
+      "Identifies the problem, such as why action is needed and which action should be taken.",
+      "Includes rules that have been set by an organization to address a particular problem or concern."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-012",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is clear written communication important in the ticket management process?",
+    "explanation": "Clear written communication is essential for documenting who is responsible for the ticket and what actions have been taken. It ensures that the ticket can be effectively managed, especially when it needs to be escalated to different levels or passed between team members. Categorization happens when the ticket is created and is not directly related to clear written communication. While communication is important, it primarily supports tracking and managing the ticket rather than categorization. Clear written communication is not about enabling customers to resolve incidents on their own. Self-service options like knowledge bases or FAQs (Tier 0) are designed for that purpose, but they are separate from the ticket management process. Not all tickets need to be escalated to senior technicians. Clear written communication ensures proper documentation and management of the ticket, but escalation only occurs when necessary, depending on the complexity or severity of the issue.",
+    "options": [
+      "It ensures that tickets are categorized correctly at the time of creation.",
+      "It allows customers to resolve incidents without contacting the help desk.",
+      "It ensures that all tickets are escalated to senior technicians for resolution.",
+      "It helps track the ownership and progress of the ticket through different escalation levels."
+    ],
+    "correctAnswer": [
+      "It helps track the ownership and progress of the ticket through different escalation levels."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-013",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company has an SLA with a cloud service provider that guarantees 99.99% uptime for their services. During the past year, the company experienced a total of 2 hours of downtime. Based on the SLA, what should the company do next?",
+    "explanation": "For 99.99% uptime, the maximum allowable downtime is approximately 52 minutes per year. Since the company experienced 2 hours of downtime, this exceeds the SLA's guarantee. The company should first review the SLA to confirm the terms and then proceed with any recourse outlined in the agreement, such as filing a complaint or requesting compensation. While filing a complaint with the service provider for failing to meet the SLA and requesting compensation may be a valid step if the SLA terms were violated, the company should first confirm the SLA's specific terms (e.g., allowable downtime) before filing a complaint. Jumping to this step without verification could lead to unnecessary disputes. Escalation to Tier 3 support is part of incident management, not SLA enforcement. The issue here is related to SLA compliance, not troubleshooting or resolving a technical problem. Termination is a drastic step that should only be considered after confirming the SLA violation and following the recourse process outlined in the agreement. Immediate termination without proper review and communication is not a reasonable course of action.",
+    "options": [
+      "Escalate the issue to Tier 3 support for further investigation.",
+      "File a complaint with the service provider for failing to meet the SLA and request compensation.",
+      "Terminate the SLA immediately due to the service provider's failure to meet expectations.",
+      "Review the SLA to determine whether or not 2 hours of downtime is within the acceptable limit for 99.99% uptime."
+    ],
+    "correctAnswer": [
+      "Review the SLA to determine whether or not 2 hours of downtime is within the acceptable limit for 99.99% uptime."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-014",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of a knowledge base in a support environment?",
+    "explanation": "A knowledge base is specifically designed to provide users with self-service options, such as FAQs and common troubleshooting procedures. This allows users to resolve incidents independently without needing to contact support, which is the primary purpose of a knowledge base. Tracking ticket ownership and status is a function of the ticket management system, not the knowledge base. The knowledge base is focused on providing information for self-service, not managing ticket workflows. Categorizing and prioritizing tickets is part of the ticketing system's role, specifically under the process of assigning severity levels and categories. The knowledge base does not perform this function. Escalation is part of the ticket management process and involves moving tickets through tiers of support. The knowledge base is unrelated to escalation and instead focuses on providing resources for users to solve issues on their own.",
+    "options": [
+      "To provide a collection of frequently asked questions (FAQs) and troubleshooting procedures for users.",
+      "To categorize and prioritize support tickets based on severity and impact.",
+      "To escalate unresolved tickets to senior technicians or third-party support groups.",
+      "To track the ownership and status of support tickets during the troubleshooting process."
+    ],
+    "correctAnswer": [
+      "To provide a collection of frequently asked questions (FAQs) and troubleshooting procedures for users."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-015",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is experiencing a high volume of support tickets for common, repetitive issues. How effective would implementing a Knowledge Base be in addressing this problem?",
+    "explanation": "A Knowledge Base is a collection of FAQs and troubleshooting procedures that allow users to resolve common issues independently. This reduces the number of repetitive tickets submitted to the support team, making it highly effective in this scenario. While addressing the root cause of issues is important, the Knowledge Base is not designed for root cause analysis. Its purpose is to provide immediate solutions to common problems, which makes it effective in reducing ticket volume. The Knowledge Base primarily reduces the workload for Tier 1 support by enabling users to resolve issues themselves. It does not directly impact Tier 3 support, which handles more complex problems. Categorizing and prioritizing tickets is a function of ticket management systems, not the Knowledge Base. The Knowledge Base is specifically designed to help users resolve issues, making it effective in reducing ticket volume.",
+    "options": [
+      "Ineffective, as it does not address the root cause of the repetitive issues",
+      "Highly effective, as it provides users with self-service options to resolve common issues without filing tickets",
+      "Ineffective, as it primarily focuses on categorizing and prioritizing tickets rather than resolving them",
+      "Somewhat effective, as it reduces the workload for Tier 3 support but not for Tier 1 or Tier 2 support"
+    ],
+    "correctAnswer": [
+      "Highly effective, as it provides users with self-service options to resolve common issues without filing tickets"
+    ],
+    "origin": "CertMaster"
+  }
+]

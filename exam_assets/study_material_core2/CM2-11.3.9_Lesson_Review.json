@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-11.3-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator is looking for an alternative network operating system (NOS) but does not want a steep learning curve. Which of the following optimizes for NOS functionality?",
+    "explanation": "Windows Server 2019 and Windows Server 2022 are optimized for use as NOSs. They share the same underlying code and desktop interface as the client versions. Windows 10 and Windows 11 are released in different editions to support business workstations and home PC use. Both Windows 10 and Windows 11 are not necessarily built for network operating systems. If they were used, a virtual machine would need to be used on top of them. macOS is the operating system that only supplies Apple-built workstations (Apple Mac desktops and Apple iMac all-in-ones) and laptops (Apple MacBooks).",
+    "options": [
+      "macOS",
+      "Windows 10",
+      "Windows Server 2019",
+      "Windows 11"
+    ],
+    "correctAnswer": [
+      "Windows Server 2019"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT consultant tasked with recommending an operating system for a small startup company. The company requires an OS that is cost-effective, supports a wide range of hardware, and can be used for both desktop and server environments. Additionally, the company values flexibility in software customization and prefers an open-source solution. Which operating system would you recommend?",
+    "explanation": "Linux is the correct choice because it is an open-source operating system, making it cost-effective and highly customizable. It supports a wide range of hardware and can be used as both a desktop and server OS, meeting the startup's requirements for flexibility and versatility. Additionally, Linux offers various distributions (distros) tailored to different needs, such as Ubuntu for user-friendly desktops or Red Hat for enterprise servers. While Windows Server 2022 is a powerful Network Operating System (NOS) for server environments, it is not open-source and requires licensing fees, making it less cost-effective for a startup. Additionally, it is primarily designed for server use and does not offer the same level of flexibility or customization as Linux. macOS is a closed-source operating system that is exclusively available on Apple hardware. While it is stable and user-friendly, it does not support a wide range of hardware and is not designed for server environments. Its proprietary nature and hardware limitations make it unsuitable for the startup's needs. Chrome OS is a lightweight operating system designed primarily for web-based applications and specific hardware like Chromebooks. While cost-effective, it lacks the flexibility and capability to function as a server OS. It is not suitable for environments requiring extensive software customization or server functionality.",
+    "options": [
+      "Windows Server 2022",
+      "Chrome OS",
+      "macOS",
+      "Linux"
+    ],
+    "correctAnswer": [
+      "Linux"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT consultant advising a company that plans to deploy a fleet of mobile devices for its employees. The company prioritizes security and centralized control over the devices, ensuring that only approved apps can be installed. Additionally, the company wants to minimize fragmentation issues across devices. Based on these requirements, which mobile operating system would you recommend?",
+    "explanation": "iOS is a closed-source operating system exclusively available on Apple devices. Its closed ecosystem ensures a high level of security and centralized control, as only apps approved by Apple can be installed through the App Store. Additionally, iOS minimizes fragmentation because it is only available on a limited range of Apple devices, ensuring consistent updates and compatibility across the fleet. While Android is widely used and open-source, its open nature allows manufacturers to create custom versions, leading to significant fragmentation across devices. This makes it harder to ensure consistent updates and security. Additionally, Android's open ecosystem allows apps to be installed from third-party sources, which could pose a security risk if not properly managed. Chrome OS is primarily designed for laptops and desktops, such as Chromebooks, and is not a mobile operating system. While it offers centralized control and security features, it does not meet the company's requirement for mobile devices. Linux is an open-source operating system primarily used for servers, desktops, and IoT devices. While it offers flexibility and security, it is not a mobile operating system and does not meet the company's requirement for deploying a fleet of mobile devices.",
+    "options": [
+      "iOS",
+      "Linux",
+      "Chrome OS",
+      "Android"
+    ],
+    "correctAnswer": [
+      "iOS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The lead for a company's vulnerability management program is looking at the mobile aspect of the company's program. They started with end of life devices, then addressed patching statuses, and are now looking at hardening. Which of the following has the widest variety of change and will prove the most difficult?",
+    "explanation": "Android software code is made publicly available. This means there is more scope for hardware vendors, such as Acer, Asus, HTC, LG, Motorola, OnePlus, Oppo, Samsung, Sony, and Xiaomi, to produce specific versions for their smartphones and tablet models. iOS is the operating system for Apple's iPhone smartphone and original models of the iPad tablet. Like macOS, iOS is also derived from UNIX and developed as a closed-source operating system. The iPadOS has been developed from iOS to support the functionality of the latest iPad models (2019 and up). Manufacturers have also redesigned Windows to support touch.",
+    "options": [
+      "iOS",
+      "iPadOS",
+      "Windows",
+      "Android"
+    ],
+    "correctAnswer": [
+      "Android"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator needs to set up a Linux server but mainly deals with Windows servers. The administrator wants to use a subscription-based version to have support when needed. Which of the following should the server administrator use?",
+    "explanation": "SUSE and Red Hat are subscription-based Linux distributions. Mint is a community-supported version of Linux. Fedora and Debian are community-supported. In addition, Linux can be a desktop or server operating system (OS). Apache, IBM, and Sun/Oracle are among the vendors producing end-user and server applications for Linux. Arch is also another community-supported Linux distribution.",
+    "options": [
+      "SUSE Linux Enterprise",
+      "Arch",
+      "Fedora",
+      "Mint"
+    ],
+    "correctAnswer": [
+      "SUSE Linux Enterprise"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following file systems is commonly used by macOS?",
+    "explanation": "APFS (Apple File System) is used by Apple Mac workstations and laptops, which supports journaling, snapshots, permissions/ownership, and encryption. NTFS (New Technology File System) is a file system developed by Microsoft and is primarily used by Windows operating systems. It is not natively supported by macOS for writing, only for reading, making it an incorrect answer. ext4 (Fourth Extended File System) is a file system commonly used by Linux operating systems. It is not used by macOS, making it an incorrect answer. FAT32 (File Allocation Table 32) is a file system that is compatible with multiple operating systems, including macOS, Windows, and Linux. However, it is not the primary or commonly used file system for macOS, making it an incorrect answer.",
+    "options": [
+      "ext4",
+      "FAT32",
+      "NTFS",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "APFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements is true about macOS?",
+    "explanation": "macOS is derived from the UNIX kernel and includes additional code for its graphical interface and system utilities. This is a key feature of macOS that distinguishes it from other operating systems. macOS is exclusively available on Apple-built devices and cannot be installed on non-Apple PCs. This limitation enhances stability but restricts hardware options. macOS supports the Magic Trackpad but does not support touch screens, which is a notable limitation compared to other operating systems. macOS is a unified operating system for Apple devices, unlike Windows, which offers distinct editions for different market segments.",
+    "options": [
+      "macOS is available in editions for both business workstations and home PCs.",
+      "macOS can be installed on both Apple and non-Apple PCs.",
+      "macOS supports touch screens on all Apple devices.",
+      "macOS is derived from the UNIX kernel."
+    ],
+    "correctAnswer": [
+      "macOS is derived from the UNIX kernel."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a web-browser-based operating system?",
+    "explanation": "Chrome OS is based on the Chrome browser application. This operating system was designed to be used mainly for web-based processes. Windows, macOS, and Linux are not web-based browsers.",
+    "options": [
+      "Chrome OS",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "correctAnswer": [
+      "Chrome OS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jack has a small retail business. He had a custom application developed for his inventory tracking. All of Jack's company computers have an operating system that will soon reach end of life because a newer version was released two years ago. Jack is afraid that his custom inventory application won't be compatible with the new version of the operating system. Which of the following is a risk that Jack is taking if he continues to use the operating system after its end of life?",
+    "explanation": "When an operating system reaches end of life, it no longer receives updates or security patches from the vendor. This lack of updates leaves the system exposed to vulnerabilities that cybercriminals can exploit. Without ongoing support, the OS becomes a significant security risk, especially in a business environment where sensitive data is involved. Operating systems do not lose features after reaching end of life. Instead, end-of-life systems no longer receive updates or support from the vendor. While older systems may lack newer features introduced in updated versions, the existing features of the end-of-life OS will typically remain functional unless compatibility issues arise with newer hardware or software. The custom application is already compatible with the current end-of-life operating system. Applications do not suddenly become incompatible with an OS after it reaches end of life. Instead, the concern would be about compatibility with newer versions of the OS, which is a separate issue from the risks of continuing to use an unsupported OS. The risk of losing sales is related to the process of migrating to a new operating system, not the risks of continuing to use an end-of-life OS.",
+    "options": [
+      "He may lose sales during the migration process.",
+      "He may lose some of the OS's features that he relies on.",
+      "The custom application may no longer be compatible.",
+      "The OS will become increasingly vulnerable to cyberattacks."
+    ],
+    "correctAnswer": [
+      "The OS will become increasingly vulnerable to cyberattacks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A client administrator plans an upgrade from Windows 10 to Windows 11 in the environment but has to plan from a budgetary perspective. What type of hardware requirement will the administrator need to consider?",
+    "explanation": "The administrator needs to consider the TPM chip. Windows 11 requires a central processing unit (CPU) or motherboard with support for the trusted platform module (TPM) version 2. The app ecosystem, or the range of software available for a particular operating system (OS), is a big factor in determining whether an OS becomes established in the marketplace. Devices running different operating systems cannot \"talk\" to one another directly. Instead, the operating systems must support common network protocols that allow data to be exchanged in a standard format. An upgrade project must take account of user training, prepare training programs and self-help resources, and prepare technicians to provide support on the new interface.",
+    "options": [
+      "TPM chip",
+      "App compatibility",
+      "User training",
+      "Network protocol support"
+    ],
+    "correctAnswer": [
+      "TPM chip"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT technician tasked with upgrading the operating system on a company's fleet of laptops. The laptops are five years old and currently run Windows 10. The company wants to upgrade to Windows 11 to take advantage of new features. However, after reviewing the hardware specifications of the laptops, you discover that they do not meet the minimum requirements for Windows 11. What should you conclude about the situation?",
+    "explanation": "OS compatibility issues often arise when hardware does not meet the minimum requirements for a new operating system. Newer operating systems may not support older hardware, and in such cases, hardware upgrades or replacements are necessary to resolve compatibility issues. Installing additional drivers cannot resolve fundamental hardware incompatibilities, such as insufficient CPU capabilities, lack of TPM 2.0, or unsupported hardware components. Compatibility is determined by the hardware's ability to meet the OS's baseline requirements, not by driver availability. Running Windows 10 does not guarantee compatibility with Windows 11. Each operating system has its own set of hardware requirements, and Windows 11 has stricter requirements compared to Windows 10. Compatibility issues are highly relevant when upgrading an operating system. Ignoring compatibility issues can lead to system instability, poor performance, or the inability to install the new OS altogether. It is also important to address compatibility issues during upgrades.",
+    "options": [
+      "The laptops can run Windows 11 if you install additional drivers.",
+      "The laptops should remain on Windows 10 because compatibility issues are irrelevant.",
+      "The laptops will need hardware upgrades or replacements to support Windows 11.",
+      "The laptops can run Windows 11 without any issues because they already run Windows 10."
+    ],
+    "correctAnswer": [
+      "The laptops will need hardware upgrades or replacements to support Windows 11."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are in the process of preparing a 128-GB flash drive and must determine which file system to use. Which of the following BEST describes the advantages of using the exFAT file system rather than NTFS on the flash drive?",
+    "explanation": "exFAT does not have the high overhead and risk of corruption problems that can occur on removable storage with NTFS. While exFAT supports some limited file permissions, NTFS provides better control through granular permissions and access control lists. Both exFAT and NTFS support volumes over 32 GB and files over 4 GB.",
+    "options": [
+      "Support for volumes over 32 GB",
+      "Lower overhead and risk of corruption",
+      "Support for files over 4 GB",
+      "Access control lists and permissions"
+    ],
+    "correctAnswer": [
+      "Lower overhead and risk of corruption"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with configuring a new Windows 11 workstation for a graphic design team. The team requires a file system that supports large file sizes, advanced permissions, and encryption to ensure data security. Which file system should you choose to meet these requirements?",
+    "explanation": "NTFS (New Technology File System) is the most suitable choice for the scenario. It supports large file sizes, advanced file permissions, encryption, and other features like compression and journaling. These capabilities make it ideal for a graphic design team that requires secure and efficient file management on a Windows 11 workstation. FAT32 is an older file system that lacks support for advanced features such as file-level permissions, encryption, and large file sizes (it has a maximum file size limit of 4GB). While it is compatible with many operating systems, it is not suitable for modern workstations requiring advanced security and performance features. exFAT is designed for flash drives and external storage devices, offering support for larger file sizes than FAT32. However, it does not include advanced features like file-level permissions or encryption, making it unsuitable for a secure workstation environment. ReFS (Resilient File System) is designed for high-resilience applications like data storage on servers. While it offers advanced features like data integrity checks, it is not optimized for desktop environments and lacks some features available in NTFS, such as file-level encryption. Therefore, it is not the best choice for this scenario.",
+    "options": [
+      "NTFS",
+      "FAT32",
+      "exFAT",
+      "ReFS"
+    ],
+    "correctAnswer": [
+      "NTFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is transitioning its development team to a mixed environment where developers will use both macOS and Linux systems. The team needs to collaborate on large project files stored on a shared external drive. The file system must support large file sizes and provide reliable read/write access for both macOS and Linux. After analyzing the requirements, which file system would BEST meet the team's needs?",
+    "explanation": "exFAT (Extended File Allocation Table) is a file system designed for compatibility across multiple operating systems, including macOS and Linux. It supports large file sizes and is optimized for external drives, making it the best choice for the team's shared external drive. APFS is the default file system for macOS and is optimized for Apple devices. However, Linux does not natively support APFS, making it unsuitable for a shared external drive in a mixed macOS and Linux environment. ext4 is a robust file system commonly used by Linux. However, macOS does not natively support ext4, which would require additional tools or drivers to enable compatibility. This makes it less ideal for a shared drive in this scenario. HFS+ is an older macOS file system. While Linux can provide limited support for HFS+, it is not as universally compatible or efficient as exFAT for external drives in a mixed environment. This makes it a less suitable choice for the team's needs.",
+    "options": [
+      "HFS+",
+      "exFAT",
+      "ext4",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "exFAT"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows administrator wants to become more familiar with Linux but still wants to use Windows primarily. The administrator installs the bash subsystem for Windows and is reading about how Windows has made strides to become more compatible with Linux. To facilitate better compatibility with Linux, which of the following was part of the changes to the underlying New Technology File System (NTFS) structure?",
+    "explanation": "To support UNIX/Linux compatibility, Microsoft engineered the New Technology File System (NTFS) to support case-sensitive naming, hard links, and other key features UNIX/Linux applications require. When data is written to an NTFS volume, it is re-read, verified, and logged via journaling. In the event of a problem, the sector concerned is marked as bad, and the data is relocated. Snapshots allow the Volume Shadow Copy Service to make read-only copies of files at given points in time, even if the file gets locked by another process. The Indexing Service creates a catalog of file and folder locations and properties, speeding up searches.",
+    "options": [
+      "Indexing",
+      "Journaling",
+      "Case-sensitive naming",
+      "Snapshots"
+    ],
+    "correctAnswer": [
+      "Case-sensitive naming"
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "id": "1202-DD-001",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers can be used to describe degaussing when used as a data sanitization method? (Select 2 answers)",
+    "explanation": "Degaussing uses a strong magnetic field to erase magnetic media (HDDs, tapes). It does nothing to SSDs and flash media.",
+    "options": [
+      "Effective on all storage media types",
+      "Mechanical destruction method",
+      "Effective only on HDDs, tapes, and legacy storage media",
+      "Relies on heat to render the drive inoperable",
+      "Magnetic data erasure technique"
+    ],
+    "correctAnswer": [
+      "Effective only on HDDs, tapes, and legacy storage media",
+      "Magnetic data erasure technique"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-002",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "matching",
+    "difficulty": "medium",
+    "stem": "Choose an answer from the drop-down list on the right to match each data disposal method on the left with its corresponding mechanism.",
+    "explanation": "Shredding and drilling physically destroy the drive (mechanical), incineration uses heat (thermal), and degaussing uses a magnetic field.",
+    "items": [
+      "Shredding",
+      "Incineration",
+      "Drilling",
+      "Degaussing"
+    ],
+    "options": [
+      "Mechanical",
+      "Thermal",
+      "Magnetic"
+    ],
+    "correctAnswer": {
+      "Shredding": "Mechanical",
+      "Incineration": "Thermal",
+      "Drilling": "Mechanical",
+      "Degaussing": "Magnetic"
+    },
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-003",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which data sanitization method securely removes all recoverable information from a storage device while keeping the device operational for future use?",
+    "explanation": "Erasing/wiping overwrites the data so it can't be recovered, and the drive can be reused. Degaussing renders a drive unusable.",
+    "options": [
+      "Standard format",
+      "Degaussing",
+      "Low-level format",
+      "Erasing/wiping"
+    ],
+    "correctAnswer": [
+      "Erasing/wiping"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-004",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a process that reinitializes the physical sector structure of a drive and returns the device to a factory-like state, preparing it for reinstallation or repurposing?",
+    "explanation": "A low-level format rebuilds the physical sector structure and returns the drive to a factory-like state.",
+    "options": [
+      "Low-level format",
+      "Erasing/wiping",
+      "Full format",
+      "Standard format"
+    ],
+    "correctAnswer": [
+      "Low-level format"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-005",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which formatting type applies a new file system structure to a storage device, leaving the existing data intact and easily recoverable by data recovery tools?",
+    "explanation": "A standard format only rebuilds the file system structure. The old data remains and can be recovered.",
+    "options": [
+      "Standard format",
+      "Full format",
+      "Erasing/wiping",
+      "Low-level format"
+    ],
+    "correctAnswer": [
+      "Standard format"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-006",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is arranging the disposal of decommissioned laptops through a certified third-party recycling vendor. What should be requested from the vendor to confirm proper disposal?",
+    "explanation": "With outsourced destruction or recycling, request a certificate of destruction/recycling as proof.",
+    "options": [
+      "Hardware inventory manifest",
+      "Chain-of-custody record",
+      "Asset disposal log",
+      "Certificate of destruction"
+    ],
+    "correctAnswer": [
+      "Certificate of destruction"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-DD-007",
+    "topic": "Data Destruction & Disposal Methods",
+    "domain": "2.0 Security",
+    "objective": "2.9",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the context of data destruction and disposal methods, regulatory requirements (e.g., GDPR, HIPAA) mandate secure destruction of data-bearing devices to protect sensitive information, while environmental regulations require hazardous components such as lithium-ion batteries, CRT monitors, ink/toner cartridges, or PCBs to be recycled through certified facilities instead of being discarded as general electronic waste.",
+    "explanation": "True. Both regulatory and environmental requirements apply to disposal.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

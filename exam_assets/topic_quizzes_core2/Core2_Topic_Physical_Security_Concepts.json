@@ -1,0 +1,426 @@
+[
+  {
+    "id": "1202-PHY-001",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary function of bollards as a physical security control?",
+    "explanation": "Bollards are posts that stop vehicles from reaching a building. They don't control pedestrians.",
+    "options": [
+      "To prevent tailgating through secure areas",
+      "To deter and physically stop vehicle intrusions",
+      "To prevent unauthorized pedestrian entry",
+      "To restrict both people and cars simultaneously"
+    ],
+    "correctAnswer": [
+      "To deter and physically stop vehicle intrusions"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-002",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An access control vestibule (also known as a mantrap) is a physical security access control system used to prevent unauthorized users from gaining access to restricted areas. An example mantrap could be a two-door entrance point connected to a guard station where an individual entering from the outside remains locked inside until they provide the required authentication token to unlock the inner door.",
+    "explanation": "True. An access control vestibule (mantrap) stops tailgating with two interlocked doors.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-003",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A facility implements badge readers at entry doors, requiring staff to present RFID cards to unlock them. This setup is an example of which type of security measure?",
+    "explanation": "Badge readers on doors are a physical security control.",
+    "options": [
+      "Logical security control",
+      "Administrative security control",
+      "Physical security control",
+      "Technical security control"
+    ],
+    "correctAnswer": [
+      "Physical security control"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-004",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What type of physical security control does video surveillance represent?",
+    "explanation": "Video surveillance detects and records activity after or as it happens, so it is a detective control.",
+    "options": [
+      "Preventive control",
+      "Compensating control",
+      "Detective control",
+      "Corrective control"
+    ],
+    "correctAnswer": [
+      "Detective control"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-005",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which physical security measure often works together with motion sensors to provide real-time alerts of unauthorized activity?",
+    "explanation": "Motion sensors trigger alarm systems, which alert on unauthorized activity.",
+    "options": [
+      "Proximity readers",
+      "Smart locks",
+      "Perimeter lighting",
+      "Alarm systems"
+    ],
+    "correctAnswer": [
+      "Alarm systems"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-006",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following security controls are designed to physically prevent unauthorized access? (Select 2 answers)",
+    "explanation": "Door locks and equipment locks physically block access. Motion sensors, cameras and alarms only detect.",
+    "options": [
+      "Motion sensors",
+      "Door locks",
+      "Video surveillance",
+      "Alarm systems",
+      "Equipment locks"
+    ],
+    "correctAnswer": [
+      "Door locks",
+      "Equipment locks"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-007",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company wants a physical security control measure that can provide both deterrence and on-site, in-person response to suspicious activity. Which of the solutions listed below should the company implement?",
+    "explanation": "Security guards deter by their presence and can respond in person.",
+    "options": [
+      "CCTV monitoring",
+      "Alarm system with motion sensors",
+      "Security guards",
+      "Intrusion detection system"
+    ],
+    "correctAnswer": [
+      "Security guards"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-008",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A business wants to reduce the likelihood of both unauthorized pedestrian and vehicle access across its entire restricted perimeter. Which physical security control would best serve this purpose?",
+    "explanation": "Fencing around the perimeter blocks both pedestrians and vehicles.",
+    "options": [
+      "Bollards",
+      "Turnstiles",
+      "Security guards",
+      "Fencing"
+    ],
+    "correctAnswer": [
+      "Fencing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-009",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers describe the characteristics of a key fob? (Select 3 answers)",
+    "explanation": "A key fob is small, usually on a keyring, holds a simple chip with an ID and serves one purpose, such as door access.",
+    "options": [
+      "Contains a simple embedded chip with a unique identifier or code",
+      "Often used as a simple, single-purpose physical access security token",
+      "Credit card-sized, flat plastic card",
+      "Multi-purpose use for both physical and logical access, identity, and finance",
+      "Contains an embedded chip that can perform complex functions like encryption and data processing",
+      "Small, portable plastic device, often attached to a keyring"
+    ],
+    "correctAnswer": [
+      "Contains a simple embedded chip with a unique identifier or code",
+      "Often used as a simple, single-purpose physical access security token",
+      "Small, portable plastic device, often attached to a keyring"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-010",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the features listed below apply to smart cards? (Select 3 answers)",
+    "explanation": "A smart card is credit-card sized, has a chip that can do encryption and processing, and is multi-purpose.",
+    "options": [
+      "Contains a simple embedded chip with a unique identifier or code",
+      "Small, portable plastic device, often attached to a keyring",
+      "Contains an embedded chip that can perform complex functions like encryption and data processing",
+      "Multi-purpose use for both physical and logical access, identity, and finance",
+      "Often used as a simple, single-purpose physical access security token",
+      "Credit card-sized, flat plastic card"
+    ],
+    "correctAnswer": [
+      "Contains an embedded chip that can perform complex functions like encryption and data processing",
+      "Multi-purpose use for both physical and logical access, identity, and finance",
+      "Credit card-sized, flat plastic card"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-011",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician configures an access control system that allows employees to unlock doors by holding their smartphone near a reader. This technology is an example of what type of security measure?",
+    "explanation": "Using a smartphone as the key is a mobile digital key.",
+    "options": [
+      "Biometric authentication",
+      "Mobile digital key",
+      "Two-factor authentication",
+      "Hardware security token"
+    ],
+    "correctAnswer": [
+      "Mobile digital key"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-012",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A locked cabinet with a corresponding sign-out log is a standard procedure to maintain accountability and tracking for:",
+    "explanation": "Physical keys are stored in a locked cabinet with a sign-out log to track who has them.",
+    "options": [
+      "Physical keys",
+      "Key fobs",
+      "Smart cards",
+      "Access badges"
+    ],
+    "correctAnswer": [
+      "Physical keys"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-013",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the context of IT security, the term \"Biometrics\" refers to both physiological (biological) characteristics of the human body and behavioral traits that can be used for identification and access control purposes. Physiological biometrics are based on static, physical characteristics of the human body, such as fingerprints, retina scans, and facial features, while behavioral biometrics are based on patterns and traits derived from human actions, such as keystroke dynamics, gait, and voice patterns.",
+    "explanation": "True. Biometrics include both physiological and behavioral traits.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-014",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security system uses infrared light to scan the unique pattern of blood vessels at the back of a user's eye to grant access. This is an example of what type of biometric technology?",
+    "explanation": "A retina scanner reads the pattern of blood vessels at the back of the eye. An iris scanner reads the colored ring.",
+    "options": [
+      "Iris scanner",
+      "Facial recognition technology",
+      "Eye-tracking authentication",
+      "Retina scanner"
+    ],
+    "correctAnswer": [
+      "Retina scanner"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-015",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which biometric technology is widely used for mobile device authentication due to low cost and ease of integration?",
+    "explanation": "Fingerprint scanners are cheap and easy to integrate into phones.",
+    "options": [
+      "Fingerprint scanner",
+      "Retina scanner",
+      "Voice recognition",
+      "Palm print scanner"
+    ],
+    "correctAnswer": [
+      "Fingerprint scanner"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-016",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A large corporation needs a biometric solution for a restricted server farm. The solution must provide strong security and be difficult to spoof. Of the available options, which physical access control method would be the best choice?",
+    "explanation": "A palm print scanner is accurate and hard to spoof, which suits a high-security area.",
+    "options": [
+      "Fingerprint scanner",
+      "Voiceprint authentication system",
+      "Facial recognition terminal",
+      "Palm print scanner"
+    ],
+    "correctAnswer": [
+      "Palm print scanner"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-017",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which technology uses biometric data to identify or verify a person based on their facial features?",
+    "explanation": "Facial recognition technology (FRT) identifies or verifies a person from their face.",
+    "options": [
+      "FAR",
+      "AFIS",
+      "FRT",
+      "FRR"
+    ],
+    "correctAnswer": [
+      "FRT"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-018",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Voice recognition (or voiceprint recognition) is a biometric authentication method used in physical access security systems to identify or verify individuals based on unique vocal characteristics such as pitch, tone, and speech patterns. A key advantage of this technology is its convenience and ability to be used remotely, enabling secure access without the need for physical contact or additional devices. A key disadvantage is that its accuracy can be affected by background noise, poor audio quality, or changes in a person's voice due to illness or aging. In addition, using a voiceprint as the only form of authentication makes a system vulnerable to replay attacks, where it can be bypassed with a high-quality recording of an authorized user's voice.",
+    "explanation": "True. Voice recognition is convenient but affected by noise and vulnerable to replay.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-019",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary role of lighting as a physical access security measure?",
+    "explanation": "Good lighting discourages intruders. Its primary role is deterrence.",
+    "options": [
+      "Detection",
+      "Surveillance",
+      "Prevention",
+      "Deterrence"
+    ],
+    "correctAnswer": [
+      "Deterrence"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-PHY-020",
+    "topic": "Physical Security Concepts",
+    "domain": "2.0 Security",
+    "objective": "2.1",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In a multi-layered physical security system, where would a magnetometer typically be placed?",
+    "explanation": "Magnetometers (metal detectors) screen people at the building's main entrance.",
+    "options": [
+      "At the final access point, just before the secure room",
+      "On the perimeter fence to detect intruders",
+      "At the building's main entrance as a primary screening point",
+      "Inside the secure room to prevent theft"
+    ],
+    "correctAnswer": [
+      "At the building's main entrance as a primary screening point"
+    ],
+    "origin": "ExamCompass"
+  }
+]

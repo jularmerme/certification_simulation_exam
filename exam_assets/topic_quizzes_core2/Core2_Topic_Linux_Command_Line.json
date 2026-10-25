@@ -1,0 +1,546 @@
+[
+  {
+    "id": "1202-LCL-001",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux command is used to display files and directories in the current working directory?",
+    "explanation": "ls lists the files and directories in the current directory. pwd prints the working directory path.",
+    "options": [
+      "pwd",
+      "ls",
+      "grep",
+      "ps"
+    ],
+    "correctAnswer": [
+      "ls"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-002",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command in Linux displays the absolute path of the current working directory?",
+    "explanation": "pwd (print working directory) shows the absolute path of where you are.",
+    "options": [
+      "mv",
+      "pwd",
+      "rm",
+      "dir"
+    ],
+    "correctAnswer": [
+      "pwd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-003",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux command is used for moving or renaming files and directories?",
+    "explanation": "mv moves a file or directory, and renaming is just moving it to a new name.",
+    "options": [
+      "rm",
+      "cp",
+      "ln",
+      "mv"
+    ],
+    "correctAnswer": [
+      "mv"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-004",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the commands listed below is used for copying files and directories in Linux?",
+    "explanation": "cp copies files and directories in Linux. copy, xcopy and robocopy are Windows commands.",
+    "options": [
+      "cp",
+      "copy",
+      "xcopy",
+      "robocopy"
+    ],
+    "correctAnswer": [
+      "cp"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-005",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A command-line command in Linux used for deleting files and directories is known as:",
+    "explanation": "rm removes files (and directories with -r). del and erase are Windows commands.",
+    "options": [
+      "erase",
+      "rm",
+      "del",
+      "edit"
+    ],
+    "correctAnswer": [
+      "rm"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-006",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the function of the Linux chmod command?",
+    "explanation": "chmod changes permissions. chown changes the owner/group.",
+    "options": [
+      "Alters group membership for a user",
+      "Changes the owner and/or group of a file or directory",
+      "Sets or modifies permissions for files and directories",
+      "Updates the default shell for a user"
+    ],
+    "correctAnswer": [
+      "Sets or modifies permissions for files and directories"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-007",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What does the chown command do in Linux?",
+    "explanation": "chown changes ownership (owner and/or group) of a file or directory.",
+    "options": [
+      "Sets or modifies permissions for files and directories",
+      "Displays user identity and group information",
+      "Changes the owner and/or group of a file or directory",
+      "Modifies default file creation permissions"
+    ],
+    "correctAnswer": [
+      "Changes the owner and/or group of a file or directory"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-008",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux command enables searching within file contents for specific text patterns?",
+    "explanation": "grep searches inside files for text patterns. find searches for files and directories by name or attributes.",
+    "options": [
+      "search",
+      "find",
+      "grep",
+      "locate"
+    ],
+    "correctAnswer": [
+      "grep"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-009",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Linux command-line utility used to search for files and directories is called:",
+    "explanation": "find searches the filesystem for files and directories. grep searches inside file contents.",
+    "options": [
+      "find",
+      "path",
+      "search",
+      "grep"
+    ],
+    "correctAnswer": [
+      "find"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-010",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The fsck command in Linux can be used for: (Select 2 answers)",
+    "explanation": "fsck (file system check) verifies filesystem integrity and repairs errors. It doesn't format, wipe files or report free space (that's df).",
+    "options": [
+      "Formatting new partitions",
+      "Verifying filesystem integrity",
+      "Securely deleting files",
+      "Repairing filesystem errors",
+      "Checking available disk space"
+    ],
+    "correctAnswer": [
+      "Verifying filesystem integrity",
+      "Repairing filesystem errors"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-011",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The mount command in Linux is used to make a filesystem accessible to the operating system by attaching it to a specific directory (the mount point) within the Linux filesystem tree.",
+    "explanation": "True. mount attaches a filesystem to a mount point in the directory tree.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-012",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux command allows a user to assume the identity of another system user and operate within that user's shell environment?",
+    "explanation": "su (substitute user) switches to another user's shell environment (root by default).",
+    "options": [
+      "login",
+      "id",
+      "usermod",
+      "su"
+    ],
+    "correctAnswer": [
+      "su"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-013",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command in Linux allows a permitted user to execute a single command with elevated privileges, typically as the root user?",
+    "explanation": "sudo runs one command with elevated (root) privileges for permitted users.",
+    "options": [
+      "chmod",
+      "su",
+      "usermod",
+      "sudo"
+    ],
+    "correctAnswer": [
+      "sudo"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-014",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following command-line utilities is used for installing, upgrading, and removing software packages on Debian and Debian-based Linux distributions?",
+    "explanation": "apt is the package manager for Debian-based distributions such as Ubuntu.",
+    "options": [
+      "rpm",
+      "apt",
+      "dnf",
+      "yum"
+    ],
+    "correctAnswer": [
+      "apt"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-015",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to the software package manager used in modern Red Hat and Red Hat-based Linux distributions?",
+    "explanation": "dnf is the modern Red Hat-family package manager. It replaced yum, which is no longer on the 220-1202 objectives.",
+    "options": [
+      "pkg",
+      "dnf",
+      "dpkg",
+      "apt"
+    ],
+    "correctAnswer": [
+      "dnf"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-016",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which modern Linux command-line utility is used for displaying and managing network configuration settings?",
+    "explanation": "ip is the modern Linux tool for viewing and managing interfaces and routes. ipconfig is the Windows tool.",
+    "options": [
+      "ipconfig",
+      "route",
+      "ip",
+      "netstat"
+    ],
+    "correctAnswer": [
+      "ip"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-017",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Linux network diagnostic utility used to test the reachability of a host on an IP network is known as:",
+    "explanation": "ping tests whether a host is reachable.",
+    "options": [
+      "ping",
+      "tracert",
+      "dig",
+      "netstat"
+    ],
+    "correctAnswer": [
+      "ping"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-018",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Linux command-line tools is specifically designed for transferring data using a wide range of supported internet protocols such as HTTP, FTP, or SMTP?",
+    "explanation": "curl transfers data using many protocols (HTTP, FTP, SMTP and more). It's the one on the exam objectives.",
+    "options": [
+      "curl",
+      "wget",
+      "scp",
+      "rsync"
+    ],
+    "correctAnswer": [
+      "curl"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-019",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a Linux network administration command-line utility used for querying DNS servers, retrieving various types of DNS records, and troubleshooting DNS resolution issues?",
+    "explanation": "dig queries DNS servers and returns DNS records, which makes it the Linux counterpart of nslookup.",
+    "options": [
+      "mtr",
+      "whois",
+      "nc",
+      "dig"
+    ],
+    "correctAnswer": [
+      "dig"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-020",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Linux, tracert is a command-line utility that maps the path packets take from the local system to a remote host, displaying each hop along the route and round-trip times. It is used to diagnose network routing issues, identify bottlenecks, and verify connectivity between hosts.",
+    "explanation": "False. The Linux command is traceroute. tracert is the Windows command.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-021",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following commands in Linux provides access to documentation and help pages for other commands?",
+    "explanation": "man [command] opens the manual page for a command.",
+    "options": [
+      "[command] usage",
+      "man [command]",
+      "[command] info",
+      "docs [command]"
+    ],
+    "correctAnswer": [
+      "man [command]"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-022",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refer to the common functions of the Linux cat command? (Select 2 answers)",
+    "explanation": "cat displays file contents and concatenates multiple files into one output or file.",
+    "options": [
+      "Listing files and directories in a folder",
+      "Searching for specific text patterns within a file",
+      "Displaying contents of one or more files to the terminal",
+      "Concatenating contents of multiple files into a single output stream or file",
+      "Renaming or moving a file to a new location"
+    ],
+    "correctAnswer": [
+      "Displaying contents of one or more files to the terminal",
+      "Concatenating contents of multiple files into a single output stream or file"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-023",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command-line utility in Linux provides a real-time, interactive view of system metrics such as CPU usage, memory consumption, and active processes?",
+    "explanation": "top gives a live, interactive view of processes and resource use. ps is a static snapshot.",
+    "options": [
+      "top",
+      "vmstat",
+      "ps",
+      "tasklist"
+    ],
+    "correctAnswer": [
+      "top"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-024",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux command provides a static snapshot of currently running processes at the moment the command is executed?",
+    "explanation": "ps shows a one-time snapshot of the running processes. top updates continuously.",
+    "options": [
+      "dstat",
+      "tasklist",
+      "ps",
+      "top"
+    ],
+    "correctAnswer": [
+      "ps"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-025",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Linux commands is used to estimate and display the amount of disk space used by individual files and directories?",
+    "explanation": "du (disk usage) reports space used by files and directories. df reports free and used space per filesystem.",
+    "options": [
+      "du",
+      "fdisk",
+      "parted",
+      "df"
+    ],
+    "correctAnswer": [
+      "du"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LCL-026",
+    "topic": "Linux Command Line",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The df command in Linux can be used to determine the disk space used by a specific directory and its contents.",
+    "explanation": "False. df reports space per filesystem or mounted volume. du is the command for a specific directory.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  }
+]

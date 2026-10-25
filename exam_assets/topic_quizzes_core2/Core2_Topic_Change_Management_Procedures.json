@@ -1,0 +1,378 @@
+[
+  {
+    "id": "1202-CHG-001",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a documented procedure that reverses a change and restores the system to its previous known-good configuration if the change fails?",
+    "explanation": "A rollback plan is the documented procedure for undoing a failed change.",
+    "options": [
+      "Rollback plan",
+      "System restore point",
+      "Failover procedure",
+      "Backup plan"
+    ],
+    "correctAnswer": [
+      "Rollback plan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-002",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A documented process for creating and storing copies of data so that the data can be restored if it becomes lost, corrupted, or damaged is known as:",
+    "explanation": "A backup plan documents how data copies are made and stored so data can be restored.",
+    "options": [
+      "Backup plan",
+      "Data retention policy",
+      "Version control",
+      "Rollback plan"
+    ],
+    "correctAnswer": [
+      "Backup plan"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-003",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following terms describes the practice of implementing and verifying a change in an isolated, non-production environment specifically designed to prevent any impact on live systems?",
+    "explanation": "Sandbox testing means trying a change in an isolated environment so live systems aren't affected.",
+    "options": [
+      "Containerization",
+      "User acceptance testing",
+      "Virtualization",
+      "Sandbox testing"
+    ],
+    "correctAnswer": [
+      "Sandbox testing"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-004",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "To ensure accountability, a documented business process must identify the specific staff members responsible for each stage of its execution.",
+    "explanation": "True. Documented business processes name the responsible staff members.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-005",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to upgrade the firmware on all backbone switches in the data center. Which document must be submitted first to initiate the formal change management process?",
+    "explanation": "Formal change management starts with a change request form.",
+    "options": [
+      "Risk assessment report",
+      "Change request form",
+      "Firmware compatibility checklist",
+      "Implementation plan"
+    ],
+    "correctAnswer": [
+      "Change request form"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-006",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator is requesting to replace an aging file server with a new high-performance storage array. In the change request, the administrator justifies the replacement by noting that the current server is out of warranty and experiencing frequent hardware timeouts. Which part of the change management process does this detail satisfy?",
+    "explanation": "The justification for why the change is needed is the purpose of the change.",
+    "options": [
+      "Change type",
+      "Identification of affected systems",
+      "Purpose of the change",
+      "Risk analysis"
+    ],
+    "correctAnswer": [
+      "Purpose of the change"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-007",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT team is migrating a local file share to a cloud-based storage provider. The request form lists the specific folders to be moved and identifies several archive folders that will remain on-premises. What part of the change management process is being detailed?",
+    "explanation": "Defining exactly what is and isn't included in the change is its scope.",
+    "options": [
+      "Scope of the change",
+      "Purpose of the change",
+      "Change type",
+      "Implementation plan"
+    ],
+    "correctAnswer": [
+      "Scope of the change"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-008",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is performing a monthly update of antivirus definitions on all corporate workstations. This process is documented, low risk, and follows a pre-approved procedure. How should this request be classified within the formal change management process?",
+    "explanation": "A standard change is a low-risk, pre-approved, documented procedure that needs no new approval each time.",
+    "options": [
+      "Standard change",
+      "Normal change",
+      "Routine change",
+      "Emergency change"
+    ],
+    "correctAnswer": [
+      "Standard change"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-009",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization plans to move its entire on-premises email system to a cloud-based provider. This process requires formal approval and risk assessment. According to change management procedures, which change type does this represent?",
+    "explanation": "A normal change follows the full process: request, risk analysis and approval. CompTIA's three types are standard, normal and emergency.",
+    "options": [
+      "Standard change",
+      "Normal change",
+      "High-impact change",
+      "Emergency change"
+    ],
+    "correctAnswer": [
+      "Normal change"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-010",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A critical security vulnerability is discovered that allows unauthorized remote access to the primary file server. An immediate patch must be applied outside the regular maintenance window. Which formal change category should the technician select on the change request form?",
+    "explanation": "An urgent fix that can't wait for the normal schedule is an emergency change.",
+    "options": [
+      "Standard change",
+      "Normal change",
+      "High-priority change",
+      "Emergency change"
+    ],
+    "correctAnswer": [
+      "Emergency change"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-011",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician's request to perform a non-urgent database optimization is denied because the organization is currently performing a fiscal year-end audit. Which formal change management concept is being applied to this request?",
+    "explanation": "A change freeze is a period during which non-essential changes are not allowed.",
+    "options": [
+      "Scheduled outage",
+      "Maintenance window",
+      "Change freeze",
+      "Operational hold"
+    ],
+    "correctAnswer": [
+      "Change freeze"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-012",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization has a policy that all non-emergency software patches must be deployed on Tuesday nights between 11:00 PM and 3:00 AM. This type of authorized timeframe is officially classified as:",
+    "explanation": "A maintenance window is the pre-approved time period for making changes.",
+    "options": [
+      "Controlled downtime",
+      "Scheduled outage",
+      "Maintenance window",
+      "Policy-driven delay"
+    ],
+    "correctAnswer": [
+      "Maintenance window"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-013",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator is preparing a change request to update the firmware on a core network switch. The request includes a list of all VLANs and servers that will lose connectivity during the reboot. Which part of the change request form should contain this information?",
+    "explanation": "The systems and services that will be affected, and how, go under affected systems/impact.",
+    "options": [
+      "Request justification",
+      "Implementation plan",
+      "Affected systems/impact",
+      "Scope of the change"
+    ],
+    "correctAnswer": [
+      "Affected systems/impact"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-014",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A proposed firmware update could cause temporary outages for several departments. The change request form includes a dedicated section for documenting the assessed likelihood of potential negative outcomes. Which section should record this information?",
+    "explanation": "The assessed likelihood and severity of negative outcomes is recorded as the risk level (risk analysis).",
+    "options": [
+      "Impact analysis",
+      "Vulnerability assessment",
+      "Downtime estimate",
+      "Risk level"
+    ],
+    "correctAnswer": [
+      "Risk level"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-015",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician submits a normal change request to upgrade the operating system on all production servers. Which element of the change management process ensures that the change is formally authorized?",
+    "explanation": "The change board (change advisory board) gives formal approval for normal changes.",
+    "options": [
+      "Request justification",
+      "Managerial sign-off",
+      "Assignment of responsible staff members",
+      "Change board approvals"
+    ],
+    "correctAnswer": [
+      "Change board approvals"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-016",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which scenario best represents the implementation phase of the change management process?",
+    "explanation": "Implementation is actually carrying out the change per the documented procedure. Peer review and sandbox testing happen before, and validation comes after (end-user acceptance).",
+    "options": [
+      "Applying a configuration update to a server according to a documented procedure",
+      "Reviewing the proposed technical steps with another administrator for quality assurance",
+      "Testing the change in a non-production environment before deployment",
+      "Validating that the update resolves the documented bug after the work is complete"
+    ],
+    "correctAnswer": [
+      "Applying a configuration update to a server according to a documented procedure"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-017",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In the change management lifecycle, formal peer review of a proposed change typically occurs:",
+    "explanation": "Peer review checks the plan before the change is implemented.",
+    "options": [
+      "During sandbox testing of the proposed change",
+      "After the change has failed in production",
+      "Before the implementation phase",
+      "After the change has been fully implemented"
+    ],
+    "correctAnswer": [
+      "Before the implementation phase"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-CHG-018",
+    "topic": "Change Management Procedures",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In a standard change management workflow, end-user acceptance typically takes place:",
+    "explanation": "Users accept the change in a test environment before it is rolled out to production.",
+    "options": [
+      "During the impact analysis phase, before any changes are applied to systems",
+      "In a test environment before full production deployment",
+      "During the implementation phase, while the change is being applied",
+      "After the change is implemented, once all systems are live in production"
+    ],
+    "correctAnswer": [
+      "In a test environment before full production deployment"
+    ],
+    "origin": "ExamCompass"
+  }
+]

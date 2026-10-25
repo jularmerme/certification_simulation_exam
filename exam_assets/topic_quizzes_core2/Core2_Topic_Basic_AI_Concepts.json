@@ -1,0 +1,178 @@
+[
+  {
+    "id": "1202-AI-001",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An in-house software developer is tasked with enhancing the company's internal helpdesk portal by adding an AI chatbot to assist employees with common IT questions. This new feature implementation is an example of AI:",
+    "explanation": "Adding an AI feature (a chatbot) into an existing application is application integration.",
+    "options": [
+      "Model training",
+      "Application integration",
+      "Vibe coding",
+      "Prompt engineering"
+    ],
+    "correctAnswer": [
+      "Application integration"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-002",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company policy states that generative AI may be used only to draft internal documentation and never to create customer-facing communications without human review. This policy is primarily addressing the AI's:",
+    "explanation": "A policy that defines what AI may and may not be used for is an appropriate-use policy.",
+    "options": [
+      "Content attribution",
+      "Goal misalignment",
+      "Appropriate use",
+      "Data quality issues"
+    ],
+    "correctAnswer": [
+      "Appropriate use"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-003",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technical writer copies AI-generated troubleshooting steps into a public document without citation and submits the entire guide as original work. This behavior can be most accurately described as an example of:",
+    "explanation": "Presenting AI-generated content as your own original work without citation is plagiarism.",
+    "options": [
+      "Copyright infringement",
+      "Plagiarism",
+      "IP theft",
+      "Data misappropriation"
+    ],
+    "correctAnswer": [
+      "Plagiarism"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-004",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A predictive maintenance AI consistently flags hardware from one specific manufacturer for replacement, despite telemetry data showing those units are functioning within normal parameters. The system was trained primarily on repair logs from a period when that manufacturer had a known temporary defect. This type of error in the AI's output can be best described as:",
+    "explanation": "Skewed training data that unfairly favors or penalizes something produces bias in the output.",
+    "options": [
+      "Hallucinations",
+      "Bias",
+      "Context loss",
+      "Alignment issue"
+    ],
+    "correctAnswer": [
+      "Bias"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-005",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows help desk technician queries a generative AI tool for steps to troubleshoot a printer connectivity issue. The AI provides a detailed solution referencing a non-existent firmware version and a specific registry key that is not present in Windows. Which AI-related problem does this scenario illustrate?",
+    "explanation": "Confident, detailed output that is made up (fake firmware version, fake registry key) is a hallucination.",
+    "options": [
+      "Model drift",
+      "Evaluation gap",
+      "Overfitting",
+      "Hallucinations"
+    ],
+    "correctAnswer": [
+      "Hallucinations"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-006",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the most reliable way to mitigate the risks associated with AI accuracy limitations?",
+    "explanation": "Check AI output against authoritative, official sources. Other AI tools can repeat the same mistake, and a confidence score is not proof.",
+    "options": [
+      "Prompting the AI to provide a confidence score for its answers",
+      "Increasing the token limit of AI-generated responses",
+      "Verifying all AI-generated output against relevant official sources",
+      "Cross-referencing the output with other generative AI tools"
+    ],
+    "correctAnswer": [
+      "Verifying all AI-generated output against relevant official sources"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-007",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below describe the characteristics of private AI deployments? (Select 3 answers)",
+    "explanation": "Private AI keeps inputs isolated from external training, gives the organization control over security, and uses internally vetted data.",
+    "options": [
+      "User inputs may be used to improve the provider's AI systems",
+      "Models are trained on broad, unvetted public internet datasets",
+      "User inputs are isolated and excluded from external model training",
+      "Organizations maintain exclusive control over data security",
+      "Models are trained on specific, internally vetted data sources",
+      "Service providers manage data storage in a multi-tenant cloud"
+    ],
+    "correctAnswer": [
+      "User inputs are isolated and excluded from external model training",
+      "Organizations maintain exclusive control over data security",
+      "Models are trained on specific, internally vetted data sources"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AI-008",
+    "topic": "Basic AI Concepts",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.10",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below describe the characteristics of public AI deployments? (Select 3 answers)",
+    "explanation": "Public AI runs in a provider's multi-tenant cloud, is trained on broad public data, and may use your inputs to improve the service.",
+    "options": [
+      "Models are trained on specific, internally vetted data sources",
+      "Organizations maintain exclusive control over data security",
+      "User inputs are isolated and excluded from external model training",
+      "Service providers manage data storage in a multi-tenant cloud",
+      "Models are trained on broad, unvetted public internet datasets",
+      "User inputs may be used to improve the provider's AI systems"
+    ],
+    "correctAnswer": [
+      "Service providers manage data storage in a multi-tenant cloud",
+      "Models are trained on broad, unvetted public internet datasets",
+      "User inputs may be used to improve the provider's AI systems"
+    ],
+    "origin": "ExamCompass"
+  }
+]

@@ -1,0 +1,336 @@
+[
+  {
+    "id": "1202-LOF-001",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a command-line text editor for Linux?",
+    "explanation": "nano is the command-line text editor on the objectives. gedit is a graphical editor.",
+    "options": [
+      "gedit",
+      "cat",
+      "nano",
+      "touch"
+    ],
+    "correctAnswer": [
+      "nano"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-002",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to a plain-text system file that contains essential information about user accounts in Linux?",
+    "explanation": "/etc/passwd lists user accounts: name, UID, GID, home directory and shell.",
+    "options": [
+      "/etc/shadow",
+      "/etc/users",
+      "/etc/passwd",
+      "/etc/sudoers"
+    ],
+    "correctAnswer": [
+      "/etc/passwd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-003",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Linux system file is used to store encrypted password hashes and additional password-related settings?",
+    "explanation": "/etc/shadow stores password hashes plus aging and expiration settings, and only root can read it.",
+    "options": [
+      "/etc/sysconfig",
+      "/etc/passwd",
+      "/etc/login.defs",
+      "/etc/shadow"
+    ],
+    "correctAnswer": [
+      "/etc/shadow"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-004",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Linux, the system file used for local hostname to IP address resolution is located in:",
+    "explanation": "/etc/hosts maps hostnames to IP addresses locally.",
+    "options": [
+      "/etc/hosts",
+      "/etc/sysconfig/network",
+      "/etc/network/interfaces",
+      "/etc/resolv.conf"
+    ],
+    "correctAnswer": [
+      "/etc/hosts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-005",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The fstab system file in Linux, located at /etc/fstab, is a filesystem table that lists storage devices and partitions, along with their mount points and options, allowing the system to mount them automatically at boot.",
+    "explanation": "True. /etc/fstab defines what gets mounted automatically at boot.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-006",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which system file in Linux specifies the IP addresses of the DNS servers that the system will use to resolve domain names to IP addresses?",
+    "explanation": "/etc/resolv.conf lists the DNS servers the system queries.",
+    "options": [
+      "/etc/hostname",
+      "/etc/network/interfaces",
+      "/etc/resolv.conf",
+      "/etc/sysconfig/network"
+    ],
+    "correctAnswer": [
+      "/etc/resolv.conf"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-007",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to the standard Linux system and service manager that handles the boot process and manages system resources?",
+    "explanation": "systemd is the standard system and service manager. systemctl is only the command used to control it.",
+    "options": [
+      "bootmgr",
+      "systemd",
+      "init",
+      "systemctl"
+    ],
+    "correctAnswer": [
+      "systemd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-008",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which core component of Linux manages the system's hardware resources and acts as an interface between applications and hardware?",
+    "explanation": "The kernel manages hardware resources and sits between applications and the hardware.",
+    "options": [
+      "Kernel",
+      "Device driver",
+      "Shell",
+      "Daemon"
+    ],
+    "correctAnswer": [
+      "Kernel"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-009",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to the Linux component responsible for loading the OS kernel into memory during the system startup process?",
+    "explanation": "The bootloader (such as GRUB) loads the kernel into memory at startup.",
+    "options": [
+      "Kernel loader",
+      "Systemd",
+      "BIOS/UEFI firmware",
+      "Bootloader"
+    ],
+    "correctAnswer": [
+      "Bootloader"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-010",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A type of user account in Linux that has unrestricted access to all system files, commands, and administrative functions is called:",
+    "explanation": "root is the superuser account with unrestricted access.",
+    "options": [
+      "Admin",
+      "System",
+      "Root",
+      "Sudoer"
+    ],
+    "correctAnswer": [
+      "Root"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-011",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Linux administrator is auditing user accounts for security compliance. The administrator needs to determine password hashes, password aging policies, and expiration data for each account. Which file stores this information?",
+    "explanation": "Password hashes, aging and expiration data are stored in /etc/shadow.",
+    "options": [
+      "/etc/passwd",
+      "/etc/group",
+      "/etc/shadow",
+      "/etc/sudoers"
+    ],
+    "correctAnswer": [
+      "/etc/shadow"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-012",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Linux system admin is reviewing a user account entry in /etc/passwd. The second field for a user's entry contains the character 'x'. What does the 'x' in this field indicate?",
+    "explanation": "An 'x' in the password field means the actual hash is kept in /etc/shadow.",
+    "options": [
+      "The account is disabled",
+      "The user's password hash is stored in /etc/shadow",
+      "The user has a blank password",
+      "The user is not part of a group"
+    ],
+    "correctAnswer": [
+      "The user's password hash is stored in /etc/shadow"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-013",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator needs to view the list of all user accounts on the Linux system along with their associated information such as user/group ID numbers, home directory, and default shell. Which file should be checked?",
+    "explanation": "/etc/passwd holds the user list with UID/GID, home directory and default shell.",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/login.defs",
+      "/etc/passwd"
+    ],
+    "correctAnswer": [
+      "/etc/passwd"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-014",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Linux technician is troubleshooting name resolution and wants to confirm whether a hostname is being resolved from a local static entry rather than DNS. Which file should the technician inspect?",
+    "explanation": "Local static name-to-IP entries live in /etc/hosts.",
+    "options": [
+      "/etc/hostname",
+      "/etc/nsswitch.conf",
+      "/etc/hosts",
+      "/etc/resolv.conf"
+    ],
+    "correctAnswer": [
+      "/etc/hosts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-015",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the main functional difference between the mount command and the /etc/fstab file in Linux?",
+    "explanation": "mount attaches a filesystem right now (temporary). /etc/fstab defines the mounts that are applied automatically at every boot.",
+    "options": [
+      "mount is for local drives; /etc/fstab is for network drives",
+      "mount is for read-only mounts; /etc/fstab is for read/write mounts",
+      "mount creates temporary mounts; /etc/fstab defines mounts that persist across reboots",
+      "mount requires a restart to take effect; /etc/fstab does not"
+    ],
+    "correctAnswer": [
+      "mount creates temporary mounts; /etc/fstab defines mounts that persist across reboots"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-LOF-016",
+    "topic": "Linux OS Features & Tools",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.9",
+    "module": "17.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "During troubleshooting, a Linux admin notices that hostname lookups are failing even though /etc/hosts contains valid entries. Which file determines the DNS servers that should be queried for hostnames not listed in /etc/hosts?",
+    "explanation": "/etc/resolv.conf lists the DNS servers used for names not found in /etc/hosts.",
+    "options": [
+      "/etc/nsswitch.conf",
+      "/etc/network/interfaces",
+      "/etc/resolv.conf",
+      "/etc/hostname"
+    ],
+    "correctAnswer": [
+      "/etc/resolv.conf"
+    ],
+    "origin": "ExamCompass"
+  }
+]

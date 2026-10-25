@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-15.1-001",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security conscientious administrator wants to make authentication more secure. Which of the following would be the optimal method?",
+    "explanation": "An authentication technology is considered strong if it is multifactor. Multifactor authentication (MFA) means that the user must submit at least two different kinds of credentials. Using a single factor makes authentication less reliable. A password could be shared, a device token could be stolen, or other mechanisms could become compromised or bypassed. A facial recognition system is another instance of single-factor authentication and could be spoofed using a photograph. User Account Control (UAC) is a Windows security feature designed to protect the system against malicious scripts and attacks that could exploit privileges assigned to administrator accounts.",
+    "options": [
+      "MFA",
+      "Facial recognition",
+      "Device token",
+      "UAC"
+    ],
+    "correctAnswer": [
+      "MFA"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-002",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the primary purpose of a cryptographic hash function in the context of data security?",
+    "explanation": "Cryptographic hash functions are designed to take an input (or message) and produce a fixed-size hash value (or digest) that uniquely represents the input. This is primarily used to verify the integrity of data, ensuring that it has not been altered or tampered with. If even a single bit of the input changes, the resulting hash value will be completely different, making it an effective tool for detecting changes in data. Encryption is a process of converting data into a secure format that can only be decrypted by someone with the correct key. Hashing, on the other hand, is a one-way process and cannot be reversed to retrieve the original data. Hashing is used for integrity verification, not confidentiality. Public and private keys are used in cryptographic systems like RSA for secure communication, whereas hashing is used to verify data integrity and ensure that data has not been altered. Encryption ensures confidentiality by converting data into an unreadable format that can only be decrypted with the correct key. Hashing, on the other hand, is used to create a unique fingerprint of data for integrity verification, not for maintaining confidentiality.",
+    "options": [
+      "To encrypt data so it can only be decrypted by the intended recipient.",
+      "To verify the integrity of data by producing a fixed-size hash value.",
+      "To generate a pair of public and private keys for secure communication.",
+      "To ensure data confidentiality by scrambling the data into an unreadable format."
+    ],
+    "correctAnswer": [
+      "To verify the integrity of data by producing a fixed-size hash value."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-003",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a Security Technician tasked with securing communications between two parties in your organization. Specifically, you must make sure that the authenticity of a message is verifiable, while also ensuring that it is not tampered with during transmission. Which of the following methods would BEST achieve this goal?",
+    "explanation": "Digital signatures are specifically designed to provide both authentication (verifying the sender's identity) and integrity (ensuring the message has not been altered). The sender uses their private key to sign the message, and the recipient can verify the signature using the sender's public key. This ensures the message is authentic and has not been tampered with during transmission. While symmetric encryption ensures confidentiality (only the intended recipient can read the message), it does not provide authentication or integrity. The recipient cannot verify the sender's identity or confirm that the message has not been altered. Hashing ensures data integrity by creating a unique fingerprint of the message. However, it does not provide authentication. Without a digital signature or encryption, the recipient cannot verify the sender's identity and ensure the hash itself has not been tampered with. Public key encryption ensures confidentiality but does not inherently provide authentication or integrity. The recipient cannot verify the sender's identity or confirm that the message has not been altered unless additional mechanisms like digital signatures are used.",
+    "options": [
+      "Exchange public keys and use them to encrypt the message.",
+      "Encrypt the message using a symmetric key and share the key with the recipient.",
+      "Use a digital signature to sign the message before sending it.",
+      "Hash the message and send the hash value along with the message."
+    ],
+    "correctAnswer": [
+      "Use a digital signature to sign the message before sending it."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-004",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following does Windows use to manage and enforce what a user is authorized to access?",
+    "explanation": "Access control lists (ACLs) are used to manage and enforce what a user is authorized to access. A soft token is any digital authentication key used to authenticate a user. A soft token is not used to manage and enforce what a user is authorized to access. Certificate Manager is a Windows application for managing digital certificates. It is not used to manage and enforce what a user is authorized to access. Multi-factor authentication means that at least two authentication categories are used to authenticate a user. Multi-factor authentication is not used to manage and enforce what a user is authorized to access.",
+    "options": [
+      "Certificate Manager",
+      "Soft token",
+      "Access control list",
+      "Multi-factor authentication"
+    ],
+    "correctAnswer": [
+      "Access control list"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-005",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements is true regarding hard tokens?",
+    "explanation": "Hard tokens provide a higher level of security, but if the token is lost or stolen, the security breach can be quite severe. Implementing hard tokens can also be expensive and time-consuming. They are generally reserved for highly sensitive data.",
+    "options": [
+      "Hard tokens provide protection even if they are lost or stolen.",
+      "Hard tokens are inexpensive to implement.",
+      "Hard tokens provide a higher level of security.",
+      "Hard tokens are easy to replace if they are lost or stolen."
+    ],
+    "correctAnswer": [
+      "Hard tokens provide a higher level of security."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-006",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is true of groups on a Windows system?",
+    "explanation": "A Windows group is used to identify groups of user accounts that have similar access needs. Group members have the permissions and rights assigned to the group. Using groups simplifies administration. Instead of assigning permissions to each individual user account, you can assign permissions to the group and then make user accounts members of that group. Group accounts cannot be used for logon on a Windows system. Local hardware resources cannot be made members of a group on Windows.",
+    "options": [
+      "Group members have the access rights that are assigned to the group.",
+      "Users and local resources, such as printers and shared folders, can be made members of a group.",
+      "A group allows multiple users to share a single logon.",
+      "Users can logon as a group and have all the assigned access rights."
+    ],
+    "correctAnswer": [
+      "Group members have the access rights that are assigned to the group."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-007",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A vulnerability is described as which of the following definitions?",
+    "explanation": "A vulnerability is any weakness within a system, network, or software application that could cause damage or undesired effects. The potential for someone to cause damage is a threat, and a proven method that takes advantage of a vulnerability is known as an exploit. The likelihood that a threat actor will attack your organization is defined as a risk.",
+    "options": [
+      "A weakness within a system, network, or software application that could cause damage",
+      "The potential for someone to intentionally cause damage",
+      "A proven method that causes damage or undesired operation of the hardware",
+      "The likelihood that a threat actor will attack your organization"
+    ],
+    "correctAnswer": [
+      "A weakness within a system, network, or software application that could cause damage"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-008",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security engineer investigates legacy applications and employees who are still using them. Which of the following user groups represent a security concern?",
+    "explanation": "The power users group is present to support legacy applications. This approach created vulnerabilities that allowed accounts to escalate to the administrator's group. The guest user account is disabled by default. Microsoft ended support for using the Guest account to log in to Windows in a feature update. A standard account is a member of the Users group. This group is generally only able to configure settings for its profile. The local users and groups is a management console, not a user group. The console provides an interface for managing both user and group accounts.",
+    "options": [
+      "Standard account",
+      "Guest",
+      "Power users",
+      "Local users and groups"
+    ],
+    "correctAnswer": [
+      "Power users"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-009",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What are the security measures that are implemented through the operating system and software known as?",
+    "explanation": "Logical security refers to the security measures that are implemented through the operating system and software. Physical security refers to physical security measures, such as cameras and fences. Bring Your Own Device (BYOD) is the policy that allows employees to use their own computers and mobile devices for work purposes. Mobile device management (MDM) generally describes the policies and procedures used by an organization to maintain security and permissions on mobile devices.",
+    "options": [
+      "Logical security",
+      "Bring Your Own Device (BYOD)",
+      "Mobile device management (MDM)",
+      "Physical security"
+    ],
+    "correctAnswer": [
+      "Logical security"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-010",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following authentication combinations is an example of multi-factor authentication?",
+    "explanation": "Multi-factor authentication means that at least two categories of authentication methods are utilized. Of these options, having the user input a PIN (something you know) and use an authentication app (something you have) is the only example of multi-factor authentication. Fingerprints and retinal scans both fall under something you are. Usernames and passwords both fall under something you know. Smart cards and one-time codes both fall under something you have.",
+    "options": [
+      "Username and password",
+      "PIN and authentication app",
+      "Smart card and one-time code",
+      "Fingerprint and retinal scan"
+    ],
+    "correctAnswer": [
+      "PIN and authentication app"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-011",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The Security Account Manager database is stored in which of the following registry hives?",
+    "explanation": "The SAM database is located in the HKEY_LOCAL_MACHINE registry hive. Within the file directory, it can be found in the C:\\Windows\\System32\\config folder. CURRENT_USER stores the settings for the currently logged in users, and CURRENT_CONFIG stores hardware information that is not specific to the user. SECURITY_CONFIG is not a legitimate hive within the Windows registry.",
+    "options": [
+      "HKEY_CURRENT_CONFIG",
+      "HKEY_SECURITY_CONFIG",
+      "HKEY_CURRENT_USER",
+      "HKEY_LOCAL_MACHINE"
+    ],
+    "correctAnswer": [
+      "HKEY_LOCAL_MACHINE"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-012",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company needs to implement a secure email communication system where employees can send confidential messages to each other. The system must ensure that only the intended recipient can decrypt the message and that the sender's identity can be verified. Which of the following approaches BEST meets these requirements?",
+    "explanation": "Asymmetric encryption is the best solution for this scenario because it uses a pair of keys: a public key and a private key. Encrypting the email with the recipient's public key ensures that only the recipient, who has the corresponding private key, can decrypt the message. Signing the email with the sender's private key allows the recipient to verify the sender's identity using the sender's public key. This approach ensures both confidentiality and authenticity, meeting the requirements of the scenario. While symmetric encryption can provide confidentiality, it requires the sender and recipient to share the same key. Sharing the key via email is insecure and could expose the key to interception, compromising the confidentiality of the communication. Additionally, symmetric encryption does not provide a mechanism for verifying the sender's identity. Hashing is used to verify the integrity of data by creating a unique hash value. However, it does not provide encryption or ensure confidentiality. Sending a hash along with the email does not prevent unauthorized access to the email content, nor does it verify the sender's identity. This approach does not meet the requirements of the scenario. While digital signatures can verify the sender's identity and ensure the integrity of the email, they do not provide confidentiality. Sending the email without encryption means that anyone who intercepts the message can read its content. This approach only partially meets the requirements of the scenario, as it does not ensure the confidentiality of the communication.",
+    "options": [
+      "Use symmetric encryption to encrypt the email and share the key with the recipient via email.",
+      "Use hashing to create a hash of the email content and send it along with the email for verification.",
+      "Use asymmetric encryption to encrypt the email with the recipient's public key and sign it with the sender's private key.",
+      "Use digital signatures to sign the email and send it without encryption to ensure authenticity."
+    ],
+    "correctAnswer": [
+      "Use asymmetric encryption to encrypt the email with the recipient's public key and sign it with the sender's private key."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-013",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are working as a junior network technician at the local hospital. The security administrator has just finished rolling out a new security policy that requires users to log in to workstations using a fingerprint scanner. Which authentication category does this fall under?",
+    "explanation": "Biometrics (fingerprint scanner) fall under the something you are authentication category. Something you have requires a user to have a physical device to authenticate. Something you know requires a user to demonstrate something that only they should know (username and password) to authenticate. A soft token is not an authentication category. A soft token is any digital key that is used to authenticate a user.",
+    "options": [
+      "Something you have",
+      "Something you are",
+      "Something you know",
+      "Soft token"
+    ],
+    "correctAnswer": [
+      "Something you are"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-014",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following net user commands will show the properties of the npierce user account, which has a password of Pa$$w0rd?",
+    "explanation": "The net user command only requires the username to be specified. The password for the account is not needed. The /active option is used to enable or disable an account using the net user command.",
+    "options": [
+      "net user login npierce:Pa$$w0rd",
+      "net user npierce",
+      "net user npierce /active:yes",
+      "net user NPIERCE Pa$$w0rd"
+    ],
+    "correctAnswer": [
+      "net user npierce"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-15.1-015",
+    "domain": "2.0 Security",
+    "objective": "15.1.11",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You want to create a new user account on a Windows system that can create and edit private files, start and stop the system, install applications, and add new device drivers. Which group should this user be a member of?",
+    "explanation": "The user should be a member of the Administrators group. No other group can add new device drivers or install new applications.",
+    "options": [
+      "Power Users",
+      "Users",
+      "Guests",
+      "Administrators"
+    ],
+    "correctAnswer": [
+      "Administrators"
+    ],
+    "origin": "CertMaster"
+  }
+]

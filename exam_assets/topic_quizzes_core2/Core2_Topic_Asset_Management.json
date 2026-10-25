@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1202-AM-001",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A type of structured record used in IT asset management to track hardware, software, and peripheral devices within an organization is referred to as:",
+    "explanation": "An inventory list is the structured record of an organization's hardware, software and peripheral devices. A maintenance log records service history, a configuration baseline records approved settings, and an onboarding checklist covers steps for new users.",
+    "options": [
+      "Maintenance log",
+      "System configuration baseline",
+      "Onboarding checklist",
+      "Inventory list"
+    ],
+    "correctAnswer": [
+      "Inventory list"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-002",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refer to valid examples of items tracked in a CMDB? (Select 2 answers)",
+    "explanation": "A configuration management database (CMDB) tracks configuration items such as server hardware and installed applications, along with the relationships between them. Log data, asset disposal records and user passwords are not configuration items tracked in a CMDB.",
+    "options": [
+      "Server hardware",
+      "Log data",
+      "Asset disposal records",
+      "Installed applications",
+      "User passwords"
+    ],
+    "correctAnswer": [
+      "Server hardware",
+      "Installed applications"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-003",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The primary difference between a simple inventory list and a CMDB is that a CMDB contains the same raw asset data as an inventory list, but also tracks the dependencies and relationships between the assets.",
+    "explanation": "True. A CMDB holds the same asset data as an inventory list but also records how assets depend on and relate to each other.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-004",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In IT asset management, a physical label (typically a sticker, barcode, QR code, or RFID tag) affixed to a device is known as:",
+    "explanation": "An asset tag is the physical label (sticker, barcode, QR code or RFID tag) attached to a device. The asset ID is the unique identifier assigned to the asset in the inventory system or CMDB.",
+    "options": [
+      "Service tag",
+      "Asset ID",
+      "Tracking label",
+      "Asset tag"
+    ],
+    "correctAnswer": [
+      "Asset tag"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-005",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the terms listed below describes a unique alphanumeric string or number assigned to an asset within an inventory system or CMDB?",
+    "explanation": "The asset ID is the unique alphanumeric string or number assigned to an asset within an inventory system or CMDB. The asset tag is the physical label, the serial number comes from the manufacturer, and a product key is a software license code.",
+    "options": [
+      "Product key",
+      "Asset ID",
+      "Serial number",
+      "Asset tag"
+    ],
+    "correctAnswer": [
+      "Asset ID"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-006",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is attempting to locate an unassigned network switch in a storage room. The inventory list provides only a physical description and an internal asset ID. Which identifier on the device should the technician use to match the physical item to the documentation?",
+    "explanation": "The physical asset tag carries the internal asset ID, so it links the device in the room to its inventory record. The model number, manufacturer serial number and MAC address are not the internal asset ID listed in the documentation.",
+    "options": [
+      "Device model number",
+      "Manufacturer serial number",
+      "Device MAC address",
+      "Physical asset tag"
+    ],
+    "correctAnswer": [
+      "Physical asset tag"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-007",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following terms is used to describe a structured process organizations follow to acquire goods, services, or equipment from external suppliers?",
+    "explanation": "The procurement life cycle is the structured process an organization follows to acquire goods, services or equipment from external suppliers.",
+    "options": [
+      "Asset management process",
+      "Resource scheduling framework",
+      "Procurement life cycle",
+      "Inventory management plan"
+    ],
+    "correctAnswer": [
+      "Procurement life cycle"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-008",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician reviews an asset record before submitting a hardware repair request. Which detail confirms whether the vendor will provide free replacement parts?",
+    "explanation": "Warranty coverage status shows whether the vendor will repair or replace parts at no charge. The procurement date alone does not confirm coverage, and a maintenance window or escalation path says nothing about cost.",
+    "options": [
+      "Maintenance window schedule",
+      "Vendor support escalation path",
+      "Asset procurement date",
+      "Warranty coverage status"
+    ],
+    "correctAnswer": [
+      "Warranty coverage status"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-009",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which asset record detail helps verify software compliance during an audit?",
+    "explanation": "The license entitlement count shows how many licenses the organization is entitled to use, so it can be compared with installed copies during an audit.",
+    "options": [
+      "Assigned user information",
+      "Software usage logs",
+      "Asset procurement date",
+      "License entitlement count"
+    ],
+    "correctAnswer": [
+      "License entitlement count"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-AM-010",
+    "topic": "Asset Management",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is reviewing CMDB entries after a department reorganization. Several laptops were redistributed, and support tickets are now being misrouted. Which asset field should be updated to fix this issue?",
+    "explanation": "The assigned user field links each laptop to the person who now uses it, which drives ticket routing. After a reorganization it must be updated. The asset tag stays with the device.",
+    "options": [
+      "Asset tag",
+      "Last login timestamp",
+      "Device physical location",
+      "Assigned user"
+    ],
+    "correctAnswer": [
+      "Assigned user"
+    ],
+    "origin": "ExamCompass"
+  }
+]

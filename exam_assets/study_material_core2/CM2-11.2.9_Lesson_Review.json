@@ -1,0 +1,202 @@
+[
+  {
+    "id": "CM2-11.2-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician working on a critical issue for a customer. The customer is visibly frustrated because the issue has caused significant downtime for their business. They are blaming your company for the delay in resolving the issue. You empathize with the customer and assure them that you will work to resolve the problem as quickly as possible. However, the customer continues to express their dissatisfaction. What is the MOST professional and solution-focused action you should take next?",
+    "explanation": "By escalating the issue to a supervisor, you show the customer that their concerns are being taken seriously. Providing a clear timeline for the next steps helps manage the customer's expectations and reassures them that the issue is being actively addressed. This approach aligns with the principles of collaboration and focusing on solutions. While apologizing is important, over-explaining the reasons for the issue and focusing on your company's limitations does not contribute to resolving the problem. This approach may frustrate the customer further, as it shifts the focus away from finding a solution and onto justifying the delay. Defending your company's actions can come across as dismissive and may escalate the customer's frustration. Customers are generally more concerned with resolving the issue than hearing excuses. This response does not align with a solution-focused mindset. While it is important to remain polite, asking the customer to calm down can be perceived as condescending and may escalate the situation. Additionally, simply stating that you are doing your best does not provide the customer with a tangible solution or clear next steps, which are critical in a professional support interaction.",
+    "options": [
+      "Suggest escalating the issue to your supervisor and provide a clear timeline for the next steps to resolve the problem.",
+      "Apologize again and explain in detail why the issue occurred, emphasizing the limitations of your company's processes.",
+      "Politely ask the customer to calm down and remind them that you are doing your best to resolve the issue.",
+      "Defend your company's actions and explain that the delay was unavoidable due to external factors."
+    ],
+    "correctAnswer": [
+      "Suggest escalating the issue to your supervisor and provide a clear timeline for the next steps to resolve the problem."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Help Desk technician receives a call from a user who is unable to download new messages from the company's email server. The technician tells the user to open a command prompt, ping the email server, and check the SMTP and POP3 server IP addresses. Which of the following mistakes did the technician make?",
+    "explanation": "By using technical jargon, the technician did not handle the request properly. While words like ping, SMTP, POP3, and IP address are familiar to system administrators and help desk technicians, most end users are not familiar with these terms. The technician did not exhibit a negative attitude. Most Help Desk issues can be handled either verbally or remotely without the technician visiting the user face-to-face. The technician's mistake was an improper communication technique, not a technical mistake.",
+    "options": [
+      "The technician used jargon that the user probably didn't understand.",
+      "The technician did not walk to the user's desk and conduct the tests for the user.",
+      "The technician did not have the user check the workstation's IP address first.",
+      "The technician had a negative attitude and failed to take notes."
+    ],
+    "correctAnswer": [
+      "The technician used jargon that the user probably didn't understand."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A phone operator at a helpdesk is working with several frustrated customers and is put in various difficult positions. Which of the following is NOT part of handling difficult situations properly?",
+    "explanation": "Find a colleague for a private face-to-face chat, but under no circumstances should one ever disclose these types of experiences via social media outlets. Understand that an angry customer is usually frustrated that things are not working properly or feels let down. It is never easy to talk to someone who is unreasonable, abusive, or shouting, but it is important to be able to deal with these situations professionally. Let the customer explain the problem while you actively listen. Draw out the facts and use them as a positive action plan to drive the support case forward.",
+    "options": [
+      "Stay calm.",
+      "Post on social media.",
+      "Actively listen.",
+      "Have a positive attitude."
+    ],
+    "correctAnswer": [
+      "Post on social media."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician assisting a customer who is frustrated because their computer is not connecting to the internet. The customer says, \"I've tried everything, and it's still not working!\" To clarify the issue and gather more information, what is the BEST response?",
+    "explanation": "By asking the customer to explain the steps they've already taken, you gather critical information about the problem while showing empathy. This approach avoids redundancy in troubleshooting and ensures that the customer feels heard and understood. While resetting the router might eventually be part of the troubleshooting process, jumping to conclusions without clarifying the customer's actions or the symptoms can lead to wasted time and potentially overlooking the real problem. Responding with \"Why didn't you call us earlier if you were having this problem?\" is unprofessional and could make the customer feel defensive or blamed for the issue. It does not clarify the problem or gather useful information, and it risks escalating the customer's frustration rather than resolving the issue. While running diagnostics is a valid troubleshooting step, this response skips the critical step of clarifying the issue with the customer. It also fails to engage the customer in the process, which could lead to miscommunication or missed details about the problem.",
+    "options": [
+      "\"I understand your frustration. Can you tell me exactly what steps you've already tried to fix the issue?\"",
+      "\"It's probably a problem with your router. Let me reset it for you.\"",
+      "\"Why didn't you call us earlier if you were having this problem?\"",
+      "\"I'll just run some diagnostics on your computer and let you know what's wrong.\""
+    ],
+    "correctAnswer": [
+      "\"I understand your frustration. Can you tell me exactly what steps you've already tried to fix the issue?\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have been called into a customer's site to troubleshoot and fix one of their computers. From the description you received on the phone (prior to coming to their office), you have already given the customer an idea of which component may need to be replaced and how much it would cost to repair. You have been given permission to fix that component at the cost you quoted. When you open the computer and begin troubleshooting, you notice that what you suspected was broken was, instead, working perfectly. You soon discover the real issue. After checking with your suppliers, you find that the replacement component is less than the component you had intended to fix. Which of the following is the BEST course of action?",
+    "explanation": "Your safest and most professional course of action is to always get authorization before making repairs. Although the customer had given permission to fix the suspected component, they may have second thoughts when they find out what really needs to be fixed, even if it costs less. You should never lie about a repair. Not only is it dishonest, but if the initial component breaks in the near future, your customer will want it repaired on warranty, and you will be out the cost of the repair. Turning away business when services can easily be completed is unproductive.",
+    "options": [
+      "Decline to fix the broken component.",
+      "Fix the broken component and surprise the owner with a lower price than expected.",
+      "Fix the broken component for the agreed price and let the customer think you fixed the other component.",
+      "Obtain authorization before repairing the broken component."
+    ],
+    "correctAnswer": [
+      "Obtain authorization before repairing the broken component."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user calls tech support about a hardware malfunction. The tech support representative is not able to resolve the issue. What option does the representative choose next?",
+    "explanation": "To replace, give the customer clear instructions for how the product will be delivered or how it can be re-ordered, and whether the broken product must be returned. Virtual Network Function (VNF) specifies and deploys instances of each virtual appliance. VNFs are designed to run as virtual machines (VMs) on standard CPU platforms. Application programming interfaces (API) are not part of the standard. The simplest way of interfacing with a cloud service is to use the provider's website or APIs over the internet. Management and orchestration (MANO) position VNFs within workflows to perform the forwarding and filtering tasks they are designed for.",
+    "options": [
+      "Replacement",
+      "VNF",
+      "API calls",
+      "MANO"
+    ],
+    "correctAnswer": [
+      "Replacement"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician and receive a call from a frustrated customer whose computer is not functioning properly. The customer is speaking in an angry tone and blames your company for the issue. How should you respond to the customer to demonstrate professional communication and resolve the situation effectively?",
+    "explanation": "Actively listening to the customer, showing empathy, and focusing on resolving the issue demonstrates professional communication. This approach helps to de-escalate the situation, builds trust, and ensures the customer feels heard and valued. It aligns with the principles of professionalism and customer service. Interrupting the customer shows a lack of respect and professionalism. Blaming the customer or deflecting responsibility can escalate the situation further and damage the customer's trust in your ability to resolve the issue. Ending the call abruptly without addressing the customer's concerns demonstrates poor communication and a lack of accountability. While escalation may be necessary in some cases, it should be done after actively listening to the customer and explaining the next steps clearly. Defending your company instead of addressing the customer's concerns can come across as dismissive and unhelpful. The focus should be on resolving the issue rather than assigning blame or justifying the company's actions.",
+    "options": [
+      "Listen actively to the customer's concerns, empathize with their frustration, and assure them that you will work on a solution.",
+      "Interrupt the customer and explain that the issue is not your fault, but you will try to help them.",
+      "Tell the customer that you will escalate the issue to a senior technician and end the call immediately.",
+      "Defend your company's reputation by explaining why the issue is not related to your company's services."
+    ],
+    "correctAnswer": [
+      "Listen actively to the customer's concerns, empathize with their frustration, and assure them that you will work on a solution."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are the PC technician for a company. An employee has gone to a meeting while you fix the computer in her office. She accidentally left a report open next to her computer. It states that a friend of yours in accounting will be submitted for review if their poor work performance continues. Which of the following is the BEST action to take?",
+    "explanation": "You should ignore the paper and tell no one of its contents. Complete confidentiality is expected for any sensitive information that may be found in an employee's office. It is never appropriate to share sensitive, work-related information found in an employee's office with anyone in a company or friends.",
+    "options": [
+      "Give your friend a heads up about what you found, but don't tell them how you got the information.",
+      "Tell your fellow PC technicians about what you saw and let them decide what to do with the information.",
+      "Ignore the paper and tell no one of its contents.",
+      "Tell your friend about the report you saw and whose desk it was on."
+    ],
+    "correctAnswer": [
+      "Ignore the paper and tell no one of its contents."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As you arrive on-site to fix an issue, you are met by a frantic employee who immediately details how critical the issue is and how important it is to fix it as quickly as possible. Having seen this same issue many times, you say to the customer, \"Stop worrying. I know what I'm doing.\" Which of the following professionalism principles are you failing to follow?",
+    "explanation": "Although you may have great skills and may have even fixed the same issues on many occasions, to this customer, this problem is new, critical, and frightening. You should always listen intently and acknowledge the customer's concerns. You should never dismiss the customer's problems, even if it is only to say you know how to fix the issue.",
+    "options": [
+      "Maintain a positive attitude.",
+      "Avoid an argument with the customer.",
+      "Avoid dismissing customer problems.",
+      "Avoid being judgmental."
+    ],
+    "correctAnswer": [
+      "Avoid dismissing customer problems."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As you arrive on-site at a customer's place of business, you go to the front desk and ask for the manager of the IT department. The manager greets you and tells you to use their first name, which is Robin. Robin then escorts you to the printer, which is jammed. After you fix the printer, the existing print job completes. As the paper comes out, you notice that one of them is marked confidential and has to do with an upcoming merger. You find Robin and say, \"Robin, your printer is fixed and working perfectly.\" Robin then escorts you off the premises. When you get home that evening, you tell your spouse about the merger document you saw. The next day, you call Robin to verify that the printer is still functioning properly. Which of the following professionalism principles did you fail to follow?",
+    "explanation": "Although you never posted anything on social media regarding your experiences at the IT manager's company, you should have never discussed the confidential papers you viewed with your spouse. Therefore, you did not deal with confidential materials appropriately. Calling the IT manager by their first name is appropriate since the manager told you it was appropriate to use Robin. It is safe to assume the manager would prefer to be called by that name. There is nothing in the dialog to indicate that you were being judgmental. You also called the next day, which is a good follow-up practice.",
+    "options": [
+      "Deal with confidential materials appropriately.",
+      "Use appropriate professional titles.",
+      "Follow up with the customer to verify satisfaction.",
+      "Avoid being judgmental."
+    ],
+    "correctAnswer": [
+      "Deal with confidential materials appropriately."
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -1,0 +1,304 @@
+[
+  {
+    "id": "1202-ENV-001",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a standardized document outlining the hazards, safe handling procedures, storage requirements, and proper disposal methods for potentially hazardous materials?",
+    "explanation": "The Material Safety Data Sheet (MSDS) documents hazards, handling, storage and disposal for hazardous materials.",
+    "options": [
+      "EPA",
+      "OSHA",
+      "SOP",
+      "MSDS"
+    ],
+    "correctAnswer": [
+      "MSDS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-002",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A technician is decommissioning a variety of older hardware components. Which of the following items should not be placed in standard electronic waste due to special handling requirements? (Select all that apply)",
+    "explanation": "CRTs, toner cartridges and lithium-ion batteries need special disposal. Optical drives and flash drives can go in standard e-waste.",
+    "options": [
+      "Optical media drives",
+      "CRT display units",
+      "Laser printer toner cartridges",
+      "USB flash drives",
+      "Lithium-ion battery packs"
+    ],
+    "correctAnswer": [
+      "CRT display units",
+      "Laser printer toner cartridges",
+      "Lithium-ion battery packs"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-003",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the terms listed below refers to an environmental control system?",
+    "explanation": "HVAC (heating, ventilation and air conditioning) controls temperature, humidity and airflow.",
+    "options": [
+      "SCADA",
+      "DCS",
+      "TEMPEST",
+      "HVAC"
+    ],
+    "correctAnswer": [
+      "HVAC"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-004",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a high-performance workstation's speed drops significantly during the afternoon when the office's ambient temperature rises. What is the most likely cause of this performance decrease?",
+    "explanation": "When temperatures get too high, the CPU/GPU slows itself down (thermal throttling) to avoid damage.",
+    "options": [
+      "System fan failure",
+      "Thermal paste degradation",
+      "Drop in voltage from the power utility",
+      "Thermal throttling"
+    ],
+    "correctAnswer": [
+      "Thermal throttling"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-005",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server room is experiencing an unusually high number of component failures due to ESD. Which environmental condition is the most likely cause?",
+    "explanation": "Low humidity increases static electricity and so the risk of ESD.",
+    "options": [
+      "Humidity levels that are too high",
+      "Ambient temperature that is too low",
+      "Humidity levels that are too low",
+      "Ambient temperature that is too high"
+    ],
+    "correctAnswer": [
+      "Humidity levels that are too low"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-006",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A data center hardware audit reveals recurring corrosion and oxidation on metal connectors used in network and server equipment. Which environmental condition would most likely explain this issue?",
+    "explanation": "High humidity causes moisture, corrosion and oxidation.",
+    "options": [
+      "Humidity levels that are too low",
+      "Ambient temperature that is too high",
+      "Humidity levels that are too high",
+      "Ambient temperature that is too low"
+    ],
+    "correctAnswer": [
+      "Humidity levels that are too high"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-007",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is not considered a best-practice guideline for proper equipment placement to ensure adequate temperature and ventilation?",
+    "explanation": "Exhaust fans should push hot air into the hot aisle. Pushing it into the cold aisle defeats the cooling design.",
+    "options": [
+      "Maintain clear airflow around intake and exhaust vents",
+      "Avoid placing equipment near heat-generating sources",
+      "Ensure all exhaust fans are pushing air into the cold aisle",
+      "Position equipment in a climate-controlled environment",
+      "Ensure adequate clearance around all sides of the device"
+    ],
+    "correctAnswer": [
+      "Ensure all exhaust fans are pushing air into the cold aisle"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-008",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary risk associated with excessive dust accumulation inside a workstation's chassis?",
+    "explanation": "Dust insulates components and blocks airflow, causing heat buildup and overheating.",
+    "options": [
+      "Power supply voltage fluctuations",
+      "Increased electromagnetic interference",
+      "Reduced Wi-Fi signal strength",
+      "Thermal buildup due to insulation"
+    ],
+    "correctAnswer": [
+      "Thermal buildup due to insulation"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-009",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which precautions should be followed to avoid moisture-related damage when using compressed air to clean computer hardware? (Select 3 answers)",
+    "explanation": "Keep the can upright, don't shake it and use short bursts, because tilting or shaking can spray liquid propellant and moisture onto the hardware.",
+    "options": [
+      "Avoid shaking the can during use",
+      "Keep the can upright",
+      "Apply long, continuous sprays to ensure all dust is dislodged",
+      "Use short, controlled bursts",
+      "Shake the can frequently during use to maintain high pressure",
+      "Keep the can tilted to prevent liquid leakage"
+    ],
+    "correctAnswer": [
+      "Avoid shaking the can during use",
+      "Keep the can upright",
+      "Use short, controlled bursts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-010",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is cleaning a laser printer and notices toner dust mixed with regular dust inside the device. What is the safest course of action?",
+    "explanation": "Use a vacuum designed for toner. Compressed air spreads the fine powder, and a regular vacuum can ignite or clog on it.",
+    "options": [
+      "Shake the toner cartridge to loosen debris",
+      "Use a wet cloth to wipe the toner",
+      "Blow the toner out with compressed air",
+      "Use an ESD-safe vacuum designed for toner"
+    ],
+    "correctAnswer": [
+      "Use an ESD-safe vacuum designed for toner"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-011",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The term \"Brownout\" refers to what kind of situation?",
+    "explanation": "A brownout is a prolonged period of undervoltage. A sag is a brief dip.",
+    "options": [
+      "Power fluctuation",
+      "Power sag",
+      "Prolonged undervoltage",
+      "Power outage"
+    ],
+    "correctAnswer": [
+      "Prolonged undervoltage"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-012",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What does the term \"Blackout\" refer to?",
+    "explanation": "A blackout is a complete loss of power.",
+    "options": [
+      "Intermittent power loss",
+      "Drop in voltage",
+      "Power sag",
+      "Complete loss of power"
+    ],
+    "correctAnswer": [
+      "Complete loss of power"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-013",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below best describes the primary function of a UPS?",
+    "explanation": "An uninterruptible power supply provides battery power during an outage so equipment can keep running or shut down safely.",
+    "options": [
+      "Filters electrical noise from the power line",
+      "Ensures consistent voltage delivery to hardware",
+      "Provides battery-backed power during an outage",
+      "Regulates incoming voltage to a stable level"
+    ],
+    "correctAnswer": [
+      "Provides battery-backed power during an outage"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-ENV-014",
+    "topic": "Environmental Impacts & Controls",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is setting up a new workstation in an area prone to frequent lightning storms. Which device should be installed to protect the computer's power supply from sudden, high-voltage spikes?",
+    "explanation": "A surge suppressor protects against voltage spikes. A plain power strip does not.",
+    "options": [
+      "Line conditioner",
+      "Standby power supply",
+      "Power strip",
+      "Surge suppressor"
+    ],
+    "correctAnswer": [
+      "Surge suppressor"
+    ],
+    "origin": "ExamCompass"
+  }
+]

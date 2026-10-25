@@ -1,0 +1,202 @@
+[
+  {
+    "id": "CM2-12.4-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why are cloud-based collaboration tools beneficial for remote teams working on the same document?",
+    "explanation": "Cloud-based collaboration tools, such as Microsoft Office 365 and Google Docs, enable multiple users to edit the same document in real-time, regardless of their physical location. This is a key benefit, as it allows remote teams to work together seamlessly. Cloud-based collaboration tools are specifically designed to allow multiple users to access and edit documents simultaneously, not restrict access to one user at a time. While some tools may offer version control, they do not automatically delete older versions of documents as a primary feature. This would not align with the purpose of collaboration tools, which often retain version history for tracking changes. Cloud-based collaboration tools do not require users to download documents locally before editing. Instead, they allow users to make edits directly in the cloud, ensuring real-time updates and synchronization.",
+    "options": [
+      "They automatically delete older versions of the document to save storage space.",
+      "They ensure that only one user can access the document at a time to prevent conflicts.",
+      "They allow users to edit the same document in real-time, regardless of location.",
+      "They require users to download the document locally before making edits."
+    ],
+    "correctAnswer": [
+      "They allow users to edit the same document in real-time, regardless of location."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary benefit of using identity synchronization in a cloud-based environment?",
+    "explanation": "Identity synchronization allows users to use a single set of credentials to access both cloud-based and on-premise resources. This reduces the number of credentials users need to remember and simplifies access management for organizations. Identity synchronization is designed to reduce the number of credentials a user needs, not increase them. The goal is to unify credentials across cloud and on-premise systems. Identity synchronization does not eliminate the need for credentials. Instead, it ensures that the same credentials can be used across different environments, simplifying access but not removing the need for authentication. Identity synchronization aims to maintain consistent permissions and policies across both cloud and on-premise systems, not create different permissions for each environment.",
+    "options": [
+      "It ensures that users have different permissions for cloud and on-premise systems.",
+      "It eliminates the need for credentials entirely in enterprise environments.",
+      "It simplifies user sign-in by enabling a single set of credentials for cloud and on-premise resources.",
+      "It allows users to have multiple sets of credentials for different resources."
+    ],
+    "correctAnswer": [
+      "It simplifies user sign-in by enabling a single set of credentials for cloud and on-premise resources."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your organization uses a cloud-based project management application under a business license. Recently, a team member stored project files created using the application in a personal cloud storage account. Upon reviewing the license agreement, you notice a clause about ownership of works created using the software. What should you infer about this situation?",
+    "explanation": "Cloud-based application licenses may include terms about ownership of works created using the software. In a business license scenario, the organization typically retains ownership of the files created using the licensed software. Storing these files in personal cloud storage could violate the license terms and pose security risks. Ownership of works created using cloud-based applications is often governed by the license terms. In a business license scenario, the organization, not the individual, typically retains ownership of the files. Cloud storage providers do not normally gain ownership of files uploaded to their platforms. Ownership is determined by the license agreement and remains with the organization or individual as specified. Ownership is a critical aspect of the license agreement. Ignoring ownership terms could lead to violations of the agreement and potential legal or security issues.",
+    "options": [
+      "The organization retains ownership of the project files, and they should not be stored in personal cloud storage.",
+      "The cloud storage provider automatically owns the project files once they are uploaded to personal storage.",
+      "Ownership of the project files is irrelevant as long as the files are accessible to the team.",
+      "The team member owns the project files because they created them, and storing them in personal cloud storage is acceptable."
+    ],
+    "correctAnswer": [
+      "The organization retains ownership of the project files, and they should not be stored in personal cloud storage."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your company is considering moving its email system to the cloud to improve accessibility and synchronization across devices. Employees frequently switch between desktops, laptops, and mobile devices and need their emails and folders to stay updated in real-time. Which solution would BEST meet these requirements?",
+    "explanation": "Cloud-based email systems like Gmail from Google Workspace allow users to access their emails and folders from any device with an internet connection. These systems also ensure synchronization across devices in real time, which meets the company's requirements. On-premise email servers, like Microsoft Exchange, do not inherently provide the real-time synchronization across devices that cloud-based systems offer. They also require significant management and infrastructure, which may not align with the company's goal of improving accessibility. Mozilla Thunderbird is a local email client, not a cloud-based solution. While it can connect to email servers, it does not inherently provide real-time synchronization and accessibility across multiple devices that the company needs. Microsoft Outlook, when used as a desktop-only application, does not provide the cloud-based functionality needed for real-time synchronization across devices. While it can connect to cloud-based email systems, the scenario specifies a desktop-only configuration, which limits accessibility.",
+    "options": [
+      "Using Gmail through Google Workspace",
+      "Deploying Microsoft Exchange as an on-premise email server",
+      "Installing Mozilla Thunderbird as the primary email client for all employees",
+      "Configuring Microsoft Outlook as a desktop-only application"
+    ],
+    "correctAnswer": [
+      "Using Gmail through Google Workspace"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your organization uses Microsoft Azure for cloud services and an on-premise Active Directory for local resource management. The IT team wants to simplify user access by ensuring employees can use the same credentials to log into both cloud and on-premise resources. Which solution would BEST address this requirement?",
+    "explanation": "Identity synchronization allows users to use a single set of credentials for both cloud and on-premise resources. By configuring identity synchronization, the organization can simplify user access while maintaining consistent permissions and policies across both environments. Creating separate accounts increases the complexity for users and administrators. Identity synchronization is designed to unify credentials, not separate them, while still maintaining security. Disabling authentication would compromise security. Identity synchronization simplifies access without removing the need for secure authentication. A password manager does not address the root issue of having multiple credentials. Identity synchronization eliminates the need for multiple credentials by unifying them, making this a more effective solution.",
+    "options": [
+      "Configure identity synchronization between Azure and the on-premise Active Directory.",
+      "Create separate user accounts for cloud and on-premise resources to maintain security.",
+      "Disable authentication for cloud resources to simplify access.",
+      "Use a third-party password manager to store and manage multiple credentials for users."
+    ],
+    "correctAnswer": [
+      "Configure identity synchronization between Azure and the on-premise Active Directory."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an example of a cloud-based collaboration tool that allows multiple users to edit documents in real-time?",
+    "explanation": "Microsoft Office 365 includes cloud-based collaboration tools such as Word, Excel, and PowerPoint, which allow multiple users to edit documents in real-time. This feature is specifically highlighted in the document as a key benefit of collaboration tools. Adobe Photoshop is a powerful design tool but is not primarily a collaboration tool for real-time document editing. It is more focused on individual creative work rather than team collaboration. Microsoft Exchange Server is an email server application, not a collaboration tool for real-time editing of documents. While it supports communication, it does not provide the same collaborative features as Office 365. iCloud is a cloud storage solution, not a collaboration tool. While it allows file sharing and synchronization, it does not support real-time collaborative editing of documents.",
+    "options": [
+      "Microsoft Exchange Server",
+      "Microsoft Office 365",
+      "iCloud",
+      "Adobe Photoshop"
+    ],
+    "correctAnswer": [
+      "Microsoft Office 365"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is evaluating different storage solutions for their employees. They need a system that allows employees to access files from multiple devices, ensures files are always up-to-date, and provides an easy way to share files with external collaborators. After reviewing their options, they narrow it down to the following choices. Which solution BEST meets their needs?",
+    "explanation": "Cloud storage solutions allow files to be synchronized across multiple devices, ensuring they are always up-to-date. Additionally, these solutions provide easy file-sharing capabilities, making them ideal for collaboration with external parties. This meets all the company's stated needs. A local file server limits accessibility to the company network, which does not support access from multiple devices in different locations. It also does not inherently provide synchronization or easy sharing with external collaborators. External hard drives do not provide synchronization or sharing capabilities. Employees would need to manually update files and physically transfer the hard drive to share files, which is inefficient and does not meet the company's requirements. Email-based systems are not designed for synchronization or maintaining up-to-date versions of files. Sharing files via email is cumbersome and prone to version control issues, making it unsuitable for the company's needs.",
+    "options": [
+      "An external hard drive assigned to each employee for storing and sharing files.",
+      "An email-based system where employees attach and send files to collaborators.",
+      "A local file server that employees can access only when connected to the company network.",
+      "A cloud storage solution like Microsoft OneDrive or Google Drive that supports synchronization and sharing."
+    ],
+    "correctAnswer": [
+      "A cloud storage solution like Microsoft OneDrive or Google Drive that supports synchronization and sharing."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does a cloud-based email system differ from an on-premise email server?",
+    "explanation": "Cloud-based email systems, such as Gmail from Google Workspace or Outlook through Microsoft 365, enable users to access their emails and folders from any device with an internet connection. This is a key feature of cloud-based email systems. Cloud-based email systems do require an internet connection to access emails. These systems are accessed through web portals, which necessitate an active internet connection. Synchronization across devices is a feature of cloud-based email systems, not on-premise email servers. On-premise servers often require additional configuration to enable synchronization. On-premise email servers are managed by the organization itself, not by a cloud service provider. A contrast is made between on-premise servers with cloud-based systems, which are managed by the service provider.",
+    "options": [
+      "On-premise email servers are managed entirely by the cloud service provider.",
+      "On-premise email servers automatically synchronize emails across multiple devices without additional configuration.",
+      "Cloud-based email systems allow users to access their emails and folders from any device with an internet connection.",
+      "Cloud-based email systems require no internet connection to access emails."
+    ],
+    "correctAnswer": [
+      "Cloud-based email systems allow users to access their emails and folders from any device with an internet connection."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does cloud storage improve file accessibility and management compared to local storage?",
+    "explanation": "Cloud storage solutions enable users to access and synchronize files across multiple devices as long as they have an internet connection. This feature enhances file accessibility and management, making it more convenient than local storage. Cloud storage solutions are designed to improve accessibility by allowing access from multiple devices, not restricting it to a single device. Enhanced security is achieved through other mechanisms, not by limiting device access. Cloud storage solutions automatically synchronize files and folders across devices. Manual file transfers are not necessary when using cloud storage. An internet connection is required to access files stored in the cloud. Without internet access, users cannot retrieve or synchronize their files.",
+    "options": [
+      "It allows files to be accessed and synchronized across multiple devices with internet access.",
+      "It eliminates the need for internet access to retrieve files stored in the cloud.",
+      "It requires users to manually transfer files between devices for synchronization.",
+      "It restricts file access to a single device for enhanced security."
+    ],
+    "correctAnswer": [
+      "It allows files to be accessed and synchronized across multiple devices with internet access."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a key consideration when purchasing a license for a cloud-based application?",
+    "explanation": "Cloud-based application licenses may include terms regarding who owns the works created using the software. This is a unique aspect of cloud-based licensing that users must carefully review and understand. Licenses often restrict the number of installations and users. Violating these terms, such as installing the software on multiple devices without proper licensing, could breach the agreement. It is important to read and understand the terms and conditions of any software license. Ignoring these terms could lead to misuse or legal issues. Cloud-based applications often offer both individual and commercial or business license terms, depending on the intended use. Businesses frequently use cloud-based applications under specific licensing agreements.",
+    "options": [
+      "Cloud-based application licenses do not require users to read the terms and conditions.",
+      "Cloud-based application licenses may include terms about ownership of works created using the software.",
+      "Cloud-based application licenses are only available for individual users, not businesses.",
+      "Cloud-based application licenses allow unlimited installations on multiple devices."
+    ],
+    "correctAnswer": [
+      "Cloud-based application licenses may include terms about ownership of works created using the software."
+    ],
+    "origin": "CertMaster"
+  }
+]

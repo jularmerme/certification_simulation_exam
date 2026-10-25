@@ -1,0 +1,167 @@
+[
+  {
+    "id": "1202-WTM-001",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below describe(s) the function of Task Manager (taskmgr.exe) in Windows 10 and Windows 11? (Select all that apply)",
+    "explanation": "Task Manager shows running programs, processes and services, manages startup apps, reports real-time resource use and ends unresponsive applications. Scheduling is Task Scheduler, and permissions are managed elsewhere.",
+    "options": [
+      "Displays information on programs, processes, and services that are currently running on the computer",
+      "Provides access to administrative tools for managing network traffic",
+      "Allows users to schedule the launch of programs or scripts at pre-defined times or after specified time intervals",
+      "Provides access to startup applications that can be enabled or disabled to launch automatically at sign-in",
+      "Allows system administrators to modify user account permissions for currently logged-in users",
+      "Provides real-time reports on how a Windows-based computer is using system resources, such as CPU, RAM, Disk, Network, and GPU",
+      "Allows users to close a non-responsive application in Windows"
+    ],
+    "correctAnswer": [
+      "Displays information on programs, processes, and services that are currently running on the computer",
+      "Provides access to startup applications that can be enabled or disabled to launch automatically at sign-in",
+      "Provides real-time reports on how a Windows-based computer is using system resources, such as CPU, RAM, Disk, Network, and GPU",
+      "Allows users to close a non-responsive application in Windows"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-002",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Windows Task Manager can be launched by: (Select all that apply)",
+    "explanation": "Task Manager opens with Ctrl+Shift+Esc, Ctrl+Alt+Delete, a Taskbar or Start button right-click, taskmgr in cmd or Run. It isn't in Control Panel or Administrative Tools.",
+    "options": [
+      "Using the Ctrl+Shift+Esc key combination",
+      "Double-clicking on the applet's icon shortcut in the Administrative Tools folder",
+      "Pressing Ctrl+Alt+Delete and selecting the Task Manager option from the menu screen",
+      "Selecting the Task Manager applet in Windows Control Panel",
+      "Right-clicking on the Windows Taskbar and selecting Task Manager",
+      "Typing taskmgr (or taskmgr.exe) in the Command Prompt (cmd.exe) and pressing Enter",
+      "Pressing the Windows key + R, typing taskmgr (or taskmgr.exe) in the Run window, and pressing Enter",
+      "Right-clicking on the Windows Start button and selecting Task Manager"
+    ],
+    "correctAnswer": [
+      "Using the Ctrl+Shift+Esc key combination",
+      "Pressing Ctrl+Alt+Delete and selecting the Task Manager option from the menu screen",
+      "Right-clicking on the Windows Taskbar and selecting Task Manager",
+      "Typing taskmgr (or taskmgr.exe) in the Command Prompt (cmd.exe) and pressing Enter",
+      "Pressing the Windows key + R, typing taskmgr (or taskmgr.exe) in the Run window, and pressing Enter",
+      "Right-clicking on the Windows Start button and selecting Task Manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-003",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab of the Windows Task Manager provides an interface to manually start, stop, or restart system applications that typically run without a user interface?",
+    "explanation": "The Services tab lists background services that you can start, stop or restart.",
+    "options": [
+      "Processes",
+      "Performance",
+      "Startup",
+      "Users",
+      "Services"
+    ],
+    "correctAnswer": [
+      "Services"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-004",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Task Manager tab in Windows allows users to enable or disable apps that run automatically at sign-in?",
+    "explanation": "The Startup tab controls which apps launch automatically at sign-in.",
+    "options": [
+      "Services",
+      "Startup",
+      "Performance",
+      "Processes",
+      "Users"
+    ],
+    "correctAnswer": [
+      "Startup"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-005",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tab in Windows Task Manager displays real-time graphs of CPU, memory, disk, network, and GPU resource usage?",
+    "explanation": "The Performance tab shows real-time graphs of CPU, memory, disk, network and GPU use.",
+    "options": [
+      "Services",
+      "Startup",
+      "Performance",
+      "Processes",
+      "Users",
+      "None of the above"
+    ],
+    "correctAnswer": [
+      "Performance"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-006",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Task Manager tab in Windows provides real-time information about system resources used by running applications and background processes?",
+    "explanation": "The Processes tab shows the resources (CPU, memory, disk, network) used by each application and background process.",
+    "options": [
+      "Processes",
+      "Performance",
+      "Startup",
+      "Users",
+      "Services"
+    ],
+    "correctAnswer": [
+      "Processes"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WTM-007",
+    "topic": "Windows Task Manager",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The Task Manager's Users tab in Windows lists all signed-in user accounts along with details on applications and system resources used by each account. This tab also allows system administrators to close user applications, disconnect the user (lock the user session), or sign them off (force the user to log off).",
+    "explanation": "True. The Users tab shows per-user resource use and lets an admin disconnect or sign off users.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  }
+]

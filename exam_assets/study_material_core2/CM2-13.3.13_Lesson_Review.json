@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-13.3-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A transportation company outfits its mobile units with devices that will enable it to analyze routes, patterns, and create efficiencies. The devices will connect to their cloud servers through a 4G WWAN. What will the company need to ensure the devices connect to the cloud resources?",
+    "explanation": "For GSM and 4G or 5G services, the adapter must also be fitted with a subscriber identity module (SIM) card issued by the network provider. The bandwidth depends on the technologies supported by the adapter and by the local cell tower (3G, 4G, or 5G, for instance). A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network. When a user connects to a new network, the Windows Network Location Awareness (NLA) service prompts the user to set the network type. In Windows settings, the Link-layer Topology Discovery protocol provides network mapping and discovery functions for networks without dedicated name servers.",
+    "options": [
+      "VPN",
+      "SIM",
+      "Link-layer Topology Discovery",
+      "NLA"
+    ],
+    "correctAnswer": [
+      "SIM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it important for the network adapter and switch to use the same Ethernet settings when establishing a wired network connection?",
+    "explanation": "The network adapter and switch must use the same Ethernet settings (e.g., speed and duplex mode) to establish a link. Without matching settings, the devices cannot communicate effectively, which is critical for a functioning wired network connection. Detecting wireless networks is unrelated to Ethernet settings. Ethernet settings are specific to wired connections, not wireless ones. The adapter does not assign IP addresses to the switch. IP address assignment is typically handled by a DHCP server or configured manually, and it is unrelated to the Ethernet settings. The naming of adapters in Windows (e.g., Ethernet, Ethernet2) is determined by the operating system and is unrelated to the Ethernet settings or the switch. Matching Ethernet settings has no impact on how adapters are named.",
+    "options": [
+      "To allow the adapter to automatically assign an IP address to the switch.",
+      "To ensure the adapter can detect wireless networks in the area.",
+      "To prevent the adapter from being assigned multiple names in Windows.",
+      "To establish a successful link and enable communication between devices."
+    ],
+    "correctAnswer": [
+      "To establish a successful link and enable communication between devices."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the default setting for IP configuration on Ethernet and Wi-Fi adapters in Windows?",
+    "explanation": "Obtaining an IP address automatically is the default setting for IP configuration on Ethernet and Wi-Fi adapters in Windows. It uses a DHCP server to automatically assign IP addresses, simplifying network configuration for most users. While static IP addresses can be configured manually, this is not the default setting. Static IP configuration is typically used in specific scenarios, such as servers or devices requiring a fixed address, but it requires manual setup. Disabling IP configuration would prevent the adapter from connecting to a network, which is not the default behavior. Windows is designed to enable network connectivity by default. Both IPv4 and IPv6 are installed and used by default on Windows adapters. The system automatically selects the appropriate protocol based on the network it is connected to rather than exclusively using IPv6.",
+    "options": [
+      "Use a static IP address.",
+      "Use only IPv6 for IP configuration.",
+      "Disable IP configuration.",
+      "Obtain an IP address automatically."
+    ],
+    "correctAnswer": [
+      "Obtain an IP address automatically."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows desktop computer cannot connect to the internet after manually configuring a static IP address. Upon investigation, you find the following configuration: IP Address: 192.168.1.50; Subnet Mask: 255.255.255.0; Default Gateway: 192.168.2.1. What is the MOST likely cause of the issue?",
+    "explanation": "The default gateway must be in the same subnet as the client device's IP address to enable proper communication with devices outside the local network. In this case, the IP address (192.168.1.50) and the default gateway (192.168.2.1) are in different subnets because the subnet mask (255.255.255.0) indicates that only devices with the same first three octets (192.168.1.x) are in the same subnet. This mismatch prevents the computer from routing traffic to the internet. The IP address (192.168.1.50) is in a valid IPv4 format. The issue lies with the default gateway configuration, not the format of the IP address. The subnet mask (255.255.255.0) is valid and correctly defines the subnet for the IP address. The problem is that the default gateway is outside this subnet, not the subnet mask itself. While IP conflicts can cause connectivity issues, there is no indication in the scenario that another device is using the same IP address. The issue is specifically related to the default gateway configuration.",
+    "options": [
+      "The IP address is not in the correct format for IPv4.",
+      "The default gateway is not in the same subnet as the IP address.",
+      "The static IP address conflicts with another device on the network.",
+      "The subnet mask is incorrect for the IP address."
+    ],
+    "correctAnswer": [
+      "The default gateway is not in the same subnet as the IP address."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are configuring a wireless network connection on a Windows laptop. The network you want to connect to does not appear in the list of available networks. What should you do to connect to the network?",
+    "explanation": "If the SSID broadcast is suppressed, you must manually input the network's SSID and security settings to connect to it. Restarting the laptop will not make a hidden SSID appear in the list of available networks. Hidden networks require manual configuration. The firewall does not affect the visibility of wireless networks. Disabling it is unnecessary and could compromise security. The Ethernet adapter is used for wired connections, not wireless ones. Adjusting its settings will not help with connecting to a wireless network.",
+    "options": [
+      "Change the Ethernet adapter's settings in Device Manager.",
+      "Restart the laptop to refresh the list of available networks.",
+      "Manually input the network's SSID and security settings.",
+      "Disable the Windows Defender Firewall to allow the connection."
+    ],
+    "correctAnswer": [
+      "Manually input the network's SSID and security settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it advisable to set a network profile type to \"Private\" in Windows Defender Firewall?",
+    "explanation": "Setting a network profile type to \"Private\" is advisable when connecting to a trusted network. This allows the PC to be discoverable and enables features like folder and printer sharing. The \"Public\" profile type, not \"Private,\" is used to ensure the PC is not discoverable. The \"Private\" profile is specifically designed for trusted networks where discoverability is allowed. Blocking all traffic is not the purpose of the \"Private\" profile. The \"Private\" profile allows discoverability and sharing, which would not be possible if all traffic were blocked. Group Policy is only relevant for the \"Domain\" profile type. The \"Private\" profile is manually configured by the user and is not tied to Group Policy.",
+    "options": [
+      "To block all incoming and outgoing traffic for maximum security.",
+      "To allow the PC to be discoverable and enable sharing on trusted networks.",
+      "To ensure the PC is not discoverable on the network.",
+      "To allow the firewall policy to be configured via Group Policy."
+    ],
+    "correctAnswer": [
+      "To allow the PC to be discoverable and enable sharing on trusted networks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How do proxy settings influence the way a Windows device connects to the internet?",
+    "explanation": "Proxy settings are specifically designed to route a device's internet traffic through a proxy server. This intermediary server can provide additional functionality, such as filtering content, caching frequently accessed data, or enhancing security by masking the device's IP address. Proxy settings do not bypass security measures. In fact, they are often used to enhance security by filtering traffic and providing controlled access to the internet. Assigning a static IP address is part of network adapter configuration, not proxy settings. Proxy settings involve routing traffic through an intermediary server, not assigning IP addresses. Connecting to wireless networks is managed through Wi-Fi settings and network adapter configurations, not proxy settings. Proxy settings deal with how internet traffic is routed, not how the device connects to a network.",
+    "options": [
+      "Proxy settings enable the device to connect to the internet through an intermediary server, which can filter, cache, or secure network traffic.",
+      "Proxy settings are used to assign a static IP address to the device for direct internet access.",
+      "Proxy settings allow the device to bypass all network security measures for faster internet access.",
+      "Proxy settings configure the device to automatically connect to the strongest available wireless network."
+    ],
+    "correctAnswer": [
+      "Proxy settings enable the device to connect to the internet through an intermediary server, which can filter, cache, or secure network traffic."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What happens when a network is set as \"Public\" in Windows Defender Firewall?",
+    "explanation": "When a network is set as \"Public\" in Windows Defender Firewall, the system applies strict security settings. This includes blocking all access and making the host undiscoverable to other devices on the network. Discoverability and sharing are only enabled when the network is set to \"Private,\" not \"Public.\" A \"Public\" network profile is designed for untrusted networks and disables these features for security. Group Policy is only applicable when the computer is joined to a domain. The \"Domain\" profile is configured via Group Policy, not the \"Public\" profile. There is no automatic switching of network profiles normally provided. The network profile type must be manually set by the user or administrator.",
+    "options": [
+      "Windows Firewall blocks all access and makes the host undiscoverable.",
+      "The PC is discoverable and can be used for folder or printer sharing.",
+      "The firewall policy is configured via Group Policy.",
+      "The network is automatically set to Private after a certain period."
+    ],
+    "correctAnswer": [
+      "Windows Firewall blocks all access and makes the host undiscoverable."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a VPN connection issue for a remote employee. The employee reports they cannot connect to the company's VPN server. Upon investigation, you find that the VPN settings in Windows are correctly configured with the server address and login credentials. However, the connection still fails. Which of the following is the MOST likely cause of the issue?",
+    "explanation": "Even if the VPN settings are correctly configured, the connection can fail if the firewall is blocking the VPN traffic. Firewalls can sometimes block specific ports or protocols required for VPN connections, such as PPTP, L2TP, or OpenVPN. Adjusting the firewall settings to allow VPN traffic can resolve this issue. The 802.11 standard pertains to wireless network connections, not VPNs. VPN connections can be established over any network connection (wired or wireless) as long as the network is functional. VPN connections do not require a static IP address. Most VPNs work seamlessly with dynamically assigned IP addresses via DHCP. VPN servers do not broadcast SSIDs. SSIDs are used for identifying wireless networks, not VPN servers. The connection issue is unrelated to SSID broadcasting.",
+    "options": [
+      "The employee's firewall settings are blocking the VPN connection.",
+      "The employee's wireless adapter does not support the 802.11 standard required for VPN connections.",
+      "The VPN server address is not broadcasting its SSID, preventing the connection.",
+      "The employee's IP address is not set to static, which is required for VPN connections."
+    ],
+    "correctAnswer": [
+      "The employee's firewall settings are blocking the VPN connection."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates the correct application of an IPv4 subnet mask to distinguish between the network and host portions of an IP address?",
+    "explanation": "The subnet mask 255.255.255.0 (or /24 in prefix notation) indicates that the first 24 bits of the IP address represent the network portion (192.168.1.0), while the last 8 bits represent the host portion (.100). This is a standard and valid configuration for distinguishing between the network and host portions of an IPv4 address. The subnet mask 255.0.0.0 (or /8 in prefix notation) would indicate that the network portion is only the first 8 bits (192.0.0.0), not 192.168.1.0. This would place the IP address 192.168.1.100 in a much larger network range, which is not the intended configuration in this scenario. The subnet mask 255.255.255.255 (or /32 in prefix notation) indicates that all 32 bits of the IP address are used for the host portion, leaving no bits for the network portion. This configuration is typically used for a single device (e.g., a loopback address) and does not allow multiple hosts to communicate on the same network. The subnet mask 0.0.0.0 is not a valid configuration for distinguishing the network and host portions of an IP address. It essentially means no bits are allocated for the network portion, which is nonsensical in practical networking scenarios.",
+    "options": [
+      "Using the subnet mask 255.0.0.0 to assign the IP address 192.168.1.100 to a host on the network 192.168.1.0.",
+      "Configuring the subnet mask 255.255.255.255 to allow multiple hosts to communicate on the same network.",
+      "Applying the subnet mask 0.0.0.0 to the IP address 192.168.1.100 to indicate that the entire address is the host portion.",
+      "Assigning the subnet mask 255.255.255.0 to the IP address 192.168.1.100 to indicate that the network portion is 192.168.1.0 and the host portion is .100."
+    ],
+    "correctAnswer": [
+      "Assigning the subnet mask 255.255.255.0 to the IP address 192.168.1.100 to indicate that the network portion is 192.168.1.0 and the host portion is .100."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows network location would you enable when you connect to a network at a hotel?",
+    "explanation": "The Public network location is designed for use on unknown or public networks (for example, a coffee shop or other public Wi-Fi network). The Public network location has the characteristics listed below. Network discovery is disabled. This means that devices on the network are not able to see each other and communicate. Network sharing, such as for printers and files, is disabled. The Windows Firewall configuration is changed to block almost all inbound and most outbound communications. For applications to be able to communicate, they need to be manually allowed through. The Private network location is used on a trusted network. You should not use this option for a public network, such as one at a hotel. The Work network location is no longer used by Windows. The Domain network location is only used on a device that is connected to an Active Directory network. The network administrator configures these settings.",
+    "options": [
+      "Public",
+      "Private",
+      "Domain",
+      "Work"
+    ],
+    "correctAnswer": [
+      "Public"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are assisting a colleague in connecting their Windows laptop to the office Wi-Fi network. The network's SSID broadcast is suppressed for security reasons. What steps should you take to establish the connection?",
+    "explanation": "When the SSID broadcast is suppressed, the network will not appear in the list of available networks. To connect, you must manually input the network details, including the SSID and security credentials, through the \"Manage known networks\" section in the \"Network & Internet\" settings. If the SSID broadcast is suppressed, the network will not appear in the list of available networks. This step only works when the SSID is being broadcast. Configuring the wireless adapter to support the 802.11 standard is a hardware-level adjustment. While it ensures compatibility, it does not address the issue of connecting to a hidden network. Windows Defender Firewall settings are not related to connecting to a hidden network. The issue lies in the network's visibility, not the firewall blocking the connection.",
+    "options": [
+      "Select the network status icon in the notification area and choose the network from the list of available networks.",
+      "Open Device Manager, locate the wireless adapter, and configure the adapter to support the 802.11 standard.",
+      "Adjust the firewall settings in Windows Defender to allow connections to hidden networks.",
+      "Open the \"Network & Internet\" settings, navigate to \"Wi-Fi,\" select \"Manage known networks,\" and manually add the network details."
+    ],
+    "correctAnswer": [
+      "Open the \"Network & Internet\" settings, navigate to \"Wi-Fi,\" select \"Manage known networks,\" and manually add the network details."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A desktop technician is setting up a new PC on a local network and is trying to install software as a part of the setup process. They try to access a network share via a UNC path of \\\\fileserv01\\Setup\\Apps and get a message that the location cannot be reached. They ping the file server by IP and get a reply. What network configuration on the PC should be prioritized for investigation?",
+    "explanation": "Domain Name System (DNS) would be the first thing to check. If a network resource does not seem to be reachable by hostname (fileserv01) but can be reached by pinging the IP, the PC cannot seem to resolve the hostname, which could indicate a problem with DNS settings. Dynamic Host Configuration Protocol (DHCP) is used to automatically assign IP addressing information to hosts that have not been configured manually. In this case the PC has an IP address, as it is able to ping another resource. A Virtual Private Network (VPN) is a secure tunnel created between two endpoints connected via an unsecured transport network (typically the Internet). This is unlikely to be the issue, as the PC is being set up on a local network and not a remote site. Network Interface Card (NIC) is an adapter card that provides one or more Ethernet ports for connecting hosts to a network so that they can exchange data over a link. This seems to be working, as the PC is able to ping another network resource.",
+    "options": [
+      "VPN",
+      "DNS",
+      "DHCP",
+      "NIC"
+    ],
+    "correctAnswer": [
+      "DNS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of configuring proxy settings in Windows networking?",
+    "explanation": "Proxy settings are used to configure a system to route its network traffic through a proxy server. This server acts as an intermediary between the client and the internet, providing additional security, caching, and filtering capabilities. This is the primary purpose of proxy settings. Proxy settings involve using an intermediary server, not establishing a direct connection. Configuring the IP address and subnet mask is part of IP addressing and network adapter configuration, not proxy settings. These are separate networking concepts. Wireless network connections are established through Wi-Fi settings and network adapter configurations, not proxy settings. Proxy settings are unrelated to enabling wireless connectivity.",
+    "options": [
+      "To enable wireless network connections on a Windows device.",
+      "To establish a direct connection to the internet without any intermediaries.",
+      "To configure the IP address and subnet mask for a network adapter.",
+      "To route network traffic through an intermediary server for security, caching, or filtering purposes."
+    ],
+    "correctAnswer": [
+      "To route network traffic through an intermediary server for security, caching, or filtering purposes."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows network location enables network discovery and allows files and printers to be easily shared?",
+    "explanation": "The Private network location is designed for use on networks where all other users and devices are known and trusted. The Private network location has the characteristics listed below. Network discovery is enabled. This means that other computers and devices on the network are able to see and connect to each other. Files and printers can be easily shared between connected devices. Windows Firewall is automatically configured to allow certain types of network communication through. The Public network location disables network discovery and does not allow the sharing of files and printers. The Domain network location is only used on a device that is connected to an Active Directory network. The network administrator configures these settings. The Work network location is no longer used by Windows.",
+    "options": [
+      "Work",
+      "Private",
+      "Public",
+      "Domain"
+    ],
+    "correctAnswer": [
+      "Private"
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "1202-TKT-001",
+    "topic": "Ticketing Systems",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "When creating a new help desk ticket in a ticketing system, which basic information is typically required during the initial data collection phase? (Select 3 answers)",
+    "explanation": "A new ticket collects user information, device information and a problem description. Escalation level and resolution date come later.",
+    "options": [
+      "User information",
+      "Expected resolution date",
+      "Device information",
+      "Escalation levels required",
+      "Problem description"
+    ],
+    "correctAnswer": [
+      "User information",
+      "Device information",
+      "Problem description"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-TKT-002",
+    "topic": "Ticketing Systems",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is logging a new support ticket. Which item is primarily used to ensure that future reporting can track the frequency of specific, recurring problems?",
+    "explanation": "The category groups tickets by problem type, so reports can track how often each recurs.",
+    "options": [
+      "Issue description",
+      "Category",
+      "Severity level of the issue",
+      "Escalation level"
+    ],
+    "correctAnswer": [
+      "Category"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-TKT-003",
+    "topic": "Ticketing Systems",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A support ticket regarding a system memory failure has been moved from Level 1 to a Level 2 hardware specialist. This action is documented using which specific ticketing system field?",
+    "explanation": "Moving a ticket to a higher support tier is recorded in the escalation level field.",
+    "options": [
+      "Issue description",
+      "Ticket status",
+      "Resolution summary",
+      "Escalation level"
+    ],
+    "correctAnswer": [
+      "Escalation level"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-TKT-004",
+    "topic": "Ticketing Systems",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A desktop technician is updating a support ticket with the steps performed to troubleshoot a network printer. Which field should contain a factual, concise summary of these steps?",
+    "explanation": "Progress notes record the troubleshooting steps performed so far.",
+    "options": [
+      "Issue description",
+      "Progress notes",
+      "Resolution summary",
+      "Escalation level"
+    ],
+    "correctAnswer": [
+      "Progress notes"
+    ],
+    "origin": "ExamCompass"
+  }
+]

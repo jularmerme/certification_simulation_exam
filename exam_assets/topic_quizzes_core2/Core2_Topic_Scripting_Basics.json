@@ -1,0 +1,363 @@
+[
+  {
+    "id": "1202-SCR-001",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of file extension would be found on a script file that runs a sequence of DOS commands in Windows Command Prompt?",
+    "explanation": ".bat is a batch file.",
+    "options": [
+      ".bat",
+      ".ps1",
+      ".sh",
+      ".vbs"
+    ],
+    "correctAnswer": [
+      ".bat"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-002",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which file extension is used for scripts executed by the PowerShell interpreter on Windows systems?",
+    "explanation": ".ps1 is a PowerShell script.",
+    "options": [
+      ".vbs",
+      ".py",
+      ".bat",
+      ".ps1"
+    ],
+    "correctAnswer": [
+      ".ps1"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-003",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which scripting language is associated with the .vbs file extension?",
+    "explanation": ".vbs is Visual Basic Scripting Edition (VBScript).",
+    "options": [
+      "JavaScript",
+      "Python",
+      "Visual Basic Scripting Edition",
+      "PowerShell"
+    ],
+    "correctAnswer": [
+      "Visual Basic Scripting Edition"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-004",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to create a logon script that displays a graphical (popup) welcome message for domain users on legacy Windows workstations. Which type of script file should be used?",
+    "explanation": "VBScript (.vbs) can display graphical message boxes. Batch files can't.",
+    "options": [
+      ".cmd",
+      ".bat",
+      ".sh",
+      ".vbs"
+    ],
+    "correctAnswer": [
+      ".vbs"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-005",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the standard file extension for shell scripts executed on Unix-like systems such as Linux and macOS?",
+    "explanation": ".sh is the shell script extension.",
+    "options": [
+      ".py",
+      ".js",
+      ".bat",
+      ".sh"
+    ],
+    "correctAnswer": [
+      ".sh"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-006",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of script file is used to control interactive elements on web pages in modern browsers?",
+    "explanation": ".js is JavaScript, which runs in the browser.",
+    "options": [
+      ".css",
+      ".php",
+      ".js",
+      ".vbs"
+    ],
+    "correctAnswer": [
+      ".js"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-007",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a filename extension associated with a cross-platform, general-purpose programming language?",
+    "explanation": ".py is Python, which is cross-platform and general-purpose.",
+    "options": [
+      ".vbs",
+      ".py",
+      ".ps1",
+      ".bat"
+    ],
+    "correctAnswer": [
+      ".py"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-008",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows technician is tasked with ensuring that temporary files and folders are deleted from all workstations on a specific time-based schedule. What should the technician do to provide basic automation for this task?",
+    "explanation": "A scheduled script is the basic automation approach for a time-based task.",
+    "options": [
+      "Modify a registry key to automatically purge temporary data",
+      "Configure Group Policy to delete temporary data at user logoff",
+      "Implement a script to run the deletion task on schedule",
+      "Use Disk Cleanup's built-in settings to remove temporary data"
+    ],
+    "correctAnswer": [
+      "Implement a script to run the deletion task on schedule"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-009",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which file extension is used for scripts that are the current industry standard for automating administrative tasks, such as system restarts, in a modern Windows environment?",
+    "explanation": "PowerShell (.ps1) is the modern standard for Windows administrative automation.",
+    "options": [
+      ".bat",
+      ".vbs",
+      ".cmd",
+      ".ps1"
+    ],
+    "correctAnswer": [
+      ".ps1"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-010",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician needs to ensure that all employees in the Finance department have a specific shared folder mapped to the Z: drive every time they log into their Windows workstations. Which of the following options allows the technician to achieve this goal?",
+    "explanation": "A login script that runs net use maps the drive at every user login. net share creates shares rather than mapping them.",
+    "options": [
+      "Write a startup script that maps the drive at system boot",
+      "Configure a script that uses a net share command",
+      "Use a shutdown script to remap the drive before the system powers off",
+      "Create a login script that runs a net use command"
+    ],
+    "correctAnswer": [
+      "Create a login script that runs a net use command"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-011",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "What are the primary benefits of using scripts to install applications in enterprise environments? (Select 3 answers)",
+    "explanation": "Scripts give consistent configuration, efficient and scalable deployment and fewer manual errors. They don't bypass administrator privileges.",
+    "options": [
+      "Ensuring consistent software configuration across multiple systems",
+      "Reducing the time required to install software on a single workstation",
+      "Improving efficiency and scalability of software deployment",
+      "Bypassing the requirement for administrative privileges on target systems",
+      "Minimizing errors that occur during manual software deployment"
+    ],
+    "correctAnswer": [
+      "Ensuring consistent software configuration across multiple systems",
+      "Improving efficiency and scalability of software deployment",
+      "Minimizing errors that occur during manual software deployment"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-012",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which advantages does scripting provide when used for backups? (Select 3 answers)",
+    "explanation": "Scripting reduces human error, makes backups consistent and allows automated off-hours scheduling. It doesn't reduce storage or resource usage.",
+    "options": [
+      "Minimizing the risk of human error during repetitive tasks",
+      "Reducing the overall storage space required for backups",
+      "Ensuring consistent and standardized backup execution",
+      "Improving efficiency through automated off-hours scheduling",
+      "Reducing CPU and memory usage during the backup process"
+    ],
+    "correctAnswer": [
+      "Minimizing the risk of human error during repetitive tasks",
+      "Ensuring consistent and standardized backup execution",
+      "Improving efficiency through automated off-hours scheduling"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-013",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security analyst uses a script to pull a list of all installed software from every computer in the accounting department. This is an example of which scripting use case?",
+    "explanation": "Collecting data from many computers is information gathering.",
+    "options": [
+      "Running software compliance checks",
+      "Conducting vulnerability scanning",
+      "Gathering of information/data",
+      "Monitoring application performance"
+    ],
+    "correctAnswer": [
+      "Gathering of information/data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-014",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator uses a script to remotely trigger the download and installation of the latest firmware on several network appliances. Which of the answers listed below best describes the primary function of this script?",
+    "explanation": "The script starts (initiates) the update process on the devices.",
+    "options": [
+      "Update propagation",
+      "Update initiation",
+      "Update provisioning",
+      "Update enforcement"
+    ],
+    "correctAnswer": [
+      "Update initiation"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-015",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Primary countermeasures against the unintentional introduction of malware via scripting include verifying the source code and testing the script's behavior in a sandbox or lab environment prior to production deployment.",
+    "explanation": "True. Verify the code and test it in a sandbox before production.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-016",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A script is deployed to enforce a standardized corporate desktop background across the company's workstations. Post-execution, users report that certain applications no longer launch correctly. Which type of risk associated with scripting does this scenario represent?",
+    "explanation": "The script changed system settings it wasn't meant to, which is inadvertent changes to system settings.",
+    "options": [
+      "Unintentional introduction of malware",
+      "Increased system resource usage",
+      "Software compatibility errors",
+      "Inadvertent changes to system settings"
+    ],
+    "correctAnswer": [
+      "Inadvertent changes to system settings"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-SCR-017",
+    "topic": "Scripting Basics",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.8",
+    "module": "22.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows user runs a browser automation script written in JavaScript to scrape data from multiple web pages. After several minutes, the browser becomes completely unresponsive and must be terminated via Task Manager. Which of the following answers best describes a scripting-related risk presented in this scenario?",
+    "explanation": "A script that hangs or crashes the browser mishandles system resources (browser or system crashes due to mishandling of resources).",
+    "options": [
+      "Application timeout from low bandwidth",
+      "Unintentional introduction of malware",
+      "Mishandling of system resources",
+      "Incompatible JavaScript runtime version"
+    ],
+    "correctAnswer": [
+      "Mishandling of system resources"
+    ],
+    "origin": "ExamCompass"
+  }
+]

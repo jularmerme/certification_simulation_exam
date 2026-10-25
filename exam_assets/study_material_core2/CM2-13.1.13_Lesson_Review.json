@@ -1,0 +1,302 @@
+[
+  {
+    "id": "CM2-13.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a specific application is not functioning correctly due to a misconfigured setting in the Windows Registry. As an IT professional, how should you evaluate the situation and proceed using the Registry Editor?",
+    "explanation": "Before making any changes to the Windows Registry, it is critical to back up the registry to prevent accidental damage. Once backed up, you can locate the registry key related to the application and carefully modify the misconfigured value. This approach ensures that the issue is resolved while minimizing risks, aligning with best practices for using the Registry Editor. Deleting the entire registry key can cause the application to malfunction further or even fail to start. It is a risky action that should only be taken as a last resort and not without a backup. Reinstalling the application may not resolve the issue if the misconfigured registry setting persists. Evaluating and addressing the specific registry issue is often a more direct and effective solution. Disabling all registry keys related to the application would likely render the application unusable. This approach does not address the root cause of the problem and is not a recommended troubleshooting step.",
+    "options": [
+      "Use the Registry Editor to disable all registry keys related to the application to prevent further issues.",
+      "Reinstall the application without using the Registry Editor, as modifying the registry is unnecessary.",
+      "Delete the entire registry key associated with the application to reset its settings.",
+      "Back up the registry, locate the specific registry key, and carefully modify the misconfigured value."
+    ],
+    "correctAnswer": [
+      "Back up the registry, locate the specific registry key, and carefully modify the misconfigured value."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Group Policy Editor in Windows?",
+    "explanation": "The Group Policy Editor is specifically designed to allow administrators to configure and manage settings for users and computers in a Windows environment. It provides centralized control over security settings, software installations, and other administrative policies. Creating and managing disk partitions is a function of the Disk Management Console, not the Group Policy Editor. The Disk Management Console is used for tasks like initializing disks, partitioning, and formatting. Updating and troubleshooting device drivers is the role of the Device Manager, not the Group Policy Editor. Device Manager is used to manage hardware devices and their associated drivers. Scheduling automated tasks is the purpose of the Task Scheduler, not the Group Policy Editor. Task Scheduler is used to automate tasks like running scripts or programs at specific times or events.",
+    "options": [
+      "To manage and configure user and computer settings in a Windows environment.",
+      "To update and troubleshoot device drivers in Device Manager.",
+      "To create and manage disk partitions for storage optimization.",
+      "To schedule automated tasks."
+    ],
+    "correctAnswer": [
+      "To manage and configure user and computer settings in a Windows environment."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator notices that the disk optimizer task scheduled by the Task Scheduler has not been running successfully. What would be the MOST effective course of action to evaluate and resolve the issue?",
+    "explanation": "It is important to regularly check for issues with tasks scheduled by the Task Scheduler, such as unsuccessful runs of the disk optimizer. Manually running the tool allows the administrator to evaluate its performance and identify any errors or issues that may be preventing the task from completing successfully. The Disk Management Console is unrelated to the Task Scheduler or the disk optimizer task. The Disk Management Console is used for tasks like partitioning and formatting disks, not for scheduling or running optimization tasks. Disabling the Task Scheduler would prevent all automated tasks, including disk optimization, from running. The importance of the Task Scheduler in automating maintenance tasks makes this an ineffective solution. Updating storage device drivers is not directly related to resolving issues with the Task Scheduler or the disk optimizer task. While driver updates can improve hardware performance, they are not a solution for unsuccessful scheduled tasks.",
+    "options": [
+      "Reinstall the Disk Management Console to ensure proper functionality.",
+      "Update the drivers for the storage devices using the Device Manager.",
+      "Disable the Task Scheduler and rely on manual optimization instead.",
+      "Manually run the disk optimizer tool and monitor its performance for errors."
+    ],
+    "correctAnswer": [
+      "Manually run the disk optimizer tool and monitor its performance for errors."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows system is experiencing frequent crashes after a recent software installation. Upon investigation, you suspect the software has made incorrect changes to the Windows Registry. How should you analyze and address the issue using the Registry Editor?",
+    "explanation": "The correct approach is to analyze the issue by comparing the current registry settings with a backup or baseline. This allows you to identify any discrepancies caused by the software installation. Once identified, you can restore or modify the affected keys to resolve the issue. This method demonstrates analytical thinking by isolating the root cause and applying a targeted solution. Deleting all registry keys associated with the software may cause additional issues, such as making the software unusable or creating orphaned entries. It is not an analytical approach and does not address the specific problem. Disabling all startup programs is a broad action that does not specifically address the registry issue. It may temporarily stop the crashes but does not resolve the underlying problem in the registry. Reinstalling the operating system is an extreme measure that should only be used as a last resort. It does not involve analyzing the issue and is not a practical solution for a registry-related problem caused by a single software installation.",
+    "options": [
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys.",
+      "Use the Registry Editor to disable all startup programs to prevent the software from running and causing crashes.",
+      "Reinstall the operating system to ensure all registry settings are reset to their default values.",
+      "Delete all registry keys associated with the recently installed software to eliminate any potential conflicts."
+    ],
+    "correctAnswer": [
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Disk Management Console in Windows?",
+    "explanation": "The Disk Management Console is specifically designed to manage the disk subsystem of a computer. It allows users to view and manage all fixed and removable disks, including tasks such as initializing disks, partitioning, formatting, and managing volumes. Managing user accounts and security groups is done through the Local Users and Groups Console, not the Disk Management Console. The Disk Management Console focuses on storage devices and their configurations. Troubleshooting and updating device drivers is the primary function of the Device Manager, not the Disk Management Console. The Disk Management Console is unrelated to device driver management. Configuring and enforcing group policies is the role of the Group Policy Editor, not the Disk Management Console. The Disk Management Console deals with storage devices and their logical organization.",
+    "options": [
+      "To manage all fixed and removable disks attached to the system.",
+      "To troubleshoot and update device drivers.",
+      "To configure and enforce group policies across the system.",
+      "To manage and edit user accounts and security groups."
+    ],
+    "correctAnswer": [
+      "To manage all fixed and removable disks attached to the system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are configuring a new hard drive on a Windows system using the Disk Management Console. The drive appears as \"Unallocated\" in the console. Your goal is to make the drive usable for storing files. What is the first step you should take?",
+    "explanation": "The first step when configuring a new, unallocated drive is to initialize it. This process involves selecting a partition style, either MBR or GPT. Initialization prepares the drive for partitioning and formatting, making it usable for storing files. Formatting can only be done after the drive has been initialized and partitioned. Attempting to format an unallocated drive without initializing it first is not possible, as the system won't recognize the drive for formatting. Creating user accounts and assigning permissions is unrelated to making a new drive usable. These tasks are performed after the drive is configured and formatted, and they are managed through the Local Users and Groups Console, not the Disk Management Console. The Disk Cleanup tool is used to free up space on existing drives by deleting unnecessary files. It has no role in preparing a new, unallocated drive for use.",
+    "options": [
+      "Create a new user account and assign permissions to the drive.",
+      "Format the drive with the NTFS file system.",
+      "Run the Disk Cleanup tool to prepare the drive for use.",
+      "Initialize the drive using either MBR or GPT partition style."
+    ],
+    "correctAnswer": [
+      "Initialize the drive using either MBR or GPT partition style."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user starts experiencing a blue screen of death (BSoD) on start-up. Where should the user check for changes after getting back on the computer?",
+    "explanation": "Most blue screens of death (BSoD), especially those that occur during startup, are caused by faulty hardware or hardware drivers. Device Manager (devmgmt.msc) allows users to view and edit the properties of installed hardware. Windows Subsystem for Linux (WSL) allows the installation of a Linux distribution and the use of Linux applications. This is different from the Windows management utilities. The Task Scheduler (taskschd.msc) runs commands and scripts automatically. Many of Windows's processes come with predefined schedules. The Services console (services.msc) starts, stops, and pauses processes running in the background.",
+    "options": [
+      "taskschd.msc",
+      "WSL",
+      "devmgmt.msc",
+      "services.msc"
+    ],
+    "correctAnswer": [
+      "devmgmt.msc"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A helpdesk operator wants to use a set of tools that will help them during troubleshooting. What can help the operator customize their toolset?",
+    "explanation": "The mmc command allows the operator to perform MMC customization and create a console with a personal selection of snap-ins. The console can be saved to the Administrative Tools folder as a file with an MSC extension. The Group Policy Editor (gpedit.msc) provides a more robust means of configuring many of the Windows settings than editing the registry directly. The Local Users and Groups (lusrmgr.msc) console provides an advanced interface for creating, modifying, disabling, and deleting user accounts. The Task Scheduler (taskschd.msc) runs commands and scripts automatically. Many of Windows's processes come with predefined schedules.",
+    "options": [
+      "gpedit.msc",
+      "lusrmgr.msc",
+      "taskschd.msc",
+      "mmc"
+    ],
+    "correctAnswer": [
+      "mmc"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with securing online transactions for your organization. Which of the following scenarios BEST demonstrates the appropriate use of the Certificate Manager to evaluate and ensure the security of digital certificates?",
+    "explanation": "The Certificate Manager is specifically designed to manage and evaluate digital certificates. Verifying the validity and trustworthiness of a certificate ensures that it is issued by a trusted Certificate Authority (CA) and has not been tampered with, which is critical for securing online transactions. The Certificate Manager does not have a feature to schedule updates for certificates. Certificates are typically updated or renewed manually or through automated processes managed by other systems, not directly by the Certificate Manager. Optimizing storage device performance is not a function of the Certificate Manager. Tasks like defragmentation or running TRIM operations are handled by tools such as the Disk Management Console or the Defragment and Optimize Drives tool. Creating user accounts and assigning them to security groups is the role of the Local Users and Groups Console, not the Certificate Manager. The Certificate Manager is focused solely on managing digital certificates, not user accounts or permissions.",
+    "options": [
+      "Using the Certificate Manager to verify the validity and trustworthiness of a digital certificate before installing it",
+      "Using the Certificate Manager to optimize the performance of the system's storage devices",
+      "Using the Certificate Manager to create new user accounts and assign them to security groups",
+      "Using the Certificate Manager to schedule regular updates for all installed certificates"
+    ],
+    "correctAnswer": [
+      "Using the Certificate Manager to verify the validity and trustworthiness of a digital certificate before installing it"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Certificate Manager in Windows?",
+    "explanation": "The Certificate Manager is specifically designed to handle digital certificates, which are used to secure online communications and transactions. It allows users to view, import, export, and manage certificates for various purposes, such as encrypting data or verifying identities. Managing and scheduling automated tasks is the role of the Task Scheduler, not the Certificate Manager. The Task Scheduler is used to automate repetitive tasks, such as running scripts or programs at specific times. Monitoring and optimizing disk performance is the function of tools like the Disk Management Console or the Defragment and Optimize Drives tool. These tools focus on disk-related tasks, not certificate management. Configuring and managing user accounts and security groups is the role of the Local Users and Groups Console. This tool is used to create, modify, and manage user accounts and their permissions, not digital certificates.",
+    "options": [
+      "To manage and schedule automated tasks on a computer.",
+      "To configure and manage user accounts and security groups.",
+      "To monitor and optimize disk performance.",
+      "To manage digital certificates for securing online transactions and communications."
+    ],
+    "correctAnswer": [
+      "To manage digital certificates for securing online transactions and communications."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with improving security settings across all employee workstations in a Windows environment. Which of the following scenarios best justifies the use of the Group Policy Editor?",
+    "explanation": "The Group Policy Editor is specifically designed to enforce security policies, such as password complexity, across multiple users and computers in a Windows environment. It allows administrators to evaluate and implement centralized security measures effectively. Expanding a disk partition is a task performed using the Disk Management Console, not the Group Policy Editor. The Group Policy Editor does not handle storage or disk-related tasks. Updating a device driver is a function of the Device Manager, not the Group Policy Editor. The Group Policy Editor is not used for hardware troubleshooting or driver updates. Defragmenting a hard drive is a task performed using the Disk Defragmenter or Optimize Drives tool, not the Group Policy Editor. The Group Policy Editor is not used for disk maintenance or performance optimization.",
+    "options": [
+      "You need to defragment a hard drive to improve system performance.",
+      "You need to configure a policy that enforces password complexity requirements for all users.",
+      "You need to expand an existing disk partition to optimize storage space.",
+      "You need to update a malfunctioning device driver to resolve hardware issues."
+    ],
+    "correctAnswer": [
+      "You need to configure a policy that enforces password complexity requirements for all users."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Disk Defragmenter tool on a hard disk drive (HDD)?",
+    "explanation": "The Disk Defragmenter tool is specifically designed to reorganize fragmented file data on an HDD into contiguous clusters. This process reduces the time the disk controller needs to seek across the disk to read a file, thereby improving read performance. TRIM operations are specific to SSDs (Solid State Drives), not HDDs. While the Disk Defragmenter tool can optimize SSDs by running TRIM operations, its primary purpose on HDDs is to defragment files, not perform TRIM. Identifying files safe for deletion is the function of the Disk Clean-up tool, not the Disk Defragmenter. Disk Clean-up helps free up space by removing temporary files, files in the Recycle Bin, and other unnecessary data. Repairing corrupted files is not the function of the Disk Defragmenter. Tools, like Check Disk (chkdsk) or third-party recovery software, are used to repair corrupted files or address physical disk damage. The Disk Defragmenter focuses on improving performance by reorganizing file data.",
+    "options": [
+      "Identify files safe for deletion to free up disk space.",
+      "Reorganize file data into contiguous clusters to improve read performance.",
+      "Repair corrupted files caused by physical damage to the disk.",
+      "Perform a TRIM operation to mark OS-deletable data as writable."
+    ],
+    "correctAnswer": [
+      "Reorganize file data into contiguous clusters to improve read performance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a new workstation for a department with multiple employees who need access to shared resources. Each employee requires different levels of access based on their role. Using the Local Users and Groups Console, what is the best way to configure access?",
+    "explanation": "The best practice is to create individual user accounts for each employee and assign them to security groups that reflect their roles. This approach ensures that access permissions are managed efficiently and securely while also maintaining accountability and auditability for each user's actions. Sharing a single account among multiple employees is a poor security practice. It eliminates accountability, as actions cannot be traced back to individual users, and it increases the risk of unauthorized access if the credentials are compromised. The Guest account is intended for temporary or minimal access and is not suitable for employees who require different levels of access based on their roles. Using the Administrator account for all employees is a significant security risk. It grants excessive privileges to users who may not need them, increasing the likelihood of accidental or malicious changes to the system. This approach violates the principle of least privilege.",
+    "options": [
+      "Create a single user account for the department and share the login credentials with all employees.",
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles.",
+      "Use the Administrator account for all employees to simplify access management.",
+      "Assign all employees to the Guest account to ensure limited access to the system."
+    ],
+    "correctAnswer": [
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Device manufacturers are constantly finding bugs, vulnerabilities, and better ways for their devices to communicate with the operating system. Because of this, which of the following is a best practice to perform before installing a new device?",
+    "explanation": "The best practice when installing device drivers is to obtain the latest driver from the manufacturer's website. Updating drivers only if there is a problem may result in unnecessary downtime later when a problem is discovered. As technicians learn through experience, the driver that's included on the installation disc may no longer work correctly due to changes in the hardware and/or operating system. Not all installation programs will check for the latest driver, so this is not the best practice.",
+    "options": [
+      "Use the driver included in the installation disc.",
+      "Obtain the latest driver from the manufacturer's website, but only if there's a problem.",
+      "Let the installation program find the latest driver and download it during installation.",
+      "Obtain the latest driver from the manufacturer's website."
+    ],
+    "correctAnswer": [
+      "Obtain the latest driver from the manufacturer's website."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator is evaluating disk maintenance tools to improve the performance of a workstation. The workstation has an SSD as its primary storage device and is experiencing slow performance. Which of the following actions would be the most appropriate to optimize the SSD's performance?",
+    "explanation": "The Optimize Drives tool (formerly known as Disk Defragmenter) performs TRIM operations on SSDs. TRIM allows the SSD controller to mark OS-deletable data as writable, which helps maintain the SSD's performance and longevity. This is the most appropriate action for optimizing an SSD. Defragmenting an SSD is unnecessary and can actually reduce its lifespan. SSDs do not rely on physical spinning disks, so file fragmentation does not impact their performance. Instead, TRIM operations are the correct optimization method for SSDs. While freeing up disk space can improve performance in some cases, it does not directly address the specific performance optimization needs of an SSD. TRIM operations are more effective for maintaining SSD performance. Creating additional partitions does not optimize the performance of an SSD. Repartitioning is typically done for organizational purposes or to install multiple operating systems, but it does not improve the SSD's speed or efficiency.",
+    "options": [
+      "Run the Optimize Drives tool to perform a TRIM operation.",
+      "Use the Disk Defragmenter tool to reorganize file data into contiguous clusters.",
+      "Run the Disk Clean-up tool to delete temporary files and free up disk space.",
+      "Repartition the SSD to create additional logical partitions."
+    ],
+    "correctAnswer": [
+      "Run the Optimize Drives tool to perform a TRIM operation."
+    ],
+    "origin": "CertMaster"
+  }
+]

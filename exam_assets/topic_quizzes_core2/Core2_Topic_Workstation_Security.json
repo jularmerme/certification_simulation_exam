@@ -1,0 +1,502 @@
+[
+  {
+    "id": "1202-WKS-001",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which Microsoft Windows feature(s) provide(s) data-at-rest encryption? (Select all that apply)",
+    "explanation": "BitLocker, BitLocker To Go and EFS are the Windows data-at-rest encryption features. FDE and SED are general terms or hardware, not Windows features.",
+    "options": [
+      "FDE",
+      "BitLocker",
+      "SED",
+      "BitLocker-To-Go",
+      "EFS"
+    ],
+    "correctAnswer": [
+      "BitLocker",
+      "BitLocker-To-Go",
+      "EFS"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-002",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "The two factors that are considered important for creating strong passwords are: (Select 2 answers)",
+    "explanation": "Length and complexity make a password strong.",
+    "options": [
+      "Password length",
+      "Minimum password age",
+      "Password history",
+      "Maximum password age",
+      "Password complexity"
+    ],
+    "correctAnswer": [
+      "Password length",
+      "Password complexity"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-003",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is configuring a new Windows image for an organization. A primary security requirement is to maximize protection against brute-force attacks on user accounts. Which password policy setting should be set to the highest practical value to meet this requirement?",
+    "explanation": "A longer minimum length greatly increases the work needed for a brute-force attack.",
+    "options": [
+      "Minimum password age",
+      "Password history",
+      "Minimum password length",
+      "Account lockout duration"
+    ],
+    "correctAnswer": [
+      "Minimum password length"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-004",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A strong password that meets the password complexity requirement should contain: (Select the best answer)",
+    "explanation": "Complexity means mixing characters from several groups, at least three, rather than using a single group.",
+    "options": [
+      "Uppercase letters (A-Z)",
+      "Digits (0-9)",
+      "Non-alphanumeric characters if permitted (e.g., !, @, #, $)",
+      "Lowercase letters (a-z)",
+      "A combination of characters from at least 3 character groups"
+    ],
+    "correctAnswer": [
+      "A combination of characters from at least 3 character groups"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-005",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A password history policy is typically configured to a high value (e.g., 24 passwords) to enforce which primary security consideration?",
+    "explanation": "Password history prevents reusing recent passwords, which enforces uniqueness.",
+    "options": [
+      "Complexity",
+      "Expiration",
+      "Length",
+      "Uniqueness"
+    ],
+    "correctAnswer": [
+      "Uniqueness"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-006",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following passwords is the most complex?",
+    "explanation": "G$L3tU8KwY@m mixes uppercase, lowercase, digits and symbols. The others lack one of these groups.",
+    "options": [
+      "T$7C52WL4#SA",
+      "GdL3tUa8wxYz",
+      "@TxB*L$nW@Xt",
+      "G$L3tU8KwY@m"
+    ],
+    "correctAnswer": [
+      "G$L3tU8KwY@m"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-007",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which password policy enforces a mandatory password change after a specific time?",
+    "explanation": "Password expiration forces a change after a set time (the maximum password age).",
+    "options": [
+      "Password history policy",
+      "Minimum password age policy",
+      "Password expiration policy",
+      "Password reuse policy"
+    ],
+    "correctAnswer": [
+      "Password expiration policy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-008",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The minimum password age policy setting determines the period of time that a password can be used before the system requires the user to change it.",
+    "explanation": "False. That describes maximum password age. Minimum age is how long a password must be kept before it can be changed.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-009",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The maximum password age policy setting determines the period of time that a password must be used before the user can change it.",
+    "explanation": "False. That describes minimum password age. Maximum age is how long before a change is required.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "False"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-010",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "BIOS/UEFI passwords improve the security of a computer host. These low-level passwords may, for example, prevent unauthorized users from proceeding when the computer is powered on (User password), or restrict the scope of changes a user can make in the BIOS/UEFI interface (Supervisor/Administrator password).",
+    "explanation": "True. BIOS/UEFI can use a user password and a supervisor password.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-011",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is working on a complex document and needs to step away from their workstation for a few minutes to attend a brief, unscheduled meeting. Which security best practice should the user employ to protect their data from unauthorized access while ensuring their open work remains immediately accessible upon return?",
+    "explanation": "A screensaver lock secures the session but keeps open work intact. Logging off would close it.",
+    "options": [
+      "Apply a privacy filter",
+      "Set the system to standby mode",
+      "Use a screensaver lock",
+      "Log off the system"
+    ],
+    "correctAnswer": [
+      "Use a screensaver lock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-012",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which security best practice most effectively reduces the risk of unauthorized access to the user's session and data when a workstation that is in use must be left unattended for an extended period of time?",
+    "explanation": "For extended absences, logging off ends the session completely.",
+    "options": [
+      "Log off when not in use",
+      "Use a screensaver lock",
+      "Set the system to standby mode",
+      "Apply a privacy filter"
+    ],
+    "correctAnswer": [
+      "Log off when not in use"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-013",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a physical security measure against laptop theft?",
+    "explanation": "A cable lock is the physical measure. The others are software controls.",
+    "options": [
+      "Geolocation",
+      "Tracking software",
+      "Cable lock",
+      "Remote wipe"
+    ],
+    "correctAnswer": [
+      "Cable lock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-014",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A sticky note with a password kept on sight in user's cubicle would be a violation of:",
+    "explanation": "A clean desk policy forbids leaving sensitive information such as passwords in view.",
+    "options": [
+      "Data labeling policy",
+      "Physical security policy",
+      "Clean desk policy",
+      "Acceptable use policy"
+    ],
+    "correctAnswer": [
+      "Clean desk policy"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-015",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following answers refers to an end-user software tool specifically designed to store and manage login credentials?",
+    "explanation": "A password manager is the end-user tool for storing and managing credentials.",
+    "options": [
+      "Credential Guard",
+      "Authenticator app",
+      "SSO service",
+      "Password manager"
+    ],
+    "correctAnswer": [
+      "Password manager"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-016",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The category of account management security best practices includes the practice of restricting user administrative privileges to operating systems and applications based on user duties. Operating systems simplify this process by introducing the concept of user groups equipped with different types of permissions, allowing system administrators to simultaneously manage permissions of multiple user accounts based on group membership.",
+    "explanation": "True. Restricting user permissions through groups is an account management best practice.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-017",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to an account management security measure that narrows down a user's computer access to specified hours?",
+    "explanation": "Login time restrictions limit when an account can sign in.",
+    "options": [
+      "Account lockout policy",
+      "Session timeout configuration",
+      "Login time restrictions",
+      "Just-in-time permissions"
+    ],
+    "correctAnswer": [
+      "Login time restrictions"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-018",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An auditor reports that several PCs allow anonymous users to log in. What should the administrator do first to correct this issue?",
+    "explanation": "Anonymous logins are allowed through the Guest account, so disable it first.",
+    "options": [
+      "Enable account lockout",
+      "Require multifactor authentication",
+      "Configure login time restrictions",
+      "Disable the guest account"
+    ],
+    "correctAnswer": [
+      "Disable the guest account"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-019",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An account lockout policy, which disables a user account after a configurable number of consecutive failed authentication attempts, is primarily applied to reduce the risk of:",
+    "explanation": "Lockout after repeated failures defeats brute-force password guessing.",
+    "options": [
+      "Credential stuffing",
+      "Password reuse",
+      "Unauthorized physical access",
+      "Brute-force attacks"
+    ],
+    "correctAnswer": [
+      "Brute-force attacks"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-020",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a recommended best practice for securing sensitive information on a workstation when temporarily unattended?",
+    "explanation": "A screen timeout lock automatically locks the workstation when it's left unattended.",
+    "options": [
+      "Login time restriction",
+      "Privacy filter",
+      "Screen timeout lock",
+      "Account lockout policy"
+    ],
+    "correctAnswer": [
+      "Screen timeout lock"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-021",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Setting account expiration dates is a security control primarily used for:",
+    "explanation": "Expiration dates make temporary accounts (contractors, interns) stop working automatically.",
+    "options": [
+      "Guest accounts",
+      "Shared user accounts",
+      "Temporary accounts",
+      "Service accounts"
+    ],
+    "correctAnswer": [
+      "Temporary accounts"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-022",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Changing the default administrator's user account and password is a security control that replaces factory-set credentials with unique, secure values to prevent unauthorized access to systems and devices. This practice prevents the reuse of well-known, vendor-supplied admin credentials that are publicly documented and easily found online.",
+    "explanation": "True. Default credentials are publicly known, so change them.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-023",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A USB stick containing a malicious script is inserted into a Windows workstation. Which security measure would prevent the automatic execution of malicious code from the newly inserted storage media?",
+    "explanation": "Disabling AutoRun stops code on removable media from running automatically. CompTIA lists 'Disable AutoRun' as the hardening step.",
+    "options": [
+      "Disable AutoPlay",
+      "Enable SmartScreen",
+      "Disable AutoRun",
+      "Enable AppLocker"
+    ],
+    "correctAnswer": [
+      "Disable AutoRun"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-WKS-024",
+    "topic": "Workstation Security",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A workstation is configured to automatically start remote desktop and print spooler services, even though neither is needed. Which best practice should be applied to reduce attack surface and improve performance?",
+    "explanation": "Disable unused services to reduce the attack surface and free resources.",
+    "options": [
+      "Block service ports in Windows Firewall",
+      "Set both services to Manual startup",
+      "Disable unused services",
+      "Stop unneeded processes in Task Manager"
+    ],
+    "correctAnswer": [
+      "Disable unused services"
+    ],
+    "origin": "ExamCompass"
+  }
+]

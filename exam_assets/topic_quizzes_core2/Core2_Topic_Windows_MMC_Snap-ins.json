@@ -1,0 +1,166 @@
+[
+  {
+    "id": "1202-MMC-001",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Event Viewer (eventvwr.msc) is a Windows administrative utility for monitoring system health and troubleshooting problems with applications, the OS, and hardware. Event Viewer allows browsing and managing event logs, of which the most common include Application, System, and Security logs. Application and System logs categorize events into Information, Warning, and Error types. Information events indicate normal system operations (such as service startups and successful completion of routine tasks), Warning events highlight non-critical issues (for example, low disk space or driver compatibility warnings), and Error events indicate serious problems (e.g., application failures or unexpected service interruptions). Security logs record audit events that report the success or failure of security-related actions.",
+    "explanation": "True. This accurately describes Event Viewer and its common logs.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-002",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following commands in Windows launches the standalone graphical utility used specifically for managing storage devices?",
+    "explanation": "diskmgmt.msc opens Disk Management, the graphical storage tool. diskpart is command-line, and devmgmt.msc is Device Manager.",
+    "options": [
+      "devmgmt.msc",
+      "diskpart.exe",
+      "compmgmt.msc",
+      "diskmgmt.msc"
+    ],
+    "correctAnswer": [
+      "diskmgmt.msc"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-003",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the answers listed below refers to a Windows administrative tool used to schedule the launch of programs or scripts at pre-defined times or after specified time intervals?",
+    "explanation": "taskschd.msc is Task Scheduler.",
+    "options": [
+      "taskmgr.exe",
+      "resmon.exe",
+      "taskschd.msc",
+      "perfmon.msc"
+    ],
+    "correctAnswer": [
+      "taskschd.msc"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-004",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Microsoft Windows OS feature allows users to view and manage installed hardware and device drivers?",
+    "explanation": "devmgmt.msc is Device Manager. appwiz.cpl is Programs and Features (software).",
+    "options": [
+      "msconfig.exe",
+      "devmgmt.msc",
+      "appwiz.cpl",
+      "compmgmt.msc"
+    ],
+    "correctAnswer": [
+      "devmgmt.msc"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-005",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows snap-in used to view, export, import, and delete digital certificates for the current user is called:",
+    "explanation": "certmgr.msc is Certificate Manager.",
+    "options": [
+      "lusrmgr.msc",
+      "secpol.msc",
+      "msconfig.exe",
+      "certmgr.msc"
+    ],
+    "correctAnswer": [
+      "certmgr.msc"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-006",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "In Microsoft Windows, Local Users and Groups (lusrmgr.msc) is an MMC snap-in for adding or removing users and managing group membership for users who have specific rights and permissions on a Windows system. The Local Users and Groups utility is not included in Home editions of Windows 10 and Windows 11.",
+    "explanation": "True. Local Users and Groups isn't available in Home editions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": [
+      "True"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-007",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following administrative tools in MS Windows is used to monitor (both in real time and through logged data) how running programs affect a computer's performance?",
+    "explanation": "Performance Monitor (perfmon) tracks performance counters in real time and logs them to a file for later review. The quiz writes it as perfmon.exe, and the exam objective lists perfmon.msc.",
+    "options": [
+      "resmon.exe",
+      "compmgmt.msc",
+      "perfmon.exe",
+      "taskmgr.exe"
+    ],
+    "correctAnswer": [
+      "perfmon.exe"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-MMC-008",
+    "topic": "Windows MMC Snap-ins",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the tools listed below allows administrators to configure policies that control system and user settings on a Windows computer?",
+    "explanation": "gpedit.msc is the Local Group Policy Editor.",
+    "options": [
+      "msconfig.exe",
+      "gpedit.msc",
+      "lusrmgr.msc",
+      "compmgmt.msc"
+    ],
+    "correctAnswer": [
+      "gpedit.msc"
+    ],
+    "origin": "ExamCompass"
+  }
+]

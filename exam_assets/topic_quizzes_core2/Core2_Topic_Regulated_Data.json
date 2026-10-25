@@ -1,0 +1,111 @@
+[
+  {
+    "id": "1202-REG-001",
+    "topic": "Regulated Data",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The purpose of PCI DSS is to provide protection for:",
+    "explanation": "PCI DSS protects credit cardholder data.",
+    "options": [
+      "Personal health information",
+      "Bank account credentials",
+      "Intellectual property and trade secrets",
+      "Credit cardholder data"
+    ],
+    "correctAnswer": [
+      "Credit cardholder data"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-REG-002",
+    "topic": "Regulated Data",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Examples of government-issued identifiers include: (Select all that apply)",
+    "explanation": "Driver's license, passport, taxpayer ID and Social Security numbers are government-issued. A medical record number is issued by a healthcare provider.",
+    "options": [
+      "Driver's license number",
+      "Passport number",
+      "Medical record number",
+      "Taxpayer identification number",
+      "Social security number"
+    ],
+    "correctAnswer": [
+      "Driver's license number",
+      "Passport number",
+      "Taxpayer identification number",
+      "Social security number"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-REG-003",
+    "topic": "Regulated Data",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following acronyms refers to any type of information pertaining to an individual that can be used to uniquely identify that person?",
+    "explanation": "Personally identifiable information (PII).",
+    "options": [
+      "PHI",
+      "UID",
+      "PII",
+      "SSN"
+    ],
+    "correctAnswer": [
+      "PII"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-REG-004",
+    "topic": "Regulated Data",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The US Health Insurance Portability and Accountability Act (HIPAA) provides privacy protection for: (Select best answer)",
+    "explanation": "HIPAA protects protected health information (PHI).",
+    "options": [
+      "PFI",
+      "PII",
+      "CUI",
+      "PHI"
+    ],
+    "correctAnswer": [
+      "PHI"
+    ],
+    "origin": "ExamCompass"
+  },
+  {
+    "id": "1202-REG-005",
+    "topic": "Regulated Data",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which type of policy defines the required timeframe for the preservation of regulated data prior to its permanent disposal?",
+    "explanation": "A data retention policy defines how long data must be kept before disposal.",
+    "options": [
+      "Data protection policy",
+      "Data classification policy",
+      "Data backup policy",
+      "Data retention policy"
+    ],
+    "correctAnswer": [
+      "Data retention policy"
+    ],
+    "origin": "ExamCompass"
+  }
+]
