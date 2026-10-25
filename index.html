@@ -192,6 +192,12 @@
           <p class="mode-card-desc">Focus on a specific course module</p>
           <div class="mode-card-meta" id="metaModule"></div>
         </div>
+        <div class="mode-card mode-card-wide hidden" id="modeTopic" onclick="openTopicPicker()">
+          <div class="mode-card-icon">🎯</div>
+          <h3>Practice by Topic</h3>
+          <p class="mode-card-desc">ExamCompass questions grouped by topic, with progress for each</p>
+          <div class="mode-card-meta" id="metaTopic"></div>
+        </div>
       </div>
 
       <!-- Domain sub-picker (hidden until Practice by Domain is chosen) -->
@@ -204,6 +210,12 @@
       <div id="modulePicker" class="hidden">
         <h2 class="section-h" id="modulePickerTitle">Choose a Study Module</h2>
         <div id="moduleButtons" class="filter-grid"></div>
+      </div>
+
+      <!-- Topic sub-picker (Core 2 only; hidden until Practice by Topic is chosen) -->
+      <div id="topicPicker" class="hidden">
+        <h2 class="section-h" id="topicPickerTitle">Choose a Topic</h2>
+        <div id="topicButtons" class="filter-grid"></div>
       </div>
     </div>
   </div>
@@ -416,10 +428,10 @@
 </footer>
 
 <script src="js/vendor/exceljs.min.js"></script>
-<script src="js/scoring.js?v=1791242309"></script>
-<script src="js/app.js?v=1791242309"></script>
-<script src="js/results.js?v=1791242309"></script>
-<script src="js/dashboard.js?v=1791242309"></script>
+<script src="js/scoring.js?v=1792000001"></script>
+<script src="js/app.js?v=1792000001"></script>
+<script src="js/results.js?v=1792000001"></script>
+<script src="js/dashboard.js?v=1792000001"></script>
 
 </body>
 </html>

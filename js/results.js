@@ -184,6 +184,12 @@ function _buildExamLabel(appStateSnap, examConfig) {
         : 'Module';
       return examName + ' — ' + label;
     }
+    case 'topic': {
+      const label = appStateSnap.activeFilter && appStateSnap.activeFilter.label
+        ? appStateSnap.activeFilter.label
+        : 'Topic';
+      return examName + ' — ' + label;
+    }
     default: return examName;
   }
 }

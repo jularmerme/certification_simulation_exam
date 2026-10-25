@@ -326,6 +326,11 @@ body.dark-theme .exam-card.disabled {
   }
 }
 
+.mode-card.hidden { display: none; }
+
+/* Odd card out (Practice by Topic) spans the full row on wide screens */
+.mode-card-wide { grid-column: 1 / -1; }
+
 .mode-card {
   background: var(--card);
   border: 2px solid var(--border);
