@@ -1,0 +1,363 @@
+[
+  {
+    "id": "1202-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.3",
+    "module": "16.0",
+    "type": "multi",
+    "difficulty": "easy",
+    "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
+    "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
+    "options": [
+      "Windows 11 Home",
+      "Windows 11 Pro",
+      "Windows 11 Enterprise",
+      "Windows 11 Standard",
+      "Windows 11 Professional Plus"
+    ],
+    "correctAnswer": [
+      "Windows 11 Pro",
+      "Windows 11 Enterprise"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Where to configure network drive mapping in Windows?",
+    "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
+    "options": [
+      "Device Manager",
+      "File Explorer - Map Network Drive",
+      "Services Manager",
+      "Group Policy Editor"
+    ],
+    "correctAnswer": [
+      "File Explorer - Map Network Drive"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.5",
+    "module": "13.0",
+    "type": "matching",
+    "difficulty": "hard",
+    "stem": "Match each Windows command-line tool to its function.",
+    "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
+    "items": [
+      "Network Config",
+      "Process Mgmt",
+      "Disk Mgmt",
+      "System Files"
+    ],
+    "correctAnswer": {
+      "Network Config": "ipconfig",
+      "Process Mgmt": "tasklist",
+      "Disk Mgmt": "diskpart",
+      "System Files": "sfc /scannow"
+    },
+    "origin": "Original",
+    "options": [
+      "diskpart",
+      "ipconfig",
+      "sfc /scannow",
+      "tasklist"
+    ]
+  },
+  {
+    "id": "1202-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "1.4",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
+    "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
+    "options": [
+      "Event Viewer",
+      "Resource Monitor/Task Manager Performance",
+      "Device Manager",
+      "Group Policy"
+    ],
+    "correctAnswer": [
+      "Resource Monitor/Task Manager Performance"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-005",
+    "domain": "2.0 Security",
+    "objective": "2.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which are strong password practices? (Select all that apply)",
+    "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
+    "options": [
+      "Min 8 chars with mixed types",
+      "Reuse across accounts",
+      "Password expiration 90 days",
+      "Write down passwords",
+      "MFA where available"
+    ],
+    "correctAnswer": [
+      "Min 8 chars with mixed types",
+      "Password expiration 90 days",
+      "MFA where available"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-006",
+    "domain": "2.0 Security",
+    "objective": "2.6",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "hard",
+    "stem": "Workstation with malware - FIRST action in recovery?",
+    "explanation": "Isolate system first and document to prevent spread and enable analysis.",
+    "options": [
+      "Format hard drive",
+      "Disconnect from network and document",
+      "Update patches",
+      "Reset password only"
+    ],
+    "correctAnswer": [
+      "Disconnect from network and document"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-007",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "15.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which restricts user permissions to prevent system changes?",
+    "explanation": "UAC prompts for elevation on system-level changes.",
+    "options": [
+      "User Account Control (UAC)",
+      "Windows Defender",
+      "Group Policy",
+      "Windows Firewall"
+    ],
+    "correctAnswer": [
+      "User Account Control (UAC)"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-008",
+    "domain": "2.0 Security",
+    "objective": "2.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "hard",
+    "stem": "Legitimate wireless security methods? (Select all that apply)",
+    "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
+    "options": [
+      "Enable WPA3",
+      "Disable SSID broadcast",
+      "Complex network password",
+      "MAC filtering",
+      "2.4 GHz only"
+    ],
+    "correctAnswer": [
+      "Enable WPA3",
+      "Complex network password",
+      "MAC filtering"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-009",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Application crashes frequently. Try FIRST?",
+    "explanation": "Updates often fix bugs. Try this before drastic measures.",
+    "options": [
+      "Uninstall/reinstall",
+      "Format hard drive",
+      "Check for updates",
+      "Replace motherboard"
+    ],
+    "correctAnswer": [
+      "Check for updates"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-010",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.1",
+    "module": "14.0",
+    "type": "matching",
+    "difficulty": "hard",
+    "stem": "Order the troubleshooting steps correctly. Choose which step belongs in each position.",
+    "explanation": "Proper order: gather, theory, test, implement, verify.",
+    "items": [
+      "Step 1",
+      "Step 2",
+      "Step 3",
+      "Step 4",
+      "Step 5"
+    ],
+    "correctAnswer": {
+      "Step 1": "Gather info from user",
+      "Step 2": "Theory of probable cause",
+      "Step 3": "Test the theory",
+      "Step 4": "Implement solution",
+      "Step 5": "Verify functionality"
+    },
+    "origin": "Original",
+    "options": [
+      "Implement solution",
+      "Gather info from user",
+      "Verify functionality",
+      "Test the theory",
+      "Theory of probable cause"
+    ]
+  },
+  {
+    "id": "1202-011",
+    "domain": "3.0 Software Troubleshooting",
+    "objective": "3.4",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
+    "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
+    "options": [
+      "Browser hijacker malware",
+      "Adware",
+      "Browser extension/toolbar",
+      "Windows Update",
+      "Outdated graphics driver"
+    ],
+    "correctAnswer": [
+      "Browser hijacker malware",
+      "Adware",
+      "Browser extension/toolbar"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-012",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.1",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "easy",
+    "stem": "Documentation after resolving ticket should include?",
+    "explanation": "Complete documentation helps others resolve similar issues.",
+    "options": [
+      "Only if difficult",
+      "Changes, actions, outcome",
+      "Only final resolution",
+      "Nothing - wastes time"
+    ],
+    "correctAnswer": [
+      "Changes, actions, outcome"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-013",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.2",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Proper change management procedures? (Select all that apply)",
+    "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
+    "options": [
+      "Test in non-production",
+      "Document before implementation",
+      "Changes during business hours",
+      "Notify stakeholders",
+      "Rollback plan"
+    ],
+    "correctAnswer": [
+      "Test in non-production",
+      "Document before implementation",
+      "Notify stakeholders",
+      "Rollback plan"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-014",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.3",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Backup system never tested - PRIMARY concern?",
+    "explanation": "Untested backups create false security. Regular restoration testing is critical.",
+    "options": [
+      "Using too much storage",
+      "Might not work when needed",
+      "Too slow",
+      "Software outdated"
+    ],
+    "correctAnswer": [
+      "Might not work when needed"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1202-015",
+    "domain": "4.0 Operational Procedures",
+    "objective": "4.5",
+    "module": "22.0",
+    "type": "multi",
+    "difficulty": "hard",
+    "stem": "Environmental safety and compliance measures? (Select all that apply)",
+    "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
+    "options": [
+      "Proper e-waste disposal",
+      "ESD procedures",
+      "Cool battery storage",
+      "Reuse indefinitely",
+      "Chain-of-custody for data"
+    ],
+    "correctAnswer": [
+      "Proper e-waste disposal",
+      "ESD procedures",
+      "Cool battery storage",
+      "Chain-of-custody for data"
+    ],
+    "origin": "Original"
+  },
+  {
+    "id": "1201-PT22-009",
+    "domain": "2.0 Security",
+    "objective": "2.2",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which can result in authentication failure with correct credentials?",
+    "explanation": "All factors prevent successful authentication.",
+    "options": [
+      "Expired user password",
+      "User account locked out",
+      "Disabled or deleted user account",
+      "Time synchronization issues",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ],
+    "origin": "Original"
+  }
+]

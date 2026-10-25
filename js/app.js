@@ -74,6 +74,41 @@ window.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch('exam_assets/questions.json?v=' + Date.now());
     const data = await response.json();
     window.questionBank = data;
+
+    // Core 2 (220-1202) is served from its own standalone file, questions_core2.json,
+    // which replaces the small legacy 220-1202 bank inside questions.json.
+    // If it fails to load we keep the legacy bank so Core 2 still opens.
+    try {
+      const core2Response = await fetch('exam_assets/questions_core2.json?v=' + Date.now());
+      if (!core2Response.ok) throw new Error('HTTP ' + core2Response.status);
+      const core2Data = await core2Response.json();
+      const core2Exam = core2Data && core2Data.exams && core2Data.exams['220-1202'];
+      if (!core2Exam || !Array.isArray(core2Exam.questionBank) || core2Exam.questionBank.length === 0) {
+        throw new Error('Unexpected format in questions_core2.json');
+      }
+      window.questionBank.exams['220-1202'] = core2Exam;
+    } catch (core2Err) {
+      console.error('Failed to load questions_core2.json, using legacy Core 2 bank:', core2Err);
+    }
+
+    // Core 2 "Practice by Topic": ExamCompass questions live in their own file.
+    // Non-fatal: if it fails, only the Topic mode card is disabled.
+    window.core2Topics = { topics: [], questionBank: [] };
+    try {
+      const topicsResponse = await fetch('exam_assets/questions_core2_topics.json?v=' + Date.now());
+      if (!topicsResponse.ok) throw new Error('HTTP ' + topicsResponse.status);
+      const topicsData = await topicsResponse.json();
+      const topicsExam = topicsData && topicsData.exams && topicsData.exams['220-1202'];
+      if (!topicsExam || !Array.isArray(topicsExam.questionBank)) {
+        throw new Error('Unexpected format in questions_core2_topics.json');
+      }
+      window.core2Topics = {
+        topics: Array.isArray(topicsExam.topics) ? topicsExam.topics : [],
+        questionBank: topicsExam.questionBank
+      };
+    } catch (topicsErr) {
+      console.error('Failed to load questions_core2_topics.json:', topicsErr);
+    }
     
     // Load acronyms quiz
     const acronymsResponse = await fetch('exam_assets/acronyms_quiz.json?v=' + Date.now());
@@ -389,6 +424,7 @@ function goToFilterSelect() {
   }
   if (appState.examMode === 'domain') { openModePicker(); openDomainPicker(); return; }
   if (appState.examMode === 'module') { openModePicker(); openModulePicker(); return; }
+  if (appState.examMode === 'topic') { openModePicker(); openTopicPicker(); return; }
   // Practice / Simulation (no domain/module filter) — the mode picker is the
   // closest equivalent "selection" screen for this exam.
   openModePicker();
@@ -406,6 +442,8 @@ function openModePicker() {
   document.getElementById('modeCards').classList.remove('hidden');
   document.getElementById('domainPicker').classList.add('hidden');
   document.getElementById('modulePicker').classList.add('hidden');
+  const topicPickerEl = document.getElementById('topicPicker');
+  if (topicPickerEl) topicPickerEl.classList.add('hidden');
 
   // Fill per-mode meta lines.
   const bank = exam.questionBank || [];
@@ -429,6 +467,21 @@ function openModePicker() {
     setModeCardEnabled('modeModule', false, 'Not available for this exam');
   }
 
+  // Practice by Topic exists for Core 2 only; hide the card for every other exam.
+  const topicCard = document.getElementById('modeTopic');
+  if (topicCard) {
+    const isCore2 = appState.examCode === '220-1202';
+    topicCard.classList.toggle('hidden', !isCore2);
+    if (isCore2) {
+      const tb = getTopicBank();
+      const topicsReady = tb.topics.filter(t => tb.questionBank.some(q => q.topic === t)).length;
+      setModeCardEnabled('modeTopic', tb.questionBank.length > 0,
+        tb.questionBank.length > 0
+          ? topicsReady + ' of ' + tb.topics.length + ' topics ready \u00b7 ' + tb.questionBank.length + ' questions'
+          : 'Not available (topic file not loaded)');
+    }
+  }
+
   showScreen('screenModePicker');
 }
 
@@ -445,9 +498,12 @@ function setModeCardEnabled(id, enabled, meta) {
 function modePickerBack() {
   const domainOpen = !document.getElementById('domainPicker').classList.contains('hidden');
   const moduleOpen = !document.getElementById('modulePicker').classList.contains('hidden');
-  if (domainOpen || moduleOpen) {
+  const topicEl = document.getElementById('topicPicker');
+  const topicOpen = !!topicEl && !topicEl.classList.contains('hidden');
+  if (domainOpen || moduleOpen || topicOpen) {
     document.getElementById('domainPicker').classList.add('hidden');
     document.getElementById('modulePicker').classList.add('hidden');
+    if (topicEl) topicEl.classList.add('hidden');
     document.getElementById('modeCards').classList.remove('hidden');
   } else {
     showScreen('screenIntro');
@@ -524,6 +580,48 @@ function openModulePicker() {
   document.getElementById('modulePicker').classList.remove('hidden');
 }
 
+// ---------------------------------------------------------------------------
+// Practice by Topic (Core 2 only). Questions come from questions_core2_topics.json
+// (ExamCompass), each tagged with a `topic`. Progress bars use the same per-
+// question mastery record as Domain/Module (ids are unique across both files).
+// ---------------------------------------------------------------------------
+function getTopicBank() {
+  const t = window.core2Topics;
+  return (t && Array.isArray(t.questionBank)) ? t : { topics: [], questionBank: [] };
+}
+
+function openTopicPicker() {
+  if (appState.examCode !== '220-1202') return;
+  const tb = getTopicBank();
+  const container = document.getElementById('topicButtons');
+  container.innerHTML = '';
+
+  tb.topics.forEach(topic => {
+    const ids = tb.questionBank.filter(q => q.topic === topic).map(q => q.id);
+    const n = ids.length;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.disabled = n === 0;
+    const pct = _getMasteryPercent(appState.examCode, ids);
+    btn.innerHTML = _buildMasteryBarHtml(pct) +
+      '<span class="filter-btn-content"><span>' + escapeHtml(topic) + '</span>' +
+      '<span class="filter-count">(' + (n === 0 ? 'no questions yet' : n + ' question' + (n === 1 ? '' : 's')) + ')</span></span>';
+    if (n > 0) btn.onclick = () => startTopicExam(topic);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('modeCards').classList.add('hidden');
+  document.getElementById('domainPicker').classList.add('hidden');
+  document.getElementById('modulePicker').classList.add('hidden');
+  document.getElementById('topicPicker').classList.remove('hidden');
+}
+
+function startTopicExam(topic) {
+  const pool = getTopicBank().questionBank.filter(q => q.topic === topic);
+  if (pool.length === 0) return;
+  openCountPicker({ pool, mode: 'topic', filter: { type: 'topic', value: topic, label: topic }, label: topic });
+}
+
 /** Minimal HTML escape for values interpolated into innerHTML. */
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c =>
@@ -543,7 +641,7 @@ function escapeHtml(s) {
 // ---------------------------------------------------------------------------
 
 const MASTERY_KEY = 'aplus_question_mastery';
-const MASTERY_EXAM_CODES = ['220-1201']; // Core 1 only, per spec.
+const MASTERY_EXAM_CODES = ['220-1201', '220-1202']; // Core 1 and Core 2; each code keeps its own history.
 
 function _loadMasteryMap() {
   try {
@@ -585,7 +683,7 @@ function _getMasteryPercent(examCode, questionIds) {
 }
 
 // ---------------------------------------------------------------------------
-// Coverage tracking ("no-repeat until exhausted") — Core 1 only.
+// Coverage tracking ("no-repeat until exhausted") — Core 1 and Core 2.
 //
 // One shared seen-question ledger per exam code, persisted in localStorage.
 // Every draw (Practice Exam, Simulation, Domain, Module) pulls unseen
@@ -597,7 +695,7 @@ function _getMasteryPercent(examCode, questionIds) {
 // ---------------------------------------------------------------------------
 
 const COVERAGE_KEY = 'aplus_seen_questions';
-const COVERAGE_EXAM_CODES = ['220-1201']; // Core 1 only, per spec.
+const COVERAGE_EXAM_CODES = ['220-1201', '220-1202']; // Core 1 and Core 2; each code keeps its own ledger.
 
 /** Load the full coverage map ({ examCode: [ids] }) from localStorage. */
 function _loadCoverageMap() {
@@ -883,6 +981,7 @@ function modeDisplayName() {
     case 'simulation': return 'Simulation';
     case 'domain': return 'Practice \u00b7 Domain';
     case 'module': return 'Practice \u00b7 Module';
+    case 'topic': return 'Practice \u00b7 Topic';
     default: return 'Practice';
   }
 }
