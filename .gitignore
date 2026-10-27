@@ -21,3 +21,5 @@ exam_assets/parse_practice_tests.py
 # Backup files
 *.bak
 *.bak_*
+exam_assets/*.backup.*.json
+exam_assets/*.prewrite-*.json
