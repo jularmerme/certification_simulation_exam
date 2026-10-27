@@ -20,7 +20,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-003",
+    "id": "CM2-14.8-002",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -40,7 +40,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-004",
+    "id": "CM2-14.8-003",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -60,7 +60,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-006",
+    "id": "CM2-14.8-004",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -80,7 +80,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-007",
+    "id": "CM2-14.8-005",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -100,7 +100,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-008",
+    "id": "CM2-14.8-006",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -120,7 +120,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-011",
+    "id": "CM2-14.8-007",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -140,7 +140,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-016",
+    "id": "CM2-14.8-008",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
@@ -160,7 +160,7 @@
     "origin": "CertMaster"
   },
   {
-    "id": "CM2-14.8-018",
+    "id": "CM2-14.8-009",
     "domain": "1.0 Operating Systems",
     "objective": "14.8",
     "module": "14.0",
