@@ -23,3 +23,7 @@ exam_assets/parse_practice_tests.py
 *.bak_*
 exam_assets/*.backup.*.json
 exam_assets/*.prewrite-*.json
+
+# Core 2 source screenshot images
+"exam_assets/Core 2/"
+exam_assets/Core 2/
