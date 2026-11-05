@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "CM2-12.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An enthusiastic computer user wants to test out the new Windows 11 desktop. Which of the following has become more easily accessible using Windows 11?",
+    "explanation": "Multiple desktops allow the user to set up different workspaces, such as one desktop that has windows for business apps open and another with windows and shortcuts for personal apps and games. In Windows 10, in addition to the Start button, the taskbar contains the Instant Search box. The Start menu is activated by selecting the Start button or by pressing the START or Windows logo key on the keyboard. Windows 10 also contains the Task View button. The middle part of the taskbar contains icons for apps that have an open window. Windows 10 also introduced the notification area. The notification area contains icons for background processes.",
+    "options": [
+      "Instant Search",
+      "Multiple desktops",
+      "Task View",
+      "Notification area"
+    ],
+    "correctAnswer": [
+      "Multiple desktops"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the primary purpose of File Explorer in Windows?",
+    "explanation": "File Explorer is a core component of the Windows operating system designed to allow users to navigate, manage, and organize files and folders. It provides a graphical interface for accessing storage drives, creating folders, moving files, and viewing hidden files. Configuring system settings and user accounts is primarily done through the Windows Settings app or the Control Panel, not File Explorer. While File Explorer allows access to files, it does not handle administrative tasks like user account management. Troubleshooting hardware and software issues is typically done using tools like the Device Manager, Task Manager, or dedicated troubleshooting utilities in Windows. File Explorer is not designed for troubleshooting purposes. Monitoring system performance and resource usage is the function of the Task Manager or Performance Monitor in Windows. File Explorer is focused on file and folder management, not system performance monitoring.",
+    "options": [
+      "To manage and organize files and folders on the computer.",
+      "To monitor system performance and resource usage.",
+      "To configure system settings and user accounts.",
+      "To troubleshoot hardware and software issues."
+    ],
+    "correctAnswer": [
+      "To manage and organize files and folders on the computer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having difficulty using their keyboard and mouse due to a physical disability. They need to enable features like Sticky Keys and Mouse Keys to make interaction with their computer easier. Which section of the Ease of Access settings should they navigate to in order to configure these options?",
+    "explanation": "The Interaction settings within the Ease of Access menu are specifically designed to help users with physical disabilities. This section includes options like Sticky Keys, which allows users to press keyboard shortcuts one key at a time, and Mouse Keys, which enables the numeric keypad to control the mouse pointer. These settings are tailored to improve interaction with the computer for users with accessibility needs. The Display settings in Ease of Access are used to adjust visual elements, such as text size, screen brightness, and high contrast modes, to assist users with visual impairments. These settings do not address keyboard or mouse interaction issues. The Audio settings in Ease of Access are focused on assisting users with hearing impairments. They include options like turning on visual notifications for system sounds or enabling mono audio. These settings are unrelated to keyboard and mouse interaction. Privacy settings are not part of the Ease of Access menu. They are used to manage permissions for apps and services, such as location, camera, and microphone access. They do not provide options for configuring accessibility features like Sticky Keys or Mouse Keys.",
+    "options": [
+      "Audio settings",
+      "Display settings",
+      "Interaction settings",
+      "Privacy settings"
+    ],
+    "correctAnswer": [
+      "Interaction settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are working on your computer when a person from the shipping department delivers a new external solid-state drive (SSD) you ordered. When you plug the drive into your USB port, Windows cannot find a suitable device driver for the drive. Which of the following Windows consoles would you access Device Manager from to resolve the issue?",
+    "explanation": "The best way to add the device driver for your SSD is to use Device Manager. Control Panel is the only listed Windows console that will give you access to the Device Manager console. Microsoft Component Services (also known as COM+) provides a system for developing, deploying, and managing high-performance enterprise, internet, and intranet server applications. COM+ does not provide tools for managing devices. Windows Services are applications that start when the computer boots and run in the background until they are shut down. The Microsoft System Configuration (msconfig) tool can be used to change configuration settings, such as which software opens with Windows. This tool does not provide functionality for managing devices.",
+    "options": [
+      "Control Panel",
+      "Component Services",
+      "System Configuration",
+      "Services"
+    ],
+    "correctAnswer": [
+      "Control Panel"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security-conscious user limits what usage data Windows permits to collect. They also limit what device functions it enables and for which apps. Where does the user accomplish this?",
+    "explanation": "Privacy settings govern what usage data Windows is permitted to collect, what device functions are enabled, and for which apps. There are multiple settings toggles to determine what data collection and app permissions are allowed. The User Accounts applet in the Control Panel is the legacy interface. It cannot be used to add new accounts but does provide options for adjusting the account name and changing the account privilege level between an administrator and a standard user. In Windows 10, in addition to the Start button, the taskbar contains the Instant Search box. DisplayPort was developed as a royalty-free standard by the Video Electronics Standards Association (VESA), which is an organization that represents PC graphics adapter and display technology companies.",
+    "options": [
+      "VESA",
+      "Instant Search",
+      "User accounts",
+      "Privacy settings"
+    ],
+    "correctAnswer": [
+      "Privacy settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a feature found under the Ease of Access settings menu in Windows?",
+    "explanation": "The Narrator tool is a feature under the Ease of Access settings menu in Windows. It is designed to assist users with visual impairments by reading text and elements on the screen aloud. This aligns with the purpose of Ease of Access, which is to make the system more accessible to users with disabilities. While adjusting screen resolution is a display-related setting, it is not part of the Ease of Access menu. This setting is typically found under the Display settings or Control Panel. Configuring the system date and time is not related to accessibility. It is managed through the Date & Time settings in Windows, not Ease of Access. Managing user accounts is an administrative task and is not part of the Ease of Access settings. It is typically handled through the Accounts section in Windows Settings or the Control Panel.",
+    "options": [
+      "Configuring the system date and time",
+      "Adjusting the screen resolution",
+      "Managing user accounts",
+      "Enabling the Narrator tool"
+    ],
+    "correctAnswer": [
+      "Enabling the Narrator tool"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their laptop is not behaving as expected when they close the lid. Instead of going into sleep mode, the laptop continues to run, draining the battery. You need to analyze the issue and determine the correct steps to resolve it. What should you do?",
+    "explanation": "System behavior, such as what happens when the laptop lid is closed, can be configured through Power Options in the Control Panel. Adjusting the \"Choose what closing the lid does\" settings allows you to specify whether the laptop should sleep, hibernate, or do nothing when the lid is closed. File Explorer is used for managing files and folders, not for configuring system power settings. There is no \"System Sleep Mode\" option in File Explorer Options. Task Manager is used for managing processes, applications, and system performance. It does not have the capability to configure power settings or control what happens when the laptop lid is closed. Display Settings in Windows Settings are used to configure screen resolution, orientation, and other display-related options. Power settings, including lid-close behavior, are managed through Power Options in the Control Panel, not Display Settings.",
+    "options": [
+      "Open Windows Settings, navigate to Display Settings, and enable \"Sleep Mode on Lid Close.\"",
+      "Open the Control Panel, navigate to Power Options, and adjust the \"Choose what closing the lid does\" settings.",
+      "Open File Explorer and enable the \"System Sleep Mode\" option under File Explorer Options.",
+      "Use the Task Manager to force the laptop into sleep mode when the lid is closed."
+    ],
+    "correctAnswer": [
+      "Open the Control Panel, navigate to Power Options, and adjust the \"Choose what closing the lid does\" settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their computer is not functioning as expected. They mention the following issues: The text on their screen is too small to read. The clock on their computer is displaying the wrong time. When they close the lid of their laptop, the system does not turn off, causing the battery to drain. Which of the following actions would BEST address all of the user's issues using the appropriate Windows 10 administrative interface?",
+    "explanation": "The Windows 10 Settings app is the preferred interface for managing modern configuration tasks. Ease of Access settings can be used to adjust text size for better readability. The Date & Time settings allow the user to correct the system clock. The Power & Sleep settings can be configured to adjust the behavior when the laptop lid is closed. While the Control Panel can be used for some legacy tasks, the Windows Settings app is the preferred interface for most modern configuration tasks. Additionally, adjusting text size (Ease of Access) is not typically done through the Control Panel. Task Manager is used for monitoring and managing system performance, processes, and applications. It is not designed for adjusting display settings, system time, or power options, as these are configuration tasks handled by the Windows 10 Settings app or Control Panel. While the Command Prompt can be used for advanced administrative tasks, it is not the most efficient or user-friendly method for addressing these specific issues.",
+    "options": [
+      "Use the Command Prompt to execute commands for changing display settings, updating the system time, and modifying power settings.",
+      "Use the Control Panel to adjust the display resolution, change the system time, and configure power settings.",
+      "Use the Task Manager to adjust display settings, update the system time, and configure power options.",
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings."
+    ],
+    "correctAnswer": [
+      "Use the Windows Settings app to adjust the Ease of Access settings, update the system date and time, and modify power and sleep settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to add a new family member to their Windows computer so that the family member can have their own personalized settings and files. Which action should the user take in the Accounts Settings menu?",
+    "explanation": "The \"Family & other users\" section within the Accounts Settings menu is specifically designed for managing additional accounts on the system. By selecting \"Add a family member,\" the user can create a new account for the family member, allowing them to have their own personalized settings, files, and access permissions. The \"Sign-in options\" section is used to configure authentication methods, such as passwords, PINs, and biometric authentication (e.g., fingerprint or facial recognition). It does not allow the user to add new accounts. The \"Access work or school\" section is used to connect the system to organizational accounts, such as work or school accounts. It is not used for adding personal or family member accounts. The \"Sync your settings\" section is used to synchronize settings (like themes, passwords, and language preferences) across devices using the same Microsoft account. It does not allow the user to add new accounts to the system.",
+    "options": [
+      "Open \"Sync your settings\" and enable synchronization for all accounts.",
+      "Open the \"Sign-in options\" section and enable biometric authentication.",
+      "Navigate to \"Family & other users\" and select \"Add a family member.\"",
+      "Go to \"Access work or school\" and connect to a school account."
+    ],
+    "correctAnswer": [
+      "Navigate to \"Family & other users\" and select \"Add a family member.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following BEST describes the purpose of Indexing Options in Windows?",
+    "explanation": "Indexing Options in Windows are specifically designed to optimize and manage the search functionality. It allows users to configure which locations and file types are indexed, making searches faster and more efficient. Configuring user account permissions and security settings is managed through tools like the User Accounts settings or the Security & Privacy settings, not Indexing Options. Display resolution and brightness settings are managed through the Display settings in Windows, not through Indexing Options. Enabling or disabling system updates and patches is handled through the Windows Update settings, not Indexing Options.",
+    "options": [
+      "To adjust the display resolution and screen brightness.",
+      "To manage how and where Windows searches for files and folders.",
+      "To enable or disable system updates and patches.",
+      "To configure user account permissions and security settings."
+    ],
+    "correctAnswer": [
+      "To manage how and where Windows searches for files and folders."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does the Windows 11 desktop improve accessibility and usability compared to the Windows 10 desktop?",
+    "explanation": "Windows 11 refreshes the desktop style by introducing better spacing for touch control and rounded corners. These changes improve accessibility and usability, especially for touch-enabled devices. The touch-optimized Start menu is a feature of Windows 10, not Windows 11. Windows 10 uses a touch-optimized Start menu interface, while Windows 11 focuses on other improvements. The notification area is still present in Windows 11. The notification area contains icons for background processes, which is a feature of Windows 10 and Windows 11. The taskbar is not eliminated in Windows 11. Instead, it is center-aligned, which is a key feature of the Windows 11 desktop. The taskbar remains an essential part of the user interface for managing applications and notifications.",
+    "options": [
+      "By providing better spacing for touch control and rounded corners",
+      "By removing the notification area to simplify the interface",
+      "By eliminating the taskbar to maximize screen space",
+      "By introducing a touch-optimized Start menu"
+    ],
+    "correctAnswer": [
+      "By providing better spacing for touch control and rounded corners"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is having difficulty navigating between multiple open applications on their Windows 10 computer. They want to quickly switch between program windows without using the mouse. Which of the following actions should the user take?",
+    "explanation": "Learning keyboard shortcuts is useful for navigating the desktop and program windows quickly. The Alt + Tab shortcut is specifically designed to allow users to switch between open program windows efficiently without using the mouse. While pressing the Windows logo key opens the Start menu, this action does not help the user switch between open applications. The Start menu is used to launch applications or access system settings, not for navigating between already open windows. There is no \"Switch Applications\" option available when right-clicking on the desktop. This action would typically bring up a context menu for desktop-specific settings, such as display or personalization options. While Task Manager can show a list of running applications, it is not the most efficient or practical way to switch between open program windows. The user would need to manually select and switch to the desired application, which is more cumbersome than using the Alt + Tab shortcut.",
+    "options": [
+      "Use the keyboard shortcut Alt + Tab.",
+      "Open the Control Panel and navigate to \"Task Manager.\"",
+      "Press the Windows logo key to open the Start menu.",
+      "Right-click on the desktop and select \"Switch Applications.\""
+    ],
+    "correctAnswer": [
+      "Use the keyboard shortcut Alt + Tab."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Accounts Settings menu in Windows?",
+    "explanation": "The Accounts Settings menu in Windows is specifically designed to manage user accounts, including creating, modifying, or deleting accounts, as well as configuring sign-in options such as passwords, PINs, and biometric authentication. This is the primary purpose of this menu, making it the correct answer. Display resolution and color settings are managed through the Display Settings menu, not the Accounts Settings menu. These settings are unrelated to user account management. Indexing options are configured in the Indexing Options menu, which is part of the File Explorer Options. It has no connection to user accounts or sign-in options. Background processes are managed through the Task Manager or the Startup Apps section in the Settings app, not the Accounts Settings menu. This functionality is unrelated to managing user accounts.",
+    "options": [
+      "To adjust indexing options for faster file searches.",
+      "To configure display resolution and color settings.",
+      "To manage user accounts and sign-in options.",
+      "To enable or disable background processes."
+    ],
+    "correctAnswer": [
+      "To manage user accounts and sign-in options."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following options can be configured in the File Explorer Options in Windows?",
+    "explanation": "Hide extensions for known file types is a specific setting available in File Explorer Options. It allows users to hide or show file extensions for known file types, which can help in identifying file types or simplifying the display of file names. This setting is particularly useful for users who want to customize how files are displayed in File Explorer. Enabling dark mode is not a setting found in File Explorer Options. Instead, dark mode is a system-wide appearance setting that can be configured through the Windows Settings app under \"Personalization.\" Adjusting screen resolution is not related to File Explorer Options. Screen resolution settings are managed through the Display settings in the Windows Settings app or the Control Panel, not within File Explorer. Managing user accounts is not a function of File Explorer Options. User account management is handled through the Windows Settings app or the Control Panel under \"User Accounts.\" File Explorer Options are specifically for configuring how files and folders are displayed and managed in File Explorer.",
+    "options": [
+      "Manage user accounts.",
+      "Enable dark mode for File Explorer.",
+      "Hide extensions for known file types.",
+      "Adjust screen resolution."
+    ],
+    "correctAnswer": [
+      "Hide extensions for known file types."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.1-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.1.14",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user needs to access a hidden system file to troubleshoot an issue on their computer. They open File Explorer but cannot see the file in the directory. What should the user do to make the hidden file visible?",
+    "explanation": "Hidden files and folders can be made visible by enabling the \"Show hidden files, folders, and drives\" option in File Explorer Options. This is the appropriate step to access hidden system files. There is no \"Unhide System Files\" option available in the context menu when right-clicking on a directory in File Explorer. Hidden files are managed through File Explorer Options, not through right-click menus. The Task Manager is used for managing system processes and monitoring performance. It does not have any functionality for locating or unhiding files in File Explorer. The Control Panel does not have a specific \"Show system files\" option under System Settings. The correct method for viewing hidden files is through File Explorer Options.",
+    "options": [
+      "Use the Task Manager to locate and unhide the file.",
+      "Open the Control Panel and enable \"Show system files\" under System Settings.",
+      "Open File Explorer Options and enable the \"Show hidden files, folders, and drives\" option.",
+      "Right-click on the directory and select \"Unhide System Files\" from the context menu."
+    ],
+    "correctAnswer": [
+      "Open File Explorer Options and enable the \"Show hidden files, folders, and drives\" option."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Network Settings in Windows?",
+    "explanation": "The Network Settings in Windows are specifically designed to allow users to manage and configure network connections, such as Wi-Fi, Ethernet, VPN, and other network-related settings. This is a fundamental function of the Network Settings interface. Display and sound device configurations are managed under the \"Device Settings\" or \"System Settings\" pages, not Network Settings. These settings are unrelated to networking functions. Power options are configured under \"Power Options\" or \"System Settings,\" not Network Settings. Power management is focused on energy usage and has no direct relation to network configurations. User profiles and environment variables are managed under \"Advanced System Settings\" or similar sections, not Network Settings. These settings are related to system performance and user-specific configurations, not networking.",
+    "options": [
+      "To configure display and sound devices.",
+      "To adjust power options for energy efficiency.",
+      "To manage network connections and settings.",
+      "To configure user profiles and environment variables."
+    ],
+    "correctAnswer": [
+      "To manage network connections and settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which settings page in Windows allows you to configure Display and Sound devices?",
+    "explanation": "The \"System settings pages contain options for configuring Display and Sound devices.\" This makes \"System Settings\" the correct answer. While the \"Bluetooth & Devices Settings\" page is used for configuring input devices like mice, keyboards, and other peripherals, it does not specifically handle Display and Sound settings. The \"Devices and Printers applet\" in the Control Panel is used for adding devices manually and accessing configuration pages for connected devices, but it is not the primary interface for Display and Sound settings. The \"Device Manager\" is an advanced management console for managing both system and peripheral devices, but it is not the main interface for configuring Display and Sound settings.",
+    "options": [
+      "Device Manager",
+      "System Settings",
+      "Bluetooth & Devices Settings",
+      "Devices and Printers applet"
+    ],
+    "correctAnswer": [
+      "System Settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their USB mouse, which was working previously, is no longer functioning after a recent Windows update. Upon investigation, you find the mouse is listed in the Device Manager with a warning icon. You suspect the issue is related to the driver. What is the BEST course of action to resolve the issue based on your analysis of the situation?",
+    "explanation": "The warning icon in Device Manager indicates a driver issue, which is a common problem after a Windows update. Rolling back the driver to a previous version is the best course of action because it allows you to revert to a known working driver version. This approach directly addresses the root cause of the problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem. The Devices and Printers applet is used for adding devices and accessing configuration shortcuts, but it does not provide the functionality to resolve driver-related issues. Since the mouse is already listed in Device Manager, re-adding it is unnecessary and will not fix the driver problem.",
+    "options": [
+      "Adjust the performance options in the System Settings page to prioritize foreground processes.",
+      "Roll back the driver to a previous version using Device Manager.",
+      "Use the Devices and Printers applet to manually add the mouse again.",
+      "Disable and re-enable the mouse in the Bluetooth & Devices Settings page."
+    ],
+    "correctAnswer": [
+      "Roll back the driver to a previous version using Device Manager."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with troubleshooting a printer that is connected to a Windows computer but is not functioning properly. You suspect the issue is related to the printer driver. Which tool should you use to verify the printer driver and update it if necessary?",
+    "explanation": "Device Manager is the appropriate tool for advanced hardware management, including verifying and updating drivers for connected devices such as printers. It allows you to check the status of the printer, view driver details, and update or reinstall the driver if necessary. While the Devices and Printers applet provides an interface for adding devices and accessing configuration shortcuts, it does not allow you to directly manage or update drivers. This tool is more suited for basic device management tasks, not advanced troubleshooting. While the Bluetooth & Devices settings pages contain options for input devices and adding and managing other peripherals attached over Bluetooth or USB, it does not allow you to directly manage or update drivers. The System Settings page for Display and Sound is used for configuring display and sound devices, not for managing or troubleshooting printers. It is unrelated to the task of verifying or updating printer drivers.",
+    "options": [
+      "Bluetooth & Devices Settings page",
+      "Devices and Printers applet in Control Panel",
+      "System Settings page for Display and Sound",
+      "Device Manager"
+    ],
+    "correctAnswer": [
+      "Device Manager"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a Windows computer for a user who reports that a specific application is not functioning correctly. The user wants to repair the application without uninstalling it. Which of the following steps should you take to resolve the issue?",
+    "explanation": "The \"Apps, Programs, and Features\" settings provide options to modify or repair certain applications without uninstalling them. This is the appropriate action to take when troubleshooting an application that is not functioning correctly, as described in the scenario. \"Device Manager\" is used to manage hardware devices and their drivers, not software applications. Applications are not listed in \"Device Manager,\" so this step would not help in repairing the application. \"Windows Update\" is used to update the operating system and install security patches or driver updates. While some applications may receive updates through this feature, it does not provide options to repair or modify an application. Adjusting virtual memory in \"System Settings\" is related to system performance and resource allocation, not repairing or modifying an application. This action would not address the issue described in the scenario.",
+    "options": [
+      "Open \"Device Manager,\" locate the application, and update its driver.",
+      "Open \"System Settings\" and adjust the virtual memory to improve application performance.",
+      "Open the \"Apps, Programs, and Features\" settings, select the application, and choose the \"Modify\" or \"Repair\" option if available.",
+      "Navigate to \"Windows Update\" and check for updates related to the application."
+    ],
+    "correctAnswer": [
+      "Open the \"Apps, Programs, and Features\" settings, select the application, and choose the \"Modify\" or \"Repair\" option if available."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is the Administrative Tools menu important in Windows system management?",
+    "explanation": "The Administrative Tools menu is a collection of shortcuts to advanced tools for system management, such as performance monitoring, disk management, and event logging. The Administrative Tools menu does not facilitate the installation of third-party applications. It is designed for system management and configuration, not software installation. While some tools within Administrative Tools may relate to user account management, its purpose is much broader, encompassing various system management tasks. Windows Update settings are managed separately through the Update & Security section in the Settings app, not through Administrative Tools.",
+    "options": [
+      "It provides access to the Windows Update settings for patch management.",
+      "It provides shortcuts to configure advanced system settings and management tools.",
+      "It allows users to install third-party applications directly.",
+      "It is used to manage user accounts and passwords exclusively."
+    ],
+    "correctAnswer": [
+      "It provides shortcuts to configure advanced system settings and management tools."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "From your Windows laptop, you have been working on a large project that has required you to open a lot of items (programs, files, etc.). It is time to leave the office and make the two-hour journey home. You will be working on this project a bit more when you arrive home. Your computer's battery is failing and only has a very short life span (about one hour) before your computer loses power. When you arrive home and open the laptop lid, nothing happens. After plugging in your computer and powering it on, you find that all of your programs and files have been closed. To troubleshoot, you open the Control Panel and navigate to the settings that control what your computer will do when the laptop lid is closed. Which of the following power settings MUST you choose to prevent the same problem in the future?",
+    "explanation": "Hibernate saves the state of your computer to the hard disk and completely powers off your computer. When the device resumes, the saved state is restored to RAM, and you can pick up where you left off. Sleep, Suspend, and Standby are all different terms that have been used for various versions of Windows. Regardless of which option is available for your Windows version, none will turn off your computer. Instead, they put the computer and all peripherals on a low-power consumption mode. Since your battery is not fully charged and can only power your computer for a short time, Sleep, Suspend, and Standby run the risk of the computer losing power, resulting in the closure of your programs and files. Shut down closes all files and programs and terminates all power.",
+    "options": [
+      "When I close the lid: Sleep/Suspend",
+      "When I close the lid: Standby",
+      "When I close the lid: Hibernate",
+      "When I close the lid: Shut down"
+    ],
+    "correctAnswer": [
+      "When I close the lid: Hibernate"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the purpose of the \"Apps, Programs, and Features\" settings in Windows?",
+    "explanation": "The \"Apps, Programs, and Features\" settings in Windows are specifically designed to allow users to manage installed applications. This includes uninstalling programs, modifying existing features, and sometimes repairing installations. System-level settings such as power options and virtual memory are managed under the \"System Settings\" or \"Advanced System Settings\" sections, not under \"Apps, Programs, and Features.\" These settings are unrelated to managing installed applications. Managing hardware devices and installing drivers is handled through settings like \"Device Manager\" or \"Devices and Printers,\" not through \"Apps, Programs, and Features.\" These settings focus on hardware, not software applications. Updating the operating system and installing security patches is managed through \"Windows Update\" under the \"Update and Security\" settings. These tasks are unrelated to managing installed applications or features.",
+    "options": [
+      "To update the operating system and install security patches.",
+      "To configure system-level settings such as power options and virtual memory.",
+      "To manage and configure installed applications.",
+      "To manage hardware devices and install drivers for peripherals."
+    ],
+    "correctAnswer": [
+      "To manage and configure installed applications."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following methods can be used to access the Administrative Tools menu in Windows?",
+    "explanation": "The Administrative Tools menu can be accessed via the Control Panel. This is a standard method for accessing advanced system management tools in Windows. While pressing Ctrl + Alt + Del provides options like Task Manager, Lock, and Sign Out, it does not provide direct access to the Administrative Tools menu. Right-clicking on the desktop opens a context menu for display and personalization settings, but it does not provide access to Administrative Tools. Task Manager is used for monitoring and managing processes, performance, and startup programs, but it does not provide direct access to Administrative Tools.",
+    "options": [
+      "Through the Control Panel",
+      "Through the Task Manager",
+      "By right-clicking on the desktop",
+      "By pressing Ctrl + Alt + Del"
+    ],
+    "correctAnswer": [
+      "Through the Control Panel"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You work for a large company as an IT administrator. With the many external attacks being perpetrated in the form of security breaches, you are concerned that your Windows 11 computers may be vulnerable. You also want to ensure that Windows is using the latest features. Which of the following would BEST protect your computers?",
+    "explanation": "By default, Windows 11 automatically checks for updates and installs any updates it finds. Although this function can be disabled, Microsoft strongly encourages the use of automatic updates to keep your computer up to date with the latest features. These updates often include patches to fix security issues found in applications. Automatic maintenance can perform these checks. Scheduled backups are important to have and would be useful when a computer has a virus or the computer has been ransomed. They do not, however, keep the computer safe from application security leaks or update Windows with the latest features. Scheduled disk maintenance allows systems to diagnose and repair disk errors. It does not back up files. Antivirus software and updates are important when trying to protect your computer from viruses. However, additional steps are necessary to ensure that security leaks in applications are fixed. In addition, antivirus software does not update Windows with the latest features.",
+    "options": [
+      "Windows updates",
+      "Scheduled backups",
+      "Scheduled disk maintenance",
+      "Antivirus updates"
+    ],
+    "correctAnswer": [
+      "Windows updates"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to uninstall an application that they no longer use and also check if there are any optional features they can add to enhance their system's functionality. Which section of Windows Settings should they navigate to?",
+    "explanation": "The Apps Settings page is the correct place to manage installed applications and optional features. This section allows users to uninstall applications and explore optional Windows features that can be added to enhance system functionality. The System Settings page is used for configuring system-level options such as performance settings, environment variables, and system protection. It does not provide tools for managing applications or optional features. Device Settings are used to manage hardware devices such as printers, Bluetooth devices, and display settings. It does not include options for uninstalling applications or managing optional features. Update and Security Settings are used for managing Windows updates, security features like Windows Defender, and activation settings. It does not relate to managing applications or optional features.",
+    "options": [
+      "System Settings",
+      "Update and Security Settings",
+      "Device Settings",
+      "Apps Settings"
+    ],
+    "correctAnswer": [
+      "Apps Settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their system is running out of storage space, and they suspect that unused applications and unnecessary optional features are taking up significant space. They also want to identify which apps are consuming the most storage. What should the user do to analyze and address the issue?",
+    "explanation": "The Apps Settings page allows users to analyze the list of installed applications, view the amount of storage each app consumes, and uninstall unnecessary apps. It also provides access to optional features that can be removed to free up additional space. Adjusting virtual memory settings does not directly address the issue of storage space being consumed by unused applications or optional features. Virtual memory settings are related to system performance, not storage management. The Device Settings page is used for managing hardware devices, such as printers and Bluetooth devices. It does not provide tools for analyzing or managing storage space related to applications or optional features. While the Update and Security Settings page can help manage updates, it is not the primary tool for analyzing or managing storage space consumed by applications or optional features. Deleting old updates is not the most effective solution for this scenario.",
+    "options": [
+      "Access the Update and Security Settings page to delete old Windows updates and free up space.",
+      "Open the System Settings page and adjust virtual memory settings to free up space.",
+      "Use the Device Settings page to check for unused hardware drivers and remove them.",
+      "Open the Apps Settings page to review installed applications and optional features and uninstall unnecessary ones."
+    ],
+    "correctAnswer": [
+      "Open the Apps Settings page to review installed applications and optional features and uninstall unnecessary ones."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following options can be configured on the System Settings page of the Windows Settings app?",
+    "explanation": "The System Settings page in the Windows Settings app allows users to configure input and output devices, power options, remote desktop, notifications, and clipboard settings. Desktop visual effects and virtual memory settings are part of the advanced system settings, which are accessible through links at the bottom of the System Settings page, but they are not directly configured within the System Settings page itself. Windows Defender Firewall rule sets are managed through the Windows Security settings, not the System Settings page. Device drivers for hardware peripherals are managed through Device Manager or Windows Update, not the System Settings page.",
+    "options": [
+      "Input and output devices, power, and clipboard settings",
+      "Device drivers for hardware peripherals",
+      "Desktop visual effects and virtual memory settings",
+      "Windows Defender Firewall rule sets"
+    ],
+    "correctAnswer": [
+      "Input and output devices, power, and clipboard settings"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which keyboard shortcut provides access to the Management Shortcuts menu in Windows, allowing users to quickly access tools like Device Manager, Disk Management, and Task Manager?",
+    "explanation": "The \"Windows + X\" keyboard shortcut opens the Management Shortcuts menu, also known as the Quick Link menu, in Windows. This menu provides quick access to various system management tools, such as Device Manager, Disk Management, Task Manager, and more. It is a convenient way to access administrative tools without navigating through multiple menus. Ctrl + Alt + Del opens a security options menu that includes options like Lock, Switch User, Sign Out, and Task Manager. While Task Manager is accessible from this menu, it does not provide access to the full range of management tools available in the Management Shortcuts menu. Alt + Tab is used to switch between open applications and windows. It is unrelated to accessing system management tools or the Management Shortcuts menu. Windows + R opens the Run dialog box, which allows users to execute commands or open files and applications directly. While it can be used to open some management tools by typing their commands, it does not directly provide access to the Management Shortcuts menu.",
+    "options": [
+      "Alt + Tab",
+      "Windows + R",
+      "Ctrl + Alt + Del",
+      "Windows + X"
+    ],
+    "correctAnswer": [
+      "Windows + X"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.2-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.2.13",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows 10 computer is unable to connect to the internet after a recent update. Upon investigation, you find that the network adapter is enabled, but the system is not obtaining an IP address automatically. Which of the following actions should you take to analyze and resolve the issue?",
+    "explanation": "The Windows Event Viewer logs can provide detailed information about errors or issues related to the network adapter or recent updates. By analyzing these logs, you can identify the root cause of the problem, such as a failed update or driver issue, and take appropriate corrective action. The Windows Defender Firewall does not control IP address assignment or DHCP functionality. Disabling and re-enabling the firewall will not resolve issues related to obtaining an IP address. Manually assigning a static IP address is a workaround, not a solution. It does not address the underlying issue of why the system is failing to obtain an IP address automatically, which could be related to DHCP or network adapter configuration. Uninstalling and reinstalling updates should only be done if the update is confirmed to be the root cause of the issue. Without analyzing the problem first (e.g., through Event Viewer logs), this action is premature and may not resolve the issue.",
+    "options": [
+      "Manually assign a static IP address to the network adapter.",
+      "Uninstall and reinstall the most recent Windows update to restore connectivity.",
+      "Disable and re-enable the Windows Defender Firewall to reset network settings.",
+      "Check the Windows Event Viewer logs for errors related to the network adapter."
+    ],
+    "correctAnswer": [
+      "Check the Windows Event Viewer logs for errors related to the network adapter."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why are cloud-based collaboration tools beneficial for remote teams working on the same document?",
+    "explanation": "Cloud-based collaboration tools, such as Microsoft Office 365 and Google Docs, enable multiple users to edit the same document in real-time, regardless of their physical location. This is a key benefit, as it allows remote teams to work together seamlessly. Cloud-based collaboration tools are specifically designed to allow multiple users to access and edit documents simultaneously, not restrict access to one user at a time. While some tools may offer version control, they do not automatically delete older versions of documents as a primary feature. This would not align with the purpose of collaboration tools, which often retain version history for tracking changes. Cloud-based collaboration tools do not require users to download documents locally before editing. Instead, they allow users to make edits directly in the cloud, ensuring real-time updates and synchronization.",
+    "options": [
+      "They automatically delete older versions of the document to save storage space.",
+      "They ensure that only one user can access the document at a time to prevent conflicts.",
+      "They allow users to edit the same document in real-time, regardless of location.",
+      "They require users to download the document locally before making edits."
+    ],
+    "correctAnswer": [
+      "They allow users to edit the same document in real-time, regardless of location."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary benefit of using identity synchronization in a cloud-based environment?",
+    "explanation": "Identity synchronization allows users to use a single set of credentials to access both cloud-based and on-premise resources. This reduces the number of credentials users need to remember and simplifies access management for organizations. Identity synchronization is designed to reduce the number of credentials a user needs, not increase them. The goal is to unify credentials across cloud and on-premise systems. Identity synchronization does not eliminate the need for credentials. Instead, it ensures that the same credentials can be used across different environments, simplifying access but not removing the need for authentication. Identity synchronization aims to maintain consistent permissions and policies across both cloud and on-premise systems, not create different permissions for each environment.",
+    "options": [
+      "It ensures that users have different permissions for cloud and on-premise systems.",
+      "It eliminates the need for credentials entirely in enterprise environments.",
+      "It simplifies user sign-in by enabling a single set of credentials for cloud and on-premise resources.",
+      "It allows users to have multiple sets of credentials for different resources."
+    ],
+    "correctAnswer": [
+      "It simplifies user sign-in by enabling a single set of credentials for cloud and on-premise resources."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your organization uses a cloud-based project management application under a business license. Recently, a team member stored project files created using the application in a personal cloud storage account. Upon reviewing the license agreement, you notice a clause about ownership of works created using the software. What should you infer about this situation?",
+    "explanation": "Cloud-based application licenses may include terms about ownership of works created using the software. In a business license scenario, the organization typically retains ownership of the files created using the licensed software. Storing these files in personal cloud storage could violate the license terms and pose security risks. Ownership of works created using cloud-based applications is often governed by the license terms. In a business license scenario, the organization, not the individual, typically retains ownership of the files. Cloud storage providers do not normally gain ownership of files uploaded to their platforms. Ownership is determined by the license agreement and remains with the organization or individual as specified. Ownership is a critical aspect of the license agreement. Ignoring ownership terms could lead to violations of the agreement and potential legal or security issues.",
+    "options": [
+      "The organization retains ownership of the project files, and they should not be stored in personal cloud storage.",
+      "The cloud storage provider automatically owns the project files once they are uploaded to personal storage.",
+      "Ownership of the project files is irrelevant as long as the files are accessible to the team.",
+      "The team member owns the project files because they created them, and storing them in personal cloud storage is acceptable."
+    ],
+    "correctAnswer": [
+      "The organization retains ownership of the project files, and they should not be stored in personal cloud storage."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your company is considering moving its email system to the cloud to improve accessibility and synchronization across devices. Employees frequently switch between desktops, laptops, and mobile devices and need their emails and folders to stay updated in real-time. Which solution would BEST meet these requirements?",
+    "explanation": "Cloud-based email systems like Gmail from Google Workspace allow users to access their emails and folders from any device with an internet connection. These systems also ensure synchronization across devices in real time, which meets the company's requirements. On-premise email servers, like Microsoft Exchange, do not inherently provide the real-time synchronization across devices that cloud-based systems offer. They also require significant management and infrastructure, which may not align with the company's goal of improving accessibility. Mozilla Thunderbird is a local email client, not a cloud-based solution. While it can connect to email servers, it does not inherently provide real-time synchronization and accessibility across multiple devices that the company needs. Microsoft Outlook, when used as a desktop-only application, does not provide the cloud-based functionality needed for real-time synchronization across devices. While it can connect to cloud-based email systems, the scenario specifies a desktop-only configuration, which limits accessibility.",
+    "options": [
+      "Using Gmail through Google Workspace",
+      "Deploying Microsoft Exchange as an on-premise email server",
+      "Installing Mozilla Thunderbird as the primary email client for all employees",
+      "Configuring Microsoft Outlook as a desktop-only application"
+    ],
+    "correctAnswer": [
+      "Using Gmail through Google Workspace"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Your organization uses Microsoft Azure for cloud services and an on-premise Active Directory for local resource management. The IT team wants to simplify user access by ensuring employees can use the same credentials to log into both cloud and on-premise resources. Which solution would BEST address this requirement?",
+    "explanation": "Identity synchronization allows users to use a single set of credentials for both cloud and on-premise resources. By configuring identity synchronization, the organization can simplify user access while maintaining consistent permissions and policies across both environments. Creating separate accounts increases the complexity for users and administrators. Identity synchronization is designed to unify credentials, not separate them, while still maintaining security. Disabling authentication would compromise security. Identity synchronization simplifies access without removing the need for secure authentication. A password manager does not address the root issue of having multiple credentials. Identity synchronization eliminates the need for multiple credentials by unifying them, making this a more effective solution.",
+    "options": [
+      "Configure identity synchronization between Azure and the on-premise Active Directory.",
+      "Create separate user accounts for cloud and on-premise resources to maintain security.",
+      "Disable authentication for cloud resources to simplify access.",
+      "Use a third-party password manager to store and manage multiple credentials for users."
+    ],
+    "correctAnswer": [
+      "Configure identity synchronization between Azure and the on-premise Active Directory."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an example of a cloud-based collaboration tool that allows multiple users to edit documents in real-time?",
+    "explanation": "Microsoft Office 365 includes cloud-based collaboration tools such as Word, Excel, and PowerPoint, which allow multiple users to edit documents in real-time. This feature is specifically highlighted in the document as a key benefit of collaboration tools. Adobe Photoshop is a powerful design tool but is not primarily a collaboration tool for real-time document editing. It is more focused on individual creative work rather than team collaboration. Microsoft Exchange Server is an email server application, not a collaboration tool for real-time editing of documents. While it supports communication, it does not provide the same collaborative features as Office 365. iCloud is a cloud storage solution, not a collaboration tool. While it allows file sharing and synchronization, it does not support real-time collaborative editing of documents.",
+    "options": [
+      "Microsoft Exchange Server",
+      "Microsoft Office 365",
+      "iCloud",
+      "Adobe Photoshop"
+    ],
+    "correctAnswer": [
+      "Microsoft Office 365"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is evaluating different storage solutions for their employees. They need a system that allows employees to access files from multiple devices, ensures files are always up-to-date, and provides an easy way to share files with external collaborators. After reviewing their options, they narrow it down to the following choices. Which solution BEST meets their needs?",
+    "explanation": "Cloud storage solutions allow files to be synchronized across multiple devices, ensuring they are always up-to-date. Additionally, these solutions provide easy file-sharing capabilities, making them ideal for collaboration with external parties. This meets all the company's stated needs. A local file server limits accessibility to the company network, which does not support access from multiple devices in different locations. It also does not inherently provide synchronization or easy sharing with external collaborators. External hard drives do not provide synchronization or sharing capabilities. Employees would need to manually update files and physically transfer the hard drive to share files, which is inefficient and does not meet the company's requirements. Email-based systems are not designed for synchronization or maintaining up-to-date versions of files. Sharing files via email is cumbersome and prone to version control issues, making it unsuitable for the company's needs.",
+    "options": [
+      "An external hard drive assigned to each employee for storing and sharing files.",
+      "An email-based system where employees attach and send files to collaborators.",
+      "A local file server that employees can access only when connected to the company network.",
+      "A cloud storage solution like Microsoft OneDrive or Google Drive that supports synchronization and sharing."
+    ],
+    "correctAnswer": [
+      "A cloud storage solution like Microsoft OneDrive or Google Drive that supports synchronization and sharing."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does a cloud-based email system differ from an on-premise email server?",
+    "explanation": "Cloud-based email systems, such as Gmail from Google Workspace or Outlook through Microsoft 365, enable users to access their emails and folders from any device with an internet connection. This is a key feature of cloud-based email systems. Cloud-based email systems do require an internet connection to access emails. These systems are accessed through web portals, which necessitate an active internet connection. Synchronization across devices is a feature of cloud-based email systems, not on-premise email servers. On-premise servers often require additional configuration to enable synchronization. On-premise email servers are managed by the organization itself, not by a cloud service provider. A contrast is made between on-premise servers with cloud-based systems, which are managed by the service provider.",
+    "options": [
+      "On-premise email servers are managed entirely by the cloud service provider.",
+      "On-premise email servers automatically synchronize emails across multiple devices without additional configuration.",
+      "Cloud-based email systems allow users to access their emails and folders from any device with an internet connection.",
+      "Cloud-based email systems require no internet connection to access emails."
+    ],
+    "correctAnswer": [
+      "Cloud-based email systems allow users to access their emails and folders from any device with an internet connection."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does cloud storage improve file accessibility and management compared to local storage?",
+    "explanation": "Cloud storage solutions enable users to access and synchronize files across multiple devices as long as they have an internet connection. This feature enhances file accessibility and management, making it more convenient than local storage. Cloud storage solutions are designed to improve accessibility by allowing access from multiple devices, not restricting it to a single device. Enhanced security is achieved through other mechanisms, not by limiting device access. Cloud storage solutions automatically synchronize files and folders across devices. Manual file transfers are not necessary when using cloud storage. An internet connection is required to access files stored in the cloud. Without internet access, users cannot retrieve or synchronize their files.",
+    "options": [
+      "It allows files to be accessed and synchronized across multiple devices with internet access.",
+      "It eliminates the need for internet access to retrieve files stored in the cloud.",
+      "It requires users to manually transfer files between devices for synchronization.",
+      "It restricts file access to a single device for enhanced security."
+    ],
+    "correctAnswer": [
+      "It allows files to be accessed and synchronized across multiple devices with internet access."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.4-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.4.7",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a key consideration when purchasing a license for a cloud-based application?",
+    "explanation": "Cloud-based application licenses may include terms regarding who owns the works created using the software. This is a unique aspect of cloud-based licensing that users must carefully review and understand. Licenses often restrict the number of installations and users. Violating these terms, such as installing the software on multiple devices without proper licensing, could breach the agreement. It is important to read and understand the terms and conditions of any software license. Ignoring these terms could lead to misuse or legal issues. Cloud-based applications often offer both individual and commercial or business license terms, depending on the intended use. Businesses frequently use cloud-based applications under specific licensing agreements.",
+    "options": [
+      "Cloud-based application licenses do not require users to read the terms and conditions.",
+      "Cloud-based application licenses may include terms about ownership of works created using the software.",
+      "Cloud-based application licenses are only available for individual users, not businesses.",
+      "Cloud-based application licenses allow unlimited installations on multiple devices."
+    ],
+    "correctAnswer": [
+      "Cloud-based application licenses may include terms about ownership of works created using the software."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user wants to organize their files on a shared drive by creating a new folder for a specific project. However, they are unsure how to create a folder in File Explorer. What steps should you guide them to take?",
+    "explanation": "File Explorer is used to manage files and folders. To create a new folder, the user can navigate to the desired location, right-click, select \"New,\" and then choose \"Folder.\" This is the standard method for creating folders in File Explorer. The Control Panel does not have a \"Create New Folder\" option under Storage Settings. Folder creation is managed directly within File Explorer, not through the Control Panel. The Task Manager is not designed for file or folder management. It is used for monitoring and managing system processes and performance and does not have a \"File Management\" feature for creating folders. \"Ctrl + N\" in File Explorer opens a new window, not a new folder. The correct method for creating a folder is to right-click, select \"New,\" and then choose \"Folder.\"",
+    "options": [
+      "Navigate to the desired location in File Explorer, right-click, select \"New,\" and then choose \"Folder.\"",
+      "Use the Task Manager to create a new folder by selecting \"File Management\" under the Processes tab.",
+      "Navigate to the desired location in File Explorer and press \"Ctrl + N\" to create a new folder.",
+      "Open the Control Panel, go to Storage Settings, and select \"Create New Folder.\""
+    ],
+    "correctAnswer": [
+      "Navigate to the desired location in File Explorer, right-click, select \"New,\" and then choose \"Folder.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is comparing the desktop features of Windows 10 and Windows 11 to determine which operating system better suits their needs. They prioritize having a modern interface with improved usability for touch devices and the ability to organize their workspaces. Which of the following statements BEST supports their decision?",
+    "explanation": "Windows 11 refreshes the desktop style with a center-aligned taskbar, rounded corners, and better spacing for touch control. Additionally, it makes the multiple desktops feature more accessible, which aligns with the user's priorities for a modern interface and workspace organization. While Windows 10 does offer a touch-optimized Start menu, it lacks the modern interface improvements (e.g., center-aligned taskbar, rounded corners) and enhanced multiple desktops feature that Windows 11 provides. The user prioritizes these features, making Windows 11 a better choice. Both Windows 10 and Windows 11 include a notification area and the ability to pin icons to the taskbar. These features are not unique to Windows 10 and do not address the user's specific priorities for a modern interface and workspace organization. Windows 11 does not eliminate the taskbar. Instead, it introduces a center-aligned taskbar, which is a key feature of its modern interface. Additionally, Windows 11 focuses on more than just touch-optimized features, such as improving workspace organization with multiple desktops.",
+    "options": [
+      "Windows 10 is better because it includes a notification area for background processes and pinned taskbar icons.",
+      "Windows 10 is better because it offers a touch-optimized Start menu and a traditional taskbar layout.",
+      "Windows 11 is better because it eliminates the need for a taskbar and focuses solely on touch-optimized features.",
+      "Windows 11 is better because it introduces a center-aligned taskbar, rounded corners, and improved multiple desktop accessibility."
+    ],
+    "correctAnswer": [
+      "Windows 11 is better because it introduces a center-aligned taskbar, rounded corners, and improved multiple desktop accessibility."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A digital forensics expert investigates a laptop that was completely powered down. They are looking for a hibernation file on the local hard drive. Which power mode would perform this?",
+    "explanation": "Hibernate mode suspends to disk. It saves any open but unsaved file data in memory to disk (as hiberfil.sys in the root of the boot volume) and then turns the computer off, which is also referred to as ACPI mode S4. A computer creates a hibernation file in the hybrid sleep mode and then goes into the standby state, referred to as hybrid sleep mode. Modern standby utilizes a device's ability to function in an S0 low-power idle mode to maintain network connectivity without consuming too much energy. Standby suspends to RAM, which cuts power to most devices but maintains power to the memory, also called ACPI modes S1-S3.",
+    "options": [
+      "Hibernate",
+      "Modern standby",
+      "Standby",
+      "Hybrid sleep"
+    ],
+    "correctAnswer": [
+      "Hibernate"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization has implemented a cloud-based email system to improve collaboration. A manager notices that emails sent from their desktop are not appearing in the \"Sent Items\" folder on their mobile device. What should the manager do to resolve this issue?",
+    "explanation": "Cloud-based email systems rely on synchronization to ensure that emails and folders are consistent across devices. Verifying and enabling synchronization for the \"Sent Items\" folder resolves the issue. Reinstalling the email application on the desktop is unnecessary and does not address the synchronization settings, which are the likely cause of the issue. Advising the manager to only send emails from their mobile device is not a practical solution and does not utilize the full functionality of the cloud-based email system. Disabling synchronization defeats the purpose of using a cloud-based email system, which is designed to provide seamless access and synchronization across devices.",
+    "options": [
+      "Check if the email system's synchronization feature is enabled for the \"Sent Items\" folder.",
+      "Reinstall the email application on the desktop to fix the synchronization issue.",
+      "Disable the synchronization feature on all devices to prevent further issues.",
+      "Advise the manager to only send emails from their mobile device to avoid the problem."
+    ],
+    "correctAnswer": [
+      "Check if the email system's synchronization feature is enabled for the \"Sent Items\" folder."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their desktop computer is running slowly, particularly when multiple applications are open. Upon investigation, you find that the system is set to prioritize background processes and has desktop visual effects enabled for best appearance. Which of the following actions would BEST address the issue?",
+    "explanation": "The Advanced System Settings allow you to adjust performance options, such as desktop visual effects and process prioritization. Changing these settings to prioritize foreground processes and optimize for best performance directly addresses the issue of slow performance when multiple applications are open. Disabling Windows Defender Firewall is not recommended as it compromises system security and does not address the root cause of the performance issue. Disabling unused hardware devices in Device Manager may free up minimal resources but is not a targeted solution for improving application performance or addressing process prioritization. Configuring sleep mode in power options only affects the system when it is idle and does not resolve the performance issue during active use.",
+    "options": [
+      "Configure the power options in System Settings to enable sleep mode when the system is idle.",
+      "Disable Windows Defender Firewall to free up system resources.",
+      "Adjust the performance options in Advanced System Settings to prioritize foreground processes and optimize for best performance.",
+      "Use the Device Manager to disable unused hardware devices."
+    ],
+    "correctAnswer": [
+      "Adjust the performance options in Advanced System Settings to prioritize foreground processes and optimize for best performance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What type of update introduces changes to OS features and tools in Windows Update?",
+    "explanation": "A Feature update is the correct answer because this type of update is released periodically and introduces changes to OS features and tools. It may also include new functionalities or improvements to the operating system. A Patch update is incorrect because it primarily addresses coding problems in the system or application files to improve reliability, security, or performance. It does not introduce new features or tools. A Security update is incorrect because it focuses on fixing vulnerabilities and protecting the system from threats like viruses and malware. It does not involve changes to OS features or tools. A Driver update is incorrect because it is used to update hardware device drivers to ensure compatibility and performance. It does not introduce changes to the operating system's features or tools.",
+    "options": [
+      "Driver update",
+      "Patch update",
+      "Feature update",
+      "Security update"
+    ],
+    "correctAnswer": [
+      "Feature update"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user has recently upgraded to Windows 11 and wants to set up two separate workspaces: one for business applications and another for personal apps and games. Which feature of the Windows 11 desktop should the user utilize to achieve this?",
+    "explanation": "Windows 11 makes the multiple desktops feature more accessible. This feature allows users to set up different workspaces, such as one for business apps and another for personal apps and games, which directly addresses the user's need in the scenario. The touch-optimized Start menu is a feature of Windows 10, not Windows 11. Additionally, the Start menu is not related to creating separate workspaces for different applications. The notification area is used to display icons for background processes and notifications. It does not provide functionality for setting up separate workspaces or managing multiple desktops. The taskbar pinning feature allows users to pin frequently used applications to the taskbar for quick access. While useful, it does not help in creating separate workspaces for business and personal applications.",
+    "options": [
+      "The notification area",
+      "The taskbar pinning feature",
+      "The touch-optimized Start menu",
+      "The multiple desktops feature"
+    ],
+    "correctAnswer": [
+      "The multiple desktops feature"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios best evaluates whether a computer system meets the Central Processing Unit (CPU), System Memory, and Storage Requirements for installing a new application?",
+    "explanation": "That the system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space is correct because it evaluates a scenario where the system meets all the application's requirements for CPU architecture, system memory (RAM), and storage space. The 64-bit CPU and OS are compatible with the application, and the system has sufficient RAM and storage space to install and run the application effectively. The system has a 32-bit CPU and OS, which are incompatible with the application's requirement for a 64-bit CPU and OS. While the RAM and storage space might be sufficient, the CPU architecture mismatch prevents the application from being installed or run. Although the system has a compatible 64-bit CPU and OS, it does not meet the application's minimum requirements for RAM (8GB required, but only 4GB available) and free storage space (100GB required, but only 50GB available). This would result in the application failing to install or run properly. While the system exceeds the application's CPU, RAM, and storage requirements, it lacks a dedicated graphics card, which is necessary for certain demanding applications like graphic design software or games. This omission would prevent the application from functioning as intended.",
+    "options": [
+      "The system has a 32-bit CPU and OS, 4GB of RAM, and 100GB of free storage space, but the application requires a 64-bit CPU and OS.",
+      "The system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space, meeting all the application's requirements.",
+      "The system has a 64-bit CPU and OS, 4GB of RAM, and 50GB of free storage space, but the application requires 8GB of RAM and 100GB of free storage space.",
+      "The system has a 64-bit CPU and OS, 16GB of RAM, and 1TB of free storage space, but the application requires a dedicated graphics card."
+    ],
+    "correctAnswer": [
+      "The system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space, meeting all the application's requirements."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is the Windows Settings app considered the preferred administrative interface over the Control Panel in modern versions of Windows?",
+    "explanation": "The Windows Settings app is the preferred administrative interface because it is touch-enabled and organizes configuration options into \"pages\" under main headings, making it more user-friendly and modern compared to the legacy Control Panel. Allowing users to execute advanced commands and scripts for system configuration describes the functionality of the Command Prompt or PowerShell, not the Windows Settings app. The Settings app is designed for graphical configuration, not command-line operations. Not all configuration options from the Control Panel are included in the Windows Settings app. Some legacy options still require the use of the Control Panel. While the Windows Settings app is the preferred interface, it is not the only one. The Control Panel and other tools can also be used for managing user accounts and devices.",
+    "options": [
+      "It is the only interface available for managing user accounts and devices.",
+      "It provides a touch-enabled interface and organizes configuration options into easily navigable headings.",
+      "It includes all legacy configuration options from the Control Panel.",
+      "It allows users to execute advanced commands and scripts for system configuration."
+    ],
+    "correctAnswer": [
+      "It provides a touch-enabled interface and organizes configuration options into easily navigable headings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST describes the importance of OS requirements for applications?",
+    "explanation": "A 64-bit application requires both a 64-bit CPU and a 64-bit OS platform to function. This is a fundamental compatibility requirement for software applications. Software applications are designed to run under specific operating systems. For example, macOS applications cannot run on Windows unless additional compatibility tools (like emulators) are used. 32-bit applications can run on a 64-bit operating system using a special compatibility environment, such as WOW64 (Windows on Windows 64-bit). While compatibility between Linux distributions is generally not an issue, some applications may still require manual compilation from source code if they are not released in a compatible package format for a specific distribution.",
+    "options": [
+      "Linux applications are always compatible with all Linux distributions without any modifications.",
+      "Applications designed for macOS can run on Windows without compatibility issues.",
+      "32-bit applications cannot run on a 64-bit operating system.",
+      "A 64-bit application requires both a 64-bit CPU and a 64-bit OS to function."
+    ],
+    "correctAnswer": [
+      "A 64-bit application requires both a 64-bit CPU and a 64-bit OS to function."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You would like to set Windows Update to delay updates for a week. Which of the following Windows Update settings would you use to configure the delay?",
+    "explanation": "By using the Pause Updates settings, you can delay applying updates for up to a week. Update History gives you access to several update logs, including feature updates, driver updates, and more. Advanced Options gives you access to a group of settings for configuring items, such as receiving updates for other Microsoft products and active hours when Windows will not reboot for an update. However, these options do not include a setting for delaying an update. Windows Insider Program is a software-testing program. You can select from three levels of participation in the program, but you cannot use the options to delay an update.",
+    "options": [
+      "Update History",
+      "Windows Insider Program",
+      "Pause Updates",
+      "Advanced Options"
+    ],
+    "correctAnswer": [
+      "Pause Updates"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates the effective use of cloud storage synchronization?",
+    "explanation": "A user editing a document on their laptop with the changes automatically updating on their phone via the cloud highlights the core functionality of cloud storage synchronization, where changes made on one device are automatically updated across all connected devices. This ensures files are always up-to-date and accessible. While uploading and deleting files from a local device can save space, it does not demonstrate synchronization, as the file is no longer accessible locally. Downloading and emailing a file does not involve synchronization; it is a manual process that bypasses the cloud's automatic updating capabilities. Pausing synchronization prevents updates, which is the opposite of demonstrating effective use of synchronization.",
+    "options": [
+      "A user edits a document on their laptop, and the changes automatically update on their phone via the cloud.",
+      "A user uploads a file to a cloud storage service and deletes it from their local device to save space.",
+      "A user downloads a file from their cloud storage to their desktop and emails it to a colleague.",
+      "A user pauses synchronization to prevent updates while using a metered internet connection."
+    ],
+    "correctAnswer": [
+      "A user edits a document on their laptop, and the changes automatically update on their phone via the cloud."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the impact of cloud-based email systems on collaboration within an organization?",
+    "explanation": "Cloud-based email systems enabling real-time synchronization of emails and folders, improving collaboration among employees, best describes the impact of cloud-based email systems on collaboration by emphasizing real-time synchronization, which ensures employees can work together seamlessly regardless of their location or device. Cloud-based email systems allowing employees to access emails from any device, but not supporting folder synchronization, incorrectly states that cloud-based email systems do not support folder synchronization, which is a key feature that enhances collaboration. Cloud-based email systems requiring employees to use a single device for accessing emails, limiting collaboration opportunities, misrepresents cloud-based email systems by suggesting they limit access to a single device, which is contrary to their purpose of enabling multi-device access. The description that cloud-based email systems are only suitable for personal use and do not support enterprise-level collaboration incorrectly claims that cloud-based email systems are unsuitable for enterprise-level collaboration, ignoring their widespread use in organizations for improving teamwork and communication.",
+    "options": [
+      "Cloud-based email systems are only suitable for personal use and do not support enterprise-level collaboration.",
+      "Cloud-based email systems allow employees to access emails from any device, but they do not support folder synchronization.",
+      "Cloud-based email systems enable real-time synchronization of emails and folders, improving collaboration among employees.",
+      "Cloud-based email systems require employees to use a single device for accessing emails, limiting collaboration opportunities."
+    ],
+    "correctAnswer": [
+      "Cloud-based email systems enable real-time synchronization of emails and folders, improving collaboration among employees."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Cindy wants to install a new application on her computer. This application requires the operating system to have 1 gigabyte of working memory to function properly. Which of the following system requirements does Cindy need to check for compatibility?",
+    "explanation": "Cindy should check the amount of RAM (random access memory) available on her system to see if she has the available memory to run 1 gigabyte of RAM. RAM is data storage that is lost when the system shuts down. Storage locations in RAM can be accessed in any order and simultaneously, and this allows programs to run more quickly than if they were dependent on accessing data stored on the hard drive or SSD. The CPU capacity refers to the central processing unit, which retrieves instructions, decodes them, and performs the program calculations. SSD is the solid-state drive, which is a storage device that stores data in semiconductor cells and retains the data when the system is shut down. VRAM (video random access memory) is the memory used to store image data that is displayed on a computer.",
+    "options": [
+      "RAM capacity",
+      "CPU capacity",
+      "SSD storage capacity",
+      "VRAM capacity"
+    ],
+    "correctAnswer": [
+      "RAM capacity"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an example of a distribution method for installing applications?",
+    "explanation": "Network-based installers are a distribution method for deploying applications. This involves copying the setup file to a shared folder on the network and running the setup file from there. It is a valid and commonly used method for distributing applications, especially in corporate environments. Running the application directly from the cloud without installation is not a distribution method for installing applications. Instead, it refers to cloud-based services or Software as a Service (SaaS), which do not require local installation. Writing custom code to create the application refers to the development of an application, not its distribution. Distribution methods involve how pre-developed applications are made available for installation, such as through network-based installers, physical media, or downloads. A physical hardware token is a security device used for authentication, not a method for distributing or installing applications. It is unrelated to the process of making applications available for installation.",
+    "options": [
+      "Using a network-based installer",
+      "Running the application directly from the cloud without installation",
+      "Writing custom code to create the application",
+      "Using a physical hardware token"
+    ],
+    "correctAnswer": [
+      "Using a network-based installer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-016",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An intern for a Windows server team is watching a server administrator verify the authenticity and integrity of an installer. Where did the administrator most likely get it from?",
+    "explanation": "When downloading an installer from an internet location, it is imperative to verify the package's authenticity and integrity and scan it for malware. Setup files can be distributed on physical media, such as CD/DVD or a USB thumb drive. USBs might be a secondary medium after it was downloaded from the internet first, however. If an administrator was pulling a file from a local share, it probably first came from the internet and should have been scanned during the initial download. ISO files stored on removable media or a host system are often used to install virtual machine operating systems. The file itself might be an ISO, but they would have had to get it from somewhere.",
+    "options": [
+      "ISO",
+      "Share drive",
+      "Internet download",
+      "USB"
+    ],
+    "correctAnswer": [
+      "Internet download"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-12.6-017",
+    "domain": "1.0 Operating Systems",
+    "objective": "12.6",
+    "module": "12.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization is experiencing issues with inconsistent permissions between their cloud-based resources in Google Cloud and their on-premise systems managed through Microsoft Active Directory. Employees are required to remember separate credentials for each environment, leading to frequent login issues and administrative overhead. After reviewing their setup, the IT team decides to implement identity synchronization. Which of the following outcomes would BEST resolve the organization's challenges?",
+    "explanation": "Identity synchronization allows for unified credentials and consistent permissions across cloud and on-premise environments. This directly addresses the organization's challenges of inconsistent permissions and the need for multiple credentials. Identity synchronization eliminates the need for separate credentials by unifying them. While permissions are synchronized, the solution also simplifies authentication by allowing a single set of credentials. Identity synchronization ensures consistent permissions across environments. Additionally, authentication is still required, but it is streamlined through the use of unified credentials. Identity synchronization not only unifies credentials but also synchronizes permissions and policies. Manual configuration of permissions would contradict the benefits of identity synchronization.",
+    "options": [
+      "Employees will use a single set of credentials, and permissions will be consistently applied across both environments.",
+      "Permissions will remain inconsistent, but employees will no longer need to authenticate to access resources.",
+      "Employees will still need separate credentials, but permissions will be synchronized between the environments.",
+      "Employees will use a single set of credentials, but permissions will need to be manually configured for each environment."
+    ],
+    "correctAnswer": [
+      "Employees will use a single set of credentials, and permissions will be consistently applied across both environments."
+    ],
+    "origin": "CertMaster"
+  }
+]

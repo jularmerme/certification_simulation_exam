@@ -8,6 +8,9 @@ Rules   : never drops a question (duplicates are kept and listed in
 """
 import glob, json, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import core2_checks
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "exam_assets")
 SRC_DIRS = ["study_material_core2", "practice_tests_core2"]
@@ -34,28 +37,20 @@ def main():
         for f in sorted(glob.glob(os.path.join(ASSETS, d, "*.json"))):
             bank += json.load(open(f, encoding="utf-8"))
 
-    problems = []
-    ids = [q.get("id") for q in bank]
-    if len(ids) != len(set(ids)):
-        problems.append("duplicate IDs: " + str(sorted({i for i in ids if ids.count(i) > 1})))
-    for q in bank:
-        if any(k not in q for k in REQUIRED):
-            problems.append(q.get("id", "?") + ": missing field")
-        elif q["type"] == "drag_drop":
-            problems.append(q["id"] + ": type drag_drop is not supported by the app - use 'matching'")
-        elif q["type"] == "matching":
-            ca = q["correctAnswer"]
-            if not (isinstance(ca, dict) and all(i in ca for i in q.get("items", []))
-                    and all(v in (q.get("options") or []) for v in ca.values())):
-                problems.append(q["id"] + ": matching needs items[], options[] and a {item: option} correctAnswer")
-        elif not all(a in (q.get("options") or []) for a in q["correctAnswer"]):
-            problems.append(q["id"] + ": correctAnswer not in options")
-        elif q["domain"] not in DOMAIN_WEIGHTS:
-            problems.append(q["id"] + ": domain '" + q["domain"] + "' not in domainWeights")
+    problems = core2_checks.check_bank(bank)
+
+    # Never lose questions: every ID already in the bank must still be in the rebuilt one.
+    # (The lesson files only cover Modules 11-15 and the originals, so rebuilding from them
+    #  alone would drop the questions that exist only inside questions_core2.json.)
+    prev_ids = [q["id"] for q in old["exams"]["220-1202"]["questionBank"]]
+    new_ids = {q.get("id") for q in bank}
+    lost = [i for i in prev_ids if i not in new_ids]
+    if lost and "--force" not in sys.argv:
+        problems.append("this rebuild would DROP %d of the %d questions now in questions_core2.json "
+                        "(first ones: %s). Add their source files, or pass --force if you really mean it."
+                        % (len(lost), len(prev_ids), ", ".join(lost[:5])))
     if problems:
-        print("NOT WRITTEN - fix these first:")
-        for p in problems:
-            print("  ", p)
+        core2_checks.report("questions_core2.json", problems)
         sys.exit(1)
 
     hdr.update(domainWeights=DOMAIN_WEIGHTS, questions=EXAM_LENGTH, timeLimit=TIME_LIMIT)

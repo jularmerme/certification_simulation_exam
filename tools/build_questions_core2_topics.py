@@ -9,6 +9,9 @@ Rules  : never drops a question; ids must be unique and must not collide with
 """
 import glob, json, os, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import core2_checks
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "exam_assets")
 TOPIC_ORDER = [
@@ -74,27 +77,11 @@ def main():
     if os.path.exists(mp):
         main_ids = {q["id"] for q in json.load(open(mp, encoding="utf-8"))["exams"]["220-1202"]["questionBank"]}
 
-    problems, ids = [], [q.get("id") for q in bank]
-    if len(ids) != len(set(ids)):
-        problems.append("duplicate IDs: " + str(sorted({i for i in ids if ids.count(i) > 1})))
-    for i in sorted(set(ids) & main_ids):
-        problems.append(i + ": id also exists in questions_core2.json")
-    for q in bank:
-        if any(k not in q for k in REQUIRED):
-            problems.append(q.get("id", "?") + ": missing field")
-        elif q["type"] == "drag_drop":
-            problems.append(q["id"] + ": drag_drop is not supported - use 'matching'")
-        elif q["type"] == "matching":
-            ca = q["correctAnswer"]
-            if not (isinstance(ca, dict) and all(i in ca for i in q.get("items", []))
-                    and all(v in (q.get("options") or []) for v in ca.values())):
-                problems.append(q["id"] + ": malformed matching question")
-        elif not all(a in (q.get("options") or []) for a in q["correctAnswer"]):
-            problems.append(q["id"] + ": correctAnswer not in options")
+    problems = core2_checks.check_bank(bank, extra_required=("topic",))
+    for i in sorted({q.get("id") for q in bank} & main_ids):
+        problems.append(str(i) + ": id also exists in questions_core2.json")
     if problems:
-        print("NOT WRITTEN - fix these first:")
-        for p in problems:
-            print("  ", p)
+        core2_checks.report("questions_core2_topics.json", problems)
         sys.exit(1)
 
     unknown = sorted({q["topic"] for q in bank} - set(TOPIC_ORDER))

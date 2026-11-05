@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "CM2-19.1-001",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A security administrator wants to set up anomalistic monitoring around behavioral-based user activity. Which of the following could the administrator implement for monitoring? (Select three.)",
+    "explanation": "Monitoring login times are typically used to see if an account is logging in at an unusual time of the day or night or during the weekend.\n\nConcurrent logins are another behavioral-based monitoring mechanism. Most users should only login to a single device at a time, so the timeout/screen lock locks the desktop if the device detects no user-input device activity.\n\nFailed attempts can be a sign of brute force or credential stuffing attacks, or otherwise malicious activity. The timeout/screen lock locks the desktop if the device detects no user-input device activity.",
+    "options": [
+      "Login times",
+      "Screen lock",
+      "Concurrent logins",
+      "Failed attempts"
+    ],
+    "correctAnswer": [
+      "Login times",
+      "Concurrent logins",
+      "Failed attempts"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-002",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While configuring a workstation for secure operations, which approach is best for reducing potential vulnerabilities?",
+    "explanation": "The best approach is to temporarily disable Bluetooth and file transfer services unless actively in use. Disabling unnecessary services reduces the attack surface by limiting the number of entry points available to threat actors. Attackers critical network-related services like DHCP and DNS are not practical for normal operations, as they are essential for connectivity and functionality.\n\nEnabling all services to fully test functionality before deployment increases the risk of vulnerabilities unaddressed. Disabling auto-update services to prevent bugs and glitches is a poor practice for maintaining updated software; bugs and glitches can occur, but the risks they pose are generally manageable for employee workstations.",
+    "options": [
+      "Disabling auto-update services to prevent bugs and glitches.",
+      "Enabling all services to fully test functionality before deployment.",
+      "Disabling DHCP and DNS to reduce the attack surface.",
+      "Temporarily disabling Bluetooth and file transfer services unless actively in use."
+    ],
+    "correctAnswer": [
+      "Temporarily disabling Bluetooth and file transfer services unless actively in use."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-003",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it essential to physically secure portable devices when in public spaces?",
+    "explanation": "It is important to secure portable devices to ensure they are not stolen or lost. Portable devices are at high risk of theft in public spaces, and physical security is a primary measure that physical theft.\n\nPreventing nearby users from viewing the screen is a privacy measure that addresses shoulder surfing, not the primary concern of securing devices against theft.\n\nCleanliness policies and protection against accidental damage, while important, do not address the primary concern of securing devices against theft.\n\nTo comply with organizational policies is a secondary consideration; the primary concern for physical security in public spaces is preventing theft or loss.",
+    "options": [
+      "To comply with organizational policies.",
+      "To ensure they are not stolen or lost.",
+      "To prevent damage in crowded spaces.",
+      "To prevent unauthorized access."
+    ],
+    "correctAnswer": [
+      "To ensure they are not stolen or lost."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-004",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security manager is setting a password policy for users. Which of the following is the best security practice when it comes to passwords?",
+    "explanation": "Length is preferable to the use of a highly cryptic mixing of character types. It will take an attacker significantly longer to crack a passphrase rather than a much shorter but complex password. The National Institute of Standards and Technology (NIST) guidance also deprecates password expiration except when a breach is discovered. Many organizations enforce password expiration times, which makes passwords difficult to remember and causes users to write them down.\n\nUsers should choose a memorable phrase but should not use any personal information in the password. Anything that a threat actor could discover or guess should not be used in a password.",
+    "options": [
+      "Character mix",
+      "Length",
+      "Personal information",
+      "Password expiration"
+    ],
+    "correctAnswer": [
+      "Length"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-005",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is a recommended security practice associated with the default administrator account?",
+    "explanation": "Disabling the default administrator account, when possible, is a recommended security practice. Administrative privileges should instead be assigned to individual accounts. Sharing passwords undermines security, using the account for routine tasks inhibits effective monitoring of user activity, and bypassing logging removes the ability to track and monitor critical actions.",
+    "options": [
+      "Configuring the account to bypass logging.",
+      "Using it for routine tasks.",
+      "Disabling the account when possible.",
+      "Sharing the password among all administrative personnel."
+    ],
+    "correctAnswer": [
+      "Disabling the account when possible."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-006",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are assisting the security administrator and discover that a user was logged in to their workstation after hours.\n\nAfter further investigation, you discover that the user's account was compromised and someone used the account to steal sensitive data.\n\nWhich of the following could have BEST prevented this from happening?",
+    "explanation": "Because the user account was accessed after work hours, the best solution would have been to restrict the user's login times to work hours only. If this policy were in place, the account could not have been used after hours.\n\nRequiring a stronger password would not have been the best solution to prevent this from happening, as the account could still have been compromised.\n\nA password reset policy would not be implemented, as this can actually reduce the security of a scenario.\n\nImplementing a screen lock would not have been the best solution in this scenario, as the user was done for the workday and had already logged off of the computer. The attacker still knew the user's password.",
+    "options": [
+      "Require a stronger password.",
+      "Restrict the user's login times to work hours only.",
+      "Implement a screen lock.",
+      "Implement a password reset policy."
+    ],
+    "correctAnswer": [
+      "Restrict the user's login times to work hours only."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-007",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are establishing a new password policy and want to make sure that if a user puts in the wrong password three times, their account will be locked until the administrator unlocks it.\n\nWhich of the following should you configure?",
+    "explanation": "You should configure a failed attempts lockout policy in this scenario. If a user types in the incorrect password a predefined number of times, their account will be locked for a specified period of time or until the administrator manually unlocks the account.\n\nRestricting a user's login times would prevent someone from accessing the user's account after work hours. This would not lock a user's account after putting in the wrong password three times.\n\nScreen savers come on when a system is idle for a set amount of time (usually a few minutes). When the user returns to the computer, the user should have to enter their password to get back on the computer. This would not lock a user's account after putting in the wrong password three times.\n\nAutorun is a Windows feature that automatically runs executable files when a USB drive or optical disc is inserted.",
+    "options": [
+      "User login times",
+      "Screen save lock",
+      "Failed attempts lockout policy",
+      "Autorun deactivation"
+    ],
+    "correctAnswer": [
+      "Failed attempts lockout policy"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-008",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "One of the Windows workstations you manage has four user accounts defined on it. Two of the users are Limited users, while the third (your group) is an Administrative user. The fourth (Guest) user account has been enabled to allow management employees convenient workstation access.\n\nEach Limited and Administrative user has been assigned a strong password. File and folder permissions have been assigned to prevent users from accessing each other's files. Autorun has also been disabled on this system.\n\nWhich of the following actions is MOST likely to increase this system's security?",
+    "explanation": "The Guest user account has no password and provides too much access to the system. Unless its use is absolutely required, the Guest user account should remain disabled.\n\nChanging your Administrative user account to a Limited user would prevent you from completing management tasks on the workstation.\n\nChanging the two Limited user accounts to Administrative users would decrease the system's security, as would enabling Autorun.",
+    "options": [
+      "Disable the Guest account.",
+      "Enable Autorun on the system.",
+      "Change your user account to a Limited user.",
+      "Change the two Limited user accounts to Administrative users."
+    ],
+    "correctAnswer": [
+      "Disable the Guest account."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-009",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following security practices is the BEST example of the principle of least privilege?",
+    "explanation": "The principle of least privilege specifies that users should only have the degree of access to the workstation that is necessary for them to complete their work. Making all users Limited users except for one, who is responsible for maintaining the system, is an example of the principle of least privilege.\n\nThe other practices listed are workstation security best practices, but they are not necessarily examples of the principle of least privilege.",
+    "options": [
+      "All users on a Windows workstation have been assigned strong passwords.",
+      "All users on a Windows workstation are Limited users except for one, who is responsible for maintaining the system.",
+      "Autorun has been disabled on a Windows workstation.",
+      "The Guest user account on a Windows workstation has been disabled."
+    ],
+    "correctAnswer": [
+      "All users on a Windows workstation are Limited users except for one, who is responsible for maintaining the system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.1-010",
+    "domain": "2.0 Security",
+    "objective": "19.1.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician assists Joe, an employee in the sales department who needs Administrator privileges. Later, Joe discovers that he has access to the salaries in the payroll database.\n\nWhich of the following security practices was violated?",
+    "explanation": "The technician violated the principle of least privilege, which is the practice of limiting user access rights to the bare minimum that a user needs to perform their work.\n\nStrong passwords are recommended to prevent unauthorized access, but in this scenario, the database was not password-protected.\n\nMulti-factor authentication is the process of validating a user by validating two or more claims presented by them, such as a password and mobile phone presence or a fingerprint.\n\nSecurity personnel can grant access to a physical area using the entry control roster. A database is not normally protected by physical security.",
+    "options": [
+      "The principle of least privilege",
+      "Multi-factor authentication",
+      "Strong password policy",
+      "Entry control roster"
+    ],
+    "correctAnswer": [
+      "The principle of least privilege"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-001",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows feature can you use to encrypt a hard drive volume?",
+    "explanation": "BitLocker was introduced in Windows Vista and is used to encrypt an entire volume (not just individual files and folders). BitLocker is designed to protect all data on a volume, even if the drive is moved to another computer.\n\nBitLocker To Go is used to encrypt USB drives and other hard drives.\n\nEncrypting File System (EFS) is a component of the NTFS file system that allows file encryption. EFS is not a Windows feature that is used to encrypt a hard drive volume.\n\nNTFS is the file system used in modern Windows operating systems. It is a Windows feature that is used to encrypt a hard drive volume.",
+    "options": [
+      "BitLocker",
+      "EFS",
+      "NTFS",
+      "BitLocker To Go"
+    ],
+    "correctAnswer": [
+      "BitLocker"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-002",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user has a file that contains sensitive data. Which of the following security technologies should he or she use to encrypt the single file?",
+    "explanation": "Encrypting File System (EFS) is a Windows feature that can encrypt a single file or multiple files and folders.\n\nBitLocker is a Windows feature that encrypts an entire volume.\n\nSingle sign-on (SSO) permits a user to employ the same credentials automatically log in to other sites and services. SSO is not used for encryption.\n\nAn administrative share is used by administrators to access system drives. It is not used for encryption.",
+    "options": [
+      "BitLocker",
+      "EFS",
+      "Single sign-on",
+      "Administrative share"
+    ],
+    "correctAnswer": [
+      "EFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-003",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows security manager is in charge of the vulnerability assessment program for the enterprise. They are looking at workstation security. They are reading about a \"walled garden\" approach to see how they can receive antivirus and OS updates for their network. What should they note?",
+    "explanation": "OS vendors commonly use the \"walled garden\" model of software distribution, in which updates only come from a trusted source. Updates are distributed from an approved store, such as Apple's App Store for Apple mobile products or the Windows Store and Windows Update for OS. These are considered trusted sources for the respective devices and applications.\n\nOne of the problems with legacy versions of Windows was that an optical disc is inserted, or a USB drive is attached, Windows would automatically run commands defined in an autorun.inf file. AC or access control lists use the list of rules that control permissions for objects such as files or folders.\n\nAll of the primary means of detection is to use a signature or behavioral-based monitoring mechanism. Most users should only sign in to one computer at a time.",
+    "options": [
+      "Trusted source",
+      "Concurrent logins",
+      "Autorun",
+      "ACL"
+    ],
+    "correctAnswer": [
+      "Trusted source"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-004",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You want a security solution that protects your entire hard drive, preventing access even when it is moved to another system. Which of the following is the BEST method for achieving your goal?",
+    "explanation": "BitLocker is a Microsoft security solution that encrypts the entire contents of a hard drive, protecting all files on the disk. BitLocker uses a special key, which is required to unlock the hard drive. This cannot unlock/decrypt a drive simply by moving it to another computer.\n\nEFS is a Windows file encryption option, but it only encrypts individual files. Encryption and decryption are automatic and dependent upon the file's creator and whether other users have Read permissions.\n\nA virtual private network (VPN) uses an encryption protocol (such as IPsec, PPTP, or L2TP) to establish a secure communication channel between two hosts or between one site and another site. Data that passes through the unsecured network is encrypted and protected.",
+    "options": [
+      "IPsec",
+      "EFS",
+      "VPN",
+      "BitLocker"
+    ],
+    "correctAnswer": [
+      "BitLocker"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-005",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When you arrive at your company, you discover that a hard drive with your customers' sensitive information has been stolen.\n\nYou feel confident that the thief will not be able to view the data on the hard drive because you had previously taken security precautions to protect the data in case the hard drive was stolen.\n\nWhich of the following precautions is the MOST likely solution you used to protect the data on the hard drive?",
+    "explanation": "BitLocker checks the integrity of the early boot components and the boot configuration data by using the Trusted Platform Module (TPM) to ensure that the data is accessible only when the computer system appears unaltered. Also, encrypted disk data must be in the same computer it was in when it was originally encrypted with BitLocker. This means there is no way to obtain the data even if the drive is placed in a different computer, as they wouldn't be able to access the data on that drive. The data stays encrypted.\n\nWhile BitLocker is designed to protect hard drives, BitLocker To Go is designed to protect removable storage devices, such as flash drives.\n\nMicrosoft Defender is an antivirus program designed to protect the Windows system from malware. This program would have no effect on preventing access to a stolen hard drive's data.\n\nWindows Security is a program that scans for security threats, malware, and viruses. It would have no effect on preventing access to a stolen hard drive's data.",
+    "options": [
+      "BitLocker To Go",
+      "Windows Security",
+      "BitLocker with TPM",
+      "Microsoft Defender"
+    ],
+    "correctAnswer": [
+      "BitLocker with TPM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-006",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is true of the Windows BitLocker program?",
+    "explanation": "BitLocker is designed to protect against offline access only.\n\nBitLocker is not designed to protect files against online access. This is the purpose of EFS.\n\nBitLocker is not designed to encrypt individual files. BitLocker encrypts the entire drive.\n\nBitLocker is not designed for use on the Home edition of Windows 10 or later. BitLocker is only available on the Ultimate and Enterprise editions.",
+    "options": [
+      "BitLocker is designed for use on the Home edition of Windows 10 and later.",
+      "BitLocker is designed to protect files against offline and online access.",
+      "BitLocker is designed to protect files against offline access only.",
+      "BitLocker is designed to encrypt individual files."
+    ],
+    "correctAnswer": [
+      "BitLocker is designed to protect files against offline access only."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-007",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Employees in a small business have a habit of transferring files between computers using a USB flash drive. The employees often bring in these files from outside the office.\n\nRecently, a computer was infected with malware from a USB flash drive even though the employee did not access any files.\n\nWhich of the following options would prevent this type of issue from installing?",
+    "explanation": "Disabling Autorun would prevent malware from installing even if a flash drive were attached.\n\nSetting strong passwords is a best practice, but this would not prevent malware on a flash drive from installing.\n\nBitLocker is used to encrypt drives. It will not prevent malware on a flash drive from installing.\n\nConfiguring screen savers to require a password is a best practice, but doing so would not prevent malware from installing.",
+    "options": [
+      "Configure screen savers to require a password.",
+      "Set strong passwords.",
+      "Disable Autorun.",
+      "Enable BitLocker."
+    ],
+    "correctAnswer": [
+      "Disable Autorun."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-008",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user stores sensitive data on a USB flash drive. Which of the following can they use to encrypt the data on this drive?",
+    "explanation": "BitLocker To Go can encrypt a USB flash drive.\n\nSingle sign-on (SSO) permits a user to employ the same credentials to automatically log in to other sites and services. SSO is not used for encryption.\n\nRun as administrator is used to run an application with elevated privileges, not encrypt data.\n\nAn administrative share is used by administrators to access system drives. It's not used for encryption.",
+    "options": [
+      "BitLocker To Go",
+      "Single sign-on",
+      "Run as administrator",
+      "Administrative share"
+    ],
+    "correctAnswer": [
+      "BitLocker To Go"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-009",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following components is a special hardware chip included on a computer's motherboard that contains software that generates and stores cryptographic keys?",
+    "explanation": "A Trusted Platform Module (TPM) is a special hardware chip included on a computer's motherboard that contains software that generates and stores cryptographic keys.\n\nBitLocker is an encryption program, not a hardware chip.\n\nA USB device saves the BitLocker key on a system that does not have a TPM chip.\n\nThe TPM chip must be enabled in the BIOS/UEFI, but the BIOS/UEFI is not the TPM itself.",
+    "options": [
+      "USB device",
+      "Trusted Platform Module (TPM)",
+      "BitLocker partition",
+      "BIOS/UEFI"
+    ],
+    "correctAnswer": [
+      "Trusted Platform Module (TPM)"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.2-010",
+    "domain": "2.0 Security",
+    "objective": "19.2.15",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You need to use a common USB flash drive to transport important sensitive information for your organization.\n\nWhich of the following would be the BEST program for protecting the data on flash drive?",
+    "explanation": "BitLocker To Go encrypts removable flash drives. You can use BitLocker To Go to encrypt the data on a flash drive. The only way to decrypt the data on the flash drive is through the recovery password. Using BitLocker To Go and not sharing the recovery password would keep the data on the drive secure.\n\nA drive is encrypted program designed to be used on your hard drive, not on USB-removable devices. Most BitLocker drives use FAT32 or exFAT format.\n\nFiles that are encrypted with EFS, or Encrypting File System, lose their encryption when they are copied to a USB flash drive, which is commonly formatted with FAT32 or exFAT.\n\nMicrosoft Defender is an antivirus program for Windows that does not encrypt files on a flash drive.",
+    "options": [
+      "Microsoft Defender",
+      "EFS",
+      "BitLocker To Go",
+      "BitLocker"
+    ],
+    "correctAnswer": [
+      "BitLocker To Go"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-001",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with installing a web browser on a new company laptop. The company policy mandates that all software installations must prioritize security and integrity.\n\nWhich of the following actions BEST ensures that the browser installation complies with this policy?",
+    "explanation": "Downloading the browser installer from a vendor's official website and verifying its integrity using the hash ensures that the source is trusted. Verifying the integrity of the installer using the provided hash further ensures that the file has not been tampered with or corrupted during the download process. This approach aligns with the company's priority for security and integrity.\n\nThird-party websites may not be trustworthy. They could host modified or malicious versions of the software, which would violate the company's policy of prioritizing security and integrity of the software.\n\nFile-sharing platforms are often unregulated and may host malicious or compromised software. Downloading from such a source poses a significant security risk and does not comply with the company's policy of prioritizing secure sources.\n\nUsing a pre-installed browser on the laptop without verifying its source or integrity means multiple systems with all potentially unwanted programs (PUPs). Verifying the integrity of the software is crucial to ensure compliance with security policies.",
+    "options": [
+      "Download the browser installer from a third-party website that claims to offer faster download speeds.",
+      "Download the browser installer from a vendor's official website and verify its integrity using the hash.",
+      "Use a pre-installed browser on the laptop without verifying its source or integrity.",
+      "Download the browser installer from a file-sharing platform where multiple users have uploaded the software."
+    ],
+    "correctAnswer": [
+      "Download the browser installer from a vendor's official website and verify its integrity using the hash."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-002",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While browsing the internet, you want to make sure that you are using does not store your search history, cache, or password information.\n\nWhich of the following can you enable to prevent this from happening?",
+    "explanation": "Private browsing mode lets you visit websites without the browser keeping search history, cookies, or password information.\n\nA pop-up blocker keeps pop-ups from appearing while browsing a website. However, it does not prevent the browser from storing your search history, cookies, or password information.\n\nIn order for browsers to quickly retrieve websites, they often save all the locations visited, which is referred to as being cached. Although clearing the cache can improve browser performance, it does not prevent the browser from storing your search history, cookies, or password information.\n\nOnce you've created a browser account, there is a settings feature that lets you log into a browser from multiple devices with all information, including bookmarks, password information, and all security settings, synced. However, this feature does not prevent the browser from storing your search history, cookies, or password information.",
+    "options": [
+      "Private browsing mode",
+      "Data cache clearing",
+      "Browser synchronization",
+      "Pop-up blocker"
+    ],
+    "correctAnswer": [
+      "Private browsing mode"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-003",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is browser patching considered an essential security practice?",
+    "explanation": "Browser patching is critical because it addresses known security vulnerabilities that could be exploited by attackers. By applying patches, users ensure their browser is equipped with the latest protections, reducing the risk of malware, phishing, and other cyber threats.\n\nWhile updates may occasionally improve the user interface, this is not the primary purpose of patching. The main purpose is to address security vulnerabilities, not interface design.\n\nBrowser patching does not involve installing new extensions. Extensions are separate add-ons that users integrate into the browser, and this is separate from the browser's core security updates.\n\nBrowser patching does not directly block access to untrusted websites instead, it strengthens the browser's defenses against potential threats, such as malicious code or vulnerabilities.",
+    "options": [
+      "It automatically installs new browser extensions for improved functionality.",
+      "It ensures the browser interface remains user-friendly.",
+      "It updates the browser to protect against vulnerabilities.",
+      "It prevents the browser from accessing untrusted websites."
+    ],
+    "correctAnswer": [
+      "It updates the browser to protect against vulnerabilities."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-004",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an issue with using an Ad blocker extension on your web browser?",
+    "explanation": "Ad blocker extensions work by blocking advertisements and other elements on web pages. However, some websites rely on ads or specific scripts for functionality. When an Ad blocker blocks these elements, it can interfere with the proper functioning of the website, causing certain features or even the entire page to stop working as intended. Additionally, some websites detect Ad blockers and restrict access until the Ad blocker is disabled.\n\nAd blocker extensions do not interfere with the browser's ability to retain password information. Password management is handled separately by the browser's password manager, and Ad blockers do not affect this functionality.\n\nAd blockers are not inherently a security threat that is stored permanently in the browser. However, as with any browser extension, it is important to ensure that the Ad blocker is from a trusted source to avoid potential security risks. Trusted Ad blockers do not compromise password security.\n\nAd blockers do not interfere with the synchronization of other browser settings. Bookmark synchronization is managed by the browser's sign-in and sync features, which operate independently of Ad blocker extensions.",
+    "options": [
+      "It can cause certain sites to no longer work on specific web pages.",
+      "It can prevent the web browser from retaining password information.",
+      "It can cause synchronization from one computer to the other.",
+      "It can be a security risk to your stored password information."
+    ],
+    "correctAnswer": [
+      "It can cause certain sites to no longer work on specific web pages."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-005",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are reviewing the browser settings for your organization's employees and notice that several browsers have been configured with a default search provider that redirects search results to unknown websites.\n\nAfter investigating, you find that this provider was installed as part of a browser extension.\n\nWhat is the BEST course of action to address this issue?",
+    "explanation": "A default search provider that redirects users to unknown websites poses a significant security and privacy risk. Removing the extension and resetting the search provider eliminates this risk, restoring control over browsing data and preventing further exposure to potentially malicious or unwanted redirections. This action is the best course of action.\n\nEven if the search provider does not appear actively malicious, redirecting to unknown websites is a security risk, as it could expose users to malicious content or compromise your privacy settings, which could reflect a privacy or compromise your privacy settings, which could be addressed by removing the resetting search provider.\n\nWhile evaluating permissions and reviews is a good practice, this option is incorrect because the presence of a search provider redirecting to unknown websites already indicates a significant risk. Immediate removal is the correct course of action to mitigate potential harm and productivity.\n\nDisabling all extensions is an overly broad action that could disrupt employee workflow and productivity. The issue should be addressed specifically by removing the problematic extension and resetting the search provider.",
+    "options": [
+      "Leave the default search provider as it is, as it does not appear to be actively malicious.",
+      "Disable all browser extensions to prevent further issues with unwanted search results.",
+      "Evaluate the extension's permissions and reviews, then decide whether to keep or remove it.",
+      "Immediately remove the extension and reset the default search provider to a trusted one."
+    ],
+    "correctAnswer": [
+      "Immediately remove the extension and reset the default search provider to a trusted one."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-006",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is issued to a website in order for it to be validated as a trusted website?",
+    "explanation": "A digital certificate is the correct answer because it is an electronic document issued by a trusted Certificate Authority (CA) that verifies the identity of a website. When a website has a digital certificate, it is encrypted and connections and confirms to users and browsers that the website is authentic and can be trusted.\n\nA browser extension is a piece of software that adds functionality to a web browser, such as toolbars or additional tools. Extensions are not related to website validation or trust; they are used for enhancing or modifying a browser's functionality.\n\nA hash code is a cryptographic function used to verify the integrity of data, such as ensuring that a downloaded file has not been tampered with. While hash codes are important for verifying data integrity, they are not issued to websites for validation as trusted entities.\n\nDNS (Domain Name System) is a system that translates domain names (e.g., www.example.com) into IP addresses so browsers can load websites. DNS is essential for navigating the internet, but it does not validate a website as trusted or secure.",
+    "options": [
+      "Hash code",
+      "Extension",
+      "Digital certificate",
+      "DNS"
+    ],
+    "correctAnswer": [
+      "Digital certificate"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-007",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a risk associated with using a web browser password manager?",
+    "explanation": "If a hacker gains access to the browser account (e.g., by stealing the password management credentials), they potentially access all the passwords stored in the password manager. This is a significant security risk because compromising the browser account can lead to a full compromise of all stored credentials.\n\nPassword managers in modern browsers are designed to work with most web pages, including newer ones. While there may occasionally be compatibility issues with certain sites that do not present sign-in forms in a standard way, this is not a common inherent limitation of password managers.\n\nBrowser password managers are capable of generating and storing complex passwords. In fact, one of their key features is the ability to suggest and save strong, unique passwords for different websites, which is a security feature, not a limitation.\n\nMost modern web browser password managers do not impose a limit on the number of passwords you can store. The storage capacity is generally tied to the user's account and is sufficiently large for practical use.",
+    "options": [
+      "Web browser password managers cannot store complex passwords.",
+      "Passwords stored in the password manager may not work on web pages.",
+      "You are limited to the number of password manager can be stored on the browser.",
+      "Signing in with the browser password gives a hacker control over all passwords stored on the browser."
+    ],
+    "correctAnswer": [
+      "Signing in with the browser password gives a hacker control over all passwords stored on the browser."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-008",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with setting up browser profiles for a team of remote employees. The goal is to ensure that each employee can seamlessly access their bookmarks, saved passwords, and browsing history across multiple devices.\n\nAdditionally, you want to minimize the risk of data loss if an employee's device is lost or damaged.\n\nWhich of the following actions should you take to achieve this goal?",
+    "explanation": "Enabling sign-in and data synchronization allows employees to sync their settings, bookmarks, saved passwords, and browsing history across multiple devices. This ensures seamless access to data and minimizes the risk of data loss if a device is lost or damaged, as the data is compatible with modern browsers like Chrome, Edge, and Firefox.\n\nManual export and import processes are time-consuming and prone to error. If data changes frequently, this method would require constant updates, making it inefficient and less reliable than synchronization, which automates the process.\n\nPrivate browsing mode does not save browsing history, bookmarks, or passwords. While it enhances privacy by not retaining data, it does not support synchronization of data across devices, which is required for seamless access.\n\nWhile disabling extensions and plug-ins may improve security, it does not necessarily help the remote employees access their data across devices, nor does it help the mentioned issue of ensuring access without a security method for syncing data.",
+    "options": [
+      "Disable all browser extensions and plug-ins to enhance security.",
+      "Enable browser sign-in and data synchronization for each employee's browser profile.",
+      "Instruct employees to manually export and import their browser settings and bookmarks between devices.",
+      "Configure the browser to operate in private browsing mode by default."
+    ],
+    "correctAnswer": [
+      "Enable browser sign-in and data synchronization for each employee's browser profile."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-009",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are browsing a website that requires you to enter sensitive personal information.\n\nUpon accessing the site, your browser displays a warning indicating that the site's SSL/TLS certificate is invalid.\n\nWhat is the MOST appropriate action to take in this scenario to ensure your data remains secure?",
+    "explanation": "Verifying the certificate details allows you to determine if the issue is a legitimate misconfiguration or a potential security threat. If everything checks out and you have reason to trust the site's authenticity and security before entering sensitive personal information before proceeding.\n\nAn invalid SSL/TLS certificate is a significant risk, as it could indicate that the site is compromised or that you are being redirected to a malicious site. Proceeding without caution could compromise your data and leave it vulnerable to interception.\n\nDisabling browser warnings permanently removes the browser's security feature designed to protect you from potential threats. It also disables protection against similar issues on other websites, significantly increasing your security risk.\n\nUsing a different browser does not resolve the issue of an invalid SSL/TLS certificate or guarantee that your data will be safe. The issue is likely related to the server's certificate, not the browser being used to access the site.",
+    "options": [
+      "Verify the certificate details and contact the website administrator if necessary.",
+      "Proceed with entering your information since the site might still be safe.",
+      "Disable your browser's security warnings temporarily to access the site.",
+      "Use a different browser to bypass the warning and access the site."
+    ],
+    "correctAnswer": [
+      "Verify the certificate details and contact the website administrator if necessary."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.3-010",
+    "domain": "2.0 Security",
+    "objective": "19.3.11",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A developer wants to create functionality for their web browser by making API calls on the back end. What should the developer build?",
+    "explanation": "Extensions can change or improve a feature via an application programming interface (API). The extension must be granted specific permissions to make configuration changes, they can run scripts to interact with the loaded webpage in the browser's sandbox.\n\nPlug-ins play an active role of some content of a webpage embedded in a web page, such as Flash, Shockwave, or other audio/multimedia formats.\n\nApps support management of a webpage using JavaScript to install, uninstall, or launch applications, but they are essentially a means of opening a document without a specific URL in a web browser window.\n\nThemes change the appearance of the browser using custom images and color schemes.",
+    "options": [
+      "Extension",
+      "Apps",
+      "Plug-ins",
+      "Themes"
+    ],
+    "correctAnswer": [
+      "Extension"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-001",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When evaluating the effectiveness of desktop alerts and notifications in identifying workstation security issues, which of the following is the MOST critical factor to consider?",
+    "explanation": "The primary purpose of desktop alerts and notifications is to provide actionable and accurate information about potential security threats. If alerts are not relevant or accurate, they may lead to false positives or missed threats, reducing their overall effectiveness in identifying and addressing workstation security issues.\n\nWhile the frequency of alerts can be a consideration, it is not the most critical factor. Desktop alerts can be fine-tuned, but when users are not relevant or accurate, notifications, but the focus should be on ensuring the alerts are accurate and informative, not just how frequently they are issued.\n\nDesktop alerts and notifications are not designed to resolve issues automatically. Their role is to inform users of potential problems, leaving the resolution of the IT team or workstation itself, not on the user's device and the ability to the integrity of the alerts.\n\nWhile a clean and user-friendly design enhances usability, it is not the most critical factor in evaluating the effectiveness of desktop alerts. The primary focus should be on the alerts' ability to provide accurate and relevant information that aids in identifying security threats.",
+    "options": [
+      "The frequency of alerts generated by the system.",
+      "The ability of the alerts to automatically resolve security issues.",
+      "The accuracy and relevance of the alerts to actual security threats.",
+      "The visual design and user interface of the alert notifications."
+    ],
+    "correctAnswer": [
+      "The accuracy and relevance of the alerts to actual security threats."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-002",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a malware infection. You have run multiple anti-malware scans, but remnants of the malware remain on the system. Which of the following is your NEXT step?",
+    "explanation": "Even after running anti-malware scans, remnants of the malware may remain. Research to determine if specific files, Registry keys, or settings need to be manually removed to completely eliminate all traces of the infection.\n\nIf you have run multiple anti-malware scans, running will make a difference unless settings have been changed. In this scenario, there are still some additional steps to take.\n\nFormatting and reinstalling Windows is the absolute last option if remnants cannot be removed; it should only be considered after exhausting other options.\n\nNever replace the hard drive because of a malware infection.",
+    "options": [
+      "Manually remove any files or Registry keys.",
+      "Format and reinstall Windows.",
+      "Replace the hard drive.",
+      "Continue running anti-malware scans."
+    ],
+    "correctAnswer": [
+      "Manually remove any files or Registry keys."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-003",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following should you do immediately after a malware infection is confirmed?",
+    "explanation": "Quarantining the infected system is the first and most critical step after confirming a malware infection. This action prevents the malware from spreading to other systems on the network or causing further damage. Quarantining involves isolating the system by disconnecting it from the network and preventing any unauthorized access while allowing for further analysis.\n\nDisabling Windows System Restore is an important step to prevent malware from being reintroduced to the system when a restore point is used. However, this step should be taken after quarantining the infected system, as it is not the immediate action to prevent the spread of the infection.\n\nRunning a deep malware scan is a necessary step to identify and remove the malware from the system. However, after the system is quarantined to prevent the malware from spreading or causing further damage, so this step would not be taken before confirming a malware infection.\n\nBooting in a Windows Pre-installation Environment (WinPE) is a specialized tool used for performing advanced troubleshooting, such as repairing the operating system or removing malware that is difficult to eliminate using standard tools. However, this step is not the immediate action upon confirming a malware infection, as quarantining the system takes precedence to prevent further damage or spread of the infection.",
+    "options": [
+      "Run a deep malware scan.",
+      "Disable Windows System Restore.",
+      "Quarantine the infected system.",
+      "Boot in Windows Pre-installation Environment (WinPE)."
+    ],
+    "correctAnswer": [
+      "Quarantine the infected system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-004",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT specialist troubleshooting a user's workstation. The user reports that every time they try to access a secure website, such as their online banking portal, they receive a browser warning indicating that the website's certificate is invalid.\n\nAfter verifying that the website is legitimate, what is the MOST appropriate step to resolve this issue?",
+    "explanation": "Certificate warnings often arise when the system's date and time are incorrect. If the system's clock is not synchronized, the browser may flag the certificate as invalid because the date and time settings fall outside the certificate's valid time period. Correcting the date and time settings can resolve this issue without unnecessarily compromising security.\n\nDisabling the browser's SSL/TLS certificate validation feature is not an appropriate solution, as it compromises the browser's ability to verify the security certificate of websites, leaving the system vulnerable to man-in-the-middle attacks and other security risks.\n\nWhile updating the browser can resolve some compatibility issues, it is not specific validity of security certificates. This action is unlikely to resolve the issue if the certificate error is caused by incorrect system date and time settings.\n\nReinstalling the operating system is an extreme and unnecessary measure for resolving a certificate warning. This issue is more likely related to system settings rather than requiring a full operating system reinstall.",
+    "options": [
+      "Disable the browser's SSL/TLS certificate validation feature.",
+      "Update the browser to the latest version.",
+      "Reinstall the operating system to remove potential malware.",
+      "Check and correct the system's date and time settings."
+    ],
+    "correctAnswer": [
+      "Check and correct the system's date and time settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-005",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT specialist at a mid-sized company. A user reports that their computer is behaving strangely, with unexpected network activity and files disappearing or being renamed without their authorization.\n\nUpon investigation, you discover that the computer is communicating with an unknown external server over HTTPS.\n\nAdditionally, you notice that unauthorized software has been installed, and the user has not sent any emails.\n\nWhat is the MOST likely explanation for this behavior?",
+    "explanation": "The described behavior, including unauthorized external connections, unauthorized software installation, and renaming of files, strongly suggests a backdoor infection. A backdoor allows remote access to the compromised system without the user's knowledge, often leading to unauthorized access, controlled remote by an attacker, and enabling unauthorized access to install software, rename files, or perform other malicious actions.\n\nA keylogger is a type of malware that records keystrokes to capture sensitive information, such as login credentials. While a keylogger could lead to unauthorized access to resources, it does not typically result in unauthorized file renaming, unauthorized external network communications over HTTPS, or spam email activity, making it less consistent with the scenario.\n\nA cryptominer hijacks system resources to perform cryptocurrency mining without the user's consent. This typically causes performance degradation (e.g., slow system performance) rather than unauthorized file renaming or external communication activity, which are not typical symptoms of cryptomining.\n\nMore symptoms described in the scenario, such as unexpected renaming and unauthorized activity, are more consistent with a backdoor infection, making a keylogger and account compromise less likely.",
+    "options": [
+      "The system is infected with a backdoor, allowing a threat actor to remotely access and control the computer.",
+      "The system is infected with a keylogger that is displaying unauthorized access.",
+      "The system is infected with a cryptominer that is using the computer's resources to mine cryptocurrency.",
+      "The system is infected with a keylogger that is recording the user's keystrokes to steal login credentials."
+    ],
+    "correctAnswer": [
+      "The system is infected with a backdoor, allowing a threat actor to remotely access and control the computer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-006",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a workstation that is heavily infected with malware. The malware has disabled antivirus software and prevents you from running any removal tools while the normal operating environment.\n\nWhich of the following is the BEST course of action to take in this scenario?",
+    "explanation": "Booting into Safe Mode or Recovery Mode is the best course of action when malware prevents access to malware removal tools in the normal operating environment. Safe Mode or Recovery Mode limits the number of drivers and services that load, which can prevent malware from interfering with antivirus software and allow you to run malware removal tools more effectively.\n\nWhile disconnecting the system from the network is a good practice to prevent the malware from spreading, attempting to reinstall the operating system while remaining network interactions. If malware is preventing antivirus and removal tools from working in normal operating conditions.\n\nManually deleting files from the system while in normal operating mode is risky and may not be effective, especially if the malware is actively running and can regenerate or interfere with the removal process.\n\nReformatting the hard drive and reinstalling Windows is often an extreme measure and should only be considered if other recovery and removal efforts fail.",
+    "options": [
+      "Disconnect the system from the network and attempt to reinstall the antivirus software.",
+      "Boot the system into Safe Mode or Recovery Mode and attempt to run malware removal tools.",
+      "Manually delete files from the system while in normal operating mode.",
+      "Reformat the hard drive and reinstall the operating system immediately."
+    ],
+    "correctAnswer": [
+      "Boot the system into Safe Mode or Recovery Mode and attempt to run malware removal tools."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-007",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A small business owner contacts you because their computer systems are displaying a message demanding payment in cryptocurrency to regain access to their files.\n\nUpon investigation, you find that the files on their shared network drive and on the decryption key if payment is not made.\n\nWhat is the BEST course of action to address this issue?",
+    "explanation": "Disconnecting the affected systems from the network prevents the ransomware from spreading further across the network. Restoring from a recent backup will allow the business to avoid funding criminal activities and encourage future ransomware attacks.\n\nPaying the ransom is not recommended because it does not guarantee that the attacker will provide the decryption key. It also encourages future attacks and may make the business a target for repeated extortion attempts.\n\nWhile some decryption tools exist for specific ransomware strains, they are not always reliable or available. Attempting to decrypt the files without verifying the ransomware variant could lead to further data corruption or loss.\n\nIgnoring the ransom message does not address the underlying issue. The attacker may still attempt to exploit the situation further, and the files will remain inaccessible unless proper recovery steps are taken.",
+    "options": [
+      "Ignore the ransom message and continue using the system as normal.",
+      "Pay the ransom immediately to regain access to the files and prevent further damage.",
+      "Attempt to decrypt the files using publicly available decryption tools without verifying the ransomware variant.",
+      "Disconnect the affected systems from the network and restore the files from a recent backup."
+    ],
+    "correctAnswer": [
+      "Disconnect the affected systems from the network and restore the files from a recent backup."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-008",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their antivirus software has stopped working. Windows Update fails to install updates, and Task Manager crashes whenever they try to open it.\n\nWhat is the BEST initial step to take to troubleshoot these issues?",
+    "explanation": "Rebooting into a Safe Mode with Networking allows you to troubleshoot the system in a minimal environment where malware is less likely to interfere with critical system processes. Running an antivirus scan in Safe Mode can help identify and remove malware that disrupted normal functionality and prevented Windows Update or Task Manager from working correctly.\n\nReinstalling the antivirus software might seem like a logical step, but it does not address the underlying issue if malware is still disrupting system functionality. The malware causing the issue could interfere with the reinstallation process or continue to cause problems with the system.\n\nUpdating the operating system is not effective if the malware is still interfering with the critical processes, such as Windows Update. The malware may already be interfering with the system's ability to download and install updates.\n\nPerforming a factory reset of the computer is a more extreme measure and should only be considered if other troubleshooting steps fail. It is also time-consuming and results in data loss if proper backups are not in place.",
+    "options": [
+      "Reinstall the antivirus software to restore its functionality.",
+      "Update the operating system by downloading updates from the vendor's website.",
+      "Disconnect the computer from the network and run a full malware scan in Safe Mode.",
+      "Perform a factory reset of the computer to remove any malware."
+    ],
+    "correctAnswer": [
+      "Disconnect the computer from the network and run a full malware scan in Safe Mode."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-009",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the common name for a program that has no useful purpose but attempts to spread itself to other systems and often damages resources on the systems it found it?",
+    "explanation": "A virus is a common term for a program that has no useful purpose but attempts to spread itself to other computer systems, especially if the virus is written to attack specific computer types, typically file-based malware that attaches itself to legitimate executable programs. When executed, a virus can replicate itself, consume system resources, and damage or corrupt files on the infected system.\n\nTrojan horses are programs that pretend to be legitimate but perform malicious actions behind the scenes, often enabling unauthorized access to the system.\n\nA buffer overflow is a type of attack that exploits a flaw in how an application allocates memory for data, allowing an attacker to inject malicious code into protected memory areas.\n\nA password cracker is used to decipher a password by brute force or dictionary attacks and is not malware itself.",
+    "options": [
+      "Trojan",
+      "Buffer overflow",
+      "Virus",
+      "Password cracker"
+    ],
+    "correctAnswer": [
+      "Virus"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-010",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT specialist tasked with investigating a workstation that has been behaving unusually. The user reports frequent application crashes, slow performance, and there are suspicious processes running in the background.\n\nUpon further inspection, your antivirus software detects malware, but Windows Defender has been disabled, and there are suspicious processes running in the background.\n\nWhich of the following actions on Endpoint Detection and Response (EDR) solution would be MOST appropriate first step to address this issue?",
+    "explanation": "Quarantining the affected workstation is the most immediate and appropriate action. This prevents the potential spread of malware to other systems on the network while giving you time to further investigate and address the threat.\n\nDisabling the network connection for the entire office to contain the threat.\n\nDeleting all suspicious files without further analysis could lead to the loss of valuable forensic information, which could help identify the root cause of the infection.\n\nReinstall the operating system to ensure the complete removal of malware.\n\nImmediately delete all suspicious files from the workstation to eliminate the threat.",
+    "options": [
+      "Quarantine the affected workstation to prevent the spread of malware.",
+      "Disable the network connection for the entire office to contain the threat.",
+      "Reinstall the operating system to ensure the complete removal of malware.",
+      "Immediately delete all suspicious files from the workstation to eliminate the threat."
+    ],
+    "correctAnswer": [
+      "Quarantine the affected workstation to prevent the spread of malware."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-011",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT specialist tasked with removing malware from a workstation.\n\nAfter identifying the infection and before running malware removal tools, you decide to disable System Restore.\n\nWhy is this step necessary?",
+    "explanation": "Disabling System Restore is a critical step in the malware removal process because malware can hide within restore points. If System Restore is not disabled, the malware could reinfect the system when a restore point is used. This ensures that the malware removal process is thorough and prevents the possibility of reinfection from old restore points.\n\nDisabling System Restore actually removes all existing restore points. While System Restore can be useful for recovering from certain system issues, it is not reliable for malware removal since restore points may already be infected, the goal is to eliminate all traces of malware, not preserve potentially compromised restore points.\n\nMalware removal tools do not need access to the System Restore folder to delete critical system files. Disabling System Restore is about preventing reinfection, not about granting tools access to specific files.\n\nWhile disabling System Restore may free up some disk space, this is not the primary reason for doing so during malware removal. The focus is on preventing reinfection, not on optimizing system performance. Disk space considerations are secondary and not directly relevant to the malware removal process.",
+    "options": [
+      "To prevent the malware from using System Restore to reinfect the system after removal.",
+      "To ensure that the system can be restored to a previous state if the malware removal process fails.",
+      "To improve system performance during the malware removal process by freeing up disk space.",
+      "To allow the malware removal tools to access and delete critical system files stored in the System Restore folder."
+    ],
+    "correctAnswer": [
+      "To prevent the malware from using System Restore to reinfect the system after removal."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-012",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator at a mid-sized company.\n\nAfter resolving a malware infection caused by an employee downloading a malicious email attachment, you decide to implement a strategy to educate end users and prevent similar incidents in the future.\n\nWhich of the following actions would BEST apply your knowledge to educate employees and reduce the risk of malware infections?",
+    "explanation": "Interactive training sessions are an effective way to educate employees because they actively engage users and provide practical, hands-on examples of how to identify and avoid malware threats. Demonstrating real-world scenarios, such as recognizing phishing emails and suspicious attachments, equips employees with the skills to prevent future infections. This approach aligns with best practices for educating end users as part of a comprehensive malware prevention strategy.\n\nProviding information via email can raise awareness, it is a passive approach that does not ensure fully understand or retain the information. Without interactive or practical elements, employees may not develop the skills needed to recognize and avoid malware threats effectively.\n\nWhile antivirus software is an essential layer of protection, relying solely on it without educating employees creates a false sense of security. End users play a critical role in preventing malware infections by practicing safe behaviors, such as avoiding suspicious links and attachments. This option neglects the importance of user education.\n\nRestricting email attachments is an overly restrictive measure that can hinder productivity and legitimate business operations. Instead of outright bans, educating employees on safe practices is a more balanced and effective approach to reducing malware risks while maintaining workflow efficiency.",
+    "options": [
+      "Conduct an interactive training session that demonstrates how to identify phishing emails.",
+      "Restrict all employees from downloading email attachments to prevent future infections.",
+      "Send an email to all employees with a list of common malware types and ask them to read it.",
+      "Install antivirus software on all employee workstations and inform them that the software will handle all malware threats."
+    ],
+    "correctAnswer": [
+      "Conduct an interactive training session that demonstrates how to identify phishing emails."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-013",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are investigating a potential security breach at your organization. A user reports that their online banking account has been accessed without their authorization.\n\nUpon reviewing the system, you find no signs of ransomware, adware, or browser redirections.\n\nHowever, you discover unusual outbound traffic to an unknown IP address and a suspicious script running in the background. The user also recalls entering their banking credentials on the same computer earlier in the day.\n\nWhat is the most likely cause of this security breach?",
+    "explanation": "The unusual outbound traffic to an unknown IP address and the suspicious script running in the background strongly suggest the presence of a keylogger. Keyloggers are designed to capture keystrokes, including sensitive information like banking credentials, and transmit them to an attacker. The user's report of unauthorized access to their online banking account further supports this conclusion, as the attacker likely used the stolen credentials to gain access.\n\nWhile a backdoor could allow unauthorized remote control, it does not specifically account for the capture of the user's banking credentials. Backdoors are typically used for broader system control and data exfiltration, whereas the scenario points to a targeted theft of credentials, which is more characteristic of a keylogger.\n\nCryptominers hijack system resources to perform cryptocurrency mining, often causing performance degradation. However, they do not capture user credentials or generate unauthorized access to online accounts. The symptoms described in the scenario, such as unauthorized access and unusual outbound traffic, are not consistent with cryptominer activity.\n\nSpyware often focuses on browser-related activities, such as redirecting users to malicious websites. However, the scenario does not mention browser-related symptoms such as redirections or homepage changes. The unauthorized access to the user's banking account and the suspicious script are more indicative of a keylogger than spyware.",
+    "options": [
+      "The system is infected with a backdoor that is allowing the attacker to remotely control the computer and access sensitive files.",
+      "The system is infected with spyware that is reconfiguring the browser and redirecting the user to malicious websites.",
+      "The system is infected with a cryptominer that is using the computer's resources to mine cryptocurrency.",
+      "The system is infected with a keylogger that captures the user's banking credentials and transmits them to an attacker."
+    ],
+    "correctAnswer": [
+      "The system is infected with a keylogger that captures the user's banking credentials and transmits them to an attacker."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-014",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system has been infected with malware, and you are tasked with removing it.\n\nWhich of the following actions demonstrates the MOST effective evaluation of the situation to ensure proper malware removal and prevention of future infections?",
+    "explanation": "By analyzing symptoms and identifying the malware type, you can select the most effective removal tools and methods. Documenting the process ensures that lessons are learned and can be applied to prevent future infections. This aligns with best practices for malware removal.\n\nWhile disconnecting the system from the network is a good step to prevent the spread of malware, reinstalling the operating system without evaluating the malware type or cause is not the most effective approach. It bypasses the opportunity to learn from the incident and may not address vulnerabilities that allowed the infection.\n\nDeleting files without proper evaluation can lead to incomplete removal of the malware. Additionally, a quick antivirus scan may not be thorough enough to detect all traces of the infection. This approach lacks the depth required for effective malware removal.\n\nIgnoring the infection is a negligent approach that can lead to further damage or spread of the malware. Even if the system appears to function normally, the malware may still be active and pose a threat to the system and network. This is not aligned with best practices.",
+    "options": [
+      "Delete all files associated with the malware and run a quick antivirus scan to confirm the system is clean.",
+      "Analyze the symptoms, identify the malware type, and use appropriate removal tools while documenting the process.",
+      "Immediately disconnect the system from the network and reinstall the operating system to ensure the malware is removed.",
+      "Ignore the infection if the system appears to be functioning normally and monitor for further issues."
+    ],
+    "correctAnswer": [
+      "Analyze the symptoms, identify the malware type, and use appropriate removal tools while documenting the process."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.4-015",
+    "domain": "2.0 Security",
+    "objective": "19.4.13",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator for a small office. Recently, a malware infection disrupted operations because it went undetected for several days.\n\nTo prevent this from happening again, you decide to configure scheduled scans on all workstations.\n\nWhich of the following configurations would BEST ensure that malware is detected and removed promptly while minimizing disruption to users?",
+    "explanation": "Daily quick scans during non-business hours ensure that any new malware is detected promptly without disrupting users. Weekly full system scans provide a deeper analysis to catch malware that might not be detected by quick scans. This approach aligns with best practices for malware prevention by combining frequent monitoring with comprehensive periodic checks.\n\nWhile daily full system scans provide thorough malware detection, running them during business hours can significantly impact system performance and disrupt user productivity. This option prioritizes security but fails to consider the usability and efficiency of the work environment.\n\nMonthly full system scans are insufficient for promptly detecting and removing malware. Malware can spread and cause significant damage in a short period, so relying on monthly scans leaves the system vulnerable for extended periods.\n\nWhile on-access scanning is critical for real-time protection, it is not a substitute for scheduled scans. Scheduled scans provide an additional layer of security by thoroughly analyzing the system for malware that might evade real-time detection. Disabling scheduled scans reduces the overall effectiveness of the malware prevention strategy.",
+    "options": [
+      "Schedule a full system scan to run once a month during non-business hours.",
+      "Disable scheduled scans and rely solely on on-access scanning for malware detection.",
+      "Schedule a quick scan to run daily during non-business hours and a full system scan to run weekly during non-business hours.",
+      "Schedule a full system scan to run daily during business hours."
+    ],
+    "correctAnswer": [
+      "Schedule a quick scan to run daily during non-business hours and a full system scan to run weekly during non-business hours."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-001",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are assisting a user who is experiencing frequent browser crashes while accessing a specific web application.\n\nAfter investigating, you suspect that a recently installed browser extension is causing the issue.\n\nWhich of the following actions should you take to resolve the problem?",
+    "explanation": "Disabling all browser extensions and plug-ins and then re-enabling them one by one is a systematic approach to identifying the problematic extension. This method allows you to isolate the issue without permanently removing all extensions. Once the problematic extension is identified, it can be permanently disabled or removed to resolve the browser crashes.\n\nClearing the cache and cookies can resolve issues related to corrupting data, but it does not address problems caused by browser extensions or plug-ins. This action is unrelated to the scenario of extension-caused crashes.\n\nPrivate browsing mode does not resolve issues caused by extensions because, in some extensions are disabled by default when running, as some extensions are made to run in private mode even when privately disabled. This does not help identify or resolve the issue caused by the problematic extension.\n\nUninstalling and reinstalling the browser is a more drastic and time-consuming solution. This action does not identify or address the specific issue caused by the browser extension and does not align with the best practices for troubleshooting extensions.",
+    "options": [
+      "Enable private browsing mode to prevent the extension from running.",
+      "Disable all browser extensions and plug-ins, then re-enable them one at a time to identify the problematic one.",
+      "Clear the browser's cache and cookies to resolve the issue.",
+      "Uninstall the browser and reinstall it to remove the problematic extension."
+    ],
+    "correctAnswer": [
+      "Disable all browser extensions and plug-ins, then re-enable them one at a time to identify the problematic one."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-002",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A cyber consultant is reviewing the company's policy on security issues. What are symptoms associated with security issues within the systems? (Select all that apply.)",
+    "explanation": "Symptoms of security issues in the file system include altered system files or personal files with data stamps and file sizes different from known-good versions.\n\nAn additional symptom of security issues in the file system is missing or renamed files.\n\nWhen the computer is slow or \"behaving oddly,\" one of the things that a technician should suspect that malware has infected the device. A symptom can also be used for various reasons, there are several instances in which a bad actor will manipulate users to download infected software/apps.\n\nDesktop alerts are used for various reasons; there are several instances in which a bad actor will manipulate users to download infected software/apps.",
+    "options": [
+      "The device files have been renamed.",
+      "The device is displaying a message requesting immediate action.",
+      "The device is unable to access the network.",
+      "The device has altered system files."
+    ],
+    "correctAnswer": [
+      "The device files have been renamed.",
+      "The device is displaying a message requesting immediate action.",
+      "The device has altered system files."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-003",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is only able to read data on the file. What account management policy is this?",
+    "explanation": "Restricted user permission covers rights that have examples of restricting rights. However, the basic principle is that the number of accounts with administrator privileges should be as few as possible.\n\nThese default accounts allow unauthorized access and consequently are the computer and the default administrator account must be logged out and accounted for.\n\nDisabling guest accounts allows unauthorized use of the computer and may provide some way of access to network resources. It is only enabled to facilitate password-free sign-in to a Windows workgroup.\n\nRestrict login times are typically used on a computer if you suspect a user is logging in at an unusual time of day or night or during the weekend.",
+    "options": [
+      "Disable guest accounts.",
+      "Restrict user permission.",
+      "Change default administrator account.",
+      "Restrict login times."
+    ],
+    "correctAnswer": [
+      "Restrict user permission."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-004",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What type of safeguard mechanism triggers an action on a system based on specific processes and they connect to other systems?",
+    "explanation": "Application security triggers an action on a system list listens for connections. Windows Firewall can block the Remote Desktop Protocol (RDP) service, so external applications cannot use it.\n\nPort security triggers an action on the Transmission Control Port (TCP) or User Datagram Protocol (UDP) port used by the application protocol. Windows Firewall blocks ports against malicious scripts and applications from the group.\n\nUser Account Control (UAC) is a Windows security feature designed to protect against malicious scripts and exploit attempts assigned to administrative privileges to install software or change system settings. Applications run with standard user privileges unless elevated by the user.\n\nBitLocker is a full disk encryption feature on Windows for securing hard drives (HDDs) against unauthorized access.",
+    "options": [
+      "User Account Control (UAC)",
+      "BitLocker",
+      "Application security",
+      "Port security"
+    ],
+    "correctAnswer": [
+      "Application security"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-005",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An engineer develops a training packet for newly-hired employees regarding computer passwords. Regarding passwords, what is the benefit of using a password manager?",
+    "explanation": "Password managers can suggest a strong password at each account sign-up or credential reset and autofill the credentials to authenticate to a site.\n\nAs the browser is a security-critical type of software, it is particularly important to use a trusted source, such as an app store (if installed on a mobile device) or the operating system's trusted app store.\n\nA layer is a representation of a website that a hacker has configured to intercept a user's login data as if it were an authentic hashing algorithm used for storing a password.\n\nA security risk is using a browser from an untrusted source, which cannot verify the integrity through a digital signature or hash.",
+    "options": [
+      "It involves the use of a source that cannot be verified.",
+      "It involves the use of a source that contains a verified digital signature.",
+      "It takes any amount of data and produces a fixed-length value.",
+      "It suggests strong credentials at each sign-up."
+    ],
+    "correctAnswer": [
+      "It suggests strong credentials at each sign-up."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-006",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An engineer is creating a template for an end-user best practices guide. What are user steps away from the workstation? (Select all.)",
+    "explanation": "Secure and protect hardware is a best practice because malicious attackers can use USB drives to steal data or infect a workstation with malware.\n\nLog off the device when not in use is a best practice because it prevents an unauthorized access if the user leaves their workstation unlocked and unattended.\n\nSecure PII and passwords is a best practice to prevent exposure of sensitive data when a user steps away from their workstation.\n\nA lunchtime attack occurs when a threat actor accesses an unlocked workstation while the user is away, such as during lunch. Allowing the computer to lock automatically when stepping away mitigates this risk by ensuring the device is not left unprotected.",
+    "options": [
+      "Secure and protect hardware.",
+      "Log off the device when not in use.",
+      "Secure PII and passwords.",
+      "Allow lockout to lock the computer."
+    ],
+    "correctAnswer": [
+      "Secure and protect hardware.",
+      "Log off the device when not in use.",
+      "Secure PII and passwords."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-007",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Microsoft Windows Defender Firewall is a utility built into modern Windows operating systems. When turned on or off, what can the administrator view?",
+    "explanation": "A network administrator can view the Windows Defender Firewall utility on or off, and it acts as a filter for inbound and outbound network traffic.\n\nThe Windows Performance Monitor (perfmon.exe) provides up-to-date system resource information about the CPU, memory, disks, and network while being logged to a file for long-term use.\n\nThe Services Console (services.msc) lets you enable control over and nonessential Windows services by offering manual disable for Windows services, enabling, disabling, or recovering the properties of installed hardware, software settings, drivers, and services.\n\nThe Windows Device Manager allows administrators to view, edit, and troubleshoot the properties of installed hardware, update drivers, and remove or disable devices.",
+    "options": [
+      "Filter network for Windows services.",
+      "Filter network traffic.",
+      "Provide system resource information.",
+      "View, edit, and troubleshoot hardware/drivers."
+    ],
+    "correctAnswer": [
+      "Filter network traffic."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-008",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT technician has confirmed a malware infection on a user's workstation.\n\nAfter immediately isolating the system from the network, the technician needs to ensure that malware is not accidentally restored later during backups.\n\nWhich action should the technician take next to prevent malware from existing backups?",
+    "explanation": "Disabling System Restore and deleting existing restore points in Windows removes malware in restore points. This prevents malware from being accidentally reactivated through a system restore to a previously infected state.\n\nRunning a full antivirus scan before applying any changes is a good practice for scanning the system for malware, but it's important to scan the system completely before restoring from backups, at a minimum, which could lead to incomplete malware removal.\n\nReinstalling the operating system to completely wipe existing restore points without disabling existing restore points could re-infect existing issues, where the malware could still be present.\n\nEnabling System Restore to create a new restore point before removing existing restore points could re-introduce malware into the system by creating a restore point that includes infected files.",
+    "options": [
+      "Enable System Restore to create a new restore point before removing malware.",
+      "Run a full antivirus scan before making any changes.",
+      "Reinstall the operating system to completely wipe existing restore points.",
+      "Disable System Restore and delete existing restore points to remove infected backups."
+    ],
+    "correctAnswer": [
+      "Disable System Restore and delete existing restore points to remove infected backups."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-009",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT administrator notices that a workstation's antivirus software is not detecting newly identified malware. What is the MOST likely reason for this failure?",
+    "explanation": "If malware definitions are outdated, new threats are not recognized by the antivirus software. Definitions provide the antivirus software with information about the latest known threats, so failing to update them means the cause in this scenario is incorrect or outdated malware definitions.\n\nThe antivirus software is well configured because the user has not attempted to disable it, as this scenario indicates that the software is actively running but failing to detect new threats, not that it's disabled.\n\nThe user engine needs an update to improve its performance is possible, but the scenario specifically highlights a failure to detect new malware, which aligns more with outdated malware definitions than a general scan engine issue.\n\nThe antivirus software is incompatible with the operating system. If this were the case, the antivirus software would likely not function correctly at all, rather than selectively failing to detect only new malware.",
+    "options": [
+      "The antivirus software was never activated.",
+      "The scan engine needs an update to improve performance.",
+      "The malware definitions are outdated.",
+      "The antivirus software is incompatible with the operating system."
+    ],
+    "correctAnswer": [
+      "The malware definitions are outdated."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-010",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios would result in a website having an untrusted or invalid certificate? (Select all that apply.)",
+    "explanation": "Certificate warnings occur when a certificate is untrusted, such as a self-signed certificate, the padlock icon is replaced with the broken padlock icon, the browser may display a warning.\n\nCertificate warnings occur when a certificate is invalid, such as an expired certificate. All content is blocked unless manually overridden.\n\nCertificate warnings occur when a certificate is untrusted, such as a self-signed certificate. A certificate could be received because the site is using a trusted Certificate Authority (CA) and would be trusted.\n\nMost browsers will not prompt any warning if a trusted Certificate Authority (CA) issues a certificate. This denotes a level of trust that the user does not have to be alerted about.",
+    "options": [
+      "The certificate has expired.",
+      "The certificate is revoked.",
+      "The certificate is issued by a trusted CA.",
+      "The certificate is self-signed."
+    ],
+    "correctAnswer": [
+      "The certificate has expired.",
+      "The certificate is revoked.",
+      "The certificate is self-signed."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-011",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A user thinks there may be a virus on their computer, calls into an IT help desk, and states that when browsing certain websites, the browser gives a scary warning about the possibility being unsafe.\n\nWhat could cause a browser warning? (Select all that apply.)",
+    "explanation": "If a certificate has expired or is issued by a CA that is not trusted, the padlock icon is replaced with a warning triangle instead on the subject matter certificate issued to the browser.\n\nIf a certificate is revoked, modern browsers will attempt to confirm the current certificate's status. If the browser is not able to query the status of a browser plug-in that may be causing the warning.\n\nSuppose the fully-qualified domain name (FQDN) requested by the browser is different from the subject or alternative name listed in the certificate. Most browsers will not prompt any warning if a trusted Certificate Authority (CA) issues a certificate. This denotes a level of trust the user does not have to be alerted about.",
+    "options": [
+      "A certificate has expired.",
+      "A certificate is revoked.",
+      "There is a server name mismatch in the certificate.",
+      "A trusted CA issues a certificate."
+    ],
+    "correctAnswer": [
+      "A certificate has expired.",
+      "A certificate is revoked.",
+      "There is a server name mismatch in the certificate."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-012",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user contacts the help desk because their browser displays a certificate warning only when accessing their company's web application, while all other websites load normally.\n\nWhat is the BEST action to resolve the issue on the user's workstation?",
+    "explanation": "Checking and correcting the workstation's system date and time settings is the correct approach because certificate validation relies on the system clock to verify the certificate's validity period. If the date and time are out of sync, it can lead to seemingly legitimate certificates being flagged as invalid or expired, even on trusted internal applications.\n\nInterrupting a company's internal certificate authority is a complex and time-consuming troubleshooting method that should only be considered if other troubleshooting steps fail, and it does not address the root cause of a date/time issue on the workstation.\n\nPerforming a full malware scan and reconfigure the browser further troubleshooting to eliminate all potential causes is a broad approach that does not specifically address the root cause of the issue, which is more likely related to the workstation's incorrect clock settings.\n\nDisabling certificate warnings in the browser is not recommended because it removes an important security feature, which eliminates browsing without being alerted to real certificate issues.",
+    "options": [
+      "Instruct the user to ignore the warning and proceed because the site is verified internally.",
+      "Perform a full malware scan and reimage the user's computer without further troubleshooting to eliminate all potential causes.",
+      "Check and correct the workstation's system date and time settings.",
+      "Disable certificate warnings in the browser so the user can access the site without warnings."
+    ],
+    "correctAnswer": [
+      "Check and correct the workstation's system date and time settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-19.7-013",
+    "domain": "2.0 Security",
+    "objective": "19.7",
+    "module": "19.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator responsible for maintaining the security of your organization's web browsers.\n\nYou notice that one of the browsers in use has not been updated in several months.\n\nWhat is the BEST action to ensure the security of your organization's web browsers?",
+    "explanation": "Immediately downloading and installing the latest patch for the browser from the vendor's official website is the best action because it directly addresses the issue of an outdated browser by applying the necessary updates to protect against known vulnerabilities, reducing the likelihood of exploitation by threat actors.\n\nWaiting for the next patch release is not advisable because it leaves the browser exposed to known vulnerabilities, increasing the risk of exploitation during the long interval. A critical security vulnerability has been identified, prompt action is necessary.\n\nDisabling the browser until the next update is not a practical because disabling the browser entirely disrupts productivity and does not address the need for a secure and functional browser in the organization.\n\nUninstalling the browser and replacing it with a different browser without evaluating the alternative's security posture could introduce new vulnerabilities if the replacement browser is not properly configured or maintained with its own updates.",
+    "options": [
+      "Wait for the next scheduled update cycle to install the patch to minimize disruption to users.",
+      "Immediately download and install the latest patch for the browser from the vendor's official website.",
+      "Disable the browser until the vendor releases an official update, even if it disrupts productivity.",
+      "Uninstall the browser and replace it with a different browser without evaluating its security features."
+    ],
+    "correctAnswer": [
+      "Immediately download and install the latest patch for the browser from the vendor's official website."
+    ],
+    "origin": "CertMaster"
+  }
+]

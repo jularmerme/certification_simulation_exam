@@ -1,0 +1,542 @@
+[
+  {
+    "id": "CM2-16.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is deciding between Windows Pro and Windows Enterprise editions for their IT infrastructure.\n\nThey require advanced security features, centralized management, and the ability to control software execution across devices.\n\nBased on these needs, which edition should they choose?",
+    "explanation": "Windows Enterprise is the best choice for the company's needs because it includes advanced security features like AppLocker (for controlling software execution) and BitLocker (for protecting credentials). These features are not available in Windows Pro, making Enterprise the appropriate option for their requirements.\n\nWhile Windows Pro does support Group Policy and BitLocker, these editions alone do not meet the company's need for advanced security and centralized management. Windows Enterprise is better suited for their requirements.\n\nAlthough Windows Pro is available through retail licensing and supports multiple CPUs, Windows Enterprise is better suited for advanced security and centralized control, which are critical for their requirements.\n\nRemote Desktop Protocol (RDP) is supported in both Windows Pro and Enterprise editions. It is not a unique feature of Enterprise, so this reasoning does not justify choosing Enterprise over Pro.",
+    "options": [
+      "Windows Enterprise, because it is the only edition that supports Remote Desktop Protocol (RDP).",
+      "Windows Pro, because it supports Group Policy and BitLocker.",
+      "Windows Pro, because it is available through retail licensing and supports multiple CPUs.",
+      "Windows Enterprise, because it includes AppLocker and advanced security features."
+    ],
+    "correctAnswer": [
+      "Windows Enterprise, because it includes AppLocker and advanced security features."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following Windows 10 editions requires a volume licensing agreement?",
+    "explanation": "The Enterprise edition of Windows 10 requires a volume licensing agreement.\n\nYou can purchase all other Windows 10 editions with a single license agreement.",
+    "options": [
+      "Home",
+      "Pro for Workstations",
+      "Enterprise",
+      "Pro"
+    ],
+    "correctAnswer": [
+      "Enterprise"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator is tasked with setting up a cost-effective isolated test box to monitor the behavior of test malware. The desired system cannot be joined to the domain.\n\nWhich of the following Windows licenses can the administrator use to fulfill these requirements?",
+    "explanation": "The Windows Home edition cannot be joined to a domain. It is designed for domestic consumers and possibly small office home office (SOHO) business use.\n\nWindows Education is a variant of the Enterprise and Pro editions designed for licensing by schools and colleges, and Windows Education editions are only available via volume licensing.\n\nAn original equipment manufacturer (OEM) license means that the OS is pre-installed on a PC or laptop and only valid for that device. The computer vendor is responsible for support.\n\nWindows Enterprise has the full feature set, but is only available via volume licensing.",
+    "options": [
+      "Enterprise",
+      "Home",
+      "OEM",
+      "Education"
+    ],
+    "correctAnswer": [
+      "Home"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a limitation of Windows Home Edition compared to other Windows editions?",
+    "explanation": "Windows Home Edition supports multicore processing (up to 64 cores) but does not support multiple CPUs. This limitation distinguishes it from other editions like Windows Pro and Enterprise, which support multiple CPUs.\n\nWindows Home Edition is available in both 32-bit and 64-bit versions. The 64-bit version of Windows Home can run 64-bit applications.\n\nWindows Home Edition does support multicore processing, up to 64 cores. This feature is available in all modern Windows editions.\n\nWindows Home Edition does support through OEM and retail licensing models, not volume licensing. Volume licensing is reserved for editions like Windows Enterprise and Education.",
+    "options": [
+      "It does not support multiple CPUs.",
+      "It requires a volume licensing agreement for installation.",
+      "It lacks support for multicore processing.",
+      "It cannot run 64-bit applications."
+    ],
+    "correctAnswer": [
+      "It does not support multiple CPUs."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of Windows N versions?",
+    "explanation": "Windows N versions are designed to comply with European Union regulations. These versions were pre-installed applications like Windows Media Player, Music and Video apps, Voice Recorder, and Skype to prevent Microsoft's dominance in the software market.\n\nWindows N versions do the opposite—they exclude multimedia features rather than enhancing them. The purpose is to allow users to choose third-party media software, not to provide additional multimedia functionality.\n\nThere are no additional security features in the Windows N versions. The focus of these versions is on compliance with EU regulations regarding multimedia applications, not security enhancements.\n\nWindows N versions are not tailored for educational institutions. Instead, they are standard editions (Home, Pro, Enterprise, and Education) modified to comply with EU regulations by excluding multimedia applications.",
+    "options": [
+      "To offer additional security features for users in Europe.",
+      "To provide a specialized version of Windows for educational institutions in Europe.",
+      "To provide enhanced multimedia features for users in Europe.",
+      "To comply with European Union regulations by excluding applications."
+    ],
+    "correctAnswer": [
+      "To comply with European Union regulations by excluding applications."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An IT administrator at a university plans to push out security configurations to their computer lab to help prevent infection.\n\nWhich of the following would BEST help the administrator?",
+    "explanation": "Group Policy is used to create and apply OS and software application settings. These could be configured on each machine individually, but more typically, they are applied via policies configured on the domain controller.\n\nBitLocker enables the user to encrypt all the information on a disk drive. BitLocker encryption means that data on the device is protected even if someone steals it.\n\nRemote Desktop Protocol (RDP) allows a user to connect to the machine and operate it over a network. While the Home edition has the RDP client software, it does not support an RDP server.\n\nServices console (services.msc) starts, stops, and pauses processes running in the background.",
+    "options": [
+      "BitLocker",
+      "Remote Desktop Protocol",
+      "Services console",
+      "Group Policy"
+    ],
+    "correctAnswer": [
+      "Group Policy"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A manager in charge of client images wants to test out new updates that do not make radical changes to Windows. What should the manager MOST likely look for?",
+    "explanation": "In addition to feature updates, Windows is updated periodically with quality updates. Quality updates do not usually make radical changes to Windows, though some do include new features.\n\nFeature updates for Windows 10 are identified with a name and number. For example, in July 2016, Microsoft released a Windows 10 feature update called Windows 10 Anniversary Update.\n\nWith Windows, the administrator must have to consider the edition when upgrading. They can usually upgrade to the same or higher edition but cannot upgrade from a Home to an Enterprise edition.\n\nDuring the supported phase when the product is being actively marketed, the vendor releases regular patches to fix critical security and operational issues.",
+    "options": [
+      "Upgrade",
+      "Quality update",
+      "Feature update",
+      "Patches"
+    ],
+    "correctAnswer": [
+      "Quality update"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A developer needs a laptop that will run MySQL locally for their development project. The minimum memory required is 16GB of RAM.\n\nWhich architecture should the developer use?",
+    "explanation": "Each version and edition of Windows 10 was originally available as 32-bit (x86) or 64-bit (x64) software. The 64-bit version is needed because the 32-bit only supports 4 GB of system memory.\n\nAll 32-bit (x86) Windows editions are limited to 4 GB system memory. 64-bit editions all support much more RAM but have different limits for licensing purposes.\n\nBoth architectures will not work because the x86 architecture will not work.\n\nThe principal alternative to the standard x86/x64 CPU architecture is one devised by Advanced RISC Machines (ARM). ARM designs are used in the current generation of Apple hardware in most Android smartphones and tablets.",
+    "options": [
+      "ARM",
+      "x64",
+      "Either x86 or x64 will work",
+      "x86"
+    ],
+    "correctAnswer": [
+      "x64"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A small business is planning to upgrade its office computers from Windows 10 Pro to Windows 11 Pro.\n\nThe IT administrator runs the PC Health Check tool and discovers the following issues for one of the computers:\n\n- The CPU is not listed as supported for Windows 11.\n- The computer uses Legacy BIOS instead of UEFI.\n- The system does not have TPM 2.0 enabled.\n\nWhat should the IT administrator do to make this computer eligible for the Windows 11 upgrade?",
+    "explanation": "Windows 11 requires a supported processor and TPM 2.0 is one of the mandatory requirements. The IT administrator must upgrade the CPU to one that is officially compatible with Windows 11 and ensure TPM 2.0 is enabled in the BIOS settings.\n\nWhile enabling TPM 2.0 and switching to UEFI with Secure Boot are necessary requirements, they alone will not resolve the issue because the CPU is not supported. The CPU must also be upgraded to meet the hardware requirements.\n\nThe Media Feature Pack is used to restore multimedia functionality in N editions of Windows. It does not address compatibility issues with mandatory hardware requirements, such as TPM 2.0 or unsupported CPUs.\n\nWindows 11 does not allow bypassing its mandatory hardware requirements, such as TPM 2.0 or an unsupported CPU. These requirements are enforced to ensure system security and performance.",
+    "options": [
+      "Upgrade the CPU to supported processor and enable TMP 2.0 in the BIOS settings.",
+      "Perform a clean installation of Windows 11, bypassing the hardware requirements.",
+      "Enable TPM 2.0 in the BIOS settings and switch from Legacy BIOS to UEFI with Secure Boot.",
+      "Install a Media Feature Pack to resolve the compatibility issues."
+    ],
+    "correctAnswer": [
+      "Upgrade the CPU to supported processor and enable TMP 2.0 in the BIOS settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.1.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have just purchased and installed Windows 11 Pro on your laptop computer. You decide you want to upgrade the RAM on the laptop.\n\nWhat is the maximum amount of RAM that Windows 11 Pro supports?",
+    "explanation": "Windows 11 Pro edition supports up to 2 TB of RAM.\n\nWindows 11 Pro for Workstations edition supports up to 6 TB of RAM.\n\nWindows 11 Home edition supports up to 128 GB of RAM.\n\nNone of the Windows 11 editions support 8 TB of RAM.",
+    "options": [
+      "128 GB",
+      "8 TB",
+      "2 TB",
+      "6 TB"
+    ],
+    "correctAnswer": [
+      "2 TB"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a requirement for performing an unattended OS installation using optical media?",
+    "explanation": "For installations using optical media (CD-ROM or DVD), the optical drive must be set as the priority boot device in the computer's firmware setup program. This ensures the boot process from the optical media to initiate the OS installation.\n\nPXE compliant firmware is required for network boot installations, not for installations using optical media.\n\nSlipstreamed media uses installation media with integrated patches and drivers, which can be done on USB drives or other media. However, it is not a requirement for installations using optical media.\n\nAn active internet connection is not necessary for installations using optical media. Internet-based updates or applications may require connectivity, but optical media installations can proceed without it.",
+    "options": [
+      "A slipstreamed USB drive must be created.",
+      "The computer must support PXE compliant firmware.",
+      "The optical drive must be set as the priority boot device.",
+      "The system must have an active internet connection."
+    ],
+    "correctAnswer": [
+      "The optical drive must be set as the priority boot device."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator wants to create several virtual machines with a consistent set of software and configuration options.\n\nWhat should the administrator use for installation?",
+    "explanation": "Unattended installations are often completed using image deployment. Using image deployment means that machines use a consistent set of software and configuration options.\n\nThe Enterprise edition has several features that are not available in the Pro edition, such as support for Microsoft's DirectAccess virtual private networking technology.\n\nBitLocker enables the user to encrypt all the information on a disk drive. Encryption means that the device is protected if someone steals it.\n\nPOSIX Compliance supports UNIX/Linux compatibility. Microsoft reengineered the New Technology File System (NTFS) to support case-sensitive naming, hard links, and other features required for UNIX/Linux applications.",
+    "options": [
+      "Images",
+      "BitLocker",
+      "POSIX",
+      "DirectAccess"
+    ],
+    "correctAnswer": [
+      "Images"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A client administrator at a local university runs a computer lab and decides they want to make everything as easy and quick to use as possible.\n\nThe administrator orders new computers that are compatible with the ability to use Preboot execution Environment (PXE).\n\nWhat type of boot would this be?",
+    "explanation": "Network boot means connecting to a shared folder containing the installation files, which could be slipstreamed or use image deployment.\n\nOnce the OS has been installed, the administrator will usually set to the internal hard drive as the default (highest priority) boot device and disable any other boot devices.\n\nHistorically, most attended installations and upgrades were performed via booting from optical media (CD-ROM or DVD). The optical drive must be set as the priority option.\n\nWhen using an aftermarket seaworthy hard drive or solid-state flash drive as boot media, the boot method should be set to use the USB-connected device as the priority option.",
+    "options": [
+      "USB",
+      "Hard drive",
+      "Network",
+      "Optical"
+    ],
+    "correctAnswer": [
+      "Network"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You begin the installation process and discover that you need to load additional drivers to support your storage controller so that Windows can write to that disk.\n\nWhat should you do?",
+    "explanation": "During the first part of the installation, Windows loads the necessary files it needs to start the installation. During this phase, you may be prompted to load additional drivers to support your storage controller so that Windows can write to the disk. To do this, select Load Driver.\n\nIf you are missing drivers for the storage device, you will not be able to direct Windows to find the necessary drivers if Windows cannot load from disc, boot media, or remove all drivers and restart.",
+    "options": [
+      "Load the necessary drivers from a USB drive.",
+      "Insert or connect to the installation media and start from that media.",
+      "Remove all drivers and restart.",
+      "Allow Windows to find the necessary drivers."
+    ],
+    "correctAnswer": [
+      "Load the necessary drivers from a USB drive."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A student considers upgrading their system but has many custom drivers and hardware in their Windows-driven rig.\n\nWhere can the student look for a catalog of tested devices and drivers for this platform?",
+    "explanation": "Microsoft maintains a Windows Logo'd Product List (LPL), also called the Hardware Compatibility List (HCL). This is a catalog of tested devices and drivers. If a device has not passed Windows logo testing, users should check the device vendor's website to confirm whether there is a compatible driver.\n\nMost computers now come with a Preboot Execution Environment (PXE) compliant firmware and network adapter to support this boot option.\n\nFrameworks for security controls are established by organizations such as the National Institute of Standards and Technology (NIST).\n\nInstant Secure Erase (ISE)/Crypto Erase uses the capabilities of self-encrypting drives (SEDs) as a reliable sanitization method for both HDDs and SSDs. A SED encrypts its contents using a single encryption key.",
+    "options": [
+      "HCL",
+      "NIST",
+      "PXE",
+      "SED"
+    ],
+    "correctAnswer": [
+      "HCL"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of a recovery partition in the context of a repair installation on the same computer?",
+    "explanation": "The recovery partition is specifically designed to store the recovery files used to reinstall the operating system. This eliminates the need for external installation media, such as USB drives or DVDs, and allows users to restore their system to a functional state directly from the internal hard drive.\n\nWhile backing up user data and settings is important, the recovery partition is not intended for this purpose. Its primary function is to house recovery tools and OS installation files, not user data.\n\nMultifunctional bootable entries setting up separate partitions for running multiple operating systems is a different concept. The recovery partition is unrelated to multibooting setups and is solely for OS repair or reinstallation.\n\nWhile drivers and applications may be reinstalled during an OS upgrade, this is not the focus of the recovery partition itself, nor third-party software.",
+    "options": [
+      "To enable multiboot functionality for running multiple operating systems on the same computer.",
+      "To provide a dedicated space for repairing the operating system without external media.",
+      "To store user data and settings for backup purposes.",
+      "To store third-party drivers and applications for easy reinstallation after an OS upgrade."
+    ],
+    "correctAnswer": [
+      "To provide a dedicated space for repairing the operating system without external media."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user boots a Windows device into the basic input/output system (BIOS) but recognizes no bootable disks. What is MOST likely the problem?",
+    "explanation": "When the disk uses GPT partitioning, the system firmware must be set to the Unified Extensible Firmware Interface (UEFI) boot method. If the boot method is set to BIOS, the disk will not be recognized as a boot device.\n\nWhen the disk uses master boot record (MBR) partitioning, the system firmware must be set to BIOS. UEFI boot method is not recognized if the disk is still set to legacy BIOS mode.\n\nmacOS uses the Apple File System (APFS). A Windows machine will most likely be partitioned using APFS since it is not part of Windows installation options.\n\nLinux can use ext2/ext3/ext4 or a variety of other file system types. A Windows machine will not likely be partitioned using ext3 or ext4.",
+    "options": [
+      "It is using APFS.",
+      "It is using ext3.",
+      "It is using MBR partitioning.",
+      "It is using GPT partitioning."
+    ],
+    "correctAnswer": [
+      "It is using GPT partitioning."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user finds that their home computer fails to boot. They believe part of the operating system (OS) is corrupted. They want to recover it but do not want to lose any personal documents.\n\nWhat should the user do?",
+    "explanation": "Using refresh recipes the system files and reverts most system settings to the default but can preserve user personalization settings, data files, and apps installed via the Windows Store.\n\nA factory reset partition is used to original equipment manufacturers (OEMs) to restore the OS environment to its original state to skip reinstallation.\n\nUsing the full reset option deletes the existing OS plus apps, and settings, or at least the links in the partition table to files.\n\nFormatting a drive will completely wipe everything on it, or as part of a clean installation, is not necessary when the user wants to preserve documents.",
+    "options": [
+      "Format the drive.",
+      "Use a factory reset partition.",
+      "Use refresh.",
+      "Use the full reset option."
+    ],
+    "correctAnswer": [
+      "Use refresh."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are using an older utility to manage a GPT partitioned drive on a Windows 10 system. You only see a single partition. However, you know your hardware has multiple partitions on the hard drive.\n\nWhat is the MOST likely reason that you only see one partition?",
+    "explanation": "GPT includes a protective MBR, which sees the GPT drive as a single partition that extends across the entire disk. If you use an old tool that can only read MBR disks, it will see the GPT disk as a single partition that extends across the entire drive.\n\nEven though a utility may be designed to work with a newer disk format, the utility will still be able to see GPT multiple partitions, but the partition table will not show them, provided but is likely reason for a utility to be able to see only one partition.\n\nThere is no unprotected MBR on a GPT partitioned drive.",
+    "options": [
+      "The utility is only designed to work with Windows 7 or 8.",
+      "The utility is displaying the unprotected MBR.",
+      "The utility can only manage MBR partitions and displays the drive's protected MBR.",
+      "The utility can only display dynamic partitions."
+    ],
+    "correctAnswer": [
+      "The utility can only manage MBR partitions and displays the drive's protected MBR."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.2.7",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator for a large company that is doing very well in their business endeavors. As a result, the company is hiring new employees on a regular basis.\n\nIn addition to your normal workload, you have been asked to install and configure the new employees' computers with a Windows operating system and the applications that your company uses to do the business. To make this process easier, you only give new employees the choice of two laptops.\n\nWhich of the following installation types would be the BEST use of your time in this scenario?",
+    "explanation": "Since you are only offering two types of laptops, an image preloaded with the correct drivers, applications, and files is the quickest and easiest way to deploy Windows and any supplemental software (such as Microsoft Office) in this scenario.\n\nA recovery partition is used to restore a corrupt computer back to the state it was in when it left the company. This option would not provide the customizations that you need for the company laptops.\n\nAn upgrade is only applicable to migrate from an existing operating system to a newer version. Since the new computers are provided, an upgrade is not necessary.\n\nA clean installation is more time-consuming than imaging over the top of an existing operating system and, in the process, cleaning or erasing all of the existing data. This option would require more time and the install of the supplemental software that you need.",
+    "options": [
+      "Recovery partition",
+      "Upgrade",
+      "Image deployment",
+      "Clean installation"
+    ],
+    "correctAnswer": [
+      "Image deployment"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator tasked with installing an operating system on a new computer that does not have an optical drive. You decide to use a USB flash drive for the installation.\n\nDuring the setup process, the computer fails to boot from the USB drive and instead boots into the existing system.\n\nWhat is the MOST likely reason for this issue, and how can you resolve it?",
+    "explanation": "The issue described in this scenario is related to boot order, not the formatting of the USB drive. While the drive is important, it would not cause the system to boot from the existing drive if the USB drive is already correctly formatted.\n\nMissing drivers would cause issues during the installation process, not during the boot process. The failure to boot is unrelated to the presence or absence of drivers.\n\nMost modern computers support USB booting. The issue in this scenario is not about the computer's capability to boot from USB but rather the configuration of the boot priority in the firmware setup program.",
+    "options": [
+      "The USB drive does not contain the correct drivers; download and install the necessary drivers.",
+      "The USB drive is not set as the priority boot device; adjust the boot order in BIOS/UEFI settings.",
+      "The computer does not support USB booting; use a network-based installation instead.",
+      "The USB drive is not formatted correctly; reformat the drive using FAT32."
+    ],
+    "correctAnswer": [
+      "The USB drive is not set as the priority boot device; adjust the boot order in BIOS/UEFI settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a multiboot system with both Windows and Linux operating systems on a single device.\n\nAfter completing the installation, you notice that the system only boots into Windows, and there is no option to select Linux during startup.\n\nWhat is the MOST likely cause of the issue, and how do you resolve it?",
+    "explanation": "When installing both Windows and Linux, Windows overwrites the boot loader during installation. Linux's GRUB bootloader, however, can allow the system to recognize both operating systems when configured correctly after a Windows installation.\n\nLinux does not use NTFS as its primary file system. Linux typically uses file systems like ext4. The issue described in the scenario relates to the boot loader, not file system formatting.\n\nMost modern systems support multiboot configurations. The problem lies in the boot loader being overwritten by Windows, not in the firmware's capabilities.\n\nThe issue is not with the Linux installation itself but with the boot loader being overwritten (GRUB). Reinstalling Linux would not resolve the problem unless the boot loader is also reconfigured correctly.",
+    "options": [
+      "The computer's firmware does not support multiboot configurations; update the firmware.",
+      "The Linux installation was incomplete; reinstall Linux on a new partition.",
+      "The Linux partition was not formatted correctly using NTFS.",
+      "Windows overwrote the boot loader during installation; reinstall the Linux bootloader."
+    ],
+    "correctAnswer": [
+      "Windows overwrote the boot loader during installation; reinstall the Linux bootloader."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a mandatory hardware requirement for upgrading to Windows 11?",
+    "explanation": "TPM 2.0 (Trusted Platform Module) is a mandatory hardware requirement for upgrading to Windows 11. It ensures platform integrity by securing cryptographic keys and authenticating the system at startup. Without TPM 2.0, the system will not qualify for upgrade to Windows 11.\n\nWindows 11 requires UEFI with Secure Boot, not Legacy BIOS. UEFI is critical for Windows 11 compatibility and security.\n\nWindows 11 64-bit only does not support 32-bit CPUs. 32-bit systems are incompatible.\n\nWhile Windows Media Player is a multimedia application included in some Windows editions, it is not a hardware requirement for upgrading to Windows 11.",
+    "options": [
+      "TPM 2.0",
+      "Legacy BIOS",
+      "Windows Media Player",
+      "32-bit CPU"
+    ],
+    "correctAnswer": [
+      "TPM 2.0"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What would describe the concept of development, testing, deployment, and sunsetting or retiring at the end of life for software?",
+    "explanation": "Regarding software, the process of developing, testing, deploying, and sunsetting at the end of life, refers to the life cycle.\n\nBackups protect data from loss in the case of damaged hard drives, power outages, or accidental deletion. Therefore, backups can be performed throughout the life cycle on a device but are not the whole process itself.\n\nSoftware installation is the process of copying required components and files for the required locations on a device.\n\nShadow copy is an operating system function that can assist in the backup process but is not an application in and of itself.",
+    "options": [
+      "Backup",
+      "Life cycle",
+      "Shadow copy",
+      "Installation"
+    ],
+    "correctAnswer": [
+      "Life cycle"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tool offers a robust method to configure Windows settings, without directly modifying the registry, and can apply settings across multiple computers in large networks?",
+    "explanation": "Group Policy Editor is a tool that offers a robust means of configuring Windows settings without directly editing the registry. Additionally, it can be used to apply security settings across multiple computers in a large network.\n\nWindows Defender is an antivirus program that protects systems and networks from malicious viruses.\n\nBitLocker is a Windows disk encryption product that encrypts and protects data from unauthorized access.\n\nRemote Desktop Protocol (RDP) enables users to connect to a computer from a different location, offering a graphical interface over a network for remote access.",
+    "options": [
+      "Windows Defender",
+      "BitLocker",
+      "Remote Desktop Protocol (RDP)",
+      "Group Policy Editor"
+    ],
+    "correctAnswer": [
+      "Group Policy Editor"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Microsoft has released Windows 10 in several versions over the years. Newer versions have introduced desktop and user interface changes, added support for new hardware, and expanded features. What unique feature is part of the Home edition of Windows 10?",
+    "explanation": "The Home edition of Windows 10 does not have any unique features. It has fewer features than other editions and has limited networking capabilities.\n\nA notable feature of the Pro, Enterprise, and Education editions of Windows 10 is BitLocker. It enables users to encrypt data stored at a disk level.\n\nA notable feature of the Pro, Enterprise, and Education editions of Windows 10 is Group Policy Editor (gpedit.msc). Gpedit.msc configures domain client machines individually and applies OS and software application settings.\n\nA feature of the Pro, Enterprise, and Education editions of Windows 10 is the Remote Desktop Protocol (RDP). RDP enables remote client connection to a network.",
+    "options": [
+      "BitLocker",
+      "Group Policy Editor (gpedit.msc)",
+      "Windows 10 Home edition has no unique features.",
+      "Remote Desktop Protocol (RDP)"
+    ],
+    "correctAnswer": [
+      "Windows 10 Home edition has no unique features."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-16.5-007",
+    "domain": "2.0 Security",
+    "objective": "16.5",
+    "module": "16.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A small business is looking to enhance the security of laptops used by employees who frequently travel.\n\nThe business wants to ensure that sensitive data on these devices is protected even if a laptop is lost or stolen.\n\nWhich feature of Windows Pro or Enterprise editions would best meet this requirement?",
+    "explanation": "BitLocker is a data encryption feature available in Windows Pro and Enterprise editions. It encrypts the entire drive, ensuring that sensitive data stored on it is protected even if the device is lost or stolen, which directly addresses the business's need for enhanced security for traveling employees.\n\nGroup Policy Editor is a tool used to configure and enforce settings across devices. While it is useful for managing policies and ensuring compliance, it does not directly protect data on lost or stolen devices.\n\nRDP allows users to remotely connect to and control other computers. While it is valuable for remote access and troubleshooting, it does not meet the security requirement of protecting data on lost or stolen devices.\n\nAppLocker is a feature that controls which applications can run on a device. While it is valuable for preventing unauthorized software execution, it does not encrypt data or protect it in the event of theft, making it unsuitable for this business's needs in this scenario.",
+    "options": [
+      "BitLocker",
+      "Remote Desktop Protocol (RDP)",
+      "Group Policy Editor",
+      "AppLocker"
+    ],
+    "correctAnswer": [
+      "BitLocker"
+    ],
+    "origin": "CertMaster"
+  }
+]
