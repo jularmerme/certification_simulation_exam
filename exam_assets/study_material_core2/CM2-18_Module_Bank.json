@@ -1,0 +1,1350 @@
+[
+  {
+    "id": "CM2-18.1-001",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have been hired to investigate a recent cybersecurity attack. You have discovered that the attacker was able to send commands to the server using the login fields and read information from the website's database.\n\nWhich of the following attacks would your client MOST likely be the victim of?",
+    "explanation": "SQL Injection is the most common database attack and is used to improperly access databases. All sorts of sensitive data, such as usernames and credentials, can be stored in these databases. The attacker can deal with, or even destroy the complete database, if the configuration of highly privileged input fields and send it to the server. If the server processes the request, the malicious code will be processed and carry out the attack. An SQL attack is not used to gain access to the database.\n\nOn an on-depth attack, the hacker places themselves between two devices, monitoring a tool used to intercept and access to communications. It is not used to gain access to the database.\n\nIn a brute force attack, the attacker attempts to guess the password by using a cracking tool that automatically enters every possible number, letter, and symbol combination until it discovers the correct one. This attack is not used to gain access to the database.\n\nCross-site scripting (XSS) attacks involve injecting malicious scripts into web pages viewed by other users. This attack is not used to gain access to a database directly.",
+    "options": [
+      "Brute force",
+      "SQL Injection",
+      "Cross-site scripting",
+      "On-path"
+    ],
+    "correctAnswer": [
+      "SQL Injection"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-002",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a form of attack that tricks victims into providing confidential information, such as identity information or logon credentials, through emails or websites that impersonate an online entity that the victim trusts, such as a financial institution or well-known e-commerce site?",
+    "explanation": "Phishing is a type of social engineering attack where victims are tricked into providing confidential information, such as identity information or logon credentials, through emails or websites that impersonate an entity the victim trusts. Phishing is a specific form of social engineering and human-based security attacks.\n\nAn evil twin and other variants of social engineering use devices mimicking a legitimate worker that should be granted access to the building.\n\nImpersonation is a method where the attacker impersonates a legitimate worker that should be granted access to the building.\n\nSocial engineering is the general term that covers a variety of computer-based and human-based security attacks.",
+    "options": [
+      "Impersonation",
+      "Phishing",
+      "Evil twin",
+      "Social engineering"
+    ],
+    "correctAnswer": [
+      "Phishing"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-003",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security analyst is looking at the overall security status of systems on the network. Which of the following represents the greatest long-term risk due to a lack of remediation planning?",
+    "explanation": "A legacy or EOL (End-of-Life) system is one where the vendor no longer provides support or fixes for problems. These represent the greatest threat to the network over time since issues can't be fixed.\n\nAn unpatched system is where a vulnerability is suspected or known but a patch is called a hardening scanner is an application designed to look for and report on known vulnerabilities on computer systems.\n\nA vulnerability that is exploited before the developer knows about or is able to release a patch is called a zero-day vulnerability.\n\nA non-compliant system is one that has been drifted from its hardened configuration. A vulnerability scanner is a class of software designed to detect vulnerabilities.",
+    "options": [
+      "Zero-day",
+      "Unpatched system",
+      "Non-compliant system",
+      "EOL system"
+    ],
+    "correctAnswer": [
+      "EOL system"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-004",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates a brute force password attack?",
+    "explanation": "In a brute force attack, the hacker uses an automated tool to try every possible combination of characters until the correct password is guessed. The method involves time-consuming but effective if the password is weak or the system does not implement automatic lockout policies.\n\nA brute force attack using a limited list is a dictionary attack, which is a more limited and often less effective version of a brute force attack.\n\nAn attacker using a phishing email to trick a user into revealing a password is a phishing attack, which relies on social engineering, not automated guessing attempts.\n\nAn attacker reusing a password breach and credentials to another site is a credential stuffing attack, which is based on exploiting reused passwords from previously breached accounts.",
+    "options": [
+      "A hacker uses a program to systematically try every possible combination of characters to guess a password.",
+      "A hacker sends a phishing email with a link that captures the victim's password when entered.",
+      "An attacker uses a previously stolen password and tries it on multiple websites.",
+      "An attacker uses a list of common passwords to attempt login on a specific account."
+    ],
+    "correctAnswer": [
+      "A hacker uses a program to systematically try every possible combination of characters to guess a password."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-005",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a Security Technician at a financial institution. During a security review, you discover that an unknown individual has been gathering information about your organization by searching public records, examining employee social media profiles, and visiting the company's website about its infrastructure.\n\nThis activity has not yet resulted in a direct attack but could be the first stage of one.\n\nWhich of the following BEST describes the type of threat represented in this scenario?",
+    "explanation": "Footprinting is the process of gathering information about a target to identify potential vulnerabilities. This includes activities such as public records, examining social media, and reviewing a company's website to gain insight into potential vulnerabilities. A pentester could use this information to craft a more targeted attack on their next phase.\n\nPhishing involves sending fraudulent communications that appear to come from a trusted source, typically via email, to trick individuals into revealing sensitive information or installing malware. This scenario does not involve direct communication with individuals, which rules out phishing.\n\nA social engineering attack involves manipulating individuals into divulging confidential information through deception or trickery. While footprinting can be a precursor to social engineering, the scenario does not describe direct interaction or manipulation of employees, which is a hallmark of social engineering.\n\nA zero-day attack exploits a previously unknown vulnerability in software or hardware. The scenario describes information gathering (footprinting), not the exploitation of a specific vulnerability, which is characteristic of a zero-day attack.",
+    "options": [
+      "This is an example of a social engineering attack.",
+      "This is an example of footprinting threat.",
+      "This is an example of a phishing attack.",
+      "This is an example of a zero-day attack."
+    ],
+    "correctAnswer": [
+      "This is an example of footprinting threat."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-006",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A penetration tester gains access to a regular user's box. The tester wants to escalate privileges, so they call into the help desk as the regular user and set up a script that will allow the help desk user's Kerberos ticket to be used to replay.\n\nWhat is this social engineering technique called?",
+    "explanation": "Impersonation means that the penetration tester develops a pretext to give themselves an opportunity to interact with an employee.\n\nDumpster diving is combing through an organization's (or individual's) garbage to try to find useful documents.\n\nA shoulder surfing attack means that the threat actor learns a password or PIN (or other sensitive data) by watching the user type it.\n\nTailgating is a means of entering a secure area without authorization by closely following the person who has been allowed to open or disarm the door or checkpoint.",
+    "options": [
+      "Tailgating",
+      "Dumpster diving",
+      "Impersonation",
+      "Shoulder surfing"
+    ],
+    "correctAnswer": [
+      "Impersonation"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-007",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following attacks is designed to bombard a target with more data than it can handle?",
+    "explanation": "In an on-path attack, the hacker places themselves between two devices in communications, allowing them to eavesdrop on and potentially manipulate the traffic between the devices. This attack does not bombard the target with more data than it can handle.\n\nA cross-site scripting attack injects malicious scripts into web applications to target users who visit the website. This attack does not bombard the target with more data than it can handle.\n\nA denial-of-service (DoS) attack is designed to bombard a target with more data than it can handle, causing it to crash or become unresponsive to legitimate requests.\n\nIn a brute force attack, the hacker attempts to guess the password by using a cracking tool that submits every possible letter, number, and symbol combination until the correct one is found. This attack does not bombard the target with more data than it can handle.",
+    "options": [
+      "Cross-site scripting",
+      "Brute force",
+      "Denial-of-service",
+      "On-path"
+    ],
+    "correctAnswer": [
+      "Denial-of-service"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-008",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company identifies that an external threat actor has penetrated company systems and likely exfiltrated company information. Upon investigation, you identify that a threat actor was able to capture a password while it was being transmitted during a user authentication.\n\nWhat type of password attack does this scenario describe?",
+    "explanation": "Brute force attack uses a type of password attack where a hacker is captured when the attacker intercepted and compromised network traffic.\n\nIn this scenario, an on-path attack was used when the attacker captured a user's password script in an application to exhaustively try every possible password.\n\nA brute force attack happens when a user's password script is coded in network traffic (encrypted), circumventing the trusted site, this would be social engineering.\n\nDictionary attacks are a type of password attack that compare passwords against a predetermined list of possible password values.",
+    "options": [
+      "XSS attack",
+      "Brute force attack",
+      "Dictionary attack",
+      "On-path attack"
+    ],
+    "correctAnswer": [
+      "On-path attack"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-009",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following attacks exploits a vulnerability in software that has not been discovered by the developer?",
+    "explanation": "A zero-day attack exploits a vulnerability in software that has not been discovered by the developer. The attacks are referred to as zero-day attacks because the developer has had zero days to find a solution for the vulnerability.\n\nAn insider threat is when an insider who will exploit any access to the network and would cause harm to assets, people, or processes. This is not a vulnerability that has not yet been discovered.\n\nIn a brute force attack, the hacker attempts to guess the password by using a cracking tool that submits every possible password. This is not a vulnerability that has not yet been discovered.\n\nCross-site scripting (XSS) attacks take advantage of software vulnerability by injecting malicious scripts into compromising the trusted site and read any cookie information from the compromised browser. This is not a vulnerability that has not yet been discovered.",
+    "options": [
+      "XSS attack",
+      "Insider threat",
+      "Zero-day attack",
+      "Brute force attack"
+    ],
+    "correctAnswer": [
+      "Zero-day attack"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-010",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a Junior Security Technician at a mid-sized company. During a routine security audit, you discover that one of the company's file servers has not been updated with the latest security patches and additionally, the server's configuration does not match the company's standardized baseline for secure deployment.\n\nWhich of the following describes the issue with this server?",
+    "explanation": "A non-compliant system is one that has drifted from configurational baseline standards, especially security measures. The server in this scenario does not meet the company's configuration security measures, and the server has not been patched regularly. This makes it a non-compliant system because it has deviated from the established baseline.\n\nA zero-day vulnerability is a flaw in software that is unknown to the vendor and has not been patched. There is no indication that the server's issue is related to an unknown vulnerability.\n\nWhile the server is missing security updates (a vulnerability), this scenario does not specify that this is a characteristic of the server's configuration. This issue is not related to the vendor dropping support for the server.\n\nAn end-of-life system is a system that is no longer supported by the vendor or manufacturer. There is no indication in this scenario that the server is no longer supported.",
+    "options": [
+      "The server is a non-compliant system.",
+      "The server is a zero-day vulnerability.",
+      "The server is an unpatched system.",
+      "The server is an end-of-life system."
+    ],
+    "correctAnswer": [
+      "The server is a non-compliant system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-011",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a Security Technician tasked with investigating a recent security breach. During your investigation, you discover that the attacker exploited a vulnerability in a third-party application installed on the company's servers.\n\nThe software vendor was unaware of the vulnerability, and no patch was available at the time of the attack.\n\nWhat is the MOST accurate classification of this vulnerability?",
+    "explanation": "A zero-day vulnerability is a flaw in software that is unknown to the vendor and has not been patched. In this scenario, the attacker exploited a vulnerability that the software vendor was unaware of, and no patch was available. This aligns perfectly with the definition of a zero-day vulnerability.\n\nAn unpatched system refers to a system where the owner has not applied available updates or patches. In this case, no patch existed because the vendor was unaware of the vulnerability. Therefore, this is not an unpatched system but a zero-day vulnerability.\n\nA non-compliant system is one that does not adhere to established security baselines or configurations. While the system may also be non-compliant, the key issue here is the exploitation of an unknown vulnerability, which makes it a zero-day vulnerability.\n\nAn end-of-life system refers to software or hardware that is no longer supported by the vendor. The scenario does not mention that the application is outdated or unsupported; instead, it highlights an unknown vulnerability.",
+    "options": [
+      "The vulnerability is an unpatched system.",
+      "The vulnerability is a non-compliant system.",
+      "The vulnerability is a zero-day vulnerability.",
+      "The vulnerability is an end-of-life system."
+    ],
+    "correctAnswer": [
+      "The vulnerability is a zero-day vulnerability."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-012",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates the exploitation of a Cross-site Scripting (XSS) vulnerability?",
+    "explanation": "In an XSS attack, the attacker injects malicious scripts (often JavaScript) into a web application, which are then executed in the context of another user's browser. This can lead to data theft, session hijacking, or other malicious actions.\n\nBrute-force attacks involve systematically guessing passwords, which is unrelated to the injection of malicious scripts into a web application.\n\nA threat actor sending a phishing email to a user, tricking them into clicking a link that downloads malware onto their system, describes a phishing attack, which is a form of social engineering. While phishing and XSS attacks are both security threats, phishing does not involve injecting malicious scripts into a web application.\n\nA threat actor exploiting a SQL Injection vulnerability to retrieve sensitive data from a database describes a SQL Injection attack, which involves injecting malicious SQL queries to manipulate a database. While SQL Injection and XSS are both injection-based attacks, they target different vulnerabilities and mechanisms. SQL Injection focuses on databases, whereas XSS targets web browsers and user sessions.",
+    "options": [
+      "A threat actor injects malicious JavaScript code into a website's search bar, which then executes in the browser of any user who views the search results.",
+      "A threat actor exploits a SQL Injection vulnerability to retrieve sensitive data from a database.",
+      "A threat actor uses a brute-force attack to guess a user's password and gain unauthorized access to their account.",
+      "A threat actor sends a phishing email to a user, tricking them into clicking a link that downloads malware onto their system."
+    ],
+    "correctAnswer": [
+      "A threat actor injects malicious JavaScript code into a website's search bar, which then executes in the browser of any user who views the search results."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-013",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A web application allows users to leave comments on blog posts. A user reports that after viewing a specific comment, their browser redirects them to a suspicious website without their consent.\n\nUpon investigation, you find that the comment contains a <script> tag with malicious JavaScript code.\n\nWhat is the MOST likely cause of this issue?",
+    "explanation": "XSS vulnerabilities occur when a web application does not properly validate or sanitize user input, allowing attackers to inject malicious scripts. In this scenario, the malicious script in the comment is executed in the browser of anyone who views it, which is a classic example of an XSS attack.\n\nSQL Injection attacks target databases by injecting malicious SQL queries. While both SQL Injection and XSS are injection-based attacks, SQL Injection does not involve executing malicious scripts in a user's browser, as described in the scenario.\n\nWeak encryption is related to the security of data transmission (e.g., man-in-the-middle attacks). It does not explain how malicious scripts were injected into the web application or executed in the user's browser.\n\nAuthentication issues relate to controlling access to the application. While unauthorized users posting comments could be a security concern, it does not directly explain the execution of malicious scripts in the user's browser, which is the hallmark of an XSS attack.",
+    "options": [
+      "The web application uses weak encryption, enabling attackers to intercept and modify data in transit.",
+      "The web application is vulnerable to SQL Injection, allowing the attacker to manipulate the database.",
+      "The web application lacks proper authentication mechanisms, allowing unauthorized users to post comments.",
+      "The web application fails to validate or sanitize user input, allowing malicious scripts to execute in the browser."
+    ],
+    "correctAnswer": [
+      "The web application fails to validate or sanitize user input, allowing malicious scripts to execute in the browser."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-014",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are examples of social engineering? (Select two.)",
+    "explanation": "Social engineering leverages human nature. Internal employees are often the targets of trickery, and false trust can quickly lead to a serious breach of information security. Shoulder surfing and dumpster diving are examples of social engineering.\n\nShoulder surfing is the act of looking over an authorized person's shoulder in hopes of obtaining an access code or credentials.\n\nDumpster diving involves searching through trash or other discarded items to obtain credentials or information that may facilitate further attacks. These low-tech attack methods are often the first course of action that a hacker pursues.\n\nPort scanning and war dialing are technical attacks that seek to take advantage of vulnerabilities in systems or networks.\n\nBrute force password-cracking software tries to identify a password by trying every possible letter, number, and symbol combination until the correct one is found.",
+    "options": [
+      "Brute force password cracking",
+      "Shoulder surfing",
+      "War dialing",
+      "Port scanning",
+      "Dumpster diving"
+    ],
+    "correctAnswer": [
+      "Shoulder surfing",
+      "Dumpster diving"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.1-015",
+    "domain": "2.0 Security",
+    "objective": "18.1.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jared receives an email relating that an account containing a large sum of money has been frozen by the government of a small African nation. Jared is offered a 25 percent share of the account if he helps the sender transfer it to a bank in the United States.\n\nJared replies to the sender and is instructed to send his bank account number so that it can be used to facilitate the transfer. Jared sends the requested information, and then the sender uses the information to drain Jared's bank account.\n\nWhich type of attack occurred?",
+    "explanation": "Jared was the victim of a phishing attack. This particular attack is sometimes referred to as a Nigerian 419 scam and is very common.\n\nTailgating occurs when an unauthorized person follows an authorized person into a secure building or area.\n\nEavesdropping refers to an unauthorized person listening to conversations of employees or other authorized personnel discussing sensitive topics.\n\nVishing is a social engineering attack that takes place over the phone.",
+    "options": [
+      "Eavesdropping",
+      "Phishing",
+      "Vishing",
+      "Tailgating"
+    ],
+    "correctAnswer": [
+      "Phishing"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-001",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network manager for a growing coffee company sets up wireless access points at cafe locations for users.\n\nThe manager wants to set up access to allow anyone in the vicinity to join without a password but also make it as secure as possible.\n\nWhich standard should this ability?",
+    "explanation": "WPA3 is required for Open networks. WPA3 encrypts this traffic. This means that any station can still join the network, but traffic is protected against sniffing.\n\nIn WPA2, Wi-Fi Enhanced Open traffic is unencrypted. WPA2 encrypts this traffic.\n\nThe third version of Wi-Fi Protected Access (WPA3) was designed to fix critical vulnerabilities in the earlier wired equivalent privacy (WEP) standard.\n\nWired Equivalent Privacy (WEP) is an old legacy standard. Neither WEP nor the original WPA standard is considered secure enough for continued use.",
+    "options": [
+      "WPA2",
+      "WPA",
+      "WEP",
+      "WPA3"
+    ],
+    "correctAnswer": [
+      "WPA3"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-002",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The AAA security standard includes authentication, authorization, and accounting (logging of user actions).\n\nWhich of the following authentication protocols only provides authentication?",
+    "explanation": "The Kerberos protocol only provides authentication, not authorization and accounting.\n\nRADIUS provides authentication, authorization, and accounting.\n\nTACACS+ also provides authentication, authorization, and accounting.\n\nAES (Advanced Encryption Standard) is an encryption algorithm, not an authentication protocol.",
+    "options": [
+      "TACACS+",
+      "AES",
+      "Kerberos",
+      "RADIUS"
+    ],
+    "correctAnswer": [
+      "Kerberos"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-003",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a wireless network for a small business that requires enhanced security to protect against key recovery attacks and wants that interrupted data cannot be decrypted.\n\nThe network will support modern devices, and you want to avoid vulnerabilities associated with WPA2.\n\nWhich configuration should you choose to meet these requirements?",
+    "explanation": "WPA3-Personal with Simultaneous Authentication of Equals (SAE) provides offline dictionary and key recovery attacks, offering stronger security key recovery attacks and intercepted data compared to WPA2 and ensures that intercepted data cannot be decrypted.\n\nUsing a strong passphrase improves WPA2 security; it does not address the vulnerabilities inherent in WPA2's 4-way handshake, making it susceptible to key recovery attacks.\n\nWPA2-Enterprise is not compatible method and requires a more complex setup involving a RADIUS server and digital certificates. This specifies the need for a strong method (WPA3-Personal with SAE), making this option unsuitable.\n\nWPA2-Personal in transition mode allows legacy WPA2 devices to connect, which weakens overall network security by enabling transmission mode would not fully meet the security requirements.",
+    "options": [
+      "Configure the network to use WPA2-Enterprise with EAP-TLS for multifactor authentication.",
+      "Configure the network to use WPA3-Personal in transition mode to support both WPA2 and WPA3 devices.",
+      "Configure the network to use WPA3-Personal with Simultaneous Authentication of Equals (SAE).",
+      "Configure the network to use WPA2-Personal with a strong passphrase of at least 14 characters."
+    ],
+    "correctAnswer": [
+      "Configure the network to use WPA3-Personal with Simultaneous Authentication of Equals (SAE)."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-004",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST describes WPA2 Pre-shared Key (PSK) Authentication?",
+    "explanation": "WPA2 PSK does not generate unique keys for each user. Instead, all users share the same passphrase, which is converted into a pairwise master key (PMK) for the session. The lack of unique keys for each user is a known vulnerability of this method.\n\nWPA2 PSK does not require a digital certificate for authentication; this is a feature of enterprise authentication methods, such as WPA2-Enterprise, which provide stronger security by enabling multifactor authentication and mutual authentication.\n\nIt requires a digital certificate for authentication, providing enhanced security compared to personal authentication methods.\n\nWPA2 PSK uses a unique key for each user, ensuring that no two users share the same key for encrypting communications.",
+    "options": [
+      "It requires a digital certificate for authentication, providing enhanced security compared to personal authentication methods.",
+      "It uses a unique key for each user, ensuring that no two users share the same key for encrypting communications.",
+      "It eliminates the need for a passphrase by using simultaneous authentication of equals (SAE) for key generation.",
+      "It uses a passphrase to generate a shared key among all users, making it vulnerable to offline attacks if the passphrase is weak."
+    ],
+    "correctAnswer": [
+      "It uses a passphrase to generate a shared key among all users, making it vulnerable to offline attacks if the passphrase is weak."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-005",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following wireless security methods uses a common shared key that is configured on the wireless access point and all wireless clients?",
+    "explanation": "Shared key authentication is used with WEP, WPA, and WPA2. Shared key authentication with WPA and WPA2 is often called WPA Personal or WPA2 Personal.\n\nWPA Enterprise and WPA2 use IEEE 802.1X for authentication. 802.1X for authentication uses certificates, or smart cards to authenticate wireless clients.\n\nWEP is an old legacy standard. Neither WEP nor the original WPA standard is considered secure enough for continued use.",
+    "options": [
+      "WPA Enterprise and WPA2 Enterprise",
+      "WEP, WPA Personal, WPA2 Personal, and WPA2 Enterprise",
+      "WEP, WPA Personal, and WPA2 Personal",
+      "WEP"
+    ],
+    "correctAnswer": [
+      "WEP, WPA Personal, and WPA2 Personal"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-006",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a key advantage of using Enterprise Authentication Protocols over Personal Authentication Protocols in wireless networks?",
+    "explanation": "Enterprise Authentication Protocols, such as WPA2-Enterprise or WPA3-Enterprise, utilize a centralized Authentication, Authorization, and Accounting (AAA) server to validate user credentials, ensuring that each user is authenticated individually with unique credentials. This provides enhanced security and accountability, which is a key advantage over Personal Authentication Protocols, which typically rely on a single shared passphrase for all users.\n\nSharing a single passphrase is a characteristic of Personal Authentication Protocols, such as WPA2-PSK. Enterprise Protocols eliminate this by assigning unique credentials to each user, which enhances security and accountability.\n\nEncryption is still a critical component of wireless security, even with Enterprise Authentication Protocols. These protocols work in conjunction with encryption methods like AES to ensure that data transmitted over the network is protected.\n\nEnterprise Authentication Protocols are compatible with both WPA2-Enterprise and WPA3-Enterprise. They are not limited to legacy networks and are designed to provide enhanced security for modern wireless networks as well.",
+    "options": [
+      "Enterprise Authentication Protocols allow all users to share the same passphrase for easier management.",
+      "Enterprise Authentication Protocols use a centralized AAA server to validate credentials, enhancing security and accountability.",
+      "Enterprise Authentication Protocols are designed to work only with legacy networks.",
+      "Enterprise Authentication Protocols eliminate the need for encryption in wireless communications."
+    ],
+    "correctAnswer": [
+      "Enterprise Authentication Protocols use a centralized AAA server to validate credentials, enhancing security and accountability."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-007",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A network administrator sets up a network access control solution throughout the enterprise, which allows them to see ports with multiple devices connected to a switch port.\n\nThe administrator uses this to help identify wireless access points throughout the enterprise, especially older ones that may have been forgotten.\n\nWhich of the following legacy wireless encryption mechanisms is the administrator going to change? (Select two.)",
+    "explanation": "The first version of Wi-Fi Protected Access (WPA) was designed to fix critical vulnerabilities in the earlier wired equivalent privacy (WEP) standard.\n\nWired Equivalent Privacy (WEP) is an old legacy standard. Neither WEP nor the original WPA standard is considered secure enough for continued use.\n\nWPA2 uses the Advanced Encryption Standard (AES) cipher deployed within the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP).\n\nThe main features of WPA3 are Simultaneous Authentication of Equals (SAE), updated cryptographic protocols, protected management frames, and Wi-Fi enhanced open.",
+    "options": [
+      "WEP",
+      "WPA2",
+      "WPA",
+      "WPA3"
+    ],
+    "correctAnswer": [
+      "WEP",
+      "WPA"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-008",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator wants to enable authentication for wireless access points against an Active Directory database.\n\nWhich of the following will the administrator need to use?",
+    "explanation": "Remote Authentication Dial-In User Service (RADIUS) is a widely used authentication protocol that can be used for wireless access points integrated with Active Directory.\n\nWhile LDAP is commonly used to query services like Active Directory, it is not functionality (Authentication, Authorization, and Accounting) that RADIUS provides.\n\nTACACS+ is another authentication protocol that provides AAA functionality, but it is not typically used for wireless access points.\n\nAn organizational unit (OU) is a way of dividing a domain into different administrative realms. While a OU is useful for organizing users and groups, it is not an authentication protocol.",
+    "options": [
+      "RADIUS",
+      "TACACS+",
+      "LDAP",
+      "OU"
+    ],
+    "correctAnswer": [
+      "RADIUS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-009",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is deciding whether to implement WPA3-Enterprise or to continue using WPA2-Personal with a shared passphrase.\n\nWhich of the following BEST justifies the decision to implement WPA3-Enterprise Protocols?",
+    "explanation": "WPA3-Enterprise enhances security by requiring unique credentials for each user, eliminating the risks associated with shared passphrases, such as unauthorized access if the passphrase is compromised. This makes it a stronger choice for enterprise environments requiring robust authentication and accountability compared to WPA2-Personal.\n\nWPA3-Enterprise is less secure than WPA2-Personal, is incorrect because WPA3-Enterprise offers advanced features like Simultaneous Authentication of Equals (SAE) and individual credentials, which are stronger than WPA2-Personal.\n\nWPA3-Enterprise does not use shared credentials. Instead, it relies on individual credentials for each user, which enhances security and accountability, unlike WPA2-Personal.\n\nWPA3-Enterprise does not eliminate the need for encryption, making this connection faster and easier. It focuses on improving authentication methods, not eliminating encryption.",
+    "options": [
+      "WPA3-Enterprise is less secure than WPA2-Personal but is simpler to configure.",
+      "WPA3-Enterprise allows all users to share the same passphrase, simplifying credential management.",
+      "WPA3-Enterprise provides stronger security by using unique credentials for each user and supports advanced authentication methods.",
+      "WPA3-Enterprise eliminates the need for encryption, making the network faster and easier to use."
+    ],
+    "correctAnswer": [
+      "WPA3-Enterprise provides stronger security by using unique credentials for each user and supports advanced authentication methods."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.2-010",
+    "domain": "2.0 Security",
+    "objective": "18.2.6",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company wants to implement a secure authentication system for wireless networks that minimizes the risk of credential theft during transmission.\n\nThe system should use a trusted third-party server to issue tickets for authentication and ensure that passwords are not sent over the network.\n\nWhich of the following protocols should the company implement?",
+    "explanation": "Kerberos is a secure authentication protocol that uses a trusted third-party server (Key Distribution Center) to issue tickets for authentication. It ensures that passwords are not transmitted over the network, reducing the risk of credential theft.\n\nWPA2-PSK (Pre-Shared Key) is a wireless authentication method that uses a shared passphrase for authentication. It does not involve a trusted third-party server or ticket-based authentication.\n\nEAP-TLS (Extensible Authentication Protocol - Transport Layer Security) is a strong encryption method for wireless networks. Transport Layer Security (TLS) does not rely on ticket-based authentication, as described in the scenario.\n\nTemporal Key Integrity Protocol (TKIP) is an outdated encryption protocol used with WPA. TKIP is not suitable for secure credential handling, and it is no longer recommended due to its vulnerabilities.",
+    "options": [
+      "Kerberos",
+      "WPA2-PSK",
+      "TKIP",
+      "EAP-TLS"
+    ],
+    "correctAnswer": [
+      "Kerberos"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-001",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A small business has set up a SOHO network with a screened subnet (DMZ) to host a public-facing email server. The internal network contains sensitive data, such as employee records and financial information.\n\nRecently, the business has noticed unusual traffic patterns and suspects that an attacker is trying to gain unauthorized access to the internal network by exploiting the email server on the screened subnet.\n\nWhat is the MOST effective way to analyze and mitigate the potential threat while maintaining the functionality of the email server?",
+    "explanation": "Analyzing traffic logs helps identify the source and nature of the unusual traffic. Implementing stricter firewall rules ensures that only legitimate traffic is allowed to access the email server while preventing unauthorized access attempts. This approach balances security and operational needs.\n\nBlocking all incoming traffic to the email server would stop the attack but would also disable the email server's functionality, which is not an acceptable solution for the business.\n\nMoving the email server to the internal network exposes sensitive internal data to potential threats. If the attacker is already targeting the email server, allowing it direct access to the internal network increases the risk of a breach significantly.\n\nDisabling the screened subnet entirely removes a layer of security. Allowing all traffic to flow through the internal network does not address the risk of exposing the internal network to additional threats and is not a viable solution.",
+    "options": [
+      "Monitor traffic logs on the router and implement stricter firewall rules to limit access to the email server.",
+      "Disable the screened subnet and allow all traffic to flow through the internal network for easier monitoring.",
+      "Block all incoming traffic to the email server to immediately stop the potential attack.",
+      "Move the email server to the internal network to protect it from external threats."
+    ],
+    "correctAnswer": [
+      "Monitor traffic logs on the router and implement stricter firewall rules to limit access to the email server."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-002",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of Universal Plug-and-Play (UPnP) in a SOHO network?",
+    "explanation": "Universal Plug-and-Play (UPnP) is a protocol that allows devices on the network to discover each other and establish communication automatically. It simplifies the process of setting up devices like printers, consoles, and smart home devices by making network configuration easier. This is the primary function of UPnP and is directly relevant to its purpose.\n\nUPnP is not related to encryption or security settings, such as WPA2, and configured separately to secure the wireless network. UPnP focuses on device communication and not on enhancing encryption.\n\nPreventing unauthorized access to the network's resources involves securing the router with strong passwords, using and setting HTTPS. UPnP does not play a role in securing the router's management interface.\n\nUPnP does not deal with internet connection redundancy or failover mechanisms. Backup internet connections are typically managed through dual-WAN routers or other failover solutions, not through UPnP.",
+    "options": [
+      "To prevent unauthorized access to the router's management interface.",
+      "To automatically configure devices to communicate and share data on the network.",
+      "To provide a backup internet connection in case of network failure.",
+      "To enhance the encryption settings of the wireless network."
+    ],
+    "correctAnswer": [
+      "To automatically configure devices to communicate and share data on the network."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-003",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements BEST describes the default behavior of a home router's firewall for inbound and outbound traffic?",
+    "explanation": "Home routers are configured to block all inbound traffic by default to prevent unauthorized access from external devices. This blocks the external network and prevents unsolicited inbound traffic. On the other hand, it is allowed to enable internal devices to access the internet without restrictions. This is a common configuration for home routers to ensure ease of use for users.\n\nAllowing both inbound and outbound traffic by default would expose internal devices to external threats without providing any protection, which is not a standard or secure configuration for home routers.\n\nBlocking both inbound and outbound traffic would make the router unusable for most home users, since it would isolate the network from the internet, and internal devices would not be able to connect to the internet.\n\nAllowing inbound traffic by default would compromise network security by exposing internal devices to potential threats. This is intentionally blocked to prevent unauthorized access.",
+    "options": [
+      "Inbound traffic is blocked by default, while outbound traffic is allowed by default.",
+      "Both inbound and outbound traffic are allowed by default.",
+      "Inbound traffic is allowed by default, while outbound traffic is blocked by default.",
+      "Both inbound and outbound traffic are blocked by default."
+    ],
+    "correctAnswer": [
+      "Inbound traffic is blocked by default, while outbound traffic is allowed by default."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-004",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of placing devices in a screened subnet within a SOHO network?",
+    "explanation": "A screened subnet is used to isolate devices that need to be accessible from external networks (e.g., web or email servers) while protecting the internal network from potential threats. It provides a layer of security by limiting access to only specific services and devices.\n\nThe purpose of a screened subnet is related to network security and not to enhance signal strength. Enhancing wireless signal strength involves optimizing router placement or adjusting Wi-Fi settings, not configuring network segmentation.\n\nEncryption standards (e.g., WPA2, WPA3) are related to securing wireless communications and are configured on the router's WLAN settings. Screened subnets are not used to enforce encryption standards.\n\nThe purpose of a screened subnet is the opposite of restricted access. It is designed to restrict and control access to specific devices or services for enhanced security, not to make management easier by allowing unrestricted access.",
+    "options": [
+      "To enhance the wireless signal strength across the network.",
+      "To allow unrestricted access to all devices on the network for management.",
+      "To isolate sensitive internal devices from external networks while allowing limited access to specific services.",
+      "To ensure all devices use the same encryption standard."
+    ],
+    "correctAnswer": [
+      "To isolate sensitive internal devices from external networks while allowing limited access to specific services."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-005",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is installing a network-enabled smart home control system in a SOHO.\n\nWhich of the following configurations is MOST likely required on the SOHO router to allow the system to be accessed from the internet?",
+    "explanation": "Access to a smart home control system through the SOHO router is most likely achieved with port forwarding to allow incoming traffic from the internet to be directed to the internal device.\n\nQoS gives priority to certain types of network traffic, such as VoIP and video streaming.\n\nDHCP dynamically assigns IP addresses to clients on the local network.\n\nNAT translates IP addresses on the local network to public IP addresses on the internet.",
+    "options": [
+      "QoS",
+      "DHCP",
+      "NAT",
+      "Port forwarding"
+    ],
+    "correctAnswer": [
+      "Port forwarding"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-006",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician receives a notification from a SOHO router manufacturer of a specific vulnerability that allows attackers to exploit SNMP traps to take over routers. The technician verifies the settings outlined in the notification.\n\nWhich of the following actions should the technician take NEXT?",
+    "explanation": "Manufacturers often encourage a vulnerability notification with firmware updates to address the vulnerabilities. You should apply these updates immediately.\n\nParental controls or filters block specific web traffic based on keywords, URLs, or time of day. They are not related to SNMP or address network vulnerabilities.\n\nDHCP will require static IP addresses. This does nothing to address network vulnerabilities.\n\nMAC filtering limits connectivity to a list of MAC addresses. This does nothing to address network vulnerabilities.",
+    "options": [
+      "Enable content filtering.",
+      "Enable MAC filtering.",
+      "Check for and apply firmware updates.",
+      "Disable DHCP."
+    ],
+    "correctAnswer": [
+      "Check for and apply firmware updates."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-007",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a wireless network for a small business. The business owner wants to ensure that employees can easily identify the network while avoiding confusion with other networks in the area.\n\nAdditionally, the owner is concerned about security and does not want the network name to reveal sensitive information about the business.\n\nWhat should you do when configuring the Service Set Identifier (SSID)?",
+    "explanation": "A generic but recognizable name ensures that employees can easily identify and connect to the correct network while avoiding security risks associated with revealing specific details. Avoiding sensitive details in the network name is a best practice, as it does not provide unnecessary information to attackers.\n\nDisabling SSID broadcast is a security measure to hide the network from casual users, but it is not relevant to naming conventions.\n\nUsing the default SSID provided by the router manufacturer is not recommended because it is easily recognizable and could make the network a target for attackers, especially if it reveals the brand of the router, which can help attackers identify known vulnerabilities.\n\nIncluding specific business or departmental information in the SSID, such as 'BusinessName_Accounts,' could inadvertently reveal sensitive information about the business, making it a potential target for attackers.",
+    "options": [
+      "Change the SSID to a recognizable but generic name and avoid using personal or business-specific information.",
+      "Use the default SSID provided by the router manufacturer.",
+      "Disable SSID broadcasting to hide the network from unauthorized users.",
+      "Change the SSID to include the business name and department, such as 'BusinessName_Accounts.'"
+    ],
+    "correctAnswer": [
+      "Change the SSID to a recognizable but generic name and avoid using personal or business-specific information."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-008",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a SOHO network for a small office. One of the employees wants to use a network printer and a gaming console that require automatic configuration to connect and communicate with other devices on the network.\n\nWhich of the following actions should you take to meet this requirement?",
+    "explanation": "Enabling Universal Plug-and-Play (UPnP) on the router allows devices like network printers and gaming consoles to automatically discover and configure themselves to communicate with other devices on the network, simplifying setup without manual intervention.\n\nConfiguring port forwarding for the printer and gaming console requires manual intervention to specify ports and IP addresses, which is more complex than enabling UPnP and would not be the best solution for automatic configuration.\n\nAssigning static IP addresses to the printer and gaming console ensures consistent communication with the router but does not inherently enable automatic configuration or communication between devices. This is a more manual process.\n\nEnabling the router's firewall is a security measure and does not have any role in facilitating automatic discovery or communication between devices. It may even restrict such communication if not configured properly.",
+    "options": [
+      "Configure port forwarding for the printer and gaming console.",
+      "Assign static IP addresses to the printer and gaming console.",
+      "Enable Universal Plug-and-Play (UPnP) on the router.",
+      "Enable the router's firewall for unrestricted communication."
+    ],
+    "correctAnswer": [
+      "Enable Universal Plug-and-Play (UPnP) on the router."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-009",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a SOHO router for a small remote office with five employees. The office layout requires you to decide on the best physical placement for optimal performance.\n\nWhich of the following options is the BEST course of action?",
+    "explanation": "Placing the router near the center of the office ensures even coverage of the Wi-Fi signal throughout the space, minimizing dead zones and maximizing performance for all employees.\n\nPlacing the router in a locked cabinet in the server room would prevent unauthorized access, but it could reduce signal strength due to physical obstructions, such as walls or metal cabinets.\n\nInstalling the router in the break room ensures that employees can easily access it if needed, but this does not guarantee optimal signal coverage depending on the room's layout and interference sources.\n\nPlacing the router in a corner could lead to weak signal strength in other distant areas of the office, potentially compromising its performance for users located further away.",
+    "options": [
+      "Place the router in a locked cabinet in the server room to prevent unauthorized access.",
+      "Install the router in the break room where employees can easily access it if need b.",
+      "Position the router near the center of the room, away from physical obstructions.",
+      "Place the router in a corner near the entrance of the office so it is open and unexposed area."
+    ],
+    "correctAnswer": [
+      "Position the router near the center of the room, away from physical obstructions."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-010",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator analyzes the physical placement of routers or network appliances to ensure a secure location.\n\nWhat non-malicious threat is the administrator helping to prevent?",
+    "explanation": "A power loss that would cause equipment to be destroyed due to a surge or outage is considered a non-malicious threat caused by an accident. Malicious threat actors could physically disconnect network cables, unplug the device, or otherwise prevent power to appliances.\n\nAn exit code is an error code or status that would prevent installation that occurs at a specific location.\n\nA firmware update is a type of software update applied to routers or appliances. It is not a threat but a maintenance activity.\n\nA default password should always be changed, but this does not relate to the physical placement of devices.",
+    "options": [
+      "Power off",
+      "Exit code",
+      "Firmware update",
+      "Default password"
+    ],
+    "correctAnswer": [
+      "Power off"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-011",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are configuring the firewall on a home router for a small office. The office uses a web server that needs to be accessible to external clients over the Internet.\n\nHowever, you want to ensure that no other inbound traffic is allowed and that all outbound traffic from internal devices remains unrestricted.\n\nWhich of the following configurations would BEST meet the requirements described in the scenario?",
+    "explanation": "Blocking all inbound traffic by default ensures that unauthorized external access is prevented, which is a standard security practice. Configuring port forwarding for the web server's IP address and port allows external clients to access the web server without exposing other internal devices to potential threats. Allowing all outbound traffic ensures that internal devices can access the Internet without restrictions, meeting the requirements of the scenario.\n\nAllowing all inbound traffic would expose the internal network to significant security risks. Blocking outbound traffic except for the web server would also prevent internal devices from accessing the Internet, which is not required in the scenario.\n\nBlocking all outbound traffic would prevent internal devices from accessing the Internet, which is not part of the scenario's requirements. While blocking all inbound traffic is correct, the outbound traffic restriction does not align with the scenario.\n\nAllowing all inbound and outbound traffic would compromise network security by exposing all internal devices to external threats. While this configuration would make the web server accessible, it does not meet the security requirements outlined in the scenario.",
+    "options": [
+      "Allow all inbound traffic and block all outbound traffic except for the web server.",
+      "Block all inbound traffic by default, configure port forwarding for the web server's IP address and port, and allow all outbound traffic.",
+      "Block all inbound and outbound traffic and manually allow traffic to the web server's IP address and port.",
+      "Allow all inbound and outbound traffic to ensure the web server is accessible and internal devices can connect to the Internet."
+    ],
+    "correctAnswer": [
+      "Block all inbound traffic by default, configure port forwarding for the web server's IP address and port, and allow all outbound traffic."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-012",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a home office network for a small business. The business requires a web server to be accessible from the internet.\n\nThe web server has been assigned a static IP address of 192.168.1.100. You need to ensure that external users can access the web server using the business's public IP address.\n\nAdditionally, the business wants to ensure that the web server's IP address does not change over time.\n\nWhat is the BEST configuration to achieve this?",
+    "explanation": "Port forwarding is required to direct incoming traffic on port 80 (HTTP) to the web server's internal IP address (192.168.1.100). Assigning a static IP address to the web server ensures that the port forwarding rule remains valid, as the server's IP address will not change over time, which aligns with the scenario's requirement of maintaining a consistent internal IP address.\n\nWhile DHCP reservations can ensure the web server receives the same IP address, this option does not address the need for port forwarding to make the web server accessible from the internet. Without port forwarding, external users cannot connect to the web server.\n\nDisabling the router's firewall is a poor security practice and does not specifically address the need for port forwarding. It exposes the entire network to potential threats rather than securely directing traffic to the web server.\n\nForwarding traffic to a dynamically assigned IP address is unreliable because the IP address of the web server could change, breaking the port forwarding rule. A static IP address or DHCP reservation is necessary to ensure consistent functionality.",
+    "options": [
+      "Enable DHCP on the router and configure a DHCP reservation for the web server's MAC address to ensure it always receives the same IP address.",
+      "Configure port forwarding on the router to forward incoming traffic on port 80 to 192.168.1.100 and ensure the web server has a static IP address.",
+      "Disable the router's firewall to allow unrestricted access to the web server from the internet.",
+      "Configure port forwarding on the router to forward incoming traffic on port 80 to a dynamically assigned IP address."
+    ],
+    "correctAnswer": [
+      "Configure port forwarding on the router to forward incoming traffic on port 80 to 192.168.1.100 and ensure the web server has a static IP address."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-013",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A human resources specialist has started working from home. The specialist is somewhat security conscious and wants to keep their home network secure.\n\nWhat is the network operating system (NOS) software a part of that should be kept patched by the specialist?",
+    "explanation": "Users should keep the firmware and driver for the home router up to date with the latest patches. This is important because it allows the user to fix security holes and support the latest security standards, such as WPA3.\n\nA default password is not a part of patching. The home router management software will prompt users to change the default password to secure the administrator account.\n\nAn Authentication, Authorization, and Accounting (AAA) server is not typically set up on home networks.\n\nServices that require complex firewall configuration can use the Universal Plug-and-Play (UPnP) framework to send instructions to the firewall with the correct configuration parameters.",
+    "options": [
+      "Firmware",
+      "Default password",
+      "AAA",
+      "UPnP"
+    ],
+    "correctAnswer": [
+      "Firmware"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-014",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following identifies the network name on a wireless network?",
+    "explanation": "Wireless devices use the SSID (service set identifier) to identify the network name. All devices on a wireless network use the same SSID.\n\nThe MAC address is a unique physical device address.\n\nThe WEP key is a mechanism used to secure wireless communications.\n\nThe WPA2 Personal passphrase is also a mechanism used to secure wireless communications.",
+    "options": [
+      "WEP key",
+      "WPA2 passphrase",
+      "MAC address",
+      "SSID"
+    ],
+    "correctAnswer": [
+      "SSID"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.3-015",
+    "domain": "2.0 Security",
+    "objective": "18.3.10",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is installing a new SOHO wireless router.\n\nWhich of the following is the FIRST thing the technician should do to secure the router?",
+    "explanation": "The first security consideration on a router is to change the default password.\n\nDisabling the SSID broadcast may be desirable for added security, but this is not the first action you should take.\n\nAdjusting the radio power levels limits the broadcast area and may be desirable for added security, but this is not the first action you should take.\n\nPressing the WPS button temporarily broadcasts the SSID and passphrase, which would decrease security.",
+    "options": [
+      "Press the WPS button.",
+      "Change the router's default password.",
+      "Disable SSID broadcast.",
+      "Adjust the radio power levels."
+    ],
+    "correctAnswer": [
+      "Change the router's default password."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-001",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A jewelry retail chain has just discovered how to create a new form of jewels that has never been before. They want to set up an alarm system that triggers when the case is opened.\n\nWhat type of alarm should the jewelry chain install to trigger alarms when the glass display case containing the jewels?",
+    "explanation": "A circuit-based alarm sends the circuit when the doors or drawers open or closes. In this scenario, the alarm could trigger when someone opens the glass case, making it an ideal choice.\n\nA motion-based alarm looks for a detector triggered by movement within an area. The sensors in these detectors use either microwave radio reflection or passive infrared (PIR), which detects moving heat sources. While effective for larger spaces, this may be too sensitive for a small display case.\n\nRFID tags and readers can track the movement of tagged objects within the area. While this system is versatile, it may be overkill for a localized area like a display case.\n\nA duress alarm could be implemented as a wireless pendant, concealed sensor, trigger, or call contact. While useful for personal safety, it doesn't directly secure the jewels within the case.",
+    "options": [
+      "Duress",
+      "Motion Sensors",
+      "Circuit",
+      "Radio Frequency ID (RFID)"
+    ],
+    "correctAnswer": [
+      "Circuit"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-002",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following should be installed inside the entrance to the building to prevent weapons or unauthorized equipment from being brought into the building?",
+    "explanation": "A magnetometer is a metal detector that users walk through to detect whether they are bringing any weapons or unauthorized equipment into the building. This installed just inside the entrance to the building.\n\nA badge reader is installed at the entrance to a building to help control access. A badge reader is not used to prevent weapons or unauthorized equipment from being brought inside.\n\nThe access control vestibule is a specialized entrance with two doors that creates a security buffer zone between two areas. An access control vestibule is not used to prevent weapons or unauthorized equipment from being brought inside.\n\nCable locks can be used to physically secure a device to a desk. They are not used to prevent weapons or unauthorized equipment from being brought inside.",
+    "options": [
+      "Access control vestibule",
+      "Badge reader",
+      "Magnetometer",
+      "Cable lock"
+    ],
+    "correctAnswer": [
+      "Magnetometer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-003",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have been hired to evaluate a client's building security. In your walkthrough, you notice the following:\n\n- A high fence is installed around the property.\n- Security cameras are installed on all perimeters.\n- The parking lot has light poles installed in all areas.\n- Vehicles are able to drive straight to the building entrance road.\n\nWhich of the following would you MOST likely recommend that your client do to increase security based on this information?",
+    "explanation": "Bollards should be installed to prevent vehicles from driving straight to the building entrance. Bollards are metal poles that are secured into the ground to prevent vehicles from getting too close.\n\nInstalling barbed wire on top of the fence is not necessary in most cases.\n\nUpgrading the security cameras would most likely not be necessary.\n\nThe light poles do not need to be LED lights, as this would be an unnecessary expense.",
+    "options": [
+      "Install bollards.",
+      "Install barbed wire on the fence.",
+      "Upgrade the light poles to LED lights.",
+      "Upgrade the security cameras to a better quality option."
+    ],
+    "correctAnswer": [
+      "Install bollards."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-004",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have been hired to evaluate a client's building security. In your walkthrough, you notice the following:\n\n- A high fence is installed around the property.\n- Visitors are able to enter the building and are checked in by a receptionist.\n- Security cameras are installed on all buildings.\n- Server locks are locked and have alarms.\n\nWhich of the following would you MOST likely recommend that your client do to increase security based on this information?",
+    "explanation": "Security guards can provide a high level of security inside and outside the property. They should be stationed at the entrance(s). The guards should have an access list that states who is allowed in the building.\n\nBiometric locks on the server racks are not needed and would be an unnecessary cost.\n\nInstalling barbed wire on top of the fence is not necessary in most cases.\n\nUpgrading the security cameras most likely would not be necessary.",
+    "options": [
+      "Install biometric locks on all server racks.",
+      "Place a security guard at the entrance gate with access list to control who comes on the property.",
+      "Install barbed wire around the top of the fence.",
+      "Upgrade the security cameras."
+    ],
+    "correctAnswer": [
+      "Place a security guard at the entrance gate with access list to control who comes on the property."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-005",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is concerned about the unauthorized removal of valuable equipment from its premises. They want to implement a system that can track the movement of tagged objects and alert security if an item is being removed without authorization.\n\nWhich type of alarm system should the company implement?",
+    "explanation": "A proximity alarm uses RFID tags and readers to track the movement of tagged objects within an area. This system is ideal for detecting unauthorized removal of equipment, as it can alert security personnel when a tagged item is moved beyond a designated boundary. This aligns perfectly with the company's need to monitor and secure its equipment.\n\nA circuit-based alarm is triggered when a circuit is opened or closed, such as when a door or drawer is opened. While this type of alarm can secure entry points, it does not track the movement of objects or provide the functionality required to monitor tagged equipment.\n\nA motion-sensor alarm detects movement within a room or area using microwave radio reflection or passive infrared (PIR) sensors. While this type of alarm can detect unauthorized movement, it does not specifically track tagged equipment or differentiate between authorized and unauthorized items being moved.\n\nA duress alarm is manually triggered by staff when they are in danger, such as using a hidden button or panic button. It would be inappropriate for tracking equipment, not for tracking or securing specific items, making it unsuitable for the company's requirements.",
+    "options": [
+      "Motion-sensor alarm",
+      "Proximity alarm",
+      "Duress alarm",
+      "Circuit-based alarm"
+    ],
+    "correctAnswer": [
+      "Proximity alarm"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-006",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security company was asked to help set up physical security at a massive company to identify concealed weapons coming into the building.\n\nWhat should the company implement?",
+    "explanation": "A handheld magnetometer is a type of metal detector that is often deployed at airports and in public buildings to identify concealed weapons or other items.\n\nAn access control vestibule is where someone gets ready to walk in an enclosed space protected by another barrier. This restricts access to one person at a time.\n\nSites where there is a risk of a terrorist attack and vehicle barricades and bollards and security posts to prevent vehicles from crashing into the building or exploding a bomb near it.\n\nFencing is generally effective, but the drawback is that it gives a sinister and intimidating appearance.",
+    "options": [
+      "Bollard",
+      "Fencing",
+      "Magnetometer",
+      "Access control vestibule"
+    ],
+    "correctAnswer": [
+      "Magnetometer"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-007",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have five salespeople who work out of your office and who frequently leave their laptops on open desks in their cubicles. You are concerned that someone might walk off with one of these laptops.\n\nWhich of the following is the BEST protection method to address your concerns?",
+    "explanation": "Your main concern, in this case, is with the laptops being stolen. The best protection against physical theft is to secure the laptops by placing them in secure cable locks.\n\nEncrypting all company data on the hard drives would protect it, but would not prevent the physical theft of the devices.\n\nImplementing screen saver passwords might prevent unauthorized users from accessing data on the laptops, but doing so would not prevent physical theft.\n\nRequiring strong passwords in the Local Security Policy would not have any effect on preventing unauthorized access or physical theft.",
+    "options": [
+      "Encrypt all company data on the hard drives.",
+      "Implement screen saver passwords.",
+      "Use cable locks to chain the laptops to the desks.",
+      "Require strong passwords in the Local Security Policy."
+    ],
+    "correctAnswer": [
+      "Use cable locks to chain the laptops to the desks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-008",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security manager at a top-secret facility assesses the feasibility of integrating biometric authentication but has heard that it is often inaccurate.\n\nWhich of the following is the MOST accurate form of biometrics?",
+    "explanation": "Retinal scanning is one of the most accurate forms of biometrics, but the equipment required is expensive, and the process is relatively intrusive and complex.\n\nFingerprint scanning is a contactless type of camera-based scanner that uses visible and infrared light to validate the unique pattern of veins and other features in a person's hand.\n\nFingerprints are usually distinguished as a small capacitive pad that can detect the unique patterns of ridges making up the fingerprint.\n\nA badge reader does not fall under the category of biometrics, but is a more secure way for door locks.",
+    "options": [
+      "Retina scanner",
+      "Fingerprint readers",
+      "Badge reader",
+      "Palmprint scanning"
+    ],
+    "correctAnswer": [
+      "Retina scanner"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-009",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A receptionist at a corporate office is concerned about their safety during late-night shifts.\n\nThey want a security measure that allows them to discreetly alert security personnel if they are under threat without drawing attention to the action.\n\nWhich type of alarm system should be implemented to address this concern?",
+    "explanation": "A duress alarm is specifically designed to be triggered manually by staff when they are under threat. It can be implemented as a concealed sensor, wireless pendant, or an electronic lock. This allows the receptionist to discreetly alert security personnel in a threatening situation.\n\nA motion-sensor alarm detects movement within a room or area using microwave radio reflection or passive infrared (PIR) sensors. While useful for monitoring unauthorized entry points, it does not allow a person to actively and discreetly alert security during an immediate threat.\n\nA proximity alarm uses RFID tags and readers to track the movement of tagged equipment, making it useful for monitoring equipment, not for personal safety alerts during an emergency.\n\nA circuit-based alarm is triggered when a circuit is opened or closed, such as when a door or window is opened. This type of alarm is not designed for personal safety alerts during an emergency.",
+    "options": [
+      "Proximity alarm",
+      "Duress alarm",
+      "Motion-sensor alarm",
+      "Circuit-based alarm"
+    ],
+    "correctAnswer": [
+      "Duress alarm"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.4-010",
+    "domain": "2.0 Security",
+    "objective": "18.4.5",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A public library has purchased new laptop computers to replace their older desktop computers and is concerned that they are vulnerable to theft.\n\nWhich of the following laptop features should they use to physically secure the new laptops?",
+    "explanation": "Cable locks can be used to physically secure laptops in order to deter theft.\n\nBiometric authentication, a multi-factor password policy, or external encryption device does not physically secure laptops.",
+    "options": [
+      "Biometric authentication",
+      "Cable locks",
+      "A multi-factor password policy",
+      "An external encryption device"
+    ],
+    "correctAnswer": [
+      "Cable locks"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-001",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A group of employees has voiced concerns about not feeling safe when walking to and from their cars in the parking lot. Since the building is not in a safe neighborhood, what could the company implement to help those employees feel safer? (Select all that apply.)",
+    "explanation": "Security lighting on the perimeter of a building is safe and secure at night. Well-designed lighting helps people feel safe, especially at public areas or enclosed spaces, such as parking garages.\n\nVideo surveillance is typically a layer of security designed to improve the resilience of perimeter gateways. Video surveillance is able to monitor outside activity with this solution.\n\nSecurity guards could be an option for this solution, as this would deter any bad actor from loitering around the building.\n\nA motion-based alarm looks for a detector, where it triggers by movement within a cover or other area.",
+    "options": [
+      "Motion sensors",
+      "Security guards",
+      "Lighting",
+      "Video cameras"
+    ],
+    "correctAnswer": [
+      "Security guards",
+      "Lighting",
+      "Video cameras"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-002",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company wants to improve the security of its parking garage, which is often used by employees working late hours.\n\nThe goal is to make employees feel safer while also deterring potential intruders and making surveillance more effective.\n\nWhich security measure should the company prioritize?",
+    "explanation": "Security lighting is essential for improving the perception of safety in areas like parking garages. It deters loitering by making it harder to approach unnoticed and enhances the effectiveness of surveillance systems by eliminating shadows and improving visibility for cameras or guards. This directly addresses the company's goal of making employees feel safer and deterring potential threats.\n\nA circuit-based alarm is triggered when a circuit is opened or closed, such as when a window is opened. While this type of alarm can control the overall perception of safety or deter intruders in a parking garage.\n\nA motion-sensor alarm detects movement within a room or area using microwave radio reflection or passive infrared (PIR) sensors. While a video surveillance system can monitor the parking garage and help identify intruders, its effectiveness relies heavily on visibility, which is foundational for the company's goals.\n\nA video surveillance system can monitor the parking garage and help identify intruders, but its effectiveness relies heavily on visibility, which is enhanced by proper lighting. Without adequate lighting, surveillance footage may be less effective.",
+    "options": [
+      "Video surveillance system",
+      "Circuit-based alarm",
+      "Motion-sensor alarm",
+      "Security lighting"
+    ],
+    "correctAnswer": [
+      "Security lighting"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-003",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user has just set up their network and needs to make sure that the router is secure, and no one can log in to the router. Which of the following should the user do?",
+    "explanation": "Change the default password to secure the administrator account. Choose a new strong password of 12 characters or more that could be compromised.\n\nPhysical placement of any router or network appliance should be made to a secure location. A malicious threat actor could physically disconnect network cables, unplug the router, or disrupt power, or attempt to access the router's configuration via the console port.\n\nFirmware updates are important because it allows the user to fix security holes and support the latest security standards.\n\nSSID stands for Service Set ID, this is a simple, case-sensitive text string that identifies the WLAN. The factory configuration uses a default SSID that is typically based on the device brand or model, which should be changed to a unique name.",
+    "options": [
+      "Perform firmware updates.",
+      "Change default passwords.",
+      "Locate the SSID.",
+      "Consider the physical placement."
+    ],
+    "correctAnswer": [
+      "Change default passwords."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-004",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A security awareness trainer awards a good portion of the training class talking about phishing campaigns are getting more sophisticated, so the trainer is helping the class learn how to identify a phishing email.\n\nWhich of the following is an indicator of phishing? (Select all that apply.)",
+    "explanation": "Many phishing emails have a sense of urgency so that the recipient will act now or else it will be too late. In business, this could be an email from the very web notifying something urgent.\n\nThe email sender's address (the FROM address) should be considered with care. For example, a link in the email that matches a corporate address but comes from a totally different domain.\n\nLinks in phishing emails can be disguised. For example, a link that appears to be from microsoft.com, reveals a very different URL, such as www.malicioussite.com, when the cursor hovers over the link.\n\nAn email with no signature is not an indicator of phishing.",
+    "options": [
+      "Disguised links",
+      "No signature",
+      "Inconsistent sender and reply-to addresses",
+      "Urgency"
+    ],
+    "correctAnswer": [
+      "Disguised links",
+      "Inconsistent sender and reply-to addresses",
+      "Urgency"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-005",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Network engineers are talking at a conference, reminiscing about legacy Wi-Fi security standards. Unfortunately, they could not remember the cipher that replaced Rivest Cipher 4 (RC4) at the advent of WPA2. What cipher are they attempting to remember?",
+    "explanation": "Advanced Encryption Standard (AES) is a symmetric 128-, 192-, or 256-bit block cipher used for bulk encryption in modern wireless systems, such as WPA2, WPA3, and Transport Layer Security (TLS). AES replaced RC4 at WPA2.\n\nWired Equivalent Privacy (WEP) is a legacy security algorithm for 802.11 wireless networks and is highly vulnerable to attacks.\n\nTemporal Key Integrity Protocol (TKIP) is a mechanism used in the first version of WPA to improve the security of wireless encryption mechanisms, compared to WEP.\n\nCounter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an encryption protocol for wireless local area networks (LANs) that addresses the vulnerabilities of WEP (replaced TKIP at the advent of WPA).",
+    "options": [
+      "WEP",
+      "TKIP",
+      "AES",
+      "CCMP"
+    ],
+    "correctAnswer": [
+      "AES"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-006",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network security analyst works with a small business to properly secure their Wi-Fi network. The owner has limited IT knowledge, so the analyst suggests they use WAP Protected Access Temporal Key Integrity Protocol to encrypt their wireless network traffic.\n\nThe analyst advises against this solution since a threat actor could easily find the encryption key. What would strengthen encryption with AES and CCMP for securing their Wi-Fi traffic?",
+    "explanation": "Wi-Fi Protected Access 2 (WPA2) uses the Advanced Encryption Standard (AES) deployed within the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) at AES and CCMP are extremely vulnerable to attacks.\n\nWired Equivalent Privacy (WEP) is a legacy security algorithm for 802.11 wireless networks and is highly vulnerable to attacks.\n\nWPA is the next generation of wireless data security intended to replace WPA2 by using the AES Galois Counter Mode Protocol (GCMP) mode of operation.\n\nHTTPS (Hypertext Transfer Protocol Secure) delivers web pages and other resources securely using encryption to authenticate the server and protect the information transmitted.",
+    "options": [
+      "WPA2",
+      "WEP",
+      "HTTPS",
+      "WPA3"
+    ],
+    "correctAnswer": [
+      "WPA2"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-007",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it important to disable guest access on a home router if it is not needed?",
+    "explanation": "Disabling guest access ensures that unauthorized users cannot connect to the network. Guest networks are often less secure and may provide less network if improperly configured, posing a security risk.\n\nDisabling guest access does not affect the wireless signal strength. Signal strength is determined by factors such as router placement, interference, and hardware capabilities, not by the presence of a guest network.\n\nEnabling or disabling guest access has no significant impact on the router's power consumption. The router consumes power based on its hardware and overall usage, not the number of networks it supports.\n\nDisabling guest access does not increase the capacity of the main network. The number of devices that can connect to the router is determined by its hardware and firmware, not by the presence of a guest network.",
+    "options": [
+      "To improve the wireless signal strength for connected devices.",
+      "To prevent unauthorized users from accessing the Internet network.",
+      "To reduce the router's power consumption.",
+      "To allow more devices to connect to the main network."
+    ],
+    "correctAnswer": [
+      "To prevent unauthorized users from accessing the Internet network."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-008",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following attacks has successful since there are currently no known patches to prevent it from happening?",
+    "explanation": "A zero-day attack takes advantage of a system vulnerability for which there is currently no patch or update to resolve it. However, developers may work immediately on a patch if the vulnerability is very serious.\n\nAn on-path attack places a type of specific type of eavesdropping where unencrypted traffic flows between two nodes or networks.\n\nA brute-force attack is a password attack that uses software with an algorithm to guess every one of possible passwords until it finds the correct one.\n\nA dictionary attack is a password attack where software matches the hash to those produced by ordinary words found in a dictionary.",
+    "options": [
+      "Dictionary attack",
+      "On-path attack",
+      "Brute-force attack",
+      "Zero-day attack"
+    ],
+    "correctAnswer": [
+      "Zero-day attack"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-009",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A retail store manager wants to enhance security by monitoring both the perimeter of the store and the interior areas where valuable merchandise is displayed.\n\nThey also want a system that can detect motion and potentially identify individuals attempting theft.\n\nWhich security measure should the manager implement?",
+    "explanation": "A video surveillance system, such as CCTV or IP cameras, is designed to monitor both perimeter areas and interior zones. It can be enhanced with motion detection and even facial recognition to alert staff to intrusion attempts or theft. This makes it the most suitable option for monitoring and identifying individuals attempting theft.\n\nA circuit-based alarm is triggered when a circuit is opened or closed, such as when a door or window is opened. While entry points, it does not provide motion detection or identification capabilities as described in the scenario.\n\nA motion-sensor alarm detects movement within a room or area using microwave radio reflection or passive infrared (PIR) sensors. While it can detect motion, it does not provide visual monitoring or the ability to identify individuals, which are critical for this scenario.\n\nA proximity alarm uses RFID tags and readers to track the movement of tagged equipment. It is not designed for personal safety or monitoring areas for theft, as it does not identify individuals or monitor perimeter and interior areas effectively.",
+    "options": [
+      "Motion-sensor alarm",
+      "Proximity alarm",
+      "Circuit-based alarm",
+      "Video surveillance system"
+    ],
+    "correctAnswer": [
+      "Video surveillance system"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-010",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a Security Technician for an e-commerce company. During a peak shopping season, the company's website becomes unavailable due to an overwhelming number of simultaneous requests.\n\nUpon investigation, you discover that the traffic is coming from thousands of compromised devices located across the globe, all sending requests to the website simultaneously. These devices are part of a network controlled by an attacker.\n\nWhich of the following BEST describes this type of scenario?",
+    "explanation": "A Distributed Denial of Service (DDoS) attack overwhelms a target system, such as a website, with a massive volume of traffic from multiple compromised devices (a botnet), rendering the target unavailable to legitimate users. This matches the scenario of thousands of devices sending simultaneous requests to overwhelm the website.\n\nSQL Injection involves inserting malicious SQL queries into a vulnerable application, such as a web form, to manipulate or extract data from a database. This scenario does not involve database manipulation but rather an overwhelming number of requests.\n\nPhishing involves tricking individuals into providing sensitive information or clicking malicious links, typically through deceptive emails or websites. This scenario does not involve phishing but rather a flood of requests designed to cause an outage.\n\nA brute-force attack involves systematically guessing login credentials, such as passwords, to gain unauthorized access to a target. This scenario does not describe an attempt to gain access, but rather an overwhelming of system resources.",
+    "options": [
+      "This is an example of a SQL injection attack.",
+      "This is an example of a phishing attack.",
+      "This is an example of a brute-force attack.",
+      "This is an example of a Distributed Denial of Service (DDoS) attack against a botnet."
+    ],
+    "correctAnswer": [
+      "This is an example of a Distributed Denial of Service (DDoS) attack against a botnet."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-011",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is working on Home Router WAN configurations. What can a Wi-Fi Analyzer do to assist in the configurations?",
+    "explanation": "Changing channels allows the access point to change bands to find the least congested channel for operation. A Wi-Fi analyzer can identify which channel has the least amount of congestion, helping avoid interference.\n\nFirmware updates keep router firmware and drivers up to date with the latest patches. The updates allow the user to fix security holes and support the latest security standards.\n\nThe idea of a screened subnet is that hosts get placed in a separate segment with a different IP address range than the rest of the LAN.\n\nThe encryption used on the router allows the user to set the authentication mode. The user should set the highest standard supported by the client devices that need to connect.",
+    "options": [
+      "Changing a channel",
+      "Encryption settings",
+      "Updating firmware",
+      "Screening the subnet"
+    ],
+    "correctAnswer": [
+      "Changing a channel"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-012",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While configuring a wireless access point device, a technician is presented with several security mode options.\n\nWhich of the following security options provides the MOST secure access?",
+    "explanation": "Of the three wireless security protocols (WEP, WPA and WPA2), WPA2 is the most secure.\n\nOf the two encryption algorithms (TKIP and AES), AES is the most secure.",
+    "options": [
+      "WEP 128",
+      "WPA2 and TKIP",
+      "WPA and AES",
+      "WPA2 and AES"
+    ],
+    "correctAnswer": [
+      "WPA2 and AES"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-013",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization has asked a network engineer why a particular wireless access point is not allowing users to authenticate to the company's network.\n\nUsers can connect to other access points without issue. The engineer finds that the problem access point can find and connect to the Remote Authentication Dial-in User Service (RADIUS) server, but they do not trust each other. What is most likely NOT configured on the access point?",
+    "explanation": "A shared secret allows the RADIUS server and access point to trust one another. Given that other access points are working without issue, the shared secret is configured on the RADIUS server and not on the problem access point.\n\nExtensible Authentication Protocol (EAP) allows different mechanisms to authenticate against a network directory. Some components of EAP are proving its work, as both access points are configured with an Authentication Protocol.\n\nCounter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an encryption protocol for wireless local area networks (LANs) and encryption networks (LANs) that address the vulnerabilities of WEP and least two different credentials.\n\nMultifactor authentication means that the user or supplicant must submit at least two different credentials.",
+    "options": [
+      "Shared secret",
+      "EAP",
+      "Multifactor authentication",
+      "CCMP"
+    ],
+    "correctAnswer": [
+      "Shared secret"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-014",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user is manually updating the firmware of their home router. Which of the following actions is the MOST critical to manually update firmware on a successful firmware update?",
+    "explanation": "Evaluating the source of the firmware file is critical to ensure that the update is secure and legitimate. Downloading firmware from unofficial or unverified sources could introduce malware or compromise the router's functionality and security.\n\nWhile physical security is important for preventing unauthorized access, it is not directly related to the firmware update process, nor does it uninterrupted power, nor does it ensure the authenticity or security of the update.\n\nDisabling the default SSID broadcast is related to network security and does not impact the firmware update process. The SSID setting has no bearing on the security or success of the update.\n\nChanging the default password is a good security practice, but it is not directly related to the firmware update process. The update will still proceed securely as long as the firmware source is legitimate and the process is uninterrupted.",
+    "options": [
+      "Confirming that the router's default password has been changed prior to the update",
+      "Checking that the router's SSID broadcast is disabled before starting the update",
+      "Ensuring the router is placed in a secure physical location during the update",
+      "Verifying that the firmware file was downloaded from the official vendor's website"
+    ],
+    "correctAnswer": [
+      "Verifying that the firmware file was downloaded from the official vendor's website"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-015",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is an authentication algorithm that includes a base key, the MAC address of the wireless access point, and a unique packet serial number for each transmitted packet?",
+    "explanation": "With TKIP (Temporal Key Integrity Protocol), each packet is given a unique encryption key. TKIP accomplishes this by mixing:\n\n- A base key\n- The MAC address of the wireless access point\n- A unique packet serial number\n\nAdvanced Encryption Standard (AES) is typically combined with Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) to work access a wireless network. These protocols are not encryption algorithms.\n\nRADIUS and Kerberos are authentication protocols that allow only authorized users to access a wireless network. These protocols are not encryption algorithms.",
+    "options": [
+      "Kerberos",
+      "RADIUS",
+      "AES",
+      "TKIP"
+    ],
+    "correctAnswer": [
+      "TKIP"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-016",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An attacker emailed many employees of a target company (that supports government organizations) with an invoice attachment claiming to be from a vendor the company uses for garbage removal. The attacker plans on infiltrating the office IT security by using the following social engineering techniques. How might the attacker plan on infiltrating the office? (Select all that apply.)",
+    "explanation": "The attacker can manipulate a person and use other social engineering techniques to tailgate right through the front doors of the offices.\n\nThe attacker can impersonate an employee by stealing an access card or using slightly altered tactics, impersonation can occur in combination with a tailgating situation.\n\nAn insider threat is an employee or other person with intimate knowledge or access to internal components of the company or organization. However, the attacker will seek to gain a background check to pass as an insider or already have a legitimate access pass obtained to a fraud scheme.\n\nSpoofing is an attack where the threat actor can masquerade as a trusted user or software application to gain access.",
+    "options": [
+      "Impersonate an employee.",
+      "Tailgate into the offices.",
+      "Become an insider threat.",
+      "Spoof the software token."
+    ],
+    "correctAnswer": [
+      "Impersonate an employee.",
+      "Tailgate into the offices."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-18.7-017",
+    "domain": "2.0 Security",
+    "objective": "18.7",
+    "module": "18.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A threat actor uses a technique that allows devices to connect to an open authentication and then redirect the user's browser to a fake captive portal that encourages the user to enter their network password. What is this technique?",
+    "explanation": "Evil twin is an attack that imitates a legitimate wireless access point to try to harvest credentials.\n\nVishing is attacked specifically against levels of management in an organization. Upper management may also be especially vulnerable to phishing attacks because of their high-level access or business contact.\n\nAn insider threat is an employee or other person with intimate knowledge or access to internal components of the company or organization.\n\nA spoofing threat is any attack where the threat actor can masquerade as a trusted user or computer.",
+    "options": [
+      "Whaling",
+      "Spoofing",
+      "Insider threat",
+      "Evil twin"
+    ],
+    "correctAnswer": [
+      "Evil twin"
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -1,0 +1,1413 @@
+[
+  {
+    "id": "CM2-11.1-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of documenting \"Lessons Learned\" in IT support processes?",
+    "explanation": "The primary purpose of documenting Lessons Learned is to analyze past incidents and identify ways to improve processes, ensuring that similar issues are avoided in the future. This aligns with the best practices for continuous improvement in IT support and knowledge management. The goal of documenting Lessons Learned is not to assign blame but to foster a culture of improvement and collaboration. Blame-focused approaches can discourage open communication and hinder problem-solving. While timely ticket resolution is important, it is not the purpose of Lessons Learned. This process focuses on analyzing incidents after they occur to improve future outcomes, not on operational metrics like ticket closure times. Tracking technician performance is unrelated to the Lessons Learned process. The focus is on improving systems and processes, not individual performance metrics.",
+    "options": [
+      "To track the number of incidents handled by each technician.",
+      "To ensure all tickets are closed on time.",
+      "To identify and assign blame for incidents.",
+      "To improve future processes and prevent recurring issues."
+    ],
+    "correctAnswer": [
+      "To improve future processes and prevent recurring issues."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the correct definition of a \"Critical Incident\"?",
+    "explanation": "A Critical Incident is one that has a widespread effect on customers or involves a potential or actual data breach. This is a severity classification. An incident that affects a limited group of customers or involves a suspected security violation describes a Major Incident, not a Critical Incident. Major incidents affect a limited group of customers or involve a suspected security violation, which is less severe than a critical incident. An incident that is not having a significant effect on customer groups describes a Minor Incident, which does not have a significant effect on customer groups. Minor incidents are the least severe in the classification system. An incident related to provisioning things that the IT department has a SOP for, such as setting up new user accounts, describes a Request, not an incident. Requests are related to provisioning tasks that the IT department has a standard operating procedure (SOP) for, such as setting up new user accounts or deploying hardware/software.",
+    "options": [
+      "An incident that has a widespread effect on customers or involves a potential or actual data breach.",
+      "An incident that affects a limited group of customers or involves a suspected security violation.",
+      "An incident related to provisioning things that the IT department has a SOP for, such as setting up new user accounts.",
+      "An incident that is not having a significant effect on customer groups."
+    ],
+    "correctAnswer": [
+      "An incident that has a widespread effect on customers or involves a potential or actual data breach."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is clear written communication important during the ticket management process?",
+    "explanation": "Clear written communication is essential for documenting the steps taken to resolve an issue, which allows other team members to quickly understand the ticket's progress and continue troubleshooting if necessary. This is particularly important during handoffs between shifts or escalation to higher tiers. While self-service options like knowledge bases can help end-users resolve issues, clear written communication in ticket management is primarily for internal use by support teams, not for enabling end-users to resolve their own issues. Escalation is often necessary for complex or severe issues, regardless of how clearly the ticket is documented. Clear communication facilitates escalation but does not eliminate its need. Clear communication supports efficient ticket resolution, but it does not guarantee SLA compliance. Other factors, such as resource availability and issue complexity, also influence SLA adherence.",
+    "options": [
+      "It guarantees that all tickets are resolved within the SLA timeframe.",
+      "It allows end-users to resolve their own issues without contacting support.",
+      "It eliminates the need for escalation to higher support tiers.",
+      "It ensures that all team members understand the ticket's history and current status."
+    ],
+    "correctAnswer": [
+      "It ensures that all team members understand the ticket's history and current status."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is categorizing tickets in a ticketing system important?",
+    "explanation": "Categorizing tickets helps group related issues together, making it easier to assign them to the relevant support section or technician. This process improves efficiency and ensures that the right expertise is applied to resolve the issue. Categorizing tickets does not eliminate the need for escalation. Escalation is necessary when an issue cannot be resolved at the current level, regardless of how tickets are categorized. Categorizing tickets is a back-end process that helps support teams manage issues. Self-service options (like knowledge bases) are not directly related to ticket categorization. Categorizing tickets does not guarantee resolution within a specific time frame. Categorization helps with organization and assignment, but resolution times depend on the severity and complexity of the issue.",
+    "options": [
+      "It eliminates the need for escalation to senior technicians.",
+      "It ensures tickets are assigned to the appropriate support section or technician.",
+      "It allows end-users to resolve their own issues without contacting the help desk.",
+      "It guarantees that all tickets are resolved within a specific time frame."
+    ],
+    "correctAnswer": [
+      "It ensures tickets are assigned to the appropriate support section or technician."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company's help desk receives multiple tickets reporting that customers cannot access the company's online payment system. Upon investigation, it is discovered that the issue is affecting all customers and may involve a potential data breach. Based on the standard severity levels, how should this incident be classified?",
+    "explanation": "A \"Critical Incident\" is one that has a widespread effect on customers or involves potential or actual data breaches. In this scenario, the issue affects all customers and may involve a data breach, making it a critical incident that requires immediate attention. A \"Minor Incident\" is defined as one that does not have a significant effect on customer groups. Since this issue affects all customers and involves a potential data breach, it is far more severe than a minor incident. A \"Major Incident\" affects a limited group of customers or involves a suspected security violation. In this case, the issue affects all customers and involves a potential data breach, which escalates it to a critical incident. A \"Request\" refers to provisioning tasks, such as setting up new user accounts or deploying hardware/software, and is unrelated to incidents. This scenario clearly describes an incident, not a request.",
+    "options": [
+      "Minor Incident",
+      "Critical Incident",
+      "Request",
+      "Major Incident"
+    ],
+    "correctAnswer": [
+      "Critical Incident"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security manager wants to create a step-by-step list of the completed actions for any given task to comply with policy. What is the manager creating?",
+    "explanation": "A standard operating procedure (SOP) is a step-by-step list of the actions that must be completed for any given task to comply with policy. Most IT procedures should be governed by SOPs. Scalability means that the costs involved in supplying the service to more users are linear. If it costs more than double, the system is less scalable. Elasticity refers to the system's ability to handle changes on-demand in real-time. A system with high elasticity will not experience loss of service or performance if demand suddenly doubles (or triples, or quadruples). Encryption encodes data using a key to give it the property of confidentiality. Confidentiality is not one of the two main principles of backing up.",
+    "options": [
+      "SOP",
+      "Elasticity",
+      "Scalability",
+      "Confidentiality"
+    ],
+    "correctAnswer": [
+      "SOP"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A help desk team is receiving multiple tickets from users reporting that they cannot access a shared drive. Upon reviewing the tickets, you notice that all the affected users are from the same department, and the issue started after a recent server update. What should you do to address the situation effectively?",
+    "explanation": "When multiple incidents of the same type are reported, they may indicate an underlying problem. Opening a problem ticket allows for a deeper analysis of the root cause and ensures that the issue is addressed systematically rather than treating each ticket as an isolated incident. It is important to group related tickets to identify patterns and address the root cause. Treating each ticket individually would waste time and resources without addressing the underlying problem. Closing tickets without proper resolution or communication to the users is not a best practice. It is important to analyze related tickets and escalate them appropriately, but closing tickets prematurely could lead to unresolved issues and user dissatisfaction. Reassigning tickets without analyzing their commonality does not address the root cause. It is important to categorize and analyze tickets to identify problems, rather than simply redistributing the workload.",
+    "options": [
+      "Reassign the tickets to different agents to speed up resolution.",
+      "Escalate one ticket to Tier 2 and close the rest, assuming they are duplicates.",
+      "Treat each ticket as a separate incident and troubleshoot them individually.",
+      "Analyze the tickets to identify a common cause and open a problem ticket for further investigation."
+    ],
+    "correctAnswer": [
+      "Analyze the tickets to identify a common cause and open a problem ticket for further investigation."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Where could a company employee find out how to reset a password or change their voicemail message?",
+    "explanation": "A knowledge base is a centralized repository of information, including FAQs, troubleshooting procedures, and step-by-step guides for common tasks. Employees can refer to the knowledge base to find detailed instructions on how to reset a password or change their voicemail message. It is designed to provide self-service options for users, making it the most appropriate resource for such tasks. A security policy outlines an organization's overall approach to maintaining the security of its systems, data, and infrastructure. While it may include high-level guidelines about password complexity or security best practices, it does not provide specific, step-by-step instructions for tasks like resetting a password or changing a voicemail message. Therefore, it is not the correct resource for this scenario. An Acceptable Use Policy (AUP) defines the rules and guidelines for how employees can use company resources, such as computers, networks, and communication systems. It may include restrictions on prohibited activities or content but does not provide operational instructions for tasks like resetting passwords or changing voicemail messages. As such, it is not the appropriate resource for this question. A Bring Your Own Device (BYOD) Policy governs the use of personal devices (such as smartphones or laptops) for work purposes. It typically includes guidelines for security, access, and acceptable use of personal devices within the company's network. However, it does not include instructions for resetting passwords or changing voicemail messages, making it irrelevant to this scenario.",
+    "options": [
+      "Bring Your Own Device (BYOD) Policy",
+      "Acceptable Use Policy (AUP)",
+      "Security Policy",
+      "Knowledge base"
+    ],
+    "correctAnswer": [
+      "Knowledge base"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a manager at an IT company, and your team is reviewing the organization's policy documentation to ensure compliance with company standards. During the review, you notice that a Standard Operating Procedure (SOP) for onboarding new employees includes steps for granting access to IT systems but does not reference the Acceptable Use Policy (AUP). How should you address this issue?",
+    "explanation": "SOPs are designed to provide step-by-step instructions that align with and support the organization's policies. By updating the SOP to include a step for reviewing and acknowledging the AUP, you ensure that the procedure complies with the organization's overarching policy and reinforces the importance of acceptable use guidelines during onboarding. Removing the SOP is an overreaction. The SOP is still valuable for guiding the onboarding process, and the issue can be resolved by updating it to align with the policy. Removing it would create unnecessary gaps in procedural documentation. Policies and SOPs are not independent of each other. SOPs are meant to operationalize policies by providing actionable steps. Ignoring the lack of alignment between the SOP and the AUP would result in a procedural gap and could lead to non-compliance. Creating a new policy is unnecessary. The Acceptable Use Policy (AUP) already exists and governs the acceptable use of IT resources. The issue lies in the SOP, which needs to be updated to reference the existing policy, rather than creating redundant documentation.",
+    "options": [
+      "Remove the SOP entirely, as it does not align with the organization's policies.",
+      "Leave the SOP as it is since policies and SOPs are independent of each other and do not need to reference one another.",
+      "Create a new policy specifically for onboarding employees to address the gap in the SOP.",
+      "Update the SOP to include a step requiring new employees to review and acknowledge the Acceptable Use Policy (AUP)."
+    ],
+    "correctAnswer": [
+      "Update the SOP to include a step requiring new employees to review and acknowledge the Acceptable Use Policy (AUP)."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jason is a sales rep with a computer company that sells customized laptops to the public. He is opening a ticket to help resolve a customer issue with a malfunctioning laptop, which was purchased by an important customer who is relying on the laptop to complete a critical project. Which of the following items in the ticket can Jason use to help the support team immediately determine the time sensitivity of resolving this issue?",
+    "explanation": "One of the most important ticket categories is the severity level. This helps the support team determine the time sensitivity of resolving an issue. While you can also include a department assignment in the help ticket to direct it to a specialized group (such as networking or application resolution), this information does not help the support team determine time sensitivity. While it's important to provide as many details as possible to help the support team understand exactly what's going on, the severity level is the best way to help them determine the time sensitivity of resolving an issue. Although you can assign a ticket to a one-, two-, or three-tier level, this assignment does not indicate the time sensitivity of resolving the issue.",
+    "options": [
+      "Tier assignment",
+      "Severity level",
+      "Detailed issue description",
+      "Department assignment"
+    ],
+    "correctAnswer": [
+      "Severity level"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-011",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are true about a policy? (Select two.)",
+    "explanation": "A \"policy\" is a high-level statement of intent that includes rules established by an organization to address specific problems or concerns. These rules are designed to guide employee behavior and ensure compliance with organizational goals, legal requirements, and best practices. A policy often identifies the problem it is addressing, explaining why action is necessary and providing guidance on the type of action that should be taken. This ensures that employees understand the purpose of the policy and the rationale behind the rules it enforces. While a policy may provide general guidance on actions to address a problem, it does not typically include detailed, step-by-step instructions. Instead, this level of detail is usually found in Standard Operating Procedures (SOPs), which are designed to operationalize policies. Therefore, this is not an accurate description of a policy. A policy defines a desired outcome but does not typically outline the specific steps or procedures to achieve that outcome. The \"how\" is usually addressed in SOPs or guidelines, which are more detailed and task-specific. Thus, this is not entirely accurate for a policy. A policy does not generally specify who is responsible for completing specific tasks. This level of detail is typically found in SOPs or role-specific documentation. Policies focus on overarching rules and objectives rather than assigning responsibilities. A policy does not usually include timelines or deadlines for completing specific tasks. This information is more likely to be found in project plans, SOPs, or operational guidelines. Policies are broader in scope and focus on principles rather than operational details.",
+    "options": [
+      "Defines a desired outcome and outlines how that outcome should be met.",
+      "Identifies the problem, such as why action is needed and which action should be taken.",
+      "Explains which action should be taken.",
+      "Defines when the work should be completed.",
+      "Includes rules that have been set by an organization to address a particular problem or concern.",
+      "Defines who should complete the work."
+    ],
+    "correctAnswer": [
+      "Identifies the problem, such as why action is needed and which action should be taken.",
+      "Includes rules that have been set by an organization to address a particular problem or concern."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-012",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is clear written communication important in the ticket management process?",
+    "explanation": "Clear written communication is essential for documenting who is responsible for the ticket and what actions have been taken. It ensures that the ticket can be effectively managed, especially when it needs to be escalated to different levels or passed between team members. Categorization happens when the ticket is created and is not directly related to clear written communication. While communication is important, it primarily supports tracking and managing the ticket rather than categorization. Clear written communication is not about enabling customers to resolve incidents on their own. Self-service options like knowledge bases or FAQs (Tier 0) are designed for that purpose, but they are separate from the ticket management process. Not all tickets need to be escalated to senior technicians. Clear written communication ensures proper documentation and management of the ticket, but escalation only occurs when necessary, depending on the complexity or severity of the issue.",
+    "options": [
+      "It ensures that tickets are categorized correctly at the time of creation.",
+      "It allows customers to resolve incidents without contacting the help desk.",
+      "It ensures that all tickets are escalated to senior technicians for resolution.",
+      "It helps track the ownership and progress of the ticket through different escalation levels."
+    ],
+    "correctAnswer": [
+      "It helps track the ownership and progress of the ticket through different escalation levels."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-013",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company has an SLA with a cloud service provider that guarantees 99.99% uptime for their services. During the past year, the company experienced a total of 2 hours of downtime. Based on the SLA, what should the company do next?",
+    "explanation": "For 99.99% uptime, the maximum allowable downtime is approximately 52 minutes per year. Since the company experienced 2 hours of downtime, this exceeds the SLA's guarantee. The company should first review the SLA to confirm the terms and then proceed with any recourse outlined in the agreement, such as filing a complaint or requesting compensation. While filing a complaint with the service provider for failing to meet the SLA and requesting compensation may be a valid step if the SLA terms were violated, the company should first confirm the SLA's specific terms (e.g., allowable downtime) before filing a complaint. Jumping to this step without verification could lead to unnecessary disputes. Escalation to Tier 3 support is part of incident management, not SLA enforcement. The issue here is related to SLA compliance, not troubleshooting or resolving a technical problem. Termination is a drastic step that should only be considered after confirming the SLA violation and following the recourse process outlined in the agreement. Immediate termination without proper review and communication is not a reasonable course of action.",
+    "options": [
+      "Escalate the issue to Tier 3 support for further investigation.",
+      "File a complaint with the service provider for failing to meet the SLA and request compensation.",
+      "Terminate the SLA immediately due to the service provider's failure to meet expectations.",
+      "Review the SLA to determine whether or not 2 hours of downtime is within the acceptable limit for 99.99% uptime."
+    ],
+    "correctAnswer": [
+      "Review the SLA to determine whether or not 2 hours of downtime is within the acceptable limit for 99.99% uptime."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-014",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of a knowledge base in a support environment?",
+    "explanation": "A knowledge base is specifically designed to provide users with self-service options, such as FAQs and common troubleshooting procedures. This allows users to resolve incidents independently without needing to contact support, which is the primary purpose of a knowledge base. Tracking ticket ownership and status is a function of the ticket management system, not the knowledge base. The knowledge base is focused on providing information for self-service, not managing ticket workflows. Categorizing and prioritizing tickets is part of the ticketing system's role, specifically under the process of assigning severity levels and categories. The knowledge base does not perform this function. Escalation is part of the ticket management process and involves moving tickets through tiers of support. The knowledge base is unrelated to escalation and instead focuses on providing resources for users to solve issues on their own.",
+    "options": [
+      "To provide a collection of frequently asked questions (FAQs) and troubleshooting procedures for users.",
+      "To categorize and prioritize support tickets based on severity and impact.",
+      "To escalate unresolved tickets to senior technicians or third-party support groups.",
+      "To track the ownership and status of support tickets during the troubleshooting process."
+    ],
+    "correctAnswer": [
+      "To provide a collection of frequently asked questions (FAQs) and troubleshooting procedures for users."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.1-015",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.1.17",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is experiencing a high volume of support tickets for common, repetitive issues. How effective would implementing a Knowledge Base be in addressing this problem?",
+    "explanation": "A Knowledge Base is a collection of FAQs and troubleshooting procedures that allow users to resolve common issues independently. This reduces the number of repetitive tickets submitted to the support team, making it highly effective in this scenario. While addressing the root cause of issues is important, the Knowledge Base is not designed for root cause analysis. Its purpose is to provide immediate solutions to common problems, which makes it effective in reducing ticket volume. The Knowledge Base primarily reduces the workload for Tier 1 support by enabling users to resolve issues themselves. It does not directly impact Tier 3 support, which handles more complex problems. Categorizing and prioritizing tickets is a function of ticket management systems, not the Knowledge Base. The Knowledge Base is specifically designed to help users resolve issues, making it effective in reducing ticket volume.",
+    "options": [
+      "Ineffective, as it does not address the root cause of the repetitive issues",
+      "Highly effective, as it provides users with self-service options to resolve common issues without filing tickets",
+      "Ineffective, as it primarily focuses on categorizing and prioritizing tickets rather than resolving them",
+      "Somewhat effective, as it reduces the workload for Tier 3 support but not for Tier 1 or Tier 2 support"
+    ],
+    "correctAnswer": [
+      "Highly effective, as it provides users with self-service options to resolve common issues without filing tickets"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician working on a critical issue for a customer. The customer is visibly frustrated because the issue has caused significant downtime for their business. They are blaming your company for the delay in resolving the issue. You empathize with the customer and assure them that you will work to resolve the problem as quickly as possible. However, the customer continues to express their dissatisfaction. What is the MOST professional and solution-focused action you should take next?",
+    "explanation": "By escalating the issue to a supervisor, you show the customer that their concerns are being taken seriously. Providing a clear timeline for the next steps helps manage the customer's expectations and reassures them that the issue is being actively addressed. This approach aligns with the principles of collaboration and focusing on solutions. While apologizing is important, over-explaining the reasons for the issue and focusing on your company's limitations does not contribute to resolving the problem. This approach may frustrate the customer further, as it shifts the focus away from finding a solution and onto justifying the delay. Defending your company's actions can come across as dismissive and may escalate the customer's frustration. Customers are generally more concerned with resolving the issue than hearing excuses. This response does not align with a solution-focused mindset. While it is important to remain polite, asking the customer to calm down can be perceived as condescending and may escalate the situation. Additionally, simply stating that you are doing your best does not provide the customer with a tangible solution or clear next steps, which are critical in a professional support interaction.",
+    "options": [
+      "Suggest escalating the issue to your supervisor and provide a clear timeline for the next steps to resolve the problem.",
+      "Apologize again and explain in detail why the issue occurred, emphasizing the limitations of your company's processes.",
+      "Politely ask the customer to calm down and remind them that you are doing your best to resolve the issue.",
+      "Defend your company's actions and explain that the delay was unavoidable due to external factors."
+    ],
+    "correctAnswer": [
+      "Suggest escalating the issue to your supervisor and provide a clear timeline for the next steps to resolve the problem."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Help Desk technician receives a call from a user who is unable to download new messages from the company's email server. The technician tells the user to open a command prompt, ping the email server, and check the SMTP and POP3 server IP addresses. Which of the following mistakes did the technician make?",
+    "explanation": "By using technical jargon, the technician did not handle the request properly. While words like ping, SMTP, POP3, and IP address are familiar to system administrators and help desk technicians, most end users are not familiar with these terms. The technician did not exhibit a negative attitude. Most Help Desk issues can be handled either verbally or remotely without the technician visiting the user face-to-face. The technician's mistake was an improper communication technique, not a technical mistake.",
+    "options": [
+      "The technician used jargon that the user probably didn't understand.",
+      "The technician did not walk to the user's desk and conduct the tests for the user.",
+      "The technician did not have the user check the workstation's IP address first.",
+      "The technician had a negative attitude and failed to take notes."
+    ],
+    "correctAnswer": [
+      "The technician used jargon that the user probably didn't understand."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A phone operator at a helpdesk is working with several frustrated customers and is put in various difficult positions. Which of the following is NOT part of handling difficult situations properly?",
+    "explanation": "Find a colleague for a private face-to-face chat, but under no circumstances should one ever disclose these types of experiences via social media outlets. Understand that an angry customer is usually frustrated that things are not working properly or feels let down. It is never easy to talk to someone who is unreasonable, abusive, or shouting, but it is important to be able to deal with these situations professionally. Let the customer explain the problem while you actively listen. Draw out the facts and use them as a positive action plan to drive the support case forward.",
+    "options": [
+      "Stay calm.",
+      "Post on social media.",
+      "Actively listen.",
+      "Have a positive attitude."
+    ],
+    "correctAnswer": [
+      "Post on social media."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician assisting a customer who is frustrated because their computer is not connecting to the internet. The customer says, \"I've tried everything, and it's still not working!\" To clarify the issue and gather more information, what is the BEST response?",
+    "explanation": "By asking the customer to explain the steps they've already taken, you gather critical information about the problem while showing empathy. This approach avoids redundancy in troubleshooting and ensures that the customer feels heard and understood. While resetting the router might eventually be part of the troubleshooting process, jumping to conclusions without clarifying the customer's actions or the symptoms can lead to wasted time and potentially overlooking the real problem. Responding with \"Why didn't you call us earlier if you were having this problem?\" is unprofessional and could make the customer feel defensive or blamed for the issue. It does not clarify the problem or gather useful information, and it risks escalating the customer's frustration rather than resolving the issue. While running diagnostics is a valid troubleshooting step, this response skips the critical step of clarifying the issue with the customer. It also fails to engage the customer in the process, which could lead to miscommunication or missed details about the problem.",
+    "options": [
+      "\"I understand your frustration. Can you tell me exactly what steps you've already tried to fix the issue?\"",
+      "\"It's probably a problem with your router. Let me reset it for you.\"",
+      "\"Why didn't you call us earlier if you were having this problem?\"",
+      "\"I'll just run some diagnostics on your computer and let you know what's wrong.\""
+    ],
+    "correctAnswer": [
+      "\"I understand your frustration. Can you tell me exactly what steps you've already tried to fix the issue?\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have been called into a customer's site to troubleshoot and fix one of their computers. From the description you received on the phone (prior to coming to their office), you have already given the customer an idea of which component may need to be replaced and how much it would cost to repair. You have been given permission to fix that component at the cost you quoted. When you open the computer and begin troubleshooting, you notice that what you suspected was broken was, instead, working perfectly. You soon discover the real issue. After checking with your suppliers, you find that the replacement component is less than the component you had intended to fix. Which of the following is the BEST course of action?",
+    "explanation": "Your safest and most professional course of action is to always get authorization before making repairs. Although the customer had given permission to fix the suspected component, they may have second thoughts when they find out what really needs to be fixed, even if it costs less. You should never lie about a repair. Not only is it dishonest, but if the initial component breaks in the near future, your customer will want it repaired on warranty, and you will be out the cost of the repair. Turning away business when services can easily be completed is unproductive.",
+    "options": [
+      "Decline to fix the broken component.",
+      "Fix the broken component and surprise the owner with a lower price than expected.",
+      "Fix the broken component for the agreed price and let the customer think you fixed the other component.",
+      "Obtain authorization before repairing the broken component."
+    ],
+    "correctAnswer": [
+      "Obtain authorization before repairing the broken component."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user calls tech support about a hardware malfunction. The tech support representative is not able to resolve the issue. What option does the representative choose next?",
+    "explanation": "To replace, give the customer clear instructions for how the product will be delivered or how it can be re-ordered, and whether the broken product must be returned. Virtual Network Function (VNF) specifies and deploys instances of each virtual appliance. VNFs are designed to run as virtual machines (VMs) on standard CPU platforms. Application programming interfaces (API) are not part of the standard. The simplest way of interfacing with a cloud service is to use the provider's website or APIs over the internet. Management and orchestration (MANO) position VNFs within workflows to perform the forwarding and filtering tasks they are designed for.",
+    "options": [
+      "Replacement",
+      "VNF",
+      "API calls",
+      "MANO"
+    ],
+    "correctAnswer": [
+      "Replacement"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician and receive a call from a frustrated customer whose computer is not functioning properly. The customer is speaking in an angry tone and blames your company for the issue. How should you respond to the customer to demonstrate professional communication and resolve the situation effectively?",
+    "explanation": "Actively listening to the customer, showing empathy, and focusing on resolving the issue demonstrates professional communication. This approach helps to de-escalate the situation, builds trust, and ensures the customer feels heard and valued. It aligns with the principles of professionalism and customer service. Interrupting the customer shows a lack of respect and professionalism. Blaming the customer or deflecting responsibility can escalate the situation further and damage the customer's trust in your ability to resolve the issue. Ending the call abruptly without addressing the customer's concerns demonstrates poor communication and a lack of accountability. While escalation may be necessary in some cases, it should be done after actively listening to the customer and explaining the next steps clearly. Defending your company instead of addressing the customer's concerns can come across as dismissive and unhelpful. The focus should be on resolving the issue rather than assigning blame or justifying the company's actions.",
+    "options": [
+      "Listen actively to the customer's concerns, empathize with their frustration, and assure them that you will work on a solution.",
+      "Interrupt the customer and explain that the issue is not your fault, but you will try to help them.",
+      "Tell the customer that you will escalate the issue to a senior technician and end the call immediately.",
+      "Defend your company's reputation by explaining why the issue is not related to your company's services."
+    ],
+    "correctAnswer": [
+      "Listen actively to the customer's concerns, empathize with their frustration, and assure them that you will work on a solution."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are the PC technician for a company. An employee has gone to a meeting while you fix the computer in her office. She accidentally left a report open next to her computer. It states that a friend of yours in accounting will be submitted for review if their poor work performance continues. Which of the following is the BEST action to take?",
+    "explanation": "You should ignore the paper and tell no one of its contents. Complete confidentiality is expected for any sensitive information that may be found in an employee's office. It is never appropriate to share sensitive, work-related information found in an employee's office with anyone in a company or friends.",
+    "options": [
+      "Give your friend a heads up about what you found, but don't tell them how you got the information.",
+      "Tell your fellow PC technicians about what you saw and let them decide what to do with the information.",
+      "Ignore the paper and tell no one of its contents.",
+      "Tell your friend about the report you saw and whose desk it was on."
+    ],
+    "correctAnswer": [
+      "Ignore the paper and tell no one of its contents."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As you arrive on-site to fix an issue, you are met by a frantic employee who immediately details how critical the issue is and how important it is to fix it as quickly as possible. Having seen this same issue many times, you say to the customer, \"Stop worrying. I know what I'm doing.\" Which of the following professionalism principles are you failing to follow?",
+    "explanation": "Although you may have great skills and may have even fixed the same issues on many occasions, to this customer, this problem is new, critical, and frightening. You should always listen intently and acknowledge the customer's concerns. You should never dismiss the customer's problems, even if it is only to say you know how to fix the issue.",
+    "options": [
+      "Maintain a positive attitude.",
+      "Avoid an argument with the customer.",
+      "Avoid dismissing customer problems.",
+      "Avoid being judgmental."
+    ],
+    "correctAnswer": [
+      "Avoid dismissing customer problems."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.2-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.2.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As you arrive on-site at a customer's place of business, you go to the front desk and ask for the manager of the IT department. The manager greets you and tells you to use their first name, which is Robin. Robin then escorts you to the printer, which is jammed. After you fix the printer, the existing print job completes. As the paper comes out, you notice that one of them is marked confidential and has to do with an upcoming merger. You find Robin and say, \"Robin, your printer is fixed and working perfectly.\" Robin then escorts you off the premises. When you get home that evening, you tell your spouse about the merger document you saw. The next day, you call Robin to verify that the printer is still functioning properly. Which of the following professionalism principles did you fail to follow?",
+    "explanation": "Although you never posted anything on social media regarding your experiences at the IT manager's company, you should have never discussed the confidential papers you viewed with your spouse. Therefore, you did not deal with confidential materials appropriately. Calling the IT manager by their first name is appropriate since the manager told you it was appropriate to use Robin. It is safe to assume the manager would prefer to be called by that name. There is nothing in the dialog to indicate that you were being judgmental. You also called the next day, which is a good follow-up practice.",
+    "options": [
+      "Deal with confidential materials appropriately.",
+      "Use appropriate professional titles.",
+      "Follow up with the customer to verify satisfaction.",
+      "Avoid being judgmental."
+    ],
+    "correctAnswer": [
+      "Deal with confidential materials appropriately."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network administrator is looking for an alternative network operating system (NOS) but does not want a steep learning curve. Which of the following optimizes for NOS functionality?",
+    "explanation": "Windows Server 2019 and Windows Server 2022 are optimized for use as NOSs. They share the same underlying code and desktop interface as the client versions. Windows 10 and Windows 11 are released in different editions to support business workstations and home PC use. Both Windows 10 and Windows 11 are not necessarily built for network operating systems. If they were used, a virtual machine would need to be used on top of them. macOS is the operating system that only supplies Apple-built workstations (Apple Mac desktops and Apple iMac all-in-ones) and laptops (Apple MacBooks).",
+    "options": [
+      "macOS",
+      "Windows 10",
+      "Windows Server 2019",
+      "Windows 11"
+    ],
+    "correctAnswer": [
+      "Windows Server 2019"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT consultant tasked with recommending an operating system for a small startup company. The company requires an OS that is cost-effective, supports a wide range of hardware, and can be used for both desktop and server environments. Additionally, the company values flexibility in software customization and prefers an open-source solution. Which operating system would you recommend?",
+    "explanation": "Linux is the correct choice because it is an open-source operating system, making it cost-effective and highly customizable. It supports a wide range of hardware and can be used as both a desktop and server OS, meeting the startup's requirements for flexibility and versatility. Additionally, Linux offers various distributions (distros) tailored to different needs, such as Ubuntu for user-friendly desktops or Red Hat for enterprise servers. While Windows Server 2022 is a powerful Network Operating System (NOS) for server environments, it is not open-source and requires licensing fees, making it less cost-effective for a startup. Additionally, it is primarily designed for server use and does not offer the same level of flexibility or customization as Linux. macOS is a closed-source operating system that is exclusively available on Apple hardware. While it is stable and user-friendly, it does not support a wide range of hardware and is not designed for server environments. Its proprietary nature and hardware limitations make it unsuitable for the startup's needs. Chrome OS is a lightweight operating system designed primarily for web-based applications and specific hardware like Chromebooks. While cost-effective, it lacks the flexibility and capability to function as a server OS. It is not suitable for environments requiring extensive software customization or server functionality.",
+    "options": [
+      "Windows Server 2022",
+      "Chrome OS",
+      "macOS",
+      "Linux"
+    ],
+    "correctAnswer": [
+      "Linux"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT consultant advising a company that plans to deploy a fleet of mobile devices for its employees. The company prioritizes security and centralized control over the devices, ensuring that only approved apps can be installed. Additionally, the company wants to minimize fragmentation issues across devices. Based on these requirements, which mobile operating system would you recommend?",
+    "explanation": "iOS is a closed-source operating system exclusively available on Apple devices. Its closed ecosystem ensures a high level of security and centralized control, as only apps approved by Apple can be installed through the App Store. Additionally, iOS minimizes fragmentation because it is only available on a limited range of Apple devices, ensuring consistent updates and compatibility across the fleet. While Android is widely used and open-source, its open nature allows manufacturers to create custom versions, leading to significant fragmentation across devices. This makes it harder to ensure consistent updates and security. Additionally, Android's open ecosystem allows apps to be installed from third-party sources, which could pose a security risk if not properly managed. Chrome OS is primarily designed for laptops and desktops, such as Chromebooks, and is not a mobile operating system. While it offers centralized control and security features, it does not meet the company's requirement for mobile devices. Linux is an open-source operating system primarily used for servers, desktops, and IoT devices. While it offers flexibility and security, it is not a mobile operating system and does not meet the company's requirement for deploying a fleet of mobile devices.",
+    "options": [
+      "iOS",
+      "Linux",
+      "Chrome OS",
+      "Android"
+    ],
+    "correctAnswer": [
+      "iOS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The lead for a company's vulnerability management program is looking at the mobile aspect of the company's program. They started with end of life devices, then addressed patching statuses, and are now looking at hardening. Which of the following has the widest variety of change and will prove the most difficult?",
+    "explanation": "Android software code is made publicly available. This means there is more scope for hardware vendors, such as Acer, Asus, HTC, LG, Motorola, OnePlus, Oppo, Samsung, Sony, and Xiaomi, to produce specific versions for their smartphones and tablet models. iOS is the operating system for Apple's iPhone smartphone and original models of the iPad tablet. Like macOS, iOS is also derived from UNIX and developed as a closed-source operating system. The iPadOS has been developed from iOS to support the functionality of the latest iPad models (2019 and up). Manufacturers have also redesigned Windows to support touch.",
+    "options": [
+      "iOS",
+      "iPadOS",
+      "Windows",
+      "Android"
+    ],
+    "correctAnswer": [
+      "Android"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator needs to set up a Linux server but mainly deals with Windows servers. The administrator wants to use a subscription-based version to have support when needed. Which of the following should the server administrator use?",
+    "explanation": "SUSE and Red Hat are subscription-based Linux distributions. Mint is a community-supported version of Linux. Fedora and Debian are community-supported. In addition, Linux can be a desktop or server operating system (OS). Apache, IBM, and Sun/Oracle are among the vendors producing end-user and server applications for Linux. Arch is also another community-supported Linux distribution.",
+    "options": [
+      "SUSE Linux Enterprise",
+      "Arch",
+      "Fedora",
+      "Mint"
+    ],
+    "correctAnswer": [
+      "SUSE Linux Enterprise"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following file systems is commonly used by macOS?",
+    "explanation": "APFS (Apple File System) is used by Apple Mac workstations and laptops, which supports journaling, snapshots, permissions/ownership, and encryption. NTFS (New Technology File System) is a file system developed by Microsoft and is primarily used by Windows operating systems. It is not natively supported by macOS for writing, only for reading, making it an incorrect answer. ext4 (Fourth Extended File System) is a file system commonly used by Linux operating systems. It is not used by macOS, making it an incorrect answer. FAT32 (File Allocation Table 32) is a file system that is compatible with multiple operating systems, including macOS, Windows, and Linux. However, it is not the primary or commonly used file system for macOS, making it an incorrect answer.",
+    "options": [
+      "ext4",
+      "FAT32",
+      "NTFS",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "APFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following statements is true about macOS?",
+    "explanation": "macOS is derived from the UNIX kernel and includes additional code for its graphical interface and system utilities. This is a key feature of macOS that distinguishes it from other operating systems. macOS is exclusively available on Apple-built devices and cannot be installed on non-Apple PCs. This limitation enhances stability but restricts hardware options. macOS supports the Magic Trackpad but does not support touch screens, which is a notable limitation compared to other operating systems. macOS is a unified operating system for Apple devices, unlike Windows, which offers distinct editions for different market segments.",
+    "options": [
+      "macOS is available in editions for both business workstations and home PCs.",
+      "macOS can be installed on both Apple and non-Apple PCs.",
+      "macOS supports touch screens on all Apple devices.",
+      "macOS is derived from the UNIX kernel."
+    ],
+    "correctAnswer": [
+      "macOS is derived from the UNIX kernel."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a web-browser-based operating system?",
+    "explanation": "Chrome OS is based on the Chrome browser application. This operating system was designed to be used mainly for web-based processes. Windows, macOS, and Linux are not web-based browsers.",
+    "options": [
+      "Chrome OS",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "correctAnswer": [
+      "Chrome OS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jack has a small retail business. He had a custom application developed for his inventory tracking. All of Jack's company computers have an operating system that will soon reach end of life because a newer version was released two years ago. Jack is afraid that his custom inventory application won't be compatible with the new version of the operating system. Which of the following is a risk that Jack is taking if he continues to use the operating system after its end of life?",
+    "explanation": "When an operating system reaches end of life, it no longer receives updates or security patches from the vendor. This lack of updates leaves the system exposed to vulnerabilities that cybercriminals can exploit. Without ongoing support, the OS becomes a significant security risk, especially in a business environment where sensitive data is involved. Operating systems do not lose features after reaching end of life. Instead, end-of-life systems no longer receive updates or support from the vendor. While older systems may lack newer features introduced in updated versions, the existing features of the end-of-life OS will typically remain functional unless compatibility issues arise with newer hardware or software. The custom application is already compatible with the current end-of-life operating system. Applications do not suddenly become incompatible with an OS after it reaches end of life. Instead, the concern would be about compatibility with newer versions of the OS, which is a separate issue from the risks of continuing to use an unsupported OS. The risk of losing sales is related to the process of migrating to a new operating system, not the risks of continuing to use an end-of-life OS.",
+    "options": [
+      "He may lose sales during the migration process.",
+      "He may lose some of the OS's features that he relies on.",
+      "The custom application may no longer be compatible.",
+      "The OS will become increasingly vulnerable to cyberattacks."
+    ],
+    "correctAnswer": [
+      "The OS will become increasingly vulnerable to cyberattacks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A client administrator plans an upgrade from Windows 10 to Windows 11 in the environment but has to plan from a budgetary perspective. What type of hardware requirement will the administrator need to consider?",
+    "explanation": "The administrator needs to consider the TPM chip. Windows 11 requires a central processing unit (CPU) or motherboard with support for the trusted platform module (TPM) version 2. The app ecosystem, or the range of software available for a particular operating system (OS), is a big factor in determining whether an OS becomes established in the marketplace. Devices running different operating systems cannot \"talk\" to one another directly. Instead, the operating systems must support common network protocols that allow data to be exchanged in a standard format. An upgrade project must take account of user training, prepare training programs and self-help resources, and prepare technicians to provide support on the new interface.",
+    "options": [
+      "TPM chip",
+      "App compatibility",
+      "User training",
+      "Network protocol support"
+    ],
+    "correctAnswer": [
+      "TPM chip"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT technician tasked with upgrading the operating system on a company's fleet of laptops. The laptops are five years old and currently run Windows 10. The company wants to upgrade to Windows 11 to take advantage of new features. However, after reviewing the hardware specifications of the laptops, you discover that they do not meet the minimum requirements for Windows 11. What should you conclude about the situation?",
+    "explanation": "OS compatibility issues often arise when hardware does not meet the minimum requirements for a new operating system. Newer operating systems may not support older hardware, and in such cases, hardware upgrades or replacements are necessary to resolve compatibility issues. Installing additional drivers cannot resolve fundamental hardware incompatibilities, such as insufficient CPU capabilities, lack of TPM 2.0, or unsupported hardware components. Compatibility is determined by the hardware's ability to meet the OS's baseline requirements, not by driver availability. Running Windows 10 does not guarantee compatibility with Windows 11. Each operating system has its own set of hardware requirements, and Windows 11 has stricter requirements compared to Windows 10. Compatibility issues are highly relevant when upgrading an operating system. Ignoring compatibility issues can lead to system instability, poor performance, or the inability to install the new OS altogether. It is also important to address compatibility issues during upgrades.",
+    "options": [
+      "The laptops can run Windows 11 if you install additional drivers.",
+      "The laptops should remain on Windows 10 because compatibility issues are irrelevant.",
+      "The laptops will need hardware upgrades or replacements to support Windows 11.",
+      "The laptops can run Windows 11 without any issues because they already run Windows 10."
+    ],
+    "correctAnswer": [
+      "The laptops will need hardware upgrades or replacements to support Windows 11."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are in the process of preparing a 128-GB flash drive and must determine which file system to use. Which of the following BEST describes the advantages of using the exFAT file system rather than NTFS on the flash drive?",
+    "explanation": "exFAT does not have the high overhead and risk of corruption problems that can occur on removable storage with NTFS. While exFAT supports some limited file permissions, NTFS provides better control through granular permissions and access control lists. Both exFAT and NTFS support volumes over 32 GB and files over 4 GB.",
+    "options": [
+      "Support for volumes over 32 GB",
+      "Lower overhead and risk of corruption",
+      "Support for files over 4 GB",
+      "Access control lists and permissions"
+    ],
+    "correctAnswer": [
+      "Lower overhead and risk of corruption"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with configuring a new Windows 11 workstation for a graphic design team. The team requires a file system that supports large file sizes, advanced permissions, and encryption to ensure data security. Which file system should you choose to meet these requirements?",
+    "explanation": "NTFS (New Technology File System) is the most suitable choice for the scenario. It supports large file sizes, advanced file permissions, encryption, and other features like compression and journaling. These capabilities make it ideal for a graphic design team that requires secure and efficient file management on a Windows 11 workstation. FAT32 is an older file system that lacks support for advanced features such as file-level permissions, encryption, and large file sizes (it has a maximum file size limit of 4GB). While it is compatible with many operating systems, it is not suitable for modern workstations requiring advanced security and performance features. exFAT is designed for flash drives and external storage devices, offering support for larger file sizes than FAT32. However, it does not include advanced features like file-level permissions or encryption, making it unsuitable for a secure workstation environment. ReFS (Resilient File System) is designed for high-resilience applications like data storage on servers. While it offers advanced features like data integrity checks, it is not optimized for desktop environments and lacks some features available in NTFS, such as file-level encryption. Therefore, it is not the best choice for this scenario.",
+    "options": [
+      "NTFS",
+      "FAT32",
+      "exFAT",
+      "ReFS"
+    ],
+    "correctAnswer": [
+      "NTFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company is transitioning its development team to a mixed environment where developers will use both macOS and Linux systems. The team needs to collaborate on large project files stored on a shared external drive. The file system must support large file sizes and provide reliable read/write access for both macOS and Linux. After analyzing the requirements, which file system would BEST meet the team's needs?",
+    "explanation": "exFAT (Extended File Allocation Table) is a file system designed for compatibility across multiple operating systems, including macOS and Linux. It supports large file sizes and is optimized for external drives, making it the best choice for the team's shared external drive. APFS is the default file system for macOS and is optimized for Apple devices. However, Linux does not natively support APFS, making it unsuitable for a shared external drive in a mixed macOS and Linux environment. ext4 is a robust file system commonly used by Linux. However, macOS does not natively support ext4, which would require additional tools or drivers to enable compatibility. This makes it less ideal for a shared drive in this scenario. HFS+ is an older macOS file system. While Linux can provide limited support for HFS+, it is not as universally compatible or efficient as exFAT for external drives in a mixed environment. This makes it a less suitable choice for the team's needs.",
+    "options": [
+      "HFS+",
+      "exFAT",
+      "ext4",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "exFAT"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.3-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.3.9",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Windows administrator wants to become more familiar with Linux but still wants to use Windows primarily. The administrator installs the bash subsystem for Windows and is reading about how Windows has made strides to become more compatible with Linux. To facilitate better compatibility with Linux, which of the following was part of the changes to the underlying New Technology File System (NTFS) structure?",
+    "explanation": "To support UNIX/Linux compatibility, Microsoft engineered the New Technology File System (NTFS) to support case-sensitive naming, hard links, and other key features UNIX/Linux applications require. When data is written to an NTFS volume, it is re-read, verified, and logged via journaling. In the event of a problem, the sector concerned is marked as bad, and the data is relocated. Snapshots allow the Volume Shadow Copy Service to make read-only copies of files at given points in time, even if the file gets locked by another process. The Indexing Service creates a catalog of file and folder locations and properties, speeding up searches.",
+    "options": [
+      "Indexing",
+      "Journaling",
+      "Case-sensitive naming",
+      "Snapshots"
+    ],
+    "correctAnswer": [
+      "Case-sensitive naming"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An engineer is reviewing licenses on an employee's organizational laptop. What is unique to valid licenses?",
+    "explanation": "Valid licenses mean that consumers purchased the permissions appropriately, are not expired, and are being used in accordance with agreements. Software released under an open-source license generally makes it free to use, modify, and share and makes the program code used to design it available. The idea is that other programmers can investigate the program and make it more stable and useful. Personal use licenses are those licenses in which a consumer can use a product. Consumers must not misuse personal licenses for commercial licensing. Expired licenses are those licenses that have reached the end of their contract and have not been reactivated or renewed.",
+    "options": [
+      "It is no longer active as the contract has ended.",
+      "It is free to use, modify, or share.",
+      "It is designed for consumer, not commercial use.",
+      "It is active and used in accordance with agreements."
+    ],
+    "correctAnswer": [
+      "It is active and used in accordance with agreements."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Technicians can classify tickets into priority order, such as critical, major, or minor incidents. What is this an example of?",
+    "explanation": "A severity level is a way to classify and sort tickets into priority order. This can escalate quickly and queue tickets to the proper support team. It also allows the support team to filter tickets and work on the most severe first. Categories group related tickets together. This helps support agents to assign related tickets to the relevant support team. Escalation happens to a ticket that the current-tier support agent cannot complete. The user supplies a description of the issue. The agent might ask clarifying questions to ensure an accurate initial description.",
+    "options": [
+      "Issue description",
+      "Severity",
+      "Categories",
+      "Escalation"
+    ],
+    "correctAnswer": [
+      "Severity"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company uses an element that reminds users when logging in to the company's device of the current software version. What is this called?",
+    "explanation": "The splash screen is a graphic design element consisting of a window containing an image, logo, and the current software version. Knowledge base (KB) is a repository for articles that answer frequently asked questions (FAQs) and document common or significant troubleshooting scenarios and examples. Each inventory record could be tagged with a cross-reference to an internal knowledge base to implement self-service support and assist technicians. Assigned users are when hardware assets such as workstations, laptops, smartphones, tablets, and software licenses might be assigned to individual user accounts. Acceptable use policy (AUP) sets out what someone can use a particular service or resource for.",
+    "options": [
+      "Splash screen",
+      "Acceptable use policy",
+      "Assigned users",
+      "Knowledge base"
+    ],
+    "correctAnswer": [
+      "Splash screen"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "While on a service call at a customer site, you are discussing the problem with the customer when your cell phone rings. You check the caller ID, and you see that the call is related to parts you ordered for another customer. Which of the following is the MOST professional way to handle the situation?",
+    "explanation": "Because the call is work-related, the most professional way to handle the situation is to ask the customer if they mind if you take the call. Most customers will have no problem with this. Letting the phone continue to ring is very distracting. Quickly answering the phone without asking the customer is rarely appropriate, even if it is to say you'll call the person back.",
+    "options": [
+      "Ignore the phone and let it continue ringing until the caller reaches your voicemail.",
+      "Ask the customer if it is okay to take the call, and then step into the hallway to briefly talk on the phone.",
+      "Immediately answer the phone and try to finish the call as fast as you can.",
+      "Answer the phone and say, \"I'm busy right now. I'll call you right back.\""
+    ],
+    "correctAnswer": [
+      "Ask the customer if it is okay to take the call, and then step into the hallway to briefly talk on the phone."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator at a small business. One of your employees reports that their computer, running macOS 10.15 (Catalina), is experiencing issues with a new software application that requires macOS 12 (Monterey) or later. Upon checking, you find the computer is an older Mac model that cannot be upgraded to macOS 12. What is the BEST course of action to address this issue?",
+    "explanation": "Vendor life-cycle limitations mean that older macOS versions like 10.15 (Catalina) eventually lose support and compatibility with newer software. Since the older Mac cannot be upgraded to macOS 12, replacing it with a newer model is the best solution to ensure compatibility and continued support. Apple does not provide custom updates for older macOS versions that have reached the end of their support life cycle. Once a version is no longer supported, users must upgrade to a newer version or replace incompatible hardware. Installing software on an unsupported operating system can lead to performance issues, crashes, or security vulnerabilities. Compatibility requirements must be met to ensure proper functionality. It is unlikely that software vendors will release new versions compatible with an outdated operating system. Vendors typically focus on supporting current and recently supported OS versions.",
+    "options": [
+      "Install the software application on the existing macOS 10.15 system despite compatibility issues.",
+      "Replace the older Mac with a newer model that supports macOS 12 or later.",
+      "Contact Apple to request a custom update for macOS 10.15.",
+      "Wait for the vendor to release a version of the software compatible with macOS 10.15."
+    ],
+    "correctAnswer": [
+      "Replace the older Mac with a newer model that supports macOS 12 or later."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of a Standard Operating Procedure (SOP) in an organization?",
+    "explanation": "A Standard Operating Procedure (SOP) is a step-by-step list of actions that must be completed for a given task to comply with organizational policies. SOPs are designed to ensure consistency and adherence to best practices. A general statement of intent is the definition of a policy, not an SOP. Policies are overarching guidelines, while SOPs are specific, actionable steps. Describing circumstances for deviation is the purpose of guidelines, not SOPs. Guidelines are more flexible and are used when procedures cannot be fully defined. Defining metrics for service delivery performance is the purpose of Service Level Agreements (SLAs), not SOPs. SOPs focus on task execution rather than performance measurement.",
+    "options": [
+      "To outline step-by-step actions required to complete a specific task in compliance with policy.",
+      "To provide a general statement of intent for the organization.",
+      "To describe circumstances where it is appropriate to deviate from a specified procedure.",
+      "To define the metrics used to measure service delivery performance."
+    ],
+    "correctAnswer": [
+      "To outline step-by-step actions required to complete a specific task in compliance with policy."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Jared, an employee in Human Resources, left the company two months ago as part of a company downsizing initiative. A new Human Resources VP is now running the department and has re-hired Jared to work as a manager in Human Resources. As a new IT system administrator for the company, you have been assigned to re-establish all of Jared's accounts, including network accounts, email, software, and VPN access. However, you discover that no accounts exist for Jared. What should have been done during Jared's offboarding process to make sure his accounts were still available for a period of time?",
+    "explanation": "As part of the offboarding process, you should disable a user account instead of deleting it right away. This ensures that you can back up or transfer any valuable data that the user might have saved, as well as save time in re-establishing those accounts. Accounts are normally designed to either be disabled or deleted. There is no retrieving them from a trash location once they have been deleted. Leaving the accounts in place for a period of time (such as a couple of months) would have allowed Jared to continue accessing sensitive company information, which could have resulted in a security breach. While you could have changed the passwords on all the accounts, the best way would have been to disable the accounts immediately.",
+    "options": [
+      "The account passwords should have been changed.",
+      "The accounts should have been disabled instead of deleted.",
+      "The accounts should have been deleted but not removed from the trash.",
+      "The accounts should have been left in place for a required period of time."
+    ],
+    "correctAnswer": [
+      "The accounts should have been disabled instead of deleted."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following operating systems was derived from Linux?",
+    "explanation": "Chrome OS was developed from Chromium OS, which was developed from Linux. Windows and macOS are proprietary systems that were not derived from Linux. Linux was derived from Unix, not Unix from Linux.",
+    "options": [
+      "Chrome OS",
+      "Windows",
+      "Unix",
+      "macOS"
+    ],
+    "correctAnswer": [
+      "Chrome OS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician is talking to a customer about an issue, but the customer is not sure how to locate the issue on their computer, so the technician has the customer tell them step by step to figure out the issue. What type of technique is this?",
+    "explanation": "An open-ended question that invites the other person to compose a response. Closed questions can only be answered with a \"yes\" or \"no\" or require some other fixed response. Hang up and be guided by whatever policy an organization has in place, but in general, if a customer is abusive or threatening, issue a caution to warn them about this behavior. Being judgmental is not one that will help in this situation. Do not assume that the customer lacks knowledge about the system. Not understanding their point of view may frustrate them more.",
+    "options": [
+      "Be judgemental.",
+      "Hang up.",
+      "Ask an open-ended question.",
+      "Ask a closed question."
+    ],
+    "correctAnswer": [
+      "Ask an open-ended question."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are consulting for a small business that needs to choose an operating system for its new office setup. The business requires an OS that can integrate seamlessly into a centrally managed business domain network, supports a wide range of hardware options, and allows for flexibility in choosing devices from multiple vendors. After analyzing the requirements, which operating system would you recommend?",
+    "explanation": "Windows 11 is available in editions for business workstations and is designed to integrate into centrally managed business domain networks. Additionally, Windows supports a wide range of hardware options and allows businesses to choose devices from multiple vendors, making it a flexible and practical choice for the business's needs. While macOS is stable and well-suited for specific tasks, it is exclusively available on Apple-built devices. This limitation restricts hardware options and does not meet the business's requirement for flexibility in choosing devices from multiple vendors. Although Linux (Fedora) is open-source and customizable, it's optimized for integration into centrally managed business domain networks. Additionally, Linux distributions often require more technical expertise to manage, which may not be ideal for a small business setup. Chrome OS is designed for budget and education markets, primarily relying on web applications. It lacks the robust features needed for integration into a centrally managed business domain network and does not support a wide range of hardware options.",
+    "options": [
+      "Linux (Fedora)",
+      "macOS",
+      "Windows 11",
+      "Chrome OS"
+    ],
+    "correctAnswer": [
+      "Windows 11"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-011",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT support technician working on-site at a customer's office. While troubleshooting a printer issue, you notice confidential documents left on the desk near the printer. The customer is not present in the room. What should you do to handle the situation professionally and in alignment with proper communication and respect for confidentiality?",
+    "explanation": "Pausing your work, informing the customer about the documents, and allowing them time to secure the materials before continuing demonstrates professionalism, respect for the customer's confidentiality, and clear communication. Informing the customer about the documents ensures that you are transparent and respectful while pausing your work shows that you prioritize the customer's privacy. This approach aligns with guidelines for dealing appropriately with confidential and private materials. Ignoring the documents does not address the potential breach of confidentiality. While you may not actively violate the customer's privacy, failing to acknowledge the situation could lead to misunderstandings or a lack of trust if the customer later realizes you saw the documents. Reading the documents violates the customer's privacy and is unprofessional. You should not open or view confidential materials, as this breaches trust and respect for the customer. Taking a photo of the documents is a severe violation of confidentiality and professionalism. It not only breaches the customer's trust but could also have legal implications. You should respect the customer's property and privacy at all times.",
+    "options": [
+      "Ignore the documents and continue working on the printer without mentioning them to the customer.",
+      "Take a photo of the documents to document the situation in case there is a dispute later.",
+      "Read the documents to determine if they are relevant to the printer issue and proceed accordingly.",
+      "Pause your work, inform the customer about the documents, and allow them time to secure the materials before continuing."
+    ],
+    "correctAnswer": [
+      "Pause your work, inform the customer about the documents, and allow them time to secure the materials before continuing."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-012",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A software engineer travels to a customer's site, and the customer advises them that business casual attire is permitted. What are the components of business casual attire? (Select all that apply.)",
+    "explanation": "When visiting a customer site, one must represent the professionalism of their company in the way they are dressed and groomed. Business casual can incorporate the wearing of non-matching coats and slacks. Business casual implies the use of smart clothes and can include collared button-down shirts and khaki slacks/skirts. Vests, blue jeans, and t-shirts are not business casual clothing options. Formal and business formal attire includes wearing a matching coat and slacks or a matching coat and skirt. An additional consideration when wearing formal attire to a customer site is to wear minimal accessories or jewelry as it can be distracting to the customer.",
+    "options": [
+      "Collared shirt",
+      "Non-matching coat and slacks",
+      "Minimal accessories or jewelry",
+      "Matching coat and slacks"
+    ],
+    "correctAnswer": [
+      "Collared shirt",
+      "Non-matching coat and slacks"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-013",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An engineer is assisting a customer in resolving several help tickets at the customer's location. What distractions should the engineer avoid while on-site? (Select all that apply.)",
+    "explanation": "A distraction is anything that interrupts a person from the task of resolving support tickets. Other than a genuinely critical priority, support staff should not browse websites, play games, or respond to posts on social media while conducting the remediation in front of the customer. Additionally, other than a genuine family emergency, personal calls should not be answered while servicing tickets as this creates a distraction and demonstrates unprofessionalism. While taking work calls should attempt to be avoided, it is acceptable to take colleague phone calls when they are work-related and urgent.",
+    "options": [
+      "Visiting social media sites",
+      "Taking calls from colleagues in emergent situations",
+      "Making calls to hardware vendors for troubleshooting support",
+      "Making non-business phone calls"
+    ],
+    "correctAnswer": [
+      "Visiting social media sites",
+      "Making non-business phone calls"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Currently only available for Pro for Workstations and Enterprise editions, what file system will be fully replacing NTFS?",
+    "explanation": "Resilient File System (ReFS) is the successor for New Technology File System (NTFS). However, ReFS is only available in the Pro for Workstations and Enterprise versions and is currently NOT used as the boot volume. The Extensible File Allocation Table (exFAT) is a 64-bit version of FAT using removable hard drives and flash media. Like the New Technology File System (NTFS), exFAT supports large volumes, up to a recommended maximum size 512 Terabytes (TB). Most Linux versions utilize a version of the extended (.ext) file system. ext4 provides superior performance than ext3 and is typically the best option for new systems. Whereas Windows uses NTFS and Linux typically uses ext3 or ext4, Apple Mac workstations and laptops use the proprietary Apple File System (APFS).",
+    "options": [
+      "ReFS",
+      "APFS",
+      "exFAT",
+      "ext3"
+    ],
+    "correctAnswer": [
+      "ReFS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-015",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A new client invites an engineer to attend the initial meeting in their new business complex. What should the engineer consider regarding the wearing of formal attire? (Select all that apply.)",
+    "explanation": "When visiting a customer site, one must represent the professionalism of their company in the way they are dressed and groomed. An additional consideration when wearing formal attire to a customer site is to wear minimal accessories or jewelry as it can be distracting to the customer. Formal and business formal attire includes wearing a matching coat and slacks or a matching coat and skirt. Business casual implies the use of smart clothes. These can include collared button-down shirts and khaki slacks/skirts. Vests, blue jeans, and t-shirts are not business casual clothing options. Business casual can incorporate the wearing of non-matching coats and slacks.",
+    "options": [
+      "Wearing a matching coat and slacks suit will appear professional as the company does not wear specific uniforms.",
+      "Wearing a non-matching coat and pair of slacks will allow the engineer to have a larger variety of options in clothing.",
+      "Wearing minimal accessories will ensure the customer is not distracted by their wardrobe.",
+      "Wearing a vest will allow the engineer to stand out from the rest of the group."
+    ],
+    "correctAnswer": [
+      "Wearing a matching coat and slacks suit will appear professional as the company does not wear specific uniforms.",
+      "Wearing minimal accessories will ensure the customer is not distracted by their wardrobe."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-016",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of a ticketing system in incident reporting?",
+    "explanation": "A ticketing system is used to manage requests, incidents, and problems. It is a central tool for tracking and resolving issues efficiently, ensuring that all necessary details are recorded and managed systematically. Financial reporting is not a function of a ticketing system. The focus of a ticketing system is on managing technical and support-related issues, not financial data. While ticketing systems may indirectly reflect workload or efficiency, their primary purpose is to manage and resolve incidents and requests. Ticketing systems support escalation processes when issues cannot be resolved at lower levels. They do not replace escalation but facilitate it by tracking the status and ownership of tickets.",
+    "options": [
+      "To manage requests, incidents, and problems.",
+      "To generate financial reports for the IT department.",
+      "To replace the need for escalation processes.",
+      "To monitor employee productivity."
+    ],
+    "correctAnswer": [
+      "To manage requests, incidents, and problems."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-017",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company has an SLA with a cloud service provider that guarantees 99.99% uptime for its services. During the past year, the company experienced 2 hours of downtime due to issues with the provider's infrastructure. What should the company do next, based on the SLA?",
+    "explanation": "The SLA guarantees 99.99% uptime, which allows for a maximum of 52 minutes of downtime per year. Since the company experienced 2 hours of downtime, the provider has failed to meet the SLA requirements. The SLA typically includes a recourse process for such situations, which may involve filing a complaint and requesting compensation. This is the appropriate action based on the SLA terms. While the provider did not meet the SLA requirements, termination is not the first step. The SLA likely includes a process for addressing such issues, such as filing a complaint or requesting compensation. Termination would only be considered after repeated failures or if the provider does not resolve the issue satisfactorily. Two hours of downtime exceeds the acceptable limit of 52 minutes per year for a 99.99% uptime SLA. Accepting the downtime without taking action would not align with the company's rights under the SLA. While upgrading the SLA might be an option for future considerations, it does not address the current issue of the provider failing to meet the agreed-upon 99.99% uptime. The immediate action should focus on resolving the breach of the existing SLA.",
+    "options": [
+      "Accept the downtime as it is within the acceptable limits of the SLA.",
+      "Request the provider to upgrade the SLA to 99.999% uptime to avoid future issues.",
+      "Terminate the SLA immediately and switch to a new provider.",
+      "File a complaint with the CSP and request compensation for the downtime."
+    ],
+    "correctAnswer": [
+      "File a complaint with the CSP and request compensation for the downtime."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-018",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician reviews the organization's policy to ensure it is abiding by regulated data classifications. What type of data can the technician use to identify, contact, or locate an individual?",
+    "explanation": "Personally identifiable information (PII) is data used to identify, contact, or locate an individual or, in the case of identity theft, to impersonate them. Personal government-issued information issued to individuals by federal or state governments is also PII. Examples include a social security number (SSN), passport, driving license, and birth/marriage certificates. Healthcare data refers to medical and insurance records plus associated hospital and laboratory test results. Documentation of incident includes the collection of the scope of the incident, photographs of the scene, and using encryption protection tools to safeguard any exposed system.",
+    "options": [
+      "Personal government-issued information",
+      "Personally identifiable information",
+      "Incident data",
+      "Healthcare data"
+    ],
+    "correctAnswer": [
+      "Personally identifiable information"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-019",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Management provides employees with written policies and procedures to help them fulfill their tasks. Which of the following procedures requires employees to enroll and identify themselves using secure credentials?",
+    "explanation": "The new-user setup checklist is part of the onboarding process for new employees and employees changing job roles. The end-user termination checklist is part of the offboarding process for employees who are retiring, changing job roles, or fired. Typical tasks include returning and sanitizing devices, releasing software licenses, and disabling account permissions/access. Procedures for custom installation of software packages include verifying system requirements, validating download/installation source, confirming license validity, adding the software to change control/monitoring processes, and developing support/training documentation. Assigned users are when hardware assets such as workstations, laptops, smartphones, tablets, and software licenses might be assigned to an individual user account, including an inventory list of all products that the user may be using.",
+    "options": [
+      "Assigned users",
+      "New-user setup checklist",
+      "End-user termination checklist",
+      "Procedures for custom installation of software package"
+    ],
+    "correctAnswer": [
+      "New-user setup checklist"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-020",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A server administrator is reviewing available options for Linux-supported file systems. Which of the following are supported by Linux? (Select all that apply.)",
+    "explanation": "Most Linux distributions use some version of the extended (ext) file system. ext4 delivers better performance than ext3 and would usually represent the best choice for new systems. Linux can also support FAT/FAT32 (designated as VFAT). Additional protocols such as the Network File System (NFS) can mount remote storage devices into the local file system. Where Windows uses NTFS and Linux typically uses ext3 or ext4, Apple Mac workstations and laptops use the proprietary Apple File System (APFS). The New Technology File System (NTFS) is a proprietary file system developed by Microsoft for use with Windows.",
+    "options": [
+      "NTFS",
+      "FAT32",
+      "ext4",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "FAT32",
+      "ext4"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-021",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "An employee needs to ensure that the customer receives a professional support delivery. Which of the following does this include? (Select all that apply.)",
+    "explanation": "The employee should be on time for each in-person appearance. If running late, call the customer as soon as possible to let them know. Deal appropriately with confidential and private materials, showing the customer that privacy is respected by not opening files, emails, contacts, or web pages. Proper documentation should be provided so that the customer knows what to expect in terms of supported items, how long incidents may take to resolve, and so on. Do not take calls from colleagues unless they are work-related and urgent. Other than a genuine family emergency, do not take personal calls or texts.",
+    "options": [
+      "Take routine personal phone calls",
+      "Be on time.",
+      "Provide proper documentation.",
+      "Deal appropriately with confidential and private materials."
+    ],
+    "correctAnswer": [
+      "Be on time.",
+      "Provide proper documentation.",
+      "Deal appropriately with confidential and private materials."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-022",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT technician who has just resolved a critical server issue for a client after working late into the night. Frustrated by the situation, you decide to post about your experience on social media, mentioning how the issue could have waited until the next day. The next morning, your manager calls you into their office to discuss the post. What is the MOST appropriate analysis of this situation?",
+    "explanation": "Posting about work experiences on social media is unprofessional and can lead to consequences for the employer. Even if no confidential information is disclosed, such posts can harm the company's reputation, create mistrust with clients, and reflect poorly on the employee's professionalism. Professionalism is not limited to work hours. Maintaining a professional attitude extends to all aspects of the job, including online behavior. Posting about work experiences, even without naming the client, can still harm the company's reputation and is considered unprofessional. Posting about work experiences on social media, regardless of the platform or account type, is unprofessional. The act of sharing such experiences can lead to negative consequences for the company and is not justified by the absence of sensitive information. The unprofessional nature of posting on social media does not depend on whether the client sees the post or complains. Professionalism involves maintaining a positive and respectful attitude and posting about work experiences violates this standard regardless of the client's awareness.",
+    "options": [
+      "Posting about the experience on social media was unprofessional only if the client saw the post and complained about it.",
+      "Posting about the experience on social media was acceptable because it was done outside of work hours and did not disclose the client's name.",
+      "Posting about the experience on social media was acceptable because it was your personal account and did not include any sensitive information.",
+      "Posting about the experience on social media was unprofessional because it could harm the company's reputation and breach confidentiality."
+    ],
+    "correctAnswer": [
+      "Posting about the experience on social media was unprofessional because it could harm the company's reputation and breach confidentiality."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-023",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with setting up a dual-boot system on a Mac computer that will run both macOS and Linux. To ensure compatibility and proper functionality, you need to choose a file system for a shared data partition that both operating systems can read and write to. Which file system should you choose?",
+    "explanation": "FAT32 is a file system that is widely supported by multiple operating systems, including macOS and Linux, for both reading and writing. While it has limitations (e.g., a maximum file size of 4GB), it is a practical choice for a shared data partition in a dual-boot setup, making it the correct answer. APFS (Apple File System) is the default file system for macOS. While it is optimized for macOS, Linux does not natively support APFS, making it unsuitable for a shared data partition in this scenario. ext4 (Fourth Extended File System) is commonly used by Linux. However, macOS does not natively support ext4, making it an impractical choice for a shared data partition in a dual-boot system. HFS+ (Hierarchical File System Plus) is an older macOS file system. While macOS supports it, Linux has limited support for HFS+ and may require additional configuration to enable read/write access. This makes it less ideal for a shared data partition compared to FAT32.",
+    "options": [
+      "HFS+",
+      "APFS",
+      "ext4",
+      "FAT32"
+    ],
+    "correctAnswer": [
+      "FAT32"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-024",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A curious IT administrator notices issues with certain applications invoking the kernel. Which operating system would allow the administrator to change the underlying operating system?",
+    "explanation": "Android is a smartphone/tablet OS developed by the Open Handset Alliance, primarily driven by Google. Unlike iOS, it is an open-source OS based on Linux. iOS is the operating system for Apple's iPhone smartphone and original models of the iPad tablet. Like macOS, iOS is also derived from UNIX and developed as a closed-source operating system. The iPadOS has been developed from iOS to support the functionality of the latest iPad models (2019 and up). The macOS is a closed-source operating system that does not allow users to make changes.",
+    "options": [
+      "Android",
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "correctAnswer": [
+      "Android"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-025",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A company representative travels to a new customer's site for an initial meeting. What actions should the representative consider? (Select all that apply.)",
+    "explanation": "In a professional environment, one should make it a goal to arrive at the customer's site before the meeting to ensure they are in the right location. It is sometimes easy to get lost in larger business complexes. A representative should avoid distractions, such as taking personal calls while on the customer's site, as it may cause disruptions to the representative's train of thought. In addition to not taking personal calls, the representative should not distract themselves with social media viewing. This can also distract the representative's train of thought. A representative should never argue with the customer, even if the customer is less informed.",
+    "options": [
+      "Avoid taking personal calls while in the meeting.",
+      "Do not be afraid to argue the point if the representative knows the information to be true.",
+      "Do not check social media while in the meeting.",
+      "Show up before the prearranged meeting time."
+    ],
+    "correctAnswer": [
+      "Avoid taking personal calls while in the meeting.",
+      "Do not check social media while in the meeting.",
+      "Show up before the prearranged meeting time."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-026",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A Tier 1 support agent is documenting a ticket for an issue they could not resolve and is escalating it to Tier 2. The agent writes the following note in the ticket: \"User reports an application crash. Restarted the application, but the issue persists. No further troubleshooting performed.\" What is the primary issue with this documentation, and how could it impact the ticket management process?",
+    "explanation": "Clear written communication requires detailed documentation of all troubleshooting steps taken, including specific actions and observations. The lack of detail in this note means the Tier 2 agent may need to repeat initial troubleshooting steps, wasting time and delaying the resolution process. While user contact information is important, it is typically captured automatically or in a separate section of the ticket. The primary issue here is the lack of detail about the troubleshooting steps, not missing contact information. Categorization and prioritization are separate parts of the ticketing process and are not directly related to the clarity of the written communication in this scenario. The issue described does not indicate that the problem is critical. While informing the user of escalation is good practice, the primary issue in this scenario is the lack of detailed troubleshooting documentation. This has a more significant impact on the ticket management process than user communication in this case.",
+    "options": [
+      "The note does not indicate whether the user was informed of the escalation, which could cause confusion for the user.",
+      "The note fails to categorize the issue as critical, which could lead to improper prioritization.",
+      "The note does not include the user's contact information, which violates documentation standards.",
+      "The note lacks sufficient detail about the troubleshooting steps performed, which could delay resolution."
+    ],
+    "correctAnswer": [
+      "The note lacks sufficient detail about the troubleshooting steps performed, which could delay resolution."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-027",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How does a knowledge base support the overall ticketing and incident resolution process in a support environment?",
+    "explanation": "The knowledge base is a self-service tool that provides users with access to FAQs and troubleshooting procedures. This allows users to resolve common issues on their own, reducing the need to file a ticket. This function supports the ticketing process by potentially reducing the volume of tickets submitted. Assigning severity levels is part of the ticketing system's categorization process, not a function of the knowledge base. The knowledge base is focused on providing information for self-service, not prioritizing tickets. Escalation is a function of the ticket management system and support tiers, not the knowledge base. The knowledge base is designed to help users resolve issues independently, not to manage ticket escalation. Tracking ticket status and ownership is a feature of the ticket management system. The knowledge base does not track tickets; it provides resources for users to address issues without needing to create a ticket.",
+    "options": [
+      "By escalating unresolved tickets to senior technicians or external support groups",
+      "By assigning severity levels to tickets based on their impact and urgency",
+      "By enabling users to resolve common issues independently before filing a ticket",
+      "By tracking the status and ownership of tickets throughout the troubleshooting process"
+    ],
+    "correctAnswer": [
+      "By enabling users to resolve common issues independently before filing a ticket"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-028",
+    "domain": "4.0 Operational Procedures",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A company's IT support team notices that users frequently submit tickets for password reset requests, which consumes a significant amount of Tier 1 support time. The team decides to implement a Knowledge Base to address this issue. Which feature of the Knowledge Base would most effectively reduce the number of password reset tickets?",
+    "explanation": "The Knowledge Base is a collection of FAQs and troubleshooting procedures that users can refer to for self-service. A step-by-step guide for password resets would empower users to resolve this issue without submitting a ticket, effectively reducing the workload for Tier 1 support. Categorizing tickets is a function of the ticket management system, not the Knowledge Base. While categorization may improve ticket handling, it does not reduce the number of tickets submitted, which is the goal in this scenario. Escalation is part of the ticket management process and does not align with the purpose of the Knowledge Base. The Knowledge Base is designed to provide self-service options, not to escalate tickets. While policy documents are important for educating users about security, they do not provide the practical, actionable steps needed to resolve password reset issues. A Knowledge Base is more effective when it includes troubleshooting guides rather than just policy information.",
+    "options": [
+      "Escalating password reset tickets directly to Tier 2 support for quicker resolution",
+      "Including a policy document explaining the importance of secure passwords",
+      "Providing a step-by-step guide for users to reset their passwords independently",
+      "Offering a system to categorize password reset tickets for faster assignment"
+    ],
+    "correctAnswer": [
+      "Providing a step-by-step guide for users to reset their passwords independently"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-029",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which file system is required to control access using file and folder permissions on a Windows-based computer?",
+    "explanation": "File permissions are only available on Windows for files on a partition formatted with NTFS. File permissions are not available on FAT32. Windows Encrypting File Service (EFS) encrypts individual files. Linux systems use the Ext4 file system.",
+    "options": [
+      "Ext4-formatted partition",
+      "EFS",
+      "FAT32-formatted partition",
+      "NTFS-formatted partition"
+    ],
+    "correctAnswer": [
+      "NTFS-formatted partition"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-11.6-030",
+    "domain": "1.0 Operating Systems",
+    "objective": "11.6",
+    "module": "11.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which file system is only fully supported by Windows?",
+    "explanation": "Only New Technology File System (NTFS) formatted partitions can install Windows. Therefore, NTFS is typically the best option for extra partitions and external devices utilized with Windows. The Extensible File Allocation Table (exFAT) is a 64-bit version of FAT designed for use with removable hard drives and flash media. Like NTFS, exFAT supports large volumes, up to a recommended maximum size 512 Terabytes (TB). Whereas Windows uses NTFS and Linux typically uses ext3 or ext4, Apple Mac workstations and laptops use the proprietary Apple File System (APFS). Most Linux versions utilize a version of the extended (.ext) file system. The ext4 provides superior performance than ext3 and is typically the best option for new systems.",
+    "options": [
+      "exFAT",
+      "ext4",
+      "NTFS",
+      "APFS"
+    ],
+    "correctAnswer": [
+      "NTFS"
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -1,0 +1,985 @@
+[
+  {
+    "id": "CM2-13.1-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that a specific application is not functioning correctly due to a misconfigured setting in the Windows Registry. As an IT professional, how should you evaluate the situation and proceed using the Registry Editor?",
+    "explanation": "Before making any changes to the Windows Registry, it is critical to back up the registry to prevent accidental damage. Once backed up, you can locate the registry key related to the application and carefully modify the misconfigured value. This approach ensures that the issue is resolved while minimizing risks, aligning with best practices for using the Registry Editor. Deleting the entire registry key can cause the application to malfunction further or even fail to start. It is a risky action that should only be taken as a last resort and not without a backup. Reinstalling the application may not resolve the issue if the misconfigured registry setting persists. Evaluating and addressing the specific registry issue is often a more direct and effective solution. Disabling all registry keys related to the application would likely render the application unusable. This approach does not address the root cause of the problem and is not a recommended troubleshooting step.",
+    "options": [
+      "Use the Registry Editor to disable all registry keys related to the application to prevent further issues.",
+      "Reinstall the application without using the Registry Editor, as modifying the registry is unnecessary.",
+      "Delete the entire registry key associated with the application to reset its settings.",
+      "Back up the registry, locate the specific registry key, and carefully modify the misconfigured value."
+    ],
+    "correctAnswer": [
+      "Back up the registry, locate the specific registry key, and carefully modify the misconfigured value."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Group Policy Editor in Windows?",
+    "explanation": "The Group Policy Editor is specifically designed to allow administrators to configure and manage settings for users and computers in a Windows environment. It provides centralized control over security settings, software installations, and other administrative policies. Creating and managing disk partitions is a function of the Disk Management Console, not the Group Policy Editor. The Disk Management Console is used for tasks like initializing disks, partitioning, and formatting. Updating and troubleshooting device drivers is the role of the Device Manager, not the Group Policy Editor. Device Manager is used to manage hardware devices and their associated drivers. Scheduling automated tasks is the purpose of the Task Scheduler, not the Group Policy Editor. Task Scheduler is used to automate tasks like running scripts or programs at specific times or events.",
+    "options": [
+      "To manage and configure user and computer settings in a Windows environment.",
+      "To update and troubleshoot device drivers in Device Manager.",
+      "To create and manage disk partitions for storage optimization.",
+      "To schedule automated tasks."
+    ],
+    "correctAnswer": [
+      "To manage and configure user and computer settings in a Windows environment."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator notices that the disk optimizer task scheduled by the Task Scheduler has not been running successfully. What would be the MOST effective course of action to evaluate and resolve the issue?",
+    "explanation": "It is important to regularly check for issues with tasks scheduled by the Task Scheduler, such as unsuccessful runs of the disk optimizer. Manually running the tool allows the administrator to evaluate its performance and identify any errors or issues that may be preventing the task from completing successfully. The Disk Management Console is unrelated to the Task Scheduler or the disk optimizer task. The Disk Management Console is used for tasks like partitioning and formatting disks, not for scheduling or running optimization tasks. Disabling the Task Scheduler would prevent all automated tasks, including disk optimization, from running. The importance of the Task Scheduler in automating maintenance tasks makes this an ineffective solution. Updating storage device drivers is not directly related to resolving issues with the Task Scheduler or the disk optimizer task. While driver updates can improve hardware performance, they are not a solution for unsuccessful scheduled tasks.",
+    "options": [
+      "Reinstall the Disk Management Console to ensure proper functionality.",
+      "Update the drivers for the storage devices using the Device Manager.",
+      "Disable the Task Scheduler and rely on manual optimization instead.",
+      "Manually run the disk optimizer tool and monitor its performance for errors."
+    ],
+    "correctAnswer": [
+      "Manually run the disk optimizer tool and monitor its performance for errors."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Disk Management Console in Windows?",
+    "explanation": "The Disk Management Console is specifically designed to manage the disk subsystem of a computer. It allows users to view and manage all fixed and removable disks, including tasks such as initializing disks, partitioning, formatting, and managing volumes. Managing user accounts and security groups is done through the Local Users and Groups Console, not the Disk Management Console. The Disk Management Console focuses on storage devices and their configurations. Troubleshooting and updating device drivers is the primary function of the Device Manager, not the Disk Management Console. The Disk Management Console is unrelated to device driver management. Configuring and enforcing group policies is the role of the Group Policy Editor, not the Disk Management Console. The Disk Management Console deals with storage devices and their logical organization.",
+    "options": [
+      "To manage all fixed and removable disks attached to the system.",
+      "To troubleshoot and update device drivers.",
+      "To configure and enforce group policies across the system.",
+      "To manage and edit user accounts and security groups."
+    ],
+    "correctAnswer": [
+      "To manage all fixed and removable disks attached to the system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are configuring a new hard drive on a Windows system using the Disk Management Console. The drive appears as \"Unallocated\" in the console. Your goal is to make the drive usable for storing files. What is the first step you should take?",
+    "explanation": "The first step when configuring a new, unallocated drive is to initialize it. This process involves selecting a partition style, either MBR or GPT. Initialization prepares the drive for partitioning and formatting, making it usable for storing files. Formatting can only be done after the drive has been initialized and partitioned. Attempting to format an unallocated drive without initializing it first is not possible, as the system won't recognize the drive for formatting. Creating user accounts and assigning permissions is unrelated to making a new drive usable. These tasks are performed after the drive is configured and formatted, and they are managed through the Local Users and Groups Console, not the Disk Management Console. The Disk Cleanup tool is used to free up space on existing drives by deleting unnecessary files. It has no role in preparing a new, unallocated drive for use.",
+    "options": [
+      "Create a new user account and assign permissions to the drive.",
+      "Format the drive with the NTFS file system.",
+      "Run the Disk Cleanup tool to prepare the drive for use.",
+      "Initialize the drive using either MBR or GPT partition style."
+    ],
+    "correctAnswer": [
+      "Initialize the drive using either MBR or GPT partition style."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user starts experiencing a blue screen of death (BSoD) on start-up. Where should the user check for changes after getting back on the computer?",
+    "explanation": "Most blue screens of death (BSoD), especially those that occur during startup, are caused by faulty hardware or hardware drivers. Device Manager (devmgmt.msc) allows users to view and edit the properties of installed hardware. Windows Subsystem for Linux (WSL) allows the installation of a Linux distribution and the use of Linux applications. This is different from the Windows management utilities. The Task Scheduler (taskschd.msc) runs commands and scripts automatically. Many of Windows's processes come with predefined schedules. The Services console (services.msc) starts, stops, and pauses processes running in the background.",
+    "options": [
+      "taskschd.msc",
+      "WSL",
+      "devmgmt.msc",
+      "services.msc"
+    ],
+    "correctAnswer": [
+      "devmgmt.msc"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A helpdesk operator wants to use a set of tools that will help them during troubleshooting. What can help the operator customize their toolset?",
+    "explanation": "The mmc command allows the operator to perform MMC customization and create a console with a personal selection of snap-ins. The console can be saved to the Administrative Tools folder as a file with an MSC extension. The Group Policy Editor (gpedit.msc) provides a more robust means of configuring many of the Windows settings than editing the registry directly. The Local Users and Groups (lusrmgr.msc) console provides an advanced interface for creating, modifying, disabling, and deleting user accounts. The Task Scheduler (taskschd.msc) runs commands and scripts automatically. Many of Windows's processes come with predefined schedules.",
+    "options": [
+      "gpedit.msc",
+      "lusrmgr.msc",
+      "taskschd.msc",
+      "mmc"
+    ],
+    "correctAnswer": [
+      "mmc"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with securing online transactions for your organization. Which of the following scenarios BEST demonstrates the appropriate use of the Certificate Manager to evaluate and ensure the security of digital certificates?",
+    "explanation": "The Certificate Manager is specifically designed to manage and evaluate digital certificates. Verifying the validity and trustworthiness of a certificate ensures that it is issued by a trusted Certificate Authority (CA) and has not been tampered with, which is critical for securing online transactions. The Certificate Manager does not have a feature to schedule updates for certificates. Certificates are typically updated or renewed manually or through automated processes managed by other systems, not directly by the Certificate Manager. Optimizing storage device performance is not a function of the Certificate Manager. Tasks like defragmentation or running TRIM operations are handled by tools such as the Disk Management Console or the Defragment and Optimize Drives tool. Creating user accounts and assigning them to security groups is the role of the Local Users and Groups Console, not the Certificate Manager. The Certificate Manager is focused solely on managing digital certificates, not user accounts or permissions.",
+    "options": [
+      "Using the Certificate Manager to verify the validity and trustworthiness of a digital certificate before installing it",
+      "Using the Certificate Manager to optimize the performance of the system's storage devices",
+      "Using the Certificate Manager to create new user accounts and assign them to security groups",
+      "Using the Certificate Manager to schedule regular updates for all installed certificates"
+    ],
+    "correctAnswer": [
+      "Using the Certificate Manager to verify the validity and trustworthiness of a digital certificate before installing it"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the Certificate Manager in Windows?",
+    "explanation": "The Certificate Manager is specifically designed to handle digital certificates, which are used to secure online communications and transactions. It allows users to view, import, export, and manage certificates for various purposes, such as encrypting data or verifying identities. Managing and scheduling automated tasks is the role of the Task Scheduler, not the Certificate Manager. The Task Scheduler is used to automate repetitive tasks, such as running scripts or programs at specific times. Monitoring and optimizing disk performance is the function of tools like the Disk Management Console or the Defragment and Optimize Drives tool. These tools focus on disk-related tasks, not certificate management. Configuring and managing user accounts and security groups is the role of the Local Users and Groups Console. This tool is used to create, modify, and manage user accounts and their permissions, not digital certificates.",
+    "options": [
+      "To manage and schedule automated tasks on a computer.",
+      "To configure and manage user accounts and security groups.",
+      "To monitor and optimize disk performance.",
+      "To manage digital certificates for securing online transactions and communications."
+    ],
+    "correctAnswer": [
+      "To manage digital certificates for securing online transactions and communications."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with improving security settings across all employee workstations in a Windows environment. Which of the following scenarios best justifies the use of the Group Policy Editor?",
+    "explanation": "The Group Policy Editor is specifically designed to enforce security policies, such as password complexity, across multiple users and computers in a Windows environment. It allows administrators to evaluate and implement centralized security measures effectively. Expanding a disk partition is a task performed using the Disk Management Console, not the Group Policy Editor. The Group Policy Editor does not handle storage or disk-related tasks. Updating a device driver is a function of the Device Manager, not the Group Policy Editor. The Group Policy Editor is not used for hardware troubleshooting or driver updates. Defragmenting a hard drive is a task performed using the Disk Defragmenter or Optimize Drives tool, not the Group Policy Editor. The Group Policy Editor is not used for disk maintenance or performance optimization.",
+    "options": [
+      "You need to defragment a hard drive to improve system performance.",
+      "You need to configure a policy that enforces password complexity requirements for all users.",
+      "You need to expand an existing disk partition to optimize storage space.",
+      "You need to update a malfunctioning device driver to resolve hardware issues."
+    ],
+    "correctAnswer": [
+      "You need to configure a policy that enforces password complexity requirements for all users."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is a primary purpose of the Disk Defragmenter tool on a hard disk drive (HDD)?",
+    "explanation": "The Disk Defragmenter tool is specifically designed to reorganize fragmented file data on an HDD into contiguous clusters. This process reduces the time the disk controller needs to seek across the disk to read a file, thereby improving read performance. TRIM operations are specific to SSDs (Solid State Drives), not HDDs. While the Disk Defragmenter tool can optimize SSDs by running TRIM operations, its primary purpose on HDDs is to defragment files, not perform TRIM. Identifying files safe for deletion is the function of the Disk Clean-up tool, not the Disk Defragmenter. Disk Clean-up helps free up space by removing temporary files, files in the Recycle Bin, and other unnecessary data. Repairing corrupted files is not the function of the Disk Defragmenter. Tools, like Check Disk (chkdsk) or third-party recovery software, are used to repair corrupted files or address physical disk damage. The Disk Defragmenter focuses on improving performance by reorganizing file data.",
+    "options": [
+      "Identify files safe for deletion to free up disk space.",
+      "Reorganize file data into contiguous clusters to improve read performance.",
+      "Repair corrupted files caused by physical damage to the disk.",
+      "Perform a TRIM operation to mark OS-deletable data as writable."
+    ],
+    "correctAnswer": [
+      "Reorganize file data into contiguous clusters to improve read performance."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Device manufacturers are constantly finding bugs, vulnerabilities, and better ways for their devices to communicate with the operating system. Because of this, which of the following is a best practice to perform before installing a new device?",
+    "explanation": "The best practice when installing device drivers is to obtain the latest driver from the manufacturer's website. Updating drivers only if there is a problem may result in unnecessary downtime later when a problem is discovered. As technicians learn through experience, the driver that's included on the installation disc may no longer work correctly due to changes in the hardware and/or operating system. Not all installation programs will check for the latest driver, so this is not the best practice.",
+    "options": [
+      "Use the driver included in the installation disc.",
+      "Obtain the latest driver from the manufacturer's website, but only if there's a problem.",
+      "Let the installation program find the latest driver and download it during installation.",
+      "Obtain the latest driver from the manufacturer's website."
+    ],
+    "correctAnswer": [
+      "Obtain the latest driver from the manufacturer's website."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.1-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.1.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A system administrator is evaluating disk maintenance tools to improve the performance of a workstation. The workstation has an SSD as its primary storage device and is experiencing slow performance. Which of the following actions would be the most appropriate to optimize the SSD's performance?",
+    "explanation": "The Optimize Drives tool (formerly known as Disk Defragmenter) performs TRIM operations on SSDs. TRIM allows the SSD controller to mark OS-deletable data as writable, which helps maintain the SSD's performance and longevity. This is the most appropriate action for optimizing an SSD. Defragmenting an SSD is unnecessary and can actually reduce its lifespan. SSDs do not rely on physical spinning disks, so file fragmentation does not impact their performance. Instead, TRIM operations are the correct optimization method for SSDs. While freeing up disk space can improve performance in some cases, it does not directly address the specific performance optimization needs of an SSD. TRIM operations are more effective for maintaining SSD performance. Creating additional partitions does not optimize the performance of an SSD. Repartitioning is typically done for organizational purposes or to install multiple operating systems, but it does not improve the SSD's speed or efficiency.",
+    "options": [
+      "Run the Optimize Drives tool to perform a TRIM operation.",
+      "Use the Disk Defragmenter tool to reorganize file data into contiguous clusters.",
+      "Run the Disk Clean-up tool to delete temporary files and free up disk space.",
+      "Repartition the SSD to create additional logical partitions."
+    ],
+    "correctAnswer": [
+      "Run the Optimize Drives tool to perform a TRIM operation."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a system issue that requires you to run a command with elevated privileges. When you attempt to execute the command, you receive the error message: \"The requested operation requires elevation.\" What is the correct way to proceed?",
+    "explanation": "By right-clicking the shortcut and selecting \"Run as administrator,\" you ensure the command prompt is elevated, allowing you to execute commands that require administrative rights. The UAC (User Account Control) prompt is a security feature that confirms your intent to run the program with elevated privileges. Pressing CTRL+SHIFT+ENTER does not elevate the privileges of an already open Command Prompt. Instead, this shortcut is used to open a new Command Prompt window with administrative privileges from the Instant Search box. The command itself cannot be elevated after the Command Prompt is already open. CTRL+ALT+DEL is used to access the Windows Security screen, not to elevate privileges in the Command Prompt. This action does not help in running commands that require administrative rights. The \"help\" command provides syntax and usage information for commands but does not offer alternative commands that bypass the need for elevated privileges. If a command requires elevation, it must be run in an elevated Command Prompt.",
+    "options": [
+      "Use the help command to find an alternative command that does not require elevated privileges.",
+      "Open the Command Prompt, type the command, and press CTRL+SHIFT+ENTER to execute it with elevated privileges.",
+      "Right-click the Command Prompt shortcut, select \"Run as administrator,\" and confirm the UAC prompt before running the command.",
+      "Type cmd in the Instant Search box, press CTRL+ALT+DEL, and then execute the command."
+    ],
+    "correctAnswer": [
+      "Right-click the Command Prompt shortcut, select \"Run as administrator,\" and confirm the UAC prompt before running the command."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user experiences issues with large files and wants to run diagnostics to help figure out what might be the issue. Which of the following commands should the user try?",
+    "explanation": "The chkdsk scans the file system and/or disk sectors for faults and attempts to repair any problems detected. The format command writes a new file system to a drive. This process deletes any data existing on the drive. The basic command is format X: /fs:SYS, where X is a drive letter, and SYS is the file system, such as NTFS, FAT32, or EXFAT. The command diskpart is the interface underlying the Disk Management tool. The Disk Management tool prevents users from completing destructive actions, like deleting the system or boot volume. However, it does not have restrictions in this way, so users should use it with care. The winver command reports version information. Users will often need to use this for support.",
+    "options": [
+      "winver",
+      "chkdsk",
+      "diskpart",
+      "format"
+    ],
+    "correctAnswer": [
+      "chkdsk"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of the sfc /scannow command in Windows?",
+    "explanation": "The sfc /scannow command is part of the System File Checker tool in Windows. Its primary purpose is to scan all protected system files for corruption and automatically replace any corrupted files with a cached copy stored in a compressed folder. This is the correct answer, as it accurately describes the function of the command. To scan the hard drive for bad sectors and attempt to repair them describes the purpose of the chkdsk command, not sfc. The sfc command focuses on system files, not the physical state of the hard drive. Therefore, this answer is incorrect. To display detailed information about the system's hardware and software describes the purpose of the systeminfo or msinfo32 commands, not sfc. The sfc command does not provide detailed system information; it is specifically used for checking and repairing system files. Thus, this answer is incorrect. To check the disk for file system errors and fix them, if possible, describes the purpose of the chkdsk command with specific switches (e.g., /f), not sfc. The sfc command is unrelated to file system errors and focuses solely on system file integrity. Therefore, this answer is incorrect.",
+    "options": [
+      "To display detailed information about the system's hardware and software.",
+      "To check the disk for file system errors and fix them if possible.",
+      "To scan and repair corrupted system files on the operating system.",
+      "To scan the hard drive for bad sectors and attempt to repair them."
+    ],
+    "correctAnswer": [
+      "To scan and repair corrupted system files on the operating system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are using the dir command in Command Prompt and want to display all files in the current directory, including hidden and system files. Which switch should you use?",
+    "explanation": "The /a switch is used to display files with specific attributes, such as hidden (h) and system (s) files. By default, hidden and system files are not displayed, so this switch is necessary to include them in the output. The /o:n switch sorts files alphabetically by name but does not affect which files are displayed. It does not include hidden or system files in the output. The /t:c switch is used to display or sort files based on their creation date. It does not include hidden or system files in the output. The /s switch lists all files in the current directory and its subdirectories, but it does not specifically include hidden or system files unless combined with the /a switch.",
+    "options": [
+      "/a",
+      "/s",
+      "/o:n",
+      "/t:c"
+    ],
+    "correctAnswer": [
+      "/a"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are a system administrator tasked with scheduling a system shutdown on a Windows machine to occur in 30 minutes. You want to ensure users are notified of the shutdown and have time to save their work. Which of the following commands should you use?",
+    "explanation": "The shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\" command schedules a system shutdown (/s) in 30 minutes (/t 1800, where 1800 seconds equals 30 minutes). The /c switch provides a comment or notification message to users, informing them about the shutdown and giving them time to save their work. This is the correct command for the given scenario. The shutdown /r /t 1800 /c \"System maintenance scheduled. Please save your work.\" command schedules a system restart (/r) instead of a shutdown. While it includes the correct timing (/t 1800) and notification message (/c), it does not meet the requirement to shut down the system, making it incorrect. The shutdown /s /t 0 /c \"System maintenance scheduled. Please save your work.\" command initiates an immediate shutdown (/t 0), giving users no time to save their work. Although it includes the correct shutdown switch (/s) and notification message (/c), it fails to meet the requirement of scheduling the shutdown for 30 minutes later, making it incorrect. The shutdown /h /t 1800 /c \"System maintenance scheduled. Please save your work.\" command attempts to schedule the system to hibernate (/h) rather than shut down. The /t 1800 and /c switches are valid, but hibernation is not the same as shutting down the system, making this option incorrect.",
+    "options": [
+      "shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /r /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /h /t 1800 /c \"System maintenance scheduled. Please save your work.\"",
+      "shutdown /s /t 0 /c \"System maintenance scheduled. Please save your work.\""
+    ],
+    "correctAnswer": [
+      "shutdown /s /t 1800 /c \"System maintenance scheduled. Please save your work.\""
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which commands can you use to create a new directory? (Select two.)",
+    "explanation": "Use md or mkdir to create a new directory. Use cd to change the working directory. Use rd to delete a directory. The newdir command does not exist in Windows.",
+    "options": [
+      "rd",
+      "mkdir",
+      "newdir",
+      "md",
+      "cd"
+    ],
+    "correctAnswer": [
+      "mkdir",
+      "md"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command would you use to change the current directory to the immediate parent directory?",
+    "explanation": "Use cd .. to change the current directory to the immediate parent directory. The cd command by itself shows the current directory. Use dir to display a list of files and subdirectories in a directory. The pdir command is not a valid Windows command.",
+    "options": [
+      "cd",
+      "cd ..",
+      "pdir",
+      "dir"
+    ],
+    "correctAnswer": [
+      "cd .."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which command is used to copy entire folder structures between volumes or across a network while maintaining all NTFS file permissions and attributes?",
+    "explanation": "The robocopy (short for robust file copy) command is used to copy entire folder structures between volumes or across a network. The benefit of using robocopy is that all NTFS file permissions and attributes are maintained, and interrupted transfers can be resumed. The copy command copies files from one location to another. The xcopy command copies files and directory trees, but does not maintain all NTFS file permissions and attributes.",
+    "options": [
+      "copy",
+      "copy /robust",
+      "robocopy",
+      "xcopy"
+    ],
+    "correctAnswer": [
+      "robocopy"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "A user wants to use the xcopy command at a command (CMD) prompt but is unfamiliar with the syntax and switches. What can they use to learn more? (Select two.)",
+    "explanation": "When using help command, the help system lists the syntax and switches used for the command. The user can also display help on a particular command by using the /? switch. Using xcopy help will result in an attempt to copy the help file if it exists in the directory. Using xcopy | will result in an error stating that the syntax is incorrect.",
+    "options": [
+      "xcopy |",
+      "xcopy help",
+      "help xcopy",
+      "xcopy /?"
+    ],
+    "correctAnswer": [
+      "help xcopy",
+      "xcopy /?"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.2-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.2.9",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are working in the Command Prompt and need to list all .txt files in the current directory that were last modified on a specific date. Which command would you use?",
+    "explanation": "The dir *.txt /t:w command lists all .txt files in the current directory and uses the /t:w switch to sort or display files based on their last modified (written) date. This is the correct approach to identify files modified on a specific date. The /a:r switch displays files with the \"read-only\" attribute, which is unrelated to sorting or filtering by modification date. The /o:n switch sorts files alphabetically by name, which does not help in identifying files based on their modification date. The /t:c switch sorts or displays files based on their creation date, not their last modified date.",
+    "options": [
+      "dir *.txt /t:w",
+      "dir *.txt /o:n",
+      "dir *.txt /a:r",
+      "dir *.txt /t:c"
+    ],
+    "correctAnswer": [
+      "dir *.txt /t:w"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A transportation company outfits its mobile units with devices that will enable it to analyze routes, patterns, and create efficiencies. The devices will connect to their cloud servers through a 4G WWAN. What will the company need to ensure the devices connect to the cloud resources?",
+    "explanation": "For GSM and 4G or 5G services, the adapter must also be fitted with a subscriber identity module (SIM) card issued by the network provider. The bandwidth depends on the technologies supported by the adapter and by the local cell tower (3G, 4G, or 5G, for instance). A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network. When a user connects to a new network, the Windows Network Location Awareness (NLA) service prompts the user to set the network type. In Windows settings, the Link-layer Topology Discovery protocol provides network mapping and discovery functions for networks without dedicated name servers.",
+    "options": [
+      "VPN",
+      "SIM",
+      "Link-layer Topology Discovery",
+      "NLA"
+    ],
+    "correctAnswer": [
+      "SIM"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it important for the network adapter and switch to use the same Ethernet settings when establishing a wired network connection?",
+    "explanation": "The network adapter and switch must use the same Ethernet settings (e.g., speed and duplex mode) to establish a link. Without matching settings, the devices cannot communicate effectively, which is critical for a functioning wired network connection. Detecting wireless networks is unrelated to Ethernet settings. Ethernet settings are specific to wired connections, not wireless ones. The adapter does not assign IP addresses to the switch. IP address assignment is typically handled by a DHCP server or configured manually, and it is unrelated to the Ethernet settings. The naming of adapters in Windows (e.g., Ethernet, Ethernet2) is determined by the operating system and is unrelated to the Ethernet settings or the switch. Matching Ethernet settings has no impact on how adapters are named.",
+    "options": [
+      "To allow the adapter to automatically assign an IP address to the switch.",
+      "To ensure the adapter can detect wireless networks in the area.",
+      "To prevent the adapter from being assigned multiple names in Windows.",
+      "To establish a successful link and enable communication between devices."
+    ],
+    "correctAnswer": [
+      "To establish a successful link and enable communication between devices."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is the default setting for IP configuration on Ethernet and Wi-Fi adapters in Windows?",
+    "explanation": "Obtaining an IP address automatically is the default setting for IP configuration on Ethernet and Wi-Fi adapters in Windows. It uses a DHCP server to automatically assign IP addresses, simplifying network configuration for most users. While static IP addresses can be configured manually, this is not the default setting. Static IP configuration is typically used in specific scenarios, such as servers or devices requiring a fixed address, but it requires manual setup. Disabling IP configuration would prevent the adapter from connecting to a network, which is not the default behavior. Windows is designed to enable network connectivity by default. Both IPv4 and IPv6 are installed and used by default on Windows adapters. The system automatically selects the appropriate protocol based on the network it is connected to rather than exclusively using IPv6.",
+    "options": [
+      "Use a static IP address.",
+      "Use only IPv6 for IP configuration.",
+      "Disable IP configuration.",
+      "Obtain an IP address automatically."
+    ],
+    "correctAnswer": [
+      "Obtain an IP address automatically."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows desktop computer cannot connect to the internet after manually configuring a static IP address. Upon investigation, you find the following configuration: IP Address: 192.168.1.50; Subnet Mask: 255.255.255.0; Default Gateway: 192.168.2.1. What is the MOST likely cause of the issue?",
+    "explanation": "The default gateway must be in the same subnet as the client device's IP address to enable proper communication with devices outside the local network. In this case, the IP address (192.168.1.50) and the default gateway (192.168.2.1) are in different subnets because the subnet mask (255.255.255.0) indicates that only devices with the same first three octets (192.168.1.x) are in the same subnet. This mismatch prevents the computer from routing traffic to the internet. The IP address (192.168.1.50) is in a valid IPv4 format. The issue lies with the default gateway configuration, not the format of the IP address. The subnet mask (255.255.255.0) is valid and correctly defines the subnet for the IP address. The problem is that the default gateway is outside this subnet, not the subnet mask itself. While IP conflicts can cause connectivity issues, there is no indication in the scenario that another device is using the same IP address. The issue is specifically related to the default gateway configuration.",
+    "options": [
+      "The IP address is not in the correct format for IPv4.",
+      "The default gateway is not in the same subnet as the IP address.",
+      "The static IP address conflicts with another device on the network.",
+      "The subnet mask is incorrect for the IP address."
+    ],
+    "correctAnswer": [
+      "The default gateway is not in the same subnet as the IP address."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are configuring a wireless network connection on a Windows laptop. The network you want to connect to does not appear in the list of available networks. What should you do to connect to the network?",
+    "explanation": "If the SSID broadcast is suppressed, you must manually input the network's SSID and security settings to connect to it. Restarting the laptop will not make a hidden SSID appear in the list of available networks. Hidden networks require manual configuration. The firewall does not affect the visibility of wireless networks. Disabling it is unnecessary and could compromise security. The Ethernet adapter is used for wired connections, not wireless ones. Adjusting its settings will not help with connecting to a wireless network.",
+    "options": [
+      "Change the Ethernet adapter's settings in Device Manager.",
+      "Restart the laptop to refresh the list of available networks.",
+      "Manually input the network's SSID and security settings.",
+      "Disable the Windows Defender Firewall to allow the connection."
+    ],
+    "correctAnswer": [
+      "Manually input the network's SSID and security settings."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Why is it advisable to set a network profile type to \"Private\" in Windows Defender Firewall?",
+    "explanation": "Setting a network profile type to \"Private\" is advisable when connecting to a trusted network. This allows the PC to be discoverable and enables features like folder and printer sharing. The \"Public\" profile type, not \"Private,\" is used to ensure the PC is not discoverable. The \"Private\" profile is specifically designed for trusted networks where discoverability is allowed. Blocking all traffic is not the purpose of the \"Private\" profile. The \"Private\" profile allows discoverability and sharing, which would not be possible if all traffic were blocked. Group Policy is only relevant for the \"Domain\" profile type. The \"Private\" profile is manually configured by the user and is not tied to Group Policy.",
+    "options": [
+      "To block all incoming and outgoing traffic for maximum security.",
+      "To allow the PC to be discoverable and enable sharing on trusted networks.",
+      "To ensure the PC is not discoverable on the network.",
+      "To allow the firewall policy to be configured via Group Policy."
+    ],
+    "correctAnswer": [
+      "To allow the PC to be discoverable and enable sharing on trusted networks."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "How do proxy settings influence the way a Windows device connects to the internet?",
+    "explanation": "Proxy settings are specifically designed to route a device's internet traffic through a proxy server. This intermediary server can provide additional functionality, such as filtering content, caching frequently accessed data, or enhancing security by masking the device's IP address. Proxy settings do not bypass security measures. In fact, they are often used to enhance security by filtering traffic and providing controlled access to the internet. Assigning a static IP address is part of network adapter configuration, not proxy settings. Proxy settings involve routing traffic through an intermediary server, not assigning IP addresses. Connecting to wireless networks is managed through Wi-Fi settings and network adapter configurations, not proxy settings. Proxy settings deal with how internet traffic is routed, not how the device connects to a network.",
+    "options": [
+      "Proxy settings enable the device to connect to the internet through an intermediary server, which can filter, cache, or secure network traffic.",
+      "Proxy settings are used to assign a static IP address to the device for direct internet access.",
+      "Proxy settings allow the device to bypass all network security measures for faster internet access.",
+      "Proxy settings configure the device to automatically connect to the strongest available wireless network."
+    ],
+    "correctAnswer": [
+      "Proxy settings enable the device to connect to the internet through an intermediary server, which can filter, cache, or secure network traffic."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What happens when a network is set as \"Public\" in Windows Defender Firewall?",
+    "explanation": "When a network is set as \"Public\" in Windows Defender Firewall, the system applies strict security settings. This includes blocking all access and making the host undiscoverable to other devices on the network. Discoverability and sharing are only enabled when the network is set to \"Private,\" not \"Public.\" A \"Public\" network profile is designed for untrusted networks and disables these features for security. Group Policy is only applicable when the computer is joined to a domain. The \"Domain\" profile is configured via Group Policy, not the \"Public\" profile. There is no automatic switching of network profiles normally provided. The network profile type must be manually set by the user or administrator.",
+    "options": [
+      "Windows Firewall blocks all access and makes the host undiscoverable.",
+      "The PC is discoverable and can be used for folder or printer sharing.",
+      "The firewall policy is configured via Group Policy.",
+      "The network is automatically set to Private after a certain period."
+    ],
+    "correctAnswer": [
+      "Windows Firewall blocks all access and makes the host undiscoverable."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a VPN connection issue for a remote employee. The employee reports they cannot connect to the company's VPN server. Upon investigation, you find that the VPN settings in Windows are correctly configured with the server address and login credentials. However, the connection still fails. Which of the following is the MOST likely cause of the issue?",
+    "explanation": "Even if the VPN settings are correctly configured, the connection can fail if the firewall is blocking the VPN traffic. Firewalls can sometimes block specific ports or protocols required for VPN connections, such as PPTP, L2TP, or OpenVPN. Adjusting the firewall settings to allow VPN traffic can resolve this issue. The 802.11 standard pertains to wireless network connections, not VPNs. VPN connections can be established over any network connection (wired or wireless) as long as the network is functional. VPN connections do not require a static IP address. Most VPNs work seamlessly with dynamically assigned IP addresses via DHCP. VPN servers do not broadcast SSIDs. SSIDs are used for identifying wireless networks, not VPN servers. The connection issue is unrelated to SSID broadcasting.",
+    "options": [
+      "The employee's firewall settings are blocking the VPN connection.",
+      "The employee's wireless adapter does not support the 802.11 standard required for VPN connections.",
+      "The VPN server address is not broadcasting its SSID, preventing the connection.",
+      "The employee's IP address is not set to static, which is required for VPN connections."
+    ],
+    "correctAnswer": [
+      "The employee's firewall settings are blocking the VPN connection."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following scenarios BEST demonstrates the correct application of an IPv4 subnet mask to distinguish between the network and host portions of an IP address?",
+    "explanation": "The subnet mask 255.255.255.0 (or /24 in prefix notation) indicates that the first 24 bits of the IP address represent the network portion (192.168.1.0), while the last 8 bits represent the host portion (.100). This is a standard and valid configuration for distinguishing between the network and host portions of an IPv4 address. The subnet mask 255.0.0.0 (or /8 in prefix notation) would indicate that the network portion is only the first 8 bits (192.0.0.0), not 192.168.1.0. This would place the IP address 192.168.1.100 in a much larger network range, which is not the intended configuration in this scenario. The subnet mask 255.255.255.255 (or /32 in prefix notation) indicates that all 32 bits of the IP address are used for the host portion, leaving no bits for the network portion. This configuration is typically used for a single device (e.g., a loopback address) and does not allow multiple hosts to communicate on the same network. The subnet mask 0.0.0.0 is not a valid configuration for distinguishing the network and host portions of an IP address. It essentially means no bits are allocated for the network portion, which is nonsensical in practical networking scenarios.",
+    "options": [
+      "Using the subnet mask 255.0.0.0 to assign the IP address 192.168.1.100 to a host on the network 192.168.1.0.",
+      "Configuring the subnet mask 255.255.255.255 to allow multiple hosts to communicate on the same network.",
+      "Applying the subnet mask 0.0.0.0 to the IP address 192.168.1.100 to indicate that the entire address is the host portion.",
+      "Assigning the subnet mask 255.255.255.0 to the IP address 192.168.1.100 to indicate that the network portion is 192.168.1.0 and the host portion is .100."
+    ],
+    "correctAnswer": [
+      "Assigning the subnet mask 255.255.255.0 to the IP address 192.168.1.100 to indicate that the network portion is 192.168.1.0 and the host portion is .100."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows network location would you enable when you connect to a network at a hotel?",
+    "explanation": "The Public network location is designed for use on unknown or public networks (for example, a coffee shop or other public Wi-Fi network). The Public network location has the characteristics listed below. Network discovery is disabled. This means that devices on the network are not able to see each other and communicate. Network sharing, such as for printers and files, is disabled. The Windows Firewall configuration is changed to block almost all inbound and most outbound communications. For applications to be able to communicate, they need to be manually allowed through. The Private network location is used on a trusted network. You should not use this option for a public network, such as one at a hotel. The Work network location is no longer used by Windows. The Domain network location is only used on a device that is connected to an Active Directory network. The network administrator configures these settings.",
+    "options": [
+      "Public",
+      "Private",
+      "Domain",
+      "Work"
+    ],
+    "correctAnswer": [
+      "Public"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-012",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are assisting a colleague in connecting their Windows laptop to the office Wi-Fi network. The network's SSID broadcast is suppressed for security reasons. What steps should you take to establish the connection?",
+    "explanation": "When the SSID broadcast is suppressed, the network will not appear in the list of available networks. To connect, you must manually input the network details, including the SSID and security credentials, through the \"Manage known networks\" section in the \"Network & Internet\" settings. If the SSID broadcast is suppressed, the network will not appear in the list of available networks. This step only works when the SSID is being broadcast. Configuring the wireless adapter to support the 802.11 standard is a hardware-level adjustment. While it ensures compatibility, it does not address the issue of connecting to a hidden network. Windows Defender Firewall settings are not related to connecting to a hidden network. The issue lies in the network's visibility, not the firewall blocking the connection.",
+    "options": [
+      "Select the network status icon in the notification area and choose the network from the list of available networks.",
+      "Open Device Manager, locate the wireless adapter, and configure the adapter to support the 802.11 standard.",
+      "Adjust the firewall settings in Windows Defender to allow connections to hidden networks.",
+      "Open the \"Network & Internet\" settings, navigate to \"Wi-Fi,\" select \"Manage known networks,\" and manually add the network details."
+    ],
+    "correctAnswer": [
+      "Open the \"Network & Internet\" settings, navigate to \"Wi-Fi,\" select \"Manage known networks,\" and manually add the network details."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-013",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A desktop technician is setting up a new PC on a local network and is trying to install software as a part of the setup process. They try to access a network share via a UNC path of \\\\fileserv01\\Setup\\Apps and get a message that the location cannot be reached. They ping the file server by IP and get a reply. What network configuration on the PC should be prioritized for investigation?",
+    "explanation": "Domain Name System (DNS) would be the first thing to check. If a network resource does not seem to be reachable by hostname (fileserv01) but can be reached by pinging the IP, the PC cannot seem to resolve the hostname, which could indicate a problem with DNS settings. Dynamic Host Configuration Protocol (DHCP) is used to automatically assign IP addressing information to hosts that have not been configured manually. In this case the PC has an IP address, as it is able to ping another resource. A Virtual Private Network (VPN) is a secure tunnel created between two endpoints connected via an unsecured transport network (typically the Internet). This is unlikely to be the issue, as the PC is being set up on a local network and not a remote site. Network Interface Card (NIC) is an adapter card that provides one or more Ethernet ports for connecting hosts to a network so that they can exchange data over a link. This seems to be working, as the PC is able to ping another network resource.",
+    "options": [
+      "VPN",
+      "DNS",
+      "DHCP",
+      "NIC"
+    ],
+    "correctAnswer": [
+      "DNS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-014",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of configuring proxy settings in Windows networking?",
+    "explanation": "Proxy settings are used to configure a system to route its network traffic through a proxy server. This server acts as an intermediary between the client and the internet, providing additional security, caching, and filtering capabilities. This is the primary purpose of proxy settings. Proxy settings involve using an intermediary server, not establishing a direct connection. Configuring the IP address and subnet mask is part of IP addressing and network adapter configuration, not proxy settings. These are separate networking concepts. Wireless network connections are established through Wi-Fi settings and network adapter configurations, not proxy settings. Proxy settings are unrelated to enabling wireless connectivity.",
+    "options": [
+      "To enable wireless network connections on a Windows device.",
+      "To establish a direct connection to the internet without any intermediaries.",
+      "To configure the IP address and subnet mask for a network adapter.",
+      "To route network traffic through an intermediary server for security, caching, or filtering purposes."
+    ],
+    "correctAnswer": [
+      "To route network traffic through an intermediary server for security, caching, or filtering purposes."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.3-015",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.3.13",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which Windows network location enables network discovery and allows files and printers to be easily shared?",
+    "explanation": "The Private network location is designed for use on networks where all other users and devices are known and trusted. The Private network location has the characteristics listed below. Network discovery is enabled. This means that other computers and devices on the network are able to see and connect to each other. Files and printers can be easily shared between connected devices. Windows Firewall is automatically configured to allow certain types of network communication through. The Public network location disables network discovery and does not allow the sharing of files and printers. The Domain network location is only used on a device that is connected to an Active Directory network. The network administrator configures these settings. The Work network location is no longer used by Windows.",
+    "options": [
+      "Work",
+      "Private",
+      "Public",
+      "Domain"
+    ],
+    "correctAnswer": [
+      "Private"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-001",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are an IT administrator tasked with managing a large number of Windows workstations across your organization. To streamline administrative tasks, you decide to create a custom Microsoft Management Console (MMC) tailored to your needs. Which of the following steps is critical to ensure that your custom MMC is functional and meets your specific requirements?",
+    "explanation": "The primary purpose of creating a custom MMC is to include the specific snap-ins (administrative tools) required to manage your systems effectively. Snap-ins are modular components that provide functionality for tasks like managing users, devices, or disks. Without adding the appropriate snap-ins, the custom MMC would not serve its intended purpose. Simply saving the console without adding or configuring snap-ins does not make it functional or tailored to your needs. The location where the console is saved is secondary to ensuring it contains the necessary tools for the tasks you need to perform. The default MMC is not tailored to your specific administrative needs. While it may provide general functionality, it lacks the customization required to streamline your workflow and focus on the tasks relevant to your organization. Disabling all snap-ins would render the MMC useless for administrative tasks. Instead, you should focus on securing access to the MMC through proper user permissions and security measures rather than disabling its functionality.",
+    "options": [
+      "Add the necessary snap-ins to the console based on the tasks you need to perform.",
+      "Save the console in the default location without modifying any settings.",
+      "Use the default pre-configured MMC provided by Windows without customization.",
+      "Disable all snap-ins to prevent unauthorized access to administrative tools."
+    ],
+    "correctAnswer": [
+      "Add the necessary snap-ins to the console based on the tasks you need to perform."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-002",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A transportation company wants to set up software that gathers statistics from the controller area network for trailers hauling loads, enabling them to adjust processes to optimize cost savings. What type of adapter will the company need to send the statistics back to their cloud network?",
+    "explanation": "Wireless Wide Area Network (WWAN) uses a cellular adapter to connect to the internet via a provider's network. These networks are typically metered with a set data limit. A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network. Almost all wired network connections are based on some Ethernet. The adapter's media type must match the switch it is connected to. While WWAN could be considered wireless, wireless generally refers to a computer that connects to the 2.4 or 5 GHz spectrum with a limited physical range.",
+    "options": [
+      "WWAN",
+      "Wireless",
+      "VPN",
+      "Wired"
+    ],
+    "correctAnswer": [
+      "WWAN"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-003",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are troubleshooting a storage issue on a Windows system. A new hard drive has been installed but is not visible in File Explorer. You open Command Prompt and use the diskpart utility. After selecting the disk, you want to assign a drive letter to the new volume so it can be accessed. Which diskpart command should you use?",
+    "explanation": "The assign command in diskpart is specifically used to assign a drive letter to a volume, making it accessible in File Explorer. This is the appropriate command to resolve the issue described in the scenario. While the create partition primary command is used to create a new partition on a disk, it does not assign a drive letter. Assigning a drive letter is a separate step that requires the assign command. The detail volume command is used to display detailed information about a selected volume, such as its file system, size, and drive letter (if assigned). However, it does not assign a drive letter to the volume. The format fs=ntfs command is used to format a volume with the NTFS file system. While formatting is often necessary for a new volume, it does not assign a drive letter. The assign command must be used for that purpose.",
+    "options": [
+      "assign",
+      "create partition primary",
+      "format fs=ntfs",
+      "detail volume"
+    ],
+    "correctAnswer": [
+      "assign"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-004",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user calls into the helpdesk after receiving a recent update to their computer and now certain functions are no longer working properly. The helpdesk technician asks for their FQDN. What would be an example of the FQDN?",
+    "explanation": "userhost.comptia.com would be an example of a fully qualified domain name (FQDN). This includes both the name of the host as well as the domain it is on. userhost would only be an example of the host name. The addition of the domain makes it an FQDN. comptia.com would be an example of a DNS alias. Typically, a host is also configured with the addresses of Domain Name System (DNS) servers that can resolve requests for name resources to IP addresses. The 192.168.14.25 would be an example of the host's possible IP address. An Internet Protocol (IP) addressing scheme can use either IPv4 or IPv6.",
+    "options": [
+      "userhost.comptia.com",
+      "192.168.14.25",
+      "userhost",
+      "comptia.com"
+    ],
+    "correctAnswer": [
+      "userhost.comptia.com"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-005",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A user reports that their Windows system is experiencing frequent crashes after a recent software installation. Upon investigation, you suspect the software has made incorrect changes to the Windows Registry. How should you analyze and address the issue using the Registry Editor?",
+    "explanation": "The correct approach is to analyze the issue by comparing the current registry settings with a backup or baseline. This allows you to identify any discrepancies caused by the recent software installation. Once identified, you can restore or modify the affected keys to resolve the issue. This method demonstrates analytical thinking by isolating the root cause and applying a targeted solution. Deleting all registry keys associated with the software may cause additional issues, such as making the software unusable or creating orphaned entries. It is not an analytical approach and does not address the specific problem. Disabling all startup programs is a broad action that does not specifically address the registry issue. It may temporarily stop the crashes but does not resolve the underlying problem in the registry. Reinstalling the operating system is an extreme measure that should only be used as a last resort. It does not involve analyzing the issue and is not a practical solution for a registry-related problem caused by a single software installation.",
+    "options": [
+      "Delete all registry keys associated with the recently installed software to eliminate any potential conflicts.",
+      "Reinstall the operating system to ensure all registry settings are reset to their default values.",
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys.",
+      "Use the Registry Editor to disable all startup programs to prevent the software from running and causing crashes."
+    ],
+    "correctAnswer": [
+      "Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-006",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are tasked with copying all subdirectories, including empty ones, from the \"C:\\Projects\" directory to the \"D:\\Backup\" directory. Additionally, you want to ensure that long file names and NTFS attributes are preserved during the copy process. Which command should you use?",
+    "explanation": "The robocopy command is specifically designed for robust file copying. The /E switch ensures that all subdirectories, including empty ones, are copied. Furthermore, robocopy handles long file names and NTFS attributes effectively, meeting all the requirements of the scenario. While the xcopy command can copy subdirectories, the /S switch only copies non-empty subdirectories. This does not meet the requirement of copying all subdirectories, including empty ones. Additionally, xcopy is less robust than robocopy when handling long file names and NTFS attributes, which are explicitly required in the scenario. The copy command is a basic file-copying tool and does not support copying directories or subdirectories. It also lacks the ability to preserve NTFS attributes or handle long file names, making it unsuitable for this task. The move command is used to transfer files or directories to a new location, but it does not create a copy. This command would remove the original files from \"C:\\Projects,\" which is not what the scenario requires. Additionally, it does not handle NTFS attributes or long file names as effectively as robocopy.",
+    "options": [
+      "xcopy C:\\Projects D:\\Backup /S",
+      "robocopy C:\\Projects D:\\Backup /E",
+      "copy C:\\Projects D:\\Backup",
+      "move C:\\Projects D:\\Backup"
+    ],
+    "correctAnswer": [
+      "robocopy C:\\Projects D:\\Backup /E"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-007",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A network technician is building an Ethernet network using Cat5. What type of network will this be?",
+    "explanation": "The technician is building a wired network. Almost all wired network connections are on some type of Ethernet. Therefore, the adapter's media type must match the switch that connects the adapter. To establish a wireless network connection, select the network status icon in the notification area, and select from the list of displayed Wi-Fi networks. Wireless Wide Area Network (WWAN) refers to using a cellular adapter to connect to the internet. The bandwidth depends on the adapter's supported technologies and the local cell tower. A virtual private network (VPN) connects the components and resources of two (private) networks over another (public) network.",
+    "options": [
+      "Wired",
+      "Wireless",
+      "WWAN",
+      "VPN"
+    ],
+    "correctAnswer": [
+      "Wired"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-008",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A server administrator sets up static network configurations for servers since they do not want the IP address to change. The administrator sets up the IP address on a 24-bit subnet. What should the administrator set the subnet mask to?",
+    "explanation": "Administrators can also adjust the IP configuration via the settings app. In this dialog, they need to enter the mask as a prefix length in bits. A 255.255.255.0 mask is 24 bits. A subnet mask of 255.255.0.0 would be the subnet mask for the 16-bit wildcard mask. An example would mean the subnet is from 192.168.0.0 - 192.168.255.255. A subnet mask of 255.0.0.0 would be the subnet mask for the 8-bit wildcard mask. An example would mean the subnet is from 10.0.0.0 - 10.255.255.255. A subnet mask of 0.0.0.0 would be non-routable. This is usually a black hole where traffic is dropped.",
+    "options": [
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.0.0.0",
+      "0.0.0.0"
+    ],
+    "correctAnswer": [
+      "255.255.255.0"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-009",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following switches for the shutdown command is used to schedule a shutdown after a specified amount of time?",
+    "explanation": "The /t switch is used with the shutdown command to specify the time delay (in seconds) before the shutdown occurs. For example, shutdown /s /t 60 schedules a shutdown in 60 seconds. This is the correct answer as it directly relates to scheduling a shutdown. The /s switch is used to initiate a shutdown, but it does not allow you to specify a time delay. It simply tells the system to shut down. While it is part of the shutdown command, it does not meet the requirement of scheduling a shutdown, making it incorrect. The /r switch is used to restart the system rather than shutting it down. While it is a valid switch for the shutdown command, it does not relate to scheduling a shutdown, making it incorrect. The /a switch is used to abort a scheduled shutdown or restart. It does not schedule a shutdown or specify a time delay, so it is not relevant to the question and is incorrect.",
+    "options": [
+      "/a",
+      "/t",
+      "/r",
+      "/s"
+    ],
+    "correctAnswer": [
+      "/t"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-010",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You are setting up a new workstation for a department with multiple employees who need access to shared resources. Each employee requires different levels of access based on their role. Using the Local Users and Groups Console, what is the best way to configure access?",
+    "explanation": "The best practice is to create individual user accounts for each employee and assign them to security groups that reflect their roles. This approach ensures that access permissions are managed efficiently and securely while also maintaining accountability and auditability for each user's actions. Sharing a single account among multiple employees is a poor security practice. It eliminates accountability, as actions cannot be traced back to individual users, and it increases the risk of unauthorized access if the credentials are compromised. The Guest account is intended for temporary or minimal access and is not suitable for employees who require different levels of access based on their roles. This approach would severely limit functionality and hinder productivity. Using the Administrator account for all employees is a significant security risk. It grants excessive privileges to users who may not need them, increasing the likelihood of accidental or malicious changes to the system. This approach violates the principle of least privilege.",
+    "options": [
+      "Create a single user account for the department and share the login credentials with all employees.",
+      "Use the Administrator account for all employees to simplify access management.",
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles.",
+      "Assign all employees to the Guest account to ensure limited access to the system."
+    ],
+    "correctAnswer": [
+      "Create individual user accounts for each employee and assign them to appropriate security groups based on their roles."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-13.7-011",
+    "domain": "1.0 Operating Systems",
+    "objective": "13.7",
+    "module": "13.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A helpdesk technician receiving a support request can ask the client to use what command at the command prompt to identify the local machine requiring support?",
+    "explanation": "The remote helpdesk technician could instruct the user to use the hostname command from the command prompt. Typing the hostname command returns the local machine name. The tracert command-line tool will trace a packet's path to get to its target. The tracert command can accept an IP address or website as an argument. Typing help at the command prompt will return general help information. The user can also get help for a particular command by using the /? switch after the command requiring it. The net user command can manage, add, and force password changes to user and administrator accounts from the command line, although it will require an administrative command prompt.",
+    "options": [
+      "net user",
+      "hostname",
+      "tracert",
+      "help"
+    ],
+    "correctAnswer": [
+      "hostname"
+    ],
+    "origin": "CertMaster"
+  }
+]

@@ -5695,7 +5695,7 @@
           "domain": "2.0 Security",
           "objective": "15.2.7",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are common login types supported by the Windows operating system? (Select three).",
           "explanation": "Local, Network, and Remote logins are authorized configurations for login within the Windows operating system. Kerberos is an authentication system protocol used by Windows network login environments, not a login type.",
@@ -5898,7 +5898,7 @@
           "domain": "2.0 Security",
           "objective": "15.3.12",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A server administrator wants to connect to a user's computer. They are trying to get their patching numbers up and discover that users must pull the updates, so the administrator wants to push a script that forces the pull. The administrator wants to copy the file to users' automatically hidden shares. Which of the following could the administrator use? (Select two.)",
           "explanation": "In addition to any local shares created by a user, Windows automatically creates hidden administrative shares. This includes the root folder of any local drives (C$). It also includes the system folder (ADMIN$). Administrative shares can only be accessed by members of the local Administrators group. C:Windows$ is not automatically created. If the administrator wanted to connect, they could first connect to C$ and then navigate to the Windows folder. C:Users$ is also not automatically created but could also be accessed by first accessing the hidden C$ share.",
@@ -5919,7 +5919,7 @@
           "domain": "2.0 Security",
           "objective": "15.3.12",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which tools in Windows 11 would you use to browse all networks and shared folders that a user has access to? (Select three.)",
           "explanation": "In Windows 11, Network acts as a built-in network browser, showing you all networks and shared folders that a user has access to. You can view this same information in This PC and File Explorer.\n\nNetwork Neighborhood was used in previous Windows versions but was replaced by My Network Places in Windows 2000, Me, and XP and by Network in Windows Vista, Windows 7, and Windows 8.\n\nComputer Management and Device Manager let you manage hardware and software in the Windows system, but it can't be used to browse the network.\n\nWindows Explorer was replaced by File Explorer in Windows 10.",
@@ -5963,7 +5963,7 @@
           "domain": "2.0 Security",
           "objective": "15.3.12",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following statements are true regarding administrative shares? (Select two.)",
           "explanation": "By default, Windows automatically creates an administrative share for every volume.\n\nBecause administrative shares are not visible when browsing the network, you must use the UNC path to connect to an administrative share. Only members of the Administrators group can access default administrative shares. Adding a $ sign (not a !) to the end of a share name creates an administrative share.",
@@ -5985,7 +5985,7 @@
           "domain": "2.0 Security",
           "objective": "15.3.12",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "You have a folder that you would like members of your development team to access. You want to restrict network and local access to only specific users. All other users must not be able to view or modify the files in the folder.\n\nWhich of the following would be the BEST actions for you to take next? (Select two.)",
           "explanation": "To control both local and network access, you will need to use both NTFS and share permissions.\n\nThe folder must be located on an NTFS partition to be able to configure NTFS permissions. Configuring only NTFS permissions will not allow network access. Configuring only shared permissions with the files on a FAT32 partition will not control local access.",
@@ -6165,367 +6165,6 @@
           "origin": "CertMaster"
         },
         {
-          "id": "1202-001",
-          "domain": "1.0 Operating Systems",
-          "objective": "1.3",
-          "module": "16.0",
-          "type": "multi",
-          "difficulty": "easy",
-          "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
-          "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
-          "options": [
-            "Windows 11 Home",
-            "Windows 11 Pro",
-            "Windows 11 Enterprise",
-            "Windows 11 Standard",
-            "Windows 11 Professional Plus"
-          ],
-          "correctAnswer": [
-            "Windows 11 Pro",
-            "Windows 11 Enterprise"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-002",
-          "domain": "1.0 Operating Systems",
-          "objective": "1.7",
-          "module": "13.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Where to configure network drive mapping in Windows?",
-          "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
-          "options": [
-            "Device Manager",
-            "File Explorer - Map Network Drive",
-            "Services Manager",
-            "Group Policy Editor"
-          ],
-          "correctAnswer": [
-            "File Explorer - Map Network Drive"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-003",
-          "domain": "1.0 Operating Systems",
-          "objective": "1.5",
-          "module": "13.0",
-          "type": "matching",
-          "difficulty": "hard",
-          "stem": "Match each Windows command-line tool to its function.",
-          "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
-          "items": [
-            "Network Config",
-            "Process Mgmt",
-            "Disk Mgmt",
-            "System Files"
-          ],
-          "correctAnswer": {
-            "Network Config": "ipconfig",
-            "Process Mgmt": "tasklist",
-            "Disk Mgmt": "diskpart",
-            "System Files": "sfc /scannow"
-          },
-          "origin": "Original",
-          "options": [
-            "diskpart",
-            "ipconfig",
-            "sfc /scannow",
-            "tasklist"
-          ]
-        },
-        {
-          "id": "1202-004",
-          "domain": "1.0 Operating Systems",
-          "objective": "1.4",
-          "module": "14.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
-          "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
-          "options": [
-            "Event Viewer",
-            "Resource Monitor/Task Manager Performance",
-            "Device Manager",
-            "Group Policy"
-          ],
-          "correctAnswer": [
-            "Resource Monitor/Task Manager Performance"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-005",
-          "domain": "2.0 Security",
-          "objective": "2.7",
-          "module": "19.0",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Which are strong password practices? (Select all that apply)",
-          "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
-          "options": [
-            "Min 8 chars with mixed types",
-            "Reuse across accounts",
-            "Password expiration 90 days",
-            "Write down passwords",
-            "MFA where available"
-          ],
-          "correctAnswer": [
-            "Min 8 chars with mixed types",
-            "Password expiration 90 days",
-            "MFA where available"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-006",
-          "domain": "2.0 Security",
-          "objective": "2.6",
-          "module": "19.0",
-          "type": "mc",
-          "difficulty": "hard",
-          "stem": "Workstation with malware - FIRST action in recovery?",
-          "explanation": "Isolate system first and document to prevent spread and enable analysis.",
-          "options": [
-            "Format hard drive",
-            "Disconnect from network and document",
-            "Update patches",
-            "Reset password only"
-          ],
-          "correctAnswer": [
-            "Disconnect from network and document"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-007",
-          "domain": "2.0 Security",
-          "objective": "2.2",
-          "module": "15.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which restricts user permissions to prevent system changes?",
-          "explanation": "UAC prompts for elevation on system-level changes.",
-          "options": [
-            "User Account Control (UAC)",
-            "Windows Defender",
-            "Group Policy",
-            "Windows Firewall"
-          ],
-          "correctAnswer": [
-            "User Account Control (UAC)"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-008",
-          "domain": "2.0 Security",
-          "objective": "2.10",
-          "module": "18.0",
-          "type": "multi",
-          "difficulty": "hard",
-          "stem": "Legitimate wireless security methods? (Select all that apply)",
-          "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
-          "options": [
-            "Enable WPA3",
-            "Disable SSID broadcast",
-            "Complex network password",
-            "MAC filtering",
-            "2.4 GHz only"
-          ],
-          "correctAnswer": [
-            "Enable WPA3",
-            "Complex network password",
-            "MAC filtering"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-009",
-          "domain": "3.0 Software Troubleshooting",
-          "objective": "3.1",
-          "module": "14.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Application crashes frequently. Try FIRST?",
-          "explanation": "Updates often fix bugs. Try this before drastic measures.",
-          "options": [
-            "Uninstall/reinstall",
-            "Format hard drive",
-            "Check for updates",
-            "Replace motherboard"
-          ],
-          "correctAnswer": [
-            "Check for updates"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-010",
-          "domain": "3.0 Software Troubleshooting",
-          "objective": "3.1",
-          "module": "14.0",
-          "type": "matching",
-          "difficulty": "hard",
-          "stem": "Order the troubleshooting steps correctly. Choose which step belongs in each position.",
-          "explanation": "Proper order: gather, theory, test, implement, verify.",
-          "items": [
-            "Step 1",
-            "Step 2",
-            "Step 3",
-            "Step 4",
-            "Step 5"
-          ],
-          "correctAnswer": {
-            "Step 1": "Gather info from user",
-            "Step 2": "Theory of probable cause",
-            "Step 3": "Test the theory",
-            "Step 4": "Implement solution",
-            "Step 5": "Verify functionality"
-          },
-          "origin": "Original",
-          "options": [
-            "Implement solution",
-            "Gather info from user",
-            "Verify functionality",
-            "Test the theory",
-            "Theory of probable cause"
-          ]
-        },
-        {
-          "id": "1202-011",
-          "domain": "3.0 Software Troubleshooting",
-          "objective": "3.4",
-          "module": "19.0",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
-          "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
-          "options": [
-            "Browser hijacker malware",
-            "Adware",
-            "Browser extension/toolbar",
-            "Windows Update",
-            "Outdated graphics driver"
-          ],
-          "correctAnswer": [
-            "Browser hijacker malware",
-            "Adware",
-            "Browser extension/toolbar"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-012",
-          "domain": "4.0 Operational Procedures",
-          "objective": "4.1",
-          "module": "11.0",
-          "type": "mc",
-          "difficulty": "easy",
-          "stem": "Documentation after resolving ticket should include?",
-          "explanation": "Complete documentation helps others resolve similar issues.",
-          "options": [
-            "Only if difficult",
-            "Changes, actions, outcome",
-            "Only final resolution",
-            "Nothing - wastes time"
-          ],
-          "correctAnswer": [
-            "Changes, actions, outcome"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-013",
-          "domain": "4.0 Operational Procedures",
-          "objective": "4.2",
-          "module": "22.0",
-          "type": "multi",
-          "difficulty": "medium",
-          "stem": "Proper change management procedures? (Select all that apply)",
-          "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
-          "options": [
-            "Test in non-production",
-            "Document before implementation",
-            "Changes during business hours",
-            "Notify stakeholders",
-            "Rollback plan"
-          ],
-          "correctAnswer": [
-            "Test in non-production",
-            "Document before implementation",
-            "Notify stakeholders",
-            "Rollback plan"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-014",
-          "domain": "4.0 Operational Procedures",
-          "objective": "4.3",
-          "module": "21.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Backup system never tested - PRIMARY concern?",
-          "explanation": "Untested backups create false security. Regular restoration testing is critical.",
-          "options": [
-            "Using too much storage",
-            "Might not work when needed",
-            "Too slow",
-            "Software outdated"
-          ],
-          "correctAnswer": [
-            "Might not work when needed"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-015",
-          "domain": "4.0 Operational Procedures",
-          "objective": "4.5",
-          "module": "22.0",
-          "type": "multi",
-          "difficulty": "hard",
-          "stem": "Environmental safety and compliance measures? (Select all that apply)",
-          "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
-          "options": [
-            "Proper e-waste disposal",
-            "ESD procedures",
-            "Cool battery storage",
-            "Reuse indefinitely",
-            "Chain-of-custody for data"
-          ],
-          "correctAnswer": [
-            "Proper e-waste disposal",
-            "ESD procedures",
-            "Cool battery storage",
-            "Chain-of-custody for data"
-          ],
-          "origin": "Original"
-        },
-        {
-          "id": "1202-016",
-          "domain": "2.0 Security",
-          "objective": "2.2",
-          "module": "19.0",
-          "type": "mc",
-          "difficulty": "medium",
-          "stem": "Which can result in authentication failure with correct credentials?",
-          "explanation": "All factors prevent successful authentication.",
-          "options": [
-            "Expired user password",
-            "User account locked out",
-            "Disabled or deleted user account",
-            "Time synchronization issues",
-            "All of the above"
-          ],
-          "correctAnswer": [
-            "All of the above"
-          ],
-          "origin": "Original"
-        },
-        {
           "id": "CM2-15.6-001",
           "domain": "2.0 Security",
           "objective": "15.6",
@@ -6590,7 +6229,7 @@
           "domain": "2.0 Security",
           "objective": "15.6",
           "module": "15.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A security engineer is designing a multifactor solution for certain approved users to access highly-sensitive information on the company's intranet. The engineer will require a soft token code provided by what medium to the user? (Select all that apply.)",
           "explanation": "Sometimes, the security engineer will send a soft token in a one-time password (OTP) to a user's unique email address for added security.\n\nSometimes, the security engineer will make a soft token in a voice telephone call, to a user's registered phone number, granting access to the needed resource.\n\nA security engineer can send a soft token in the form of a one-time password (OTP) via short message service (SMS), or a text message, to verify a user's identity to access the needed resource.\n\nA home folder is a private drive mapped to a network share to store personal files. This would not be helpful since users may not always be in the office to access their unique home folder.",
@@ -6709,7 +6348,7 @@
         },
         {
           "id": "CM2-16.1-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6729,7 +6368,7 @@
         },
         {
           "id": "CM2-16.1-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6749,7 +6388,7 @@
         },
         {
           "id": "CM2-16.1-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6769,7 +6408,7 @@
         },
         {
           "id": "CM2-16.1-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6789,7 +6428,7 @@
         },
         {
           "id": "CM2-16.1-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6809,7 +6448,7 @@
         },
         {
           "id": "CM2-16.1-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6829,7 +6468,7 @@
         },
         {
           "id": "CM2-16.1-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6849,7 +6488,7 @@
         },
         {
           "id": "CM2-16.1-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6869,7 +6508,7 @@
         },
         {
           "id": "CM2-16.1-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6889,7 +6528,7 @@
         },
         {
           "id": "CM2-16.1-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.1.7",
           "module": "16.0",
           "type": "mc",
@@ -6909,7 +6548,7 @@
         },
         {
           "id": "CM2-16.2-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -6929,7 +6568,7 @@
         },
         {
           "id": "CM2-16.2-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -6949,7 +6588,7 @@
         },
         {
           "id": "CM2-16.2-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -6969,7 +6608,7 @@
         },
         {
           "id": "CM2-16.2-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -6989,7 +6628,7 @@
         },
         {
           "id": "CM2-16.2-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7009,7 +6648,7 @@
         },
         {
           "id": "CM2-16.2-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7029,7 +6668,7 @@
         },
         {
           "id": "CM2-16.2-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7049,7 +6688,7 @@
         },
         {
           "id": "CM2-16.2-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7069,7 +6708,7 @@
         },
         {
           "id": "CM2-16.2-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7089,7 +6728,7 @@
         },
         {
           "id": "CM2-16.2-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.2.7",
           "module": "16.0",
           "type": "mc",
@@ -7109,7 +6748,7 @@
         },
         {
           "id": "CM2-16.5-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7129,7 +6768,7 @@
         },
         {
           "id": "CM2-16.5-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7149,7 +6788,7 @@
         },
         {
           "id": "CM2-16.5-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7169,7 +6808,7 @@
         },
         {
           "id": "CM2-16.5-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7189,7 +6828,7 @@
         },
         {
           "id": "CM2-16.5-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7209,7 +6848,7 @@
         },
         {
           "id": "CM2-16.5-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7229,7 +6868,7 @@
         },
         {
           "id": "CM2-16.5-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "16.5",
           "module": "16.0",
           "type": "mc",
@@ -7249,7 +6888,7 @@
         },
         {
           "id": "CM2-17.1-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7269,7 +6908,7 @@
         },
         {
           "id": "CM2-17.1-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7289,7 +6928,7 @@
         },
         {
           "id": "CM2-17.1-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7309,7 +6948,7 @@
         },
         {
           "id": "CM2-17.1-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7329,7 +6968,7 @@
         },
         {
           "id": "CM2-17.1-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7349,10 +6988,10 @@
         },
         {
           "id": "CM2-17.1-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A Linux server administrator wants to elevate their privileges. Which of the following commands makes elevating an account possible? (Select two.)",
           "explanation": "The su command switches the account specified by username. su someuser. It is possible to switch to the superuser account by entering the username of the superuser, and the password of that account.\n\nThe sudo (superuser do) command allows any account listed in the /etc/sudoers file to run commands with elevated privileges.\n\nThe passwd command can be used to change the password. This is not related to elevation of privileges.\n\nThe chown command shows the superuser to change the owner of a file or folder. Note that chown is also restored if a permission is required to execute this.",
@@ -7370,7 +7009,7 @@
         },
         {
           "id": "CM2-17.1-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7390,7 +7029,7 @@
         },
         {
           "id": "CM2-17.1-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7410,7 +7049,7 @@
         },
         {
           "id": "CM2-17.1-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7430,7 +7069,7 @@
         },
         {
           "id": "CM2-17.1-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7450,7 +7089,7 @@
         },
         {
           "id": "CM2-17.1-011",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7470,7 +7109,7 @@
         },
         {
           "id": "CM2-17.1-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7490,7 +7129,7 @@
         },
         {
           "id": "CM2-17.1-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7510,7 +7149,7 @@
         },
         {
           "id": "CM2-17.1-014",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7530,7 +7169,7 @@
         },
         {
           "id": "CM2-17.1-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.1.12",
           "module": "17.0",
           "type": "mc",
@@ -7550,7 +7189,7 @@
         },
         {
           "id": "CM2-17.2-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7573,7 +7212,7 @@
         },
         {
           "id": "CM2-17.2-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7593,7 +7232,7 @@
         },
         {
           "id": "CM2-17.2-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7613,7 +7252,7 @@
         },
         {
           "id": "CM2-17.2-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7633,7 +7272,7 @@
         },
         {
           "id": "CM2-17.2-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7653,7 +7292,7 @@
         },
         {
           "id": "CM2-17.2-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7673,7 +7312,7 @@
         },
         {
           "id": "CM2-17.2-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7693,7 +7332,7 @@
         },
         {
           "id": "CM2-17.2-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7713,7 +7352,7 @@
         },
         {
           "id": "CM2-17.2-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7733,7 +7372,7 @@
         },
         {
           "id": "CM2-17.2-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.2.8",
           "module": "17.0",
           "type": "mc",
@@ -7753,7 +7392,7 @@
         },
         {
           "id": "CM2-17.3-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7773,7 +7412,7 @@
         },
         {
           "id": "CM2-17.3-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7793,7 +7432,7 @@
         },
         {
           "id": "CM2-17.3-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7813,7 +7452,7 @@
         },
         {
           "id": "CM2-17.3-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7833,7 +7472,7 @@
         },
         {
           "id": "CM2-17.3-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7853,7 +7492,7 @@
         },
         {
           "id": "CM2-17.3-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7873,7 +7512,7 @@
         },
         {
           "id": "CM2-17.3-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7893,7 +7532,7 @@
         },
         {
           "id": "CM2-17.3-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7913,7 +7552,7 @@
         },
         {
           "id": "CM2-17.3-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7933,7 +7572,7 @@
         },
         {
           "id": "CM2-17.3-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7953,7 +7592,7 @@
         },
         {
           "id": "CM2-17.3-011",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7973,7 +7612,7 @@
         },
         {
           "id": "CM2-17.3-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -7993,7 +7632,7 @@
         },
         {
           "id": "CM2-17.3-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -8013,7 +7652,7 @@
         },
         {
           "id": "CM2-17.3-014",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -8033,7 +7672,7 @@
         },
         {
           "id": "CM2-17.3-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.3.11",
           "module": "17.0",
           "type": "mc",
@@ -8053,7 +7692,7 @@
         },
         {
           "id": "CM2-17.6-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8073,7 +7712,7 @@
         },
         {
           "id": "CM2-17.6-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8093,7 +7732,7 @@
         },
         {
           "id": "CM2-17.6-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8113,7 +7752,7 @@
         },
         {
           "id": "CM2-17.6-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8133,7 +7772,7 @@
         },
         {
           "id": "CM2-17.6-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8153,7 +7792,7 @@
         },
         {
           "id": "CM2-17.6-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8173,7 +7812,7 @@
         },
         {
           "id": "CM2-17.6-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8193,7 +7832,7 @@
         },
         {
           "id": "CM2-17.6-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8213,7 +7852,7 @@
         },
         {
           "id": "CM2-17.6-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8233,7 +7872,7 @@
         },
         {
           "id": "CM2-17.6-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8253,7 +7892,7 @@
         },
         {
           "id": "CM2-17.6-011",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8273,7 +7912,7 @@
         },
         {
           "id": "CM2-17.6-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8293,7 +7932,7 @@
         },
         {
           "id": "CM2-17.6-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8313,7 +7952,7 @@
         },
         {
           "id": "CM2-17.6-014",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8333,7 +7972,7 @@
         },
         {
           "id": "CM2-17.6-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8353,7 +7992,7 @@
         },
         {
           "id": "CM2-17.6-016",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8373,7 +8012,7 @@
         },
         {
           "id": "CM2-17.6-017",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8393,7 +8032,7 @@
         },
         {
           "id": "CM2-17.6-018",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8413,7 +8052,7 @@
         },
         {
           "id": "CM2-17.6-019",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8433,7 +8072,7 @@
         },
         {
           "id": "CM2-17.6-020",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8453,7 +8092,7 @@
         },
         {
           "id": "CM2-17.6-021",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8473,7 +8112,7 @@
         },
         {
           "id": "CM2-17.6-022",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8493,7 +8132,7 @@
         },
         {
           "id": "CM2-17.6-023",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8513,7 +8152,7 @@
         },
         {
           "id": "CM2-17.6-024",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8533,7 +8172,7 @@
         },
         {
           "id": "CM2-17.6-025",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8553,7 +8192,7 @@
         },
         {
           "id": "CM2-17.6-026",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8573,10 +8212,10 @@
         },
         {
           "id": "CM2-17.6-027",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A forensic investigator is told that a server's processor that does not normally run high has been over-utilized lately, and they suspect possible malware. The investigator wants to see what processes have been using CPU resources over time and what command can be used for this investigation? (Select all that apply.)",
           "explanation": "The ps command without any arguments lists processes running under the current shell. It also has many options to search for files by name, type, or owner, among others.\n\nThe top command displays a snapshot of processes running on a Linux system. It is interactive, real-time view, akin to the Task Manager in Windows, and can be used to prioritize, or terminate processes.\n\nThe grep utility is used to find matches of a specified text term. Users often rely on it to help quickly navigate large amounts of text or log files.\n\nThe lscpu command is used to display information about the CPU architecture, not for monitoring process resource usage over time.",
@@ -8594,10 +8233,10 @@
         },
         {
           "id": "CM2-17.6-028",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A Linux administrator sets up a development environment where they can install and test new packages. Which of the following commands will help the administrator accomplish this? (Select all that apply.)",
           "explanation": "apt-get is a command interface for the Advanced Packaging Tool (APT). APT is used by Debian distributions and works with .deb format packages.\n\nyum is the command interface for YUM. Yum install PackageName installs a new application.\n\nAs part of the iproute2 package, the ip command has options for managing routes and the local interface configuration. The command ip addr replicates the basic reporting functionality of ifconfig (show the current address configuration).\n\ndf (\"disk free\") lets the user view the device's free space, file system, total size, space used, percentage value, and mount point.",
@@ -8615,7 +8254,7 @@
         },
         {
           "id": "CM2-17.6-029",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8635,7 +8274,7 @@
         },
         {
           "id": "CM2-17.6-030",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.6",
           "module": "17.0",
           "type": "mc",
@@ -8675,7 +8314,7 @@
         },
         {
           "id": "CM2-17.7-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8695,7 +8334,7 @@
         },
         {
           "id": "CM2-17.7-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8715,10 +8354,10 @@
         },
         {
           "id": "CM2-17.7-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A network technician is configuring a network adapter. By default, which of the following protocols and services are on Ethernet and Wi-Fi adapters? (Select all that apply.)",
           "explanation": "By default, the Internet Protocol, both IP version 4 and 6, will be on the adapter as it automatically uses the appropriate version of the protocol depending on the connecting network.\n\nBy default, the Link-Layer Topology Discovery Protocol will be on the adapter. It protects network mapping and discovery function for networks without dedicated name servers.\n\nThe IP properties will default to 'Obtain an IP address automatically' using Dynamic Host Configuration Protocol (DHCP) server. The destination should double-click the IP properties item to configure a static address.\n\nBy default, the client for Microsoft Networks and File and Print Sharing for Microsoft Networks software will be on the adapter, but this is a client, not a protocol or service.",
@@ -8737,7 +8376,7 @@
         },
         {
           "id": "CM2-17.7-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8757,7 +8396,7 @@
         },
         {
           "id": "CM2-17.7-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8777,7 +8416,7 @@
         },
         {
           "id": "CM2-17.7-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8797,7 +8436,7 @@
         },
         {
           "id": "CM2-17.7-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8817,7 +8456,7 @@
         },
         {
           "id": "CM2-17.7-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8837,7 +8476,7 @@
         },
         {
           "id": "CM2-17.7-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8857,7 +8496,7 @@
         },
         {
           "id": "CM2-17.7-011",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8877,7 +8516,7 @@
         },
         {
           "id": "CM2-17.7-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8897,7 +8536,7 @@
         },
         {
           "id": "CM2-17.7-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8917,7 +8556,7 @@
         },
         {
           "id": "CM2-17.7-014",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8937,7 +8576,7 @@
         },
         {
           "id": "CM2-17.7-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8977,7 +8616,7 @@
         },
         {
           "id": "CM2-17.7-017",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -8997,7 +8636,7 @@
         },
         {
           "id": "CM2-17.7-018",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9057,7 +8696,7 @@
         },
         {
           "id": "CM2-17.7-021",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9077,7 +8716,7 @@
         },
         {
           "id": "CM2-17.7-022",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9117,7 +8756,7 @@
         },
         {
           "id": "CM2-17.7-024",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9137,7 +8776,7 @@
         },
         {
           "id": "CM2-17.7-025",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9157,7 +8796,7 @@
         },
         {
           "id": "CM2-17.7-026",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9177,7 +8816,7 @@
         },
         {
           "id": "CM2-17.7-027",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9197,7 +8836,7 @@
         },
         {
           "id": "CM2-17.7-028",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9217,7 +8856,7 @@
         },
         {
           "id": "CM2-17.7-029",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9237,7 +8876,7 @@
         },
         {
           "id": "CM2-17.7-030",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9297,7 +8936,7 @@
         },
         {
           "id": "CM2-17.7-033",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9317,7 +8956,7 @@
         },
         {
           "id": "CM2-17.7-034",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "17.7",
           "module": "17.0",
           "type": "mc",
@@ -9600,7 +9239,7 @@
           "domain": "2.0 Security",
           "objective": "18.1.10",
           "module": "18.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are examples of social engineering? (Select two.)",
           "explanation": "Social engineering leverages human nature. Internal employees are often the targets of trickery, and false trust can quickly lead to a serious breach of information security. Shoulder surfing and dumpster diving are examples of social engineering.\n\nShoulder surfing is the act of looking over an authorized person's shoulder in hopes of obtaining an access code or credentials.\n\nDumpster diving involves searching through trash or other discarded items to obtain credentials or information that may facilitate further attacks. These low-tech attack methods are often the first course of action that a hacker pursues.\n\nPort scanning and war dialing are technical attacks that seek to take advantage of vulnerabilities in systems or networks.\n\nBrute force password-cracking software tries to identify a password by trying every possible letter, number, and symbol combination until the correct one is found.",
@@ -9762,7 +9401,7 @@
           "domain": "2.0 Security",
           "objective": "18.2.6",
           "module": "18.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A network administrator sets up a network access control solution throughout the enterprise, which allows them to see ports with multiple devices connected to a switch port.\n\nThe administrator uses this to help identify wireless access points throughout the enterprise, especially older ones that may have been forgotten.\n\nWhich of the following legacy wireless encryption mechanisms is the administrator going to change? (Select two.)",
           "explanation": "The first version of Wi-Fi Protected Access (WPA) was designed to fix critical vulnerabilities in the earlier wired equivalent privacy (WEP) standard.\n\nWired Equivalent Privacy (WEP) is an old legacy standard. Neither WEP nor the original WPA standard is considered secure enough for continued use.\n\nWPA2 uses the Advanced Encryption Standard (AES) cipher deployed within the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP).\n\nThe main features of WPA3 are Simultaneous Authentication of Equals (SAE), updated cryptographic protocols, protected management frames, and Wi-Fi enhanced open.",
@@ -9860,7 +9499,7 @@
         },
         {
           "id": "CM2-18.3-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -9920,7 +9559,7 @@
         },
         {
           "id": "CM2-18.3-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -9980,7 +9619,7 @@
         },
         {
           "id": "CM2-18.3-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -10000,7 +9639,7 @@
         },
         {
           "id": "CM2-18.3-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -10060,7 +9699,7 @@
         },
         {
           "id": "CM2-18.3-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -10100,7 +9739,7 @@
         },
         {
           "id": "CM2-18.3-014",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.3.10",
           "module": "18.0",
           "type": "mc",
@@ -10343,7 +9982,7 @@
           "domain": "2.0 Security",
           "objective": "18.7",
           "module": "18.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A group of employees has voiced concerns about not feeling safe when walking to and from their cars in the parking lot. Since the building is not in a safe neighborhood, what could the company implement to help those employees feel safer? (Select all that apply.)",
           "explanation": "Security lighting on the perimeter of a building is safe and secure at night. Well-designed lighting helps people feel safe, especially at public areas or enclosed spaces, such as parking garages.\n\nVideo surveillance is typically a layer of security designed to improve the resilience of perimeter gateways. Video surveillance is able to monitor outside activity with this solution.\n\nSecurity guards could be an option for this solution, as this would deter any bad actor from loitering around the building.\n\nA motion-based alarm looks for a detector, where it triggers by movement within a cover or other area.",
@@ -10405,7 +10044,7 @@
           "domain": "2.0 Security",
           "objective": "18.7",
           "module": "18.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A security awareness trainer awards a good portion of the training class talking about phishing campaigns are getting more sophisticated, so the trainer is helping the class learn how to identify a phishing email.\n\nWhich of the following is an indicator of phishing? (Select all that apply.)",
           "explanation": "Many phishing emails have a sense of urgency so that the recipient will act now or else it will be too late. In business, this could be an email from the very web notifying something urgent.\n\nThe email sender's address (the FROM address) should be considered with care. For example, a link in the email that matches a corporate address but comes from a totally different domain.\n\nLinks in phishing emails can be disguised. For example, a link that appears to be from microsoft.com, reveals a very different URL, such as www.malicioussite.com, when the cursor hovers over the link.\n\nAn email with no signature is not an indicator of phishing.",
@@ -10544,7 +10183,7 @@
         },
         {
           "id": "CM2-18.7-011",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "18.7",
           "module": "18.0",
           "type": "mc",
@@ -10647,7 +10286,7 @@
           "domain": "2.0 Security",
           "objective": "18.7",
           "module": "18.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "An attacker emailed many employees of a target company (that supports government organizations) with an invoice attachment claiming to be from a vendor the company uses for garbage removal. The attacker plans on infiltrating the office IT security by using the following social engineering techniques. How might the attacker plan on infiltrating the office? (Select all that apply.)",
           "explanation": "The attacker can manipulate a person and use other social engineering techniques to tailgate right through the front doors of the offices.\n\nThe attacker can impersonate an employee by stealing an access card or using slightly altered tactics, impersonation can occur in combination with a tailgating situation.\n\nAn insider threat is an employee or other person with intimate knowledge or access to internal components of the company or organization. However, the attacker will seek to gain a background check to pass as an insider or already have a legitimate access pass obtained to a fraud scheme.\n\nSpoofing is an attack where the threat actor can masquerade as a trusted user or software application to gain access.",
@@ -10688,7 +10327,7 @@
           "domain": "2.0 Security",
           "objective": "19.1.11",
           "module": "19.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A security administrator wants to set up anomalistic monitoring around behavioral-based user activity. Which of the following could the administrator implement for monitoring? (Select three.)",
           "explanation": "Monitoring login times are typically used to see if an account is logging in at an unusual time of the day or night or during the weekend.\n\nConcurrent logins are another behavioral-based monitoring mechanism. Most users should only login to a single device at a time, so the timeout/screen lock locks the desktop if the device detects no user-input device activity.\n\nFailed attempts can be a sign of brute force or credential stuffing attacks, or otherwise malicious activity. The timeout/screen lock locks the desktop if the device detects no user-input device activity.",
@@ -11610,7 +11249,7 @@
           "domain": "2.0 Security",
           "objective": "19.7",
           "module": "19.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A cyber consultant is reviewing the company's policy on security issues. What are symptoms associated with security issues within the systems? (Select all that apply.)",
           "explanation": "Symptoms of security issues in the file system include altered system files or personal files with data stamps and file sizes different from known-good versions.\n\nAn additional symptom of security issues in the file system is missing or renamed files.\n\nWhen the computer is slow or \"behaving oddly,\" one of the things that a technician should suspect that malware has infected the device. A symptom can also be used for various reasons, there are several instances in which a bad actor will manipulate users to download infected software/apps.\n\nDesktop alerts are used for various reasons; there are several instances in which a bad actor will manipulate users to download infected software/apps.",
@@ -11692,7 +11331,7 @@
           "domain": "2.0 Security",
           "objective": "19.7",
           "module": "19.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "An engineer is creating a template for an end-user best practices guide. What are user steps away from the workstation? (Select all.)",
           "explanation": "Secure and protect hardware is a best practice because malicious attackers can use USB drives to steal data or infect a workstation with malware.\n\nLog off the device when not in use is a best practice because it prevents an unauthorized access if the user leaves their workstation unlocked and unattended.\n\nSecure PII and passwords is a best practice to prevent exposure of sensitive data when a user steps away from their workstation.\n\nA lunchtime attack occurs when a threat actor accesses an unlocked workstation while the user is away, such as during lunch. Allowing the computer to lock automatically when stepping away mitigates this risk by ensuring the device is not left unprotected.",
@@ -11774,7 +11413,7 @@
           "domain": "2.0 Security",
           "objective": "19.7",
           "module": "19.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following scenarios would result in a website having an untrusted or invalid certificate? (Select all that apply.)",
           "explanation": "Certificate warnings occur when a certificate is untrusted, such as a self-signed certificate, the padlock icon is replaced with the broken padlock icon, the browser may display a warning.\n\nCertificate warnings occur when a certificate is invalid, such as an expired certificate. All content is blocked unless manually overridden.\n\nCertificate warnings occur when a certificate is untrusted, such as a self-signed certificate. A certificate could be received because the site is using a trusted Certificate Authority (CA) and would be trusted.\n\nMost browsers will not prompt any warning if a trusted Certificate Authority (CA) issues a certificate. This denotes a level of trust that the user does not have to be alerted about.",
@@ -11796,7 +11435,7 @@
           "domain": "2.0 Security",
           "objective": "19.7",
           "module": "19.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A user thinks there may be a virus on their computer, calls into an IT help desk, and states that when browsing certain websites, the browser gives a scary warning about the possibility being unsafe.\n\nWhat could cause a browser warning? (Select all that apply.)",
           "explanation": "If a certificate has expired or is issued by a CA that is not trusted, the padlock icon is replaced with a warning triangle instead on the subject matter certificate issued to the browser.\n\nIf a certificate is revoked, modern browsers will attempt to confirm the current certificate's status. If the browser is not able to query the status of a browser plug-in that may be causing the warning.\n\nSuppose the fully-qualified domain name (FQDN) requested by the browser is different from the subject or alternative name listed in the certificate. Most browsers will not prompt any warning if a trusted Certificate Authority (CA) issues a certificate. This denotes a level of trust the user does not have to be alerted about.",
@@ -12055,7 +11694,7 @@
         },
         {
           "id": "CM2-20.2-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12075,7 +11714,7 @@
         },
         {
           "id": "CM2-20.2-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12095,7 +11734,7 @@
         },
         {
           "id": "CM2-20.2-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12115,7 +11754,7 @@
         },
         {
           "id": "CM2-20.2-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12135,7 +11774,7 @@
         },
         {
           "id": "CM2-20.2-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12155,7 +11794,7 @@
         },
         {
           "id": "CM2-20.2-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12175,7 +11814,7 @@
         },
         {
           "id": "CM2-20.2-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12195,7 +11834,7 @@
         },
         {
           "id": "CM2-20.2-008",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12215,7 +11854,7 @@
         },
         {
           "id": "CM2-20.2-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12235,7 +11874,7 @@
         },
         {
           "id": "CM2-20.2-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.2.7",
           "module": "20.0",
           "type": "mc",
@@ -12475,7 +12114,7 @@
         },
         {
           "id": "CM2-20.5-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12495,7 +12134,7 @@
         },
         {
           "id": "CM2-20.5-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12515,7 +12154,7 @@
         },
         {
           "id": "CM2-20.5-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12535,10 +12174,10 @@
         },
         {
           "id": "CM2-20.5-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A user finds that their iPhone 5 starts to run slowly, and a reboot does not solve the slow performance. Which of the following issues could be causing the problem? (Select all that apply.)",
           "explanation": "If a battery is almost out of charge, it could cause slowness, as will a faulty battery or other faulty hardware.\n\nIf too many apps are open, a phone could become slow because the open apps are consuming most of the phone's resources.\n\nAn operating system (OS) update on an older phone can severely impact performance.\n\nA mesh network provides communication between devices or nodes using some type of mesh networking, such as Z-Wave or Zigbee, which uses less power and makes it easier for smart devices to forward data between nodes.",
@@ -12577,7 +12216,7 @@
         },
         {
           "id": "CM2-20.5-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12600,7 +12239,7 @@
           "domain": "2.0 Security",
           "objective": "20.5",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A cyber engineer creates a training packet on what employees should look for regarding leaked personal and corporate files. What proactive measures should the employees and engineer look for regarding this topic? (Select all that apply.)",
           "explanation": "If there is a personal or corporate data leak, each device that could have been a source for the files must be quarantined and investigated as a possible source of the breach.\n\nUsers should also be alert to two-step verification notifications, especially when new devices have attempted to access an account or there are unexpected password changes.\n\nWhenever a website or service suffers a data breach and leaks personal files/data, it should notify users immediately.\n\nExcessive bandwidth is important to monitor as a malicious actor may have taken over a system; however, this is a concern that falls with high network traffic and not leaked data.",
@@ -12662,7 +12301,7 @@
           "domain": "2.0 Security",
           "objective": "20.5",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A user's phone begins to act strangely, with apps responding slowly and pop-up ads appearing frequently. When the user calls the help desk and explains the issue, the technician says it sounds like malware. What other symptoms would be common to a malware infection on a mobile phone? (Select all that apply.)",
           "explanation": "Redirection attacks are a common symptom, where malware corrupts the Domain Name System (DNS) and search provider to force users to spoofed sites. This might disrupt access to legitimate sites and cause slow network performance.\n\nFake security warnings are a common symptom. Scareware uses these to persuade users to install an app for giving a Trojan app additional permissions.\n\nAPK (Android Package) sideloading refers to downloading apps for Android phones from a source other than Google's Play Store.\n\nTo the contrary of increasing response times, malware might cause excessive power drain and high resource utilization and cause sluggish performance.",
@@ -12700,7 +12339,7 @@
         },
         {
           "id": "CM2-20.5-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12740,7 +12379,7 @@
         },
         {
           "id": "CM2-20.5-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12780,7 +12419,7 @@
         },
         {
           "id": "CM2-20.5-017",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.5",
           "module": "20.0",
           "type": "mc",
@@ -12800,7 +12439,7 @@
         },
         {
           "id": "CM2-20.6-001",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12820,7 +12459,7 @@
         },
         {
           "id": "CM2-20.6-002",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12860,7 +12499,7 @@
         },
         {
           "id": "CM2-20.6-004",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12880,7 +12519,7 @@
         },
         {
           "id": "CM2-20.6-005",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12900,7 +12539,7 @@
         },
         {
           "id": "CM2-20.6-006",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12920,7 +12559,7 @@
         },
         {
           "id": "CM2-20.6-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12960,7 +12599,7 @@
         },
         {
           "id": "CM2-20.6-009",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -12980,7 +12619,7 @@
         },
         {
           "id": "CM2-20.6-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13020,7 +12659,7 @@
         },
         {
           "id": "CM2-20.6-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13040,7 +12679,7 @@
         },
         {
           "id": "CM2-20.6-013",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13083,7 +12722,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "20.6",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A technician is preparing for a meeting with a customer who has their received service. As part of maintaining a positive attitude and professional confidence, what situations should the technician and customer avoid during the meeting? (Select all that apply.)",
           "explanation": "There are instances in business relationships when the customer can become irate and outspoken against the contracted organization's representative. In this scenario, the technician should remain composed, postured, and professional and never argue with the customer's feelings.\n\nIn addition, the technician should avoid further conflict in a difficult situation.\n\nA third situation that could cause further issues is if the technician is a bit condescending in a difficult situation when the customer is not considered a different disagreement during the meeting.\n\nUsing jargon can cause communication issues when the customer can become more irate and professional confidence, which is especially inappropriate to the customer.",
@@ -13102,7 +12741,7 @@
         },
         {
           "id": "CM2-20.6-016",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13142,7 +12781,7 @@
         },
         {
           "id": "CM2-20.6-018",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13165,7 +12804,7 @@
           "domain": "2.0 Security",
           "objective": "20.6",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A domain administrator needs to view the Windows security groups. Utilizing the Local Users and Groups (lusrmgr.msc) console provides the administrator with an advanced interface for configuring user accounts and security groups. What are the default user security groups that would be visible in a Windows domain? (Select all that apply.)",
           "explanation": "Windows default security groups include Administrators. Adding a user account as a member of the Administrators group gives the user account full privileges.\n\nStandard standard accounts are members of the Users group and can drive down for most workstation applications.\n\nThe administrator should create an account as a compelling reason for legacy reasons to disempower this feature.\n\nThe Guest group is one of the default security groups and is only present for legacy reasons to disempower this feature.\n\nThe Root is the superuser and administrative account with every available privilege in Linux operating systems. This Root account is anything on the system, and administrators should use them carefully.",
@@ -13184,7 +12823,7 @@
         },
         {
           "id": "CM2-20.6-020",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13224,7 +12863,7 @@
         },
         {
           "id": "CM2-20.6-022",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13264,10 +12903,10 @@
         },
         {
           "id": "CM2-20.6-024",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of these applications will fail to run on a Windows PC with a 64-bit CPU running a 32-bit OS? (Select all that apply.)",
           "explanation": "Software programs can be in 32-bit or 64-bit versions. A 64-bit program requires a 64-bit CPU and operating system architecture and is incompatible with 32-bit platforms. However, 32-bit programs can generally operate on both 32-bit and 64-bit platforms.\n\nEvery software application for Linux can use a specific operating system. For example, macOS apps support .DMG (disk image) and .PKG (package) file types.\n\nLinux packages use the package manager the following (Update, Modified (YUM), which is a free and open-source command-line package management software for Linux machines. It uses the .rpm file type.\n\nA 32-bit operating system or applications can run on a particular operating system. A 32-bit operating system or system with 64-bit CPUs can run on 32-bit software. On Windows, a technician can install software using setup files of either the .EXE or .MSI formats.",
@@ -13285,7 +12924,7 @@
         },
         {
           "id": "CM2-20.6-025",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13305,7 +12944,7 @@
         },
         {
           "id": "CM2-20.6-026",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13325,7 +12964,7 @@
         },
         {
           "id": "CM2-20.6-027",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13345,7 +12984,7 @@
         },
         {
           "id": "CM2-20.6-028",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13365,7 +13004,7 @@
         },
         {
           "id": "CM2-20.6-029",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13405,7 +13044,7 @@
         },
         {
           "id": "CM2-20.6-031",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13425,7 +13064,7 @@
         },
         {
           "id": "CM2-20.6-032",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13465,7 +13104,7 @@
         },
         {
           "id": "CM2-20.6-034",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13485,7 +13124,7 @@
         },
         {
           "id": "CM2-20.6-035",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13505,7 +13144,7 @@
         },
         {
           "id": "CM2-20.6-036",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13565,7 +13204,7 @@
         },
         {
           "id": "CM2-20.6-039",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13585,7 +13224,7 @@
         },
         {
           "id": "CM2-20.6-040",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13605,7 +13244,7 @@
         },
         {
           "id": "CM2-20.6-041",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13645,7 +13284,7 @@
         },
         {
           "id": "CM2-20.6-043",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13665,7 +13304,7 @@
         },
         {
           "id": "CM2-20.6-044",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13685,7 +13324,7 @@
         },
         {
           "id": "CM2-20.6-045",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13705,7 +13344,7 @@
         },
         {
           "id": "CM2-20.6-046",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13765,10 +13404,10 @@
         },
         {
           "id": "CM2-20.6-049",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "20.6",
           "module": "20.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are common login types supported by the Windows operating system? (Select three.)",
           "explanation": "Local account logins use credentials stored in the local Security Accounts Manager (SAM) database on the device.\n\nNetwork logins authenticate a user to access shared resources on other computers via the network.\n\nKerberos is the authentication protocol used in Windows domains to validate domain logins centrally via a domain controller.\n\nRemote logins are a type of network login where a user connects to a device from a different location, not a distinct login type recognized in this context.",
@@ -13787,7 +13426,7 @@
         },
         {
           "id": "CM2-20.6-050",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13807,7 +13446,7 @@
         },
         {
           "id": "CM2-20.6-051",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13847,7 +13486,7 @@
         },
         {
           "id": "CM2-20.6-053",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13887,7 +13526,7 @@
         },
         {
           "id": "CM2-20.6-055",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13907,7 +13546,7 @@
         },
         {
           "id": "CM2-20.6-056",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13927,7 +13566,7 @@
         },
         {
           "id": "CM2-20.6-057",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13947,7 +13586,7 @@
         },
         {
           "id": "CM2-20.6-058",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -13987,7 +13626,7 @@
         },
         {
           "id": "CM2-20.6-060",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14007,7 +13646,7 @@
         },
         {
           "id": "CM2-20.6-061",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14047,7 +13686,7 @@
         },
         {
           "id": "CM2-20.6-063",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14087,7 +13726,7 @@
         },
         {
           "id": "CM2-20.6-065",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14107,7 +13746,7 @@
         },
         {
           "id": "CM2-20.6-066",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14167,7 +13806,7 @@
         },
         {
           "id": "CM2-20.6-069",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14187,7 +13826,7 @@
         },
         {
           "id": "CM2-20.6-070",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14227,7 +13866,7 @@
         },
         {
           "id": "CM2-20.6-072",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14247,7 +13886,7 @@
         },
         {
           "id": "CM2-20.6-073",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14267,7 +13906,7 @@
         },
         {
           "id": "CM2-20.6-074",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14287,7 +13926,7 @@
         },
         {
           "id": "CM2-20.6-075",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14347,7 +13986,7 @@
         },
         {
           "id": "CM2-20.6-078",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14387,7 +14026,7 @@
         },
         {
           "id": "CM2-20.6-080",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14407,7 +14046,7 @@
         },
         {
           "id": "CM2-20.6-081",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "20.6",
           "module": "20.0",
           "type": "mc",
@@ -14450,7 +14089,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "21.1.8",
           "module": "21.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "You have configured your Windows systems to automatically back up user data every night at midnight. You also perform a system image backup once per month.\n\nWhat else should you do to ensure that you are protected from data loss? (Select two.)",
           "explanation": "The only way to ensure that you are protected from data loss is to regularly test your restoration procedures. This activity will reveal whether or not your backup process is functioning properly and whether or not your restoration procedures will actually work. You should also store a redundant copy of your backups at an offsite location. The chance that a disaster at your main site will also affect backups stored offsite is very small.\n\nRestoration privileges should be restricted to trusted staff to prevent confidentiality violations. However, this is a security issue and is not related to the issue of data protection.\n\nWrite-protecting backup media will provide little protection for the stored data because it can be easily removed.\n\nDefragmenting your system hard drive will not back up user data.",
@@ -14892,7 +14531,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "21.3.5",
           "module": "21.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following should be considered when utilizing AI technologies? (Select three.)",
           "explanation": "The AI technologies that are being utilized should be free of bias and highly accurate based on the data used to train them. It should also be free of hallucinations, where it generates output without using facts and the data it was trained with.\n\nThe speed of AI technology producing results is not a normal consideration when discussing AI limitations.",
@@ -15034,7 +14673,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "21.3.5",
           "module": "21.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are considered benefits of utilizing AI? (Select three.)",
           "explanation": "The use of AI increases the functionality of applications that use AI. AI also reduces human errors on programmed tasks and increases the amount of information that can be used to make more informed business decisions.\n\nThe use of AI is not directly related to making all robots faster.",
@@ -15236,7 +14875,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.1.7",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which documents are generally finished and approved before a project begins? (Select three.)",
           "explanation": "Most businesses require executive sign-off on a project's plan, budget, and risk assessment before it begins.\n\nA change order form is the document used to request changes to a project that is underway.\n\nA slide presentation or analysis spreadsheet is not required, although they might be useful.\n\nA customer acceptance checklist is important, but only after the project is completed.",
@@ -15341,7 +14980,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.1.7",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Who needs to approve a change before it is initiated? (Select two.)",
           "explanation": "The change advisory board and, often, the client/end-user must approve changes before they are initiated.\n\nThe change advisory board may include the CEO, managers, or other personnel. However, approval from persons outside the change advisory board (such as a marketing director, sales rep, or regional rep) is not generally required.",
@@ -15803,7 +15442,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.3.12",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are common uses for scripting? (Select three.)",
           "explanation": "Common uses for scripting include:\n- Network drive remapping\n- Automated backups\n- System updates\n\nWhile automating email mass mailings, creating scripts, and managing bookmark lists could all be impacted by scripting, there are other methods and utilities that are more efficient and commonly used for these tasks.",
@@ -15867,7 +15506,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.3.12",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following are characteristics specific to the Python programming language? (Select two.)",
           "explanation": "Python is a high-level, general-purpose programming language with a focus on code readability. Python is used extensively with large data sets and is very popular with the scientific community.\n\nIn the Linux and Unix world, the most popular method of scripting is shell scripting.\n\nAlthough not technically a scripting language, batch files (.bat) can collect multiple Windows commands and execute them in sequence.\n\nJavaScript is used widely for website and web page design.",
@@ -16586,7 +16225,7 @@
         },
         {
           "id": "CM2-22.6-003",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16666,7 +16305,7 @@
         },
         {
           "id": "CM2-22.6-007",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16726,7 +16365,7 @@
         },
         {
           "id": "CM2-22.6-010",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16749,7 +16388,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A system administrator has identified suspicious behavior on a user workstation running a Linux operating system.\n\nWhat provides the system administrator a list of processes running on the system to identify this suspicious behavior? (Select all that apply.)",
           "explanation": "When used on a Linux terminal, the ps command will invoke the process tables, listing a summary of the processes currently running on the system.\n\nThe top command acts like the Windows task manager or Linux operating system, allowing you to see list, manage, and prioritize the currently-running processes.\n\nThe dig command is a powerful Linux tool for testing and gathering information for resolving the domain name system (DNS).",
@@ -16767,7 +16406,7 @@
         },
         {
           "id": "CM2-22.6-012",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16827,7 +16466,7 @@
         },
         {
           "id": "CM2-22.6-015",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16847,7 +16486,7 @@
         },
         {
           "id": "CM2-22.6-016",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16867,7 +16506,7 @@
         },
         {
           "id": "CM2-22.6-017",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16910,7 +16549,7 @@
           "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Which of the following safety benefits are associated with encasing cables that run across the floor? (Select two.)",
           "explanation": "If a cable must run across the floor, encase the cable to prevent wear and tear and tight sealed with individuals accidentally tripping over accidents.\n\nAesthetic improvements are not a safety benefit. Individuals could still tamper with the network cables regardless of the casing.\n\nLikewise, encasing cables does not prevent eavesdropping.",
@@ -16929,7 +16568,7 @@
         },
         {
           "id": "CM2-22.6-020",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16969,7 +16608,7 @@
         },
         {
           "id": "CM2-22.6-022",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -16989,7 +16628,7 @@
         },
         {
           "id": "CM2-22.6-023",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17069,7 +16708,7 @@
         },
         {
           "id": "CM2-22.6-027",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17089,7 +16728,7 @@
         },
         {
           "id": "CM2-22.6-028",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "2.0 Security",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17109,7 +16748,7 @@
         },
         {
           "id": "CM2-22.6-029",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17149,7 +16788,7 @@
         },
         {
           "id": "CM2-22.6-031",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17169,7 +16808,7 @@
         },
         {
           "id": "CM2-22.6-032",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17269,10 +16908,10 @@
         },
         {
           "id": "CM2-22.6-037",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A desktop user is attempting to use a new 64-bit software application. Which of the following reasons could be why this software will not install on the desktop? (Select all that apply.)",
           "explanation": "The OS is 64-bit, but the CPU is not 64-bit capable (32-bit only), which would prevent a 64-bit application from running, as the CPU architecture must support 64-bit instructions.\n\nThe desktop does not meet RAM requirements for the application, which could prevent proper installation or functioning, since 64-bit applications are often more resource-intensive.\n\nThe CPU is 64-bit, but the operating system is only 32-bit, which would prevent the 64-bit application from running, as the OS architecture must match or support the application's bit-type.\n\nThe software is not compatible with the OS version, which could also be a valid reason for installation failure, as software compatibility often depends on OS version, not just architecture.",
@@ -17290,7 +16929,7 @@
         },
         {
           "id": "CM2-22.6-038",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17330,7 +16969,7 @@
         },
         {
           "id": "CM2-22.6-040",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17350,7 +16989,7 @@
         },
         {
           "id": "CM2-22.6-041",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17410,7 +17049,7 @@
         },
         {
           "id": "CM2-22.6-044",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17430,7 +17069,7 @@
         },
         {
           "id": "CM2-22.6-045",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17490,7 +17129,7 @@
         },
         {
           "id": "CM2-22.6-048",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17530,10 +17169,10 @@
         },
         {
           "id": "CM2-22.6-050",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "Initially developed by Bell Laboratories in the 1960s, which operating systems originated from the UNIX kernel? (Select all that apply.)",
           "explanation": "Linux Torvalds created Linux, which is a fully open-source operating system kernel based on UNIX. As a result, there are several Linux distributions (distros), each with its unique collection of tools.\n\nThe macOS originated on the kernel of an operating system known as UNIX. Extra code enhances this kernel that implements Mac's graphical user interface and initial iPad tablets. iOS originated from UNIX.\n\niOS is the operating system for Apple's iPhone smartphone and initial iPad tablets. iOS originated from UNIX.\n\nMicrosoft's Windows 10 and Windows 11 are proprietary operating systems developed with a hybrid kernel based on the NT kernel that has benefits of both monolithic and microkernel architectures.",
@@ -17552,7 +17191,7 @@
         },
         {
           "id": "CM2-22.6-051",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17612,7 +17251,7 @@
         },
         {
           "id": "CM2-22.6-054",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17695,7 +17334,7 @@
           "domain": "2.0 Security",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "In Windows, the Ease of Access and Accessibility settings allow users to configure the input and output options best suited for each user. What are the Ease of Access main settings groups? (Select all that apply.)",
           "explanation": "The vision option controls the functional text and visual options for the current selection. The vision option also configures the narrator, contrast, cursor, and magnifier.\n\nThe hearing option in the Ease of Access settings enable description of the current selection.\n\nThe interaction option in the Ease of Access settings enable a graphical keyboard, speech, sound, and mouse. Interaction in a Windows power setting, it leaves you open to screen content whenever you exit sleep mode due to inactivity.",
@@ -17714,7 +17353,7 @@
         },
         {
           "id": "CM2-22.6-059",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17754,7 +17393,7 @@
         },
         {
           "id": "CM2-22.6-061",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17774,7 +17413,7 @@
         },
         {
           "id": "CM2-22.6-062",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17834,10 +17473,10 @@
         },
         {
           "id": "CM2-22.6-065",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "4.0 Operational Procedures",
           "objective": "22.6",
           "module": "22.0",
-          "type": "mc",
+          "type": "multi",
           "difficulty": "medium",
           "stem": "A user works primarily in your organization's production area. She frequently needs to access data stored on the Windows 11 desktop system in her office while on the production floor.\n\nWhich user groups could you make her a member of in order to enable this Remote Desktop connection?(Select two.)",
           "explanation": "Only users who are members of the Administrators or Remote Desktop Users groups are allowed to establish Remote Desktop connections with a Windows system. In this scenario, the best option would probably be to make her a member of the Remote Desktop Users group of the Administrators because granting her unnecessary permissions and rights.\n\nMembers of the Power Users, Users, and Guests groups are not allowed to establish Remote Desktop connections with a Windows system.",
@@ -17856,7 +17495,7 @@
         },
         {
           "id": "CM2-22.6-066",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17896,7 +17535,7 @@
         },
         {
           "id": "CM2-22.6-068",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -17916,7 +17555,7 @@
         },
         {
           "id": "CM2-22.6-069",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18016,7 +17655,7 @@
         },
         {
           "id": "CM2-22.6-074",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18156,7 +17795,7 @@
         },
         {
           "id": "CM2-22.6-081",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18176,7 +17815,7 @@
         },
         {
           "id": "CM2-22.6-082",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18196,7 +17835,7 @@
         },
         {
           "id": "CM2-22.6-083",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18256,7 +17895,7 @@
         },
         {
           "id": "CM2-22.6-086",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18276,7 +17915,7 @@
         },
         {
           "id": "CM2-22.6-087",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18296,7 +17935,7 @@
         },
         {
           "id": "CM2-22.6-088",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18416,7 +18055,7 @@
         },
         {
           "id": "CM2-22.6-094",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18436,7 +18075,7 @@
         },
         {
           "id": "CM2-22.6-095",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18456,7 +18095,7 @@
         },
         {
           "id": "CM2-22.6-096",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18476,7 +18115,7 @@
         },
         {
           "id": "CM2-22.6-097",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18496,7 +18135,7 @@
         },
         {
           "id": "CM2-22.6-098",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18516,7 +18155,7 @@
         },
         {
           "id": "CM2-22.6-099",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "3.0 Software Troubleshooting",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18556,7 +18195,7 @@
         },
         {
           "id": "CM2-22.6-101",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18576,7 +18215,7 @@
         },
         {
           "id": "CM2-22.6-102",
-          "domain": "1.0 Mobile Devices, Installations, and Networking",
+          "domain": "1.0 Operating Systems",
           "objective": "22.6",
           "module": "22.0",
           "type": "mc",
@@ -18593,6 +18232,367 @@
             "Pause synchronization and manually upload files only when necessary."
           ],
           "origin": "CertMaster"
+        },
+        {
+          "id": "1202-001",
+          "domain": "1.0 Operating Systems",
+          "objective": "1.3",
+          "module": "16.0",
+          "type": "multi",
+          "difficulty": "easy",
+          "stem": "Which are valid Windows 11 editions for corporate deployment? (Select all that apply)",
+          "explanation": "Pro and Enterprise for corporate. Home is consumer. Standard and Professional Plus are invalid.",
+          "options": [
+            "Windows 11 Home",
+            "Windows 11 Pro",
+            "Windows 11 Enterprise",
+            "Windows 11 Standard",
+            "Windows 11 Professional Plus"
+          ],
+          "correctAnswer": [
+            "Windows 11 Pro",
+            "Windows 11 Enterprise"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-002",
+          "domain": "1.0 Operating Systems",
+          "objective": "1.7",
+          "module": "13.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Where to configure network drive mapping in Windows?",
+          "explanation": "File Explorer provides 'Map Network Drive' feature for network share access.",
+          "options": [
+            "Device Manager",
+            "File Explorer - Map Network Drive",
+            "Services Manager",
+            "Group Policy Editor"
+          ],
+          "correctAnswer": [
+            "File Explorer - Map Network Drive"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-003",
+          "domain": "1.0 Operating Systems",
+          "objective": "1.5",
+          "module": "13.0",
+          "type": "matching",
+          "difficulty": "hard",
+          "stem": "Match each Windows command-line tool to its function.",
+          "explanation": "ipconfig for network, tasklist for processes, diskpart for partitions, sfc for system files.",
+          "items": [
+            "Network Config",
+            "Process Mgmt",
+            "Disk Mgmt",
+            "System Files"
+          ],
+          "correctAnswer": {
+            "Network Config": "ipconfig",
+            "Process Mgmt": "tasklist",
+            "Disk Mgmt": "diskpart",
+            "System Files": "sfc /scannow"
+          },
+          "origin": "Original",
+          "options": [
+            "diskpart",
+            "ipconfig",
+            "sfc /scannow",
+            "tasklist"
+          ]
+        },
+        {
+          "id": "1202-004",
+          "domain": "1.0 Operating Systems",
+          "objective": "1.4",
+          "module": "14.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Windows system slow - which tool shows real-time CPU, memory, disk?",
+          "explanation": "Resource Monitor and Task Manager Performance tab show real-time system resource usage.",
+          "options": [
+            "Event Viewer",
+            "Resource Monitor/Task Manager Performance",
+            "Device Manager",
+            "Group Policy"
+          ],
+          "correctAnswer": [
+            "Resource Monitor/Task Manager Performance"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-005",
+          "domain": "2.0 Security",
+          "objective": "2.7",
+          "module": "19.0",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Which are strong password practices? (Select all that apply)",
+          "explanation": "Mixed characters, MFA, and expiration are good. Reusing and writing down are security risks.",
+          "options": [
+            "Min 8 chars with mixed types",
+            "Reuse across accounts",
+            "Password expiration 90 days",
+            "Write down passwords",
+            "MFA where available"
+          ],
+          "correctAnswer": [
+            "Min 8 chars with mixed types",
+            "Password expiration 90 days",
+            "MFA where available"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-006",
+          "domain": "2.0 Security",
+          "objective": "2.6",
+          "module": "19.0",
+          "type": "mc",
+          "difficulty": "hard",
+          "stem": "Workstation with malware - FIRST action in recovery?",
+          "explanation": "Isolate system first and document to prevent spread and enable analysis.",
+          "options": [
+            "Format hard drive",
+            "Disconnect from network and document",
+            "Update patches",
+            "Reset password only"
+          ],
+          "correctAnswer": [
+            "Disconnect from network and document"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-007",
+          "domain": "2.0 Security",
+          "objective": "2.2",
+          "module": "15.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which restricts user permissions to prevent system changes?",
+          "explanation": "UAC prompts for elevation on system-level changes.",
+          "options": [
+            "User Account Control (UAC)",
+            "Windows Defender",
+            "Group Policy",
+            "Windows Firewall"
+          ],
+          "correctAnswer": [
+            "User Account Control (UAC)"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-008",
+          "domain": "2.0 Security",
+          "objective": "2.10",
+          "module": "18.0",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Legitimate wireless security methods? (Select all that apply)",
+          "explanation": "WPA3, strong passwords, MAC filtering provide security. Disabling SSID is weak; 2.4 GHz reduces options.",
+          "options": [
+            "Enable WPA3",
+            "Disable SSID broadcast",
+            "Complex network password",
+            "MAC filtering",
+            "2.4 GHz only"
+          ],
+          "correctAnswer": [
+            "Enable WPA3",
+            "Complex network password",
+            "MAC filtering"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-009",
+          "domain": "3.0 Software Troubleshooting",
+          "objective": "3.1",
+          "module": "14.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Application crashes frequently. Try FIRST?",
+          "explanation": "Updates often fix bugs. Try this before drastic measures.",
+          "options": [
+            "Uninstall/reinstall",
+            "Format hard drive",
+            "Check for updates",
+            "Replace motherboard"
+          ],
+          "correctAnswer": [
+            "Check for updates"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-010",
+          "domain": "3.0 Software Troubleshooting",
+          "objective": "3.1",
+          "module": "14.0",
+          "type": "matching",
+          "difficulty": "hard",
+          "stem": "Order the troubleshooting steps correctly. Choose which step belongs in each position.",
+          "explanation": "Proper order: gather, theory, test, implement, verify.",
+          "items": [
+            "Step 1",
+            "Step 2",
+            "Step 3",
+            "Step 4",
+            "Step 5"
+          ],
+          "correctAnswer": {
+            "Step 1": "Gather info from user",
+            "Step 2": "Theory of probable cause",
+            "Step 3": "Test the theory",
+            "Step 4": "Implement solution",
+            "Step 5": "Verify functionality"
+          },
+          "origin": "Original",
+          "options": [
+            "Implement solution",
+            "Gather info from user",
+            "Verify functionality",
+            "Test the theory",
+            "Theory of probable cause"
+          ]
+        },
+        {
+          "id": "1202-011",
+          "domain": "3.0 Software Troubleshooting",
+          "objective": "3.4",
+          "module": "19.0",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Browser homepage changed without permission. Possible causes? (Select all that apply)",
+          "explanation": "Hijackers, adware, extensions can change homepage. OS/driver updates don't.",
+          "options": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar",
+            "Windows Update",
+            "Outdated graphics driver"
+          ],
+          "correctAnswer": [
+            "Browser hijacker malware",
+            "Adware",
+            "Browser extension/toolbar"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-012",
+          "domain": "4.0 Operational Procedures",
+          "objective": "4.1",
+          "module": "11.0",
+          "type": "mc",
+          "difficulty": "easy",
+          "stem": "Documentation after resolving ticket should include?",
+          "explanation": "Complete documentation helps others resolve similar issues.",
+          "options": [
+            "Only if difficult",
+            "Changes, actions, outcome",
+            "Only final resolution",
+            "Nothing - wastes time"
+          ],
+          "correctAnswer": [
+            "Changes, actions, outcome"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-013",
+          "domain": "4.0 Operational Procedures",
+          "objective": "4.2",
+          "module": "22.0",
+          "type": "multi",
+          "difficulty": "medium",
+          "stem": "Proper change management procedures? (Select all that apply)",
+          "explanation": "Test, document, notify, have rollback. Changes during maintenance windows, not peak hours.",
+          "options": [
+            "Test in non-production",
+            "Document before implementation",
+            "Changes during business hours",
+            "Notify stakeholders",
+            "Rollback plan"
+          ],
+          "correctAnswer": [
+            "Test in non-production",
+            "Document before implementation",
+            "Notify stakeholders",
+            "Rollback plan"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-014",
+          "domain": "4.0 Operational Procedures",
+          "objective": "4.3",
+          "module": "21.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Backup system never tested - PRIMARY concern?",
+          "explanation": "Untested backups create false security. Regular restoration testing is critical.",
+          "options": [
+            "Using too much storage",
+            "Might not work when needed",
+            "Too slow",
+            "Software outdated"
+          ],
+          "correctAnswer": [
+            "Might not work when needed"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-015",
+          "domain": "4.0 Operational Procedures",
+          "objective": "4.5",
+          "module": "22.0",
+          "type": "multi",
+          "difficulty": "hard",
+          "stem": "Environmental safety and compliance measures? (Select all that apply)",
+          "explanation": "E-waste disposal, ESD, battery storage, data handling are compliance. Indefinite reuse is not best practice.",
+          "options": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Reuse indefinitely",
+            "Chain-of-custody for data"
+          ],
+          "correctAnswer": [
+            "Proper e-waste disposal",
+            "ESD procedures",
+            "Cool battery storage",
+            "Chain-of-custody for data"
+          ],
+          "origin": "Original"
+        },
+        {
+          "id": "1202-016",
+          "domain": "2.0 Security",
+          "objective": "2.2",
+          "module": "19.0",
+          "type": "mc",
+          "difficulty": "medium",
+          "stem": "Which can result in authentication failure with correct credentials?",
+          "explanation": "All factors prevent successful authentication.",
+          "options": [
+            "Expired user password",
+            "User account locked out",
+            "Disabled or deleted user account",
+            "Time synchronization issues",
+            "All of the above"
+          ],
+          "correctAnswer": [
+            "All of the above"
+          ],
+          "origin": "Original"
         }
       ]
     }

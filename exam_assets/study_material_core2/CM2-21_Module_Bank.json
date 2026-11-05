@@ -1,0 +1,768 @@
+[
+  {
+    "id": "CM2-21.1-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "You have configured your Windows systems to automatically back up user data every night at midnight. You also perform a system image backup once per month.\n\nWhat else should you do to ensure that you are protected from data loss? (Select two.)",
+    "explanation": "The only way to ensure that you are protected from data loss is to regularly test your restoration procedures. This activity will reveal whether or not your backup process is functioning properly and whether or not your restoration procedures will actually work. You should also store a redundant copy of your backups at an offsite location. The chance that a disaster at your main site will also affect backups stored offsite is very small.\n\nRestoration privileges should be restricted to trusted staff to prevent confidentiality violations. However, this is a security issue and is not related to the issue of data protection.\n\nWrite-protecting backup media will provide little protection for the stored data because it can be easily removed.\n\nDefragmenting your system hard drive will not back up user data.",
+    "options": [
+      "Regularly test restoration procedures.",
+      "Restrict restoration privileges to system administrators.",
+      "Configure System Maintenance to automatically defragment system hard drives every night.",
+      "Store a copy of all backups offsite.",
+      "Write-protect all backup media."
+    ],
+    "correctAnswer": [
+      "Regularly test restoration procedures.",
+      "Store a copy of all backups offsite."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You work as the IT administrator for a small startup company. Lily's computer has two internal hard drives and runs Windows 11. She is concerned that she may accidentally delete a personal file or that her primary hard disk may fail at some future time, causing her to lose her personal files.\n\nShe has come to you for suggestions about how to protect her files. Due to the size and revenue of this startup company, resources are somewhat limited.\n\nWhich of the following would BEST protect Lily's files?",
+    "explanation": "Windows 11 includes a backup service known as File History. With File History, only the data in a user's profile (such as personal files) is backed up. Lily could also add folders to a library to back them up using File History. File History does require a second disk for backup. This backup drive could be a second drive in a computer, a USB-connected drive, or a network drive. Lily could use this feature to back up her files from her primary drive to her secondary drive, or you could purchase an inexpensive USB drive that she could use to automatically back up her personal files.\n\nWith the limited funds available, buying a third-party backup software program probably isn't feasible at this time.\n\nHaving Lily copy her files to a network share would work for files she creates, but counting on her to back these up on a regular basis is risky.\n\nScheduled disk maintenance allows the system to diagnose and repair disk errors, not backup files.",
+    "options": [
+      "Create a network share to which Lily can copy her files.",
+      "Back up her files using File History.",
+      "Configure scheduled disk maintenance.",
+      "Purchase a third-party backup software program."
+    ],
+    "correctAnswer": [
+      "Back up her files using File History."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An administrator configures the Time Machine application on macOS computers and develops scripts that use the tar command on Linux computers.\n\nWhich of the following best practices is the administrator following?",
+    "explanation": "The Time Machine application on macOS computers and the tar command on Linux are used for backups.\n\nWhile Time Machine and tar can restore disk files, scheduled disk maintenance is usually performed to maintain disk and file system integrity.\n\nPatch management involves updating operating systems and applications, not performing backups.\n\nDriver and firmware updates involve updating the middleware that interfaces with internal and external devices, not performing backups.",
+    "options": [
+      "Scheduled disk maintenance",
+      "Scheduled backups",
+      "Patch management",
+      "Driver and firmware updates"
+    ],
+    "correctAnswer": [
+      "Scheduled backups"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes why you should store backup media offsite?",
+    "explanation": "Backup media should be stored offsite to prevent the same disaster from affecting both the system itself as well as its associated backup media. For example, if your primary facility is destroyed by flood or fire, your data remains protected at an offsite location.\n\nOffsite storage does not significantly reduce the possibility of media theft because it can be stolen while in transit and at the remote storage location.\n\nOffsite storage is not mandated by government regulation in the USA for all data types.\n\nOffsite storage does not improve the efficiency of the restoration process because additional time will be spent maintaining the backup media at the remote location.",
+    "options": [
+      "To prevent a disaster from affecting the system and its backup media.",
+      "To reduce the possibility of theft.",
+      "To improve the efficiency of the restoration process.",
+      "It is required by government regulations in the USA."
+    ],
+    "correctAnswer": [
+      "To prevent a disaster from affecting the system and its backup media."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have created a system image of Windows 11 on your laptop before updating several applications on your hard drive. The system image is stored on an external hard drive.\n\nAfter updating one of the applications, you are required to restart your laptop. However, during the restart, you receive an error message that the system is unable to reboot. You try to restore the system image from the external hard drive, but you are unsuccessful.\n\nWhich of the following do you need to do BEFORE successfully restoring your Windows 11 system using the system image?",
+    "explanation": "If you are unable to boot into Windows, you will be unable to restore a system image. You can, however, use a recovery disc to restore the operating system so that you can then restore the system image.\n\nAlthough you could set the BIOS/UEFI settings to boot from the external hard drive first, this would not impact the ability to restore the system image.\n\nSimply copying the system image to the Windows hard drive will not solve the issue, as the recovery needs to happen from an image on a separate source (such as an external hard drive).\n\nEven though you can copy the system image to a network computer, this will not solve the problem of not being able to access the image if the laptop cannot boot into Windows.",
+    "options": [
+      "Copy the system image to a network computer and access the image from there.",
+      "Copy the system image to the Windows hard drive and then start the recovery process.",
+      "Use a recovery disc to restore the operating system.",
+      "Set the BIOS/UEFI settings to boot from the external hard drive first."
+    ],
+    "correctAnswer": [
+      "Use a recovery disc to restore the operating system."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What should you do to help protect against data loss before you perform system updates, add new applications, or make other changes to your computer?",
+    "explanation": "Whenever you perform system updates, add new applications, or make other changes to your computer, you should back up your computer data.\n\nRestarting your computer or contacting the manufacturer does not provide the data security needed in the case that errors occur when performing an update, adding a new application, or making other changes to your computer.\n\nDefragmenting your hard drives is useful for freeing up disk space and speeding up data access. However, it does not normally help to prevent data loss.",
+    "options": [
+      "Contact the manufacturer.",
+      "Restart your computer.",
+      "Defragment your internal hard drives.",
+      "Back up your computer."
+    ],
+    "correctAnswer": [
+      "Back up your computer."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You want to adopt a rotation scheme for your Windows systems that works by keeping data for 30 days and then has the data from the 31st day overwrite the data from the first day.\n\nWhich of the following is the rotation backup type you should use?",
+    "explanation": "The FIFO (first in, first out) rotation type keeps data for a specific period of time (such as 30 days) and then saves over the oldest data once the time has elapsed (such as replacing the first-day backup with the 31st-day data).\n\nThe 3-2-1 backup rule involves maintaining three copies of your data. Two are kept onsite on two different types of devices, and the third copy is kept offsite. The data is not rotated through and replaced based on a specific period of time.\n\nThe GFS (grandfather-father-son) backup rotation keeps backup copies of the data as full backups (grandfather, father) and an incremental backup (son) on a preset schedule. However, this rotation type does not allow for existing data to be overwritten on a daily schedule set by the user.\n\nFull refers to a full backup of a hard disk. It is not a rotation type.",
+    "options": [
+      "Full",
+      "FIFO",
+      "GFS",
+      "3-2-1"
+    ],
+    "correctAnswer": [
+      "FIFO"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which operating system uses the Time Machine backup program?",
+    "explanation": "The macOS operating system uses the Time Machine backup program.\n\nWindows, Android, and Linux use other backup apps or features (such as File History) to perform backup tasks.",
+    "options": [
+      "Linux",
+      "Windows",
+      "Android",
+      "macOS"
+    ],
+    "correctAnswer": [
+      "macOS"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is true of a synthetic backup?",
+    "explanation": "A synthetic backup merges the benefits of a full backup with the benefits of an incremental backup. It creates a new full backup by using the original full backup and adding data from the incremental backups.\n\nA synthetic backup does not simply back up every file that has changed since the last full or incremental backup, nor does it back up every file.",
+    "options": [
+      "It backs up every file that has changed since the last full backup.",
+      "It creates a new full backup by using the original full backup and adding data from the incremental backups.",
+      "It backs up every file that has changed since the last full or incremental backup.",
+      "It backs up every file."
+    ],
+    "correctAnswer": [
+      "It creates a new full backup by using the original full backup and adding data from the incremental backups."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.1-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.1.8",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following describes the grandfather backup in a grandfather-father-son (GFS) rotation scheme?",
+    "explanation": "Most organizations create a strict rotation schedule for performing full and partial backups. One commonly used rotation scheme is the grandfather-father-son (GFS) backup type. The grandfather is a full backup that is completed once a month or so and stored offsite.\n\nThe father is a full backup that is completed once a week and stored onsite.\n\nThe son is an incremental backup that occurs daily and is kept onsite.",
+    "options": [
+      "A full backup that is stored offsite",
+      "An incremental backup that is stored offsite",
+      "An incremental backup that is stored onsite",
+      "A full backup that is stored onsite"
+    ],
+    "correctAnswer": [
+      "A full backup that is stored offsite"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the purpose of the chain of custody incident response step when it comes to security incident resolution?",
+    "explanation": "The chain of custody step is meant to track the people who came in contact with evidence. The chain of custody starts at the moment evidence is discovered. This step lists the identity of the person who discovered, logged, gathered, protected, transported, stored, and presented the evidence. The chain of custody is what ensures the admissibility of evidence in court.\n\nDetailing the timeline between evidence creation and discovery and identifying the owner of the evidence is part of the first step in security incident resolution (gathering evidence).\n\nMaintaining compliance with federal privacy laws is not part of responding to a security incident.",
+    "options": [
+      "Retain evidence integrity by identifying people coming into contact with evidence.",
+      "Identify the evidence owner.",
+      "Maintain compliance with federal privacy laws.",
+      "Detail the timeline between evidence creation and discovery."
+    ],
+    "correctAnswer": [
+      "Retain evidence integrity by identifying people coming into contact with evidence."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following identifies who had possession of a hard drive and for how long before it was actually destroyed?",
+    "explanation": "The Chain of Custody identifies who had possession of a device and for how long before it was actually destroyed.\n\nA Certificate of Destruction (COD) is obtained when destroying a hard drive. The Chain of Custody should be a component of the COD.\n\nRecord of Format and Outsourcing Record are not valid answers.",
+    "options": [
+      "Chain of Custody",
+      "Certificate of Destruction",
+      "Outsourcing Record",
+      "Record of Format"
+    ],
+    "correctAnswer": [
+      "Chain of Custody"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security incident is currently occurring on your company's network. You discover that the attack involves a computer system that is attached to the network. You are unsure what kind of damage is being done to the network systems or data.\n\nWhich of the following actions should you take FIRST?",
+    "explanation": "The first step in responding to an incident should be to take action to stop the attack and contain the damage. If the attack involves a computer system attached to the network, the first step would most likely be to disconnect the computer from the network. Although you want to preserve as much information as possible to assist in later investigations, it is better to stop the attack, even if doing so alerts the attacker or results in the loss of evidence regarding the attack.\n\nAfter containing the damage, subsequent steps you can take include (but are not limited to) the following:\n- Examine the active computer system to analyze the live network connection, memory contents, and running programs.\n- Document and photograph the entire crime scene, including the current state of the attached computer system.\n- Determine whether you have the expertise to conduct an investigation or whether you need to call in additional help.",
+    "options": [
+      "Determine whether you have the expertise to conduct an investigation or whether you need to call in additional help.",
+      "Examine the active computer system to analyze the live network connection, memory contents, and running programs.",
+      "Stop the attack and contain the damage by disconnecting the system from the network.",
+      "Document and photograph the entire crime scene, including the current state of the attached computer system."
+    ],
+    "correctAnswer": [
+      "Stop the attack and contain the damage by disconnecting the system from the network."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "As an IT technician for a savings and loan institution, you have been tasked with making sure that your organization adheres to all Payment Card Industry Data Security Standards (PCI DSS) for all debit, credit, and prepaid cards issued by the company.\n\nYou are currently assigning a unique ID to each company employee with computer access to the card data.\n\nWhich of the following PCI DSS goals are you attempting to meet in this scenario?",
+    "explanation": "By assigning a unique ID to each company employee with computer access to card data, you are attempting to implement strong access control measures.\n\nBuilding and maintaining a secure network includes installing a firewall and avoiding the use of default passwords and other security parameters provided by a vendor.\n\nMaintaining a vulnerability management program includes implementing antivirus software and maintaining secure systems and applications.\n\nRegularly monitoring and testing networks includes maintaining a policy that addresses information security for all personnel.",
+    "options": [
+      "Implement strong access control measures.",
+      "Build and maintain a secure network.",
+      "Maintain a vulnerability management program.",
+      "Regularly monitor and test networks."
+    ],
+    "correctAnswer": [
+      "Implement strong access control measures."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A security technician is conducting a forensic analysis. Which of the following actions is MOST likely to destroy critical evidence?",
+    "explanation": "Shutting down or rebooting a compromised system will erase the memory contents. An attacker may load and run a memory-resident program and immediately erase it from the disk. Shutting down or rebooting the system will destroy all evidence of the malicious program.\n\nDisconnecting the system from the network is the first step that should be taken when responding to a security incident. Other steps include copying the contents of memory to removable media (gathering evidence) and restricting physical access to the system.",
+    "options": [
+      "Disconnecting the system from the network",
+      "Restricting physical access to the system",
+      "Shutting down the system",
+      "Copying the contents of memory to removable media"
+    ],
+    "correctAnswer": [
+      "Shutting down the system"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A database administrator is scheduled for a meeting with the security team to discuss compliance with the PCI DSS standards. What type of information does it safeguard?",
+    "explanation": "The Payment Card Industry Data Security Standard (PCI DSS) governs the processing of credit card transactions. It sets out protections that must be provided for data like names, addresses, account numbers, card numbers, expiry dates, and PINs.\n\nHealthcare data refers to medical and insurance records plus associated hospital and laboratory test results.\n\nPersonal government-issued information (PII) is issued to individuals by federal or state governments. Examples include a social security number (SSN), passport, driving license, and birth/marriage certificates. Personally identifiable information (PII) is data that can be used to identify, contact, or locate an individual or, in the case of identity theft, to impersonate an individual. A cell phone number is a good example of PII.",
+    "options": [
+      "Lab results",
+      "SSNs",
+      "PINs",
+      "Cell numbers"
+    ],
+    "correctAnswer": [
+      "PINs"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following hard drive destruction methods only works with mechanical hard drives?",
+    "explanation": "Drilling works only with mechanical hard drives since this method involves drilling holes through the platters.\n\nDisk shredding and incineration work with both mechanical and solid-state drives.\n\nA low-level format is not a hard drive destruction method.",
+    "options": [
+      "Incineration",
+      "Drilling",
+      "Disk shredder",
+      "Low-level format"
+    ],
+    "correctAnswer": [
+      "Drilling"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following should you perform when disposing of a computer?",
+    "explanation": "You should always reformat (or destroy) the hard drive when you dispose of a computer.\n\nThe motherboard does not need to be shredded when disposing of a computer.\n\nThe hard drive does not need to be locked in storage when disposing of a computer.\n\nYou do not need to document the Chain of Custody when disposing of a computer.",
+    "options": [
+      "Run the motherboard through a shredder.",
+      "Document the Chain of Custody.",
+      "Reformat the hard drive.",
+      "Lock the hard drive in storage."
+    ],
+    "correctAnswer": [
+      "Reformat the hard drive."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "You have accepted a position working in a local hospital's IT department in the United States. Which of the following government regulations would be the most important for the hospital to be in compliance with?",
+    "explanation": "In this scenario, you would most likely need to make sure that the company is in compliance with the Health Insurance Portability and Accounting Act (HIPAA). HIPAA defines and regulates how healthcare information must be secured.\n\nThe Family Educational Rights and Privacy Act (FERPA) would not be the most likely regulation you would be responsible for ensuring compliance with. FERPA only applies to educational institutions.\n\nThe PCI DSS regulations only apply to organizations that take payments using payment cards. This would not be the most important regulation for the hospital to worry about being in compliance with.\n\nThe General Data Protection Regulation (GDPR) applies to organizations that do business in the European Union and allows individuals to have control over the personal information that businesses collect on them. This would not be the most important regulation for the hospital to worry about being in compliance with.",
+    "options": [
+      "GDPR",
+      "FERPA",
+      "PCI DSS",
+      "HIPAA"
+    ],
+    "correctAnswer": [
+      "HIPAA"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.2-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.2.7",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which formatting method is used by the manufacturer to write new sectors and tracks to a hard drive?",
+    "explanation": "A low-level format writes new sectors and tracks to the drive and is typically done by the manufacturer when the drive is first assembled. When performing a low-level format, the sectors and tracks are recreated, and all empty space is filled with zeroes.\n\nA high-level format is performed using the tools in the operating system. This method removes the pointers to files, but the data remains on the drive itself and can be recovered using special software.\n\nFull or deep formats are not valid format types.",
+    "options": [
+      "Deep format",
+      "Full format",
+      "High-level formatting",
+      "Low-level formatting"
+    ],
+    "correctAnswer": [
+      "Low-level formatting"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When discussing the use of AI tools for your research class, Jim states he regularly uses a public AI chat program to conduct research and will use the output of the chat program as part of his research publication. You warn him this may be an issue and his response is that since it's not a real person you cannot plagiarize the output from the AI chat system.\n\nWhich document or policy might you refer Jim to read before going forward with his publication?",
+    "explanation": "The AUP, or acceptable use policy, of the school should be referenced on the legality of using AI tools in conducting research. Some schools also include AI language in their code of conduct or a specific plagiarism policy.\n\nThe BIA, or business impact analysis, is a report on threats and risks a company may face and their impact on their operations.\n\nAPA references the American Psychological Association, which publishes a style manual for documenting sources in published research.\n\nAn SLA, or service level agreement, is an agreement with a third party service provider on the terms and metrics of service delivery.",
+    "options": [
+      "BIA",
+      "SLA",
+      "APA manual",
+      "AUP"
+    ],
+    "correctAnswer": [
+      "AUP"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is described as AI technologies developed by large organizations and are normally accessed through an API or web interface?",
+    "explanation": "Public AI is described as technologies developed by large organizations when the public accesses the technology through the use of an API or web interface.\n\nPrivate AI is described as technologies used for specific purposes within organizations and their own use cases. Normally, only employees of the organization have access to the AI technology.\n\nHybrid AI is not an existing model.\n\nAn AI Acceptable Use Policy (AUP) is not a form of AI but outlines guidelines and restrictions on how AI tools and systems can be used within the organization.",
+    "options": [
+      "AI AUP",
+      "Hybrid AI",
+      "Public AI",
+      "Private AI"
+    ],
+    "correctAnswer": [
+      "Public AI"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following should be considered when utilizing AI technologies? (Select three.)",
+    "explanation": "The AI technologies that are being utilized should be free of bias and highly accurate based on the data used to train them. It should also be free of hallucinations, where it generates output without using facts and the data it was trained with.\n\nThe speed of AI technology producing results is not a normal consideration when discussing AI limitations.",
+    "options": [
+      "Speed of results",
+      "Hallucinations",
+      "Accuracy",
+      "Bias"
+    ],
+    "correctAnswer": [
+      "Hallucinations",
+      "Accuracy",
+      "Bias"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is most critical when utilizing AI technology on controlled or regulated data?",
+    "explanation": "Data privacy is a primary concern as users may input PII or other controlled data into the AI tool that is then used to train the AI model. This can consequently leak information if not controlled correctly.\n\nSpeed of the AI model, fairness of access, and encryption of data are not the primary concerns when using AI and controlled or regulated data.",
+    "options": [
+      "Encryption of data",
+      "Privacy",
+      "Fairness of access",
+      "Speed of Operation"
+    ],
+    "correctAnswer": [
+      "Privacy"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following describes AI best?",
+    "explanation": "AI involves using computers to complete tasks that would normally require a human to complete. AI systems should be designed to be free of bias while increasing the accuracy of the results.",
+    "options": [
+      "Using robots and computer-controlled machines to build new technology",
+      "Utilizing biased programmed computers to perform tasks",
+      "Using humans to complete work tasks faster",
+      "Using a computer to complete tasks that normally would require a human"
+    ],
+    "correctAnswer": [
+      "Using a computer to complete tasks that normally would require a human"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "When AI technology produces results that are not based on fact or the data it was trained on, describe which of the following terms?",
+    "explanation": "AI hallucinations occur when the AI generates wrong information that is not based on facts or the data it was trained on.\n\nBias is when the data used to program the AI tool is flawed or otherwise biased; the output from the AI tool will also be biased and or flawed.\n\nAccuracy is when the output is free of errors and has been verified as correct.\n\nNeural networking is a computing system that uses a network of interconnected nodes, called artificial neurons, to process data in a way that mimics the human brain.",
+    "options": [
+      "Hallucination",
+      "Accuracy",
+      "Bias",
+      "Neural networks"
+    ],
+    "correctAnswer": [
+      "Hallucination"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following is not an example of a AI hallucination?",
+    "explanation": "Since the AI tool analyzed the alarms and compared it with the camera footage identifying a person is in the building, the output that there is motion is correct and not a hallucination.\n\nAll other examples are false reports or output not based on factual data.",
+    "options": [
+      "An AI tool reports that a user has cancer based on incorrect data set programming.",
+      "An AI tool states the order has shipped when a product is on backorder and not available.",
+      "An AI tool states a user has climbed Mt. Everest when the person has not done so.",
+      "AI tool reports that there is motion in the building after several alarms go off and the camera footage shows a person present."
+    ],
+    "correctAnswer": [
+      "AI tool reports that there is motion in the building after several alarms go off and the camera footage shows a person present."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which of the following best describes the difference between machine learning and deep learning?",
+    "explanation": "Machine learning can be basic or complex in design and is not based on pre-programmed responses, whereas deep learning utilizes neural networks to analyze factors in complex data structures.\n\nPre-programmed response tools are not considered AI and, therefore, not defined as machine learning or deep learning.\n\nThe development of new content instances that resemble the training data is defined as generative AI, which is a specific type of deep learning.",
+    "options": [
+      "Machine learning makes use of complex networks and large data sets to make informed decisions, while deep learning systems utilize public data sets and pre-programmed responses to produce output.",
+      "Machine learning uses pre-programmed responses, whereas deep learning generates new content instances that do not resemble the training data.",
+      "Machine learning can be basic or complex in design, whereas deep learning utilizes neural networks to analyze factors in complex data structures.",
+      "Deep learning uses basic data algorithms to make base-level determinations, whereas machine learning uses a complex computer network to make decisions."
+    ],
+    "correctAnswer": [
+      "Machine learning can be basic or complex in design, whereas deep learning utilizes neural networks to analyze factors in complex data structures."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-009",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "The growth of AI-inspired technologies has been a cause for concern within the computing industry. Which of the following policies should a company generate as a method to limit the use of AI technologies?",
+    "explanation": "An acceptable use policy (AUP) should be designed to inform employees about what is considered acceptable and not acceptable surrounding the use of AI. This should also cover when, how, and if AI tools and their results can or cannot be used when considering the originality of the work.\n\nBusiness partnership agreements (BPA), service level agreements (SLA), and business impact analysis (BIA) are not directly used to limit the use of AI technologies.",
+    "options": [
+      "BPA",
+      "BIA",
+      "SLA",
+      "AUP"
+    ],
+    "correctAnswer": [
+      "AUP"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.3-010",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.3.5",
+    "module": "21.0",
+    "type": "multi",
+    "difficulty": "medium",
+    "stem": "Which of the following are considered benefits of utilizing AI? (Select three.)",
+    "explanation": "The use of AI increases the functionality of applications that use AI. AI also reduces human errors on programmed tasks and increases the amount of information that can be used to make more informed business decisions.\n\nThe use of AI is not directly related to making all robots faster.",
+    "options": [
+      "Reduction of human errors",
+      "Enhanced functionality of applications",
+      "All robots make things faster.",
+      "Better informed business decision-making"
+    ],
+    "correctAnswer": [
+      "Reduction of human errors",
+      "Enhanced functionality of applications",
+      "Better informed business decision-making"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-001",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of an Acceptable Use Policy (AUP) for Artificial Intelligence (AI) in an organization?",
+    "explanation": "An AUP for AI outlines guidelines and restrictions on how AI tools and systems can be used. It sets clear expectations for users and ensures compliance with laws and regulations, protecting the organization.\n\nWhile policies should address plagiarism and attribution when using AI, this is only one aspect of an AUP. The primary purpose of an AUP is broader and includes general guidelines and restrictions for AI use.\n\nAutomatic updates is not normally part of the AUP purpose. The AUP focuses on usage guidelines and compliance, not on technical maintenance of AI systems.\n\nHuman oversight is important, especially given AI's limitations such as biases and hallucinations. An AUP does not aim to remove human involvement but rather to guide appropriate AI usage.",
+    "options": [
+      "To eliminate the need for human oversight when using AI tools in the workplace.",
+      "To outline guidelines and restrictions on how AI tools and systems can be used within the organization.",
+      "To ensure that AI systems are automatically updated to the latest version.",
+      "To define how AI can be used to assist in writing and ensure compliance with plagiarism rules."
+    ],
+    "correctAnswer": [
+      "To outline guidelines and restrictions on how AI tools and systems can be used within the organization."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-002",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "An organization decides to outsource the disposal and recycling of its old IT equipment to a third-party vendor.\n\nWhich of the following is the MOST important factor the organization should consider when selecting a vendor for this service?",
+    "explanation": "Ensuring a detailed chain of custody is critical when outsourcing disposal and recycling. It ensures that the equipment, especially if it contains sensitive data, is handled securely and responsibly throughout the entire process. A chain of custody helps prevent data breaches and ensures compliance with regulations.\n\nWhile proximity may reduce transportation costs, it is not the most important factor when selecting a vendor for secure disposal and recycling. Security and compliance with data protection regulations take precedence over cost considerations.\n\nAlthough cost savings are beneficial, they should not be prioritized over the security and accountability of the disposal process. Choosing a vendor based solely on discounts could lead to inadequate handling of sensitive equipment.\n\nSpeed of processing is not the most critical factor when selecting a vendor for disposal or recycling. The primary concern should be ensuring that sensitive data is securely destroyed and that the process complies with legal and regulatory requirements.",
+    "options": [
+      "The vendor's ability to provide a detailed chain of custody for the equipment.",
+      "The vendor's proximity to the organization's office to reduce transportation costs.",
+      "The vendor's ability to offer discounts for bulk equipment disposal.",
+      "The vendor's reputation for quickly processing equipment for resale."
+    ],
+    "correctAnswer": [
+      "The vendor's ability to provide a detailed chain of custody for the equipment."
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-003",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "CompTIA is backing up their systems using the following backup scheme using magnetic tape media:\n\n- Full backup of the data is performed on Sunday.\n- Incremental backups are performed on all other days.\n- All backups are performed and completed at 2:00 a.m. each day, and take 10 minutes to complete.\n\nA system failure has occurred on Saturday at 2:16 a.m. What is the minimum number of backup tapes necessary to restore the system?",
+    "explanation": "The last full backup from Sunday and each of the incremental backups from Monday through Saturday are needed. This is a total of 7 backup tapes.",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "7"
+    ],
+    "correctAnswer": [
+      "7"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-004",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which backup method is able to complete a backup in the shortest amount of time (fastest)?",
+    "explanation": "Incremental backups are able to be accomplished in a shorter amount of time when compared to differential and full backups. Differential backups take longer than incremental because they are attempting to backup all data that is new or changed since the last full backup. A full backup takes the longest amount of time because it is essential to backup everything on the system. A son backup describes the most recent backups and usually has the shortest retention period.",
+    "options": [
+      "Incremental",
+      "Son",
+      "Differential",
+      "Full"
+    ],
+    "correctAnswer": [
+      "Incremental"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-005",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which backup storage means that the production system and backup media are in the same location?",
+    "explanation": "On-site backup storage means that the production system and backup media are in the same location. This means that if a disaster strikes the facility, there is the risk of losing production and backup copies of the data.\n\nOff-site storage means that the production system and backup media are in different locations. However, moving backup media to an off-site storage location can be troublesome. Improvements with bandwidth have made off-site storage more affordable.\n\nOnline backup media is instantly available to perform a backup or restore operation without an administrator transporting and connecting a device or loading a tape.\n\nAn offline backup device remains disconnected from the host and connects manually to run a backup job.",
+    "options": [
+      "On-site",
+      "Offline",
+      "Off-site",
+      "Online"
+    ],
+    "correctAnswer": [
+      "On-site"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-006",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "Which tool in Windows 11 can be used to create a system image backup that can be used to restore the operating system if it fails or becomes corrupt?",
+    "explanation": "Windows Backup and Restore Center has the ability to create system image backups of the Windows operating system files and can be used to restore the operating system should it fail to start correctly.\n\nFile History is only for user files, and GFS Backup is a backup scheme, not an actual program to create backups of system images.\n\nTime Machine is a tool for creating backups for the macOS operating system and it cannot be used on a Windows computer system.",
+    "options": [
+      "Time Machine",
+      "GFS Backup",
+      "Backup and Restore Center",
+      "File History"
+    ],
+    "correctAnswer": [
+      "Backup and Restore Center"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-007",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "What type of backup occurs daily using the Grandfather-Father-Son (GFS) scheme?",
+    "explanation": "Incremental backup includes new files and files modified since the last backup job. Though it has a low backup job time and storage requirements, it has a high recovery complexity. An incremental backup occurs daily using the Grandfather-Father-Son (GFS) scheme.\n\nDifferential backup only includes new files and files modified since the last backup. This backup has a moderate backup time, storage requirement, and recovery complexity.\n\nA synthetic backup is an option for creating full backups with lower data transfer requirements. A full synthetic backup assembles from other backups.\n\nFull backup produces a file containing all the source data. This has the highest storage and time requirement but has the least recovery complexity, as only a single file is required.",
+    "options": [
+      "Synthetic",
+      "Full",
+      "Differential",
+      "Incremental"
+    ],
+    "correctAnswer": [
+      "Incremental"
+    ],
+    "origin": "CertMaster"
+  },
+  {
+    "id": "CM2-21.6-008",
+    "domain": "4.0 Operational Procedures",
+    "objective": "21.6",
+    "module": "21.0",
+    "type": "mc",
+    "difficulty": "medium",
+    "stem": "A technician wants to reset a disk to its factory condition. What can the technician use to accomplish this task?",
+    "explanation": "Most disk vendors supply low-level format tools to reset a disk to its factory condition. Most of these tools will now incorporate some type of sanitize function.\n\nWhen selecting an appropriate sanitization method, the operating system (OS) standard formatting tool deletes partitions and writes a new file system that will only remove references to files and mark all sectors as useable.\n\nIn degaussing, a hard disk gets exposed to a powerful electromagnet that disrupts the magnetic pattern that stores the data on the disk surface.\n\nDisk erasing/wiping software ensures that old data gets destroyed by writing to each location on a hard disk drive, either using zeroes or in a random pattern, leaving the disk in a \"clean\" state.",
+    "options": [
+      "Erasing/wiping",
+      "Degaussing",
+      "Standard formatting",
+      "Low-level formatting"
+    ],
+    "correctAnswer": [
+      "Low-level formatting"
+    ],
+    "origin": "CertMaster"
+  }
+]
